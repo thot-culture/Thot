@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101e2b">
+  <meta name="description" content="THOT, le jeu de culture générale qui transforme cinq minutes de curiosité en petites découvertes.">
+  <title>THOT — Nourris ta curiosité</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink:#14252e; --muted:#647075; --night:#101e2b; --night-2:#1c3443;
+      --cream:#faf7ef; --paper:#fffefa; --gold:#e7b45f; --gold-strong:#c88a34;
+      --sea:#24695f; --line:#e8e5dc; --red:#a43f41;
+      --shadow:0 22px 55px rgba(24,42,41,.10);
+      font-family: "Segoe UI", Inter, system-ui, -apple-system, sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);overflow-x:hidden}
+    button{font:inherit;cursor:pointer}
+    button:focus-visible,a:focus-visible{outline:3px solid var(--gold-strong);outline-offset:4px}
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(1160px,calc(100% - 48px));margin:auto}
+    .top{background:var(--night);color:white;border-bottom:1px solid rgba(255,255,255,.09);position:relative;z-index:2}
+    .nav{min-height:84px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:inline-flex;align-items:center;gap:12px;font-family:Georgia,serif;font-size:30px;letter-spacing:.06em;font-weight:800}
+    .brand-icon{width:41px;height:41px;flex-shrink:0}
+    .nav-end{display:flex;align-items:center;gap:28px;font-size:14px}
+    .nav-end a:not(.nav-cta){color:#e1e5df;transition:color .2s}
+    .nav-end a:not(.nav-cta):hover{color:var(--gold)}
+    .nav-cta{background:var(--gold);color:var(--night);padding:13px 18px;border-radius:999px;font-weight:750}
+    .hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 78% 48%,#274b52 0%,transparent 45%),linear-gradient(135deg,#101e2b,#162d38 70%,#10262e);color:white}
+    .hero::before{content:"";position:absolute;width:560px;height:560px;border:1px solid rgba(230,184,105,.16);border-radius:50%;right:-190px;top:-130px;box-shadow:0 0 0 70px rgba(230,184,105,.025),0 0 0 140px rgba(230,184,105,.018);pointer-events:none}
+    .hero::after{content:"✳";position:absolute;right:15%;top:14%;font-family:Georgia,serif;font-size:36px;color:var(--gold);opacity:.75}
+    .hero-inner{display:grid;grid-template-columns:1.12fr .88fr;gap:46px;align-items:center;padding:70px 0 85px;position:relative}
+    .eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.22em;font-weight:800;color:var(--gold);display:inline-flex;align-items:center;gap:12px}
+    .eyebrow::before{content:"";height:1px;width:28px;background:currentColor}
+    h1,h2,h3,p{margin-top:0}
+    h1,h2,.serif{font-family:Georgia,"Times New Roman",serif}
+    h1{font-size:clamp(50px,6.1vw,84px);letter-spacing:-.055em;line-height:1.04;margin:25px 0 24px;font-weight:500}
+    .gold{color:var(--gold)}
+    .hero-description{font-size:18px;line-height:1.75;color:#b9c8ca;max-width:520px;margin-bottom:31px}
+    .hero-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+    .primary{background:var(--gold);color:#182630;border:1px solid var(--gold);border-radius:13px;padding:17px 25px;font-weight:800;display:inline-flex;align-items:center;gap:12px;justify-content:center;transition:transform .2s,filter .2s}
+    .primary:hover{transform:translateY(-2px);filter:brightness(1.055)}
+    .secondary{border:1px solid rgba(255,255,255,.3);border-radius:13px;padding:17px 24px;color:white;font-weight:650;background:rgba(255,255,255,.025)}
+    .hero-sub{margin-top:27px;display:flex;gap:20px;flex-wrap:wrap;color:#acc0bf;font-size:13px}
+    .hero-sub span{display:flex;align-items:center;gap:8px}
+    .hero-sub span::before{content:"✦";color:var(--gold)}
+    .artifact{position:relative;max-width:415px;margin:10px auto 0;width:100%;aspect-ratio:1/.98;display:grid;place-items:center}
+    .orbit{position:absolute;inset:5%;border-radius:50%;border:1px solid rgba(231,180,95,.4)}
+    .orbit.two{inset:14%;border-style:dashed;opacity:.55;animation:rotate 55s linear infinite}
+    .orbit.three{inset:26%;opacity:.6}
+    .star{position:absolute;color:var(--gold);font-size:27px;z-index:2}
+    .star.a{left:8%;top:19%}.star.b{right:8%;bottom:24%}.star.c{right:19%;top:8%;font-size:18px}
+    .disc{width:61%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 25%,#e5c280,#c39049 70%,#855d35);display:grid;place-items:center;box-shadow:0 0 85px rgba(222,174,95,.18),inset 0 0 0 9px rgba(255,241,192,.13);position:relative;z-index:1}
+    .disc svg{width:70%;height:70%;filter:drop-shadow(0 3px 2px rgba(30,34,33,.1))}
+    .disc-label{position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);background:#203640;border:1px solid rgba(231,180,95,.5);padding:12px 19px;border-radius:50px;white-space:nowrap;font-size:11px;letter-spacing:.15em;color:#f4d59a;font-weight:800}
+    .section{padding:82px 0}
+    .section-header{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:29px}
+    .kicker{color:var(--sea);font-size:12px;font-weight:850;letter-spacing:.17em;text-transform:uppercase;margin-bottom:11px}
+    h2{font-size:clamp(32px,4vw,50px);font-weight:500;letter-spacing:-.035em;margin-bottom:0}
+    .section-lead{font-size:15px;color:var(--muted);max-width:270px;line-height:1.6;margin:0}
+    .category-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+    .category-card{border:1px solid var(--line);background:var(--paper);border-radius:17px;padding:23px 20px 21px;text-align:left;display:flex;flex-direction:column;gap:11px;min-height:215px;transition:transform .2s,box-shadow .2s,border-color .2s}
+    .category-card:hover{transform:translateY(-5px);box-shadow:var(--shadow);border-color:#c7b78e}
+    .category-icon{height:62px;width:62px;background:#f4efdf;border-radius:16px;display:grid;place-items:center;font-size:31px;margin-bottom:9px}
+    .category-card:nth-child(2) .category-icon{background:#e8f1e9}
+    .category-card:nth-child(3) .category-icon{background:#e6eef3}
+    .category-card:nth-child(4) .category-icon{background:#f3e8ed}
+    .category-card:nth-child(5) .category-icon{background:#eee9f6}
+    .category-name{font-family:Georgia,serif;font-size:21px;font-weight:700;letter-spacing:-.02em}
+    .category-meta{font-size:12px;color:var(--muted);line-height:1.5;min-height:36px}
+    .card-bottom{margin-top:auto;display:flex;align-items:center;justify-content:space-between;color:var(--sea);font-size:12px;font-weight:800}
+    .card-bottom .arrow{font-size:20px}
+    .game-section{background:#f0eee6;border-top:1px solid #e8e4d9;border-bottom:1px solid #e8e4d9;padding:78px 0}
+    .game-shell{background:white;border-radius:24px;border:1px solid #e5e1d7;box-shadow:0 22px 65px rgba(33,45,44,.07);overflow:hidden}
+    .game-top{background:var(--night);color:white;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:21px 29px}
+    .game-brand{font-size:12px;font-weight:800;letter-spacing:.15em;color:#eed09a;text-transform:uppercase}
+    .game-best{color:#b9c9cc;font-size:13px}
+    .game-body{padding:37px clamp(22px,5vw,62px) 45px;max-width:850px;margin:auto}
+    .game-intro{text-align:center;padding:24px 0 12px}
+    .game-mark{font-size:53px;margin-bottom:15px}
+    .game-intro h3,.result h3{font-family:Georgia,serif;font-size:clamp(29px,4vw,43px);font-weight:500;line-height:1.15;margin-bottom:14px}
+    .game-intro p,.result p{line-height:1.7;color:var(--muted);font-size:16px;max-width:540px;margin:0 auto 25px}
+    .category-tag{display:inline-flex;align-items:center;gap:8px;background:#eaf1ed;color:#23645b;font-weight:800;padding:9px 13px;border-radius:30px;font-size:12px;margin-bottom:18px}
+    .game-status{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:14px;font-size:12px;color:var(--muted);font-weight:800}
+    .game-progress{height:7px;background:#eceae4;border-radius:20px;overflow:hidden;margin-bottom:38px}
+    .game-progress>div{height:100%;background:var(--sea);width:0%;border-radius:20px;transition:width .2s}
+    .question{font-family:Georgia,serif;font-size:clamp(24px,3.5vw,34px);letter-spacing:-.02em;line-height:1.35;margin-bottom:30px}
+    .answers{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .answer{width:100%;min-height:72px;background:#fffefa;border:1.5px solid #e7e5de;color:var(--ink);border-radius:13px;padding:16px;text-align:left;display:flex;align-items:center;gap:15px;font-weight:650;transition:background .15s,border-color .15s}
+    .answer:hover:not(:disabled){border-color:var(--sea);background:#f4f8f5}
+    .answer:disabled{cursor:default}
+    .answer-letter{width:31px;height:31px;border-radius:8px;background:#eeeae0;display:grid;place-items:center;flex-shrink:0;color:#465158;font-weight:900;font-size:12px}
+    .answer.correct{border-color:#3e8c6a;background:#e8f5ed;color:#155b42}
+    .answer.correct .answer-letter{background:#bde6cc;color:#14513c}
+    .answer.wrong{border-color:#ce8989;background:#fcf0ee;color:#8f333a}
+    .answer.wrong .answer-letter{background:#f0d4d2;color:#8f333a}
+    .feedback{border-left:4px solid #318365;background:#f0f7f1;padding:18px 20px;border-radius:0 12px 12px 0;margin-top:22px;line-height:1.65;font-size:14px;color:#2d4b42}
+    .feedback.bad{border-left-color:#b84c50;background:#fbf0ed;color:#634448}
+    .feedback strong{display:block;margin-bottom:5px;font-size:15px}
+    .game-footer{display:flex;justify-content:space-between;align-items:center;gap:18px;margin-top:28px;flex-wrap:wrap}
+    .game-helper{font-size:12px;color:var(--muted)}
+    .next{background:var(--night);color:white;border:0;border-radius:10px;padding:14px 22px;font-weight:800}
+    .next:hover{background:#294653}
+    .result{text-align:center;padding:9px 0 10px}
+    .score-circle{width:150px;height:150px;border:9px solid var(--gold);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 27px;background:#fff9e9}
+    .score-circle b{font-size:50px;font-family:Georgia,serif;line-height:1}
+    .score-circle small{margin-top:9px;font-size:12px;font-weight:800;letter-spacing:.07em;color:var(--muted)}
+    .result-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .outlined{background:transparent;color:var(--night);border:1px solid #b6bcb9;border-radius:13px;padding:16px 24px;font-weight:800}
+    .why{display:grid;grid-template-columns:1fr 1fr 1fr;gap:25px;padding:67px 0 78px}
+    .why article{padding:8px 6px}
+    .why-symbol{font-size:25px;color:var(--sea);margin-bottom:16px}
+    .why h3{font-size:19px;font-family:Georgia,serif;margin-bottom:9px}
+    .why p{font-size:14px;line-height:1.75;color:var(--muted);margin:0}
+    footer{background:var(--night);color:#bdc9ca;padding:30px 0}
+    .foot-inner{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:13px}
+    footer b{font-family:Georgia,serif;color:var(--gold);font-size:25px;letter-spacing:.06em}
+    .hidden{display:none!important}
+    @keyframes rotate{to{transform:rotate(360deg)}}
+    @media(max-width:920px){.category-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero-inner{gap:12px}.artifact{max-width:330px}}
+    @media(max-width:710px){.wrap{width:min(100% - 32px,1160px)}.nav{min-height:71px}.nav-end{gap:13px}.nav-end a:not(.nav-cta){display:none}.nav-cta{font-size:12px;padding:11px 15px}.hero-inner{grid-template-columns:1fr;gap:0;padding:52px 0 57px}.hero h1{max-width:530px}.hero-description{font-size:16px}.artifact{height:240px;max-width:245px;margin:38px auto 8px}.disc-label{bottom:-7px}.section{padding:58px 0}.section-header{display:block}.section-lead{margin-top:12px;max-width:460px}.category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.category-card{padding:17px;min-height:194px}.category-name{font-size:19px}.category-icon{width:52px;height:52px;font-size:26px;margin-bottom:4px}.game-section{padding:50px 0}.game-top{padding:17px 20px}.game-body{padding:25px 19px 30px}.answers{grid-template-columns:1fr}.answer{min-height:61px}.question{margin-bottom:22px}.why{grid-template-columns:1fr;gap:9px;padding:45px 0}.foot-inner{align-items:flex-start;flex-direction:column}}
+    @media(max-width:390px){.category-grid{grid-template-columns:1fr}.category-card{min-height:0}.hero-actions>*{width:100%}.hero-sub{gap:10px}.game-footer{align-items:stretch}.game-footer .next{width:100%}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap nav">
+      <a href="#accueil" class="brand" aria-label="THOT, accueil">
+        <svg class="brand-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <circle cx="24" cy="24" r="22" stroke="#e7b45f" stroke-width="1.5"/>
+          <path d="M13 33c9-6 10-12 9-21 5 3 7 8 7 13l12 2-11 4c-2 6-7 8-14 6" stroke="#e7b45f" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="25" cy="17" r="1.35" fill="#e7b45f"/>
+        </svg>
+        THOT
+      </a>
+      <nav class="nav-end" aria-label="Navigation principale">
+        <a href="#univers">Les univers</a>
+        <a href="#concept">Le concept</a>
+        <a href="#jouer" class="nav-cta">Jouer maintenant ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="accueil">
+    <section class="hero" aria-labelledby="main-title">
+      <div class="wrap hero-inner">
+        <div>
+          <div class="eyebrow">Le savoir est un jeu</div>
+          <h1 id="main-title">La curiosité<br>est un <span class="gold">super-<br>pouvoir.</span></h1>
+          <p class="hero-description">De l'Égypte antique aux mystères de l'espace, explore tout ce que tu ne savais pas encore. Des quiz rapides, des surprises et zéro prise de tête.</p>
+          <div class="hero-actions">
+            <a class="primary" href="#jouer">Lancer mon premier quiz <span aria-hidden="true">↗</span></a>
+            <a class="secondary" href="#univers">Explorer les thèmes</a>
+          </div>
+          <div class="hero-sub"><span>Gratuit</span><span>5 questions par partie</span><span>Pour les esprits curieux</span></div>
+        </div>
+        <div class="artifact" role="img" aria-label="Emblème doré de THOT, inspiré de l'ibis égyptien et entouré d'orbites">
+          <div class="orbit"></div><div class="orbit two"></div><div class="orbit three"></div>
+          <span class="star a" aria-hidden="true">✦</span><span class="star b" aria-hidden="true">✧</span><span class="star c" aria-hidden="true">✳</span>
+          <div class="disc">
+            <svg viewBox="0 0 200 200" fill="none" aria-hidden="true">
+              <circle cx="100" cy="100" r="87" stroke="#553b2c" opacity=".32" stroke-width="2"/>
+              <path d="M58 154c37-8 55-30 54-71-1-22-8-41-20-52 31 6 49 31 43 57l49 10-52 16c-7 28-32 47-70 52" fill="#243840"/>
+              <path d="M93 31c13 19 19 41 17 63" stroke="#b77d3f" stroke-width="6" stroke-linecap="round"/>
+              <circle cx="119" cy="58" r="4" fill="#e7b45f"/>
+              <path d="M38 168h127M51 179h100" stroke="#553b2c" stroke-width="2" opacity=".6"/>
+            </svg>
+          </div>
+          <span class="disc-label">OSE SAVOIR.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="univers" class="section wrap" aria-labelledby="univers-title">
+      <div class="section-header">
+        <div><p class="kicker">Cinq portes vers l'inconnu</p><h2 id="univers-title">Choisis ton univers.</h2></div>
+        <p class="section-lead">Un thème, cinq questions, une bonne raison de te coucher moins bête.</p>
+      </div>
+      <div class="category-grid">
+        <button class="category-card" type="button" data-category="histoire"><span class="category-icon" aria-hidden="true">🏛️</span><span class="category-name">Histoire</span><span class="category-meta">Rois, révolutions et anecdotes oubliées.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
+        <button class="category-card" type="button" data-category="geographie"><span class="category-icon" aria-hidden="true">🌍</span><span class="category-name">Géographie</span><span class="category-meta">Le monde a encore des secrets.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
+        <button class="category-card" type="button" data-category="sciences"><span class="category-icon" aria-hidden="true">🔬</span><span class="category-name">Sciences</span><span class="category-meta">Des étoiles jusqu'à ton ADN.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
+        <button class="category-card" type="button" data-category="arts"><span class="category-icon" aria-hidden="true">🎨</span><span class="category-name">Arts & culture</span><span class="category-meta">Des chefs-d'œuvre aux grands classiques.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
+        <button class="category-card" type="button" data-category="insolite"><span class="category-icon" aria-hidden="true">✨</span><span class="category-name">Insolite</span><span class="category-meta">Le genre de fait qu'on raconte à table.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
+      </div>
+    </section>
+
+    <section id="jouer" class="game-section" aria-labelledby="quiz-title">
+      <div class="wrap">
+        <div class="section-header">
+          <div><p class="kicker">À toi de jouer</p><h2 id="quiz-title">Le défi THOT.</h2></div>
+          <p class="section-lead">Tu peux changer de thème et recommencer autant de fois que tu veux.</p>
+        </div>
+        <div class="game-shell">
+          <div class="game-top"><span class="game-brand">✳ THOT / LE QUIZ</span><span class="game-best" id="best-score">Meilleur score : —</span></div>
+          <div class="game-body">
+            <div id="screen-intro" class="game-intro">
+              <div class="game-mark" aria-hidden="true">✦</div>
+              <div class="category-tag" id="chosen-category">✦ Un peu de tout</div>
+              <h3>Prêt à faire chauffer tes neurones ?</h3>
+              <p>Cinq questions. Quatre choix. Une explication après chaque réponse. Pas besoin de compte pour jouer.</p>
+              <button type="button" class="primary" id="start-button">C'est parti ! <span aria-hidden="true">↗</span></button>
+            </div>
+            <div id="screen-question" class="hidden" aria-live="polite">
+              <div class="game-status"><span id="question-counter">QUESTION 1 / 5</span><span id="current-score">0 bonne réponse</span></div>
+              <div class="game-progress" role="progressbar" aria-label="Progression du quiz" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0" id="progressbar"><div id="progressfill"></div></div>
+              <h3 class="question" id="question-text"></h3>
+              <div class="answers" id="answer-list"></div>
+              <div class="feedback hidden" id="feedback" role="status"></div>
+              <div class="game-footer"><span class="game-helper">Un peu de curiosité, beaucoup de découvertes.</span><button class="next hidden" type="button" id="next-button">Question suivante →</button></div>
+            </div>
+            <div id="screen-result" class="result hidden" aria-live="polite">
+              <div class="score-circle"><b id="final-score">0/5</b><small>TON SCORE</small></div>
+              <h3 id="result-title">Bien joué !</h3>
+              <p id="result-message">Ta curiosité fait des merveilles.</p>
+              <div class="result-actions"><button type="button" class="primary" id="replay-button">Rejouer ↗</button><button type="button" class="outlined" id="change-button">Changer de thème</button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="concept" class="wrap why" aria-label="Pourquoi THOT ?">
+      <article><div class="why-symbol">✳</div><h3>Apprendre sans réviser</h3><p>Des questions courtes et des explications qui racontent quelque chose, pas seulement une bonne réponse.</p></article>
+      <article><div class="why-symbol">◎</div><h3>Cinq minutes suffisent</h3><p>Une petite partie dans le bus, à la pause ou juste parce que tu t'ennuies.</p></article>
+      <article><div class="why-symbol">✦</div><h3>La curiosité d'abord</h3><p>THOT emprunte son nom au dieu égyptien du savoir et de l'écriture. Ici, toutes les questions sont les bienvenues.</p></article>
+    </section>
+  </main>
+  <footer><div class="wrap foot-inner"><b>THOT</b><span>Le savoir est un jeu. © <span id="year">2026</span> THOT</span><span>Fait pour les esprits curieux ✦</span></div></footer>
+
+  <script>
+    'use strict';
+    const questions = [
+      {cat:'histoire',q:'Quelle cité grecque met fin à la domination militaire spartiate lors de la bataille de Leuctres, en 371 av. J.-C. ?',a:['Athènes','Thèbes','Corinthe','Argos'],correct:1,why:'À Leuctres, l’armée thébaine commandée notamment par Épaminondas bat les Spartiates. Cette victoire bouleverse l’équilibre des puissances grecques.'},
+      {cat:'histoire',q:'En quelle année la Magna Carta est-elle scellée en Angleterre ?',a:['1066','1215','1453','1689'],correct:1,why:'La Magna Carta est scellée en 1215 sous Jean sans Terre. Elle devient un texte de référence dans l’histoire des limites imposées au pouvoir royal.'},
+      {cat:'histoire',q:'Quel événement est généralement retenu comme le début de la Révolution française ?',a:['Le sacre de Napoléon','La prise de la Bastille','La bataille de Waterloo','La Commune de Paris'],correct:1,why:'La prise de la Bastille, le 14 juillet 1789, est l’un des événements emblématiques du début de la Révolution française.'},
+      {cat:'histoire',q:'Où l’archiduc François-Ferdinand est-il assassiné en 1914 ?',a:['Vienne','Berlin','Sarajevo','Prague'],correct:2,why:'L’assassinat a lieu à Sarajevo, le 28 juin 1914. Il déclenche une crise diplomatique qui mène à la Première Guerre mondiale.'},
+      {cat:'histoire',q:'En quelle année la pierre de Rosette est-elle découverte ?',a:['1799','1822','1889','1922'],correct:0,why:'Des soldats français découvrent la pierre de Rosette en 1799. Elle contribuera au déchiffrement des hiéroglyphes, notamment grâce à Champollion.'},
+      {cat:'geographie',q:'Quelle est la capitale de l’Australie ?',a:['Sydney','Melbourne','Canberra','Perth'],correct:2,why:'Canberra est la capitale fédérale de l’Australie. Sydney et Melbourne sont plus peuplées, mais ne sont pas la capitale.'},
+      {cat:'geographie',q:'Quels sont les deux pays qui entourent la Mongolie ?',a:['Chine et Russie','Chine et Inde','Russie et Kazakhstan','Inde et Pakistan'],correct:0,why:'La Mongolie est enclavée entre la Russie au nord et la Chine au sud, à l’est et à l’ouest.'},
+      {cat:'geographie',q:'Dans quelle mer le Danube se jette-t-il ?',a:['Mer du Nord','Mer Baltique','Mer Adriatique','Mer Noire'],correct:3,why:'Le Danube traverse ou borde plusieurs pays européens avant de former un vaste delta sur la mer Noire.'},
+      {cat:'geographie',q:'Quel pays est entièrement enclavé dans l’Afrique du Sud ?',a:['Eswatini','Lesotho','Botswana','Namibie'],correct:1,why:'Le Lesotho est totalement entouré par l’Afrique du Sud. L’Eswatini possède aussi une frontière avec le Mozambique.'},
+      {cat:'geographie',q:'Quelle ville est la capitale constitutionnelle de la Bolivie ?',a:['La Paz','Santa Cruz','Sucre','Cochabamba'],correct:2,why:'Sucre est la capitale constitutionnelle de la Bolivie, tandis que La Paz accueille le gouvernement et le parlement.'},
+      {cat:'sciences',q:'Quel gaz est le plus abondant dans l’atmosphère terrestre ?',a:['Oxygène','Azote','Dioxyde de carbone','Argon'],correct:1,why:'L’azote représente environ 78 % de l’atmosphère terrestre, contre environ 21 % pour l’oxygène.'},
+      {cat:'sciences',q:'Combien de cœurs possède une pieuvre ?',a:['Un','Deux','Trois','Quatre'],correct:2,why:'La pieuvre possède trois cœurs : deux dirigent le sang vers les branchies et un vers le reste du corps.'},
+      {cat:'sciences',q:'Pourquoi Mars paraît-elle rouge ?',a:['Ses océans','Le fer oxydé de sa surface','Son atmosphère de méthane','La lumière de Jupiter'],correct:1,why:'La poussière et les roches martiennes contiennent des oxydes de fer, responsables de cette couleur rougeâtre.'},
+      {cat:'sciences',q:'Quelle est la vitesse approximative de la lumière dans le vide ?',a:['3 000 km/s','30 000 km/s','300 000 km/s','3 000 000 km/s'],correct:2,why:'La lumière se déplace dans le vide à environ 299 792 km/s. En une seconde, elle ferait plus de sept fois le tour de la Terre.'},
+      {cat:'sciences',q:'Que signifie le A dans ADN ?',a:['Aminé','Acide','Atomique','Actif'],correct:1,why:'ADN signifie « acide désoxyribonucléique ». Cette molécule contient l’information génétique des êtres vivants.'},
+      {cat:'arts',q:'Qui a peint Guernica ?',a:['Salvador Dalí','Pablo Picasso','Joan Miró','Francisco de Goya'],correct:1,why:'Picasso peint Guernica en 1937, après le bombardement de la ville basque pendant la guerre d’Espagne.'},
+      {cat:'arts',q:'Qui a composé La Flûte enchantée ?',a:['Beethoven','Vivaldi','Mozart','Bach'],correct:2,why:'La Flûte enchantée est un opéra de Mozart créé à Vienne en 1791, quelques mois avant sa mort.'},
+      {cat:'arts',q:'Quel écrivain est l’auteur des Misérables ?',a:['Émile Zola','Honoré de Balzac','Victor Hugo','Gustave Flaubert'],correct:2,why:'Victor Hugo publie Les Misérables en 1862. Jean Valjean, Cosette et Javert en sont parmi les personnages les plus connus.'},
+      {cat:'arts',q:'Quel peintre a réalisé Impression, soleil levant ?',a:['Claude Monet','Auguste Renoir','Edgar Degas','Paul Cézanne'],correct:0,why:'Cette toile de Claude Monet, présentée en 1874, donne son nom au mouvement impressionniste.'},
+      {cat:'arts',q:'Qui a peint La Joconde ?',a:['Raphaël','Michel-Ange','Léonard de Vinci','Le Caravage'],correct:2,why:'Léonard de Vinci peint La Joconde au début du XVIe siècle. L’œuvre est aujourd’hui conservée au musée du Louvre.'},
+      {cat:'insolite',q:'Quel animal est particulièrement associé au dieu égyptien Thot ?',a:['Le lion','L’ibis','Le scarabée','Le crocodile'],correct:1,why:'Thot, dieu égyptien lié au savoir, à l’écriture et au calcul, est souvent représenté avec une tête d’ibis ; il peut aussi apparaître sous la forme d’un babouin.'},
+      {cat:'insolite',q:'En quelle année ont lieu les premiers Jeux olympiques modernes ?',a:['1796','1850','1896','1924'],correct:2,why:'Les premiers Jeux olympiques de l’ère moderne se déroulent à Athènes en 1896, sous l’impulsion notamment de Pierre de Coubertin.'},
+      {cat:'insolite',q:'Comment s’appelle le premier timbre-poste adhésif émis au monde ?',a:['Penny Black','Blue Mauritius','Red Dragon','One Cent Magenta'],correct:0,why:'Le Penny Black apparaît au Royaume-Uni en 1840. Il porte le portrait de la reine Victoria et vaut un penny.'},
+      {cat:'insolite',q:'Quel animal est un symbole national traditionnel de l’Écosse ?',a:['La licorne','Le panda','Le koala','Le flamant rose'],correct:0,why:'La licorne est l’animal national traditionnel de l’Écosse. Elle apparaît dans son héraldique depuis plusieurs siècles.'},
+      {cat:'insolite',q:'De quelles deux lettres grecques vient le mot « alphabet » ?',a:['Gamma et delta','Alpha et bêta','Pi et sigma','Oméga et thêta'],correct:1,why:'Le mot alphabet vient des deux premières lettres de l’alphabet grec : alpha et bêta.'}
+    ];
+
+    const labels = {mix:'✦ Un peu de tout',histoire:'🏛️ Histoire',geographie:'🌍 Géographie',sciences:'🔬 Sciences',arts:'🎨 Arts & culture',insolite:'✨ Insolite'};
+    let selectedCategory='mix',round=[],index=0,score=0,answered=false;
+    const $=id=>document.getElementById(id);
+    const screens=['screen-intro','screen-question','screen-result'];
+    const show=id=>screens.forEach(name=>$(name).classList.toggle('hidden',name!==id));
+    function shuffle(arr){const copy=[...arr];for(let i=copy.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]];}return copy;}
+    function bestScore(){try{const stored=Number(localStorage.getItem('thot_best'));return Number.isFinite(stored)&&stored>=0&&stored<=5?stored:null;}catch{return null;}}
+    function saveBest(value){try{localStorage.setItem('thot_best',String(value));}catch{/* Stockage éventuellement bloqué */}}
+    function refreshBest(){const best=bestScore();$('best-score').textContent=best===null?'Meilleur score : —':'Meilleur score : '+best+'/5';}
+    function setCategory(cat){selectedCategory=labels[cat]?cat:'mix';$('chosen-category').textContent=labels[selectedCategory];show('screen-intro');$('jouer').scrollIntoView({behavior:'smooth',block:'start'});}
+    function begin(){const pool=selectedCategory==='mix'?questions:questions.filter(q=>q.cat===selectedCategory);round=shuffle(pool).slice(0,5);index=0;score=0;show('screen-question');renderQuestion();}
+    function renderQuestion(){answered=false;const item=round[index];$('question-counter').textContent='QUESTION '+(index+1)+' / '+round.length;$('current-score').textContent=score+' bonne'+(score>1?'s':'')+' réponse'+(score>1?'s':'');$('progressbar').setAttribute('aria-valuenow',String(index));$('progressfill').style.width=(index/round.length*100)+'%';$('question-text').textContent=item.q;$('answer-list').replaceChildren();$('feedback').className='feedback hidden';$('feedback').replaceChildren();$('next-button').classList.add('hidden');const choices=shuffle(item.a.map((answer,idx)=>({answer,idx})));choices.forEach(({answer,idx},n)=>{const button=document.createElement('button');button.type='button';button.className='answer';button.dataset.idx=String(idx);const letter=document.createElement('span');letter.className='answer-letter';letter.textContent='ABCD'[n];const text=document.createElement('span');text.textContent=answer;button.append(letter,text);button.addEventListener('click',()=>submitAnswer(idx));$('answer-list').append(button);});}
+    function submitAnswer(chosen){if(answered)return;answered=true;const item=round[index];const good=chosen===item.correct;if(good)score++;document.querySelectorAll('.answer').forEach(b=>{const value=Number(b.dataset.idx);b.disabled=true;if(value===item.correct)b.classList.add('correct');else if(value===chosen)b.classList.add('wrong');});$('current-score').textContent=score+' bonne'+(score>1?'s':'')+' réponse'+(score>1?'s':'');const feedback=$('feedback');feedback.className='feedback'+(good?'':' bad');const title=document.createElement('strong');title.textContent=good?'✦ Bonne réponse !':'✦ Pas tout à fait !';const detail=document.createElement('span');detail.textContent=item.why;feedback.append(title,detail);$('next-button').textContent=index===round.length-1?'Voir mon résultat →':'Question suivante →';$('next-button').classList.remove('hidden');$('progressbar').setAttribute('aria-valuenow',String(index+1));$('progressfill').style.width=((index+1)/round.length*100)+'%';}
+    function next(){if(!answered)return;index++;if(index>=round.length){finish();}else{renderQuestion();}}
+    function finish(){const prior=bestScore();if(prior===null||score>prior)saveBest(score);refreshBest();$('final-score').textContent=score+'/'+round.length;const msg=score===5?['Incroyable, un sans-faute !','Thot lui-même aurait probablement applaudi. Tu viens de faire un carton.']:score>=3?['Belle performance !','Tu connais déjà beaucoup de choses… et tu en sais cinq de plus maintenant.']:['La curiosité se cultive !','Chaque bonne réponse commence par une question. Une autre partie ?'];$('result-title').textContent=msg[0];$('result-message').textContent=msg[1];show('screen-result');}
+    document.querySelectorAll('[data-category]').forEach(button=>button.addEventListener('click',()=>setCategory(button.dataset.category)));
+    $('start-button').addEventListener('click',begin);
+    $('next-button').addEventListener('click',next);
+    $('replay-button').addEventListener('click',begin);
+    $('change-button').addEventListener('click',()=>{selectedCategory='mix';$('chosen-category').textContent=labels.mix;show('screen-intro');$('univers').scrollIntoView({behavior:'smooth'});});
+    $('year').textContent=String(new Date().getFullYear());
+    refreshBest();
+  </script>
+</body>
+</html>
