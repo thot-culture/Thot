@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101e2b">
   <meta name="description" content="THOT, le jeu de culture générale qui transforme cinq minutes de curiosité en petites découvertes.">
-  <title>THOT — Nourris ta curiosité</title>
+  <title>THOT — Nourris ta curiosité · V2</title>
   <style>
     :root {
       color-scheme: light;
@@ -125,6 +125,25 @@
     @media(max-width:710px){.wrap{width:min(100% - 32px,1160px)}.nav{min-height:71px}.nav-end{gap:13px}.nav-end a:not(.nav-cta){display:none}.nav-cta{font-size:12px;padding:11px 15px}.hero-inner{grid-template-columns:1fr;gap:0;padding:52px 0 57px}.hero h1{max-width:530px}.hero-description{font-size:16px}.artifact{height:240px;max-width:245px;margin:38px auto 8px}.disc-label{bottom:-7px}.section{padding:58px 0}.section-header{display:block}.section-lead{margin-top:12px;max-width:460px}.category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.category-card{padding:17px;min-height:194px}.category-name{font-size:19px}.category-icon{width:52px;height:52px;font-size:26px;margin-bottom:4px}.game-section{padding:50px 0}.game-top{padding:17px 20px}.game-body{padding:25px 19px 30px}.answers{grid-template-columns:1fr}.answer{min-height:61px}.question{margin-bottom:22px}.why{grid-template-columns:1fr;gap:9px;padding:45px 0}.foot-inner{align-items:flex-start;flex-direction:column}}
     @media(max-width:390px){.category-grid{grid-template-columns:1fr}.category-card{min-height:0}.hero-actions>*{width:100%}.hero-sub{gap:10px}.game-footer{align-items:stretch}.game-footer .next{width:100%}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+    /* THOT V2 : niveaux, statistiques et animations légères */
+    .level-pick{margin:14px auto 23px;max-width:570px;text-align:left}
+    .level-pick>span{display:block;color:var(--ink);font-size:13px;font-weight:800;margin-bottom:10px;text-align:center}
+    .level-options{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+    .level-option{border:1px solid #deddd6;border-radius:12px;background:#f7f5ef;color:#35454a;padding:13px 9px;font-size:13px;font-weight:800}
+    .level-option[aria-pressed="true"]{background:var(--night);border-color:var(--night);color:var(--gold)}
+    .level-option:hover:not([aria-pressed="true"]){border-color:var(--sea)}
+    .level-description{margin:13px auto 0!important;text-align:center;font-size:13px!important;color:var(--muted)!important}
+    .level-pill{display:inline-block;color:#4f6b67;font-size:12px;font-weight:800;margin-bottom:13px;padding:5px 10px;background:#edf5f2;border-radius:99px}
+    .stats-panel{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:21px}
+    .stat-card{background:var(--paper);border:1px solid var(--line);border-radius:15px;padding:19px 22px}
+    .stat-card strong{display:block;font-size:29px;font-family:Georgia,serif;font-weight:600;color:var(--night);margin-bottom:5px}
+    .stat-card span{font-size:13px;color:var(--muted)}
+    .stats-note{text-align:center;font-size:12px;color:var(--muted);margin:13px 0 0}
+    .review-hint{font-size:13px;color:var(--sea);margin:-5px 0 18px}
+    .result-detail{border:1px solid #ece5d5;border-radius:13px;background:#faf8f0;padding:15px;margin:0 auto 24px;max-width:550px;font-size:13px;color:#51615e}
+    .answer:focus-visible,.level-option:focus-visible{outline:3px solid var(--gold-strong);outline-offset:3px}
+    @media(max-width:710px){.stats-panel{gap:9px}.stat-card{padding:15px 10px}.stat-card strong{font-size:24px}.stat-card span{font-size:11px}.level-options{gap:6px}.level-option{padding:13px 5px;font-size:12px}}
   </style>
 </head>
 <body>
@@ -157,7 +176,7 @@
             <a class="primary" href="#jouer">Lancer mon premier quiz <span aria-hidden="true">↗</span></a>
             <a class="secondary" href="#univers">Explorer les thèmes</a>
           </div>
-          <div class="hero-sub"><span>Gratuit</span><span>5 questions par partie</span><span>Pour les esprits curieux</span></div>
+          <div class="hero-sub"><span>Gratuit</span><span>5 questions par partie</span><span>115 questions à découvrir</span></div>
         </div>
         <div class="artifact" role="img" aria-label="Emblème doré de THOT, inspiré de l'ibis égyptien et entouré d'orbites">
           <div class="orbit"></div><div class="orbit two"></div><div class="orbit three"></div>
@@ -179,7 +198,7 @@
     <section id="univers" class="section wrap" aria-labelledby="univers-title">
       <div class="section-header">
         <div><p class="kicker">Cinq portes vers l'inconnu</p><h2 id="univers-title">Choisis ton univers.</h2></div>
-        <p class="section-lead">Un thème, cinq questions, une bonne raison de te coucher moins bête.</p>
+        <p class="section-lead">Cinq univers, trois niveaux et plus de cent questions à explorer.</p>
       </div>
       <div class="category-grid">
         <button class="category-card" type="button" data-category="histoire"><span class="category-icon" aria-hidden="true">🏛️</span><span class="category-name">Histoire</span><span class="category-meta">Rois, révolutions et anecdotes oubliées.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
@@ -203,12 +222,22 @@
               <div class="game-mark" aria-hidden="true">✦</div>
               <div class="category-tag" id="chosen-category">✦ Un peu de tout</div>
               <h3>Prêt à faire chauffer tes neurones ?</h3>
-              <p>Cinq questions. Quatre choix. Une explication après chaque réponse. Pas besoin de compte pour jouer.</p>
+              <p>Cinq questions. Quatre choix. Une explication après chaque réponse. Choisis ton niveau pour commencer.</p>
+              <div class="level-pick" role="group" aria-label="Niveau de difficulté">
+                <span>Niveau de difficulté</span>
+                <div class="level-options">
+                  <button class="level-option" type="button" data-level="facile" aria-pressed="true">🌱 Facile</button>
+                  <button class="level-option" type="button" data-level="intermediaire" aria-pressed="false">⚡ Moyen</button>
+                  <button class="level-option" type="button" data-level="expert" aria-pressed="false">🏆 Expert</button>
+                </div>
+                <p class="level-description" id="level-description">Pour se lancer et découvrir de nouvelles choses.</p>
+              </div>
               <button type="button" class="primary" id="start-button">C'est parti ! <span aria-hidden="true">↗</span></button>
             </div>
             <div id="screen-question" class="hidden" aria-live="polite">
               <div class="game-status"><span id="question-counter">QUESTION 1 / 5</span><span id="current-score">0 bonne réponse</span></div>
               <div class="game-progress" role="progressbar" aria-label="Progression du quiz" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0" id="progressbar"><div id="progressfill"></div></div>
+              <div class="level-pill" id="question-level">🌱 Niveau facile</div>
               <h3 class="question" id="question-text"></h3>
               <div class="answers" id="answer-list"></div>
               <div class="feedback hidden" id="feedback" role="status"></div>
@@ -218,16 +247,23 @@
               <div class="score-circle"><b id="final-score">0/5</b><small>TON SCORE</small></div>
               <h3 id="result-title">Bien joué !</h3>
               <p id="result-message">Ta curiosité fait des merveilles.</p>
+              <div class="result-detail" id="result-detail"></div>
               <div class="result-actions"><button type="button" class="primary" id="replay-button">Rejouer ↗</button><button type="button" class="outlined" id="change-button">Changer de thème</button></div>
             </div>
           </div>
         </div>
+        <div class="stats-panel" aria-label="Mes statistiques THOT">
+          <div class="stat-card"><strong id="stat-games">0</strong><span>Parties terminées</span></div>
+          <div class="stat-card"><strong id="stat-correct">0</strong><span>Bonnes réponses</span></div>
+          <div class="stat-card"><strong id="stat-accuracy">—</strong><span>Taux de réussite</span></div>
+        </div>
+        <p class="stats-note">Ta progression est sauvegardée uniquement sur cet appareil, dans ce navigateur.</p>
       </div>
     </section>
 
     <section id="concept" class="wrap why" aria-label="Pourquoi THOT ?">
       <article><div class="why-symbol">✳</div><h3>Apprendre sans réviser</h3><p>Des questions courtes et des explications qui racontent quelque chose, pas seulement une bonne réponse.</p></article>
-      <article><div class="why-symbol">◎</div><h3>Cinq minutes suffisent</h3><p>Une petite partie dans le bus, à la pause ou juste parce que tu t'ennuies.</p></article>
+      <article><div class="why-symbol">◎</div><h3>Trois niveaux pour progresser</h3><p>Facile, moyen ou expert : le meilleur défi, c’est celui qui te fait apprendre.</p></article>
       <article><div class="why-symbol">✦</div><h3>La curiosité d'abord</h3><p>THOT emprunte son nom au dieu égyptien du savoir et de l'écriture. Ici, toutes les questions sont les bienvenues.</p></article>
     </section>
   </main>
@@ -235,56 +271,1343 @@
 
   <script>
     'use strict';
-    const questions = [
-      {cat:'histoire',q:'Quelle cité grecque met fin à la domination militaire spartiate lors de la bataille de Leuctres, en 371 av. J.-C. ?',a:['Athènes','Thèbes','Corinthe','Argos'],correct:1,why:'À Leuctres, l’armée thébaine commandée notamment par Épaminondas bat les Spartiates. Cette victoire bouleverse l’équilibre des puissances grecques.'},
-      {cat:'histoire',q:'En quelle année la Magna Carta est-elle scellée en Angleterre ?',a:['1066','1215','1453','1689'],correct:1,why:'La Magna Carta est scellée en 1215 sous Jean sans Terre. Elle devient un texte de référence dans l’histoire des limites imposées au pouvoir royal.'},
-      {cat:'histoire',q:'Quel événement est généralement retenu comme le début de la Révolution française ?',a:['Le sacre de Napoléon','La prise de la Bastille','La bataille de Waterloo','La Commune de Paris'],correct:1,why:'La prise de la Bastille, le 14 juillet 1789, est l’un des événements emblématiques du début de la Révolution française.'},
-      {cat:'histoire',q:'Où l’archiduc François-Ferdinand est-il assassiné en 1914 ?',a:['Vienne','Berlin','Sarajevo','Prague'],correct:2,why:'L’assassinat a lieu à Sarajevo, le 28 juin 1914. Il déclenche une crise diplomatique qui mène à la Première Guerre mondiale.'},
-      {cat:'histoire',q:'En quelle année la pierre de Rosette est-elle découverte ?',a:['1799','1822','1889','1922'],correct:0,why:'Des soldats français découvrent la pierre de Rosette en 1799. Elle contribuera au déchiffrement des hiéroglyphes, notamment grâce à Champollion.'},
-      {cat:'geographie',q:'Quelle est la capitale de l’Australie ?',a:['Sydney','Melbourne','Canberra','Perth'],correct:2,why:'Canberra est la capitale fédérale de l’Australie. Sydney et Melbourne sont plus peuplées, mais ne sont pas la capitale.'},
-      {cat:'geographie',q:'Quels sont les deux pays qui entourent la Mongolie ?',a:['Chine et Russie','Chine et Inde','Russie et Kazakhstan','Inde et Pakistan'],correct:0,why:'La Mongolie est enclavée entre la Russie au nord et la Chine au sud, à l’est et à l’ouest.'},
-      {cat:'geographie',q:'Dans quelle mer le Danube se jette-t-il ?',a:['Mer du Nord','Mer Baltique','Mer Adriatique','Mer Noire'],correct:3,why:'Le Danube traverse ou borde plusieurs pays européens avant de former un vaste delta sur la mer Noire.'},
-      {cat:'geographie',q:'Quel pays est entièrement enclavé dans l’Afrique du Sud ?',a:['Eswatini','Lesotho','Botswana','Namibie'],correct:1,why:'Le Lesotho est totalement entouré par l’Afrique du Sud. L’Eswatini possède aussi une frontière avec le Mozambique.'},
-      {cat:'geographie',q:'Quelle ville est la capitale constitutionnelle de la Bolivie ?',a:['La Paz','Santa Cruz','Sucre','Cochabamba'],correct:2,why:'Sucre est la capitale constitutionnelle de la Bolivie, tandis que La Paz accueille le gouvernement et le parlement.'},
-      {cat:'sciences',q:'Quel gaz est le plus abondant dans l’atmosphère terrestre ?',a:['Oxygène','Azote','Dioxyde de carbone','Argon'],correct:1,why:'L’azote représente environ 78 % de l’atmosphère terrestre, contre environ 21 % pour l’oxygène.'},
-      {cat:'sciences',q:'Combien de cœurs possède une pieuvre ?',a:['Un','Deux','Trois','Quatre'],correct:2,why:'La pieuvre possède trois cœurs : deux dirigent le sang vers les branchies et un vers le reste du corps.'},
-      {cat:'sciences',q:'Pourquoi Mars paraît-elle rouge ?',a:['Ses océans','Le fer oxydé de sa surface','Son atmosphère de méthane','La lumière de Jupiter'],correct:1,why:'La poussière et les roches martiennes contiennent des oxydes de fer, responsables de cette couleur rougeâtre.'},
-      {cat:'sciences',q:'Quelle est la vitesse approximative de la lumière dans le vide ?',a:['3 000 km/s','30 000 km/s','300 000 km/s','3 000 000 km/s'],correct:2,why:'La lumière se déplace dans le vide à environ 299 792 km/s. En une seconde, elle ferait plus de sept fois le tour de la Terre.'},
-      {cat:'sciences',q:'Que signifie le A dans ADN ?',a:['Aminé','Acide','Atomique','Actif'],correct:1,why:'ADN signifie « acide désoxyribonucléique ». Cette molécule contient l’information génétique des êtres vivants.'},
-      {cat:'arts',q:'Qui a peint Guernica ?',a:['Salvador Dalí','Pablo Picasso','Joan Miró','Francisco de Goya'],correct:1,why:'Picasso peint Guernica en 1937, après le bombardement de la ville basque pendant la guerre d’Espagne.'},
-      {cat:'arts',q:'Qui a composé La Flûte enchantée ?',a:['Beethoven','Vivaldi','Mozart','Bach'],correct:2,why:'La Flûte enchantée est un opéra de Mozart créé à Vienne en 1791, quelques mois avant sa mort.'},
-      {cat:'arts',q:'Quel écrivain est l’auteur des Misérables ?',a:['Émile Zola','Honoré de Balzac','Victor Hugo','Gustave Flaubert'],correct:2,why:'Victor Hugo publie Les Misérables en 1862. Jean Valjean, Cosette et Javert en sont parmi les personnages les plus connus.'},
-      {cat:'arts',q:'Quel peintre a réalisé Impression, soleil levant ?',a:['Claude Monet','Auguste Renoir','Edgar Degas','Paul Cézanne'],correct:0,why:'Cette toile de Claude Monet, présentée en 1874, donne son nom au mouvement impressionniste.'},
-      {cat:'arts',q:'Qui a peint La Joconde ?',a:['Raphaël','Michel-Ange','Léonard de Vinci','Le Caravage'],correct:2,why:'Léonard de Vinci peint La Joconde au début du XVIe siècle. L’œuvre est aujourd’hui conservée au musée du Louvre.'},
-      {cat:'insolite',q:'Quel animal est particulièrement associé au dieu égyptien Thot ?',a:['Le lion','L’ibis','Le scarabée','Le crocodile'],correct:1,why:'Thot, dieu égyptien lié au savoir, à l’écriture et au calcul, est souvent représenté avec une tête d’ibis ; il peut aussi apparaître sous la forme d’un babouin.'},
-      {cat:'insolite',q:'En quelle année ont lieu les premiers Jeux olympiques modernes ?',a:['1796','1850','1896','1924'],correct:2,why:'Les premiers Jeux olympiques de l’ère moderne se déroulent à Athènes en 1896, sous l’impulsion notamment de Pierre de Coubertin.'},
-      {cat:'insolite',q:'Comment s’appelle le premier timbre-poste adhésif émis au monde ?',a:['Penny Black','Blue Mauritius','Red Dragon','One Cent Magenta'],correct:0,why:'Le Penny Black apparaît au Royaume-Uni en 1840. Il porte le portrait de la reine Victoria et vaut un penny.'},
-      {cat:'insolite',q:'Quel animal est un symbole national traditionnel de l’Écosse ?',a:['La licorne','Le panda','Le koala','Le flamant rose'],correct:0,why:'La licorne est l’animal national traditionnel de l’Écosse. Elle apparaît dans son héraldique depuis plusieurs siècles.'},
-      {cat:'insolite',q:'De quelles deux lettres grecques vient le mot « alphabet » ?',a:['Gamma et delta','Alpha et bêta','Pi et sigma','Oméga et thêta'],correct:1,why:'Le mot alphabet vient des deux premières lettres de l’alphabet grec : alpha et bêta.'}
+    const originalQuestions = [
+      {level:'expert',cat:'histoire',q:'Quelle cité grecque met fin à la domination militaire spartiate lors de la bataille de Leuctres, en 371 av. J.-C. ?',a:['Athènes','Thèbes','Corinthe','Argos'],correct:1,why:'À Leuctres, l’armée thébaine commandée notamment par Épaminondas bat les Spartiates. Cette victoire bouleverse l’équilibre des puissances grecques.'},
+      {level:'intermediaire',cat:'histoire',q:'En quelle année la Magna Carta est-elle scellée en Angleterre ?',a:['1066','1215','1453','1689'],correct:1,why:'La Magna Carta est scellée en 1215 sous Jean sans Terre. Elle devient un texte de référence dans l’histoire des limites imposées au pouvoir royal.'},
+      {level:'facile',cat:'histoire',q:'Quel événement parisien du 14 juillet 1789 est devenu un symbole de la Révolution française ?',a:['Le sacre de Napoléon','La prise de la Bastille','La bataille de Waterloo','La Commune de Paris'],correct:1,why:'La prise de la Bastille, le 14 juillet 1789, est l’un des événements emblématiques du début de la Révolution française.'},
+      {level:'facile',cat:'histoire',q:'Où l’archiduc François-Ferdinand est-il assassiné en 1914 ?',a:['Vienne','Berlin','Sarajevo','Prague'],correct:2,why:'L’assassinat a lieu à Sarajevo, le 28 juin 1914. Il déclenche une crise diplomatique qui mène à la Première Guerre mondiale.'},
+      {level:'intermediaire',cat:'histoire',q:'En quelle année la pierre de Rosette est-elle découverte ?',a:['1799','1822','1889','1922'],correct:0,why:'Des soldats français découvrent la pierre de Rosette en 1799. Elle contribuera au déchiffrement des hiéroglyphes, notamment grâce à Champollion.'},
+      {level:'facile',cat:'geographie',q:'Quelle est la capitale de l’Australie ?',a:['Sydney','Melbourne','Canberra','Perth'],correct:2,why:'Canberra est la capitale fédérale de l’Australie. Sydney et Melbourne sont plus peuplées, mais ne sont pas la capitale.'},
+      {level:'intermediaire',cat:'geographie',q:'Quels sont les deux pays qui entourent la Mongolie ?',a:['Chine et Russie','Chine et Inde','Russie et Kazakhstan','Inde et Pakistan'],correct:0,why:'La Mongolie est enclavée entre la Russie au nord et la Chine au sud, à l’est et à l’ouest.'},
+      {level:'intermediaire',cat:'geographie',q:'Dans quelle mer le Danube se jette-t-il ?',a:['Mer du Nord','Mer Baltique','Mer Adriatique','Mer Noire'],correct:3,why:'Le Danube traverse ou borde plusieurs pays européens avant de former un vaste delta sur la mer Noire.'},
+      {level:'intermediaire',cat:'geographie',q:'Quel pays est entièrement enclavé dans l’Afrique du Sud ?',a:['Eswatini','Lesotho','Botswana','Namibie'],correct:1,why:'Le Lesotho est totalement entouré par l’Afrique du Sud. L’Eswatini possède aussi une frontière avec le Mozambique.'},
+      {level:'expert',cat:'geographie',q:'Quelle ville est la capitale constitutionnelle de la Bolivie ?',a:['La Paz','Santa Cruz','Sucre','Cochabamba'],correct:2,why:'Sucre est la capitale constitutionnelle de la Bolivie, tandis que La Paz accueille le gouvernement et le parlement.'},
+      {level:'facile',cat:'sciences',q:'Quel gaz est le plus abondant dans l’atmosphère terrestre ?',a:['Oxygène','Azote','Dioxyde de carbone','Argon'],correct:1,why:'L’azote représente environ 78 % de l’atmosphère terrestre, contre environ 21 % pour l’oxygène.'},
+      {level:'facile',cat:'sciences',q:'Combien de cœurs possède une pieuvre ?',a:['Un','Deux','Trois','Quatre'],correct:2,why:'La pieuvre possède trois cœurs : deux dirigent le sang vers les branchies et un vers le reste du corps.'},
+      {level:'facile',cat:'sciences',q:'Pourquoi Mars paraît-elle rouge ?',a:['Ses océans','Le fer oxydé de sa surface','Son atmosphère de méthane','La lumière de Jupiter'],correct:1,why:'La poussière et les roches martiennes contiennent des oxydes de fer, responsables de cette couleur rougeâtre.'},
+      {level:'intermediaire',cat:'sciences',q:'Quelle est la vitesse approximative de la lumière dans le vide ?',a:['3 000 km/s','30 000 km/s','300 000 km/s','3 000 000 km/s'],correct:2,why:'La lumière se déplace dans le vide à environ 299 792 km/s. En une seconde, elle ferait plus de sept fois le tour de la Terre.'},
+      {level:'facile',cat:'sciences',q:'Que signifie le A dans ADN ?',a:['Aminé','Acide','Atomique','Actif'],correct:1,why:'ADN signifie « acide désoxyribonucléique ». Cette molécule contient l’information génétique des êtres vivants.'},
+      {level:'facile',cat:'arts',q:'Qui a peint Guernica ?',a:['Salvador Dalí','Pablo Picasso','Joan Miró','Francisco de Goya'],correct:1,why:'Picasso peint Guernica en 1937, après le bombardement de la ville basque pendant la guerre d’Espagne.'},
+      {level:'intermediaire',cat:'arts',q:'Qui a composé La Flûte enchantée ?',a:['Beethoven','Vivaldi','Mozart','Bach'],correct:2,why:'La Flûte enchantée est un opéra de Mozart créé à Vienne en 1791, quelques mois avant sa mort.'},
+      {level:'facile',cat:'arts',q:'Quel écrivain est l’auteur des Misérables ?',a:['Émile Zola','Honoré de Balzac','Victor Hugo','Gustave Flaubert'],correct:2,why:'Victor Hugo publie Les Misérables en 1862. Jean Valjean, Cosette et Javert en sont parmi les personnages les plus connus.'},
+      {level:'intermediaire',cat:'arts',q:'Quel peintre a réalisé Impression, soleil levant ?',a:['Claude Monet','Auguste Renoir','Edgar Degas','Paul Cézanne'],correct:0,why:'Cette toile de Claude Monet, présentée en 1874, donne son nom au mouvement impressionniste.'},
+      {level:'facile',cat:'arts',q:'Qui a peint La Joconde ?',a:['Raphaël','Michel-Ange','Léonard de Vinci','Le Caravage'],correct:2,why:'Léonard de Vinci peint La Joconde au début du XVIe siècle. L’œuvre est aujourd’hui conservée au musée du Louvre.'},
+      {level:'facile',cat:'insolite',q:'Quel animal est particulièrement associé au dieu égyptien Thot ?',a:['Le lion','L’ibis','Le scarabée','Le crocodile'],correct:1,why:'Thot, dieu égyptien lié au savoir, à l’écriture et au calcul, est souvent représenté avec une tête d’ibis ; il peut aussi apparaître sous la forme d’un babouin.'},
+      {level:'intermediaire',cat:'insolite',q:'En quelle année ont lieu les premiers Jeux olympiques modernes ?',a:['1796','1850','1896','1924'],correct:2,why:'Les premiers Jeux olympiques de l’ère moderne se déroulent à Athènes en 1896, sous l’impulsion notamment de Pierre de Coubertin.'},
+      {level:'expert',cat:'insolite',q:'Comment s’appelle le premier timbre-poste adhésif émis au monde ?',a:['Penny Black','Blue Mauritius','Red Dragon','One Cent Magenta'],correct:0,why:'Le Penny Black apparaît au Royaume-Uni en 1840. Il porte le portrait de la reine Victoria et vaut un penny.'},
+      {level:'intermediaire',cat:'insolite',q:'Quel animal est un symbole national traditionnel de l’Écosse ?',a:['La licorne','Le panda','Le koala','Le flamant rose'],correct:0,why:'La licorne est l’animal national traditionnel de l’Écosse. Elle apparaît dans son héraldique depuis plusieurs siècles.'},
+      {level:'facile',cat:'insolite',q:'De quelles deux lettres grecques vient le mot « alphabet » ?',a:['Gamma et delta','Alpha et bêta','Pi et sigma','Oméga et thêta'],correct:1,why:'Le mot alphabet vient des deux premières lettres de l’alphabet grec : alpha et bêta.'}
     ];
 
+    const nouvellesQuestions = [
+  {
+    "cat":"histoire",
+    "level":"facile",
+    "q":"Quel empereur français est vaincu à Waterloo en 1815 ?",
+    "a":[
+      "Napoléon Ier",
+      "Charlemagne",
+      "Louis XIV",
+      "Napoléon III"
+    ],
+    "correct":0,
+    "why":"Napoléon Ier est défait par les armées alliées en juin 1815. Sa défaite met fin aux Cent-Jours."
+  },
+  {
+    "cat":"histoire",
+    "level":"facile",
+    "q":"Qui est surnommé « le Roi-Soleil » ?",
+    "a":[
+      "François Ier",
+      "Henri IV",
+      "Louis XIV",
+      "Louis XVI"
+    ],
+    "correct":2,
+    "why":"Louis XIV règne personnellement de 1661 à 1715 et fait de Versailles le centre du pouvoir royal."
+  },
+  {
+    "cat":"histoire",
+    "level":"facile",
+    "q":"Quel siècle voit débuter la Première Guerre mondiale ?",
+    "a":[
+      "XVIIIe",
+      "XIXe",
+      "XXe",
+      "XXIe"
+    ],
+    "correct":2,
+    "why":"La Première Guerre mondiale commence en 1914, au début du XXe siècle."
+  },
+  {
+    "cat":"histoire",
+    "level":"facile",
+    "q":"Dans quelle civilisation les pyramides de Gizeh ont-elles été construites ?",
+    "a":[
+      "Romaine",
+      "Égyptienne",
+      "Maya",
+      "Grecque"
+    ],
+    "correct":1,
+    "why":"Les grandes pyramides de Gizeh ont été édifiées durant l'Ancien Empire égyptien."
+  },
+  {
+    "cat":"histoire",
+    "level":"facile",
+    "q":"Qui a été la première femme à recevoir un prix Nobel ?",
+    "a":[
+      "Marie Curie",
+      "Simone Veil",
+      "George Sand",
+      "Ada Lovelace"
+    ],
+    "correct":0,
+    "why":"Marie Curie reçoit le prix Nobel de physique en 1903, puis celui de chimie en 1911."
+  },
+  {
+    "cat":"histoire",
+    "level":"facile",
+    "q":"Quel mur est tombé le 9 novembre 1989 ?",
+    "a":[
+      "Mur d'Hadrien",
+      "Mur de Berlin",
+      "Grande Muraille",
+      "Mur des Lamentations"
+    ],
+    "correct":1,
+    "why":"L'ouverture du mur de Berlin devient un symbole de la fin de la division de l'Europe durant la guerre froide."
+  },
+  {
+    "cat":"histoire",
+    "level":"intermediaire",
+    "q":"Quel traité de 1919 impose les principales conditions de paix à l'Allemagne ?",
+    "a":[
+      "Traité de Versailles",
+      "Traité de Maastricht",
+      "Traité de Rome",
+      "Traité de Tordesillas"
+    ],
+    "correct":0,
+    "why":"Signé en juin 1919, le traité de Versailles fixe les conditions de paix avec l'Allemagne après la Première Guerre mondiale."
+  },
+  {
+    "cat":"histoire",
+    "level":"intermediaire",
+    "q":"Quel souverain anglais rompt avec Rome au XVIe siècle ?",
+    "a":[
+      "Henri II",
+      "Henri VIII",
+      "Édouard Ier",
+      "Richard III"
+    ],
+    "correct":1,
+    "why":"Sous Henri VIII, l'Église d'Angleterre rompt avec l'autorité du pape dans les années 1530."
+  },
+  {
+    "cat":"histoire",
+    "level":"intermediaire",
+    "q":"Quel chef carthaginois franchit les Alpes avec son armée pendant la deuxième guerre punique ?",
+    "a":[
+      "Hannibal",
+      "Scipion",
+      "César",
+      "Périclès"
+    ],
+    "correct":0,
+    "why":"Hannibal traverse les Alpes en 218 av. J.-C. pour porter la guerre sur le territoire romain."
+  },
+  {
+    "cat":"histoire",
+    "level":"intermediaire",
+    "q":"Quel texte de 1598 accorde des droits limités aux protestants français ?",
+    "a":[
+      "Édit de Nantes",
+      "Code civil",
+      "Déclaration des droits",
+      "Édit de Villers-Cotterêts"
+    ],
+    "correct":0,
+    "why":"L'édit de Nantes, promulgué par Henri IV, organise une coexistence religieuse limitée dans le royaume."
+  },
+  {
+    "cat":"histoire",
+    "level":"intermediaire",
+    "q":"À quelle date Constantinople tombe-t-elle aux mains des Ottomans ?",
+    "a":[
+      "1204",
+      "1348",
+      "1453",
+      "1517"
+    ],
+    "correct":2,
+    "why":"La prise de Constantinople par Mehmed II en 1453 marque la fin de l'Empire byzantin."
+  },
+  {
+    "cat":"histoire",
+    "level":"intermediaire",
+    "q":"Quel nom porte la période de gouvernement révolutionnaire française de 1793-1794 associée aux mesures d'exception ?",
+    "a":[
+      "La Régence",
+      "La Terreur",
+      "La Restauration",
+      "Le Directoire"
+    ],
+    "correct":1,
+    "why":"La Terreur désigne notamment la répression politique liée au gouvernement révolutionnaire en 1793-1794."
+  },
+  {
+    "cat":"histoire",
+    "level":"expert",
+    "q":"Quel historien antique écrit La Guerre du Péloponnèse ?",
+    "a":[
+      "Tacite",
+      "Hérodote",
+      "Thucydide",
+      "Polybe"
+    ],
+    "correct":2,
+    "why":"Thucydide analyse le conflit entre Athènes, Sparte et leurs alliés au Ve siècle av. J.-C."
+  },
+  {
+    "cat":"histoire",
+    "level":"expert",
+    "q":"Qui commande les forces thébaines à Leuctres en 371 av. J.-C. ?",
+    "a":[
+      "Miltiade",
+      "Épaminondas",
+      "Alcibiade",
+      "Démosthène"
+    ],
+    "correct":1,
+    "why":"Épaminondas est l'un des principaux chefs thébains de cette victoire contre Sparte."
+  },
+  {
+    "cat":"histoire",
+    "level":"expert",
+    "q":"Quel souverain promulgue l'ordonnance de Villers-Cotterêts en 1539 ?",
+    "a":[
+      "Louis XI",
+      "Charles VII",
+      "François Ier",
+      "Henri III"
+    ],
+    "correct":2,
+    "why":"François Ier promulgue cette ordonnance, qui renforce notamment l'usage du français dans les actes de justice."
+  },
+  {
+    "cat":"histoire",
+    "level":"expert",
+    "q":"Quel congrès redessine une grande partie de l'Europe après la chute de Napoléon ?",
+    "a":[
+      "Congrès de Vienne",
+      "Congrès de Berlin",
+      "Congrès de Paris de 1856",
+      "Congrès de Vérone"
+    ],
+    "correct":0,
+    "why":"Le congrès de Vienne (1814-1815) organise un nouvel équilibre diplomatique européen."
+  },
+  {
+    "cat":"histoire",
+    "level":"expert",
+    "q":"Quelle dynastie règne sur la France lors du massacre de la Saint-Barthélemy en 1572 ?",
+    "a":[
+      "Capétiens directs",
+      "Valois",
+      "Bourbons",
+      "Mérovingiens"
+    ],
+    "correct":1,
+    "why":"Charles IX appartient à la dynastie des Valois lors du massacre de 1572."
+  },
+  {
+    "cat":"histoire",
+    "level":"expert",
+    "q":"Quelle réforme introduit les départements français en 1790 ?",
+    "a":[
+      "Réforme territoriale de la Constituante",
+      "Concordat",
+      "Code Napoléon",
+      "Loi de séparation"
+    ],
+    "correct":0,
+    "why":"L'Assemblée constituante crée les départements dans une réorganisation du territoire révolutionnaire."
+  },
+  {
+    "cat":"geographie",
+    "level":"facile",
+    "q":"Quel est le plus grand océan de la planète ?",
+    "a":[
+      "Atlantique",
+      "Indien",
+      "Pacifique",
+      "Arctique"
+    ],
+    "correct":2,
+    "why":"Le Pacifique couvre une surface plus étendue que tous les autres océans."
+  },
+  {
+    "cat":"geographie",
+    "level":"facile",
+    "q":"Sur quel continent se trouve le Kenya ?",
+    "a":[
+      "Asie",
+      "Afrique",
+      "Europe",
+      "Amérique du Sud"
+    ],
+    "correct":1,
+    "why":"Le Kenya se situe en Afrique de l'Est, au bord de l'océan Indien."
+  },
+  {
+    "cat":"geographie",
+    "level":"facile",
+    "q":"Quelle est la capitale de l'Italie ?",
+    "a":[
+      "Milan",
+      "Naples",
+      "Rome",
+      "Turin"
+    ],
+    "correct":2,
+    "why":"Rome est la capitale italienne depuis 1871."
+  },
+  {
+    "cat":"geographie",
+    "level":"facile",
+    "q":"Quel fleuve traverse Paris ?",
+    "a":[
+      "La Loire",
+      "Le Rhône",
+      "La Seine",
+      "La Garonne"
+    ],
+    "correct":2,
+    "why":"La Seine traverse Paris avant de rejoindre la Manche en Normandie."
+  },
+  {
+    "cat":"geographie",
+    "level":"facile",
+    "q":"Quelle chaîne de montagnes sépare traditionnellement la France et l'Espagne ?",
+    "a":[
+      "Alpes",
+      "Pyrénées",
+      "Apennins",
+      "Carpates"
+    ],
+    "correct":1,
+    "why":"Les Pyrénées s'étendent entre l'Atlantique et la Méditerranée, le long de la frontière franco-espagnole."
+  },
+  {
+    "cat":"geographie",
+    "level":"facile",
+    "q":"Dans quel pays se trouve la ville de Kyoto ?",
+    "a":[
+      "Chine",
+      "Japon",
+      "Corée du Sud",
+      "Thaïlande"
+    ],
+    "correct":1,
+    "why":"Kyoto est une ancienne capitale impériale du Japon."
+  },
+  {
+    "cat":"geographie",
+    "level":"intermediaire",
+    "q":"Quelle est la capitale de la Nouvelle-Zélande ?",
+    "a":[
+      "Auckland",
+      "Christchurch",
+      "Wellington",
+      "Dunedin"
+    ],
+    "correct":2,
+    "why":"Wellington est la capitale néo-zélandaise, même si Auckland est plus peuplée."
+  },
+  {
+    "cat":"geographie",
+    "level":"intermediaire",
+    "q":"Quel détroit sépare l'Europe de l'Afrique à l'ouest de la Méditerranée ?",
+    "a":[
+      "Bosphore",
+      "Gibraltar",
+      "Béring",
+      "Malacca"
+    ],
+    "correct":1,
+    "why":"Le détroit de Gibraltar relie l'Atlantique à la Méditerranée entre l'Espagne et le Maroc."
+  },
+  {
+    "cat":"geographie",
+    "level":"intermediaire",
+    "q":"Dans quel pays se trouve le lac Titicaca avec la Bolivie ?",
+    "a":[
+      "Chili",
+      "Pérou",
+      "Équateur",
+      "Argentine"
+    ],
+    "correct":1,
+    "why":"Le lac Titicaca s'étend de part et d'autre de la frontière entre le Pérou et la Bolivie."
+  },
+  {
+    "cat":"geographie",
+    "level":"intermediaire",
+    "q":"À quelle mer le port jordanien d’Aqaba donne-t-il accès ?",
+    "a":[
+      "Mer Rouge",
+      "Mer Noire",
+      "Mer Baltique",
+      "Mer Caspienne"
+    ],
+    "correct":0,
+    "why":"La Jordanie possède un court littoral sur le golfe d'Aqaba, partie de la mer Rouge."
+  },
+  {
+    "cat":"geographie",
+    "level":"intermediaire",
+    "q":"Quel fleuve passe par Budapest ?",
+    "a":[
+      "Le Rhin",
+      "La Vistule",
+      "Le Danube",
+      "L'Elbe"
+    ],
+    "correct":2,
+    "why":"Budapest s'étend de part et d'autre du Danube, qui traverse aussi Vienne et Bratislava."
+  },
+  {
+    "cat":"geographie",
+    "level":"intermediaire",
+    "q":"Quel pays d'Amérique du Sud ne possède aucun accès à la mer, comme le Paraguay ?",
+    "a":[
+      "Uruguay",
+      "Bolivie",
+      "Pérou",
+      "Suriname"
+    ],
+    "correct":1,
+    "why":"La Bolivie et le Paraguay sont les deux États enclavés d'Amérique du Sud."
+  },
+  {
+    "cat":"geographie",
+    "level":"expert",
+    "q":"Quelle capitale se trouve sur l'île de Honshū ?",
+    "a":[
+      "Séoul",
+      "Taipei",
+      "Tokyo",
+      "Manille"
+    ],
+    "correct":2,
+    "why":"Tokyo se situe sur Honshū, la plus grande île du Japon."
+  },
+  {
+    "cat":"geographie",
+    "level":"expert",
+    "q":"Quel pays possède l'enclave de Cabinda, séparée de son territoire principal ?",
+    "a":[
+      "Angola",
+      "Mozambique",
+      "Namibie",
+      "Zambie"
+    ],
+    "correct":0,
+    "why":"Cabinda est une province angolaise séparée du reste du pays par une bande territoriale de la République démocratique du Congo."
+  },
+  {
+    "cat":"geographie",
+    "level":"expert",
+    "q":"Quel détroit relie la mer Noire à la mer de Marmara ?",
+    "a":[
+      "Gibraltar",
+      "Dardanelles",
+      "Bosphore",
+      "Ormuz"
+    ],
+    "correct":2,
+    "why":"Le Bosphore traverse Istanbul et relie la mer Noire à la mer de Marmara ; les Dardanelles mènent ensuite vers la mer Égée."
+  },
+  {
+    "cat":"geographie",
+    "level":"expert",
+    "q":"Dans quel État se situe le point culminant de l'Afrique, le Kilimandjaro ?",
+    "a":[
+      "Kenya",
+      "Tanzanie",
+      "Ouganda",
+      "Éthiopie"
+    ],
+    "correct":1,
+    "why":"Le Kilimandjaro se trouve en Tanzanie, près de la frontière kenyane."
+  },
+  {
+    "cat":"geographie",
+    "level":"expert",
+    "q":"Quel État insulaire se situe à l'est de Madagascar dans l'océan Indien ?",
+    "a":[
+      "Maurice",
+      "Cap-Vert",
+      "Barbade",
+      "Malte"
+    ],
+    "correct":0,
+    "why":"L'île Maurice est située à l'est de Madagascar, dans l'archipel des Mascareignes."
+  },
+  {
+    "cat":"geographie",
+    "level":"expert",
+    "q":"Quel désert occupe une grande partie de la Mongolie méridionale et de la Chine septentrionale ?",
+    "a":[
+      "Kalahari",
+      "Gobi",
+      "Atacama",
+      "Taklamakan"
+    ],
+    "correct":1,
+    "why":"Le Gobi s'étend sur le sud de la Mongolie et le nord de la Chine."
+  },
+  {
+    "cat":"sciences",
+    "level":"facile",
+    "q":"Quelle planète est la plus proche du Soleil ?",
+    "a":[
+      "Terre",
+      "Mars",
+      "Mercure",
+      "Vénus"
+    ],
+    "correct":2,
+    "why":"Mercure est la planète du Système solaire la plus proche du Soleil."
+  },
+  {
+    "cat":"sciences",
+    "level":"facile",
+    "q":"Quel organe pompe le sang dans le corps humain ?",
+    "a":[
+      "Le foie",
+      "Le cœur",
+      "Le rein",
+      "Le poumon"
+    ],
+    "correct":1,
+    "why":"Le cœur propulse le sang dans les circulations pulmonaire et générale."
+  },
+  {
+    "cat":"sciences",
+    "level":"facile",
+    "q":"Quel symbole chimique représente l'eau ?",
+    "a":[
+      "CO₂",
+      "O₂",
+      "H₂O",
+      "NaCl"
+    ],
+    "correct":2,
+    "why":"Une molécule d'eau contient deux atomes d'hydrogène et un atome d'oxygène."
+  },
+  {
+    "cat":"sciences",
+    "level":"facile",
+    "q":"Comment s'appelle le processus par lequel les plantes utilisent la lumière pour produire de la matière organique ?",
+    "a":[
+      "Photosynthèse",
+      "Fermentation",
+      "Érosion",
+      "Osmose"
+    ],
+    "correct":0,
+    "why":"La photosynthèse utilise notamment l'énergie lumineuse, l'eau et le dioxyde de carbone."
+  },
+  {
+    "cat":"sciences",
+    "level":"facile",
+    "q":"Combien de pattes possède un insecte adulte ?",
+    "a":[
+      "Quatre",
+      "Six",
+      "Huit",
+      "Dix"
+    ],
+    "correct":1,
+    "why":"Les insectes adultes ont trois paires de pattes, soit six au total."
+  },
+  {
+    "cat":"sciences",
+    "level":"facile",
+    "q":"Quel satellite naturel tourne autour de la Terre ?",
+    "a":[
+      "Titan",
+      "Phobos",
+      "La Lune",
+      "Europe"
+    ],
+    "correct":2,
+    "why":"La Lune est l'unique satellite naturel permanent de la Terre."
+  },
+  {
+    "cat":"sciences",
+    "level":"intermediaire",
+    "q":"Quel scientifique propose les lois du mouvement et de la gravitation universelle ?",
+    "a":[
+      "Isaac Newton",
+      "Albert Einstein",
+      "Charles Darwin",
+      "Louis Pasteur"
+    ],
+    "correct":0,
+    "why":"Newton publie ses lois du mouvement et de la gravitation dans les Principia en 1687."
+  },
+  {
+    "cat":"sciences",
+    "level":"intermediaire",
+    "q":"Quelle unité mesure l'intensité du courant électrique ?",
+    "a":[
+      "Volt",
+      "Ampère",
+      "Watt",
+      "Ohm"
+    ],
+    "correct":1,
+    "why":"L'ampère mesure l'intensité électrique ; le volt mesure la différence de potentiel."
+  },
+  {
+    "cat":"sciences",
+    "level":"intermediaire",
+    "q":"Quel élément chimique a pour symbole Fe ?",
+    "a":[
+      "Fluor",
+      "Fer",
+      "Francium",
+      "Phosphore"
+    ],
+    "correct":1,
+    "why":"Fe vient du latin ferrum, qui signifie fer."
+  },
+  {
+    "cat":"sciences",
+    "level":"intermediaire",
+    "q":"Quel type d'étoile est le Soleil ?",
+    "a":[
+      "Naine blanche",
+      "Géante rouge",
+      "Naine jaune de séquence principale",
+      "Étoile à neutrons"
+    ],
+    "correct":2,
+    "why":"Le Soleil est une étoile de type spectral G2V, appartenant à la séquence principale."
+  },
+  {
+    "cat":"sciences",
+    "level":"intermediaire",
+    "q":"Quel phénomène explique principalement les marées terrestres ?",
+    "a":[
+      "Le vent",
+      "L'attraction gravitationnelle de la Lune et du Soleil",
+      "La rotation de Mars",
+      "Les courants océaniques seulement"
+    ],
+    "correct":1,
+    "why":"Les marées résultent surtout de l'effet différentiel des attractions gravitationnelles lunaire et solaire."
+  },
+  {
+    "cat":"sciences",
+    "level":"intermediaire",
+    "q":"Comment nomme-t-on une particule de lumière ?",
+    "a":[
+      "Proton",
+      "Neutron",
+      "Photon",
+      "Électron"
+    ],
+    "correct":2,
+    "why":"Le photon est le quantum du rayonnement électromagnétique."
+  },
+  {
+    "cat":"sciences",
+    "level":"expert",
+    "q":"Quel organite est le principal lieu de production d'ATP par respiration cellulaire chez les eucaryotes ?",
+    "a":[
+      "Le noyau",
+      "La mitochondrie",
+      "Le ribosome",
+      "Le lysosome"
+    ],
+    "correct":1,
+    "why":"La mitochondrie réalise notamment la phosphorylation oxydative qui produit une grande part de l'ATP cellulaire."
+  },
+  {
+    "cat":"sciences",
+    "level":"expert",
+    "q":"Quelle particule subatomique porte une charge électrique négative ?",
+    "a":[
+      "Proton",
+      "Neutron",
+      "Électron",
+      "Photon"
+    ],
+    "correct":2,
+    "why":"L'électron a une charge négative ; le proton porte une charge positive."
+  },
+  {
+    "cat":"sciences",
+    "level":"expert",
+    "q":"Quel nom porte la limite au-delà de laquelle la lumière ne peut plus s'échapper d'un trou noir ?",
+    "a":[
+      "Horizon des événements",
+      "Héliopause",
+      "Zone habitable",
+      "Photosphère"
+    ],
+    "correct":0,
+    "why":"L'horizon des événements est la frontière causale au-delà de laquelle aucun signal ne peut atteindre l'extérieur du trou noir."
+  },
+  {
+    "cat":"sciences",
+    "level":"expert",
+    "q":"Quel physicien a formulé le principe d'incertitude en mécanique quantique ?",
+    "a":[
+      "Niels Bohr",
+      "Werner Heisenberg",
+      "Enrico Fermi",
+      "Max Planck"
+    ],
+    "correct":1,
+    "why":"Heisenberg formule en 1927 un principe limitant la précision simultanée de certaines paires d'observables."
+  },
+  {
+    "cat":"sciences",
+    "level":"expert",
+    "q":"Quel acide nucléique utilise l'uracile à la place de la thymine dans ses bases courantes ?",
+    "a":[
+      "ADN",
+      "ARN",
+      "Protéine",
+      "Lipide"
+    ],
+    "correct":1,
+    "why":"L'ARN contient en général de l'uracile, alors que l'ADN utilise de la thymine."
+  },
+  {
+    "cat":"sciences",
+    "level":"expert",
+    "q":"Quel processus produit de l'énergie dans le cœur du Soleil ?",
+    "a":[
+      "Fission nucléaire",
+      "Fusion nucléaire",
+      "Combustion chimique",
+      "Désintégration du carbone"
+    ],
+    "correct":1,
+    "why":"Le Soleil tire l'essentiel de son énergie de la fusion de l'hydrogène en hélium."
+  },
+  {
+    "cat":"arts",
+    "level":"facile",
+    "q":"Qui a écrit Le Petit Prince ?",
+    "a":[
+      "Jules Verne",
+      "Antoine de Saint-Exupéry",
+      "Albert Camus",
+      "Marcel Proust"
+    ],
+    "correct":1,
+    "why":"Le Petit Prince paraît en 1943 sous la plume d'Antoine de Saint-Exupéry."
+  },
+  {
+    "cat":"arts",
+    "level":"facile",
+    "q":"Quel instrument possède des touches blanches et noires ?",
+    "a":[
+      "Violon",
+      "Trompette",
+      "Piano",
+      "Flûte"
+    ],
+    "correct":2,
+    "why":"Le piano est un instrument à clavier dont les touches commandent des marteaux frappant des cordes."
+  },
+  {
+    "cat":"arts",
+    "level":"facile",
+    "q":"Dans quelle ville se trouve le musée du Louvre ?",
+    "a":[
+      "Londres",
+      "Madrid",
+      "Paris",
+      "Rome"
+    ],
+    "correct":2,
+    "why":"Le Louvre est installé à Paris dans l'ancien palais royal."
+  },
+  {
+    "cat":"arts",
+    "level":"facile",
+    "q":"Quel auteur a créé le personnage de Sherlock Holmes ?",
+    "a":[
+      "Agatha Christie",
+      "Arthur Conan Doyle",
+      "J. R. R. Tolkien",
+      "Charles Dickens"
+    ],
+    "correct":1,
+    "why":"Arthur Conan Doyle fait apparaître Sherlock Holmes dans Une étude en rouge en 1887."
+  },
+  {
+    "cat":"arts",
+    "level":"facile",
+    "q":"Quelle couleur obtient-on en mélangeant du bleu et du jaune en peinture ?",
+    "a":[
+      "Violet",
+      "Orange",
+      "Vert",
+      "Rose"
+    ],
+    "correct":2,
+    "why":"Dans le mélange traditionnel de pigments, le bleu et le jaune donnent généralement du vert."
+  },
+  {
+    "cat":"arts",
+    "level":"facile",
+    "q":"Quel art pratique principalement un chorégraphe ?",
+    "a":[
+      "Danse",
+      "Sculpture",
+      "Architecture",
+      "Photographie"
+    ],
+    "correct":0,
+    "why":"Un chorégraphe conçoit et organise des mouvements dansés."
+  },
+  {
+    "cat":"arts",
+    "level":"intermediaire",
+    "q":"À quel mouvement artistique Salvador Dalí est-il particulièrement associé ?",
+    "a":[
+      "Cubisme",
+      "Surréalisme",
+      "Impressionnisme",
+      "Pointillisme"
+    ],
+    "correct":1,
+    "why":"Dalí est une figure majeure du surréalisme, notamment pour ses images oniriques."
+  },
+  {
+    "cat":"arts",
+    "level":"intermediaire",
+    "q":"Qui est l'auteur de Madame Bovary ?",
+    "a":[
+      "Gustave Flaubert",
+      "Victor Hugo",
+      "Émile Zola",
+      "Stendhal"
+    ],
+    "correct":0,
+    "why":"Flaubert publie Madame Bovary en volume en 1857 après sa parution en feuilleton."
+  },
+  {
+    "cat":"arts",
+    "level":"intermediaire",
+    "q":"Dans quelle ville se trouve la basilique de la Sagrada Família ?",
+    "a":[
+      "Lisbonne",
+      "Barcelone",
+      "Florence",
+      "Bruxelles"
+    ],
+    "correct":1,
+    "why":"La Sagrada Família est l'œuvre architecturale emblématique d'Antoni Gaudí à Barcelone."
+  },
+  {
+    "cat":"arts",
+    "level":"intermediaire",
+    "q":"Qui a écrit la pièce En attendant Godot ?",
+    "a":[
+      "Samuel Beckett",
+      "Eugène Ionesco",
+      "Jean Racine",
+      "Jean Anouilh"
+    ],
+    "correct":0,
+    "why":"Samuel Beckett écrit En attendant Godot à la fin des années 1940 ; sa création parisienne date de 1953."
+  },
+  {
+    "cat":"arts",
+    "level":"intermediaire",
+    "q":"Quel compositeur a écrit Les Quatre Saisons ?",
+    "a":[
+      "Bach",
+      "Vivaldi",
+      "Haydn",
+      "Debussy"
+    ],
+    "correct":1,
+    "why":"Les Quatre Saisons sont un ensemble de quatre concertos pour violon d'Antonio Vivaldi."
+  },
+  {
+    "cat":"arts",
+    "level":"intermediaire",
+    "q":"Quel peintre est associé au plafond de la chapelle Sixtine ?",
+    "a":[
+      "Raphaël",
+      "Titien",
+      "Michel-Ange",
+      "Botticelli"
+    ],
+    "correct":2,
+    "why":"Michel-Ange peint les fresques de la voûte de la chapelle Sixtine entre 1508 et 1512."
+  },
+  {
+    "cat":"arts",
+    "level":"expert",
+    "q":"Quel romancier est l'auteur du cycle À la recherche du temps perdu ?",
+    "a":[
+      "Marcel Proust",
+      "André Gide",
+      "Louis-Ferdinand Céline",
+      "François Mauriac"
+    ],
+    "correct":0,
+    "why":"Proust publie les premiers volumes de sa Recherche à partir de 1913."
+  },
+  {
+    "cat":"arts",
+    "level":"expert",
+    "q":"Quel mouvement artistique est associé à Piet Mondrian et au groupe De Stijl ?",
+    "a":[
+      "Expressionnisme abstrait",
+      "Néoplasticisme",
+      "Rococo",
+      "Baroque"
+    ],
+    "correct":1,
+    "why":"Mondrian développe un langage abstrait fondé sur les lignes orthogonales et les couleurs primaires."
+  },
+  {
+    "cat":"arts",
+    "level":"expert",
+    "q":"Qui réalise le film Rashōmon, sorti en 1950 ?",
+    "a":[
+      "Yasujirō Ozu",
+      "Akira Kurosawa",
+      "Kenji Mizoguchi",
+      "Hayao Miyazaki"
+    ],
+    "correct":1,
+    "why":"Rashōmon est réalisé par Akira Kurosawa et contribue à la reconnaissance internationale du cinéma japonais."
+  },
+  {
+    "cat":"arts",
+    "level":"expert",
+    "q":"Quel architecte a conçu la Villa Savoye à Poissy ?",
+    "a":[
+      "Le Corbusier",
+      "Frank Lloyd Wright",
+      "Auguste Perret",
+      "Jean Nouvel"
+    ],
+    "correct":0,
+    "why":"La Villa Savoye, conçue par Le Corbusier et Pierre Jeanneret, illustre les principes de l'architecture moderne."
+  },
+  {
+    "cat":"arts",
+    "level":"expert",
+    "q":"Quel auteur latin a écrit les Métamorphoses ?",
+    "a":[
+      "Horace",
+      "Ovide",
+      "Virgile",
+      "Cicéron"
+    ],
+    "correct":1,
+    "why":"Les Métamorphoses d'Ovide rassemblent des récits mythologiques de transformations."
+  },
+  {
+    "cat":"arts",
+    "level":"expert",
+    "q":"Dans quel roman apparaît le personnage de Raskolnikov ?",
+    "a":[
+      "Anna Karénine",
+      "Crime et Châtiment",
+      "Les Frères Karamazov",
+      "Le Joueur"
+    ],
+    "correct":1,
+    "why":"Raskolnikov est le protagoniste de Crime et Châtiment de Fiodor Dostoïevski."
+  },
+  {
+    "cat":"insolite",
+    "level":"facile",
+    "q":"Quel animal est capable de changer rapidement de couleur grâce à des cellules spécialisées ?",
+    "a":[
+      "Caméléon",
+      "Cheval",
+      "Pigeon",
+      "Lapin"
+    ],
+    "correct":0,
+    "why":"Les caméléons modifient leur apparence grâce à des structures particulières de leur peau, notamment pour communiquer et réguler leur température."
+  },
+  {
+    "cat":"insolite",
+    "level":"facile",
+    "q":"Quel objet a été inventé avant le téléphone portable ?",
+    "a":[
+      "Le fax",
+      "Le smartphone",
+      "Le GPS automobile",
+      "La tablette tactile moderne"
+    ],
+    "correct":0,
+    "why":"Des systèmes de télécopie existent au XIXe siècle, bien avant la téléphonie mobile."
+  },
+  {
+    "cat":"insolite",
+    "level":"facile",
+    "q":"Quel fruit porte ses petites structures ressemblant à des graines sur l'extérieur ?",
+    "a":[
+      "Banane",
+      "Fraise",
+      "Pomme",
+      "Cerise"
+    ],
+    "correct":1,
+    "why":"Les petits grains visibles à la surface des fraises sont des akènes ; la partie rouge est un réceptacle charnu."
+  },
+  {
+    "cat":"insolite",
+    "level":"facile",
+    "q":"Quel animal peut dormir debout grâce à un mécanisme de verrouillage des membres ?",
+    "a":[
+      "Cheval",
+      "Dauphin",
+      "Manchot",
+      "Poulpe"
+    ],
+    "correct":0,
+    "why":"Le cheval peut se reposer debout grâce à son appareil de soutien, même si le sommeil paradoxal nécessite généralement de se coucher."
+  },
+  {
+    "cat":"insolite",
+    "level":"facile",
+    "q":"Quel animal produit traditionnellement la soie utilisée en textile ?",
+    "a":[
+      "Abeille",
+      "Ver à soie",
+      "Araignée de mer",
+      "Fourmi"
+    ],
+    "correct":1,
+    "why":"Le ver à soie, larve du bombyx du mûrier, produit un fil pour former son cocon."
+  },
+  {
+    "cat":"insolite",
+    "level":"facile",
+    "q":"Quelle boisson doit son nom à une région d'Éthiopie selon une étymologie populaire non certaine ?",
+    "a":[
+      "Thé",
+      "Café",
+      "Cacao",
+      "Maté"
+    ],
+    "correct":1,
+    "why":"L'origine exacte du mot café est discutée ; le rapprochement avec Kaffa, en Éthiopie, est souvent cité, sans être assuré."
+  },
+  {
+    "cat":"insolite",
+    "level":"intermediaire",
+    "q":"Pourquoi les flamants roses ont-ils souvent un plumage rose ?",
+    "a":[
+      "À cause de la lumière solaire",
+      "Grâce à des pigments apportés par leur alimentation",
+      "À cause du sel marin seul",
+      "Grâce à leur sang"
+    ],
+    "correct":1,
+    "why":"Des caroténoïdes issus de leur nourriture contribuent à la couleur de leur plumage."
+  },
+  {
+    "cat":"insolite",
+    "level":"intermediaire",
+    "q":"Quel aliment a été utilisé comme monnaie par certaines sociétés mésoaméricaines ?",
+    "a":[
+      "Fèves de cacao",
+      "Pommes de terre",
+      "Tomates",
+      "Grains de riz"
+    ],
+    "correct":0,
+    "why":"Des fèves de cacao ont servi d'unité d'échange dans diverses sociétés mésoaméricaines."
+  },
+  {
+    "cat":"insolite",
+    "level":"intermediaire",
+    "q":"Quel est le principal composant chimique des perles naturelles ?",
+    "a":[
+      "Quartz",
+      "Carbonate de calcium",
+      "Fer",
+      "Silicium pur"
+    ],
+    "correct":1,
+    "why":"Les perles sont surtout constituées de carbonate de calcium organisé en nacre."
+  },
+  {
+    "cat":"insolite",
+    "level":"intermediaire",
+    "q":"Pourquoi les bananes commerciales courantes sont-elles généralement sans graines dures ?",
+    "a":[
+      "Elles poussent sous l'eau",
+      "Elles sont souvent triploïdes et peu fertiles",
+      "Elles sont récoltées avant leur floraison",
+      "Les graines se dissolvent dans le fruit"
+    ],
+    "correct":1,
+    "why":"De nombreuses bananes cultivées sont triploïdes et se multiplient de manière végétative."
+  },
+  {
+    "cat":"insolite",
+    "level":"intermediaire",
+    "q":"Quelle ville est connue pour son ancien système de courrier pneumatique urbain ?",
+    "a":[
+      "Paris",
+      "Venise",
+      "Athènes",
+      "Reykjavík"
+    ],
+    "correct":0,
+    "why":"Paris a utilisé un réseau de tubes pneumatiques pour transporter des messages pendant plus d'un siècle."
+  },
+  {
+    "cat":"insolite",
+    "level":"intermediaire",
+    "q":"Quel animal est célèbre pour sa « danse » indiquant une source de nourriture ?",
+    "a":[
+      "Abeille",
+      "Loutre",
+      "Hérisson",
+      "Hibou"
+    ],
+    "correct":0,
+    "why":"Les abeilles mellifères communiquent notamment par des danses fournissant des indications sur les ressources."
+  },
+  {
+    "cat":"insolite",
+    "level":"expert",
+    "q":"Quel dispositif antique grec découvert dans une épave servait à modéliser des cycles astronomiques ?",
+    "a":[
+      "Machine d'Anticythère",
+      "Sphère armillaire de Tycho",
+      "Astrolabe de Prague",
+      "Boussole de Delphes"
+    ],
+    "correct":0,
+    "why":"La machine d'Anticythère est un mécanisme à engrenages de l'Antiquité grecque lié aux calculs calendaires et astronomiques."
+  },
+  {
+    "cat":"insolite",
+    "level":"expert",
+    "q":"Comment s'appelle l'illusion qui donne l'impression que la Lune est plus grande près de l'horizon ?",
+    "a":[
+      "Parallaxe stellaire",
+      "Illusion lunaire",
+      "Effet Doppler",
+      "Aberration chromatique"
+    ],
+    "correct":1,
+    "why":"L'illusion lunaire est un phénomène perceptif : la taille angulaire de la Lune varie peu entre l'horizon et le zénith."
+  },
+  {
+    "cat":"insolite",
+    "level":"expert",
+    "q":"Quel matériau préindustriel tiré de peaux animales était fréquemment utilisé pour les manuscrits ?",
+    "a":[
+      "Papyrus",
+      "Parchemin",
+      "Béton",
+      "Linoléum"
+    ],
+    "correct":1,
+    "why":"Le parchemin est fabriqué à partir de peaux animales préparées, notamment de mouton, de chèvre ou de veau."
+  },
+  {
+    "cat":"insolite",
+    "level":"expert",
+    "q":"Quel oiseau est connu pour offrir parfois des cailloux lors de la parade nuptiale chez certaines espèces ?",
+    "a":[
+      "Manchot",
+      "Aigle royal",
+      "Autruche",
+      "Colibri"
+    ],
+    "correct":0,
+    "why":"Certaines espèces de manchots utilisent des cailloux pour construire le nid, ce qui peut faire partie des interactions de couple."
+  },
+  {
+    "cat":"insolite",
+    "level":"expert",
+    "q":"Quelle civilisation a utilisé des cordelettes nouées appelées quipus pour consigner des informations ?",
+    "a":[
+      "Inca",
+      "Viking",
+      "Égyptienne",
+      "Phénicienne"
+    ],
+    "correct":0,
+    "why":"Les quipus étaient employés dans l'administration andine, notamment sous l'Empire inca."
+  },
+  {
+    "cat":"insolite",
+    "level":"expert",
+    "q":"Quel nom donne-t-on au minuscule animal à huit pattes célèbre pour résister à des conditions extrêmes ?",
+    "a":[
+      "Rotifère",
+      "Tardigrade",
+      "Plancton",
+      "Collembole"
+    ],
+    "correct":1,
+    "why":"Certains tardigrades peuvent survivre à des conditions extrêmes lorsqu'ils entrent dans un état de dormance."
+  }
+];
+    const questions = [...originalQuestions, ...nouvellesQuestions];
+
     const labels = {mix:'✦ Un peu de tout',histoire:'🏛️ Histoire',geographie:'🌍 Géographie',sciences:'🔬 Sciences',arts:'🎨 Arts & culture',insolite:'✨ Insolite'};
-    let selectedCategory='mix',round=[],index=0,score=0,answered=false;
+    const levels = {
+      facile:{label:'🌱 Facile',description:'Pour se lancer et découvrir de nouvelles choses.'},
+      intermediaire:{label:'⚡ Moyen',description:'Pour celles et ceux qui aiment déjà se creuser la tête.'},
+      expert:{label:'🏆 Expert',description:'Pour les curieux qui veulent un vrai défi.'}
+    };
     const $=id=>document.getElementById(id);
     const screens=['screen-intro','screen-question','screen-result'];
+    let selectedCategory='mix',selectedLevel='facile',round=[],index=0,score=0,answered=false;
     const show=id=>screens.forEach(name=>$(name).classList.toggle('hidden',name!==id));
     function shuffle(arr){const copy=[...arr];for(let i=copy.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]];}return copy;}
-    function bestScore(){try{const stored=Number(localStorage.getItem('thot_best'));return Number.isFinite(stored)&&stored>=0&&stored<=5?stored:null;}catch{return null;}}
-    function saveBest(value){try{localStorage.setItem('thot_best',String(value));}catch{/* Stockage éventuellement bloqué */}}
-    function refreshBest(){const best=bestScore();$('best-score').textContent=best===null?'Meilleur score : —':'Meilleur score : '+best+'/5';}
-    function setCategory(cat){selectedCategory=labels[cat]?cat:'mix';$('chosen-category').textContent=labels[selectedCategory];show('screen-intro');$('jouer').scrollIntoView({behavior:'smooth',block:'start'});}
-    function begin(){const pool=selectedCategory==='mix'?questions:questions.filter(q=>q.cat===selectedCategory);round=shuffle(pool).slice(0,5);index=0;score=0;show('screen-question');renderQuestion();}
-    function renderQuestion(){answered=false;const item=round[index];$('question-counter').textContent='QUESTION '+(index+1)+' / '+round.length;$('current-score').textContent=score+' bonne'+(score>1?'s':'')+' réponse'+(score>1?'s':'');$('progressbar').setAttribute('aria-valuenow',String(index));$('progressfill').style.width=(index/round.length*100)+'%';$('question-text').textContent=item.q;$('answer-list').replaceChildren();$('feedback').className='feedback hidden';$('feedback').replaceChildren();$('next-button').classList.add('hidden');const choices=shuffle(item.a.map((answer,idx)=>({answer,idx})));choices.forEach(({answer,idx},n)=>{const button=document.createElement('button');button.type='button';button.className='answer';button.dataset.idx=String(idx);const letter=document.createElement('span');letter.className='answer-letter';letter.textContent='ABCD'[n];const text=document.createElement('span');text.textContent=answer;button.append(letter,text);button.addEventListener('click',()=>submitAnswer(idx));$('answer-list').append(button);});}
-    function submitAnswer(chosen){if(answered)return;answered=true;const item=round[index];const good=chosen===item.correct;if(good)score++;document.querySelectorAll('.answer').forEach(b=>{const value=Number(b.dataset.idx);b.disabled=true;if(value===item.correct)b.classList.add('correct');else if(value===chosen)b.classList.add('wrong');});$('current-score').textContent=score+' bonne'+(score>1?'s':'')+' réponse'+(score>1?'s':'');const feedback=$('feedback');feedback.className='feedback'+(good?'':' bad');const title=document.createElement('strong');title.textContent=good?'✦ Bonne réponse !':'✦ Pas tout à fait !';const detail=document.createElement('span');detail.textContent=item.why;feedback.append(title,detail);$('next-button').textContent=index===round.length-1?'Voir mon résultat →':'Question suivante →';$('next-button').classList.remove('hidden');$('progressbar').setAttribute('aria-valuenow',String(index+1));$('progressfill').style.width=((index+1)/round.length*100)+'%';}
-    function next(){if(!answered)return;index++;if(index>=round.length){finish();}else{renderQuestion();}}
-    function finish(){const prior=bestScore();if(prior===null||score>prior)saveBest(score);refreshBest();$('final-score').textContent=score+'/'+round.length;const msg=score===5?['Incroyable, un sans-faute !','Thot lui-même aurait probablement applaudi. Tu viens de faire un carton.']:score>=3?['Belle performance !','Tu connais déjà beaucoup de choses… et tu en sais cinq de plus maintenant.']:['La curiosité se cultive !','Chaque bonne réponse commence par une question. Une autre partie ?'];$('result-title').textContent=msg[0];$('result-message').textContent=msg[1];show('screen-result');}
+    const storageKey='thot_v2_stats';
+    const defaults=()=>({games:0,correct:0,answered:0,bests:{},recent:{}});
+    function loadStats(){
+      try{
+        const raw=JSON.parse(localStorage.getItem(storageKey)||'null');
+        if(!raw||typeof raw!=='object')return defaults();
+        const stats=defaults();
+        for(const key of ['games','correct','answered']){
+          const n=Number(raw[key]);if(Number.isSafeInteger(n)&&n>=0)stats[key]=n;
+        }
+        if(raw.bests&&typeof raw.bests==='object'&&!Array.isArray(raw.bests))stats.bests=raw.bests;
+        if(raw.recent&&typeof raw.recent==='object'&&!Array.isArray(raw.recent))stats.recent=raw.recent;
+        return stats;
+      }catch{return defaults();}
+    }
+    let stats=loadStats();
+    function saveStats(){try{localStorage.setItem(storageKey,JSON.stringify(stats));}catch{/* stockage privé ou indisponible */}}
+    function bestKey(){return selectedCategory+'|'+selectedLevel;}
+    function refreshBest(){
+      const best=Number(stats.bests[bestKey()]);
+      $('best-score').textContent=best>=0&&best<=5&&Number.isInteger(best)&&stats.bests[bestKey()]!==undefined
+        ?'Record '+labels[selectedCategory].replace(/^[^ ]+ /,'')+' · '+levels[selectedLevel].label+' : '+best+'/5'
+        :'Pas encore de record à ce niveau';
+    }
+    function refreshStats(){
+      $('stat-games').textContent=String(stats.games);
+      $('stat-correct').textContent=String(stats.correct);
+      $('stat-accuracy').textContent=stats.answered>0?Math.round(stats.correct/stats.answered*100)+' %':'—';
+    }
+    function setCategory(cat){
+      selectedCategory=labels[cat]?cat:'mix';
+      $('chosen-category').textContent=labels[selectedCategory];
+      refreshBest();show('screen-intro');
+      $('jouer').scrollIntoView({behavior:'smooth',block:'start'});
+    }
+    function setLevel(level){
+      if(!levels[level])return;
+      selectedLevel=level;
+      document.querySelectorAll('[data-level]').forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.level===level)));
+      $('level-description').textContent=levels[level].description;
+      refreshBest();
+    }
+    function chooseRound(pool,n=5){
+      const key=bestKey(),seen=new Set(Array.isArray(stats.recent[key])?stats.recent[key]:[]);
+      const unseen=shuffle(pool.filter(q=>!seen.has(q.q)));
+      const already=shuffle(pool.filter(q=>seen.has(q.q)));
+      const chosen=[...unseen,...already].slice(0,n);
+      stats.recent[key]=chosen.map(q=>q.q);
+      saveStats();
+      return shuffle(chosen);
+    }
+    function begin(){
+      const pool=questions.filter(q=>q.level===selectedLevel&&(selectedCategory==='mix'||q.cat===selectedCategory));
+      if(pool.length<5){alert('Pas assez de questions dans ce thème.');return;}
+      round=chooseRound(pool,5);index=0;score=0;answered=false;
+      show('screen-question');renderQuestion();
+    }
+    function renderQuestion(){
+      answered=false;
+      const item=round[index];
+      $('question-counter').textContent='QUESTION '+(index+1)+' / '+round.length;
+      $('current-score').textContent=score+' bonne'+(score>1?'s':'')+' réponse'+(score>1?'s':'');
+      $('progressbar').setAttribute('aria-valuemax',String(round.length));
+      $('progressbar').setAttribute('aria-valuenow',String(index));
+      $('progressfill').style.width=(index/round.length*100)+'%';
+      $('question-level').textContent=levels[item.level].label+' · '+labels[item.cat];
+      $('question-text').textContent=item.q;
+      $('answer-list').replaceChildren();
+      $('feedback').className='feedback hidden';$('feedback').replaceChildren();
+      $('next-button').classList.add('hidden');
+      const choices=shuffle(item.a.map((answer,idx)=>({answer,idx})));
+      choices.forEach(({answer,idx},n)=>{
+        const button=document.createElement('button');button.type='button';button.className='answer';button.dataset.idx=String(idx);
+        const letter=document.createElement('span');letter.className='answer-letter';letter.textContent='ABCD'[n];
+        const answerText=document.createElement('span');answerText.textContent=answer;
+        button.append(letter,answerText);
+        button.addEventListener('click',()=>submitAnswer(idx));
+        $('answer-list').append(button);
+      });
+    }
+    function submitAnswer(chosen){
+      if(answered)return;answered=true;
+      const item=round[index],good=chosen===item.correct;
+      if(good)score++;
+      document.querySelectorAll('.answer').forEach(b=>{
+        const value=Number(b.dataset.idx);b.disabled=true;
+        if(value===item.correct)b.classList.add('correct');
+        else if(value===chosen)b.classList.add('wrong');
+      });
+      $('current-score').textContent=score+' bonne'+(score>1?'s':'')+' réponse'+(score>1?'s':'');
+      const feedback=$('feedback');feedback.className='feedback'+(good?'':' bad');
+      const title=document.createElement('strong');title.textContent=good?'✦ Bonne réponse !':'✦ Tu viens d’apprendre quelque chose !';
+      const detail=document.createElement('span');detail.textContent=item.why;
+      feedback.append(title,detail);
+      $('next-button').textContent=index===round.length-1?'Voir mon résultat →':'Question suivante →';
+      $('next-button').classList.remove('hidden');
+      $('progressbar').setAttribute('aria-valuenow',String(index+1));
+      $('progressfill').style.width=((index+1)/round.length*100)+'%';
+      $('next-button').focus({preventScroll:true});
+    }
+    function next(){if(!answered)return;index++;if(index>=round.length)finish();else renderQuestion();}
+    function finish(){
+      stats.games++;
+      stats.correct+=score;
+      stats.answered+=round.length;
+      const best=stats.bests[bestKey()];
+      if(typeof best!=='number'||score>best)stats.bests[bestKey()]=score;
+      saveStats();refreshBest();refreshStats();
+      $('final-score').textContent=score+'/'+round.length;
+      const msg=score===5?['Un sans-faute !','Tu maîtrises cette partie du savoir. Prêt pour un nouveau défi ?']:
+        score>=3?['Très belle partie !','Et surtout, cinq occasions de découvrir quelque chose de nouveau.']:
+        ['La curiosité se cultive !','Chaque erreur est une découverte. Retente ta chance avec d’autres questions.'];
+      $('result-title').textContent=msg[0];$('result-message').textContent=msg[1];
+      $('result-detail').textContent=labels[selectedCategory]+' · '+levels[selectedLevel].label+' · '+stats.games+' partie'+(stats.games>1?'s':'')+' terminée'+(stats.games>1?'s':'')+' sur cet appareil';
+      show('screen-result');
+    }
     document.querySelectorAll('[data-category]').forEach(button=>button.addEventListener('click',()=>setCategory(button.dataset.category)));
+    document.querySelectorAll('[data-level]').forEach(button=>button.addEventListener('click',()=>setLevel(button.dataset.level)));
     $('start-button').addEventListener('click',begin);
     $('next-button').addEventListener('click',next);
     $('replay-button').addEventListener('click',begin);
-    $('change-button').addEventListener('click',()=>{selectedCategory='mix';$('chosen-category').textContent=labels.mix;show('screen-intro');$('univers').scrollIntoView({behavior:'smooth'});});
+    $('change-button').addEventListener('click',()=>{selectedCategory='mix';$('chosen-category').textContent=labels.mix;show('screen-intro');refreshBest();$('univers').scrollIntoView({behavior:'smooth'});});
     $('year').textContent=String(new Date().getFullYear());
-    refreshBest();
+    refreshBest();refreshStats();
   </script>
 </body>
 </html>
