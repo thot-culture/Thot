@@ -266,6 +266,41 @@
     .quiz-stage .level-pill{line-height:1.6}
     @media(max-width:500px){.quiz-tools{align-items:stretch}.quiz-tools>*{width:100%;margin-left:0!important}.hint-trigger{text-align:center}}
 
+
+    /* THOT V2 · Étape 3 : progression */
+    .progression-panel{background:#FFFEFA;border:1px solid #E6DFD2;border-radius:20px;padding:24px 29px;margin-bottom:22px;box-shadow:0 10px 32px rgba(23,36,58,.045)}
+    .progression-head{display:flex;align-items:center;gap:17px}
+    .progression-symbol{width:54px;height:54px;border-radius:15px;flex-shrink:0;display:grid;place-items:center;background:#17243A;color:#E6C693;font-size:27px}
+    .progression-identity{min-width:0;flex:1;display:flex;flex-direction:column;gap:1px}
+    .progression-identity>span{font-size:10px;font-weight:850;letter-spacing:.14em;color:#827054}
+    .progression-identity strong{font:500 clamp(21px,2.7vw,28px)/1.3 Georgia,serif;color:#17243A}
+    .progression-amount{display:flex;align-items:flex-end;flex-direction:column;gap:3px;text-align:right}
+    .progression-amount strong{font-size:23px;color:#17243A;white-space:nowrap}
+    .progression-amount span{font-size:12px;color:#566171}
+    .xp-progress{height:10px;border-radius:99px;background:#ECE7DB;overflow:hidden;margin:20px 0 15px}
+    .xp-progress>div{width:0;height:100%;background:linear-gradient(90deg,#AE8344,#D3B77C);border-radius:99px;transition:width .3s}
+    .progression-bottom{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+    .progression-bottom>span{font-size:12px;color:#566171;line-height:1.6}
+    .badges-button{background:#F4F0E6;color:#6D522B;border:1px solid #DCCBAF;border-radius:12px;padding:10px 14px;font-size:13px;font-weight:800}
+    .badges-button:hover{background:#EDE3D0}
+    .badges-button span{margin-left:7px}
+    .badges-panel{margin-top:20px;padding-top:21px;border-top:1px solid #E9E3D8}
+    .badges-panel>p{font-size:13px;color:#566171;margin:0 0 16px}
+    .badges-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+    .badge-item{display:flex;gap:12px;align-items:center;background:#FAF9F5;border:1px solid #E8E5DD;border-radius:14px;padding:13px 11px;min-width:0}
+    .badge-item.earned{background:#F6F0E2;border-color:#D9C49C}
+    .badge-emblem{flex:0 0 38px;width:38px;height:38px;border-radius:10px;display:grid;place-items:center;font-size:20px;background:#ECE8DE}
+    .badge-item.earned .badge-emblem{background:#17243A;color:#E8C990}
+    .badge-copy{min-width:0;display:flex;flex-direction:column;gap:2px}
+    .badge-copy strong{font-size:12px;color:#17243A;line-height:1.3}
+    .badge-copy>span{font-size:11px;color:#566171;line-height:1.4}
+    .badge-copy small{font-size:11px;font-weight:800;color:#806135}
+    .xp-earned{font-size:16px!important;font-weight:850;color:#73501E!important;margin-bottom:12px!important}
+    .badges-earned{font-size:13px!important;font-weight:800;color:#286049!important;margin-bottom:20px!important}
+    @media(max-width:900px){.badges-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:560px){.progression-panel{padding:19px 16px}.progression-head{gap:11px}.progression-symbol{width:43px;height:43px;font-size:22px}.progression-amount strong{font-size:18px}.progression-amount span{font-size:11px}.progression-identity strong{font-size:20px}.badges-grid{grid-template-columns:1fr}.progression-bottom{align-items:stretch}.badges-button{width:100%}}
+    @media(prefers-reduced-motion:reduce){.xp-progress>div{transition:none}}
+
   </style>
 </head>
 <body>
@@ -369,6 +404,22 @@
           <div><p class="kicker">À toi de jouer</p><h2 id="quiz-title">Le défi THOT.</h2></div>
           <p class="section-lead">Tu peux changer de thème et recommencer autant de fois que tu veux.</p>
         </div>
+        <section class="progression-panel" aria-label="Mon parcours THOT">
+          <div class="progression-head">
+            <span class="progression-symbol" aria-hidden="true">✦</span>
+            <div class="progression-identity"><span>MON PARCOURS THOT</span><strong id="xp-level">Apprenti</strong></div>
+            <div class="progression-amount"><strong id="xp-count">0 XP</strong><span id="xp-next">Prochain niveau : 150 XP</span></div>
+          </div>
+          <div class="xp-progress" id="xp-progress" role="progressbar" aria-label="Progression d'expérience" aria-valuemin="0" aria-valuemax="150" aria-valuenow="0"><div id="xp-fill"></div></div>
+          <div class="progression-bottom">
+            <span id="xp-description">10 XP par bonne réponse · 5 XP par partie · 10 XP bonus au sans-faute.</span>
+            <button type="button" id="badges-button" class="badges-button" aria-expanded="false" aria-controls="badges-panel">Mes badges <span id="badge-count">0 / 9</span> <span aria-hidden="true">⌄</span></button>
+          </div>
+          <div class="badges-panel hidden" id="badges-panel" role="region" aria-label="Mes badges THOT">
+            <p>Les badges récompensent tes parties et tes connaissances dans chaque univers.</p>
+            <div class="badges-grid" id="badges-grid"></div>
+          </div>
+        </section>
         <div class="game-shell">
           <div class="game-top"><span class="game-brand">✳ THOT / LE QUIZ</span><span class="game-best" id="best-score">Meilleur score : —</span></div>
           <div class="game-body">
@@ -377,7 +428,7 @@
               <div class="quiz-intro-eyebrow">LE QUIZ · ÉDITION DÉCOUVERTE</div>
               <div class="category-tag" id="chosen-category">✦ Un peu de tout</div>
               <h3>Prêt à faire chauffer tes neurones ?</h3>
-              <p>5 questions, 4 choix et une découverte à chaque réponse. À la fin, retrouve tes erreurs et comprends les bonnes réponses.</p>
+              <p>5 questions, plusieurs formats et une découverte à chaque réponse. À la fin, retrouve tes erreurs et comprends les bonnes réponses.</p>
               <div class="quiz-promise" aria-label="Ce qui t'attend"><span>✦ 5 questions</span><span>◎ Corrections expliquées</span><span>↗ Bilan de tes erreurs</span></div>
               <div class="level-pick" role="group" aria-label="Niveau de difficulté">
                 <span>Niveau de difficulté</span>
@@ -410,6 +461,8 @@
               <h3 id="result-title" tabindex="-1">Bien joué !</h3>
               <p id="result-message">Ta curiosité fait des merveilles.</p>
               <p class="result-performance" id="result-performance"></p>
+              <p id="xp-earned" class="xp-earned" aria-live="polite"></p>
+              <p id="badges-earned" class="badges-earned hidden" aria-live="polite"></p>
               <div class="result-detail" id="result-detail"></div>
               <div class="result-actions"><button type="button" class="primary" id="replay-button">Rejouer ↗</button><button type="button" class="outlined" id="change-button">Changer de thème</button><button type="button" class="outlined review-toggle hidden" id="review-button" aria-expanded="false" aria-controls="review-panel">Revoir mes erreurs ↘</button></div>
               <div class="review-panel hidden" id="review-panel" role="region" aria-label="Révision des erreurs">
