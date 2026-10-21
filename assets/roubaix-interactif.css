@@ -1,0 +1,64 @@
+/* THOT · Module documentaire Roubaix 1917. Styles cantonnés à .ir. */
+.ir{margin:54px 0 62px;padding:0;border:1px solid #DED8CC;border-radius:19px;background:#FFFEFA;overflow:hidden;box-shadow:0 18px 40px rgba(23,36,58,.06)}
+.ir *{box-sizing:border-box}
+.ir-intro{background:linear-gradient(120deg,#17243A,#304B5B);color:#fff;padding:35px clamp(20px,4vw,36px)}
+.ir .ir-eyebrow,.ir .ir-overline{color:#947140;letter-spacing:.14em;font-size:11px;font-weight:850;margin:0 0 7px}
+.ir-intro .ir-eyebrow{color:#EACB95}
+.ir-intro h2{font:normal clamp(30px,4vw,41px)/1.18 Georgia,serif;margin:8px 0 15px;color:#FFFEFA}
+.ir-intro>p:not(.ir-eyebrow){color:#E3E9EB;font-size:14px;line-height:1.75;max-width:660px}
+.ir-shortcuts{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+.ir-shortcuts a{display:inline-block;border:1px solid #71818B;color:#FFF1DA;background:#ffffff12;padding:9px 12px;border-radius:10px;text-decoration:none;font-weight:750;font-size:12px}
+.ir-shortcuts a:hover{background:#ffffff22}
+.ir-module{padding:33px clamp(18px,4vw,36px);border-top:1px solid #E6E0D6;scroll-margin-top:25px}
+.ir-heading{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.ir-count{font:normal 29px Georgia,serif;color:#967347;background:#F6EEDD;padding:12px;border-radius:12px;line-height:1}
+.ir .ir-heading h3{font:normal clamp(23px,3vw,30px)/1.2 Georgia,serif;margin:0;color:#17243A}
+.ir .ir-guidance{font-size:14px;color:#566171;line-height:1.7;margin:0 0 22px}
+.ir button{font:inherit;cursor:pointer}
+.ir button:focus-visible,.ir a:focus-visible{outline:3px solid #927038;outline-offset:3px}
+.ir-dates{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:22px 0}
+.ir-dates button{border:1px solid #DDD9D0;border-radius:10px;background:#F7F5EE;color:#273A48;min-height:48px;padding:10px 5px;font-size:12px;font-weight:800}
+.ir-dates button[aria-pressed="true"]{background:#17243A;border-color:#17243A;color:#F5D8A6}
+.ir-dates button:hover:not([aria-pressed="true"]){border-color:#967347}
+.ir-timeline-panel{background:#F7F8F5;border-left:4px solid #B89558;padding:25px;border-radius:0 13px 13px 0}
+.ir-current-date{font-size:12px!important;color:#71542B;font-weight:850;letter-spacing:.06em;margin:0 0 9px!important}
+.ir-timeline-panel h4,.ir-archive-note h4{font:normal 26px/1.22 Georgia,serif;color:#17243A;margin:0 0 13px}
+.ir-timeline-panel>p:not(.ir-current-date){font-size:14px;color:#334955;line-height:1.75}
+.ir-interpretation{background:#EEECE4;border-radius:10px;padding:14px 16px;margin:16px 0;font-size:13px}
+.ir-interpretation strong{display:block;color:#705229;margin-bottom:5px}
+.ir-interpretation p{margin:0!important;font-size:13px!important;line-height:1.65;color:#4C5C61}
+.ir-ref,.ir-original-link a,.ir-inline-source{color:#245D63;font-size:13px;font-weight:800}
+.ir-archive-grid{display:grid;grid-template-columns:1fr 0.84fr;gap:16px;align-items:stretch}
+.ir-document{background:#F2ECDD;color:#17243A;border:1px solid #DFD4B9;border-radius:14px;padding:25px 21px;min-width:0}
+.ir-document-label{font-size:10px!important;font-weight:850;letter-spacing:.11em;color:#80603A;margin:0 0 19px!important}
+.ir-document-head{display:flex;justify-content:space-between;gap:11px;flex-wrap:wrap;border-bottom:1px solid #D2C4A6;padding-bottom:12px;font-size:10px;font-weight:750;letter-spacing:.02em}
+.ir-document-title{font:normal 33px Georgia,serif;margin:21px 0 7px}
+.ir-document-help{font-size:12px!important;color:#566171;margin:0 0 14px!important}
+.ir-document-hotspots{display:grid;gap:7px}
+.ir-document-hotspots button{display:flex;gap:10px;align-items:center;text-align:left;padding:10px;background:#FFFEFA;border:1px solid #D8CEBA;border-radius:10px;font-size:12px;color:#17243A;font-weight:800}
+.ir-document-hotspots button span:nth-child(2){flex:1}
+.ir-document-hotspots button[aria-pressed="true"]{border-color:#9B7137;box-shadow:inset 0 0 0 1px #9B7137;background:#FFF9E9}
+.ir-hotspot-number{color:#8A6231;font-weight:850}
+.ir-document-bottom{font-size:11px!important;line-height:1.6;color:#766C5C;margin:16px 0 0!important}
+.ir-archive-note{border:1px solid #E3DFD5;padding:24px 21px;border-radius:13px;background:#F9F9F6;min-width:0}
+.ir-archive-note>strong{font-size:16px;color:#255C58}
+.ir-archive-note>p:not(.ir-overline){font-size:14px;color:#566171;margin:10px 0}
+.ir-original-link{margin:17px 0 0!important;font-size:13px!important;line-height:1.8;color:#566171}
+.ir-map-switch{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.ir-map-switch button{border:1px solid #DCD7CB;color:#17243A;background:#F5F2EA;border-radius:10px;padding:10px 14px;font-size:12px;font-weight:800}
+.ir-map-switch button[aria-pressed="true"]{background:#17243A;color:#FFE7BC;border-color:#17243A}
+.ir-map-shell{height:320px;border-radius:13px;background:linear-gradient(145deg,#DDE6E1,#B9D0C8);overflow:hidden;border:1px solid #D2D9D3}
+.ir-map-placeholder{height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:28px;gap:7px}
+.ir-compass{font-size:45px;color:#245D63;line-height:1}
+.ir-map-placeholder strong{font:normal 25px Georgia,serif;color:#17243A}
+.ir-map-placeholder p{font-size:13px;max-width:490px;color:#334955;line-height:1.65}
+.ir-map-placeholder button{background:#17243A;border:0;border-radius:10px;padding:12px 17px;font-size:13px;font-weight:800;color:white}
+.ir-map-shell iframe{width:100%;height:100%;border:0;display:block}
+.ir-map-explanation{font-size:13px!important;color:#334955;margin:16px 0 8px!important}
+.ir-map-credit,.ir-method,.ir-outro{font-size:12px!important;line-height:1.7;color:#566171}
+.ir-method{background:#F5F2E8;border-left:3px solid #B89558;padding:14px;margin-top:13px}
+.ir-outro{padding:15px 27px;border-top:1px solid #E8E2D7;margin:0!important}
+.ir [hidden]{display:none!important}
+@media(max-width:620px){.ir{margin:35px 0}.ir-module{padding:25px 16px}.ir-dates{grid-template-columns:repeat(2,minmax(0,1fr))}.ir-archive-grid{grid-template-columns:1fr}.ir-timeline-panel{padding:19px}.ir-map-shell{height:310px}.ir-document{padding:20px 16px}.ir-shortcuts a{flex:1 1 145px;text-align:center}}
+@media(prefers-reduced-motion:reduce){.ir *{scroll-behavior:auto!important}}
+@media print{.ir-map-shell{display:none}.ir-dates{display:none}.ir-document-hotspots button{break-inside:avoid}.ir-intro{background:white;color:#17243A}.ir-intro h2,.ir-intro p{color:#17243A!important}}
