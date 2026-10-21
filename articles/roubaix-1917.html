@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="../assets/article.css">
 
   <link rel="stylesheet" href="../assets/roubaix-photos.css">
+  <link rel="stylesheet" href="../assets/roubaix-frise.css">
 </head>
 <body class="article-roubaix">
   <header class="barre"><div class="largeur"><a class="marque" href="../index.html" aria-label="THOT, accueil">THOT</a><a class="retour" href="../index.html">← Retour à l'accueil</a></div></header>
@@ -40,6 +41,36 @@
         <p>Roubaix est, au début du XXe siècle, un important centre textile du nord de la France. Lorsque la Première Guerre mondiale éclate, les activités économiques et les échanges sont bouleversés. À partir de l'automne 1914, la ville se trouve sous l'autorité de l'armée allemande. L'occupation ne prend fin qu'en octobre 1918 : en 1917, elle fait donc partie du quotidien depuis plusieurs années. <a class="source-num" href="#ref1" aria-label="Voir la source 1">[1]</a></p>
         <p>Roubaix n'est pas constamment au milieu des combats. Pour l'armée allemande, il s'agit d'une ville située à l'arrière de ses lignes, où il faut loger des troupes, faire appliquer les ordres et mobiliser des ressources. Cela ne signifie pas que la guerre y soit lointaine : elle se traduit autrement, par la surveillance, les réquisitions et les contraintes de l'occupation. <a class="source-num" href="#ref1" aria-label="Voir la source 1">[1]</a></p>
         <p>Un ensemble exceptionnel permet de saisir cette présence administrative : les Archives municipales de Roubaix ont numérisé <strong>972 affiches</strong> relatives à la Grande Guerre, couvrant les années 1914 à 1918. Certaines émanent de la municipalité, d'autres directement de la commandanture allemande. Les lire dans l'ordre fait apparaître une ville où l'on gouverne aussi par l'affichage public. <a class="source-num" href="#ref1" aria-label="Voir la source 1">[1]</a></p>
+
+
+        <!-- Frise historique autonome : seuls les repères chronologiques sont interactifs. -->
+        <section class="ir" id="explorer-roubaix" aria-labelledby="ir-title">
+          <header class="ir-intro">
+            <p class="ir-eyebrow">THOT · HISTOIRE INTERACTIVE</p>
+            <h2 id="ir-title">1914–1918 : explorer l'occupation de Roubaix</h2>
+            <p>Choisissez une date pour voir ce qui s'est passé et comprendre ce que les documents permettent d'en dire.</p>
+          </header>
+          <section id="frise-roubaix" class="ir-module ir-panel" data-ir-panel="chronologie" role="region" aria-labelledby="ir-timeline-heading">
+            <div class="ir-heading"><span class="ir-count">01</span><div><p class="ir-overline">REPÈRES DOCUMENTAIRES</p><h3 id="ir-timeline-heading">1914–1918 : huit étapes à explorer</h3></div></div>
+            <p class="ir-guidance">Choisissez une date. Pour chaque événement, découvrez ce que dit la source et ce qu’elle ne permet pas de conclure.</p>
+            <div class="ir-dates" role="group" aria-label="Dates à explorer"><button type="button" data-date-index="0" aria-pressed="true" aria-label="Événement : Automne 1914"><span class="ir-time-label">1914</span></button>
+              <button type="button" data-date-index="1" aria-pressed="false" aria-label="Événement : 13 janvier 1917"><span class="ir-time-label">13 jan.</span></button>
+              <button type="button" data-date-index="2" aria-pressed="false" aria-label="Événement : 5 mars 1917"><span class="ir-time-label">5 mars</span></button>
+              <button type="button" data-date-index="3" aria-pressed="false" aria-label="Événement : 1er juillet 1917"><span class="ir-time-label">1er juil.</span></button>
+              <button type="button" data-date-index="4" aria-pressed="false" aria-label="Événement : Du 9 au 13 juillet 1917"><span class="ir-time-label">9–13 juil.</span></button>
+              <button type="button" data-date-index="5" aria-pressed="false" aria-label="Événement : 12 août 1917"><span class="ir-time-label">12 août</span></button>
+              <button type="button" data-date-index="6" aria-pressed="false" aria-label="Événement : 19 décembre 1917"><span class="ir-time-label">19 déc.</span></button>
+              <button type="button" data-date-index="7" aria-pressed="false" aria-label="Événement : Octobre 1918"><span class="ir-time-label">1918</span></button></div>
+            <div class="ir-timeline-panel" role="region" aria-label="Événement historique sélectionné" aria-live="polite" aria-atomic="true">
+              <p class="ir-current-date" id="timeline-date">Automne 1914</p>
+              <h4 id="timeline-title">Roubaix passe sous occupation allemande</h4>
+              <p id="timeline-description">L'administration militaire allemande exerce son autorité sur la ville.</p>
+              <div class="ir-interpretation"><strong>Limite de la source</strong><p id="timeline-limitation">La date est présentée à l'échelle de la saison.</p></div>
+              <a href="#ref1" class="ir-ref" id="timeline-reference">Retrouver la source [1]</a>
+            </div>
+          </section>
+          <noscript><p class="ir-noscript">Activez JavaScript pour explorer les huit événements de la frise.</p></noscript>
+        </section>
 
         <div class="thot-simple-intro">
           <h2>La guerre racontée par ses images</h2>
@@ -111,6 +142,7 @@
         <nav aria-label="Sections de l'article">
           <ol>
             <li><a href="#contexte"><span class="sommaire-num" aria-hidden="true">1</span><span>Une ville occupée</span></a></li>
+            <li><a href="#explorer-roubaix"><span class="sommaire-num" aria-hidden="true">↳</span><span>Frise interactive 1914–1918</span></a></li>
             <li><a href="#controle"><span class="sommaire-num" aria-hidden="true">2</span><span>Contrôler les habitants</span></a></li>
             <li><a href="#travail"><span class="sommaire-num" aria-hidden="true">3</span><span>Le travail sous l'occupation</span></a></li>
             <li><a href="#ravitaillement"><span class="sommaire-num" aria-hidden="true">4</span><span>Le ravitaillement</span></a></li>
@@ -127,6 +159,7 @@
   <footer class="pied"><div class="largeur"><b>THOT</b><span>Éveiller la curiosité. Éclairer les idées. Transmettre le savoir.</span></div></footer>
 
   <script src="../assets/article-media.js" defer></script>
+  <script src="../assets/roubaix-frise.js" defer></script>
   <script>
     const contenu = document.querySelector('#texte-article');
     const mots = contenu.innerText.trim().split(/\s+/).length;

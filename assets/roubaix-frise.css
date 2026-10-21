@@ -1,0 +1,41 @@
+/* THOT — Frise 1914–1918 de Roubaix.
+   Sous-ensemble des styles du parcours original, sans modules d'archives ni carte. */
+.ir{margin:54px 0 62px;border:1px solid #DED8CC;border-radius:19px;background:#FFFEFA;overflow:hidden;box-shadow:0 18px 40px rgba(23,36,58,.06)}
+.ir *{box-sizing:border-box}
+.ir-intro{background:linear-gradient(120deg,#17243A,#304B5B);color:#fff;padding:35px clamp(20px,4vw,36px)}
+.ir .ir-eyebrow,.ir .ir-overline{color:#947140;letter-spacing:.14em;font-size:11px;font-weight:850;margin:0 0 7px}
+.ir-intro .ir-eyebrow{color:#EACB95}
+.ir-intro h2{font:normal clamp(30px,4vw,41px)/1.18 Georgia,serif;margin:8px 0 15px;color:#FFFEFA}
+.ir-intro>p:not(.ir-eyebrow){color:#E3E9EB;font-size:14px;line-height:1.75;max-width:660px;margin-bottom:0}
+.ir-module{padding:33px clamp(18px,4vw,36px);border-top:1px solid #E6E0D6;scroll-margin-top:25px}
+.ir-heading{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.ir-count{font:normal 29px Georgia,serif;color:#967347;background:#F6EEDD;padding:12px;border-radius:12px;line-height:1}
+.ir .ir-heading h3{font:normal clamp(23px,3vw,30px)/1.2 Georgia,serif;margin:0;color:#17243A}
+.ir .ir-guidance{font-size:14px;color:#566171;line-height:1.7;margin:0 0 22px}
+.ir button{font:inherit;cursor:pointer}
+.ir button:focus-visible,.ir a:focus-visible{outline:3px solid #927038;outline-offset:3px}
+.ir-dates{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:22px 0}
+.ir-dates button{border:1px solid #DDD9D0;border-radius:10px;background:#F7F5EE;color:#273A48;min-height:48px;padding:10px 5px;font-size:12px;font-weight:800}
+.ir-dates button[aria-pressed="true"]{background:#17243A;border-color:#17243A;color:#F5D8A6}
+.ir-dates button:hover:not([aria-pressed="true"]){border-color:#967347}
+.ir-timeline-panel{background:#F7F8F5;border-left:4px solid #B89558;padding:25px;border-radius:0 13px 13px 0}
+.ir-current-date{font-size:12px!important;color:#71542B;font-weight:850;letter-spacing:.06em;margin:0 0 9px!important}
+.ir-timeline-panel h4{font:normal 26px/1.22 Georgia,serif;color:#17243A;margin:0 0 13px}
+.ir-timeline-panel>p:not(.ir-current-date){font-size:14px;color:#334955;line-height:1.75}
+.ir-interpretation{background:#EEECE4;border-radius:10px;padding:14px 16px;margin:16px 0;font-size:13px}
+.ir-interpretation strong{display:block;color:#705229;margin-bottom:5px}
+.ir-interpretation p{margin:0!important;font-size:13px!important;line-height:1.65;color:#4C5C61}
+.ir-ref{color:#245D63;font-size:13px;font-weight:800}
+.ir-noscript{padding:15px 25px;font-size:13px;color:#566171}
+@media(max-width:620px){
+  .ir{margin:35px 0}
+  .ir-module{padding:25px 16px}
+  .ir-dates{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ir-timeline-panel{padding:19px}
+}
+@media(prefers-reduced-motion:reduce){.ir *{scroll-behavior:auto!important}}
+@media print{
+  .ir-intro{background:white;color:#17243A}
+  .ir-intro h2,.ir-intro p{color:#17243A!important}
+  .ir-dates{display:none}
+}
