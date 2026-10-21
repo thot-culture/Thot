@@ -131,6 +131,161 @@
   hotspots.forEach(button => button.addEventListener('click', () => chooseNote(button.dataset.archiveNote)));
   chooseNote('nature');
 
+
+  /* Archives authentiques hébergées chez L'Armarium : aucun scan n'est
+   * dupliqué sur THOT. Les annotations décrivent les notices documentaires.
+   */
+  const originals = [
+  {
+    "key": "recolte",
+    "title": "Prescriptions concernant la récolte de 1917 pour la ville de Roubaix",
+    "label": "Récolte et ravitaillement",
+    "code": "AFF_001_D_0694",
+    "url": "https://www.armarium-hautsdefrance.fr/document/85546",
+    "author": "Hofmann (commandant), signataire",
+    "languages": "Affiche bilingue français–allemand",
+    "size": "69 × 78 cm",
+    "footnote": "ref6",
+    "lead": "La récolte devient une affaire administrative : consignation, prix, paiements et sanctions apparaissent dans la notice de cette affiche.",
+    "notes": [
+      {
+        "title": "Un ordre sur la récolte",
+        "fact": "La notice indique que toute la récolte de 1917 est consignée.",
+        "comment": "La consignation montre un contrôle officiel de la production. Elle ne renseigne pas à elle seule sur les quantités réellement collectées."
+      },
+      {
+        "title": "Des prix et des paiements fixés",
+        "fact": "La notice signale une liste des prix et des modalités de paiement.",
+        "comment": "L'affiche règle à la fois la circulation des produits et les conditions économiques des échanges."
+      },
+      {
+        "title": "Des sanctions annoncées",
+        "fact": "La notice mentionne jusqu'à un an de prison et 3 000 marks d'amende, voire les deux.",
+        "comment": "Ce sont des peines prévues dans le texte, pas la preuve que de telles peines ont effectivement été prononcées."
+      },
+      {
+        "title": "Un document bilingue",
+        "fact": "La notice identifie une affiche en français et en allemand, signée par Hofmann.",
+        "comment": "Les langues utilisées reflètent la coexistence d'une population francophone et d'une autorité militaire allemande."
+      }
+    ]
+  },
+  {
+    "key": "travail",
+    "title": "Ordonnance concernant le refus de travail",
+    "label": "Travail sous contrainte",
+    "code": "AFF_001_D_0695",
+    "url": "https://www.armarium-hautsdefrance.fr/document/85547",
+    "author": "Sixt von Arnim (signataire)",
+    "languages": "Affiche bilingue français–allemand",
+    "size": "63 × 86 cm",
+    "footnote": "ref4",
+    "lead": "Cette ordonnance rend visibles les contraintes qui encadrent le travail sous occupation. Elle complète les annonces de recrutement étudiées dans l'article.",
+    "notes": [
+      {
+        "title": "Le refus de travail visé",
+        "fact": "La notice énumère notamment le refus de commencer ou de poursuivre un travail demandé.",
+        "comment": "Le texte élargit le contrôle administratif à l'exécution du travail ; il ne permet pas de mesurer tous les refus effectifs."
+      },
+      {
+        "title": "Des peines de prison et des amendes",
+        "fact": "La notice prévoit pour certains manquements jusqu'à trois ans de prison ou 10 000 marks d'amende.",
+        "comment": "Les sanctions annoncées doivent être distinguées des condamnations réellement appliquées."
+      },
+      {
+        "title": "Des faits commis collectivement",
+        "fact": "La notice distingue les actes commis de façon concertée, assortis de sanctions plus graves.",
+        "comment": "Le texte surveille aussi les formes collectives de contestation du travail."
+      },
+      {
+        "title": "Des tribunaux militaires compétents",
+        "fact": "La notice attribue une compétence aux tribunaux militaires et aux commandants.",
+        "comment": "Cette disposition traduit le rôle de l'appareil militaire dans l'encadrement de la population occupée."
+      }
+    ]
+  },
+  {
+    "key": "departs",
+    "title": "Avis concernant la défense d'émigrer du territoire occupé par l'armée allemande",
+    "label": "Contrôle des déplacements",
+    "code": "AFF_001_D_0618",
+    "url": "https://www.armarium-hautsdefrance.fr/document/85556",
+    "author": "Von Denk (signataire)",
+    "languages": "Affiche bilingue français–allemand",
+    "size": "69 × 62 cm",
+    "footnote": "ref7",
+    "lead": "Une autre affiche de 1917 détaille les interdictions de sortie du territoire occupé, notamment vers les Pays-Bas, sans autorisation.",
+    "notes": [
+      {
+        "title": "Les déplacements contrôlés",
+        "fact": "La notice indique qu'il est interdit de quitter le territoire occupé sans autorisation.",
+        "comment": "L'obligation d'obtenir une autorisation documente le contrôle des circulations ; elle ne détermine pas les raisons individuelles de chaque départ."
+      },
+      {
+        "title": "Le cas de la frontière néerlandaise",
+        "fact": "La notice évoque spécialement le passage vers la Hollande dans le but de rejoindre les forces adverses.",
+        "comment": "Il s'agit d'une préoccupation stratégique formulée par l'autorité occupante."
+      },
+      {
+        "title": "Des peines très lourdes",
+        "fact": "La notice évoque des sanctions pouvant aller, selon les cas, jusqu'à cinq ans de prison ou à la peine de mort.",
+        "comment": "Cette menace appartient au texte publié, sans prouver que chaque peine a été appliquée."
+      },
+      {
+        "title": "Un autre document de 1917",
+        "fact": "La notice identifie une affiche bilingue signée Von Denk, cote AFF_001_D_0618.",
+        "comment": "Cette ordonnance ne doit pas être confondue avec l'avis du 19 décembre 1917 sur des départs programmés (AFF_001_D_0759)."
+      }
+    ]
+  }
+];
+  const archiveButtons = [...root.querySelectorAll('[data-original-document]')];
+  const originalNoteButtons = [...root.querySelectorAll('[data-original-point]')];
+  const originalFrame = root.querySelector('#original-archive-frame');
+  const originalPlaceholder = root.querySelector('#original-archive-placeholder');
+  const originalEmbedButton = root.querySelector('#original-archive-embed');
+  let originalActive = originals[0];
+  function chooseOriginalNote(position) {
+    const note=originalActive.notes[position];
+    if (!note) return;
+    originalNoteButtons.forEach((button,i)=>button.setAttribute('aria-pressed',String(i===position)));
+    root.querySelector('#original-note-title').textContent=note.title;
+    root.querySelector('#original-note-fact').textContent=note.fact;
+    root.querySelector('#original-note-analysis').textContent=note.comment;
+  }
+  function chooseOriginal(key) {
+    const doc=originals.find(item=>item.key===key);
+    if (!doc) return;
+    originalActive=doc;
+    archiveButtons.forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.originalDocument===key)));
+    root.querySelector('#original-document-title').textContent=doc.title;
+    root.querySelector('#original-document-cote').textContent=doc.code;
+    root.querySelector('#original-document-meta').textContent='1917 · '+doc.author+' · '+doc.languages+' · '+doc.size;
+    root.querySelector('#original-document-intro').textContent=doc.lead;
+    const link=root.querySelector('#original-document-link');
+    link.href=doc.url;
+    link.textContent='Consulter la numérisation officielle sur L’Armarium ↗';
+    root.querySelector('#original-source-reference').href='#'+doc.footnote;
+    // Changer de document efface la consultation précédente et demande
+    // un nouveau clic avant toute requête à l'hébergeur tiers.
+    originalFrame.removeAttribute('src');
+    originalFrame.hidden=true;
+    originalPlaceholder.hidden=false;
+    originalEmbedButton.hidden=false;
+    originalNoteButtons.forEach((button,i)=>button.textContent=String(i+1)+' · '+doc.notes[i].title);
+    chooseOriginalNote(0);
+  }
+  archiveButtons.forEach(button=>button.addEventListener('click',()=>chooseOriginal(button.dataset.originalDocument)));
+  originalNoteButtons.forEach(button=>button.addEventListener('click',()=>chooseOriginalNote(Number(button.dataset.originalPoint))));
+  originalEmbedButton.addEventListener('click',()=>{
+    originalFrame.src=originalActive.url;
+    originalFrame.title='Consultation sur L’Armarium : '+originalActive.title;
+    originalPlaceholder.hidden=true;
+    originalFrame.hidden=false;
+    originalEmbedButton.hidden=true;
+  });
+  chooseOriginal('recolte');
+
   const maps = {
     city: {
       src:'https://www.openstreetmap.org/export/embed.html?bbox=3.144%2C50.678%2C3.214%2C50.707&layer=mapnik',
