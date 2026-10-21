@@ -15,7 +15,10 @@
 
   function render(slot, record) {
     if (!record || !record.url || !record.sourceUrl || !record.alt ||
-        !record.caption || !record.licence || !record.licenceUrl) return;
+        !record.caption || !record.licence || !record.licenceUrl) {
+      slot.append(el('small', 'thot-illustration-error', 'Notice d’image absente ou incomplète.'));
+      return;
+    }
 
     const figure = el('figure', 'thot-illustration');
     const link = el('a', 'thot-illustration-photo');
@@ -26,8 +29,11 @@
     const img = el('img');
     img.src = record.url;
     img.alt = record.alt;
-    img.loading = 'lazy';
+    const isCover = Boolean(slot.closest('.thot-cover'));
+    img.loading = isCover ? 'eager' : 'lazy';
+    if (isCover) img.fetchPriority = 'high';
     img.decoding = 'async';
+    if (record.width && record.height) { img.width = record.width; img.height = record.height; }
     img.addEventListener('error', () => {
       const fallback = el('span', 'thot-illustration-fallback', 'Image indisponible — ouvrir la notice originale ↗');
       link.replaceChildren(fallback);
@@ -54,7 +60,7 @@
     slot.replaceWith(figure);
   }
 
-  fetch(new URL('illustrations.json', script.src), { cache: 'force-cache' })
+  fetch(new URL('illustrations.json', script.src), { cache: 'no-cache' })
     .then(response => {
       if (!response.ok) throw new Error('Catalogue des images indisponible');
       return response.json();
@@ -64,8 +70,7 @@
     })
     .catch(() => {
       for (const slot of slots) {
-        const fallback = el('p', 'thot-illustration-error', 'Les illustrations n’ont pas pu être chargées.');
-        slot.replaceWith(fallback);
+        slot.append(el('small', 'thot-illustration-error', 'L’illustration n’a pas pu être chargée. Le texte de l’article reste accessible.'));
       }
     });
 })();
