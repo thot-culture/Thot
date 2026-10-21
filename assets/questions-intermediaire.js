@@ -12,7 +12,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "La paix d'Augsbourg"
     ],
     "correct": 0,
-    "why": "Les traités de Westphalie est la bonne réponse. Ce fait s'inscrit dans la chronologie des événements historiques.",
+    "why": "Les traités de Westphalie sont conclus en 1648 et mettent fin à la guerre de Trente Ans dans le Saint-Empire.",
     "hint": "Replace cette question dans les grandes périodes de l'histoire politique et européenne."
   },
   {
@@ -27,7 +27,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Charles X"
     ],
     "correct": 0,
-    "why": "Napoléon Bonaparte est la bonne réponse. Ce fait s'inscrit dans la chronologie des événements historiques.",
+    "why": "Napoléon Bonaparte, Premier consul en 1804, fait promulguer le Code civil des Français.",
     "hint": "Replace cette question dans les grandes périodes de l'histoire politique et européenne."
   },
   {
@@ -42,7 +42,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Mikhaïl Gorbatchev"
     ],
     "correct": 0,
-    "why": "Joseph Staline est la bonne réponse. Ce fait s'inscrit dans la chronologie des événements historiques.",
+    "why": "Joseph Staline dirige l'Union soviétique pendant la Seconde Guerre mondiale, notamment lors de l'invasion allemande de 1941.",
     "hint": "Replace cette question dans les grandes périodes de l'histoire politique et européenne."
   },
   {
@@ -57,7 +57,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Les Bourbons"
     ],
     "correct": 0,
-    "why": "Les Carolingiens est la bonne réponse. Ce fait s'inscrit dans la chronologie des événements historiques.",
+    "why": "Pépin le Bref devient roi en 751, marquant l'avènement des Carolingiens après les Mérovingiens.",
     "hint": "Replace cette question dans les grandes périodes de l'histoire politique et européenne."
   },
   {
@@ -72,7 +72,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "La bataille d'Azincourt"
     ],
     "correct": 0,
-    "why": "La conquête normande est la bonne réponse. Ce fait s'inscrit dans la chronologie des événements historiques.",
+    "why": "Guillaume de Normandie remporte Hastings en 1066 et devient roi d'Angleterre.",
     "hint": "Replace cette question dans les grandes périodes de l'histoire politique et européenne."
   },
   {
@@ -87,7 +87,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Le traité de Lisbonne"
     ],
     "correct": 0,
-    "why": "Le traité de Rome est la bonne réponse. Ce fait s'inscrit dans la chronologie des événements historiques.",
+    "why": "Le traité de Rome, signé en mars 1957, fonde la Communauté économique européenne.",
     "hint": "Replace cette question dans les grandes périodes de l'histoire politique et européenne."
   },
   {
@@ -102,7 +102,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Le concile de Trente"
     ],
     "correct": 0,
-    "why": "La Réforme protestante est la bonne réponse. Ce fait s'inscrit dans la chronologie des événements historiques.",
+    "why": "Les critiques de Martin Luther, notamment en 1517, sont à l'origine d'une branche majeure de la Réforme protestante.",
     "hint": "Replace cette question dans les grandes périodes de l'histoire politique et européenne."
   },
   {
@@ -117,7 +117,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Bayezid II"
     ],
     "correct": 0,
-    "why": "Mehmed II est la bonne réponse. Ce fait s'inscrit dans la chronologie des événements historiques.",
+    "why": "Mehmed II prend Constantinople en 1453 et transforme durablement le centre de l'Empire ottoman.",
     "hint": "Replace cette question dans les grandes périodes de l'histoire politique et européenne."
   },
   {
@@ -132,7 +132,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Le Sénat impérial"
     ],
     "correct": 0,
-    "why": "L'Assemblée nationale constituante est la bonne réponse. Ce fait s'inscrit dans la chronologie des événements historiques.",
+    "why": "La Déclaration des droits de l'homme et du citoyen est adoptée par l'Assemblée nationale constituante le 26 août 1789.",
     "hint": "Replace cette question dans les grandes périodes de l'histoire politique et européenne."
   },
   {
@@ -147,7 +147,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "La Serbie"
     ],
     "correct": 0,
-    "why": "La Roumanie est la bonne réponse. Il faut distinguer les pays, les régions et leurs positions géographiques.",
+    "why": "Winston Churchill devient Premier ministre britannique en mai 1940 et dirige le pays jusqu'en juillet 1945.",
     "hint": "Localise d'abord la région ou le pays sur une carte du monde."
   },
   {
@@ -162,7 +162,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "La Seine"
     ],
     "correct": 0,
-    "why": "La Vltava est la bonne réponse. Il faut distinguer les pays, les régions et leurs positions géographiques.",
+    "why": "La Transylvanie se situe aujourd'hui en Roumanie, bien que son histoire soit liée à plusieurs royaumes et empires.",
     "hint": "Localise d'abord la région ou le pays sur une carte du monde."
   },
   {
@@ -177,7 +177,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "La péninsule du Jutland"
     ],
     "correct": 0,
-    "why": "La péninsule Scandinave est la bonne réponse. Il faut distinguer les pays, les régions et leurs positions géographiques.",
+    "why": "Prague est traversée par la Vltava, nommée Moldau en allemand, affluent de l'Elbe.",
     "hint": "Localise d'abord la région ou le pays sur une carte du monde."
   },
   {
@@ -192,7 +192,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Le Soudan"
     ],
     "correct": 0,
-    "why": "L'Éthiopie est la bonne réponse. Il faut distinguer les pays, les régions et leurs positions géographiques.",
+    "why": "La péninsule Scandinave comprend principalement la Norvège et la Suède, et une partie du nord-ouest de la Finlande.",
     "hint": "Localise d'abord la région ou le pays sur une carte du monde."
   },
   {
@@ -207,7 +207,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "L'océan Arctique"
     ],
     "correct": 0,
-    "why": "L'océan Indien est la bonne réponse. Il faut distinguer les pays, les régions et leurs positions géographiques.",
+    "why": "Addis-Abeba est la capitale de l'Éthiopie et le siège de l'Union africaine.",
     "hint": "Localise d'abord la région ou le pays sur une carte du monde."
   },
   {
@@ -222,7 +222,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Le détroit de Malacca"
     ],
     "correct": 0,
-    "why": "Le pas de Calais est la bonne réponse. Il faut distinguer les pays, les régions et leurs positions géographiques.",
+    "why": "Les Maldives sont un archipel situé dans l'océan Indien, au sud-ouest de l'Inde.",
     "hint": "Localise d'abord la région ou le pays sur une carte du monde."
   },
   {
@@ -237,7 +237,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Le Belize"
     ],
     "correct": 0,
-    "why": "La République dominicaine est la bonne réponse. Il faut distinguer les pays, les régions et leurs positions géographiques.",
+    "why": "Le pas de Calais est le passage le plus étroit entre les côtes anglaises et françaises.",
     "hint": "Localise d'abord la région ou le pays sur une carte du monde."
   },
   {
@@ -252,7 +252,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "L'Irak"
     ],
     "correct": 0,
-    "why": "La Jordanie est la bonne réponse. Il faut distinguer les pays, les régions et leurs positions géographiques.",
+    "why": "L'île d'Hispaniola est partagée entre Haïti et la République dominicaine.",
     "hint": "Localise d'abord la région ou le pays sur une carte du monde."
   },
   {
@@ -267,7 +267,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Le Canada"
     ],
     "correct": 0,
-    "why": "Le Danemark est la bonne réponse. Il faut distinguer les pays, les régions et leurs positions géographiques.",
+    "why": "Pétra est un ancien site nabatéen situé dans l'actuelle Jordanie.",
     "hint": "Localise d'abord la région ou le pays sur une carte du monde."
   },
   {
@@ -282,7 +282,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Anthony Eden"
     ],
     "correct": 0,
-    "why": "Winston Churchill devient Premier ministre du Royaume-Uni en mai 1940 et dirige le gouvernement britannique jusqu'en juillet 1945.",
+    "why": "Le Groenland est un territoire autonome du royaume du Danemark, sans être un État souverain.",
     "hint": "Pense au Premier ministre associé à la résistance britannique durant le Blitz."
   },
   {
@@ -297,7 +297,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "James Chadwick"
     ],
     "correct": 0,
-    "why": "Niels Bohr est la bonne réponse. Cette identification repose sur la définition scientifique précise de la notion.",
+    "why": "Le modèle atomique de Niels Bohr, présenté en 1913, utilise des niveaux d'énergie quantifiés.",
     "hint": "Distingue les termes scientifiques proches par leur fonction exacte."
   },
   {
@@ -312,7 +312,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Digérer les lipides"
     ],
     "correct": 0,
-    "why": "Synthétiser les protéines est la bonne réponse. Cette identification repose sur la définition scientifique précise de la notion.",
+    "why": "Les ribosomes assemblent des acides aminés pour produire des protéines à partir d'une information génétique.",
     "hint": "Distingue les termes scientifiques proches par leur fonction exacte."
   },
   {
@@ -327,7 +327,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Le pascal"
     ],
     "correct": 0,
-    "why": "Le newton est la bonne réponse. Cette identification repose sur la définition scientifique précise de la notion.",
+    "why": "Le newton est l'unité SI de force ; le joule mesure l'énergie, le watt la puissance et le pascal la pression.",
     "hint": "Distingue les termes scientifiques proches par leur fonction exacte."
   },
   {
@@ -342,7 +342,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "La condensation"
     ],
     "correct": 0,
-    "why": "Le métamorphisme est la bonne réponse. Cette identification repose sur la définition scientifique précise de la notion.",
+    "why": "Le métamorphisme transforme des roches à l'état solide sous l'effet de variations de pression, de température et de fluides.",
     "hint": "Distingue les termes scientifiques proches par leur fonction exacte."
   },
   {
@@ -357,7 +357,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Une liaison hydrogène"
     ],
     "correct": 0,
-    "why": "Une liaison covalente double est la bonne réponse. Cette identification repose sur la définition scientifique précise de la notion.",
+    "why": "Dans O₂, les deux atomes d'oxygène sont liés par une liaison covalente double.",
     "hint": "Distingue les termes scientifiques proches par leur fonction exacte."
   },
   {
@@ -372,7 +372,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Alexander Fleming"
     ],
     "correct": 0,
-    "why": "Charles Darwin est la bonne réponse. Cette identification repose sur la définition scientifique précise de la notion.",
+    "why": "Charles Darwin publie De l'origine des espèces en 1859 et y développe le mécanisme de la sélection naturelle.",
     "hint": "Distingue les termes scientifiques proches par leur fonction exacte."
   },
   {
@@ -387,7 +387,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "L'hygromètre"
     ],
     "correct": 0,
-    "why": "Le baromètre est la bonne réponse. Cette identification repose sur la définition scientifique précise de la notion.",
+    "why": "Le baromètre mesure la pression atmosphérique, contrairement à l'anémomètre, qui mesure la vitesse du vent.",
     "hint": "Distingue les termes scientifiques proches par leur fonction exacte."
   },
   {
@@ -402,7 +402,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Le bulbe olfactif"
     ],
     "correct": 0,
-    "why": "Le cervelet est la bonne réponse. Cette identification repose sur la définition scientifique précise de la notion.",
+    "why": "Le cervelet contribue à la coordination et à la précision des mouvements et à l'équilibre.",
     "hint": "Distingue les termes scientifiques proches par leur fonction exacte."
   },
   {
@@ -417,7 +417,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Le sulfate de cuivre"
     ],
     "correct": 0,
-    "why": "Le carbonate de calcium est la bonne réponse. Cette identification repose sur la définition scientifique précise de la notion.",
+    "why": "La coquille d'un œuf de poule se compose en majeure partie de carbonate de calcium.",
     "hint": "Distingue les termes scientifiques proches par leur fonction exacte."
   },
   {
@@ -432,7 +432,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "La polarisation"
     ],
     "correct": 0,
-    "why": "La dispersion est la bonne réponse. Cette identification repose sur la définition scientifique précise de la notion.",
+    "why": "Un prisme disperse la lumière : ses différentes longueurs d'onde subissent des déviations distinctes.",
     "hint": "Distingue les termes scientifiques proches par leur fonction exacte."
   },
   {
@@ -447,7 +447,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Marcel Pagnol"
     ],
     "correct": 0,
-    "why": "Georges Simenon est la bonne réponse. Ce repère s'inscrit dans l'histoire des œuvres et des créateurs.",
+    "why": "Georges Simenon crée le commissaire Maigret, personnage central de nombreux romans policiers.",
     "hint": "Associe l'œuvre ou le mouvement à son auteur et à son époque."
   },
   {
@@ -462,7 +462,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Dmitri Chostakovitch"
     ],
     "correct": 0,
-    "why": "Piotr Ilitch Tchaïkovski est la bonne réponse. Ce repère s'inscrit dans l'histoire des œuvres et des créateurs.",
+    "why": "Tchaïkovski compose la musique du Lac des cygnes, ballet créé en 1877 à Moscou.",
     "hint": "Associe l'œuvre ou le mouvement à son auteur et à son époque."
   },
   {
@@ -477,7 +477,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Francisco de Goya"
     ],
     "correct": 0,
-    "why": "Georges Seurat est la bonne réponse. Ce repère s'inscrit dans l'histoire des œuvres et des créateurs.",
+    "why": "Georges Seurat peint Un dimanche après-midi à l'île de la Grande Jatte en utilisant la technique divisionniste.",
     "hint": "Associe l'œuvre ou le mouvement à son auteur et à son époque."
   },
   {
@@ -492,7 +492,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Louis-Ferdinand Céline"
     ],
     "correct": 0,
-    "why": "Albert Camus est la bonne réponse. Ce repère s'inscrit dans l'histoire des œuvres et des créateurs.",
+    "why": "Albert Camus publie L'Étranger en 1942, avec Meursault comme personnage principal.",
     "hint": "Associe l'œuvre ou le mouvement à son auteur et à son époque."
   },
   {
@@ -507,7 +507,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Le bonsaï"
     ],
     "correct": 0,
-    "why": "L'origami est la bonne réponse. Ce repère s'inscrit dans l'histoire des œuvres et des créateurs.",
+    "why": "L'origami désigne l'art japonais du pliage du papier ; l'ikebana est l'art de la composition florale.",
     "hint": "Associe l'œuvre ou le mouvement à son auteur et à son époque."
   },
   {
@@ -522,7 +522,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Alfred Hitchcock"
     ],
     "correct": 0,
-    "why": "Charlie Chaplin est la bonne réponse. Ce repère s'inscrit dans l'histoire des œuvres et des créateurs.",
+    "why": "Charlie Chaplin réalise Les Temps modernes en 1936, satire de la société industrielle.",
     "hint": "Associe l'œuvre ou le mouvement à son auteur et à son époque."
   },
   {
@@ -537,7 +537,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Guy de Maupassant"
     ],
     "correct": 0,
-    "why": "Émile Zola est la bonne réponse. Ce repère s'inscrit dans l'histoire des œuvres et des créateurs.",
+    "why": "Émile Zola publie Germinal en 1885, roman consacré à une communauté de mineurs.",
     "hint": "Associe l'œuvre ou le mouvement à son auteur et à son époque."
   },
   {
@@ -552,7 +552,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Le surréalisme"
     ],
     "correct": 0,
-    "why": "L'impressionnisme est la bonne réponse. Ce repère s'inscrit dans l'histoire des œuvres et des créateurs.",
+    "why": "Claude Monet est une figure majeure de l'impressionnisme, dont le nom est lié à son tableau Impression, soleil levant.",
     "hint": "Associe l'œuvre ou le mouvement à son auteur et à son époque."
   },
   {
@@ -567,7 +567,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Frank Gehry"
     ],
     "correct": 0,
-    "why": "Antoni Gaudí est la bonne réponse. Ce repère s'inscrit dans l'histoire des œuvres et des créateurs.",
+    "why": "Antoni Gaudí reprend le chantier de la Sagrada Família en 1883 et transforme le projet dans un style moderniste.",
     "hint": "Associe l'œuvre ou le mouvement à son auteur et à son époque."
   },
   {
@@ -582,7 +582,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Pierre Corneille"
     ],
     "correct": 0,
-    "why": "Edmond Rostand est la bonne réponse. Ce repère s'inscrit dans l'histoire des œuvres et des créateurs.",
+    "why": "Edmond Rostand écrit Cyrano de Bergerac, pièce créée en 1897.",
     "hint": "Associe l'œuvre ou le mouvement à son auteur et à son époque."
   },
   {
@@ -597,7 +597,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Le plomb"
     ],
     "correct": 0,
-    "why": "Le mercure est la bonne réponse. La distinction dépend des caractéristiques réelles du phénomène.",
+    "why": "Le mercure est un métal liquide à température ambiante, historiquement employé dans les thermomètres.",
     "hint": "Méfie-toi des idées reçues : compare soigneusement les quatre propositions."
   },
   {
@@ -612,7 +612,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "La méduse"
     ],
     "correct": 0,
-    "why": "La seiche est la bonne réponse. La distinction dépend des caractéristiques réelles du phénomène.",
+    "why": "La seiche, comme les autres céphalopodes, possède trois cœurs : deux branchiaux et un systémique.",
     "hint": "Méfie-toi des idées reçues : compare soigneusement les quatre propositions."
   },
   {
@@ -627,7 +627,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Le téléphone mobile"
     ],
     "correct": 0,
-    "why": "Le télécopieur est la bonne réponse. La distinction dépend des caractéristiques réelles du phénomène.",
+    "why": "Alexander Bain dépose en 1843 un brevet concernant un système de transmission électrique d'images, ancêtre du fax.",
     "hint": "Méfie-toi des idées reçues : compare soigneusement les quatre propositions."
   },
   {
@@ -642,7 +642,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Une algue brune"
     ],
     "correct": 0,
-    "why": "La levure est la bonne réponse. La distinction dépend des caractéristiques réelles du phénomène.",
+    "why": "La levure de boulanger est un champignon unicellulaire produisant du dioxyde de carbone durant la fermentation.",
     "hint": "Méfie-toi des idées reçues : compare soigneusement les quatre propositions."
   },
   {
@@ -657,7 +657,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "La mûre"
     ],
     "correct": 0,
-    "why": "La banane est la bonne réponse. La distinction dépend des caractéristiques réelles du phénomène.",
+    "why": "En classification botanique, la banane est une baie, contrairement à la fraise, qui est un faux-fruit.",
     "hint": "Méfie-toi des idées reçues : compare soigneusement les quatre propositions."
   },
   {
@@ -672,7 +672,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Vénus cache le Soleil"
     ],
     "correct": 0,
-    "why": "La Terre se trouve entre le Soleil et la Lune est la bonne réponse. La distinction dépend des caractéristiques réelles du phénomène.",
+    "why": "Une éclipse lunaire se produit lorsque la Terre projette son ombre sur la Lune.",
     "hint": "Méfie-toi des idées reçues : compare soigneusement les quatre propositions."
   },
   {
@@ -687,7 +687,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "L'iguane marin"
     ],
     "correct": 0,
-    "why": "Le caméléon est la bonne réponse. La distinction dépend des caractéristiques réelles du phénomène.",
+    "why": "Les caméléons capturent certaines proies grâce à une langue projetée très rapidement.",
     "hint": "Méfie-toi des idées reçues : compare soigneusement les quatre propositions."
   },
   {
@@ -702,7 +702,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "L'étain"
     ],
     "correct": 0,
-    "why": "Le graphite est la bonne réponse. La distinction dépend des caractéristiques réelles du phénomène.",
+    "why": "Le cœur de la mine d'un crayon moderne est fait d'un mélange de graphite et d'argile.",
     "hint": "Méfie-toi des idées reçues : compare soigneusement les quatre propositions."
   },
   {
@@ -717,7 +717,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "La loutre de mer"
     ],
     "correct": 0,
-    "why": "Le dauphin est la bonne réponse. La distinction dépend des caractéristiques réelles du phénomène.",
+    "why": "Les dauphins peuvent dormir d'un seul hémisphère cérébral à la fois, ce qui permet de maintenir une vigilance partielle.",
     "hint": "Méfie-toi des idées reçues : compare soigneusement les quatre propositions."
   },
   {
@@ -732,7 +732,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "La kératine"
     ],
     "correct": 0,
-    "why": "La chlorophylle est la bonne réponse. La distinction dépend des caractéristiques réelles du phénomène.",
+    "why": "La chlorophylle absorbe une partie de la lumière et donne aux feuilles leur couleur verte.",
     "hint": "Méfie-toi des idées reçues : compare soigneusement les quatre propositions."
   }
 ];
