@@ -1625,7 +1625,489 @@
     "why":"Certains tardigrades peuvent survivre à des conditions extrêmes lorsqu'ils entrent dans un état de dormance."
   }
 ];
-    const questions = [...originalQuestions, ...nouvellesQuestions];
+    // Questions V2 : formats complémentaires, conservés séparément des 115 QCM historiques.
+    const formatsQuestions = [
+      {
+        "type": "true_false",
+        "cat": "histoire",
+        "level": "facile",
+        "q": "La Première Guerre mondiale commence en 1914.",
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 0,
+        "why": "Le conflit débute à l'été 1914, après la crise provoquée par l'assassinat de François-Ferdinand. Il s'achève en novembre 1918.",
+        "hint": "Replace cette guerre parmi les grands conflits du début du XXe siècle."
+      },
+      {
+        "type": "multi_select",
+        "cat": "histoire",
+        "level": "facile",
+        "q": "Quels événements se déroulent au XVIIIe siècle ?",
+        "a": [
+          "La prise de la Bastille",
+          "Le sacre de Napoléon Ier",
+          "La Déclaration d'indépendance des États-Unis",
+          "La bataille de Waterloo"
+        ],
+        "correct": [
+          0,
+          2
+        ],
+        "why": "La Bastille est prise en 1789 et la Déclaration d'indépendance américaine date de 1776. Le sacre de Napoléon a lieu en 1804 et Waterloo en 1815.",
+        "hint": "Le XVIIIe siècle correspond aux années 1701 à 1800."
+      },
+      {
+        "type": "true_false",
+        "cat": "histoire",
+        "level": "intermediaire",
+        "q": "La guerre de Cent Ans oppose principalement les royaumes de France et d'Angleterre.",
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 0,
+        "why": "De 1337 à 1453, les couronnes française et anglaise s'affrontent dans une succession de conflits, avec des alliances variables.",
+        "hint": "Souviens-toi des deux grandes monarchies rivales de l'Europe occidentale médiévale."
+      },
+      {
+        "type": "multi_select",
+        "cat": "histoire",
+        "level": "intermediaire",
+        "q": "Quels souverains ont régné sur la France pendant au moins une partie du XVIe siècle ?",
+        "a": [
+          "François Ier",
+          "Henri II",
+          "Henri IV",
+          "Louis XIII"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "François Ier règne de 1515 à 1547, Henri II de 1547 à 1559 et Henri IV de 1589 à 1610. Louis XIII monte sur le trône en 1610.",
+        "hint": "Pour chaque souverain, situe le début ou la fin de son règne par rapport à l'année 1600."
+      },
+      {
+        "type": "true_false",
+        "cat": "histoire",
+        "level": "expert",
+        "q": "La paix d'Augsbourg de 1555 garantit la liberté de religion individuelle à tous les habitants du Saint-Empire.",
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 1,
+        "why": "La paix d'Augsbourg reconnaît le droit de certains princes de choisir entre catholicisme et luthéranisme pour leur territoire ; elle n'établit pas une liberté religieuse individuelle générale.",
+        "hint": "Distingue le pouvoir du prince sur la confession de son territoire et les droits personnels des sujets."
+      },
+      {
+        "type": "multi_select",
+        "cat": "histoire",
+        "level": "expert",
+        "q": "Quelles institutions existaient dans la République romaine avant l'établissement du principat d'Auguste ?",
+        "a": [
+          "Le Sénat",
+          "Le consulat",
+          "Le tribunat de la plèbe",
+          "La préfecture du prétoire impérienne"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "Le Sénat, les consuls et les tribuns de la plèbe appartiennent à la vie politique républicaine. La préfecture du prétoire, dans sa forme impériale, apparaît sous Auguste.",
+        "hint": "Distingue les magistratures républicaines des charges créées ou réorganisées sous le principat."
+      },
+      {
+        "type": "true_false",
+        "cat": "geographie",
+        "level": "facile",
+        "q": "L'équateur traverse le continent africain.",
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 0,
+        "why": "L'équateur traverse notamment le Gabon, le Congo, la République démocratique du Congo, l'Ouganda, le Kenya et la Somalie.",
+        "hint": "L'équateur traverse plusieurs continents et océans : visualise son parcours sur un globe."
+      },
+      {
+        "type": "multi_select",
+        "cat": "geographie",
+        "level": "facile",
+        "q": "Quels pays se trouvent en Amérique du Sud ?",
+        "a": [
+          "La Colombie",
+          "Le Pérou",
+          "Le Portugal",
+          "L'Uruguay"
+        ],
+        "correct": [
+          0,
+          1,
+          3
+        ],
+        "why": "La Colombie, le Pérou et l'Uruguay sont sud-américains. Le Portugal se trouve en Europe, même s'il partage sa langue avec le Brésil.",
+        "hint": "Repère le continent de chaque pays, pas simplement la langue qui y est parlée."
+      },
+      {
+        "type": "true_false",
+        "cat": "geographie",
+        "level": "intermediaire",
+        "q": "Le canal de Suez relie directement la mer Méditerranée à la mer Noire.",
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 1,
+        "why": "Le canal de Suez relie la Méditerranée à la mer Rouge, en Égypte. La mer Noire communique avec la Méditerranée par les détroits turcs.",
+        "hint": "Pense aux deux mers qui permettent d'éviter le contournement de l'Afrique."
+      },
+      {
+        "type": "multi_select",
+        "cat": "geographie",
+        "level": "intermediaire",
+        "q": "Quels pays possèdent un littoral sur la mer Baltique ?",
+        "a": [
+          "L'Estonie",
+          "La Finlande",
+          "La Pologne",
+          "La Norvège"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "L'Estonie, la Finlande et la Pologne bordent la mer Baltique. La Norvège possède un littoral sur les mers du Nord, de Norvège et de Barents, mais pas sur la Baltique.",
+        "hint": "Ne confonds pas les États nordiques et les pays réellement riverains de cette mer."
+      },
+      {
+        "type": "true_false",
+        "cat": "geographie",
+        "level": "expert",
+        "q": "Le Lesotho possède un accès direct à l'océan Indien.",
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 1,
+        "why": "Le Lesotho est un État enclavé, entièrement entouré par l'Afrique du Sud : il n'a pas de littoral.",
+        "hint": "Vérifie si ses frontières terrestres permettent d'atteindre directement la côte."
+      },
+      {
+        "type": "multi_select",
+        "cat": "geographie",
+        "level": "expert",
+        "q": "Quels États ont une frontière terrestre avec l'Iran ?",
+        "a": [
+          "L'Azerbaïdjan",
+          "L'Afghanistan",
+          "Le Turkménistan",
+          "Oman"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "L'Iran a des frontières terrestres avec l'Azerbaïdjan, l'Afghanistan et le Turkménistan. Oman en est séparé par les eaux du détroit d'Ormuz et du golfe d'Oman.",
+        "hint": "Une proximité maritime ne constitue pas une frontière terrestre."
+      },
+      {
+        "type": "true_false",
+        "cat": "sciences",
+        "level": "facile",
+        "q": "Une araignée possède six pattes.",
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 1,
+        "why": "Les araignées adultes sont des arachnides à huit pattes ; les insectes adultes possèdent six pattes.",
+        "hint": "Compare les principaux caractères anatomiques des insectes et des arachnides."
+      },
+      {
+        "type": "multi_select",
+        "cat": "sciences",
+        "level": "facile",
+        "q": "Quels objets appartiennent au Système solaire ?",
+        "a": [
+          "Mars",
+          "Titan",
+          "Saturne",
+          "Sirius"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "Mars et Saturne sont des planètes du Système solaire ; Titan est une lune de Saturne. Sirius est une étoile extérieure au Système solaire.",
+        "hint": "Une lune d'une planète appartient également au système de son étoile."
+      },
+      {
+        "type": "true_false",
+        "cat": "sciences",
+        "level": "intermediaire",
+        "q": "Le numéro atomique de l'oxygène est 8.",
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 0,
+        "why": "Le noyau d'un atome d'oxygène possède huit protons, ce qui définit son numéro atomique 8.",
+        "hint": "Le numéro atomique correspond au nombre de protons du noyau."
+      },
+      {
+        "type": "multi_select",
+        "cat": "sciences",
+        "level": "intermediaire",
+        "q": "Quels éléments chimiques sont des gaz nobles dans les conditions ordinaires ?",
+        "a": [
+          "L'hélium",
+          "Le néon",
+          "L'argon",
+          "L'azote"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "L'hélium, le néon et l'argon appartiennent à la colonne des gaz nobles. L'azote est un gaz majoritaire de l'air, mais ce n'est pas un gaz noble.",
+        "hint": "Pense à une même famille du tableau périodique plutôt qu'aux gaz les plus répandus."
+      },
+      {
+        "type": "true_false",
+        "cat": "sciences",
+        "level": "expert",
+        "q": "Dans l'ADN à double brin, l'adénine s'apparie normalement avec la cytosine.",
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 1,
+        "why": "Dans l'ADN, l'adénine s'apparie normalement avec la thymine, tandis que la cytosine s'apparie avec la guanine.",
+        "hint": "Rappelle-toi les deux paires complémentaires de bases dans la double hélice."
+      },
+      {
+        "type": "multi_select",
+        "cat": "sciences",
+        "level": "expert",
+        "q": "Quelles affirmations sont compatibles avec la sélection naturelle en biologie évolutive ?",
+        "a": [
+          "Des variations héréditaires peuvent influencer la reproduction",
+          "L'environnement peut modifier les pressions de sélection",
+          "Tous les caractères acquis pendant la vie sont hérités",
+          "La fréquence de certains caractères peut évoluer entre générations"
+        ],
+        "correct": [
+          0,
+          1,
+          3
+        ],
+        "why": "La variation héréditaire, les succès reproducteurs différents et l'évolution des fréquences de caractères sont centraux dans la sélection naturelle. La transmission systématique de tous les caractères acquis n'en découle pas.",
+        "hint": "Distingue les variations transmissibles des transformations vécues seulement par un individu."
+      },
+      {
+        "type": "true_false",
+        "cat": "arts",
+        "level": "facile",
+        "q": "Victor Hugo est l'auteur du roman Notre-Dame de Paris.",
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 0,
+        "why": "Victor Hugo publie Notre-Dame de Paris en 1831. Le roman met notamment en scène Esmeralda et Quasimodo.",
+        "hint": "Le roman appartient au mouvement romantique français du XIXe siècle."
+      },
+      {
+        "type": "multi_select",
+        "cat": "arts",
+        "level": "facile",
+        "q": "Quels instruments appartiennent à la famille des cordes ?",
+        "a": [
+          "Le violon",
+          "Le violoncelle",
+          "La harpe",
+          "La trompette"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "Le violon, le violoncelle et la harpe produisent leurs sons grâce à des cordes vibrantes. La trompette est un instrument à vent de la famille des cuivres.",
+        "hint": "Identifie la partie de l'instrument qui vibre pour produire le son."
+      },
+      {
+        "type": "true_false",
+        "cat": "arts",
+        "level": "intermediaire",
+        "q": "Le cubisme apparaît avant l'impressionnisme.",
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 1,
+        "why": "L'impressionnisme se développe dans la seconde moitié du XIXe siècle, tandis que le cubisme apparaît au début du XXe siècle, notamment avec Picasso et Braque.",
+        "hint": "Classe ces mouvements selon les transformations picturales des XIXe et XXe siècles."
+      },
+      {
+        "type": "multi_select",
+        "cat": "arts",
+        "level": "intermediaire",
+        "q": "Quelles pièces ont été écrites par Molière ?",
+        "a": [
+          "Le Misanthrope",
+          "L'Avare",
+          "Tartuffe",
+          "Le Cid"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "Le Misanthrope, L'Avare et Tartuffe sont des comédies de Molière. Le Cid est une pièce de Pierre Corneille.",
+        "hint": "Distingue les grands dramaturges français du XVIIe siècle."
+      },
+      {
+        "type": "true_false",
+        "cat": "arts",
+        "level": "expert",
+        "q": "L'école du Bauhaus est fondée en France en 1919.",
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 1,
+        "why": "Walter Gropius fonde le Bauhaus à Weimar, en Allemagne, en 1919. Cette école marquera le design, l'architecture et les arts appliqués.",
+        "hint": "Souviens-toi des grands foyers européens du modernisme après 1918."
+      },
+      {
+        "type": "multi_select",
+        "cat": "arts",
+        "level": "expert",
+        "q": "Quelles pièces sont des tragédies de Jean Racine ?",
+        "a": [
+          "Phèdre",
+          "Andromaque",
+          "Britannicus",
+          "Le Cid"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "Phèdre, Andromaque et Britannicus sont des tragédies de Racine. Le Cid est une pièce de Corneille, longtemps qualifiée de tragi-comédie.",
+        "hint": "Identifie les auteurs et leurs grands cycles tragiques au XVIIe siècle."
+      },
+      {
+        "type": "true_false",
+        "cat": "insolite",
+        "level": "facile",
+        "q": "Le miel est fabriqué par les abeilles à partir de substances sucrées récoltées, notamment le nectar.",
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 0,
+        "why": "Les abeilles transforment notamment le nectar des fleurs grâce à des enzymes et à une réduction de sa teneur en eau pour produire du miel.",
+        "hint": "Pense au travail des insectes pollinisateurs après leur visite des fleurs."
+      },
+      {
+        "type": "multi_select",
+        "cat": "insolite",
+        "level": "facile",
+        "q": "Quels animaux pondent des œufs ?",
+        "a": [
+          "La tortue",
+          "L'autruche",
+          "L'ornithorynque",
+          "Le dauphin"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "Les tortues, les autruches et les ornithorynques pondent des œufs. Le dauphin est un mammifère vivipare.",
+        "hint": "Certains mammifères constituent des exceptions intéressantes."
+      },
+      {
+        "type": "true_false",
+        "cat": "insolite",
+        "level": "intermediaire",
+        "q": "Les poulpes possèdent un squelette interne composé d'os.",
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 1,
+        "why": "Les poulpes ont un corps mou sans squelette osseux interne. Leur bec est une structure dure, mais ce n'est pas un os.",
+        "hint": "Ne confonds pas la présence de parties dures avec un squelette osseux."
+      },
+      {
+        "type": "multi_select",
+        "cat": "insolite",
+        "level": "intermediaire",
+        "q": "Quelles techniques ou inventions existaient déjà au XIXe siècle ?",
+        "a": [
+          "La photographie",
+          "Le télégraphe électrique",
+          "Le téléphone",
+          "Le micro-ordinateur personnel"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "La photographie, le télégraphe électrique et le téléphone se développent au XIXe siècle. Les micro-ordinateurs personnels se diffusent au XXe siècle.",
+        "hint": "Plusieurs technologies de communication précèdent largement l'informatique individuelle."
+      },
+      {
+        "type": "true_false",
+        "cat": "insolite",
+        "level": "expert",
+        "q": "La machine d'Anticythère a été découverte dans une épave de la mer Égée au début du XXe siècle.",
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 0,
+        "why": "Le mécanisme est découvert en 1901 parmi les vestiges d'une épave près de l'île grecque d'Anticythère. Il permettait de calculer des cycles astronomiques.",
+        "hint": "Sépare l'époque de fabrication d'un objet antique de la date de sa découverte moderne."
+      },
+      {
+        "type": "multi_select",
+        "cat": "insolite",
+        "level": "expert",
+        "q": "Quels éléments caractérisent l'écriture cunéiforme de la Mésopotamie ancienne ?",
+        "a": [
+          "Des tablettes d'argile",
+          "Un stylet souvent en roseau",
+          "Des empreintes en forme de coins",
+          "L'alphabet latin comme système principal"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "Les scribes mésopotamiens inscrivaient souvent des signes en forme de coins avec un stylet sur des tablettes d'argile. L'alphabet latin n'est pas le système du cunéiforme.",
+        "hint": "Distingue le support matériel, l'outil et la forme des signes de leur langue."
+      }
+    ];
+    const questions = [...originalQuestions, ...nouvellesQuestions, ...formatsQuestions];
     document.getElementById('quiz-total').textContent = questions.length + ' questions pour jouer';
 
     const labels = {mix:'✦ Un peu de tout',histoire:'🏛️ Histoire',geographie:'🌍 Géographie',sciences:'🔬 Sciences',arts:'🎨 Arts & culture',insolite:'✨ Insolite'};
