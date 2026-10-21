@@ -343,6 +343,7 @@
       tab.setAttribute('tabindex',i===index?'0':'-1');
     });
     stagePanels.forEach(panel=>{panel.hidden=panel.dataset.irPanel!==key;});
+    root.querySelector('#archive-supplement-roubaix').hidden=key!=='archives';
     root.querySelector('#ir-step-counter').textContent=(index+1)+' / '+stages.length;
     root.querySelector('#ir-step-hint').textContent=stages[index].label;
     previous.disabled=index===0;
