@@ -2236,7 +2236,7 @@
     };
     const $=id=>document.getElementById(id);
     const screens=['screen-intro','screen-question','screen-result'];
-    let selectedCategory='mix',selectedLevel='facile',round=[],index=0,score=0,answered=false,attempts=[],streak=0,bestStreak=0,selectedAnswers=new Set(),gameMode='classic',gameDay='';
+    let selectedCategory='mix',selectedLevel='facile',round=[],index=0,score=0,answered=false,attempts=[],streak=0,bestStreak=0,selectedAnswers=new Set(),gameMode='classic',gameDay='',roundFinished=false;
     const show=id=>screens.forEach(name=>$(name).classList.toggle('hidden',name!==id));
     function shuffle(arr){const copy=[...arr];for(let i=copy.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]];}return copy;}
     const storageKey='thot_v2_stats';
@@ -2384,7 +2384,7 @@
     function startDaily(){
       const day=utcDay();
       if(stats.daily.lastCompleted===day){refreshDaily();return;}
-      gameMode='daily';gameDay=day;round=dailyQuestions(day);index=0;score=0;answered=false;attempts=[];streak=0;bestStreak=0;
+      gameMode='daily';gameDay=day;round=dailyQuestions(day);index=0;score=0;answered=false;roundFinished=false;attempts=[];streak=0;bestStreak=0;
       $('review-panel').classList.add('hidden');$('review-button').setAttribute('aria-expanded','false');
       show('screen-question');renderQuestion();
       const first=$('answer-list').querySelector('button');if(first)first.focus({preventScroll:true});
@@ -2433,7 +2433,7 @@
     function begin(){
       const pool=questions.filter(q=>q.level===selectedLevel&&(selectedCategory==='mix'||q.cat===selectedCategory));
       if(pool.length<5){alert('Pas assez de questions dans ce thème.');return;}
-      gameMode='classic';gameDay='';round=chooseRound(pool,5);index=0;score=0;answered=false;attempts=[];streak=0;bestStreak=0;
+      gameMode='classic';gameDay='';round=chooseRound(pool,5);index=0;score=0;answered=false;roundFinished=false;attempts=[];streak=0;bestStreak=0;
       $('review-panel').classList.add('hidden');$('review-button').setAttribute('aria-expanded','false');
       show('screen-question');renderQuestion();
       const first=$('answer-list').querySelector('button');if(first)first.focus({preventScroll:true});
@@ -2507,7 +2507,7 @@
       if(willOpen)panel.textContent=round[index].hint||'Prends le temps de comparer les propositions et de repérer ce que demande exactement la question.';
     }
     function submitAnswer(chosen){
-      if(answered)return;
+      if(answered||roundFinished)return;
       const item=round[index],type=questionType(item);
       const picks=Array.isArray(chosen)?[...new Set(chosen)].sort((a,b)=>a-b):[chosen];
       if(type==='multi_select'&&picks.length===0)return;
@@ -2541,12 +2541,15 @@
       $('next-button').focus({preventScroll:true});
     }
     function next(){
-      if(!answered)return;
+      if(!answered||roundFinished)return;
       index++;
       if(index>=round.length){finish();$('result-title').focus({preventScroll:true});}
       else {renderQuestion();const first=$('answer-list').querySelector('button');if(first)first.focus({preventScroll:true});}
     }
     function finish(){
+      if(roundFinished)return;
+      if(gameMode==='daily'&&stats.daily.lastCompleted===gameDay){roundFinished=true;return;}
+      roundFinished=true;
       const priorBadges=new Set(unlockedBadgeIds());
       const priorLevel=currentLevel(stats.progression.xp).active.name;
       stats.games++;
@@ -2555,7 +2558,6 @@
       const best=stats.bests[bestKey()];
       if(typeof best!=='number'||score>best)stats.bests[bestKey()]=score;
       let earnedXP=score*10+5+(score===round.length?10:0),missionXP=0;
-      if(gameMode==='daily'&&stats.daily.lastCompleted===gameDay)return;
       const today=utcDay();
       if(gameMode!=='daily'||gameDay===today){
         if(stats.daily.day!==today){stats.daily.day=today;stats.daily.games=0;stats.daily.correct=0;stats.daily.claimed=[];}
@@ -2613,6 +2615,7 @@
     document.querySelectorAll('[data-level]').forEach(button=>button.addEventListener('click',()=>setLevel(button.dataset.level)));
     $('start-button').addEventListener('click',begin);
     $('daily-start-button').addEventListener('click',startDaily);
+    document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshDaily();});
     $('badges-button').addEventListener('click',()=>{
       const panel=$('badges-panel'),open=panel.classList.contains('hidden');
       panel.classList.toggle('hidden',!open);
