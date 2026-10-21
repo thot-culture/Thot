@@ -35,20 +35,29 @@
 
         <!-- Module THOT : les sources ci-dessous sont interprétées sans transformer les notices en citations du document. -->
         <section class="ir" id="explorer-roubaix" aria-labelledby="ir-title">
-          <div class="ir-intro">
-            <p class="ir-eyebrow">THOT · LABORATOIRE D'HISTOIRE</p>
-            <h2 id="ir-title">Explorez les archives de Roubaix</h2>
-            <p>Quatre façons d'entrer dans les sources : suivre les dates, lire une notice, explorer des affiches numérisées et situer une rue sur une carte actuelle. Chaque module renvoie aux références de l'article.</p>
-            <nav aria-label="Modules interactifs" class="ir-shortcuts">
-              <a href="#frise-roubaix">01 · Chronologie</a>
-              <a href="#archive-roubaix">02 · Archive annotée</a>
-              <a href="#carte-roubaix">03 · Carte de repérage</a><a href="#originaux-roubaix">04 · Documents originaux</a>
-            </nav>
+          <header class="ir-intro">
+            <p class="ir-eyebrow">THOT · HISTOIRE INTERACTIVE</p>
+            <h2 id="ir-title">Explorer Roubaix en 1917</h2>
+            <p>Trois étapes pour comprendre l'occupation : une chronologie, des documents d'époque et une carte. Avancez à votre rythme, les sources restent accessibles à chaque étape.</p>
+          </header>
+          <div class="ir-stage-navigation">
+            <div class="ir-stage-heading"><span>LE PARCOURS</span><strong id="ir-step-counter">1 / 3</strong></div>
+            <div class="ir-tabs" role="tablist" aria-label="Parcours de découverte des archives de Roubaix">
+              <button type="button" class="ir-tab" role="tab" id="ir-tab-chronologie" aria-controls="frise-roubaix" aria-selected="true" tabindex="0" data-ir-tab="chronologie">
+                <span class="ir-tab-number">01</span><span class="ir-tab-copy"><strong>Comprendre</strong><small>Les dates clés</small></span>
+              </button>
+              <button type="button" class="ir-tab" role="tab" id="ir-tab-archives" aria-controls="originaux-roubaix" aria-selected="false" tabindex="-1" data-ir-tab="archives">
+                <span class="ir-tab-number">02</span><span class="ir-tab-copy"><strong>Examiner</strong><small>Les affiches originales</small></span>
+              </button>
+              <button type="button" class="ir-tab" role="tab" id="ir-tab-carte" aria-controls="carte-roubaix" aria-selected="false" tabindex="-1" data-ir-tab="carte">
+                <span class="ir-tab-number">03</span><span class="ir-tab-copy"><strong>Se repérer</strong><small>La carte actuelle</small></span>
+              </button>
+            </div>
           </div>
-
-          <section id="frise-roubaix" class="ir-module" aria-labelledby="ir-timeline-heading">
+          <div class="ir-panel-stack">
+          <section id="frise-roubaix" class="ir-module ir-panel" data-ir-panel="chronologie" role="tabpanel" aria-labelledby="ir-tab-chronologie" tabindex="0">
             <div class="ir-heading"><span class="ir-count">01</span><div><p class="ir-overline">REPÈRES DOCUMENTAIRES</p><h3 id="ir-timeline-heading">1914–1918 : huit étapes à explorer</h3></div></div>
-            <p class="ir-guidance">Sélectionnez une date pour découvrir ce qu'une source établit — et ce qu'elle ne permet pas d'affirmer.</p>
+            <p class="ir-guidance">Choisissez une date. Pour chaque événement, découvrez ce que dit la source et ce qu’elle ne permet pas de conclure.</p>
             <div class="ir-dates" role="group" aria-label="Dates à explorer"><button type="button" data-date-index="0" aria-pressed="true" aria-label="Événement du Automne 1914"><span class="ir-time-label">1914</span></button>
               <button type="button" data-date-index="1" aria-pressed="false" aria-label="Événement du 13 janvier 1917"><span class="ir-time-label">13 jan.</span></button>
               <button type="button" data-date-index="2" aria-pressed="false" aria-label="Événement du 5 mars 1917"><span class="ir-time-label">5 mars</span></button>
@@ -66,38 +75,9 @@
             </div>
           </section>
 
-          <section id="archive-roubaix" class="ir-module" aria-labelledby="ir-archive-heading">
-            <div class="ir-heading"><span class="ir-count">02</span><div><p class="ir-overline">LIRE UNE PIÈCE D'ARCHIVES</p><h3 id="ir-archive-heading">Que révèle une affiche de juillet 1917 ?</h3></div></div>
-            <p class="ir-guidance">Explorez les quatre informations de la notice <strong>AFF_001_D_0685</strong>, « Revues d'appel », datée du 1er juillet 1917 <a href="#ref2" class="ir-inline-source">[2]</a>.</p>
-            <div class="ir-archive-grid">
-              <div class="ir-document" aria-label="Fiche de lecture synthétique, non reproduction de l'affiche originale">
-                <p class="ir-document-label">FICHE DE LECTURE · PAS UN FAC-SIMILÉ</p>
-                <div class="ir-document-head"><span>ARCHIVES MUNICIPALES DE ROUBAIX</span><strong>AFF_001_D_0685</strong></div>
-                <div class="ir-document-title">Revues d'appel</div>
-                <p class="ir-document-help">Cliquez sur une rubrique pour en comprendre le sens historique.</p>
-                <div class="ir-document-hotspots" role="group" aria-label="Rubriques à annoter">
-                  <button type="button" data-archive-note="nature" aria-pressed="true"><span class="ir-hotspot-number">01</span><span>Nature et signataire</span><span aria-hidden="true">↗</span></button>
-                  <button type="button" data-archive-note="date" aria-pressed="false"><span class="ir-hotspot-number">02</span><span>Date de l'affiche</span><span aria-hidden="true">↗</span></button>
-                  <button type="button" data-archive-note="public" aria-pressed="false"><span class="ir-hotspot-number">03</span><span>Personnes visées</span><span aria-hidden="true">↗</span></button>
-                  <button type="button" data-archive-note="lieu" aria-pressed="false"><span class="ir-hotspot-number">04</span><span>Lieu et calendrier</span><span aria-hidden="true">↗</span></button>
-                </div>
-                <p class="ir-document-bottom">Informations résumées d'après la notice citée dans l'article. Aucun texte original n'est reconstitué.</p>
-              </div>
-              <div class="ir-archive-note" role="region" aria-live="polite" aria-atomic="true" aria-label="Analyse de la rubrique d'archive sélectionnée">
-                <p class="ir-overline">CE QUE L'ON PEUT DIRE</p>
-                <h4 id="archive-note-title">Nature et auteur</h4>
-                <strong id="archive-note-field">Affiche administrative</strong>
-                <p id="archive-note-value">Signée par le commandant Lehmeyer.</p>
-                <div class="ir-interpretation"><strong>Regard de l'historien</strong><p id="archive-note-analysis">Elle rend public un ordre de l'autorité occupante.</p></div>
-                <a href="#ref2" class="ir-ref">Consulter la référence archivistique [2]</a>
-              </div>
-            </div>
-            <p class="ir-original-link">Voir aussi <a href="https://www.armarium-hautsdefrance.fr/document/85546" target="_blank" rel="noopener noreferrer">une autre affiche de Roubaix numérisée, sur la récolte de 1917 (AFF_001_D_0694) ↗</a> : il s'agit d'<strong>un document différent</strong> de celui étudié ci-dessus <a href="#ref6">[6]</a>.</p>
-          </section>
-
-          <section id="originaux-roubaix" class="ir-module ir-originals" aria-labelledby="originals-title">
-            <div class="ir-heading"><span class="ir-count">04</span><div><p class="ir-overline">SOURCES PRIMAIRES · DOCUMENTS NUMÉRISÉS</p><h3 id="originals-title">Explorer trois véritables affiches de 1917</h3></div></div>
-            <p class="ir-guidance">Ces trois affiches sont conservées par les Archives municipales de Roubaix et consultables sur <a href="https://www.armarium-hautsdefrance.fr/" target="_blank" rel="noopener noreferrer">L’Armarium</a>. Sélectionnez une archive, puis une annotation pour comprendre ce que décrit sa notice officielle. Les images ne sont <strong>pas copiées sur THOT</strong> : droits de reproduction non confirmés. Les annotations ne sont pas des transcriptions intégrales.</p>
+          <section id="originaux-roubaix" class="ir-module ir-originals ir-panel" data-ir-panel="archives" role="tabpanel" aria-labelledby="ir-tab-archives" tabindex="0">
+            <div class="ir-heading"><span class="ir-count">02</span><div><p class="ir-overline">SOURCES PRIMAIRES · DOCUMENTS NUMÉRISÉS</p><h3 id="originals-title">Trois affiches authentiques à explorer</h3></div></div>
+            <p class="ir-guidance">Choisissez un document : son contexte et quatre points d’analyse apparaîtront ci-dessous. Les originaux sont conservés par les Archives municipales de Roubaix et consultables sur <a href="https://www.armarium-hautsdefrance.fr/" target="_blank" rel="noopener noreferrer">L’Armarium</a>. Sélectionnez une archive, puis une annotation pour comprendre ce que décrit sa notice officielle. Les images ne sont <strong>pas copiées sur THOT</strong> : droits de reproduction non confirmés. Les annotations ne sont pas des transcriptions intégrales.</p>
             <div class="ir-original-select" role="group" aria-label="Choisir l'affiche d'archives à explorer">
               <button type="button" data-original-document="recolte" aria-pressed="true"><strong>Récolte de 1917</strong><span>AFF_001_D_0694</span></button>
               <button type="button" data-original-document="travail" aria-pressed="false"><strong>Refus de travail</strong><span>AFF_001_D_0695</span></button>
@@ -132,9 +112,43 @@
             <p class="ir-documentary-precision">Les trois fiches présentent des <strong>pièces distinctes</strong> de celles étudiées pour la convocation de juillet 1917, le recrutement de mars et l'avis de départ de décembre. <a id="original-source-reference" href="#ref6">Lire le contexte documentaire dans l'article ↗</a>. Provenance et numérisations : Archives municipales de Roubaix / L’Armarium. La date, la signature, la description et les dimensions proviennent des notices des documents liés ; l'interprétation constitue un commentaire éditorial de THOT.</p>
           </section>
 
-          <section id="carte-roubaix" class="ir-module" aria-labelledby="ir-map-heading">
+          <details id="archive-supplement-roubaix" class="ir-archive-more">
+            <summary><span>Pour aller plus loin</span><strong>Décrypter la convocation du 1er juillet 1917</strong><span aria-hidden="true">⌄</span></summary>
+            <div class="ir-archive-more-body">
+<section id="archive-roubaix" class="ir-module ir-legacy-archive" aria-labelledby="ir-archive-heading">
+            <div class="ir-heading"><span class="ir-count">↳</span><div><p class="ir-overline">LIRE UNE PIÈCE D'ARCHIVES</p><h3 id="ir-archive-heading">La convocation du 1er juillet 1917</h3></div></div>
+            <p class="ir-guidance">Explorez les quatre informations de la notice <strong>AFF_001_D_0685</strong>, « Revues d'appel », datée du 1er juillet 1917 <a href="#ref2" class="ir-inline-source">[2]</a>.</p>
+            <div class="ir-archive-grid">
+              <div class="ir-document" aria-label="Fiche de lecture synthétique, non reproduction de l'affiche originale">
+                <p class="ir-document-label">FICHE DE LECTURE · PAS UN FAC-SIMILÉ</p>
+                <div class="ir-document-head"><span>ARCHIVES MUNICIPALES DE ROUBAIX</span><strong>AFF_001_D_0685</strong></div>
+                <div class="ir-document-title">Revues d'appel</div>
+                <p class="ir-document-help">Cliquez sur une rubrique pour en comprendre le sens historique.</p>
+                <div class="ir-document-hotspots" role="group" aria-label="Rubriques à annoter">
+                  <button type="button" data-archive-note="nature" aria-pressed="true"><span class="ir-hotspot-number">01</span><span>Nature et signataire</span><span aria-hidden="true">↗</span></button>
+                  <button type="button" data-archive-note="date" aria-pressed="false"><span class="ir-hotspot-number">02</span><span>Date de l'affiche</span><span aria-hidden="true">↗</span></button>
+                  <button type="button" data-archive-note="public" aria-pressed="false"><span class="ir-hotspot-number">03</span><span>Personnes visées</span><span aria-hidden="true">↗</span></button>
+                  <button type="button" data-archive-note="lieu" aria-pressed="false"><span class="ir-hotspot-number">04</span><span>Lieu et calendrier</span><span aria-hidden="true">↗</span></button>
+                </div>
+                <p class="ir-document-bottom">Informations résumées d'après la notice citée dans l'article. Aucun texte original n'est reconstitué.</p>
+              </div>
+              <div class="ir-archive-note" role="region" aria-live="polite" aria-atomic="true" aria-label="Analyse de la rubrique d'archive sélectionnée">
+                <p class="ir-overline">CE QUE L'ON PEUT DIRE</p>
+                <h4 id="archive-note-title">Nature et auteur</h4>
+                <strong id="archive-note-field">Affiche administrative</strong>
+                <p id="archive-note-value">Signée par le commandant Lehmeyer.</p>
+                <div class="ir-interpretation"><strong>Regard de l'historien</strong><p id="archive-note-analysis">Elle rend public un ordre de l'autorité occupante.</p></div>
+                <a href="#ref2" class="ir-ref">Consulter la référence archivistique [2]</a>
+              </div>
+            </div>
+            <p class="ir-original-link">Voir aussi <a href="https://www.armarium-hautsdefrance.fr/document/85546" target="_blank" rel="noopener noreferrer">une autre affiche de Roubaix numérisée, sur la récolte de 1917 (AFF_001_D_0694) ↗</a> : il s'agit d'<strong>un document différent</strong> de celui étudié ci-dessus <a href="#ref6">[6]</a>.</p>
+          </section>
+            </div>
+          </details>
+
+          <section id="carte-roubaix" class="ir-module ir-panel" data-ir-panel="carte" role="tabpanel" aria-labelledby="ir-tab-carte" tabindex="0">
             <div class="ir-heading"><span class="ir-count">03</span><div><p class="ir-overline">SE REPÉRER DANS LA VILLE</p><h3 id="ir-map-heading">Roubaix et la rue du Grand-Chemin</h3></div></div>
-            <p class="ir-guidance">La notice des revues d'appel indique <strong>la salle de gymnastique de la rue du Grand-Chemin</strong> <a href="#ref2" class="ir-inline-source">[2]</a>. La rue est repérable aujourd'hui, mais les archives ici citées ne donnent pas l'emplacement exact de la salle en 1917.</p>
+            <p class="ir-guidance">La notice des revues d’appel mentionne <strong>la salle de gymnastique de la rue du Grand-Chemin</strong> <a href="#ref2" class="ir-inline-source">[2]</a>. La rue est repérable aujourd'hui, mais les archives ici citées ne donnent pas l'emplacement exact de la salle en 1917.</p>
             <div class="ir-map-switch" role="group" aria-label="Changer l'échelle de la carte">
               <button type="button" data-map-view="street" aria-pressed="true">Rue du Grand-Chemin</button>
               <button type="button" data-map-view="city" aria-pressed="false">Roubaix dans son ensemble</button>
@@ -152,6 +166,12 @@
             <p class="ir-map-credit">Fond de carte : <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">© contributeurs OpenStreetMap</a>. Repère actuel de la rue : <a href="https://www.cirkwi.com/fr/point-interet/1172597-rue-du-grand-chemin" target="_blank" rel="noopener noreferrer">Office de tourisme de la Métropole Européenne de Lille</a>. <a href="https://www.openstreetmap.org/#map=17/50.6916/3.1669" target="_blank" rel="noopener noreferrer">Ouvrir la carte sur OpenStreetMap ↗</a></p>
             <div class="ir-method"><strong>Attention aux anachronismes.</strong> La carte décrit la ville actuelle, pas le réseau urbain de 1917. Les autres lieux mentionnés dans l'article (atelier d'automobiles, Bureau des réquisitions, points de départ) ne sont pas placés faute d'adresse historique vérifiée.</div>
           </section>
+          </div>
+          <div class="ir-stage-actions" aria-label="Passer d'une étape à l'autre">
+            <button type="button" id="ir-prev" class="ir-nav-prev" disabled>← Précédent</button>
+            <span id="ir-step-hint" aria-live="polite">Les repères historiques</span>
+            <button type="button" id="ir-next" class="ir-nav-next">Explorer les archives →</button>
+          </div>
           <p class="ir-outro">Ces modules sont des outils de lecture : ils complètent le texte, sans remplacer la critique des sources ni les <a href="#sources">références archivistiques</a>.</p>
         </section>
 

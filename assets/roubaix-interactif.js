@@ -322,4 +322,61 @@
     root.querySelector('#roubaix-map-placeholder').hidden = true;
   });
   chooseMap('street');
+
+  // Parcours de lecture : une seule étape visible, navigation souris/clavier.
+  const stages=[
+    {key:'chronologie',label:'Les repères historiques',next:'Explorer les archives →'},
+    {key:'archives',label:'Trois documents originaux',next:'Voir la carte →'},
+    {key:'carte',label:'Se repérer dans Roubaix',next:'Terminer le parcours ✓'}
+  ];
+  const stageTabs=[...root.querySelectorAll('[data-ir-tab]')];
+  const stagePanels=[...root.querySelectorAll('[data-ir-panel]')];
+  const previous=root.querySelector('#ir-prev');
+  const following=root.querySelector('#ir-next');
+  let stageIndex=0;
+  function selectStage(key,moveFocus=false){
+    const index=stages.findIndex(stage=>stage.key===key);
+    if(index<0)return;
+    stageIndex=index;
+    stageTabs.forEach((tab,i)=>{
+      tab.setAttribute('aria-selected',String(i===index));
+      tab.setAttribute('tabindex',i===index?'0':'-1');
+    });
+    stagePanels.forEach(panel=>{panel.hidden=panel.dataset.irPanel!==key;});
+    root.querySelector('#archive-supplement-roubaix').hidden=key!=='archives';
+    root.querySelector('#ir-step-counter').textContent=(index+1)+' / '+stages.length;
+    root.querySelector('#ir-step-hint').textContent=stages[index].label;
+    previous.disabled=index===0;
+    following.hidden=index===stages.length-1;
+    if(index<stages.length-1)following.textContent=stages[index].next;
+    if(moveFocus)stageTabs[index].focus();
+  }
+  stageTabs.forEach((tab,index)=>{
+    tab.addEventListener('click',()=>selectStage(stages[index].key));
+    tab.addEventListener('keydown',event=>{
+      let target;
+      if(event.key==='ArrowRight')target=(index+1)%stages.length;
+      else if(event.key==='ArrowLeft')target=(index+stages.length-1)%stages.length;
+      else if(event.key==='Home')target=0;
+      else if(event.key==='End')target=stages.length-1;
+      if(target===undefined)return;
+      event.preventDefault();
+      selectStage(stages[target].key,true);
+    });
+  });
+  previous.addEventListener('click',()=>selectStage(stages[Math.max(0,stageIndex-1)].key,true));
+  following.addEventListener('click',()=>selectStage(stages[Math.min(stages.length-1,stageIndex+1)].key,true));
+  function synchronizeAnchor(){
+    const hash=decodeURIComponent(window.location.hash.slice(1));
+    if(['archive-roubaix','archive-supplement-roubaix'].includes(hash)){
+      selectStage('archives');
+      root.querySelector('#archive-supplement-roubaix').open=true;
+    }else if(['originaux-roubaix','originals-title'].includes(hash))selectStage('archives');
+    else if(['carte-roubaix','ir-map-heading'].includes(hash))selectStage('carte');
+    else if(['frise-roubaix','ir-timeline-heading'].includes(hash))selectStage('chronologie');
+  }
+  selectStage('chronologie');
+  synchronizeAnchor();
+  window.addEventListener('hashchange',synchronizeAnchor);
+
 })();
