@@ -4,13 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101e2b">
-  <meta name="description" content="THOT, le jeu de culture générale qui transforme cinq minutes de curiosité en petites découvertes.">
-  <title>THOT — Nourris ta curiosité · V2</title>
+  <meta name="description" content="THOT : un magazine de culture générale et des quiz indépendants. Des articles documentés pour comprendre et des défis pour apprendre.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="THOT — Le magazine des esprits curieux">
+  <meta property="og:description" content="Articles historiques et culturels, quiz et découvertes.">
+  <link rel="canonical" href="https://thot-culture.github.io/Thot/">
+  <title>THOT — Articles et quiz de culture générale</title>
   <style>
     :root {
       color-scheme: light;
-      --ink:#14252e; --muted:#647075; --night:#101e2b; --night-2:#1c3443;
-      --cream:#faf7ef; --paper:#fffefa; --gold:#e7b45f; --gold-strong:#c88a34;
+      --ink:#17243a; --muted:#566171; --night:#17243a; --night-2:#24394f;
+      --cream:#f8f6f1; --paper:#fffefa; --gold:#b89558; --gold-strong:#927038;
       --sea:#24695f; --line:#e8e5dc; --red:#a43f41;
       --shadow:0 22px 55px rgba(24,42,41,.10);
       font-family: "Segoe UI", Inter, system-ui, -apple-system, sans-serif;
@@ -144,9 +148,64 @@
     .result-detail{border:1px solid #ece5d5;border-radius:13px;background:#faf8f0;padding:15px;margin:0 auto 24px;max-width:550px;font-size:13px;color:#51615e}
     .answer:focus-visible,.level-option:focus-visible{outline:3px solid var(--gold-strong);outline-offset:3px}
     @media(max-width:710px){.stats-panel{gap:9px}.stat-card{padding:15px 10px}.stat-card strong{font-size:24px}.stat-card span{font-size:11px}.level-options{gap:6px}.level-option{padding:13px 5px;font-size:12px}}
+
+    /* THOT V3 : architecture Articles / Quiz */
+    :target{scroll-margin-top:105px}
+    .skip-link{position:absolute;top:-85px;left:15px;background:white;color:#17243a;padding:12px 18px;border:3px solid var(--gold-strong);z-index:100;border-radius:9px}
+    .skip-link:focus{top:10px}
+    .top{position:sticky;top:0;z-index:25;box-shadow:0 5px 24px rgba(11,29,41,.08)}
+    .nav-end a:not(.nav-cta){font-weight:650}
+    .hero-description{max-width:610px}
+    .hero h1{font-size:clamp(46px,5.9vw,77px)}
+    .editorial{padding:84px 0 90px}
+    .editorial-heading{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:30px}
+    .editorial-heading .section-lead{max-width:360px}
+    .editorial-eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.17em;font-weight:850;color:var(--sea);margin:0 0 11px}
+    .editorial-heading h2{font-size:clamp(33px,4.6vw,52px)}
+    .article-feature{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(245px,.83fr);border-radius:23px;overflow:hidden;background:var(--paper);border:1px solid var(--line);color:var(--ink);text-decoration:none;box-shadow:0 18px 47px rgba(23,36,58,.055);transition:transform .22s,box-shadow .22s}
+    .article-feature:hover{transform:translateY(-4px);box-shadow:0 25px 52px rgba(23,36,58,.1)}
+    .article-feature:focus-visible{outline:3px solid var(--gold-strong);outline-offset:4px}
+    .article-feature__content{padding:clamp(26px,4vw,56px)}
+    .article-feature__tag{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--sea);font-weight:850}
+    .article-feature__title{font:500 clamp(29px,4vw,44px)/1.15 Georgia,serif;letter-spacing:-.025em;margin:19px 0}
+    .article-feature__intro{font-size:16px;line-height:1.8;color:var(--muted);margin-bottom:27px}
+    .article-feature__bottom{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--sea);font-size:13px;font-weight:750}
+    .article-feature__visual{background:radial-gradient(circle at 35% 28%,#355063,#17243a 72%);min-height:300px;display:grid;place-items:center;position:relative;overflow:hidden;color:#e5c993}
+    .article-feature__visual:before,.article-feature__visual:after{content:"";position:absolute;width:290px;height:290px;border-radius:50%;border:1px solid rgba(229,201,147,.3)}
+    .article-feature__visual:after{width:430px;height:430px;border-style:dashed;opacity:.65}
+    .article-feature__year{font:500 clamp(72px,8.5vw,116px)/1 Georgia,serif;letter-spacing:-.05em;z-index:1}
+    .article-feature__visual small{position:absolute;bottom:26px;left:0;right:0;text-align:center;color:#e5c993;font-size:11px;font-weight:800;letter-spacing:.21em;z-index:1}
+    .editorial-note{font-size:13px;line-height:1.6;color:var(--muted);margin:20px 0 0}
+    .quiz-univers{padding-top:76px}
+    .quiz-univers .section-lead{max-width:350px}
+    #concept{border-top:1px solid var(--line)}
+    @media(max-width:920px){.article-feature{grid-template-columns:1.2fr .8fr}.article-feature__visual{min-height:260px}}
+    @media(max-width:710px){
+      .top .nav{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;padding:12px 0}
+      .top .brand{font-size:25px}
+      .top .brand-icon{width:33px;height:33px}
+      .top .nav-end{width:100%;display:flex;gap:clamp(18px,6vw,38px);justify-content:center;font-size:13px}
+      .top .nav-end a:not(.nav-cta){display:inline-flex}
+      .editorial{padding:55px 0 62px}
+      .editorial-heading{display:block;margin-bottom:23px}
+      .editorial-heading .section-lead{margin-top:13px}
+      .article-feature{grid-template-columns:1fr}
+      .article-feature__visual{grid-row:1;min-height:180px}
+      .article-feature__year{font-size:75px}
+      .article-feature__visual:before{width:190px;height:190px}
+      .article-feature__visual:after{width:270px;height:270px}
+      .article-feature__visual small{bottom:15px}
+      .article-feature__content{padding:28px 23px}
+      .article-feature__title{font-size:clamp(29px,7vw,38px)}
+      .article-feature__intro{font-size:15px}
+      .quiz-univers{padding-top:56px}
+    }
+    @media(max-width:390px){.top .nav-end{font-size:12px;gap:16px}.article-feature__visual{min-height:160px}}
+
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
   <header class="top">
     <div class="wrap nav">
       <a href="#accueil" class="brand" aria-label="THOT, accueil">
@@ -158,25 +217,25 @@
         THOT
       </a>
       <nav class="nav-end" aria-label="Navigation principale">
-        <a href="#univers">Les univers</a>
-        <a href="#concept">Le concept</a>
-        <a href="#jouer" class="nav-cta">Jouer maintenant ↗</a>
+        <a href="#articles">Articles</a>
+        <a href="#univers">Quiz</a>
+        <a href="#concept">À propos</a>
       </nav>
     </div>
   </header>
 
-  <main id="accueil">
+  <main id="contenu">
     <section class="hero" aria-labelledby="main-title">
       <div class="wrap hero-inner">
         <div>
-          <div class="eyebrow">Le savoir est un jeu</div>
+          <div class="eyebrow">Le magazine des esprits curieux</div>
           <h1 id="main-title">La curiosité<br>est un <span class="gold">super-<br>pouvoir.</span></h1>
-          <p class="hero-description">De l'Égypte antique aux mystères de l'espace, explore tout ce que tu ne savais pas encore. Des quiz rapides, des surprises et zéro prise de tête.</p>
+          <p class="hero-description">Des faits étonnants, des histoires oubliées, des idées qui changent notre regard. Découvrez nos articles sourcés, puis testez vos connaissances dans un espace quiz indépendant.</p>
           <div class="hero-actions">
-            <a class="primary" href="#jouer">Lancer mon premier quiz <span aria-hidden="true">↗</span></a>
-            <a class="secondary" href="#univers">Explorer les thèmes</a>
+            <a class="primary" href="#articles">Découvrir les articles <span aria-hidden="true">↗</span></a>
+            <a class="secondary" href="#univers">Explorer les quiz</a>
           </div>
-          <div class="hero-sub"><span>Gratuit</span><span>5 questions par partie</span><span>115 questions à découvrir</span></div>
+          <div class="hero-sub"><span>Articles documentés</span><span>Quiz indépendants</span><span>Accès gratuit</span></div>
         </div>
         <div class="artifact" role="img" aria-label="Emblème doré de THOT, inspiré de l'ibis égyptien et entouré d'orbites">
           <div class="orbit"></div><div class="orbit two"></div><div class="orbit three"></div>
@@ -195,10 +254,31 @@
       </div>
     </section>
 
-    <section id="univers" class="section wrap" aria-labelledby="univers-title">
+
+    <!-- Bibliothèque THOT : indépendante des quiz -->
+    <section id="articles" class="editorial wrap" aria-labelledby="articles-title">
+      <div class="editorial-heading">
+        <div><p class="editorial-eyebrow">La bibliothèque THOT</p><h2 id="articles-title">Lire pour comprendre.</h2></div>
+        <p class="section-lead">Des articles accessibles et documentés pour explorer l'histoire, les sciences et la culture.</p>
+      </div>
+      <a class="article-feature" href="articles/roubaix-1917.html" aria-label="Lire Roubaix en 1917 : vivre sous l'occupation allemande">
+        <div class="article-feature__content">
+          <span class="article-feature__tag">Histoire · Première Guerre mondiale</span>
+          <h3 class="article-feature__title">Roubaix en 1917 : vivre sous l'occupation allemande</h3>
+          <p class="article-feature__intro">Réquisitions, ravitaillement, contrôles et départs : ce que les archives racontent de la vie d'une ville industrielle occupée.</p>
+          <div class="article-feature__bottom">
+            <span>La rédaction THOT</span><span>Lire l'article <span aria-hidden="true">↗</span></span>
+          </div>
+        </div>
+        <div class="article-feature__visual" aria-hidden="true"><span class="article-feature__year">1917</span><small>ROUBAIX · HISTOIRE</small></div>
+      </a>
+      <p class="editorial-note">Les articles se lisent sans questionnaires ni scores. Les sources sont consultables dans chaque article.</p>
+    </section>
+
+    <section id="univers" class="section wrap quiz-univers" aria-labelledby="univers-title">
       <div class="section-header">
-        <div><p class="kicker">Cinq portes vers l'inconnu</p><h2 id="univers-title">Choisis ton univers.</h2></div>
-        <p class="section-lead">Cinq univers, trois niveaux et plus de cent questions à explorer.</p>
+        <div><p class="kicker">L'espace Quiz · Cinq univers</p><h2 id="univers-title">Testez votre curiosité.</h2></div>
+        <p class="section-lead">Cinq univers, trois niveaux et une explication après chaque réponse. <span id="quiz-total">Plus de cent questions</span>.</p>
       </div>
       <div class="category-grid">
         <button class="category-card" type="button" data-category="histoire"><span class="category-icon" aria-hidden="true">🏛️</span><span class="category-name">Histoire</span><span class="category-meta">Rois, révolutions et anecdotes oubliées.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
@@ -210,48 +290,7 @@
     </section>
 
     
-    <!-- THOT : rubrique Articles -->
-    <section id="articles" class="section wrap" aria-labelledby="articles-title">
-      <div class="section-header">
-        <div>
-          <p class="kicker">La bibliothèque THOT</p>
-          <h2 id="articles-title">Des histoires à découvrir.</h2>
-        </div>
-        <p class="section-lead">
-          Des articles pour comprendre le monde, au-delà des quiz.
-        </p>
-      </div>
-
-      <a href="articles/roubaix-1917.html"
-         style="display:block;max-width:790px;background:#fffefa;
-                border:1px solid #e8e5dc;border-radius:20px;
-                padding:30px;color:#17243a;
-                box-shadow:0 14px 35px rgba(23,36,58,.06);
-                text-decoration:none;">
-
-        <span style="color:#24695f;font-size:12px;font-weight:800;
-                     letter-spacing:.12em;text-transform:uppercase;">
-          Histoire · Première Guerre mondiale
-        </span>
-
-        <h3 style="font-family:Georgia,serif;font-size:clamp(25px,4vw,36px);
-                   line-height:1.2;font-weight:500;margin:16px 0;">
-          Roubaix en 1917 : vivre sous l'occupation allemande
-        </h3>
-
-        <p style="color:#566171;font-size:15px;line-height:1.75;
-                  margin-bottom:22px;">
-          Réquisitions, ravitaillement et vie quotidienne :
-          découvrez ce que les archives racontent d'une ville
-          occupée pendant la Première Guerre mondiale.
-        </p>
-
-        <span style="color:#24695f;font-weight:800;font-size:14px;">
-          Lire l'article &rarr;
-        </span>
-      </a>
-    </section>
-<section id="jouer" class="game-section" aria-labelledby="quiz-title">
+    <section id="jouer" class="game-section" aria-labelledby="quiz-title">
       <div class="wrap">
         <div class="section-header">
           <div><p class="kicker">À toi de jouer</p><h2 id="quiz-title">Le défi THOT.</h2></div>
@@ -303,13 +342,13 @@
       </div>
     </section>
 
-    <section id="concept" class="wrap why" aria-label="Pourquoi THOT ?">
-      <article><div class="why-symbol">✳</div><h3>Apprendre sans réviser</h3><p>Des questions courtes et des explications qui racontent quelque chose, pas seulement une bonne réponse.</p></article>
-      <article><div class="why-symbol">◎</div><h3>Trois niveaux pour progresser</h3><p>Facile, moyen ou expert : le meilleur défi, c’est celui qui te fait apprendre.</p></article>
-      <article><div class="why-symbol">✦</div><h3>La curiosité d'abord</h3><p>THOT emprunte son nom au dieu égyptien du savoir et de l'écriture. Ici, toutes les questions sont les bienvenues.</p></article>
+    <section id="concept" class="wrap why" aria-label="Notre approche">
+      <article><div class="why-symbol">✳</div><h3>Une lecture captivante</h3><p>Le plaisir de découvrir, sans sacrifier la rigueur des faits ni les références.</p></article>
+      <article><div class="why-symbol">◎</div><h3>Des sources visibles</h3><p>Des renvois discrets vers des documents et références pour vérifier et approfondir.</p></article>
+      <article><div class="why-symbol">✦</div><h3>Deux façons d'apprendre</h3><p>Les articles pour comprendre ; les quiz pour se tester. Deux expériences bien distinctes.</p></article>
     </section>
   </main>
-  <footer><div class="wrap foot-inner"><b>THOT</b><span>Le savoir est un jeu. © <span id="year">2026</span> THOT</span><span>Fait pour les esprits curieux ✦</span></div></footer>
+  <footer><div class="wrap foot-inner"><b>THOT</b><span>Éveiller la curiosité. Éclairer les idées. Transmettre le savoir.</span><span>© <span id="year">2026</span> THOT</span></div></footer>
 
   <script>
     'use strict';
@@ -1514,6 +1553,7 @@
   }
 ];
     const questions = [...originalQuestions, ...nouvellesQuestions];
+    document.getElementById('quiz-total').textContent = questions.length + ' questions pour jouer';
 
     const labels = {mix:'✦ Un peu de tout',histoire:'🏛️ Histoire',geographie:'🌍 Géographie',sciences:'🔬 Sciences',arts:'🎨 Arts & culture',insolite:'✨ Insolite'};
     const levels = {
