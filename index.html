@@ -339,6 +339,17 @@
     .editorial-library-link>a{display:inline-flex;align-items:center;gap:14px;color:#17243A;border:1px solid #D9C6A5;border-radius:12px;padding:13px 18px;background:#F9F4E9;font-size:13px;font-weight:850;text-decoration:none}
     .editorial-library-link>a:hover{background:#F0E5D0}
     .editorial-library-link>p{margin:0;color:#566171;font-size:12px;line-height:1.6}
+
+    /* Écran de départ : choix direct d'un univers et meilleure lisibilité */
+    .quick-themes{display:flex;justify-content:center;gap:7px;flex-wrap:wrap;margin:-3px auto 24px;max-width:780px}
+    .quick-themes button{font-size:12px;font-weight:800;border:1px solid #D8D8D0;border-radius:999px;padding:10px 13px;color:#43515C;background:#FAF9F5}
+    .quick-themes button[aria-pressed="true"]{background:#17243A;color:#F1D5A0;border-color:#17243A}
+    .quick-themes button:hover:not([aria-pressed="true"]){border-color:#A98549;background:#F7F0E3}
+    #screen-intro .category-tag{margin-bottom:16px}
+    .game-intro{max-width:740px;margin:auto}
+    .answer{line-height:1.45}
+    .level-options{gap:10px}
+    @media(max-width:500px){.quick-themes{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}.quick-themes button{width:100%;border-radius:10px}.game-intro{padding-top:8px}}
   </style>
 </head>
 <body>
@@ -482,6 +493,14 @@
               <div class="game-mark" aria-hidden="true">✦</div>
               <div class="quiz-intro-eyebrow">LE QUIZ · ÉDITION DÉCOUVERTE</div>
               <div class="category-tag" id="chosen-category">✦ Un peu de tout</div>
+              <div class="quick-themes" role="group" aria-label="Choisir l'univers du quiz">
+                <button type="button" data-quiz-theme="mix" aria-pressed="true">✦ Mélange</button>
+                <button type="button" data-quiz-theme="histoire" aria-pressed="false">🏛️ Histoire</button>
+                <button type="button" data-quiz-theme="geographie" aria-pressed="false">🌍 Géographie</button>
+                <button type="button" data-quiz-theme="sciences" aria-pressed="false">🔬 Sciences</button>
+                <button type="button" data-quiz-theme="arts" aria-pressed="false">🎨 Arts</button>
+                <button type="button" data-quiz-theme="insolite" aria-pressed="false">✨ Insolite</button>
+              </div>
               <h3>Prêt à faire chauffer tes neurones ?</h3>
               <p>5 questions, plusieurs formats et une découverte à chaque réponse. À la fin, retrouve tes erreurs et comprends les bonnes réponses.</p>
               <div class="quiz-promise" aria-label="Ce qui t'attend"><span>✦ 5 questions</span><span>◎ Corrections expliquées</span><span>↗ Bilan de tes erreurs</span></div>
@@ -546,6 +565,10 @@
   </main>
   <footer><div class="wrap foot-inner"><b>THOT</b><span>Éveiller la curiosité. Éclairer les idées. Transmettre le savoir.</span><span>© <span id="year">2026</span> THOT</span></div></footer>
 
+  <!-- Banques de questions : chargées avant le moteur, sans dépendance externe. -->
+  <script src="assets/questions-facile.js"></script>
+  <script src="assets/questions-intermediaire.js"></script>
+  <script src="assets/questions-expert.js"></script>
   <script>
     'use strict';
     const originalQuestions = [
@@ -2230,7 +2253,12 @@
         "hint": "Distingue le support matériel, l'outil et la forme des signes de leur langue."
       }
     ];
-    const questions = [...originalQuestions, ...nouvellesQuestions, ...formatsQuestions];
+    const additionalQuestions=[
+      ...window.THOT_QUESTIONS_FACILE,
+      ...window.THOT_QUESTIONS_INTERMEDIAIRE,
+      ...window.THOT_QUESTIONS_EXPERT
+    ];
+    const questions=[...originalQuestions,...nouvellesQuestions,...formatsQuestions,...additionalQuestions];
     document.getElementById('quiz-total').textContent = questions.length + ' questions pour jouer';
 
     const labels = {mix:'✦ Un peu de tout',histoire:'🏛️ Histoire',geographie:'🌍 Géographie',sciences:'🔬 Sciences',arts:'🎨 Arts & culture',insolite:'✨ Insolite'};
@@ -2398,6 +2426,7 @@
     function setCategory(cat){
       selectedCategory=labels[cat]?cat:'mix';
       $('chosen-category').textContent=labels[selectedCategory];
+      document.querySelectorAll('[data-quiz-theme]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.quizTheme===selectedCategory)));
       refreshBest();show('screen-intro');
       $('jouer').scrollIntoView({behavior:'smooth',block:'start'});
     }
@@ -2411,26 +2440,23 @@
     function questionType(q){return q.type==='multi_select'?'multi_select':q.type==='true_false'?'true_false':'single_select';}
     function correctIndexes(q){return Array.isArray(q.correct)?q.correct:[q.correct];}
     function chooseRound(pool,n=5){
-      const key=bestKey();
-      if(!stats.history||typeof stats.history!=='object'||Array.isArray(stats.history))stats.history={};
-      const prev=Array.isArray(stats.history[key])?stats.history[key]:[];
-      const used=new Set(prev.filter(q=>typeof q==='string'&&pool.some(p=>p.q===q)));
-      const recent=new Set(Array.isArray(stats.recent[key])?stats.recent[key]:[]);
-      const chosen=[];
-      const take=(arr,count)=>{
-        const fresh=shuffle(arr.filter(q=>!used.has(q.q)&&!chosen.includes(q)));
-        const fallback=shuffle(arr.filter(q=>used.has(q.q)&&!recent.has(q.q)&&!chosen.includes(q)));
-        const last=shuffle(arr.filter(q=>used.has(q.q)&&recent.has(q.q)&&!chosen.includes(q)));
-        chosen.push(...[...fresh,...fallback,...last].slice(0,count));
-      };
-      // Diversité garantie dans la partie tant que les formats sont disponibles.
-      take(pool.filter(q=>questionType(q)==='true_false'),1);
-      take(pool.filter(q=>questionType(q)==='multi_select'),1);
-      take(pool.filter(q=>questionType(q)==='single_select'),Math.max(0,n-chosen.length));
-      if(chosen.length<n)take(pool,n-chosen.length);
-      const selected=chosen.slice(0,n);
-      const uniqueUsed=new Set([...used,...selected.map(q=>q.q)]);
-      stats.history[key]=uniqueUsed.size>=pool.length?selected.map(q=>q.q):[...uniqueUsed];
+      const key=bestKey(),history=stats.history||{};
+      const valid=new Set(pool.map(q=>q.q));
+      const previous=Array.isArray(history[key])?history[key].filter(q=>valid.has(q)):[];
+      const already=new Set(previous);
+      const candidates=shuffle(pool.filter(q=>!already.has(q.q)));
+      const selected=candidates.slice(0,n);
+      if(selected.length<n){
+        const recent=new Set(Array.isArray(stats.recent[key])?stats.recent[key]:[]);
+        const remaining=pool.filter(q=>!selected.includes(q));
+        const older=shuffle(remaining.filter(q=>!recent.has(q.q)));
+        const latest=shuffle(remaining.filter(q=>recent.has(q.q)));
+        selected.push(...[...older,...latest].slice(0,n-selected.length));
+        history[key]=selected.map(q=>q.q);
+      }else{
+        history[key]=[...new Set([...previous,...selected.map(q=>q.q)])];
+      }
+      stats.history=history;
       stats.recent[key]=selected.map(q=>q.q);
       saveStats();
       return shuffle(selected);
@@ -2619,6 +2645,7 @@
     document.querySelectorAll('[data-category]').forEach(button=>button.addEventListener('click',()=>setCategory(button.dataset.category)));
     document.querySelectorAll('[data-level]').forEach(button=>button.addEventListener('click',()=>setLevel(button.dataset.level)));
     $('start-button').addEventListener('click',begin);
+    document.querySelectorAll('[data-quiz-theme]').forEach(button=>button.addEventListener('click',()=>setCategory(button.dataset.quizTheme)));
     $('daily-start-button').addEventListener('click',startDaily);
     document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshDaily();});
     $('badges-button').addEventListener('click',()=>{
@@ -2638,7 +2665,7 @@
       $('review-button').textContent=willOpen?'Masquer les corrections ↑':'Revoir mes erreurs ↘';
       if(willOpen)$('review-heading').focus({preventScroll:true});
     });
-    $('change-button').addEventListener('click',()=>{selectedCategory='mix';$('chosen-category').textContent=labels.mix;show('screen-intro');refreshBest();$('univers').scrollIntoView({behavior:'smooth'});});
+    $('change-button').addEventListener('click',()=>setCategory('mix'));
     $('year').textContent=String(new Date().getFullYear());
     refreshBest();refreshStats();refreshProgression();refreshDaily();
   </script>
