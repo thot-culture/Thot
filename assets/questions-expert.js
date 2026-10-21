@@ -259,7 +259,7 @@ window.THOT_QUESTIONS_EXPERT = [
     "cat": "geographie",
     "level": "expert",
     "type": "single_select",
-    "q": "Quel fleuve est le principal affluent de rive gauche du Rhône à Lyon ?",
+    "q": "Quel fleuve rejoint le Rhône dans la ville de Lyon ?",
     "a": [
       "La Saône",
       "La Durance",
@@ -267,7 +267,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "L'Ain"
     ],
     "correct": 0,
-    "why": "La Saône rejoint le Rhône dans la ville de Lyon. Attention : elle arrive par la rive droite du Rhône, et non par sa rive gauche.",
+    "why": "La Saône se jette dans le Rhône à Lyon, en arrivant par sa rive droite.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -469,16 +469,16 @@ window.THOT_QUESTIONS_EXPERT = [
     "cat": "sciences",
     "level": "expert",
     "type": "single_select",
-    "q": "Quel type de réaction nucléaire alimente principalement le Soleil ?",
+    "q": "Quel savant met en évidence la radioactivité naturelle des sels d'uranium en 1896 ?",
     "a": [
-      "La fusion de l'hydrogène",
-      "La fission de l'uranium",
-      "La combustion du carbone",
-      "La désintégration du radium"
+      "Henri Becquerel",
+      "Marie Curie",
+      "Ernest Rutherford",
+      "William Crookes"
     ],
     "correct": 0,
-    "why": "La fusion de noyaux d'hydrogène en hélium fournit l'essentiel de l'énergie produite au cœur du Soleil.",
-    "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
+    "why": "Henri Becquerel découvre en 1896 que des sels d'uranium émettent spontanément un rayonnement qui impressionne une plaque photographique.",
+    "hint": "Ce phénomène est étudié quelques années avant les travaux majeurs du couple Curie."
   },
   {
     "cat": "sciences",
