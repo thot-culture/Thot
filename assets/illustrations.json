@@ -1,0 +1,38 @@
+{
+  "roubaix-ville-avant-1919": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/ELD_-_ROUBAIX_-_Boulevard_Gambetta.JPG",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:ELD_-_ROUBAIX_-_Boulevard_Gambetta.JPG",
+    "kind": "CARTE POSTALE HISTORIQUE",
+    "date": "Avant 1919 (date exacte inconnue)",
+    "title": "Le boulevard Gambetta à Roubaix",
+    "alt": "Carte postale ancienne du boulevard Gambetta à Roubaix avec tramway, charrettes et passants.",
+    "caption": "Cette vue ancienne situe le paysage urbain de Roubaix. Elle n'a pas été datée précisément et ne constitue pas une photographie de l'occupation en 1917.",
+    "credit": "Éditeur ELD ; numérisation Claude Villetaneuse ; Wikimedia Commons",
+    "licence": "Domaine public",
+    "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  "roubaix-interdiction-1915": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Rassemblement_Roubaix_12.5.1915_Landesarchiv_Baden-W%C3%BCrttemberg.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rassemblement_Roubaix_12.5.1915_Landesarchiv_Baden-W%C3%BCrttemberg.jpg",
+    "kind": "AFFICHE HISTORIQUE",
+    "date": "12 mai 1915",
+    "title": "L'interdiction des rassemblements",
+    "alt": "Affiche datée de Roubaix, 12 mai 1915, interdisant les rassemblements de plus de cinq personnes et signée Hoffmann.",
+    "caption": "Cette affiche de la commandanture interdit les rassemblements de plus de cinq personnes. Elle date de 1915 : elle illustre le contrôle exercé pendant l'occupation, mais ne doit pas être confondue avec les affiches de 1917 analysées dans l'article.",
+    "credit": "Landesarchiv Baden-Württemberg ; Wikimedia Commons",
+    "licence": "Domaine public",
+    "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  },
+  "roubaix-usine-motte-1910": {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Usine_Motte_1910.jpg",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Usine_Motte_1910.jpg",
+    "kind": "CARTE POSTALE HISTORIQUE",
+    "date": "1910",
+    "title": "Les ouvriers de l'usine Alfred Motte",
+    "alt": "Carte postale de 1910 montrant des ouvriers et machines textiles dans l'usine Alfred Motte à Roubaix.",
+    "caption": "La manufacture Alfred Motte photographiée avant la guerre, sur une carte postale de 1910. Cette image documente le monde textile roubaisien, et non des conditions de travail sous l'occupation en 1917.",
+    "credit": "Auteur inconnu ; carte postale ancienne ; Wikimedia Commons",
+    "licence": "Domaine public",
+    "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+  }
+}
