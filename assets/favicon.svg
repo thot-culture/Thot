@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="titre">
+  <title id="titre">THOT — ibis du savoir</title>
+  <rect width="48" height="48" rx="11" fill="#17243A"/>
+  <circle cx="24" cy="24" r="20" fill="none" stroke="#B89558" stroke-width="1.5"/>
+  <path d="M13 33c9-6 10-12 9-21 5 3 7 8 7 13l12 2-11 4c-2 6-7 8-14 6" fill="none" stroke="#E7B45F" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="25" cy="17" r="1.35" fill="#E7B45F"/>
+</svg>
