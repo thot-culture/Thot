@@ -36,3 +36,13 @@
 .article-roubaix .thot-reperes>div+div{border-left:0;border-top:1px solid #dfd5c4}
 .article-roubaix .thot-reperes small{font-size:12.5px}
 }
+
+/* Nouvelle lecture directe : les images historiques deviennent le cœur du récit. */
+.article-roubaix .thot-simple-intro{margin:28px 0 25px;padding:17px 22px;background:#f1ebe0;border-left:4px solid #b89558;border-radius:0 14px 14px 0}
+.article-roubaix .thot-simple-intro h2{font-size:27px;margin:0 0 8px}
+.article-roubaix .thot-simple-intro p{font-size:15px;margin:0;line-height:1.7}
+.article-roubaix .thot-document-break{border-top:1px solid #dcd4c6;margin:34px 0 21px;padding-top:26px}
+.article-roubaix .thot-document-break h2{margin:8px 0 12px}
+.article-roubaix .thot-document-break p{margin:0 0 14px}
+.article-roubaix .thot-document-overline{font-size:11px!important;letter-spacing:.16em;font-weight:800;color:#927038}
+.article-roubaix .thot-illustration:not(.thot-cover .thot-illustration){margin:25px 0 35px}
