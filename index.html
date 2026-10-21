@@ -301,6 +301,39 @@
     @media(max-width:560px){.progression-panel{padding:19px 16px}.progression-head{gap:11px}.progression-symbol{width:43px;height:43px;font-size:22px}.progression-amount strong{font-size:18px}.progression-amount span{font-size:11px}.progression-identity strong{font-size:20px}.badges-grid{grid-template-columns:1fr}.progression-bottom{align-items:stretch}.badges-button{width:100%}}
     @media(prefers-reduced-motion:reduce){.xp-progress>div{transition:none}}
 
+
+    /* THOT V2 · Étape 4 : défi UTC partagé et missions */
+    .daily-panel{background:linear-gradient(135deg,#17243A,#283E50);border:1px solid #31485C;color:#FFFEFA;border-radius:21px;padding:27px 31px;margin-bottom:21px;box-shadow:0 15px 35px rgba(23,36,58,.1)}
+    .daily-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}
+    .daily-kicker{color:#E6C794;font-size:11px;font-weight:850;letter-spacing:.16em}
+    .daily-heading h3{font:500 clamp(25px,3.4vw,33px)/1.2 Georgia,serif;margin:9px 0 0;color:#FFF9EC}
+    .daily-heading h3 span{color:#D7B47D}
+    .daily-date{font-size:12px;color:#F0D6A7;background:rgba(255,255,255,.075);border:1px solid rgba(230,199,148,.3);padding:8px 13px;border-radius:99px;white-space:nowrap;font-weight:750}
+    .daily-intro{color:#DDE5EA;line-height:1.7;font-size:14px;max-width:730px;margin:17px 0 20px}
+    .daily-actions{display:flex;align-items:center;gap:15px;flex-wrap:wrap}
+    .daily-start{border:0;border-radius:12px;background:#D1AC70;color:#17243A;font-weight:850;font-size:14px;padding:13px 18px}
+    .daily-start:hover:not(:disabled){background:#E2C495}
+    .daily-start:disabled{opacity:.75;cursor:default;background:#D6DDD4;color:#344F46}
+    .daily-status,.daily-streak{font-size:12px;color:#E7DBBE;font-weight:700}
+    .daily-streak{margin-left:auto;white-space:nowrap}
+    .daily-goals{border-top:1px solid rgba(255,255,255,.15);margin-top:22px;padding-top:19px}
+    .daily-goals-title{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px}
+    .daily-goals-title strong{font-size:14px;color:#FFF4DC}
+    .daily-goals-title span{font-size:12px;color:#E0C696}
+    .daily-goals-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+    .daily-goal{display:flex;align-items:flex-start;gap:10px;min-width:0;padding:12px;border:1px solid rgba(255,255,255,.18);border-radius:12px;background:rgba(255,255,255,.055)}
+    .daily-goal.done{background:rgba(72,139,111,.2);border-color:rgba(145,209,173,.5)}
+    .daily-goal-symbol{display:grid;place-items:center;flex:0 0 27px;height:27px;width:27px;border-radius:8px;background:rgba(255,255,255,.1);color:#EDC98E;font-weight:900;font-size:14px}
+    .daily-goal.done .daily-goal-symbol{background:#D3EDD9;color:#235840}
+    .daily-goal-copy{min-width:0;display:flex;flex-direction:column;gap:5px}
+    .daily-goal-copy strong{color:#F6F1E7;font-size:12px;line-height:1.35}
+    .daily-goal-copy span{color:#D3DDE1;font-size:11px;line-height:1.45}
+    .daily-goal-copy small{color:#E4C58D;font-size:11px;font-weight:800}
+    .daily-note{color:#AFBEC5;font-size:11px;line-height:1.5;margin:19px 0 0}
+    .daily-result{color:#426451!important;font-weight:800!important;font-size:14px!important;background:#EDF6EE;border:1px solid #CDE1D2;padding:11px 14px;border-radius:11px}
+    @media(max-width:850px){.daily-goals-list{grid-template-columns:1fr}.daily-streak{margin-left:0}}
+    @media(max-width:560px){.daily-panel{padding:21px 17px}.daily-heading{flex-direction:column;gap:9px}.daily-heading h3{font-size:28px}.daily-date{align-self:flex-start}.daily-actions{align-items:stretch;flex-direction:column}.daily-start{width:100%}.daily-goals-title{align-items:flex-start;flex-direction:column;gap:4px}}
+
   </style>
 </head>
 <body>
@@ -404,6 +437,23 @@
           <div><p class="kicker">À toi de jouer</p><h2 id="quiz-title">Le défi THOT.</h2></div>
           <p class="section-lead">Tu peux changer de thème et recommencer autant de fois que tu veux.</p>
         </div>
+        <section class="daily-panel" aria-labelledby="daily-title">
+          <div class="daily-heading">
+            <div><span class="daily-kicker">RENDEZ-VOUS QUOTIDIEN</span><h3 id="daily-title">Le défi du jour <span aria-hidden="true">✦</span></h3></div>
+            <div class="daily-date" id="daily-date">Aujourd'hui</div>
+          </div>
+          <p class="daily-intro">Cinq questions, cinq univers, un même défi pour tout le monde. Reviens demain pour découvrir une autre sélection.</p>
+          <div class="daily-actions">
+            <button type="button" id="daily-start-button" class="daily-start">Relever le défi du jour <span aria-hidden="true">↗</span></button>
+            <span id="daily-status" class="daily-status" role="status">À découvrir aujourd'hui</span>
+            <span id="daily-streak" class="daily-streak">✦ Série quotidienne : 0 jour</span>
+          </div>
+          <div class="daily-goals">
+            <div class="daily-goals-title"><strong>Mes 3 missions du jour</strong><span>+10 XP par mission réussie</span></div>
+            <div class="daily-goals-list" id="daily-goals-list" aria-live="polite"></div>
+          </div>
+          <p class="daily-note">Renouvellement à minuit UTC · Résultats enregistrés uniquement dans ce navigateur.</p>
+        </section>
         <section class="progression-panel" aria-label="Mon parcours THOT">
           <div class="progression-head">
             <span class="progression-symbol" aria-hidden="true">✦</span>
@@ -462,6 +512,7 @@
               <p id="result-message">Ta curiosité fait des merveilles.</p>
               <p class="result-performance" id="result-performance"></p>
               <p id="xp-earned" class="xp-earned" aria-live="polite"></p>
+              <p id="daily-result" class="daily-result hidden" aria-live="polite"></p>
               <p id="badges-earned" class="badges-earned hidden" aria-live="polite"></p>
               <div class="result-detail" id="result-detail"></div>
               <div class="result-actions"><button type="button" class="primary" id="replay-button">Rejouer ↗</button><button type="button" class="outlined" id="change-button">Changer de thème</button><button type="button" class="outlined review-toggle hidden" id="review-button" aria-expanded="false" aria-controls="review-panel">Revoir mes erreurs ↘</button></div>
@@ -2185,11 +2236,11 @@
     };
     const $=id=>document.getElementById(id);
     const screens=['screen-intro','screen-question','screen-result'];
-    let selectedCategory='mix',selectedLevel='facile',round=[],index=0,score=0,answered=false,attempts=[],streak=0,bestStreak=0,selectedAnswers=new Set();
+    let selectedCategory='mix',selectedLevel='facile',round=[],index=0,score=0,answered=false,attempts=[],streak=0,bestStreak=0,selectedAnswers=new Set(),gameMode='classic',gameDay='';
     const show=id=>screens.forEach(name=>$(name).classList.toggle('hidden',name!==id));
     function shuffle(arr){const copy=[...arr];for(let i=copy.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]];}return copy;}
     const storageKey='thot_v2_stats';
-    const defaults=()=>({games:0,correct:0,answered:0,bests:{},recent:{},history:{},progression:{xp:0,byCategory:{},bestStreak:0}});
+    const defaults=()=>({games:0,correct:0,answered:0,bests:{},recent:{},history:{},progression:{xp:0,byCategory:{},bestStreak:0},daily:{lastCompleted:'',lastScore:0,streak:0,day:'',games:0,correct:0,claimed:[]}});
     function loadStats(){
       try{
         const raw=JSON.parse(localStorage.getItem(storageKey)||'null');
@@ -2215,6 +2266,12 @@
           // Aucune catégorie historique inconnue n'est devinée.
           stats.progression.xp=stats.correct*10+stats.games*5;
           saveProgressMigration(stats);
+        }
+        if(raw.daily&&typeof raw.daily==='object'&&!Array.isArray(raw.daily)){
+          const d=raw.daily;
+          for(const key of ['lastCompleted','day'])if(typeof d[key]==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(d[key]))stats.daily[key]=d[key];
+          for(const key of ['lastScore','streak','games','correct'])if(Number.isSafeInteger(d[key])&&d[key]>=0)stats.daily[key]=d[key];
+          if(Array.isArray(d.claimed))stats.daily.claimed=d.claimed.filter(v=>['daily','three','two'].includes(v));
         }
         return stats;
       }catch{return defaults();}
@@ -2285,6 +2342,54 @@
         copy.append(title,desc,state);item.append(emblem,copy);grid.append(item);
       }
     }
+    function utcDay(){return new Date().toISOString().slice(0,10);}
+    function hashDaily(value){
+      let h=2166136261;
+      for(let i=0;i<value.length;i++)h=Math.imul(h^value.charCodeAt(i),16777619)>>>0;
+      return h>>>0;
+    }
+    function dailyQuestions(day){
+      return ['histoire','geographie','sciences','arts','insolite'].map(cat=>{
+        const pool=questions.filter(q=>q.cat===cat).sort((a,b)=>a.q.localeCompare(b.q,'fr'));
+        return pool[hashDaily(day+'|'+cat)%pool.length];
+      }).sort((a,b)=>hashDaily(day+'|order|'+a.cat)-hashDaily(day+'|order|'+b.cat));
+    }
+    function dailyGoals(day){
+      const d=stats.daily;
+      return [
+        {id:'daily',title:'Défi accompli',desc:'Terminer le défi du jour',value:d.lastCompleted===day?1:0,goal:1},
+        {id:'three',title:'Trois découvertes',desc:'Réussir 3 réponses aujourd’hui',value:d.correct,goal:3},
+        {id:'two',title:'Esprit persévérant',desc:'Terminer 2 parties aujourd’hui',value:d.games,goal:2}
+      ];
+    }
+    function refreshDaily(){
+      const day=utcDay(),d=stats.daily,done=d.lastCompleted===day;
+      $('daily-date').textContent=new Date(day+'T12:00:00Z').toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'});
+      $('daily-start-button').disabled=done;
+      $('daily-start-button').textContent=done?'✓ Défi déjà joué':'Relever le défi du jour ↗';
+      $('daily-status').textContent=done?'Score du jour : '+d.lastScore+'/5':'Un essai par jour';
+      $('daily-streak').textContent='✦ Série quotidienne : '+d.streak+' jour'+(d.streak>1?'s':'');
+      const list=$('daily-goals-list');list.replaceChildren();
+      for(const g of dailyGoals(day)){
+        const count=d.day===day?g.value:0,earned=d.day===day&&d.claimed.includes(g.id);
+        const el=document.createElement('div');el.className='daily-goal'+(earned?' done':'');
+        const symbol=document.createElement('span');symbol.className='daily-goal-symbol';symbol.textContent=earned?'✓':'✦';
+        const copy=document.createElement('div');copy.className='daily-goal-copy';
+        const title=document.createElement('strong');title.textContent=g.title;
+        const desc=document.createElement('span');desc.textContent=g.desc;
+        const status=document.createElement('small');status.textContent=earned?'+10 XP obtenus':Math.min(count,g.goal)+' / '+g.goal;
+        copy.append(title,desc,status);el.append(symbol,copy);list.append(el);
+      }
+    }
+    function startDaily(){
+      const day=utcDay();
+      if(stats.daily.lastCompleted===day){refreshDaily();return;}
+      gameMode='daily';gameDay=day;round=dailyQuestions(day);index=0;score=0;answered=false;attempts=[];streak=0;bestStreak=0;
+      $('review-panel').classList.add('hidden');$('review-button').setAttribute('aria-expanded','false');
+      show('screen-question');renderQuestion();
+      const first=$('answer-list').querySelector('button');if(first)first.focus({preventScroll:true});
+      $('jouer').scrollIntoView({behavior:'smooth',block:'start'});
+    }
     function setCategory(cat){
       selectedCategory=labels[cat]?cat:'mix';
       $('chosen-category').textContent=labels[selectedCategory];
@@ -2328,7 +2433,7 @@
     function begin(){
       const pool=questions.filter(q=>q.level===selectedLevel&&(selectedCategory==='mix'||q.cat===selectedCategory));
       if(pool.length<5){alert('Pas assez de questions dans ce thème.');return;}
-      round=chooseRound(pool,5);index=0;score=0;answered=false;attempts=[];streak=0;bestStreak=0;
+      gameMode='classic';gameDay='';round=chooseRound(pool,5);index=0;score=0;answered=false;attempts=[];streak=0;bestStreak=0;
       $('review-panel').classList.add('hidden');$('review-button').setAttribute('aria-expanded','false');
       show('screen-question');renderQuestion();
       const first=$('answer-list').querySelector('button');if(first)first.focus({preventScroll:true});
@@ -2370,7 +2475,8 @@
       $('validate-button').classList.toggle('hidden',type!=='multi_select');
       $('validate-button').disabled=true;
       $('validate-button').textContent='Valider mes réponses';
-      const choices=shuffle(item.a.map((answer,idx)=>({answer,idx})));
+      const pool=item.a.map((answer,idx)=>({answer,idx}));
+      const choices=gameMode==='daily'?pool.sort((a,b)=>hashDaily(gameDay+'|'+item.q+'|'+a.idx)-hashDaily(gameDay+'|'+item.q+'|'+b.idx)):shuffle(pool);
       choices.forEach(({answer,idx},n)=>{
         const button=document.createElement('button');
         button.type='button';button.className='answer';button.dataset.idx=String(idx);
@@ -2448,7 +2554,24 @@
       stats.answered+=round.length;
       const best=stats.bests[bestKey()];
       if(typeof best!=='number'||score>best)stats.bests[bestKey()]=score;
-      const earnedXP=score*10+5+(score===round.length?10:0);
+      let earnedXP=score*10+5+(score===round.length?10:0),missionXP=0;
+      if(gameMode==='daily'&&stats.daily.lastCompleted===gameDay)return;
+      const today=utcDay();
+      if(gameMode!=='daily'||gameDay===today){
+        if(stats.daily.day!==today){stats.daily.day=today;stats.daily.games=0;stats.daily.correct=0;stats.daily.claimed=[];}
+        stats.daily.games++;stats.daily.correct+=score;
+        if(gameMode==='daily'){
+          const yesterday=new Date(Date.parse(today+'T00:00:00Z')-86400000).toISOString().slice(0,10);
+          stats.daily.streak=stats.daily.lastCompleted===yesterday?stats.daily.streak+1:1;
+          stats.daily.lastCompleted=today;stats.daily.lastScore=score;
+        }
+        for(const goal of dailyGoals(today)){
+          if(goal.value>=goal.goal&&!stats.daily.claimed.includes(goal.id)){
+            stats.daily.claimed.push(goal.id);missionXP+=10;
+          }
+        }
+        earnedXP+=missionXP;
+      }
       stats.progression.xp+=earnedXP;
       stats.progression.bestStreak=Math.max(stats.progression.bestStreak,bestStreak);
       attempts.forEach(a=>{
@@ -2456,9 +2579,11 @@
           stats.progression.byCategory[a.category]=(stats.progression.byCategory[a.category]||0)+1;
       });
       const newBadges=badgeCatalog.filter(b=>!priorBadges.has(b.id)&&b.get()>=b.goal);
-      saveStats();refreshBest();refreshStats();refreshProgression();
+      saveStats();refreshBest();refreshStats();refreshProgression();refreshDaily();
       const newLevel=currentLevel(stats.progression.xp).active.name;
-      $('xp-earned').textContent='✦ +'+earnedXP+' XP · Total : '+stats.progression.xp.toLocaleString('fr-FR')+' XP'+(newLevel!==priorLevel?' · Nouveau niveau : '+newLevel+' !':'');
+      $('xp-earned').textContent='✦ +'+earnedXP+' XP'+(missionXP?' dont '+missionXP+' XP de missions':'')+' · Total : '+stats.progression.xp.toLocaleString('fr-FR')+' XP'+(newLevel!==priorLevel?' · Nouveau niveau : '+newLevel+' !':'');
+      $('daily-result').classList.toggle('hidden',gameMode!=='daily');
+      $('daily-result').textContent=gameMode==='daily'?'Défi quotidien terminé : '+score+'/5. Reviens demain pour cinq autres questions.':'';
       $('badges-earned').classList.toggle('hidden',newBadges.length===0);
       $('badges-earned').textContent=newBadges.length?'Badge'+(newBadges.length>1?'s':'')+' débloqué'+(newBadges.length>1?'s':'')+' : '+newBadges.map(b=>b.icon+' '+b.title).join(' · '):'';
       $('final-score').textContent=score+'/'+round.length;
@@ -2487,6 +2612,7 @@
     document.querySelectorAll('[data-category]').forEach(button=>button.addEventListener('click',()=>setCategory(button.dataset.category)));
     document.querySelectorAll('[data-level]').forEach(button=>button.addEventListener('click',()=>setLevel(button.dataset.level)));
     $('start-button').addEventListener('click',begin);
+    $('daily-start-button').addEventListener('click',startDaily);
     $('badges-button').addEventListener('click',()=>{
       const panel=$('badges-panel'),open=panel.classList.contains('hidden');
       panel.classList.toggle('hidden',!open);
@@ -2506,7 +2632,7 @@
     });
     $('change-button').addEventListener('click',()=>{selectedCategory='mix';$('chosen-category').textContent=labels.mix;show('screen-intro');refreshBest();$('univers').scrollIntoView({behavior:'smooth'});});
     $('year').textContent=String(new Date().getFullYear());
-    refreshBest();refreshStats();refreshProgression();
+    refreshBest();refreshStats();refreshProgression();refreshDaily();
   </script>
 </body>
 </html>
