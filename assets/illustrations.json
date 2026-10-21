@@ -9,7 +9,9 @@
     "caption": "Cette vue ancienne situe le paysage urbain de Roubaix. Elle n'a pas été datée précisément et ne constitue pas une photographie de l'occupation en 1917.",
     "credit": "Éditeur ELD ; numérisation Claude Villetaneuse ; Wikimedia Commons",
     "licence": "Domaine public",
-    "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "width": 1645,
+    "height": 1059
   },
   "roubaix-interdiction-1915": {
     "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Rassemblement_Roubaix_12.5.1915_Landesarchiv_Baden-W%C3%BCrttemberg.jpg",
@@ -28,12 +30,14 @@
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:Usine_Motte_1910.jpg",
     "kind": "CARTE POSTALE HISTORIQUE",
     "date": "1910",
-    "title": "Les ouvriers de l'usine Alfred Motte",
-    "alt": "Carte postale de 1910 montrant des ouvriers et machines textiles dans l'usine Alfred Motte à Roubaix.",
-    "caption": "La manufacture Alfred Motte photographiée avant la guerre, sur une carte postale de 1910. Cette image documente le monde textile roubaisien, et non des conditions de travail sous l'occupation en 1917.",
+    "title": "Ouvriers d’une usine Motte à Roubaix",
+    "alt": "Photographie de 1910 montrant des ouvriers au travail dans une usine Motte à Roubaix.",
+    "caption": "Des ouvriers d’une usine Motte à Roubaix en 1910. Ce document illustre le monde textile d’avant-guerre, sans montrer les conditions de travail imposées pendant l’occupation.",
     "credit": "Auteur inconnu ; carte postale ancienne ; Wikimedia Commons",
     "licence": "Domaine public",
-    "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/"
+    "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "width": 1096,
+    "height": 776
   },
   "roubaix-revues-1917": {
     "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/%22Revues_d%27Appel%22_(Erfassung_aller_Einwohner_von_Roubaix_und_Angabe_der_Meldetermine)_(No._289)_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_1376.jpg",
@@ -45,16 +49,18 @@
     "caption": "Cette affiche du 1er février 1917 organise des revues d'appel à Roubaix. Elle illustre le contrôle des habitants par les autorités occupantes ; ce n'est pas la convocation du 1er juillet citée plus bas.",
     "credit": "Landesarchiv Baden-Württemberg, Hauptstaatsarchiv Stuttgart, J 151 n° 1376, via Wikimedia Commons",
     "licence": "CC BY 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by/4.0/"
+    "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "width": 1953,
+    "height": 1411
   },
   "roubaix-laines-1917": {
     "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/%22Ville_de_Roubaix_-_Avis_%C3%A0_la_Population_-_pr%C3%A9l%C3%A8vement_de_laines_%26_M%C3%A9langes_de_laines_provenant_de_Matelas_et_Coussins%22_(Einsch%C3%A4rfung_fr%C3%BCherer_Anordnu_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_1451.jpg",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:%22Ville_de_Roubaix_-_Avis_%C3%A0_la_Population_-_pr%C3%A9l%C3%A8vement_de_laines_%26_M%C3%A9langes_de_laines_provenant_de_Matelas_et_Coussins%22_(Einsch%C3%A4rfung_fr%C3%BCherer_Anordnu_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_1451.jpg",
     "kind": "AFFICHE ORIGINALE · 1917",
     "date": "30 octobre 1917",
-    "title": "La laine des matelas réquisitionnée",
+    "title": "Le prélèvement de laine imposé aux habitants",
     "alt": "Avis de la ville de Roubaix, 30 octobre 1917, concernant le prélèvement de laines et mélanges de laine issus de matelas et coussins.",
-    "caption": "Cette affiche du 30 octobre 1917 concerne la saisie de laine provenant de matelas et de coussins. Elle rend concrètes les réquisitions de matières premières en ville.",
+    "caption": "Cet avis du 30 octobre 1917 ordonne le prélèvement de laine contenue dans les matelas et coussins. Il documente une réquisition annoncée, sans prouver à lui seul l’ampleur de son application.",
     "credit": "Landesarchiv Baden-Württemberg, Hauptstaatsarchiv Stuttgart, J 151 n° 1451, via Wikimedia Commons",
     "licence": "CC BY 4.0",
     "licenceUrl": "https://creativecommons.org/licenses/by/4.0/"
@@ -69,6 +75,8 @@
     "caption": "Cet avis du 16 octobre 1917 restreint la liberté de circulation dans le secteur Lille–Roubaix–Tourcoing. Il ne concerne pas directement les départs vers le sud de la France évoqués dans le texte.",
     "credit": "Landesarchiv Baden-Württemberg, Hauptstaatsarchiv Stuttgart, J 151 n° 707, via Wikimedia Commons",
     "licence": "CC BY 4.0",
-    "licenceUrl": "https://creativecommons.org/licenses/by/4.0/"
+    "licenceUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "width": 1845,
+    "height": 1226
   }
 }
