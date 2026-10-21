@@ -254,6 +254,18 @@
     }
     @media(prefers-reduced-motion:reduce){.answer:hover:not(:disabled){transform:none}}
 
+
+    /* THOT Quiz V2 · Étape 2 : formats et indices */
+    .quiz-tools{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:17px 0 0}
+    .hint-trigger{border:1px solid #D8CBAD;color:#72552D;background:#FBF8F1;border-radius:12px;padding:11px 15px;font-size:13px;font-weight:800;cursor:pointer}
+    .hint-trigger:hover{background:#F2EBDD}
+    .hint-panel{margin:12px 0 0;padding:15px 18px;background:#F3EEE1;border:1px solid #E4D8BC;border-left:4px solid #927038;border-radius:5px 12px 12px 5px;font-size:14px;line-height:1.7;color:#4F4B3E}
+    .multi-validate{margin-left:auto}
+    .answer.selected:not(:disabled){border-color:#A88343;background:#F6F0DF;box-shadow:inset 0 0 0 1px #A88343}
+    .answer.selected:not(:disabled) .answer-letter{background:#B89558;color:#17243A}
+    .quiz-stage .level-pill{line-height:1.6}
+    @media(max-width:500px){.quiz-tools{align-items:stretch}.quiz-tools>*{width:100%;margin-left:0!important}.hint-trigger{text-align:center}}
+
   </style>
 </head>
 <body>
@@ -385,8 +397,10 @@
                 <div class="quiz-stage-sub"><span class="level-pill" id="question-level">🌱 Niveau facile</span><span class="quiz-streak" id="streak-status" aria-live="off">Série : 0</span></div>
                 <h3 class="question" id="question-text"></h3>
               </div>
-              <div class="quiz-answers-head"><span>Choisis une réponse</span><span>Une explication après chaque choix</span></div>
+              <div class="quiz-answers-head"><span id="answer-instruction">Choisis une réponse</span><span>Une explication après chaque choix</span></div>
               <div class="answers" id="answer-list"></div>
+              <div class="quiz-tools"><button type="button" class="hint-trigger" id="hint-button" aria-expanded="false" aria-controls="hint-panel">✧ Besoin d’un indice ?</button><button type="button" class="next multi-validate hidden" id="validate-button" disabled>Valider mes réponses</button></div>
+              <div class="hint-panel hidden" id="hint-panel" role="note"></div>
               <div class="quiz-track" id="quiz-track" aria-label="Parcours des cinq questions"></div>
               <div class="feedback hidden" id="feedback" role="status"></div>
               <div class="game-footer"><span class="game-helper">Un peu de curiosité, beaucoup de découvertes.</span><button class="next hidden" type="button" id="next-button">Question suivante →</button></div>
@@ -2118,7 +2132,7 @@
     };
     const $=id=>document.getElementById(id);
     const screens=['screen-intro','screen-question','screen-result'];
-    let selectedCategory='mix',selectedLevel='facile',round=[],index=0,score=0,answered=false,attempts=[],streak=0,bestStreak=0;
+    let selectedCategory='mix',selectedLevel='facile',round=[],index=0,score=0,answered=false,attempts=[],streak=0,bestStreak=0,selectedAnswers=new Set();
     const show=id=>screens.forEach(name=>$(name).classList.toggle('hidden',name!==id));
     function shuffle(arr){const copy=[...arr];for(let i=copy.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]];}return copy;}
     const storageKey='thot_v2_stats';
@@ -2164,31 +2178,32 @@
       $('level-description').textContent=levels[level].description;
       refreshBest();
     }
+    function questionType(q){return q.type==='multi_select'?'multi_select':q.type==='true_false'?'true_false':'single_select';}
+    function correctIndexes(q){return Array.isArray(q.correct)?q.correct:[q.correct];}
     function chooseRound(pool,n=5){
       const key=bestKey();
-      // Conserver la dernière partie (ancien format), et ajouter un historique cyclique.
-      if(!stats.history || typeof stats.history!=='object' || Array.isArray(stats.history))stats.history={};
-      const previous=Array.isArray(stats.history[key])?stats.history[key]:[];
-      const history=[...new Set(previous.filter(v=>typeof v==='string'))];
-      const known=new Set(pool.map(q=>q.q));
-      const used=new Set(history.filter(q=>known.has(q)));
-      const unseen=shuffle(pool.filter(q=>!used.has(q.q)));
-      const chosen=unseen.slice(0,n);
-      if(chosen.length<n){
-        // Le catalogue a été parcouru : repartir sur un nouveau cycle,
-        // sans reprendre les mêmes questions à l'intérieur d'une partie.
-        const recent=new Set(Array.isArray(stats.recent[key])?stats.recent[key]:[]);
-        const available=pool.filter(q=>!chosen.includes(q));
-        const prioritized=shuffle(available.filter(q=>!recent.has(q.q)));
-        const fallback=shuffle(available.filter(q=>recent.has(q.q)));
-        chosen.push(...[...prioritized,...fallback].slice(0,n-chosen.length));
-        stats.history[key]=chosen.map(q=>q.q);
-      } else {
-        stats.history[key]=[...used,...chosen.map(q=>q.q)];
-      }
-      stats.recent[key]=chosen.map(q=>q.q);
+      if(!stats.history||typeof stats.history!=='object'||Array.isArray(stats.history))stats.history={};
+      const prev=Array.isArray(stats.history[key])?stats.history[key]:[];
+      const used=new Set(prev.filter(q=>typeof q==='string'&&pool.some(p=>p.q===q)));
+      const recent=new Set(Array.isArray(stats.recent[key])?stats.recent[key]:[]);
+      const chosen=[];
+      const take=(arr,count)=>{
+        const fresh=shuffle(arr.filter(q=>!used.has(q.q)&&!chosen.includes(q)));
+        const fallback=shuffle(arr.filter(q=>used.has(q.q)&&!recent.has(q.q)&&!chosen.includes(q)));
+        const last=shuffle(arr.filter(q=>used.has(q.q)&&recent.has(q.q)&&!chosen.includes(q)));
+        chosen.push(...[...fresh,...fallback,...last].slice(0,count));
+      };
+      // Diversité garantie dans la partie tant que les formats sont disponibles.
+      take(pool.filter(q=>questionType(q)==='true_false'),1);
+      take(pool.filter(q=>questionType(q)==='multi_select'),1);
+      take(pool.filter(q=>questionType(q)==='single_select'),Math.max(0,n-chosen.length));
+      if(chosen.length<n)take(pool,n-chosen.length);
+      const selected=chosen.slice(0,n);
+      const uniqueUsed=new Set([...used,...selected.map(q=>q.q)]);
+      stats.history[key]=uniqueUsed.size>=pool.length?selected.map(q=>q.q):[...uniqueUsed];
+      stats.recent[key]=selected.map(q=>q.q);
       saveStats();
-      return shuffle(chosen);
+      return shuffle(selected);
     }
     function begin(){
       const pool=questions.filter(q=>q.level===selectedLevel&&(selectedCategory==='mix'||q.cat===selectedCategory));
@@ -2211,47 +2226,87 @@
       });
     }
     function renderQuestion(){
-      answered=false;
-      const item=round[index];
+      answered=false;selectedAnswers=new Set();
+      const item=round[index],type=questionType(item);
       $('question-counter').textContent='QUESTION '+(index+1)+' / '+round.length;
       $('current-score').textContent=score+' bonne'+(score>1?'s':'')+' réponse'+(score>1?'s':'');
       $('progressbar').setAttribute('aria-valuemax',String(round.length));
       $('progressbar').setAttribute('aria-valuenow',String(index));
       $('progressfill').style.width=(index/round.length*100)+'%';
-      $('question-level').textContent=levels[item.level].label+' · '+labels[item.cat];
+      const typeLabel=type==='true_false'?' · Vrai ou faux':type==='multi_select'?' · Plusieurs réponses':' · QCM';
+      $('question-level').textContent=levels[item.level].label+' · '+labels[item.cat]+typeLabel;
       $('streak-status').textContent='Série : '+streak;
       $('question-text').textContent=item.q;
+      $('answer-instruction').textContent=type==='multi_select'?'Sélectionne toutes les bonnes réponses':type==='true_false'?'Vrai ou faux ?':'Choisis une seule réponse';
       renderQuestionTrack();
       $('answer-list').replaceChildren();
       $('feedback').className='feedback hidden';$('feedback').replaceChildren();
       $('next-button').classList.add('hidden');
+      $('hint-panel').classList.add('hidden');
+      $('hint-panel').textContent='';
+      $('hint-button').classList.remove('hidden');
+      $('hint-button').setAttribute('aria-expanded','false');
+      $('hint-button').textContent='✧ Besoin d’un indice ?';
+      $('validate-button').classList.toggle('hidden',type!=='multi_select');
+      $('validate-button').disabled=true;
+      $('validate-button').textContent='Valider mes réponses';
       const choices=shuffle(item.a.map((answer,idx)=>({answer,idx})));
       choices.forEach(({answer,idx},n)=>{
-        const button=document.createElement('button');button.type='button';button.className='answer';button.dataset.idx=String(idx);
-        const letter=document.createElement('span');letter.className='answer-letter';letter.textContent='ABCD'[n];
+        const button=document.createElement('button');
+        button.type='button';button.className='answer';button.dataset.idx=String(idx);
+        const letter=document.createElement('span');letter.className='answer-letter';
+        letter.textContent=type==='true_false'?(answer==='Vrai'?'V':'F'):'ABCD'[n];
         const answerText=document.createElement('span');answerText.textContent=answer;
         button.append(letter,answerText);
-        button.addEventListener('click',()=>submitAnswer(idx));
+        if(type==='multi_select'){
+          button.setAttribute('aria-pressed','false');
+          button.addEventListener('click',()=>{
+            if(answered)return;
+            if(selectedAnswers.has(idx))selectedAnswers.delete(idx);else selectedAnswers.add(idx);
+            button.classList.toggle('selected',selectedAnswers.has(idx));
+            button.setAttribute('aria-pressed',String(selectedAnswers.has(idx)));
+            $('validate-button').disabled=selectedAnswers.size===0;
+            $('validate-button').textContent=selectedAnswers.size>0?'Valider '+selectedAnswers.size+' réponse'+(selectedAnswers.size>1?'s':''):'Valider mes réponses';
+          });
+        }else button.addEventListener('click',()=>submitAnswer(idx));
         $('answer-list').append(button);
       });
     }
+    function showHint(){
+      if(answered)return;
+      const panel=$('hint-panel'),willOpen=panel.classList.contains('hidden');
+      panel.classList.toggle('hidden',!willOpen);
+      $('hint-button').setAttribute('aria-expanded',String(willOpen));
+      $('hint-button').textContent=willOpen?'Masquer l’indice ↑':'✧ Besoin d’un indice ?';
+      if(willOpen)panel.textContent=round[index].hint||'Prends le temps de comparer les propositions et de repérer ce que demande exactement la question.';
+    }
     function submitAnswer(chosen){
-      if(answered)return;answered=true;
-      const item=round[index],good=chosen===item.correct;
-      if(good){score++;streak++;bestStreak=Math.max(bestStreak,streak);}
-      else streak=0;
-      attempts.push({question:item.q,chosen:item.a[chosen],correct:item.a[item.correct],why:item.why,ok:good});
+      if(answered)return;
+      const item=round[index],type=questionType(item);
+      const picks=Array.isArray(chosen)?[...new Set(chosen)].sort((a,b)=>a-b):[chosen];
+      if(type==='multi_select'&&picks.length===0)return;
+      answered=true;
+      const expected=correctIndexes(item).slice().sort((a,b)=>a-b);
+      const good=picks.length===expected.length&&picks.every((v,i)=>v===expected[i]);
+      if(good){score++;streak++;bestStreak=Math.max(bestStreak,streak);}else streak=0;
+      const readable=values=>values.map(i=>item.a[i]).join(' · ');
+      attempts.push({question:item.q,chosen:readable(picks),correct:readable(expected),why:item.why,ok:good});
       $('streak-status').textContent='Série : '+streak;
       renderQuestionTrack();
       document.querySelectorAll('.answer').forEach(b=>{
         const value=Number(b.dataset.idx);b.disabled=true;
-        if(value===item.correct)b.classList.add('correct');
-        else if(value===chosen)b.classList.add('wrong');
+        if(expected.includes(value))b.classList.add('correct');
+        else if(picks.includes(value))b.classList.add('wrong');
+        b.setAttribute('aria-pressed',String(picks.includes(value)));
       });
+      $('hint-button').classList.add('hidden');
+      $('hint-panel').classList.add('hidden');
+      $('validate-button').classList.add('hidden');
       $('current-score').textContent=score+' bonne'+(score>1?'s':'')+' réponse'+(score>1?'s':'');
       const feedback=$('feedback');feedback.className='feedback'+(good?'':' bad');
       const title=document.createElement('strong');title.textContent=good?'✦ Bonne réponse !':'✦ Tu viens d’apprendre quelque chose !';
-      const detail=document.createElement('span');detail.textContent=item.why;
+      const detail=document.createElement('span');
+      detail.textContent=(good?'':'Bonne'+(expected.length>1?'s':'')+' réponse'+(expected.length>1?'s':'')+' : '+readable(expected)+'. ')+item.why;
       feedback.append(title,detail);
       $('next-button').textContent=index===round.length-1?'Voir mon résultat →':'Question suivante →';
       $('next-button').classList.remove('hidden');
@@ -2298,6 +2353,8 @@
     document.querySelectorAll('[data-category]').forEach(button=>button.addEventListener('click',()=>setCategory(button.dataset.category)));
     document.querySelectorAll('[data-level]').forEach(button=>button.addEventListener('click',()=>setLevel(button.dataset.level)));
     $('start-button').addEventListener('click',begin);
+    $('hint-button').addEventListener('click',showHint);
+    $('validate-button').addEventListener('click',()=>submitAnswer([...selectedAnswers]));
     $('next-button').addEventListener('click',next);
     $('replay-button').addEventListener('click',begin);
     $('review-button').addEventListener('click',()=>{
