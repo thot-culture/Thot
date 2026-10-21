@@ -2501,7 +2501,9 @@
       $('daily-start-button').disabled=done;
       $('daily-start-button').textContent=done?'✓ Défi déjà joué':'Relever le défi du jour ↗';
       $('daily-status').textContent=done?'Score du jour : '+d.lastScore+'/5':'Un essai par jour';
-      $('daily-streak').textContent='✦ Série quotidienne : '+d.streak+' jour'+(d.streak>1?'s':'');
+      const yesterday=new Date(Date.parse(day+'T00:00:00Z')-86400000).toISOString().slice(0,10);
+      const activeStreak=d.lastCompleted===day||d.lastCompleted===yesterday?d.streak:0;
+      $('daily-streak').textContent='✦ Série quotidienne : '+activeStreak+' jour'+(activeStreak>1?'s':'');
       const list=$('daily-goals-list');list.replaceChildren();
       for(const g of dailyGoals(day)){
         const count=d.day===day?g.value:0,earned=d.day===day&&d.claimed.includes(g.id);
@@ -2686,8 +2688,12 @@
       stats.games++;
       stats.correct+=score;
       stats.answered+=round.length;
-      const best=stats.bests[bestKey()];
-      if(typeof best!=='number'||score>best)stats.bests[bestKey()]=score;
+      // Le défi quotidien mélange les univers et les niveaux : il ne doit
+      // jamais modifier le record d'un quiz classique choisi auparavant.
+      if(gameMode==='classic'){
+        const best=stats.bests[bestKey()];
+        if(typeof best!=='number'||score>best)stats.bests[bestKey()]=score;
+      }
       let earnedXP=score*10+5+(score===round.length?10:0),missionXP=0;
       const today=utcDay();
       if(gameMode!=='daily'||gameDay===today){
@@ -2725,7 +2731,7 @@
         ['La curiosité se cultive !','Chaque erreur est une découverte. Retente ta chance avec d’autres questions.'];
       $('result-title').textContent=msg[0];$('result-message').textContent=msg[1];
       $('result-performance').textContent=score+' bonne'+(score>1?'s':'')+' réponse'+(score>1?'s':'')+' sur '+round.length+' · Meilleure série : '+bestStreak;
-      $('result-detail').textContent=labels[selectedCategory]+' · '+levels[selectedLevel].label+' · '+stats.games+' partie'+(stats.games>1?'s':'')+' terminée'+(stats.games>1?'s':'')+' sur cet appareil';
+      $('result-detail').textContent=(gameMode==='daily'?'Défi quotidien · 5 univers':labels[selectedCategory]+' · '+levels[selectedLevel].label)+' · '+stats.games+' partie'+(stats.games>1?'s':'')+' terminée'+(stats.games>1?'s':'')+' sur cet appareil';
       const wrong=attempts.filter(a=>!a.ok);
       const reviewList=$('review-list');reviewList.replaceChildren();
       wrong.forEach((a)=>{
