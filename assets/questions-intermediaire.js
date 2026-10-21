@@ -271,19 +271,19 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
     "hint": "Localise d'abord la région ou le pays sur une carte du monde."
   },
   {
-    "cat": "geographie",
+    "cat": "histoire",
     "level": "intermediaire",
     "type": "single_select",
-    "q": "Quel pays possède les deux grandes îles de la Terre du Nord et de la Terre du Sud ?",
+    "q": "Quel homme politique dirige le Royaume-Uni pendant la majeure partie de la Seconde Guerre mondiale ?",
     "a": [
-      "La Nouvelle-Zélande",
-      "Le Japon",
-      "L'Indonésie",
-      "Les Philippines"
+      "Winston Churchill",
+      "Neville Chamberlain",
+      "Clement Attlee",
+      "Anthony Eden"
     ],
     "correct": 0,
-    "why": "La Nouvelle-Zélande est la bonne réponse. Il faut distinguer les pays, les régions et leurs positions géographiques.",
-    "hint": "Localise d'abord la région ou le pays sur une carte du monde."
+    "why": "Winston Churchill devient Premier ministre du Royaume-Uni en mai 1940 et dirige le gouvernement britannique jusqu'en juillet 1945.",
+    "hint": "Pense au Premier ministre associé à la résistance britannique durant le Blitz."
   },
   {
     "cat": "sciences",
