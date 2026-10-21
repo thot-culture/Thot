@@ -2189,7 +2189,7 @@
     const show=id=>screens.forEach(name=>$(name).classList.toggle('hidden',name!==id));
     function shuffle(arr){const copy=[...arr];for(let i=copy.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]];}return copy;}
     const storageKey='thot_v2_stats';
-    const defaults=()=>({games:0,correct:0,answered:0,bests:{},recent:{},history:{}});
+    const defaults=()=>({games:0,correct:0,answered:0,bests:{},recent:{},history:{},progression:{xp:0,byCategory:{},bestStreak:0}});
     function loadStats(){
       try{
         const raw=JSON.parse(localStorage.getItem(storageKey)||'null');
@@ -2201,8 +2201,26 @@
         if(raw.bests&&typeof raw.bests==='object'&&!Array.isArray(raw.bests))stats.bests=raw.bests;
         if(raw.recent&&typeof raw.recent==='object'&&!Array.isArray(raw.recent))stats.recent=raw.recent;
         if(raw.history&&typeof raw.history==='object'&&!Array.isArray(raw.history))stats.history=raw.history;
+        if(raw.progression&&typeof raw.progression==='object'&&!Array.isArray(raw.progression)){
+          const p=raw.progression;
+          if(Number.isSafeInteger(p.xp)&&p.xp>=0)stats.progression.xp=p.xp;
+          if(Number.isSafeInteger(p.bestStreak)&&p.bestStreak>=0)stats.progression.bestStreak=p.bestStreak;
+          if(p.byCategory&&typeof p.byCategory==='object'&&!Array.isArray(p.byCategory)){
+            for(const cat of ['histoire','geographie','sciences','arts','insolite']){
+              if(Number.isSafeInteger(p.byCategory[cat])&&p.byCategory[cat]>=0)stats.progression.byCategory[cat]=p.byCategory[cat];
+            }
+          }
+        }else{
+          // Une seule migration à partir des compteurs déjà sauvegardés.
+          // Aucune catégorie historique inconnue n'est devinée.
+          stats.progression.xp=stats.correct*10+stats.games*5;
+          saveProgressMigration(stats);
+        }
         return stats;
       }catch{return defaults();}
+    }
+    function saveProgressMigration(value){
+      try{localStorage.setItem(storageKey,JSON.stringify(value));}catch{/* stockage indisponible */}
     }
     let stats=loadStats();
     function saveStats(){try{localStorage.setItem(storageKey,JSON.stringify(stats));}catch{/* stockage privé ou indisponible */}}
@@ -2217,6 +2235,55 @@
       $('stat-games').textContent=String(stats.games);
       $('stat-correct').textContent=String(stats.correct);
       $('stat-accuracy').textContent=stats.answered>0?Math.round(stats.correct/stats.answered*100)+' %':'—';
+    }
+    const xpLevels=[
+      {name:'Apprenti',min:0,icon:'✦'},
+      {name:'Explorateur',min:150,icon:'◈'},
+      {name:'Érudit',min:400,icon:'❖'},
+      {name:'Encyclopédiste',min:900,icon:'✳'}
+    ];
+    const badgeCatalog=[
+      {id:'debut',icon:'✦',title:'Premier pas',desc:'Terminer une première partie.',goal:1,get:()=>stats.games},
+      {id:'assidu',icon:'◈',title:'Curieux assidu',desc:'Terminer 5 parties.',goal:5,get:()=>stats.games},
+      {id:'sansfaute',icon:'★',title:'Sans-faute',desc:'Réussir une partie à 5/5.',goal:1,get:()=>Object.values(stats.bests).some(v=>Number(v)===5)?1:0},
+      {id:'serie',icon:'⚡',title:'Esprit vif',desc:'Réussir 3 réponses consécutives.',goal:3,get:()=>stats.progression.bestStreak},
+      {id:'histoire',icon:'🏛️',title:'Historien',desc:'5 bonnes réponses en histoire.',goal:5,get:()=>stats.progression.byCategory.histoire||0},
+      {id:'geographie',icon:'🌍',title:'Cartographe',desc:'5 bonnes réponses en géographie.',goal:5,get:()=>stats.progression.byCategory.geographie||0},
+      {id:'sciences',icon:'🔬',title:'Scientifique',desc:'5 bonnes réponses en sciences.',goal:5,get:()=>stats.progression.byCategory.sciences||0},
+      {id:'arts',icon:'🎨',title:'Esthète',desc:'5 bonnes réponses en arts.',goal:5,get:()=>stats.progression.byCategory.arts||0},
+      {id:'insolite',icon:'✨',title:"Explorateur de l'insolite",desc:'5 bonnes réponses insolites.',goal:5,get:()=>stats.progression.byCategory.insolite||0}
+    ];
+    function currentLevel(xp){
+      let active=xpLevels[0],next=null;
+      for(const level of xpLevels){if(xp>=level.min)active=level;else{next=level;break;}}
+      return {active,next};
+    }
+    function unlockedBadgeIds(){return badgeCatalog.filter(b=>b.get()>=b.goal).map(b=>b.id);}
+    function refreshProgression(){
+      const xp=stats.progression.xp,level=currentLevel(xp);
+      $('xp-level').textContent=level.active.icon+' '+level.active.name;
+      $('xp-count').textContent=xp.toLocaleString('fr-FR')+' XP';
+      $('xp-next').textContent=level.next?'Prochain niveau : '+level.next.min+' XP':'Dernier niveau atteint';
+      const from=level.active.min,to=level.next?level.next.min:from+1;
+      const ratio=level.next?Math.max(0,Math.min(1,(xp-from)/(to-from))):1;
+      $('xp-fill').style.width=(ratio*100).toFixed(1)+'%';
+      $('xp-progress').setAttribute('aria-valuemin',String(from));
+      $('xp-progress').setAttribute('aria-valuemax',String(level.next?to:Math.max(xp,from+1)));
+      $('xp-progress').setAttribute('aria-valuenow',String(xp));
+      $('xp-progress').setAttribute('aria-valuetext',level.next?xp+' XP sur '+to+' pour '+level.next.name:'Dernier niveau atteint');
+      const unlocked=unlockedBadgeIds();
+      $('badge-count').textContent=unlocked.length+' / '+badgeCatalog.length;
+      const grid=$('badges-grid');grid.replaceChildren();
+      for(const b of badgeCatalog){
+        const current=b.get(),earned=current>=b.goal;
+        const item=document.createElement('div');item.className='badge-item '+(earned?'earned':'locked');
+        const emblem=document.createElement('span');emblem.className='badge-emblem';emblem.textContent=earned?b.icon:'🔒';emblem.setAttribute('aria-hidden','true');
+        const copy=document.createElement('div');copy.className='badge-copy';
+        const title=document.createElement('strong');title.textContent=b.title+(earned?' · obtenu':'');
+        const desc=document.createElement('span');desc.textContent=b.desc;
+        const state=document.createElement('small');state.textContent=earned?'Débloqué':Math.min(current,b.goal)+' / '+b.goal;
+        copy.append(title,desc,state);item.append(emblem,copy);grid.append(item);
+      }
     }
     function setCategory(cat){
       selectedCategory=labels[cat]?cat:'mix';
@@ -2343,7 +2410,7 @@
       const good=picks.length===expected.length&&picks.every((v,i)=>v===expected[i]);
       if(good){score++;streak++;bestStreak=Math.max(bestStreak,streak);}else streak=0;
       const readable=values=>values.map(i=>item.a[i]).join(' · ');
-      attempts.push({question:item.q,chosen:readable(picks),correct:readable(expected),why:item.why,ok:good});
+      attempts.push({question:item.q,category:item.cat,chosen:readable(picks),correct:readable(expected),why:item.why,ok:good});
       $('streak-status').textContent='Série : '+streak;
       renderQuestionTrack();
       document.querySelectorAll('.answer').forEach(b=>{
@@ -2374,12 +2441,26 @@
       else {renderQuestion();const first=$('answer-list').querySelector('button');if(first)first.focus({preventScroll:true});}
     }
     function finish(){
+      const priorBadges=new Set(unlockedBadgeIds());
+      const priorLevel=currentLevel(stats.progression.xp).active.name;
       stats.games++;
       stats.correct+=score;
       stats.answered+=round.length;
       const best=stats.bests[bestKey()];
       if(typeof best!=='number'||score>best)stats.bests[bestKey()]=score;
-      saveStats();refreshBest();refreshStats();
+      const earnedXP=score*10+5+(score===round.length?10:0);
+      stats.progression.xp+=earnedXP;
+      stats.progression.bestStreak=Math.max(stats.progression.bestStreak,bestStreak);
+      attempts.forEach(a=>{
+        if(a.ok&&Object.prototype.hasOwnProperty.call(labels,a.category)&&a.category!=='mix')
+          stats.progression.byCategory[a.category]=(stats.progression.byCategory[a.category]||0)+1;
+      });
+      const newBadges=badgeCatalog.filter(b=>!priorBadges.has(b.id)&&b.get()>=b.goal);
+      saveStats();refreshBest();refreshStats();refreshProgression();
+      const newLevel=currentLevel(stats.progression.xp).active.name;
+      $('xp-earned').textContent='✦ +'+earnedXP+' XP · Total : '+stats.progression.xp.toLocaleString('fr-FR')+' XP'+(newLevel!==priorLevel?' · Nouveau niveau : '+newLevel+' !':'');
+      $('badges-earned').classList.toggle('hidden',newBadges.length===0);
+      $('badges-earned').textContent=newBadges.length?'Badge'+(newBadges.length>1?'s':'')+' débloqué'+(newBadges.length>1?'s':'')+' : '+newBadges.map(b=>b.icon+' '+b.title).join(' · '):'';
       $('final-score').textContent=score+'/'+round.length;
       const msg=score===5?['Un sans-faute !','Tu maîtrises cette partie du savoir. Prêt pour un nouveau défi ?']:
         score>=3?['Très belle partie !','Et surtout, cinq occasions de découvrir quelque chose de nouveau.']:
@@ -2406,6 +2487,11 @@
     document.querySelectorAll('[data-category]').forEach(button=>button.addEventListener('click',()=>setCategory(button.dataset.category)));
     document.querySelectorAll('[data-level]').forEach(button=>button.addEventListener('click',()=>setLevel(button.dataset.level)));
     $('start-button').addEventListener('click',begin);
+    $('badges-button').addEventListener('click',()=>{
+      const panel=$('badges-panel'),open=panel.classList.contains('hidden');
+      panel.classList.toggle('hidden',!open);
+      $('badges-button').setAttribute('aria-expanded',String(open));
+    });
     $('hint-button').addEventListener('click',showHint);
     $('validate-button').addEventListener('click',()=>submitAnswer([...selectedAnswers]));
     $('next-button').addEventListener('click',next);
@@ -2420,7 +2506,7 @@
     });
     $('change-button').addEventListener('click',()=>{selectedCategory='mix';$('chosen-category').textContent=labels.mix;show('screen-intro');refreshBest();$('univers').scrollIntoView({behavior:'smooth'});});
     $('year').textContent=String(new Date().getFullYear());
-    refreshBest();refreshStats();
+    refreshBest();refreshStats();refreshProgression();
   </script>
 </body>
 </html>
