@@ -55,7 +55,7 @@ article li{line-height:1.75}
 .sommaire li{list-style:none;margin:0}
 .sommaire a{display:flex;align-items:flex-start;gap:12px;text-decoration:none;color:var(--nuit);font-size:13.5px;line-height:1.45;padding:11px 8px;border-radius:8px;overflow-wrap:anywhere;transition:background-color .17s,color .17s}
 .sommaire a:hover{background:#F4F0E8;color:#72582D}
-.sommaire-num{flex:none;font:700 11px/1.8 "Segoe UI",Arial,sans-serif;letter-spacing:.04em;color:#AE874B;min-width:20px}
+.sommaire-num{flex:none;font:800 12px/1.8 "Segoe UI",Arial,sans-serif;letter-spacing:.04em;color:#775A2F;min-width:20px}
 .sommaire-annexe{font-weight:700;font-size:13px}
 .sommaire-separateur{height:1px;background:var(--bord);margin:13px 0 8px}
 .pied{background:var(--nuit);color:#E4E8EA;padding:27px 0;font-size:13px}
