@@ -12,7 +12,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "L'édit de Roussillon"
     ],
     "correct": 0,
-    "why": "L'édit de Fontainebleau constitue la réponse attendue. Cette question requiert une connaissance précise de la chronologie historique.",
+    "why": "L'édit de Fontainebleau signé par Louis XIV en 1685 révoque l'édit de Nantes de 1598.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -27,7 +27,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "La Déclaration de 1793"
     ],
     "correct": 0,
-    "why": "Le Code civil constitue la réponse attendue. Cette question requiert une connaissance précise de la chronologie historique.",
+    "why": "Le Code civil des Français est promulgué en 1804 sous Napoléon Bonaparte, alors Premier consul.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -42,7 +42,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Théodose Ier"
     ],
     "correct": 0,
-    "why": "Constantin Ier constitue la réponse attendue. Cette question requiert une connaissance précise de la chronologie historique.",
+    "why": "Constantin et Licinius publient en 313 des mesures de tolérance religieuse généralement appelées édit de Milan.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -57,7 +57,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Pharsale"
     ],
     "correct": 0,
-    "why": "Cannes constitue la réponse attendue. Cette question requiert une connaissance précise de la chronologie historique.",
+    "why": "À Cannes en 216 av. J.-C., Hannibal inflige une défaite majeure aux légions romaines.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -72,7 +72,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Aboukir"
     ],
     "correct": 0,
-    "why": "Lépante constitue la réponse attendue. Cette question requiert une connaissance précise de la chronologie historique.",
+    "why": "La bataille de Lépante oppose en 1571 la flotte de la Sainte Ligue à celle de l'Empire ottoman.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -87,7 +87,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Charles II"
     ],
     "correct": 0,
-    "why": "Charles Ier constitue la réponse attendue. Cette question requiert une connaissance précise de la chronologie historique.",
+    "why": "Charles Ier d'Angleterre est jugé puis exécuté en janvier 1649 au terme de la guerre civile.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -102,7 +102,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Le traité de Brest-Litovsk"
     ],
     "correct": 0,
-    "why": "Le traité de Francfort constitue la réponse attendue. Cette question requiert une connaissance précise de la chronologie historique.",
+    "why": "Le traité de Francfort du 10 mai 1871 met fin à la guerre franco-allemande de 1870-1871.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -117,7 +117,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Tite-Live"
     ],
     "correct": 0,
-    "why": "Hérodote constitue la réponse attendue. Cette question requiert une connaissance précise de la chronologie historique.",
+    "why": "Cicéron qualifie Hérodote de père de l'histoire ; ses Histoires relatent notamment les guerres médiques.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -132,7 +132,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Marie Tudor"
     ],
     "correct": 0,
-    "why": "Élisabeth Ire constitue la réponse attendue. Cette question requiert une connaissance précise de la chronologie historique.",
+    "why": "Élisabeth Ire accorde en 1600 la charte qui établit la Compagnie anglaise des Indes orientales.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -147,7 +147,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Pie IX"
     ],
     "correct": 0,
-    "why": "Paul III constitue la réponse attendue. Cette question requiert une connaissance précise de la chronologie historique.",
+    "why": "Paul III convoque le concile de Trente, qui s'ouvre en 1545 et joue un rôle majeur dans la réforme catholique.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -162,7 +162,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Le traité de Brétigny"
     ],
     "correct": 0,
-    "why": "Le traité de Verdun constitue la réponse attendue. Cette question requiert une connaissance précise de la chronologie historique.",
+    "why": "Le traité de Verdun de 843 partage l'Empire carolingien entre les trois fils de Louis le Pieux.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -177,7 +177,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Le détroit de Messine"
     ],
     "correct": 0,
-    "why": "Le détroit de Kertch constitue la réponse attendue. Cette question requiert une connaissance précise de la géographie régionale.",
+    "why": "Le détroit de Kertch relie la mer d'Azov à la mer Noire, entre la Crimée et la péninsule de Taman.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -192,7 +192,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Le Nil"
     ],
     "correct": 0,
-    "why": "Le Congo constitue la réponse attendue. Cette question requiert une connaissance précise de la géographie régionale.",
+    "why": "Le fleuve Congo atteint l'Atlantique près de Banana, à l'extrême ouest de la République démocratique du Congo.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -207,7 +207,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Le Gran Paradiso"
     ],
     "correct": 0,
-    "why": "Le mont Blanc constitue la réponse attendue. Cette question requiert une connaissance précise de la géographie régionale.",
+    "why": "Le mont Blanc, culminant à environ 4 806 mètres selon les mesures, est généralement considéré comme le sommet des Alpes.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -222,7 +222,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "La fosse des Tonga"
     ],
     "correct": 0,
-    "why": "La fosse des Mariannes constitue la réponse attendue. Cette question requiert une connaissance précise de la géographie régionale.",
+    "why": "Le Challenger Deep, dans la fosse des Mariannes, est le point océanique le plus profond connu.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -237,7 +237,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Le détroit de Makassar"
     ],
     "correct": 0,
-    "why": "Le détroit de Malacca constitue la réponse attendue. Cette question requiert une connaissance précise de la géographie régionale.",
+    "why": "Le détroit de Malacca sépare Sumatra de la péninsule Malaise et constitue une route maritime majeure.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -252,7 +252,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Le Kazakhstan"
     ],
     "correct": 0,
-    "why": "Le Tadjikistan constitue la réponse attendue. Cette question requiert une connaissance précise de la géographie régionale.",
+    "why": "Le Tadjikistan est frontalier de la Chine et de l'Afghanistan ; les autres choix ne touchent pas ces deux pays.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -267,7 +267,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "L'Ain"
     ],
     "correct": 0,
-    "why": "La Saône constitue la réponse attendue. Cette question requiert une connaissance précise de la géographie régionale.",
+    "why": "La Saône rejoint le Rhône dans la ville de Lyon. Attention : elle arrive par la rive droite du Rhône, et non par sa rive gauche.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -282,7 +282,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Washington"
     ],
     "correct": 0,
-    "why": "L'Alaska constitue la réponse attendue. Cette question requiert une connaissance précise de la géographie régionale.",
+    "why": "L'Alaska est séparé des autres États américains par le territoire canadien.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -297,7 +297,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Le lac Turkana"
     ],
     "correct": 0,
-    "why": "Le lac Victoria constitue la réponse attendue. Cette question requiert une connaissance précise de la géographie régionale.",
+    "why": "Le lac Victoria est traversé par l'équateur et partagé entre l'Ouganda, le Kenya et la Tanzanie.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -312,7 +312,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Le Gabon"
     ],
     "correct": 0,
-    "why": "La Namibie constitue la réponse attendue. Cette question requiert une connaissance précise de la géographie régionale.",
+    "why": "La Côte des Squelettes s'étend sur le littoral atlantique de la Namibie, au bord du désert du Namib.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -327,7 +327,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "L'oblast de Belgorod"
     ],
     "correct": 0,
-    "why": "L'oblast de Kaliningrad constitue la réponse attendue. Cette question requiert une connaissance précise de la géographie régionale.",
+    "why": "L'oblast russe de Kaliningrad est séparé du reste de la Russie et situé entre la Pologne et la Lituanie.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -342,7 +342,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Le boson de Higgs"
     ],
     "correct": 0,
-    "why": "Le photon constitue la réponse attendue. Cette question requiert une connaissance précise du phénomène scientifique.",
+    "why": "Le photon est le quantum du champ électromagnétique ; les gluons transportent l'interaction forte.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -357,7 +357,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "L'appareil de Golgi"
     ],
     "correct": 0,
-    "why": "La membrane interne mitochondriale constitue la réponse attendue. Cette question requiert une connaissance précise du phénomène scientifique.",
+    "why": "Chez les eucaryotes, la chaîne respiratoire et l'ATP synthase se trouvent dans la membrane interne des mitochondries.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -372,7 +372,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "La loi de Faraday"
     ],
     "correct": 0,
-    "why": "La loi de Boyle-Mariotte constitue la réponse attendue. Cette question requiert une connaissance précise du phénomène scientifique.",
+    "why": "La loi de Boyle-Mariotte indique que, pour une quantité donnée de gaz à température constante, le produit pression × volume demeure constant.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -387,7 +387,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "L'amylase"
     ],
     "correct": 0,
-    "why": "L'ADN polymérase constitue la réponse attendue. Cette question requiert une connaissance précise du phénomène scientifique.",
+    "why": "L'ADN polymérase synthétise un nouveau brin d'ADN à partir d'une matrice pendant la réplication.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -402,7 +402,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Le chrome"
     ],
     "correct": 0,
-    "why": "Le fer constitue la réponse attendue. Cette question requiert une connaissance précise du phénomène scientifique.",
+    "why": "Le fer est l'élément de numéro atomique 26 ; le cobalt porte le numéro 27 et le nickel le numéro 28.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -417,7 +417,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Michael Faraday"
     ],
     "correct": 0,
-    "why": "Isaac Newton constitue la réponse attendue. Cette question requiert une connaissance précise du phénomène scientifique.",
+    "why": "Newton présente les trois lois du mouvement dans ses Principia publiés en 1687.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -432,7 +432,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "La réfraction atmosphérique"
     ],
     "correct": 0,
-    "why": "L'expansion de l'espace constitue la réponse attendue. Cette question requiert une connaissance précise du phénomène scientifique.",
+    "why": "Le décalage cosmologique vers le rouge découle de l'étirement des longueurs d'onde avec l'expansion de l'Univers.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -447,7 +447,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Le siemens"
     ],
     "correct": 0,
-    "why": "Le farad constitue la réponse attendue. Cette question requiert une connaissance précise du phénomène scientifique.",
+    "why": "Le farad est l'unité SI de capacité électrique ; l'ohm mesure la résistance électrique.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -462,7 +462,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Alexander von Humboldt"
     ],
     "correct": 0,
-    "why": "Alfred Wegener constitue la réponse attendue. Cette question requiert une connaissance précise du phénomène scientifique.",
+    "why": "Alfred Wegener présente en 1912 l'idée que les continents ont dérivé les uns par rapport aux autres.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -477,7 +477,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "La désintégration du radium"
     ],
     "correct": 0,
-    "why": "La fusion de l'hydrogène constitue la réponse attendue. Cette question requiert une connaissance précise du phénomène scientifique.",
+    "why": "La fusion de noyaux d'hydrogène en hélium fournit l'essentiel de l'énergie produite au cœur du Soleil.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -492,7 +492,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "L'ATP"
     ],
     "correct": 0,
-    "why": "L'ARN messager constitue la réponse attendue. Cette question requiert une connaissance précise du phénomène scientifique.",
+    "why": "L'ARN messager véhicule une séquence issue de la transcription d'un gène jusqu'aux ribosomes.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -507,7 +507,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "La combinatoire"
     ],
     "correct": 0,
-    "why": "La topologie constitue la réponse attendue. Cette question requiert une connaissance précise du phénomène scientifique.",
+    "why": "La topologie étudie notamment les propriétés invariantes sous des déformations continues.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -522,7 +522,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "La liquéfaction"
     ],
     "correct": 0,
-    "why": "La sublimation constitue la réponse attendue. Cette question requiert une connaissance précise du phénomène scientifique.",
+    "why": "La sublimation est le passage direct d'un solide à un gaz, sans étape liquide.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -537,7 +537,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Marivaux"
     ],
     "correct": 0,
-    "why": "Jean Racine constitue la réponse attendue. Cette question requiert une connaissance précise de l'histoire des arts.",
+    "why": "Jean Racine fait représenter Bérénice en 1670, une tragédie du théâtre classique français.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -552,7 +552,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Walter Gropius"
     ],
     "correct": 0,
-    "why": "Frank Lloyd Wright constitue la réponse attendue. Cette question requiert une connaissance précise de l'histoire des arts.",
+    "why": "Frank Lloyd Wright conçoit Fallingwater, maison bâtie au-dessus d'une cascade en Pennsylvanie.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -567,7 +567,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Richard Wagner"
     ],
     "correct": 0,
-    "why": "Franz Schubert constitue la réponse attendue. Cette question requiert une connaissance précise de l'histoire des arts.",
+    "why": "Franz Schubert compose Winterreise (Voyage d'hiver), cycle de vingt-quatre lieder sur des poèmes de Wilhelm Müller.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -582,7 +582,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Édouard Manet"
     ],
     "correct": 0,
-    "why": "Claude Monet constitue la réponse attendue. Cette question requiert une connaissance précise de l'histoire des arts.",
+    "why": "Claude Monet peint plusieurs vues de la cathédrale de Rouen dans des conditions lumineuses différentes.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -597,7 +597,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Hayao Miyazaki"
     ],
     "correct": 0,
-    "why": "Akira Kurosawa constitue la réponse attendue. Cette question requiert une connaissance précise de l'histoire des arts.",
+    "why": "Akira Kurosawa réalise Les Sept Samouraïs en 1954, film majeur du cinéma japonais.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -612,7 +612,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Ivan Tourgueniev"
     ],
     "correct": 0,
-    "why": "Mikhaïl Boulgakov constitue la réponse attendue. Cette question requiert une connaissance précise de l'histoire des arts.",
+    "why": "Mikhaïl Boulgakov écrit Le Maître et Marguerite, roman publié après sa mort.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -627,7 +627,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Le réalisme socialiste"
     ],
     "correct": 0,
-    "why": "Le surréalisme constitue la réponse attendue. Cette question requiert une connaissance précise de l'histoire des arts.",
+    "why": "André Breton publie le Manifeste du surréalisme en 1924, texte fondateur de ce mouvement.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -642,7 +642,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Les Vagues"
     ],
     "correct": 0,
-    "why": "Mrs Dalloway constitue la réponse attendue. Cette question requiert une connaissance précise de l'histoire des arts.",
+    "why": "Mrs Dalloway de Virginia Woolf paraît en 1925 et suit notamment une journée de Clarissa Dalloway.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -657,7 +657,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Erik Satie"
     ],
     "correct": 0,
-    "why": "Igor Stravinsky constitue la réponse attendue. Cette question requiert une connaissance précise de l'histoire des arts.",
+    "why": "Igor Stravinsky compose Le Sacre du printemps, créé à Paris en 1913 avec les Ballets russes.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -672,7 +672,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Jean-Baptiste Carpeaux"
     ],
     "correct": 0,
-    "why": "Auguste Rodin constitue la réponse attendue. Cette question requiert une connaissance précise de l'histoire des arts.",
+    "why": "Auguste Rodin crée Le Penseur dans le cadre de son projet La Porte de l'Enfer.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -687,7 +687,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Hans Memling"
     ],
     "correct": 0,
-    "why": "Jan van Eyck constitue la réponse attendue. Cette question requiert une connaissance précise de l'histoire des arts.",
+    "why": "Jan van Eyck peint Les Époux Arnolfini en 1434 ; l'œuvre est conservée à la National Gallery de Londres.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -702,7 +702,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Paroles"
     ],
     "correct": 0,
-    "why": "Les Fleurs du mal constitue la réponse attendue. Cette question requiert une connaissance précise de l'histoire des arts.",
+    "why": "Charles Baudelaire publie Les Fleurs du mal en 1857, recueil au cœur de la poésie moderne française.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -717,7 +717,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "La sphère de Magdebourg"
     ],
     "correct": 0,
-    "why": "La machine d'Anticythère constitue la réponse attendue. Cette question requiert une connaissance précise du phénomène étudié.",
+    "why": "La machine d'Anticythère, découverte dans une épave grecque en 1901, modélisait des cycles astronomiques.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -732,7 +732,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "L'olivine"
     ],
     "correct": 0,
-    "why": "La lazurite constitue la réponse attendue. Cette question requiert une connaissance précise du phénomène étudié.",
+    "why": "La lazurite est le principal minéral responsable du bleu du lapis-lazuli.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -747,7 +747,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Le lézard"
     ],
     "correct": 0,
-    "why": "La pieuvre constitue la réponse attendue. Cette question requiert une connaissance précise du phénomène étudié.",
+    "why": "Les pieuvres utilisent l'hémocyanine, pigment respiratoire contenant du cuivre, dans leur sang.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -762,7 +762,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Le système duodécimal pur"
     ],
     "correct": 0,
-    "why": "Le système sexagésimal constitue la réponse attendue. Cette question requiert une connaissance précise du phénomène étudié.",
+    "why": "Le système babylonien de numération utilise une base sexagésimale, c'est-à-dire fondée sur 60.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -777,7 +777,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Des feuilles d'indigotier"
     ],
     "correct": 0,
-    "why": "Des mollusques marins constitue la réponse attendue. Cette question requiert une connaissance précise du phénomène étudié.",
+    "why": "La pourpre de Tyr était produite à partir de sécrétions de certains mollusques marins, notamment des murex.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -792,7 +792,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Des griffes magnétiques"
     ],
     "correct": 0,
-    "why": "Des forces d'adhésion entre ses soies microscopiques et la surface constitue la réponse attendue. Cette question requiert une connaissance précise du phénomène étudié.",
+    "why": "L'adhésion des geckos est favorisée par des soies microscopiques permettant des interactions de surface, notamment les forces de van der Waals.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -807,7 +807,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Le tungstène"
     ],
     "correct": 0,
-    "why": "Le gallium constitue la réponse attendue. Cette question requiert une connaissance précise du phénomène étudié.",
+    "why": "Le gallium fond vers 29,8 °C : il peut ainsi devenir liquide dans une main chaude.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -822,7 +822,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Le rayon terrestre"
     ],
     "correct": 0,
-    "why": "L'année-lumière constitue la réponse attendue. Cette question requiert une connaissance précise du phénomène étudié.",
+    "why": "L'année-lumière correspond à la distance que parcourt la lumière dans le vide en une année, soit environ 9 460 milliards de kilomètres.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -837,7 +837,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "La méduse adulte"
     ],
     "correct": 0,
-    "why": "Le polype corallien constitue la réponse attendue. Cette question requiert une connaissance précise du phénomène étudié.",
+    "why": "Les polypes de coraux constructeurs produisent des squelettes calcaires dont l'accumulation forme des récifs.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -852,7 +852,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Le basalte"
     ],
     "correct": 0,
-    "why": "L'ambre constitue la réponse attendue. Cette question requiert une connaissance précise du phénomène étudié.",
+    "why": "L'ambre est une résine végétale fossilisée qui peut conserver des organismes piégés.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   },
   {
@@ -867,7 +867,7 @@ window.THOT_QUESTIONS_EXPERT = [
       "Le paresseux"
     ],
     "correct": 0,
-    "why": "L'échidné constitue la réponse attendue. Cette question requiert une connaissance précise du phénomène étudié.",
+    "why": "L'échidné, comme l'ornithorynque, est un mammifère monotrème qui pond des œufs.",
     "hint": "Confronte les propositions avec la période, la localisation ou la définition exacte évoquée par la question."
   }
 ];
