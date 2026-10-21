@@ -5,36 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="En 1917, Roubaix vit sous occupation allemande. Découvrez le quotidien des habitants à partir des archives municipales et de documents de l'époque.">
   <title>Roubaix en 1917 : vivre sous l'occupation allemande | THOT</title>
-  <style>
-    :root{--fond:#F8F6F1;--nuit:#17243A;--or:#B89558;--gris:#566171;--blanc:#fffdf9}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}
-    body{margin:0;background:var(--fond);color:var(--nuit);font-family:Arial,Helvetica,sans-serif;line-height:1.8}
-    a{color:#244b6c;text-underline-offset:3px}a:focus-visible{outline:3px solid var(--or);outline-offset:4px}
-    .largeur{width:min(1080px,calc(100% - 36px));margin:auto}
-    .barre{background:var(--nuit);color:#fff;padding:17px 0}.barre .largeur{display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .marque{font:700 30px Georgia,serif;letter-spacing:.1em;color:#ead1a6;text-decoration:none}.retour{color:#fff;font-size:14px}
-    .entete{background:linear-gradient(125deg,#17243A,#294358);color:#fff;padding:65px 0 60px}
-    .categorie{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#e4c593;font-weight:700}
-    h1,h2,h3{font-family:Georgia,'Times New Roman',serif;line-height:1.2}
-    h1{font-size:clamp(38px,6vw,70px);font-weight:normal;letter-spacing:-.035em;max-width:850px;margin:20px 0}
-    .accroche{max-width:770px;font-size:18px;line-height:1.65;color:#e1e7ed}
-    .meta{display:flex;flex-wrap:wrap;gap:8px 23px;font-size:13px;color:#e9d4b0;margin-top:25px}
-    .mise-en-page{display:grid;grid-template-columns:minmax(0,1fr) 235px;gap:55px;padding-top:52px;padding-bottom:85px;align-items:start}
-    article{min-width:0;max-width:760px}article p{font-size:16.5px;margin:0 0 19px}article h2{font-size:33px;font-weight:normal;margin:48px 0 17px;scroll-margin-top:25px}article h2:first-child{margin-top:0}
-    .sommaire{position:sticky;top:25px;background:var(--blanc);padding:24px;border:1px solid #e3dfd5;border-radius:14px}
-    .sommaire h2{font-size:20px;margin:0 0 12px}.sommaire a{display:block;padding:8px 0;text-decoration:none;border-bottom:1px solid #eee9dd;font-size:14px;line-height:1.5}
-    .source-num{font-size:12px;font-weight:700;white-space:nowrap;text-decoration:none;padding-left:2px}
-    .encadre{background:#f1e9d8;border-left:4px solid var(--or);border-radius:0 12px 12px 0;padding:20px 24px;margin:30px 0}
-    .encadre strong{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#715026;margin-bottom:8px}.encadre p{margin:0}
-    .retenir{background:#edf1f1;border-radius:14px;padding:24px 28px;margin:37px 0}.retenir h2{margin:0 0 13px;font-size:27px}
-    .retenir ul{margin:0;padding-left:20px}.retenir li{margin:9px 0}
-    .sources{border-top:1px solid #dad8d1;margin-top:50px;padding-top:8px}.sources ol{padding-left:24px}.sources li{margin:0 0 15px;line-height:1.6;font-size:14px;overflow-wrap:anywhere}
-    .precision{font-size:13px;color:var(--gris)}
-    .pied{background:var(--nuit);color:#e4e8ea;padding:25px 0;font-size:13px}.pied .largeur{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-    .pied b{font:700 25px Georgia,serif;color:#e4c593}
-    @media(max-width:790px){.mise-en-page{grid-template-columns:1fr;gap:25px;padding-top:30px}.sommaire{grid-row:1;position:static}.sommaire a{display:inline-block;margin-right:12px;border:0}.entete{padding:48px 0}.accroche{font-size:16px}article h2{font-size:29px}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-  </style>
+  <link rel="stylesheet" href="../assets/article.css">
 </head>
 <body>
   <header class="barre"><div class="largeur"><a class="marque" href="../index.html" aria-label="THOT, accueil">THOT</a><a class="retour" href="../index.html">← Retour à l'accueil</a></div></header>
@@ -103,15 +74,22 @@
         </section>
         <p><a href="../index.html">← Retour à THOT</a></p>
       </article>
-      <aside class="sommaire" aria-label="Sommaire de l'article"><h2>Dans cet article</h2>
-        <a href="#contexte">Une ville industrielle occupée</a>
-        <a href="#controle">Le contrôle des habitants</a>
-        <a href="#travail">Le travail sous l'occupation</a>
-        <a href="#ravitaillement">Le ravitaillement</a>
-        <a href="#departs">Les départs et la guerre</a>
-        <a href="#historiens">Lire les archives</a>
-        <a href="#retenir-titre">À retenir</a>
-        <a href="#sources">Sources</a>
+      <aside class="sommaire" aria-label="Sommaire de l'article">
+        <p class="sommaire-surtitle">Guide de lecture</p>
+        <h2>Dans cet article</h2>
+        <nav aria-label="Sections de l'article">
+          <ol>
+            <li><a href="#contexte"><span class="sommaire-num" aria-hidden="true">01</span><span>Une ville occupée</span></a></li>
+            <li><a href="#controle"><span class="sommaire-num" aria-hidden="true">02</span><span>Contrôler les habitants</span></a></li>
+            <li><a href="#travail"><span class="sommaire-num" aria-hidden="true">03</span><span>Le travail sous l'occupation</span></a></li>
+            <li><a href="#ravitaillement"><span class="sommaire-num" aria-hidden="true">04</span><span>Le ravitaillement</span></a></li>
+            <li><a href="#departs"><span class="sommaire-num" aria-hidden="true">05</span><span>Les départs</span></a></li>
+            <li><a href="#historiens"><span class="sommaire-num" aria-hidden="true">06</span><span>Lire et comprendre les archives</span></a></li>
+          </ol>
+          <div class="sommaire-separateur" aria-hidden="true"></div>
+          <a class="sommaire-annexe" href="#retenir-titre"><span class="sommaire-num" aria-hidden="true">✦</span><span>Ce qu'il faut retenir</span></a>
+          <a class="sommaire-annexe" href="#sources"><span class="sommaire-num" aria-hidden="true">↗</span><span>Sources et références</span></a>
+        </nav>
       </aside>
     </div>
   </main>
