@@ -301,6 +301,39 @@
     @media(max-width:560px){.progression-panel{padding:19px 16px}.progression-head{gap:11px}.progression-symbol{width:43px;height:43px;font-size:22px}.progression-amount strong{font-size:18px}.progression-amount span{font-size:11px}.progression-identity strong{font-size:20px}.badges-grid{grid-template-columns:1fr}.progression-bottom{align-items:stretch}.badges-button{width:100%}}
     @media(prefers-reduced-motion:reduce){.xp-progress>div{transition:none}}
 
+
+    /* THOT V2 · Étape 4 : défi UTC partagé et missions */
+    .daily-panel{background:linear-gradient(135deg,#17243A,#283E50);border:1px solid #31485C;color:#FFFEFA;border-radius:21px;padding:27px 31px;margin-bottom:21px;box-shadow:0 15px 35px rgba(23,36,58,.1)}
+    .daily-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}
+    .daily-kicker{color:#E6C794;font-size:11px;font-weight:850;letter-spacing:.16em}
+    .daily-heading h3{font:500 clamp(25px,3.4vw,33px)/1.2 Georgia,serif;margin:9px 0 0;color:#FFF9EC}
+    .daily-heading h3 span{color:#D7B47D}
+    .daily-date{font-size:12px;color:#F0D6A7;background:rgba(255,255,255,.075);border:1px solid rgba(230,199,148,.3);padding:8px 13px;border-radius:99px;white-space:nowrap;font-weight:750}
+    .daily-intro{color:#DDE5EA;line-height:1.7;font-size:14px;max-width:730px;margin:17px 0 20px}
+    .daily-actions{display:flex;align-items:center;gap:15px;flex-wrap:wrap}
+    .daily-start{border:0;border-radius:12px;background:#D1AC70;color:#17243A;font-weight:850;font-size:14px;padding:13px 18px}
+    .daily-start:hover:not(:disabled){background:#E2C495}
+    .daily-start:disabled{opacity:.75;cursor:default;background:#D6DDD4;color:#344F46}
+    .daily-status,.daily-streak{font-size:12px;color:#E7DBBE;font-weight:700}
+    .daily-streak{margin-left:auto;white-space:nowrap}
+    .daily-goals{border-top:1px solid rgba(255,255,255,.15);margin-top:22px;padding-top:19px}
+    .daily-goals-title{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:12px}
+    .daily-goals-title strong{font-size:14px;color:#FFF4DC}
+    .daily-goals-title span{font-size:12px;color:#E0C696}
+    .daily-goals-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+    .daily-goal{display:flex;align-items:flex-start;gap:10px;min-width:0;padding:12px;border:1px solid rgba(255,255,255,.18);border-radius:12px;background:rgba(255,255,255,.055)}
+    .daily-goal.done{background:rgba(72,139,111,.2);border-color:rgba(145,209,173,.5)}
+    .daily-goal-symbol{display:grid;place-items:center;flex:0 0 27px;height:27px;width:27px;border-radius:8px;background:rgba(255,255,255,.1);color:#EDC98E;font-weight:900;font-size:14px}
+    .daily-goal.done .daily-goal-symbol{background:#D3EDD9;color:#235840}
+    .daily-goal-copy{min-width:0;display:flex;flex-direction:column;gap:5px}
+    .daily-goal-copy strong{color:#F6F1E7;font-size:12px;line-height:1.35}
+    .daily-goal-copy span{color:#D3DDE1;font-size:11px;line-height:1.45}
+    .daily-goal-copy small{color:#E4C58D;font-size:11px;font-weight:800}
+    .daily-note{color:#AFBEC5;font-size:11px;line-height:1.5;margin:19px 0 0}
+    .daily-result{color:#426451!important;font-weight:800!important;font-size:14px!important;background:#EDF6EE;border:1px solid #CDE1D2;padding:11px 14px;border-radius:11px}
+    @media(max-width:850px){.daily-goals-list{grid-template-columns:1fr}.daily-streak{margin-left:0}}
+    @media(max-width:560px){.daily-panel{padding:21px 17px}.daily-heading{flex-direction:column;gap:9px}.daily-heading h3{font-size:28px}.daily-date{align-self:flex-start}.daily-actions{align-items:stretch;flex-direction:column}.daily-start{width:100%}.daily-goals-title{align-items:flex-start;flex-direction:column;gap:4px}}
+
   </style>
 </head>
 <body>
@@ -404,6 +437,23 @@
           <div><p class="kicker">À toi de jouer</p><h2 id="quiz-title">Le défi THOT.</h2></div>
           <p class="section-lead">Tu peux changer de thème et recommencer autant de fois que tu veux.</p>
         </div>
+        <section class="daily-panel" aria-labelledby="daily-title">
+          <div class="daily-heading">
+            <div><span class="daily-kicker">RENDEZ-VOUS QUOTIDIEN</span><h3 id="daily-title">Le défi du jour <span aria-hidden="true">✦</span></h3></div>
+            <div class="daily-date" id="daily-date">Aujourd'hui</div>
+          </div>
+          <p class="daily-intro">Cinq questions, cinq univers, un même défi pour tout le monde. Reviens demain pour découvrir une autre sélection.</p>
+          <div class="daily-actions">
+            <button type="button" id="daily-start-button" class="daily-start">Relever le défi du jour <span aria-hidden="true">↗</span></button>
+            <span id="daily-status" class="daily-status" role="status">À découvrir aujourd'hui</span>
+            <span id="daily-streak" class="daily-streak">✦ Série quotidienne : 0 jour</span>
+          </div>
+          <div class="daily-goals">
+            <div class="daily-goals-title"><strong>Mes 3 missions du jour</strong><span>+10 XP par mission réussie</span></div>
+            <div class="daily-goals-list" id="daily-goals-list" aria-live="polite"></div>
+          </div>
+          <p class="daily-note">Renouvellement à minuit UTC · Résultats enregistrés uniquement dans ce navigateur.</p>
+        </section>
         <section class="progression-panel" aria-label="Mon parcours THOT">
           <div class="progression-head">
             <span class="progression-symbol" aria-hidden="true">✦</span>
@@ -462,6 +512,7 @@
               <p id="result-message">Ta curiosité fait des merveilles.</p>
               <p class="result-performance" id="result-performance"></p>
               <p id="xp-earned" class="xp-earned" aria-live="polite"></p>
+              <p id="daily-result" class="daily-result hidden" aria-live="polite"></p>
               <p id="badges-earned" class="badges-earned hidden" aria-live="polite"></p>
               <div class="result-detail" id="result-detail"></div>
               <div class="result-actions"><button type="button" class="primary" id="replay-button">Rejouer ↗</button><button type="button" class="outlined" id="change-button">Changer de thème</button><button type="button" class="outlined review-toggle hidden" id="review-button" aria-expanded="false" aria-controls="review-panel">Revoir mes erreurs ↘</button></div>
