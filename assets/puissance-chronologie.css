@@ -1,0 +1,130 @@
+/* Frise chronologique interactive : Afghanistan, 2001–2021. */
+.chronologie-afghanistan{
+  margin:38px 0 46px;
+  padding:clamp(20px,4vw,32px);
+  border:1px solid #ded8cc;
+  border-radius:18px;
+  background:linear-gradient(145deg,#fffefa,#f3efe7);
+  box-shadow:0 16px 36px rgba(23,36,58,.06);
+}
+.chronologie-afghanistan .chronologie-surtitre{
+  margin:0 0 7px;
+  color:#927038;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+.chronologie-afghanistan h3{
+  margin:0;
+  color:#17243a;
+  font-size:clamp(22px,3vw,30px);
+  line-height:1.2;
+}
+.chronologie-intro{
+  max-width:68ch;
+  margin:10px 0 22px;
+  color:#536071;
+}
+.chronologie-commandes{
+  display:grid;
+  grid-template-columns:repeat(6,minmax(0,1fr));
+  gap:8px;
+  margin:0 0 18px;
+  padding:0;
+  border:0;
+}
+.chronologie-commandes button{
+  position:relative;
+  min-height:74px;
+  padding:12px 8px;
+  border:1px solid #d9d2c5;
+  border-radius:12px;
+  background:#fffefa;
+  color:#344155;
+  font:inherit;
+  font-size:13px;
+  font-weight:750;
+  line-height:1.25;
+  cursor:pointer;
+  transition:background-color .18s ease,border-color .18s ease,color .18s ease,transform .18s ease;
+}
+.chronologie-commandes button:hover{
+  border-color:#b89658;
+  transform:translateY(-2px);
+}
+.chronologie-commandes button[aria-pressed="true"]{
+  border-color:#20334e;
+  background:#20334e;
+  color:#fff;
+  box-shadow:0 7px 18px rgba(32,51,78,.16);
+}
+.chronologie-commandes button:focus-visible{
+  outline:3px solid #b89658;
+  outline-offset:3px;
+}
+.chronologie-date{
+  display:block;
+  margin-bottom:5px;
+  color:#a17c3c;
+  font-size:11px;
+  letter-spacing:.04em;
+}
+.chronologie-commandes button[aria-pressed="true"] .chronologie-date{
+  color:#e4c88f;
+}
+.chronologie-statut{
+  margin:0 0 8px;
+  color:#647083;
+  font-size:13px;
+}
+.chronologie-etape{
+  padding:20px clamp(16px,3vw,26px);
+  border-left:3px solid #b89658;
+  border-radius:0 12px 12px 0;
+  background:rgba(255,255,255,.72);
+}
+.chronologie-etape[hidden],
+.chronologie-commandes[hidden],
+.chronologie-statut[hidden],
+.chronologie-repli[hidden]{display:none}
+.chronologie-etape h4{
+  margin:0 0 8px;
+  color:#17243a;
+  font-size:19px;
+}
+.chronologie-etape p{margin:0;color:#445164}
+.chronologie-source{
+  display:inline-block;
+  margin-top:12px;
+  font-size:13px;
+  font-weight:700;
+}
+.chronologie-repli{
+  margin:0;
+  padding-left:22px;
+}
+.chronologie-repli li{
+  margin:0 0 12px;
+  padding-left:4px;
+  color:#445164;
+}
+.chronologie-repli li:last-child{margin-bottom:0}
+.chronologie-repli strong{color:#17243a}
+@media(max-width:760px){
+  .chronologie-commandes{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:480px){
+  .chronologie-afghanistan{padding:19px}
+  .chronologie-commandes{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+  .chronologie-commandes button{min-height:66px}
+}
+@media(prefers-reduced-motion:reduce){
+  .chronologie-commandes button{transition:none}
+  .chronologie-commandes button:hover{transform:none}
+}
+@media print{
+  .chronologie-commandes,.chronologie-statut{display:none!important}
+  .chronologie-repli[hidden]{display:block!important}
+  .chronologie-repli li{break-inside:avoid}
+}
