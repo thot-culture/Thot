@@ -9,6 +9,9 @@
   <meta property="og:title" content="THOT — Le magazine des esprits curieux">
   <meta property="og:description" content="Articles historiques et culturels, quiz et découvertes.">
   <link rel="canonical" href="https://thot-culture.github.io/Thot/">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta property="og:url" content="https://thot-culture.github.io/Thot/">
+  <meta property="og:locale" content="fr_FR">
   <title>THOT — Articles et quiz de culture générale</title>
   <style>
     :root {
@@ -228,7 +231,7 @@
   </header>
 
   <main id="contenu">
-    <section class="hero" aria-labelledby="main-title">
+    <section id="accueil" class="hero" aria-labelledby="main-title">
       <div class="wrap hero-inner">
         <div>
           <div class="eyebrow">Le magazine des esprits curieux</div>
@@ -338,7 +341,7 @@
             </div>
             <div id="screen-result" class="result hidden" aria-live="polite">
               <div class="score-circle"><b id="final-score">0/5</b><small>TON SCORE</small></div>
-              <h3 id="result-title">Bien joué !</h3>
+              <h3 id="result-title" tabindex="-1">Bien joué !</h3>
               <p id="result-message">Ta curiosité fait des merveilles.</p>
               <div class="result-detail" id="result-detail"></div>
               <div class="result-actions"><button type="button" class="primary" id="replay-button">Rejouer ↗</button><button type="button" class="outlined" id="change-button">Changer de thème</button></div>
@@ -890,7 +893,7 @@
   {
     "cat":"sciences",
     "level":"facile",
-    "q":"Quel symbole chimique représente l'eau ?",
+    "q":"Quelle est la formule chimique de l'eau ?",
     "a":[
       "CO₂",
       "O₂",
@@ -1032,7 +1035,7 @@
   },
   {
     "cat":"sciences",
-    "level":"expert",
+    "level":"intermediaire",
     "q":"Quelle particule subatomique porte une charge électrique négative ?",
     "a":[
       "Proton",
@@ -1579,7 +1582,7 @@
     const show=id=>screens.forEach(name=>$(name).classList.toggle('hidden',name!==id));
     function shuffle(arr){const copy=[...arr];for(let i=copy.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]];}return copy;}
     const storageKey='thot_v2_stats';
-    const defaults=()=>({games:0,correct:0,answered:0,bests:{},recent:{}});
+    const defaults=()=>({games:0,correct:0,answered:0,bests:{},recent:{},history:{}});
     function loadStats(){
       try{
         const raw=JSON.parse(localStorage.getItem(storageKey)||'null');
@@ -1590,6 +1593,7 @@
         }
         if(raw.bests&&typeof raw.bests==='object'&&!Array.isArray(raw.bests))stats.bests=raw.bests;
         if(raw.recent&&typeof raw.recent==='object'&&!Array.isArray(raw.recent))stats.recent=raw.recent;
+        if(raw.history&&typeof raw.history==='object'&&!Array.isArray(raw.history))stats.history=raw.history;
         return stats;
       }catch{return defaults();}
     }
@@ -1621,10 +1625,27 @@
       refreshBest();
     }
     function chooseRound(pool,n=5){
-      const key=bestKey(),seen=new Set(Array.isArray(stats.recent[key])?stats.recent[key]:[]);
-      const unseen=shuffle(pool.filter(q=>!seen.has(q.q)));
-      const already=shuffle(pool.filter(q=>seen.has(q.q)));
-      const chosen=[...unseen,...already].slice(0,n);
+      const key=bestKey();
+      // Conserver la dernière partie (ancien format), et ajouter un historique cyclique.
+      if(!stats.history || typeof stats.history!=='object' || Array.isArray(stats.history))stats.history={};
+      const previous=Array.isArray(stats.history[key])?stats.history[key]:[];
+      const history=[...new Set(previous.filter(v=>typeof v==='string'))];
+      const known=new Set(pool.map(q=>q.q));
+      const used=new Set(history.filter(q=>known.has(q)));
+      const unseen=shuffle(pool.filter(q=>!used.has(q.q)));
+      const chosen=unseen.slice(0,n);
+      if(chosen.length<n){
+        // Le catalogue a été parcouru : repartir sur un nouveau cycle,
+        // sans reprendre les mêmes questions à l'intérieur d'une partie.
+        const recent=new Set(Array.isArray(stats.recent[key])?stats.recent[key]:[]);
+        const available=pool.filter(q=>!chosen.includes(q));
+        const prioritized=shuffle(available.filter(q=>!recent.has(q.q)));
+        const fallback=shuffle(available.filter(q=>recent.has(q.q)));
+        chosen.push(...[...prioritized,...fallback].slice(0,n-chosen.length));
+        stats.history[key]=chosen.map(q=>q.q);
+      } else {
+        stats.history[key]=[...used,...chosen.map(q=>q.q)];
+      }
       stats.recent[key]=chosen.map(q=>q.q);
       saveStats();
       return shuffle(chosen);
@@ -1678,7 +1699,12 @@
       $('progressfill').style.width=((index+1)/round.length*100)+'%';
       $('next-button').focus({preventScroll:true});
     }
-    function next(){if(!answered)return;index++;if(index>=round.length)finish();else renderQuestion();}
+    function next(){
+      if(!answered)return;
+      index++;
+      if(index>=round.length){finish();$('result-title').focus({preventScroll:true});}
+      else {renderQuestion();const first=$('answer-list').querySelector('button');if(first)first.focus({preventScroll:true});}
+    }
     function finish(){
       stats.games++;
       stats.correct+=score;
