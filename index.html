@@ -334,6 +334,11 @@
     @media(max-width:850px){.daily-goals-list{grid-template-columns:1fr}.daily-streak{margin-left:0}}
     @media(max-width:560px){.daily-panel{padding:21px 17px}.daily-heading{flex-direction:column;gap:9px}.daily-heading h3{font-size:28px}.daily-date{align-self:flex-start}.daily-actions{align-items:stretch;flex-direction:column}.daily-start{width:100%}.daily-goals-title{align-items:flex-start;flex-direction:column;gap:4px}}
 
+    /* Accès à la bibliothèque THOT · Étape 5 */
+    .editorial-library-link{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px 22px;margin-top:25px}
+    .editorial-library-link>a{display:inline-flex;align-items:center;gap:14px;color:#17243A;border:1px solid #D9C6A5;border-radius:12px;padding:13px 18px;background:#F9F4E9;font-size:13px;font-weight:850;text-decoration:none}
+    .editorial-library-link>a:hover{background:#F0E5D0}
+    .editorial-library-link>p{margin:0;color:#566171;font-size:12px;line-height:1.6}
   </style>
 </head>
 <body>
@@ -349,7 +354,7 @@
         THOT
       </a>
       <nav class="nav-end" aria-label="Navigation principale">
-        <a href="#articles">Articles</a>
+        <a href="bibliotheque.html">Bibliothèque</a>
         <a href="#univers">Quiz</a>
         <a href="#concept">À propos</a>
       </nav>
@@ -413,7 +418,7 @@
         </div>
         <div class="article-feature__visual" aria-hidden="true"><span class="article-feature__year">GÉO</span><small>PUISSANCE · GÉOPOLITIQUE</small></div>
       </a>
-      <p class="editorial-note">Les articles se lisent sans questionnaires ni scores. Les sources sont consultables dans chaque article.</p>
+      <div class="editorial-library-link"><a href="bibliotheque.html">Explorer toute la bibliothèque THOT <span aria-hidden="true">↗</span></a><p>Les articles se lisent sans questionnaires ni scores. Les sources sont consultables dans chaque article.</p></div>
     </section>
 
     <section id="univers" class="section wrap quiz-univers" aria-labelledby="univers-title">

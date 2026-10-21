@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17243A">
+  <meta name="description" content="Découvrez les articles THOT : histoire, géographie, géopolitique, sciences et culture générale. Recherchez et explorez notre bibliothèque documentée.">
+  <title>Bibliothèque — Tous les articles | THOT</title>
+  <link rel="canonical" href="https://thot-culture.github.io/Thot/bibliotheque.html">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="THOT">
+  <meta property="og:title" content="La bibliothèque THOT">
+  <meta property="og:description" content="Des articles documentés pour découvrir, comprendre et approfondir.">
+  <meta property="og:url" content="https://thot-culture.github.io/Thot/bibliotheque.html">
+  <link rel="stylesheet" href="assets/bibliotheque.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="top"><div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="THOT, accueil"><span class="brand-symbol" aria-hidden="true">✦</span> THOT</a>
+    <nav aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="bibliotheque.html" aria-current="page">Bibliothèque</a><a href="index.html#jouer">Quiz</a></nav>
+  </div></header>
+  <main id="contenu">
+    <section class="hero"><div class="wrap">
+      <p class="eyebrow">THOT / LES ARTICLES</p>
+      <h1>La bibliothèque <em>des esprits curieux.</em></h1>
+      <p>Comprendre une époque, explorer le monde et découvrir des idées : retrouvez ici les articles THOT, avec leur sommaire et leurs références.</p>
+      <div class="hero-meta"><span><strong id="article-total">2</strong> articles publiés</span><span>Articles indépendants des quiz</span><span>Sources et références</span></div>
+    </div></section>
+    <section class="wrap catalogue" aria-labelledby="catalogue-title">
+      <div class="intro"><div><p class="eyebrow dark">EXPLORER</p><h2 id="catalogue-title">Tous les articles</h2></div><p>Un catalogue appelé à grandir, sans sacrifier la rigueur éditoriale.</p></div>
+      <div class="search-zone">
+        <label for="article-search">Rechercher un sujet, un lieu ou un mot-clé</label>
+        <div class="search-input"><span aria-hidden="true">⌕</span><input id="article-search" type="search" autocomplete="off" placeholder="Ex. Roubaix, souveraineté, guerre…" aria-controls="article-results"><button id="clear-search" type="button" class="clear-search" hidden>Effacer</button></div>
+        <div class="filters" role="group" aria-label="Filtrer les articles par discipline">
+          <button type="button" data-filter="tous" aria-pressed="true">Tous les sujets</button>
+          <button type="button" data-filter="histoire" aria-pressed="false">Histoire</button>
+          <button type="button" data-filter="geographie" aria-pressed="false">Géographie et géopolitique</button>
+          <button type="button" data-filter="sciences" aria-pressed="false">Sciences</button>
+          <button type="button" data-filter="arts" aria-pressed="false">Arts et culture</button>
+          <button type="button" data-filter="insolite" aria-pressed="false">Insolite</button>
+        </div>
+      </div>
+      <p class="results-status" id="results-status" role="status" aria-live="polite">2 articles disponibles</p>
+      <div id="article-results" class="article-grid">
+        <article class="article-card" data-category="histoire" data-keywords="roubaix 1917 histoire première guerre mondiale occupation allemande archives affiches réquisitions nord france">
+          <div class="card-art art-history" aria-hidden="true"><span>1917</span><small>ROUBAIX · HISTOIRE</small></div>
+          <div class="card-copy"><div class="card-tag">Histoire · Première Guerre mondiale</div><h3><a href="articles/roubaix-1917.html">Roubaix en 1917 : vivre sous l'occupation allemande</a></h3><p>Réquisitions, ravitaillement, contrôles : ce que les affiches d'archives racontent du quotidien dans une ville occupée.</p><div class="card-bottom"><span>La rédaction THOT · 20 oct. 2026</span><a href="articles/roubaix-1917.html" aria-label="Lire l'article sur Roubaix en 1917">Lire l’article ↗</a></div></div>
+        </article>
+        <article class="article-card" data-category="geographie" data-keywords="géographie géopolitique puissance états-unis amerique souveraineté westphalienne afghanistan iran daech relations internationales">
+          <div class="card-art art-world" aria-hidden="true"><span>GÉO</span><small>PUISSANCE · MONDE</small></div>
+          <div class="card-copy"><div class="card-tag">Géographie · Géopolitique</div><h3><a href="articles/puissance-etats-unis.html">Pourquoi les États-Unis ne peuvent-ils pas tout imposer ?</a></h3><p>Afghanistan, Iran, Daech : pourquoi la puissance militaire ne suffit-elle pas toujours à atteindre ses objectifs ?</p><div class="card-bottom"><span>La rédaction THOT · 21 oct. 2026</span><a href="articles/puissance-etats-unis.html" aria-label="Lire l'article sur la puissance des États-Unis">Lire l’article ↗</a></div></div>
+        </article>
+      </div>
+      <div class="empty hidden" id="empty-state" role="status"><span aria-hidden="true">◎</span><h3>Aucun article ne correspond à votre recherche.</h3><p>Essayez un autre mot-clé ou revenez à tous les sujets.</p><button id="reset-filters" type="button">Afficher tous les articles</button></div>
+      <div class="catalogue-foot"><p>Les textes THOT privilégient les sources identifiables et les renvois vers les documents utilisés. Les quiz constituent un espace distinct.</p><a href="index.html#jouer">Découvrir les quiz THOT ↗</a></div>
+    </section>
+  </main>
+  <footer><div class="wrap foot"><a href="index.html">THOT</a><span>La curiosité n'a pas de limites.</span><a href="index.html">Retour à l'accueil ↗</a></div></footer>
+  <script>
+    'use strict';
+    const search=document.getElementById('article-search');
+    const cards=[...document.querySelectorAll('.article-card')];
+    const filters=[...document.querySelectorAll('[data-filter]')];
+    const normalize=value=>value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('fr').trim();
+    let category='tous';
+    function update(){
+      const query=normalize(search.value);
+      let count=0;
+      for(const card of cards){
+        const categoryMatch=category==='tous'||card.dataset.category===category;
+        const match=!query||normalize(card.textContent+' '+card.dataset.keywords).includes(query);
+        const visible=categoryMatch&&match;
+        card.hidden=!visible;
+        if(visible)count++;
+      }
+      document.getElementById('results-status').textContent=count+' article'+(count>1?'s':'')+' trouvé'+(count>1?'s':'');
+      document.getElementById('empty-state').classList.toggle('hidden',count!==0);
+      document.getElementById('clear-search').hidden=!search.value;
+      for(const button of filters)button.setAttribute('aria-pressed',String(button.dataset.filter===category));
+    }
+    function reset(){category='tous';search.value='';update();search.focus();}
+    search.addEventListener('input',update);
+    for(const button of filters)button.addEventListener('click',()=>{category=button.dataset.filter;update();});
+    document.getElementById('clear-search').addEventListener('click',()=>{search.value='';update();search.focus();});
+    document.getElementById('reset-filters').addEventListener('click',reset);
+    document.getElementById('article-total').textContent=String(cards.length);
+    update();
+  </script>
+</body>
+</html>
