@@ -672,7 +672,7 @@ window.THOT_QUESTIONS_FACILE = [
     "cat": "insolite",
     "level": "facile",
     "type": "single_select",
-    "q": "Quel animal porte un petit sur son dos dans une poche ventrale ?",
+    "q": "Quel animal porte son petit dans une poche ventrale ?",
     "a": [
       "Le kangourou",
       "Le lama",
