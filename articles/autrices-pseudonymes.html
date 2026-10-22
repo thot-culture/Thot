@@ -200,7 +200,7 @@
   <footer class="pied"><div class="largeur"><b>THOT</b><span>La curiosité n’a pas de limites.</span><a href="../notre-methode.html">Notre méthode</a></div></footer>
   <script>
     const contenuALire = document.querySelector("#texte-article").cloneNode(true);
-    contenuALire.querySelectorAll(".sources, .quiz-pseudonymes, .pause-anachronisme").forEach(element => element.remove());
+    contenuALire.querySelectorAll(".sources, .pause-anachronisme").forEach(element => element.remove());
     const compterMots = texte => texte.trim().split(/\s+/).filter(Boolean).length;
     const mots = compterMots(contenuALire.innerText);
     document.querySelector("#duree").textContent = Math.max(1, Math.ceil(mots / 210)) + " min de lecture environ";
