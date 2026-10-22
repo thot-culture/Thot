@@ -35,7 +35,7 @@
 <article id="texte-article">
 <p class="ouverture">Le paradoxe est simple : disposer de ressources ne garantit pas d'obtenir le résultat politique recherché.</p>
 <p class="thot-glossaire-indication">Repère pédagogique : les mots soulignés en pointillés s’ouvrent au toucher ou au clavier.</p>
-<p><strong>La question est donc : qui parvient réellement à atteindre ses objectifs ?</strong></p>
+
 
 <section class="thot-visual-guide" data-thot-visual aria-labelledby="guide-puissance-titre">
   <p class="thot-visual-eyebrow">Schéma interactif · Comprendre la puissance</p>
@@ -101,7 +101,7 @@
 <section aria-labelledby="puissance" class="partie">
 <h2 id="puissance">La puissance : posséder des moyens ou obtenir des résultats ?</h2>
 <p>La <button class="thot-terme" type="button" aria-expanded="false" aria-controls="thot-def-puissance" aria-label="Afficher la définition : puissance">puissance</button><span class="thot-definition" id="thot-def-puissance" hidden>Capacité d’un acteur à mobiliser des ressources pour influencer une situation et atteindre un objectif.</span> d’un État repose sur son territoire, sa richesse, son armée, sa population, ses alliances et son influence culturelle. Ces ressources rendent l’action possible sans garantir le résultat recherché. <a class="source-num" href="#ref1" aria-label="Voir la source 1">[1]</a></p>
-<p>Il faut distinguer <strong>puissance</strong> et <strong><button class="thot-terme" type="button" aria-expanded="false" aria-controls="thot-def-pouvoir" aria-label="Afficher la définition : pouvoir">pouvoir</button><span class="thot-definition" id="thot-def-pouvoir" hidden>Exercice concret d’une influence ou d’une autorité dans une relation avec d’autres acteurs.</span></strong> : la première désigne une capacité d’action ; le second, son exercice dans une relation avec d’autres acteurs. <a class="source-num" href="#ref2" aria-label="Voir la source 2">[2]</a></p>
+<p>Puissance et <strong><button class="thot-terme" type="button" aria-expanded="false" aria-controls="thot-def-pouvoir" aria-label="Afficher la définition : pouvoir">pouvoir</button><span class="thot-definition" id="thot-def-pouvoir" hidden>Exercice concret d’une influence ou d’une autorité dans une relation avec d’autres acteurs.</span></strong> sont liés, mais distincts : la première désigne une capacité d’action ; le second, son exercice dans une relation avec d’autres acteurs. <a class="source-num" href="#ref2" aria-label="Voir la source 2">[2]</a></p>
 <h3>Contraindre, attirer, combiner</h3>
 <p>Joseph Nye distingue le <em><button class="thot-terme" type="button" aria-expanded="false" aria-controls="thot-def-hard-power" aria-label="Afficher la définition : hard power">hard power</button><span class="thot-definition" id="thot-def-hard-power" hidden>Moyens de contrainte, comme la force militaire ou les sanctions économiques.</span></em> (contrainte militaire ou économique), le <em><button class="thot-terme" type="button" aria-expanded="false" aria-controls="thot-def-soft-power" aria-label="Afficher la définition : soft power">soft power</button><span class="thot-definition" id="thot-def-soft-power" hidden>Influence obtenue en attirant ou en convainquant, par la culture, les idées ou la diplomatie.</span></em> (influence par l’attraction) et le <em><button class="thot-terme" type="button" aria-expanded="false" aria-controls="thot-def-smart-power" aria-label="Afficher la définition : smart power">smart power</button><span class="thot-definition" id="thot-def-smart-power" hidden>Combinaison adaptée de moyens de contrainte et d’influence.</span></em> (combinaison adaptée de ces moyens). <a class="source-num" href="#ref3" aria-label="Voir la source 3">[3]</a> <a class="source-num" href="#ref4" aria-label="Voir la source 4">[4]</a></p>
 <p>Une sanction peut donc faire pression sans obtenir la concession attendue : tout dépend du coût que l’adversaire attribue à la résistance.</p>
@@ -277,7 +277,9 @@
   <script src="../assets/glossaire-interactif.js" defer></script>
   <script>
     const contenu = document.querySelector('#texte-article');
-    const mots = contenu.innerText.trim().split(/\s+/).length;
+    const versionLecture = contenu.cloneNode(true);
+    versionLecture.querySelectorAll('.sources').forEach(source => source.remove());
+    const mots = versionLecture.innerText.trim().split(/\s+/).filter(Boolean).length;
     document.querySelector('#duree').textContent = Math.max(1, Math.ceil(mots / 210)) + ' min de lecture environ';
   </script>
   <script src="../assets/visuels-pedagogiques.js" defer></script>
