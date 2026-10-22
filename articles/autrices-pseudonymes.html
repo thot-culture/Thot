@@ -25,7 +25,7 @@
   <meta name="twitter:image:alt" content="THOT, le magazine des esprits curieux : histoire, géographie et sciences humaines.">
   <link rel="stylesheet" href="../assets/article.css?v=a11y-1">
   <link rel="stylesheet" href="../assets/autrices-visuels.css?v=portraits-2">
-  <link rel="stylesheet" href="../assets/autrices-quiz.css?v=article-jeu-1">
+  <link rel="stylesheet" href="../assets/autrices-quiz.css?v=article-jeu-2">
 </head>
 <body class="article-litterature">
   <a class="skip-link" href="#texte-article">Aller directement à l’article</a>
@@ -111,6 +111,19 @@
         <p>Une étude publiée par le CÉRÉdI de l’Université de Rouen montre, pour les écrivaines-journalistes du XIX<sup>e</sup> siècle, une pluralité de pratiques : nom civil, initiales, anonymat et pseudonymes. Son corpus porte sur la presse féminine ; il éclaire cette diversité sans autoriser à généraliser ses conclusions à toutes les autrices ni à tous les genres littéraires. <a class="source-num" href="#ref6" aria-label="Voir la source 6">[6]</a></p>
         <p>La signature pouvait aussi servir à éprouver la réception d’un texte. L’étude de Nancy Henry indique que George Eliot adopta en partie son pseudonyme pour voir comment ses récits seraient accueillis sans préjugés liés à son identité ou à son sexe. Cela documente une intention ; cela ne prouve ni que tous les lecteurs l’ont crue homme, ni que le pseudonyme a déterminé leurs critiques. <a class="source-num" href="#ref16" aria-label="Voir la source 16">[16]</a></p>
 
+        <section class="pause-anachronisme" aria-labelledby="pause-anachronisme-title">
+          <p class="pause-kicker">Une petite pause pour réfléchir</p>
+          <h3 id="pause-anachronisme-title">Petit voyage dans le temps 🌷</h3>
+          <p>À ton avis, cette idée est-elle clairement écrite dans les sources, ou est-ce une façon actuelle de relire l’histoire ?</p>
+          <blockquote>« Les sœurs Brontë ont choisi leurs noms de plume pour défendre les droits des femmes. »</blockquote>
+          <div class="pause-choices" role="group" aria-label="Choisir une réponse">
+            <button class="pause-choice" type="button" data-answer="stated" aria-pressed="false">Elles l’ont dit</button>
+            <button class="pause-choice" type="button" data-answer="interpretation" aria-pressed="false">C’est une interprétation possible</button>
+          </div>
+          <p class="pause-feedback" id="pause-feedback" role="status" aria-live="polite"></p>
+          <a class="pause-source" id="pause-source" href="#ref1" hidden>Voir la source [1]</a>
+          <noscript><p class="pause-noscript">Réponse : c’est une interprétation possible. Charlotte Brontë parle de la crainte des préjugés visant les autrices, sans présenter ce choix comme une campagne militante.</p></noscript>
+        </section>
         <section class="quiz-pseudonymes" id="jeu" aria-labelledby="jeu-title">
           <p class="quiz-kicker">THOT · À toi de jouer</p>
           <h2 id="jeu-title">Petit jeu : relie chaque nom à son autrice</h2>
@@ -186,11 +199,10 @@
   </main>
   <footer class="pied"><div class="largeur"><b>THOT</b><span>La curiosité n’a pas de limites.</span><a href="../notre-methode.html">Notre méthode</a></div></footer>
   <script>
-    const contenu = document.querySelector("#texte-article");
+    const contenuALire = document.querySelector("#texte-article").cloneNode(true);
+    contenuALire.querySelectorAll(".sources, .quiz-pseudonymes, .pause-anachronisme").forEach(element => element.remove());
     const compterMots = texte => texte.trim().split(/\s+/).filter(Boolean).length;
-    const motsAffiches = compterMots(contenu.innerText);
-    const motsSources = [...contenu.querySelectorAll(".sources")].reduce((total, source) => total + compterMots(source.innerText), 0);
-    const mots = Math.max(0, motsAffiches - motsSources);
+    const mots = compterMots(contenuALire.innerText);
     document.querySelector("#duree").textContent = Math.max(1, Math.ceil(mots / 210)) + " min de lecture environ";
   </script>
   <script>
@@ -257,5 +269,24 @@
     });
   })();
   </script>
+  <script>
+  (() => {
+    const choices = [...document.querySelectorAll(".pause-choice")];
+    const feedback = document.getElementById("pause-feedback");
+    const source = document.getElementById("pause-source");
+    for (const choice of choices) {
+      choice.addEventListener("click", () => {
+        for (const item of choices) item.setAttribute("aria-pressed", String(item === choice));
+        if (choice.dataset.answer === "interpretation") {
+          feedback.textContent = "Bien vu ! C’est une interprétation possible. Charlotte Brontë explique qu’elles craignaient les préjugés visant les autrices ; elle ne présente pas leur choix comme une campagne militante.";
+        } else {
+          feedback.textContent = "Pas tout à fait ! Charlotte Brontë parle de leur crainte des préjugés, mais ne dit pas qu’elles voulaient mener une campagne militante. C’est une interprétation possible, pas un motif qu’elles ont explicitement déclaré.";
+        }
+        source.hidden = false;
+      });
+    }
+  })();
+  </script>
+
 </body>
 </html>
