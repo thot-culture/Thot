@@ -22,6 +22,7 @@
   <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/2/2e/ELD_-_ROUBAIX_-_Boulevard_Gambetta.JPG">
   <meta name="twitter:image:alt" content="Carte postale ancienne du boulevard Gambetta à Roubaix avant 1919">
   <link rel="stylesheet" href="../assets/article.css?v=a11y-1">
+  <link rel="stylesheet" href="../assets/decouverte.css?v=1">
 
   <link rel="stylesheet" href="../assets/roubaix-photos.css">
   <link rel="stylesheet" href="../assets/roubaix-frise.css?v=a11y-1">
@@ -139,6 +140,15 @@
           <li>Une affiche atteste d'un ordre publié ; elle ne raconte pas, à elle seule, <strong>l'expérience de tous les habitants</strong>.</li>
         </ul></section>
 
+        <section class="related-reading" aria-labelledby="related-title">
+          <p class="related-reading__eyebrow">La curiosité continue</p><h2 id="related-title">Encore curieux ?</h2>
+          <p class="related-reading__intro">Poursuis avec une autre question : pourquoi les moyens d’un État ne garantissent-ils pas ses résultats ?</p>
+          <a class="related-reading__link" href="puissance-etats-unis.html" aria-labelledby="related-article-title">
+            <img src="../assets/images/puissance-afghanistan.webp" alt="Des soldats afghans s’exercent avec un bulldozer au camp Shorabak, en 2014." width="1000" height="667" loading="lazy" decoding="async">
+            <span class="related-reading__copy"><span class="discovery-meta">Géographie · Géopolitique · 8 min de lecture</span><strong id="related-article-title">Pourquoi les États-Unis ne peuvent-ils pas tout imposer ?</strong><span class="related-reading__cta">Découvrir l’article <span aria-hidden="true">↗</span></span></span>
+          </a>
+          <p class="discovery-credit"><a href="https://www.dvidshub.net/image/1211203/afghan-national-army-soldiers-lead" target="_blank" rel="noopener noreferrer">Dustin D. March / U.S. Marine Corps, 2014 · DVIDS · Domaine public<span class="discovery-sr-only"> — consulter la notice de l’image (nouvel onglet)</span></a></p>
+        </section>
         <section class="sources" id="sources"><h2>Sources et références</h2>
           <p class="precision">Documents conservés par les Archives municipales de Roubaix et notices de catalogues publics. Les références datées de 1917 ont été privilégiées. Les notices ne remplacent pas toujours la lecture de chaque document dans son intégralité.</p>
           <ol>
@@ -207,7 +217,7 @@
     const contenu = document.querySelector('#texte-article');
     const compterMots = texte => texte.trim().split(/\s+/).filter(Boolean).length;
     const motsAffiches = compterMots(contenu.innerText);
-    const motsSources = [...contenu.querySelectorAll('.sources')]
+    const motsSources = [...contenu.querySelectorAll('.sources, .related-reading')]
       .reduce((total, source) => total + compterMots(source.innerText), 0);
     const mots = Math.max(0, motsAffiches - motsSources);
     document.querySelector('#duree').textContent = Math.max(1, Math.ceil(mots / 210)) + ' min de lecture environ';

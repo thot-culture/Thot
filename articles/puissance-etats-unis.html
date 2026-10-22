@@ -22,6 +22,7 @@
   <meta name="twitter:image" content="https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/1404/1211203/1000w_q95.jpg">
   <meta name="twitter:image:alt" content="Des soldats de l’armée nationale afghane au camp Shorabak en 2014, photo du Corps des Marines des États-Unis.">
   <link rel="stylesheet" href="../assets/article.css?v=a11y-1">
+  <link rel="stylesheet" href="../assets/decouverte.css?v=1">
   <link rel="stylesheet" href="../assets/puissance-comparateur.css">
   <link rel="stylesheet" href="../assets/puissance-chronologie.css?v=a11y-1">
   <link rel="stylesheet" href="../assets/puissance-mobile.css">
@@ -234,7 +235,16 @@
 <li><strong>La souveraineté westphalienne concerne les structures d'autorité des États.</strong> Elle ne garantit ni leur invulnérabilité ni leur capacité matérielle à résister à toute pression extérieure.</li>
 <li><strong>La victoire militaire n'est pas toujours une réussite politique.</strong> L'Afghanistan, l'Iran et la lutte contre Daech illustrent chacun, dans un contexte différent, les limites possibles de la coercition.</li>
 </ul></section>
-<section class="sources" id="sources" aria-labelledby="sources-titre"><h2 id="sources-titre">Sources et références</h2>
+<section class="related-reading" aria-labelledby="related-title">
+          <p class="related-reading__eyebrow">La curiosité continue</p><h2 id="related-title">Encore curieux ?</h2>
+          <p class="related-reading__intro">Explore une autre échelle de la guerre : le quotidien des habitants d’une ville occupée.</p>
+          <a class="related-reading__link" href="roubaix-1917.html" aria-labelledby="related-article-title">
+            <img src="../assets/images/roubaix-gambetta.webp" alt="Carte postale du boulevard Gambetta à Roubaix, avec tramway et passants, avant 1919." width="1200" height="773" loading="lazy" decoding="async">
+            <span class="related-reading__copy"><span class="discovery-meta">Histoire · Première Guerre mondiale · 9 min de lecture</span><strong id="related-article-title">Roubaix en 1917 : vivre sous l’occupation allemande</strong><span class="related-reading__cta">Découvrir l’article <span aria-hidden="true">↗</span></span></span>
+          </a>
+          <p class="discovery-credit"><a href="https://commons.wikimedia.org/wiki/File:ELD_-_ROUBAIX_-_Boulevard_Gambetta.JPG" target="_blank" rel="noopener noreferrer">ELD, avant 1919 · Wikimedia Commons · Domaine public<span class="discovery-sr-only"> — consulter la notice de l’image (nouvel onglet)</span></a></p>
+        </section>
+        <section class="sources" id="sources" aria-labelledby="sources-titre"><h2 id="sources-titre">Sources et références</h2>
 <p class="precision">Chaque référence renvoie au document ou à la page correspondant au numéro indiqué.</p><ol>
 <li id="ref1">Géoconfluences, ENS de Lyon, « Puissance », glossaire de géographie. <a href="https://geoconfluences.ens-lyon.fr/glossaire/puissance" target="_blank" rel="noopener noreferrer">Consulter ↗</a></li>
 <li id="ref2">Géoconfluences, ENS de Lyon, « Pouvoir », glossaire de géographie. <a href="https://geoconfluences.ens-lyon.fr/glossaire/pouvoir" target="_blank" rel="noopener noreferrer">Consulter ↗</a></li>
@@ -286,7 +296,7 @@
     const contenu = document.querySelector('#texte-article');
     const compterMots = texte => texte.trim().split(/\s+/).filter(Boolean).length;
     const motsAffiches = compterMots(contenu.innerText);
-    const motsSources = [...contenu.querySelectorAll('.sources')]
+    const motsSources = [...contenu.querySelectorAll('.sources, .related-reading')]
       .reduce((total, source) => total + compterMots(source.innerText), 0);
     const mots = Math.max(0, motsAffiches - motsSources);
     document.querySelector('#duree').textContent = Math.max(1, Math.ceil(mots / 210)) + ' min de lecture environ';

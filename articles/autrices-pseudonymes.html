@@ -24,6 +24,7 @@
   <meta name="twitter:image" content="https://thot-culture.github.io/Thot/assets/og-thot.png">
   <meta name="twitter:image:alt" content="THOT, le magazine des esprits curieux : histoire, géographie et sciences humaines.">
   <link rel="stylesheet" href="../assets/article.css?v=a11y-1">
+  <link rel="stylesheet" href="../assets/decouverte.css?v=1">
   <link rel="stylesheet" href="../assets/autrices-visuels.css?v=portraits-2">
   <link rel="stylesheet" href="../assets/autrices-quiz.css?v=article-jeu-2">
 </head>
@@ -168,7 +169,16 @@
           <li>Les pseudonymes masculins ne résument pas l’histoire de la publication des femmes : l’anonymat et d’autres signatures existent aussi.</li>
         </ul></section>
 
-<section class="sources" aria-labelledby="sources-title"><h2 id="sources-title">Sources et références</h2><ol>
+<section class="related-reading" aria-labelledby="related-title">
+          <p class="related-reading__eyebrow">La curiosité continue</p><h2 id="related-title">Encore curieux ?</h2>
+          <p class="related-reading__intro">Changeons d’époque : découvre comment l’occupation bouleverse le quotidien d’une ville.</p>
+          <a class="related-reading__link" href="roubaix-1917.html" aria-labelledby="related-article-title">
+            <img src="../assets/images/roubaix-gambetta.webp" alt="Carte postale du boulevard Gambetta à Roubaix, avec tramway et passants, avant 1919." width="1200" height="773" loading="lazy" decoding="async">
+            <span class="related-reading__copy"><span class="discovery-meta">Histoire · Première Guerre mondiale · 9 min de lecture</span><strong id="related-article-title">Roubaix en 1917 : vivre sous l’occupation allemande</strong><span class="related-reading__cta">Découvrir l’article <span aria-hidden="true">↗</span></span></span>
+          </a>
+          <p class="discovery-credit"><a href="https://commons.wikimedia.org/wiki/File:ELD_-_ROUBAIX_-_Boulevard_Gambetta.JPG" target="_blank" rel="noopener noreferrer">ELD, avant 1919 · Wikimedia Commons · Domaine public<span class="discovery-sr-only"> — consulter la notice de l’image (nouvel onglet)</span></a></p>
+        </section>
+        <section class="sources" aria-labelledby="sources-title"><h2 id="sources-title">Sources et références</h2><ol>
           <li id="ref1">Charlotte Brontë, « Biographical Notice of Ellis and Acton Bell », préface à l’édition de 1850 de <em>Wuthering Heights</em> et <em>Agnes Grey</em> ; texte consultable dans <em>Charlotte Brontë’s Notes on the pseudonyms used</em>, Project Gutenberg. Source primaire rétrospective, transcrite d’après l’édition John Murray de 1910. <a href="https://www.gutenberg.org/files/771/old/brnte10h.htm">Lire le texte</a>.</li>
           <li id="ref2">The Brontë Parsonage Museum, « An introduction to the Brontës », notice sur les pseudonymes et leur réception. <a href="https://www.bronte.org.uk/the-lives-of-the-brontes">Consulter</a>.</li>
           <li id="ref3">University of Oxford, Great Writers Inspire, « George Eliot », notice biographique sur le choix du pseudonyme en 1857. <a href="https://writersinspire-new.it.ox.ac.uk/content/george-eliot-0">Consulter</a>.</li>
@@ -202,7 +212,7 @@
   <footer class="pied"><div class="largeur"><b>THOT</b><span>La curiosité n’a pas de limites.</span><a href="../notre-methode.html">Notre méthode</a></div></footer>
   <script>
     const contenuALire = document.querySelector("#texte-article").cloneNode(true);
-    contenuALire.querySelectorAll(".sources, .pause-anachronisme").forEach(element => element.remove());
+    contenuALire.querySelectorAll(".sources, .pause-anachronisme, .related-reading").forEach(element => element.remove());
     const compterMots = texte => texte.trim().split(/\s+/).filter(Boolean).length;
     const mots = compterMots(contenuALire.innerText);
     document.querySelector("#duree").textContent = Math.max(1, Math.ceil(mots / 210)) + " min de lecture environ";

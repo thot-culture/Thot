@@ -30,6 +30,7 @@
   <meta name="twitter:image:alt" content="THOT, le magazine des esprits curieux : histoire, géographie et sciences humaines.">
   <title>THOT — Articles documentés et quiz de culture générale</title>
   <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/decouverte.css?v=1">
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -60,10 +61,11 @@
         <div>
           <div class="eyebrow">Le magazine des esprits curieux</div>
           <h1 id="main-title">La curiosité<br>est un <span class="gold">super-<br>pouvoir.</span></h1>
-          <p class="hero-description">Des faits étonnants, des histoires oubliées, des idées qui changent notre regard. Découvrez nos articles sourcés, puis testez vos connaissances dans un espace quiz indépendant.</p>
+          <p class="hero-description">Des faits étonnants, des histoires oubliées, des idées qui changent notre regard. Explorez nos articles sourcés, leurs petites pauses interactives et nos quiz de culture générale.</p>
           <div class="hero-actions">
             <a class="primary" href="bibliotheque.html">Lire les articles <span aria-hidden="true">↗</span></a>
             <a class="secondary" href="quiz.html#quiz-classique">Jouer au quiz</a>
+            <a class="surprise-link" href="bibliotheque.html" data-surprise aria-label="Ouvrir un article au hasard parmi toute la bibliothèque"><span aria-hidden="true">✦</span> Surprends-moi</a>
           </div>
           <div class="hero-sub"><span>Articles documentés</span><span>300 questions pour jouer</span><span>Accès gratuit</span></div>
         </div>
@@ -87,44 +89,60 @@
 
 
 
-    <!-- Bibliothèque THOT : indépendante des quiz -->
+    <!-- Bibliothèque THOT : lectures documentées et jeux facultatifs. -->
     <section id="articles" class="editorial wrap" aria-labelledby="articles-title">
       <div class="editorial-heading">
-        <div><p class="editorial-eyebrow">La bibliothèque THOT</p><h2 id="articles-title">Lire pour comprendre.</h2></div>
-        <p class="section-lead">Des articles accessibles et documentés pour explorer l'histoire, les sciences et la culture.</p>
+        <div><p class="editorial-eyebrow">La bibliothèque THOT</p><h2 id="articles-title">Une question. Une découverte.</h2></div>
+        <p class="section-lead">Des histoires à explorer, des idées à comprendre et des sources pour aller plus loin.</p>
       </div>
+      <article class="latest-story" aria-labelledby="latest-title">
+      <div class="latest-story__visual"><a href="articles/autrices-pseudonymes.html" data-discovery-path aria-label="Lire le dernier article : Pourquoi des autrices ont-elles publié sous un nom d’homme ?"><div class="discovery-photo discovery-photo--latest">
+        <img src="assets/images/autrices-nadar.webp" alt="Planche de portraits photographiques de George Sand par Nadar, en 1864." width="1176" height="900" loading="lazy" decoding="async">
+        <span class="discovery-stamp" aria-hidden="true">PLUME</span>
+      </div></a><p class="discovery-credit"><a href="https://commons.wikimedia.org/wiki/File:George_Sand_-_portraits.jpg" target="_blank" rel="noopener noreferrer">Nadar, 1864 · BnF / Wikimedia Commons · Domaine public<span class="discovery-sr-only"> — consulter la notice de l’image (nouvel onglet)</span></a></p></div>
+      <div class="latest-story__copy">
+        <p class="latest-story__label"><span aria-hidden="true">✦</span> À la une · Dernière publication</p>
+        <div class="discovery-meta"><span>Littérature · Histoire des autrices</span><span class="reading-pill">9 min de lecture</span></div>
+        <h3 id="latest-title"><a href="articles/autrices-pseudonymes.html">Pourquoi des autrices ont-elles publié sous un nom d’homme ?</a></h3>
+        <p>Brontë, George Eliot, George Sand : trois parcours pour comprendre ce que peut cacher un nom de plume.</p>
+        <p class="latest-story__invitation">Trois histoires de signatures, des sources pour comprendre et deux pauses pour jouer.</p>
+        <div class="latest-story__actions"><a class="discovery-primary" href="articles/autrices-pseudonymes.html">Découvrir l’article <span aria-hidden="true">↗</span></a><span>22 oct. 2026 · La rédaction THOT</span></div>
+      </div>
+    </article>
+      <div class="discovery-section-heading"><h3>Encore à découvrir</h3><a href="bibliotheque.html">Tous les articles <span aria-hidden="true">↗</span></a></div>
       <div class="editorial-stories">
-      <a class="article-feature" href="articles/roubaix-1917.html" aria-label="Lire Roubaix en 1917 : vivre sous l'occupation allemande">
-        <div class="article-feature__content">
-          <span class="article-feature__tag">Histoire · Première Guerre mondiale</span>
-          <h3 class="article-feature__title">Roubaix en 1917 : vivre sous l'occupation allemande</h3>
-          <p class="article-feature__intro">Réquisitions, ravitaillement, contrôles et départs : ce que les archives racontent de la vie d'une ville industrielle occupée.</p>
-          <div class="article-feature__bottom">
-            <span>La rédaction THOT</span><span>Lire l'article <span aria-hidden="true">↗</span></span>
-          </div>
-        </div>
-        <div class="article-feature__visual" aria-hidden="true"><span class="article-feature__year">1917</span><small>ROUBAIX · HISTOIRE</small></div>
-      </a>
-      <a class="article-feature article-feature--geo" href="articles/puissance-etats-unis.html" aria-label="Lire Pourquoi les États-Unis ne peuvent-ils pas tout imposer ?">
-        <div class="article-feature__content">
-          <span class="article-feature__tag">Géographie · Géopolitique</span>
-          <h3 class="article-feature__title">Pourquoi les États-Unis ne peuvent-ils pas tout imposer ?</h3>
-          <p class="article-feature__intro">Afghanistan, Iran, Daech : comment comprendre les limites de la puissance militaire, la souveraineté westphalienne et les rapports de force ?</p>
-          <div class="article-feature__bottom"><span>La rédaction THOT</span><span>Lire l'article <span aria-hidden="true">↗</span></span></div>
-        </div>
-        <div class="article-feature__visual" aria-hidden="true"><span class="article-feature__year">GÉO</span><small>PUISSANCE · GÉOPOLITIQUE</small></div>
-      </a>
-      <a class="article-feature" href="articles/autrices-pseudonymes.html" aria-label="Lire Pourquoi des autrices ont-elles publié sous un nom d’homme ?">
-        <div class="article-feature__content">
-          <span class="article-feature__tag">Littérature · Histoire des autrices</span>
-          <h3 class="article-feature__title">Pourquoi des autrices ont-elles publié sous un nom d’homme ?</h3>
-          <p class="article-feature__intro">Brontë, George Eliot, George Sand : découvrez leurs pseudonymes et testez-vous avec un jeu d’associations.</p>
-          <div class="article-feature__bottom"><span>La rédaction THOT</span><span>Lire l’article <span aria-hidden="true">↗</span></span></div>
-        </div>
-        <div class="article-feature__visual" aria-hidden="true"><span class="article-feature__year">PLUME</span><small>LITTÉRATURE · XIXᵉ</small></div>
-      </a>
+        <article class="discovery-card">
+      <a class="discovery-card__link" href="articles/puissance-etats-unis.html" data-discovery-path aria-labelledby="card-puissance-etats-unis">
+        <div class="discovery-photo">
+        <img src="assets/images/puissance-afghanistan.webp" alt="Des soldats afghans s’exercent avec un bulldozer au camp Shorabak, en 2014." width="1000" height="667" loading="lazy" decoding="async">
+        <span class="discovery-stamp" aria-hidden="true">GÉO</span>
       </div>
-      <div class="editorial-library-link"><a href="bibliotheque.html">Explorer toute la bibliothèque THOT <span aria-hidden="true">↗</span></a><p>Les articles se lisent sans questionnaires ni scores. Les sources sont consultables dans chaque article.</p></div>
+        <div class="discovery-card__copy">
+          <div class="discovery-meta"><span>Géographie · Géopolitique</span><span class="reading-pill">8 min de lecture</span></div>
+          <h3 id="card-puissance-etats-unis">Pourquoi les États-Unis ne peuvent-ils pas tout imposer ?</h3>
+          <p>Afghanistan, Iran, Daech : pourquoi disposer de moyens considérables ne garantit-il pas le résultat attendu ?</p>
+          <div class="discovery-card__bottom"><span>21 oct. 2026</span><span>Lire l’article <span aria-hidden="true">↗</span></span></div>
+        </div>
+      </a>
+      <p class="discovery-credit"><a href="https://www.dvidshub.net/image/1211203/afghan-national-army-soldiers-lead" target="_blank" rel="noopener noreferrer">Dustin D. March / U.S. Marine Corps, 2014 · DVIDS · Domaine public<span class="discovery-sr-only"> — consulter la notice de l’image (nouvel onglet)</span></a></p>
+    </article>
+        <article class="discovery-card">
+      <a class="discovery-card__link" href="articles/roubaix-1917.html" data-discovery-path aria-labelledby="card-roubaix-1917">
+        <div class="discovery-photo">
+        <img src="assets/images/roubaix-gambetta.webp" alt="Carte postale du boulevard Gambetta à Roubaix, avec tramway et passants, avant 1919." width="1200" height="773" loading="lazy" decoding="async">
+        <span class="discovery-stamp" aria-hidden="true">1917</span>
+      </div>
+        <div class="discovery-card__copy">
+          <div class="discovery-meta"><span>Histoire · Première Guerre mondiale</span><span class="reading-pill">9 min de lecture</span></div>
+          <h3 id="card-roubaix-1917">Roubaix en 1917 : vivre sous l’occupation allemande</h3>
+          <p>Réquisitions, ravitaillement, contrôles : découvrir le quotidien d’une ville occupée à travers les documents d’époque.</p>
+          <div class="discovery-card__bottom"><span>20 oct. 2026</span><span>Lire l’article <span aria-hidden="true">↗</span></span></div>
+        </div>
+      </a>
+      <p class="discovery-credit"><a href="https://commons.wikimedia.org/wiki/File:ELD_-_ROUBAIX_-_Boulevard_Gambetta.JPG" target="_blank" rel="noopener noreferrer">ELD, avant 1919 · Wikimedia Commons · Domaine public<span class="discovery-sr-only"> — consulter la notice de l’image (nouvel onglet)</span></a></p>
+    </article>
+      </div>
+      <div class="editorial-library-link"><a href="bibliotheque.html">Explorer toute la bibliothèque THOT <span aria-hidden="true">↗</span></a><p>Des lectures documentées, parfois ponctuées de petits jeux facultatifs. Les sources restent accessibles dans chaque article.</p></div>
     </section>
 
     <section id="quiz" class="choose-path wrap" aria-labelledby="quiz-preview-title">
@@ -154,12 +172,13 @@
     <section id="concept" class="wrap why" aria-label="Notre approche">
       <article><div class="why-symbol">✳</div><h3>Une lecture captivante</h3><p>Le plaisir de découvrir, sans sacrifier la rigueur des faits ni les références.</p></article>
       <article><div class="why-symbol">◎</div><h3>Des sources visibles</h3><p>Des renvois discrets vers des documents et références pour vérifier et approfondir.</p></article>
-      <article><div class="why-symbol">✦</div><h3>Deux façons d'apprendre</h3><p>Les articles pour comprendre ; les quiz pour se tester. Deux expériences bien distinctes.</p></article>
+      <article><div class="why-symbol">✦</div><h3>Deux façons d'apprendre</h3><p>Des articles documentés, des pauses interactives et un espace quiz pour continuer à apprendre.</p></article>
     </section>
   </main>
   <footer><div class="wrap foot-inner"><b>THOT</b><span>Éveiller la curiosité. Éclairer les idées. Transmettre le savoir.</span><a href="notre-methode.html">Notre méthode</a><span>© <span id="year">2026</span> THOT</span></div></footer>
 
   <!-- Banques de questions : chargées avant le moteur, sans dépendance externe. -->
   <script src="assets/site-home.js"></script>
+  <script src="assets/decouverte.js?v=1" defer></script>
 </body>
 </html>
