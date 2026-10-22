@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="assets/article.css?v=a11y-1">
   <link rel="stylesheet" href="assets/autrices-quiz.css?v=quiz-separe-1">
 </head>
-<body class="article-litterature">
+<body class="article-litterature page-quiz">
   <a class="skip-link" href="#quiz-title">Aller directement au jeu</a>
   <header class="barre"><div class="largeur"><a class="marque" href="index.html" aria-label="THOT, accueil">THOT</a><a class="retour" href="articles/autrices-pseudonymes.html">← Retour à l’article</a></div></header>
   <main>
@@ -52,10 +52,10 @@
           <p class="quiz-status" id="quiz-status" role="status" aria-live="polite">À toi de jouer.</p>
           <p class="quiz-progress" id="quiz-progress">0 association sur 5 trouvée.</p>
           <div class="quiz-explanations" id="quiz-explanations" hidden>
-            <h3>Les réponses : cinq noms, des histoires différentes</h3>
+            <h3 tabindex="-1">Les réponses : cinq noms, des histoires différentes</h3>
             <ol>
               <li><strong>Currer Bell — Charlotte Brontë ; Ellis Bell — Emily Brontë ; Acton Bell — Anne Brontë.</strong> Charlotte explique que ces choix étaient ambigus et motivés à la fois par le désir d’éviter la publicité et par la crainte de préjugés. <a href="articles/autrices-pseudonymes.html#ref1">Source [1]</a> <a href="articles/autrices-pseudonymes.html#ref7">Source [7]</a></li>
-              <li><strong>George Eliot — Mary Anne (« Marian ») Evans.</strong> L’Université d’Oxford situe le choix du nom en 1857 et présente plusieurs motifs : cacher le sexe de l’autrice et protéger sa situation privée. C’est une interprétation biographique appuyée sur les sources, pas une règle valable pour toutes les autrices. <a href="articles/autrices-pseudonymes.html#ref3">Source [3]</a></li>
+              <li><strong>George Eliot — Mary Anne (« Marian ») Evans.</strong> L’Université d’Oxford date la création du pseudonyme de 1857 et évoque deux enjeux : ne pas révéler le sexe de l’autrice et masquer sa situation sociale avec George Henry Lewes, alors marié. C’est une interprétation biographique, pas une règle valable pour toutes les autrices. <a href="articles/autrices-pseudonymes.html#ref3">Source [3]</a></li>
               <li><strong>George Sand — Aurore Dupin.</strong> La notice d’autorité de la BnF confirme l’identité et signale aussi une publication en collaboration avec Jules Sandeau sous le pseudonyme « Jules Sand ». Cette notice établit des faits bibliographiques ; elle ne suffit pas à prouver pourquoi Aurore Dupin a ensuite retenu « George Sand ». <a href="articles/autrices-pseudonymes.html#ref4">Source [4]</a></li>
             </ol>
           </div>
@@ -113,7 +113,10 @@
           if(matched.size===5){
             details.hidden=false;
             status.textContent='Bravo, les cinq associations sont trouvées ! Retrouve les explications et les sources juste en dessous.';
+            details.querySelector('h3').focus();
             details.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'nearest'});
+          }else{
+            left.find(b=>!b.disabled)?.focus();
           }
         }else{
           button.classList.add('is-wrong');
