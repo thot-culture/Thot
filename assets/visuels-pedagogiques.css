@@ -1,0 +1,78 @@
+/* THOT · Parcours visuels interactifs partagés par les articles. */
+.thot-visual-guide{
+  margin:2rem 0;
+  padding:clamp(1.15rem,3vw,1.75rem);
+  border:1px solid #ded8ca;
+  border-radius:16px;
+  background:linear-gradient(145deg,#fbfaf6,#f3f0e8);
+  color:#17243a;
+  box-shadow:0 8px 22px rgba(23,36,58,.06);
+}
+.thot-visual-guide .thot-visual-eyebrow{
+  margin:0 0 .4rem;
+  color:#81632e;
+  font-size:.76rem;
+  font-weight:800;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.thot-visual-guide h2,
+.thot-visual-guide h3{
+  margin:.2rem 0 .65rem;
+  color:#17243a;
+  line-height:1.2;
+}
+.thot-visual-guide>p:not(.thot-visual-eyebrow){margin:.35rem 0 1rem;line-height:1.6}
+.thot-visual-controls{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.55rem;
+  margin:1rem 0;
+}
+.thot-visual-controls[hidden],
+.thot-visual-panel[hidden]{display:none!important}
+.thot-visual-controls button{
+  flex:1 1 9rem;
+  min-height:46px;
+  padding:.65rem .8rem;
+  border:1px solid #cec7b9;
+  border-radius:10px;
+  background:#fffefa;
+  color:#17243a;
+  font:700 .9rem/1.3 inherit;
+  cursor:pointer;
+  touch-action:manipulation;
+}
+.thot-visual-controls button[aria-pressed="true"]{
+  border-color:#17243a;
+  background:#17243a;
+  color:#fffefa;
+}
+.thot-visual-controls button:focus-visible{
+  outline:3px solid #b89658;
+  outline-offset:3px;
+}
+.thot-visual-panels{
+  min-height:5.5rem;
+  padding:1rem 1.1rem;
+  border-left:4px solid #b49b62;
+  border-radius:6px;
+  background:#fffefa;
+  line-height:1.65;
+}
+.thot-visual-panel{margin:0}
+.thot-visual-panel strong{color:#17243a}
+@media(max-width:560px){
+  .thot-visual-guide{margin:1.5rem 0;padding:1rem;border-radius:12px}
+  .thot-visual-controls{display:grid;grid-template-columns:1fr;gap:.45rem}
+  .thot-visual-controls button{width:100%;min-height:48px;text-align:left}
+  .thot-visual-panels{padding:.85rem .9rem}
+}
+@media(prefers-reduced-motion:reduce){
+  .thot-visual-guide *{scroll-behavior:auto!important;transition:none!important}
+}
+@media print{
+  .thot-visual-controls{display:none!important}
+  .thot-visual-panel[hidden]{display:block!important}
+  .thot-visual-panel{margin:.5rem 0;break-inside:avoid}
+}
