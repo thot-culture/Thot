@@ -16,6 +16,7 @@
   <meta name="twitter:card" content="summary">
   <link rel="stylesheet" href="../assets/article.css?v=a11y-1">
   <link rel="stylesheet" href="../assets/autrices-visuels.css?v=portraits-2">
+  <link rel="stylesheet" href="../assets/autrices-quiz.css?v=article-jeu-1">
 </head>
 <body class="article-litterature">
   <a class="skip-link" href="#texte-article">Aller directement à l’article</a>
@@ -101,7 +102,41 @@
           <li>Les pseudonymes masculins ne résument pas l’histoire de la publication des femmes : l’anonymat et d’autres signatures existent aussi.</li>
         </ul></section>
 
-<section class="encadre activite-lien" aria-labelledby="activite-title"><strong>Pour s’entraîner</strong><p id="activite-title">Un jeu de correspondances prolonge cet article sur une page séparée, avec les explications et les sources de chaque réponse. <a href="../quiz-autrices.html">Accéder au jeu sur les pseudonymes</a>.</p></section>
+<section class="quiz-pseudonymes" id="jeu" aria-labelledby="jeu-title">
+          <p class="quiz-kicker">THOT · À toi de jouer</p>
+          <h2 id="jeu-title">Petit jeu : relie chaque nom à son autrice</h2>
+          <p class="quiz-intro">Choisis un nom de plume, puis l’autrice correspondante. Sur téléphone, touche les deux noms l’un après l’autre ; au clavier, utilise Tab et Entrée.</p>
+          <p class="quiz-instruction" id="quiz-instruction">Commence par sélectionner un nom de plume dans la colonne de gauche.</p>
+          <div class="quiz-grid">
+            <div class="quiz-column"><h3>Noms de plume</h3><div class="quiz-options" id="pseudonym-options" role="group" aria-label="Choisir un nom de plume">
+              <button class="quiz-option" type="button" data-pen="currer" aria-pressed="false">Currer Bell</button>
+              <button class="quiz-option" type="button" data-pen="ellis" aria-pressed="false">Ellis Bell</button>
+              <button class="quiz-option" type="button" data-pen="acton" aria-pressed="false">Acton Bell</button>
+              <button class="quiz-option" type="button" data-pen="eliot" aria-pressed="false">George Eliot</button>
+              <button class="quiz-option" type="button" data-pen="sand" aria-pressed="false">George Sand</button>
+            </div></div>
+            <div class="quiz-column"><h3>Autrices</h3><div class="quiz-options" id="author-options" role="group" aria-label="Choisir une autrice">
+              <button class="quiz-option" type="button" data-author="anne" aria-pressed="false">Anne Brontë</button>
+              <button class="quiz-option" type="button" data-author="aurore" aria-pressed="false">Aurore Dupin</button>
+              <button class="quiz-option" type="button" data-author="charlotte" aria-pressed="false">Charlotte Brontë</button>
+              <button class="quiz-option" type="button" data-author="maryanne" aria-pressed="false">Mary Anne (« Marian ») Evans</button>
+              <button class="quiz-option" type="button" data-author="emily" aria-pressed="false">Emily Brontë</button>
+            </div></div>
+          </div>
+          <p class="quiz-status" id="quiz-status" role="status" aria-live="polite">À toi de jouer.</p>
+          <p class="quiz-progress" id="quiz-progress">0 association sur 5 trouvée.</p>
+          <div class="quiz-explanations" id="quiz-explanations" hidden>
+            <h3 tabindex="-1">Les réponses : cinq noms, des histoires différentes</h3>
+            <ol>
+              <li><strong>Currer Bell — Charlotte Brontë ; Ellis Bell — Emily Brontë ; Acton Bell — Anne Brontë.</strong> Charlotte explique que ces choix étaient ambigus et motivés à la fois par le désir d’éviter la publicité et par la crainte de préjugés. <a href="#ref1">Source [1]</a> <a href="#ref7">Source [7]</a></li>
+              <li><strong>George Eliot — Mary Anne (« Marian ») Evans.</strong> L’Université d’Oxford date la création du pseudonyme de 1857 et évoque deux enjeux : ne pas révéler le sexe de l’autrice et masquer sa situation sociale avec George Henry Lewes, alors marié. C’est une interprétation biographique, pas une règle valable pour toutes les autrices. <a href="#ref3">Source [3]</a></li>
+              <li><strong>George Sand — Aurore Dupin.</strong> La notice d’autorité de la BnF confirme l’identité et signale aussi une publication en collaboration avec Jules Sandeau sous le pseudonyme « Jules Sand ». Cette notice établit des faits bibliographiques ; elle ne suffit pas à prouver pourquoi Aurore Dupin a ensuite retenu « George Sand ». <a href="#ref4">Source [4]</a></li>
+            </ol>
+          </div>
+          <button class="quiz-reset" id="quiz-reset" type="button">Recommencer</button>
+          <noscript><div class="quiz-noscript"><p>JavaScript est désactivé : voici les associations et leurs sources.</p><ul><li>Currer Bell — Charlotte Brontë ; Ellis Bell — Emily Brontë ; Acton Bell — Anne Brontë. <a href="#ref1">Sources [1]</a> et <a href="#ref7">[7]</a>.</li><li>George Eliot — Mary Anne (« Marian ») Evans. <a href="#ref3">Source [3]</a>.</li><li>George Sand — Aurore Dupin. <a href="#ref4">Source [4]</a>.</li></ul></div></noscript>
+          <p class="quiz-intro">Tu peux aussi <a href="../quiz-autrices.html">refaire le jeu sur sa page dédiée</a>.</p>
+        </section>
         <section class="sources" aria-labelledby="sources-title"><h2 id="sources-title">Sources et références</h2><ol>
           <li id="ref1">Charlotte Brontë, « Biographical Notice of Ellis and Acton Bell », préface à l’édition de 1850 de <em>Wuthering Heights</em> et <em>Agnes Grey</em> ; texte consultable dans <em>Charlotte Brontë’s Notes on the pseudonyms used</em>, Project Gutenberg. Source primaire rétrospective, transcrite d’après l’édition John Murray de 1910. <a href="https://www.gutenberg.org/files/771/old/brnte10h.htm">Lire le texte</a>.</li>
           <li id="ref2">The Brontë Parsonage Museum, « An introduction to the Brontës », notice sur les pseudonymes et leur réception. <a href="https://www.bronte.org.uk/the-lives-of-the-brontes">Consulter</a>.</li>
@@ -121,8 +156,9 @@
         <li><a href="#eliot"><span class="sommaire-num">02</span><span>George Eliot</span></a></li>
         <li><a href="#sand"><span class="sommaire-num">03</span><span>George Sand</span></a></li>
         <li><a href="#pas-une-regle"><span class="sommaire-num">04</span><span>L’anonymat comme autre stratégie</span></a></li>
-        <li><a href="#retenir-title"><span class="sommaire-num">05</span><span>À retenir</span></a></li>
-        <li><a href="#sources-title"><span class="sommaire-num">06</span><span>Sources</span></a></li>
+        <li><a href="#jeu"><span class="sommaire-num">05</span><span>Petit jeu</span></a></li>
+        <li><a href="#retenir-title"><span class="sommaire-num">06</span><span>À retenir</span></a></li>
+        <li><a href="#sources-title"><span class="sommaire-num">07</span><span>Sources</span></a></li>
       </ol></nav></aside>
     </div>
   </main>
