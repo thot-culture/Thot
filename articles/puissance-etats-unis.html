@@ -277,9 +277,11 @@
   <script src="../assets/glossaire-interactif.js" defer></script>
   <script>
     const contenu = document.querySelector('#texte-article');
-    const versionLecture = contenu.cloneNode(true);
-    versionLecture.querySelectorAll('.sources').forEach(source => source.remove());
-    const mots = versionLecture.innerText.trim().split(/\s+/).filter(Boolean).length;
+    const compterMots = texte => texte.trim().split(/\s+/).filter(Boolean).length;
+    const motsAffiches = compterMots(contenu.innerText);
+    const motsSources = [...contenu.querySelectorAll('.sources')]
+      .reduce((total, source) => total + compterMots(source.innerText), 0);
+    const mots = Math.max(0, motsAffiches - motsSources);
     document.querySelector('#duree').textContent = Math.max(1, Math.ceil(mots / 210)) + ' min de lecture environ';
   </script>
   <script src="../assets/visuels-pedagogiques.js" defer></script>
