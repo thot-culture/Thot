@@ -18,13 +18,7 @@
   <link rel="stylesheet" href="../assets/puissance-comparateur.css">
   <link rel="stylesheet" href="../assets/puissance-chronologie.css?v=galerie-1">
   <link rel="stylesheet" href="../assets/puissance-mobile.css">
-  <style>
-    .thot-glossaire-indication{margin:.75rem 0 1.5rem;padding:.65rem .85rem;border-left:3px solid #b49b62;background:#f5f2eb;font-size:.94rem}
-    .thot-terme{display:inline;color:inherit;background:none;border:0;border-radius:3px;padding:3px 2px;margin:-3px -2px;font:inherit;touch-action:manipulation;font-weight:650;text-decoration:underline;text-decoration-style:dotted;text-decoration-color:#94752d;text-underline-offset:.2em;cursor:pointer}
-    .thot-terme:hover,.thot-terme[aria-expanded="true"]{color:#72571e}
-    .thot-terme:focus-visible{outline:3px solid #d2a93c;outline-offset:3px}
-    .thot-definition{display:block;margin:.55rem 0;padding:.65rem .8rem;border-left:3px solid #b49b62;border-radius:.2rem;background:#f5f2eb;color:#243238;font-size:.94em;line-height:1.55}
-  </style>
+  <link rel="stylesheet" href="../assets/glossaire-interactif.css">
 </head>
 <body class="article-geopolitique">
   <a class="geo-skip-link" href="#texte-article">Aller directement à l’article</a>
@@ -267,32 +261,7 @@
   <script src="../assets/puissance-sommaire.js" defer></script>
   <script src="../assets/puissance-comparateur.js"></script>
   <script src="../assets/puissance-chronologie.js"></script>
-  <script>
-    (() => {
-      const close = (button) => {
-        if (!button) return;
-        button.setAttribute('aria-expanded', 'false');
-        const definition = document.getElementById(button.getAttribute('aria-controls'));
-        if (definition) definition.hidden = true;
-      };
-      document.addEventListener('click', (event) => {
-        const button = event.target.closest('.thot-terme');
-        document.querySelectorAll('.thot-terme[aria-expanded="true"]').forEach((openButton) => {
-          if (openButton !== button) close(openButton);
-        });
-        if (!button) return;
-        const isOpen = button.getAttribute('aria-expanded') === 'true';
-        button.setAttribute('aria-expanded', String(!isOpen));
-        const definition = document.getElementById(button.getAttribute('aria-controls'));
-        if (definition) definition.hidden = isOpen;
-      });
-      document.addEventListener('keydown', (event) => {
-        if (event.key !== 'Escape') return;
-        const button = document.querySelector('.thot-terme[aria-expanded="true"]');
-        if (button) { close(button); button.focus(); }
-      });
-    })();
-  </script>
+  <script src="../assets/glossaire-interactif.js" defer></script>
   <script>
     const contenu = document.querySelector('#texte-article');
     const mots = contenu.innerText.trim().split(/\s+/).length;
