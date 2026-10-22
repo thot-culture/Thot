@@ -1,0 +1,10 @@
+/* Portraits légendés et sélections d’œuvres pour l’article sur les autrices. */
+.portrait-autrice{margin:28px 0 34px}
+.portrait-autrice img{display:block;width:100%;max-width:680px;max-height:420px;object-fit:contain;object-position:left center;border-radius:12px;background:#ece8de}
+.portrait-autrice figcaption{max-width:680px;margin-top:9px;color:#566171;font-size:13px;line-height:1.55}
+.portrait-autrice figcaption a{color:#715026;text-underline-offset:2px}
+.oeuvres-reperes{margin:28px 0 38px;padding:18px 20px;border-left:3px solid #B89558;border-radius:0 12px 12px 0;background:#fffefa}
+.oeuvres-reperes h3{margin:0 0 12px;color:#17243A;font-size:18px;line-height:1.35}
+.oeuvres-reperes ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:8px 22px;margin:0;padding-left:20px}
+.oeuvres-reperes li{margin:0;color:#263246;font-size:14px;line-height:1.6}
+@media(max-width:560px){.portrait-autrice{margin:22px 0 28px}.portrait-autrice img{max-height:340px}.oeuvres-reperes{padding:16px}.oeuvres-reperes ul{grid-template-columns:1fr}}
