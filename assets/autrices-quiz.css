@@ -1,0 +1,26 @@
+.quiz-pseudonymes{margin:42px 0;padding:clamp(20px,4vw,34px);border:1px solid #ded8c9;border-radius:18px;background:#fffefa;box-shadow:0 12px 32px rgba(23,36,58,.06)}
+.quiz-pseudonymes .quiz-kicker{margin:0 0 6px;color:#80643a;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.quiz-pseudonymes h2{margin:0 0 10px;font-size:clamp(25px,3vw,32px)}
+.quiz-intro{margin:0 0 20px}
+.quiz-instruction{margin:0 0 14px;padding:12px 15px;border-radius:10px;background:#f1eee7;font-size:14px}
+.quiz-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.quiz-column h3{margin:8px 0 10px;font:700 12px/1.4 "Segoe UI",Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#566171}
+.quiz-options{display:grid;gap:9px}
+.quiz-option{width:100%;min-height:48px;padding:10px 13px;border:1px solid #d9d5cb;border-radius:10px;background:#fff;color:#17243a;text-align:left;font:600 15px/1.35 "Segoe UI",Arial,sans-serif;cursor:pointer;transition:background .15s,border-color .15s,transform .15s}
+.quiz-option:hover:not(:disabled){border-color:#927038;transform:translateY(-1px)}
+.quiz-option:focus-visible,.quiz-reset:focus-visible{outline:3px solid #927038;outline-offset:3px}
+.quiz-option[aria-pressed="true"]{border-color:#245d63;background:#eaf1ef;box-shadow:0 0 0 2px #245d63 inset}
+.quiz-option.is-matched{border-color:#42745e;background:#edf5ef;color:#234b38}
+.quiz-option:disabled{cursor:default;opacity:1}
+.quiz-option.is-matched::before{content:attr(data-pair);display:inline-grid;place-items:center;width:22px;height:22px;margin-right:9px;border:1px solid #42745e;border-radius:50%;font-size:11px;font-weight:800}
+.quiz-option.is-wrong{border-color:#a34239;background:#fbefed}
+.quiz-status{min-height:26px;margin:14px 0 8px;font-size:14px;font-weight:650}
+.quiz-progress{margin:0;color:#566171;font-size:13px}
+.quiz-reset{margin-top:18px;padding:10px 15px;border:0;border-radius:8px;background:#17243a;color:#fff;font:650 14px "Segoe UI",Arial,sans-serif;cursor:pointer}
+.quiz-explanations{margin-top:22px;padding-top:18px;border-top:1px solid #e8e5dc}
+.quiz-explanations h3{margin:0 0 10px;font:700 16px "Segoe UI",Arial,sans-serif}
+.quiz-explanations ol{margin:0;padding-left:22px}
+.quiz-explanations li{margin:8px 0;font-size:14px;line-height:1.6}
+.quiz-noscript{padding:12px;background:#f1eee7;border-radius:8px}
+@media(max-width:560px){.quiz-grid{grid-template-columns:1fr;gap:8px}.quiz-column h3{margin-top:14px}.quiz-option{min-height:46px}}
+@media(prefers-reduced-motion:reduce){.quiz-option{transition:none}}
