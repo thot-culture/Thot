@@ -14,3 +14,13 @@
 .pieuvre-test-answer{padding-top:1px}
 @media(max-width:560px){.schema-chromatophore{padding:14px}.schema-heading{font-size:18px}.schema-label{font-size:18px}.schema-note{font-size:15px}}
 @media(prefers-reduced-motion:reduce){.pieuvre-indice summary,.pieuvre-test summary{scroll-behavior:auto}}
+
+.chromato-interactif{margin:30px 0 38px;padding:20px 22px;background:#fffefa;border:1px solid #ded8cb;border-radius:16px;box-shadow:0 8px 22px rgba(23,36,58,.06)}
+.chromato-interactif figcaption{font:600 21px Georgia,serif;color:#17243a;margin-bottom:8px}
+.chromato-consigne{font-size:15px;margin:0 0 8px}
+.chromato-svg{display:block;width:100%;max-width:600px;height:auto;margin:0 auto}
+.chromato-label{display:block;font-weight:700;font-size:14px;color:#17243a;margin:12px 0 7px}
+.chromato-curseur{display:block;width:100%;accent-color:#9c503e;min-height:28px;cursor:ew-resize}
+.chromato-curseur:focus-visible{outline:3px solid #927038;outline-offset:4px;border-radius:5px}
+.chromato-etat{min-height:24px;margin:8px 0 0;font-size:14px;color:#44515d}
+@media(max-width:560px){.chromato-interactif{padding:16px}.chromato-interactif figcaption{font-size:19px}}
