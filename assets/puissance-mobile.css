@@ -1,0 +1,57 @@
+/* THOT · Article de géopolitique — confort de lecture mobile.
+   Règles isolées pour ne pas modifier l'article de Roubaix. */
+.article-geopolitique .geo-skip-link{
+  position:absolute;z-index:50;top:-90px;left:14px;
+  padding:10px 16px;border:2px solid #b89558;border-radius:8px;
+  background:#fffefa;color:#17243a;font-weight:750;
+}
+.article-geopolitique .geo-skip-link:focus{top:12px}
+.article-geopolitique .sommaire-details>summary{
+  margin:0 0 18px;cursor:pointer;list-style:none;
+  font:normal 22px/1.3 Georgia,"Times New Roman",serif;color:#17243a;
+}
+.article-geopolitique .sommaire-details>summary::-webkit-details-marker{display:none}
+.article-geopolitique .sommaire-chevron{display:none}
+.article-geopolitique .sommaire-details>summary:focus-visible{
+  outline:3px solid #927038;outline-offset:4px;border-radius:5px;
+}
+@media(max-width:850px){
+  .article-geopolitique .sommaire{padding:13px 17px}
+  .article-geopolitique .sommaire-surtitle{margin:0 0 3px}
+  .article-geopolitique .sommaire-details>summary{
+    display:flex;align-items:center;justify-content:space-between;
+    min-height:44px;margin:0;padding:6px 0;gap:10px;font-size:19px;
+  }
+  .article-geopolitique .sommaire-chevron{
+    display:inline-block;color:#927038;font:700 24px/1 "Segoe UI",sans-serif;
+    transition:transform .2s;
+  }
+  .article-geopolitique .sommaire-details[open] .sommaire-chevron{transform:rotate(180deg)}
+  .article-geopolitique .sommaire-details nav{padding-top:11px;border-top:1px solid #e8e5dc}
+  .article-geopolitique .sommaire-details nav a{min-height:40px;align-items:center}
+  .article-geopolitique .entete{padding:36px 0 31px}
+  .article-geopolitique .entete h1{font-size:clamp(35px,5.8vw,51px);line-height:1.12;margin:15px 0}
+  .article-geopolitique .entete .accroche{max-width:62ch;font-size:16px;line-height:1.6;margin:0}
+  .article-geopolitique .entete .meta{margin-top:15px}
+  .article-geopolitique .mise-en-page{padding-top:27px;gap:21px}
+  .article-geopolitique .chronologie-galerie figcaption{font-size:13.5px;line-height:1.65;padding:13px 14px 16px}
+  .article-geopolitique .chronologie-galerie figcaption strong{font-size:14px}
+  .article-geopolitique .chronologie-mention{font-size:12.5px;line-height:1.6}
+  .article-geopolitique .chronologie-galerie img{object-fit:contain!important}
+}
+@media(max-width:560px){
+  .article-geopolitique .entete{padding:29px 0 22px}
+  .article-geopolitique .entete h1{font-size:clamp(33px,8.3vw,42px);line-height:1.12;margin:13px 0 14px}
+  .article-geopolitique .entete .accroche{font-size:15px;line-height:1.6}
+  .article-geopolitique .entete .meta{font-size:11px;gap:5px 12px;margin-top:14px}
+  .article-geopolitique .mise-en-page{padding-top:19px;gap:18px}
+  .article-geopolitique article>.ouverture{font-size:17px;line-height:1.65}
+  .article-geopolitique .comparateur-puissance{padding:16px;margin:25px 0 34px}
+  .article-geopolitique .comparateur-puissance h2{font-size:25px;line-height:1.24}
+  .article-geopolitique .chronologie-afghanistan{padding:16px;margin:30px 0 35px}
+  .article-geopolitique .chronologie-galerie{gap:12px}
+  .article-geopolitique .chronologie-galerie img{height:auto;aspect-ratio:auto}
+}
+@media(prefers-reduced-motion:reduce){
+  .article-geopolitique .sommaire-chevron{transition:none}
+}
