@@ -2,6 +2,7 @@
 .quiz-pseudonymes .quiz-kicker{margin:0 0 6px;color:#80643a;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
 .quiz-pseudonymes h2{margin:0 0 10px;font-size:clamp(25px,3vw,32px)}
 .quiz-intro{margin:0 0 20px}
+.objectif-lecture{margin:0 0 24px;color:#566171;font-size:15px;line-height:1.6}
 .quiz-instruction{margin:0 0 14px;padding:12px 15px;border-radius:10px;background:#f1eee7;font-size:14px}
 .quiz-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .quiz-column h3{margin:8px 0 10px;font:700 12px/1.4 "Segoe UI",Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#566171}
