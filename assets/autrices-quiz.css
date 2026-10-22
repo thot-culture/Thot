@@ -25,3 +25,6 @@
 .quiz-noscript{padding:12px;background:#f1eee7;border-radius:8px}
 @media(max-width:560px){.quiz-grid{grid-template-columns:1fr;gap:8px}.quiz-column h3{margin-top:14px}.quiz-option{min-height:46px}}
 @media(prefers-reduced-motion:reduce){.quiz-option{transition:none}}
+
+.page-quiz .mise-en-page{grid-template-columns:minmax(0,760px);justify-content:center}
+.page-quiz .mise-en-page article{margin-inline:auto}
