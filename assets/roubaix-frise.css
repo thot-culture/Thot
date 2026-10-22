@@ -9,7 +9,7 @@
 .ir-intro>p:not(.ir-eyebrow){color:#E3E9EB;font-size:14px;line-height:1.75;max-width:660px;margin-bottom:0}
 .ir-module{padding:33px clamp(18px,4vw,36px);border-top:1px solid #E6E0D6;scroll-margin-top:25px}
 .ir-heading{display:flex;align-items:center;gap:14px;margin-bottom:14px}
-.ir-count{font:normal 29px Georgia,serif;color:#967347;background:#F6EEDD;padding:12px;border-radius:12px;line-height:1}
+.ir-count{font:normal 29px Georgia,serif;color:#715026;background:#F6EEDD;padding:12px;border-radius:12px;line-height:1}
 .ir .ir-heading h3{font:normal clamp(23px,3vw,30px)/1.2 Georgia,serif;margin:0;color:#17243A}
 .ir .ir-guidance{font-size:14px;color:#566171;line-height:1.7;margin:0 0 22px}
 .ir button{font:inherit;cursor:pointer}
