@@ -399,4 +399,7 @@
       .mobile-menu-button{padding:8px 12px}
     }
 
-  
+/* Three editorial cards fit evenly on wide screens. */
+@media (min-width: 1080px) {
+  .editorial-stories { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
