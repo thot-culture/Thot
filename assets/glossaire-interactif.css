@@ -25,7 +25,7 @@
 }
 .thot-terme:hover,
 .thot-terme[aria-expanded="true"]{color:#72571e}
-.thot-terme:focus-visible{outline:3px solid #d2a93c;outline-offset:3px}
+.thot-terme:focus-visible{outline:3px solid #927038;outline-offset:3px}
 .thot-definition{
   display:block;
   margin:.55rem 0;
