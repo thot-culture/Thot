@@ -3,7 +3,7 @@
 .ir{margin:54px 0 62px;border:1px solid #DED8CC;border-radius:19px;background:#FFFEFA;overflow:hidden;box-shadow:0 18px 40px rgba(23,36,58,.06)}
 .ir *{box-sizing:border-box}
 .ir-intro{background:linear-gradient(120deg,#17243A,#304B5B);color:#fff;padding:35px clamp(20px,4vw,36px)}
-.ir .ir-eyebrow,.ir .ir-overline{color:#947140;letter-spacing:.14em;font-size:11px;font-weight:850;margin:0 0 7px}
+.ir .ir-eyebrow,.ir .ir-overline{color:#71542b;letter-spacing:.14em;font-size:11px;font-weight:850;margin:0 0 7px}
 .ir-intro .ir-eyebrow{color:#EACB95}
 .ir-intro h2{font:normal clamp(30px,4vw,41px)/1.18 Georgia,serif;margin:8px 0 15px;color:#FFFEFA}
 .ir-intro>p:not(.ir-eyebrow){color:#E3E9EB;font-size:14px;line-height:1.75;max-width:660px;margin-bottom:0}
