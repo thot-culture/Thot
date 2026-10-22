@@ -12,7 +12,7 @@
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--fond);color:var(--nuit);font-family:"Segoe UI",Arial,Helvetica,sans-serif;line-height:1.8}
 a{color:#24536D;text-underline-offset:3px}
-a:focus-visible{outline:3px solid var(--or);outline-offset:4px;border-radius:3px}
+a:focus-visible{outline:3px solid #927038;outline-offset:4px;border-radius:3px}
 .largeur{width:min(1100px,calc(100% - 40px));margin:auto}
 .barre{background:var(--nuit);color:#fff;padding:17px 0}
 .barre .largeur{display:flex;align-items:center;justify-content:space-between;gap:20px}
