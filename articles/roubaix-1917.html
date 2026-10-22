@@ -22,6 +22,7 @@
   <link rel="stylesheet" href="../assets/roubaix-photos.css">
   <link rel="stylesheet" href="../assets/roubaix-frise.css">
   <link rel="stylesheet" href="../assets/glossaire-interactif.css">
+  <link rel="stylesheet" href="../assets/visuels-pedagogiques.css">
 </head>
 <body class="article-roubaix">
   <a class="skip-link" href="#texte-article">Aller directement à l’article</a>
@@ -94,6 +95,22 @@
 
         <div class="thot-document-break"><p class="thot-document-overline">LE QUOTIDIEN SOUS RÉQUISITION</p><h2>Quand la guerre entre jusque dans les maisons</h2><p>Les besoins de l'occupant ne concernent pas uniquement les usines. Une affiche d'octobre 1917 évoque même le prélèvement de laine dans les matelas et coussins des habitants.</p></div>
         <div data-thot-image="roubaix-laines-1917"><p class="thot-image-pending">Avis sur les laines · 30 octobre 1917</p></div>
+
+        <section class="thot-visual-guide" data-thot-visual aria-labelledby="guide-affiche-titre">
+          <p class="thot-visual-eyebrow">Document commenté · 30 octobre 1917</p>
+          <h3 id="guide-affiche-titre">Lire l’avis sur la laine en trois repères</h3>
+          <p>Choisissez un repère pour comprendre ce que l’affiche indique — et ce qu’elle ne suffit pas à prouver.</p>
+          <div class="thot-visual-controls" role="group" aria-label="Repères pour lire l’affiche" hidden>
+            <button type="button" data-visual-control="date" aria-controls="guide-affiche-date" aria-pressed="true">1 · La date</button>
+            <button type="button" data-visual-control="objet" aria-controls="guide-affiche-objet" aria-pressed="false">2 · Ce qui est demandé</button>
+            <button type="button" data-visual-control="limite" aria-controls="guide-affiche-limite" aria-pressed="false">3 · La limite du document</button>
+          </div>
+          <div class="thot-visual-panels" aria-live="polite">
+            <p class="thot-visual-panel" id="guide-affiche-date" data-visual-panel="date"><strong>1. La date :</strong> l’avis est daté du 30 octobre 1917. Ce repère le situe dans la dernière année de l’occupation de Roubaix.</p>
+            <p class="thot-visual-panel" id="guide-affiche-objet" data-visual-panel="objet"><strong>2. Ce qui est demandé :</strong> le titre et le texte de l’avis concernent le prélèvement de laine et de mélanges de laine provenant des matelas et des coussins.</p>
+            <p class="thot-visual-panel" id="guide-affiche-limite" data-visual-panel="limite"><strong>3. La limite du document :</strong> l’affiche atteste qu’un prélèvement est annoncé par l’autorité. À elle seule, elle ne dit pas quelle quantité a réellement été prise ni comment chaque habitant l’a vécu.</p>
+          </div>
+        </section>
 
         <h2 id="ravitaillement">Se nourrir : des règles et des inquiétudes</h2>
         <p>Dans une cité industrielle, l'approvisionnement alimentaire est essentiel. Les habitants doivent composer avec les difficultés créées par la guerre et avec une distribution encadrée. Le <button class="thot-terme" type="button" aria-expanded="false" aria-controls="thot-def-ravitaillement" aria-label="Afficher la définition : ravitaillement">ravitaillement</button><span class="thot-definition" id="thot-def-ravitaillement" hidden>Organisation de l’approvisionnement en biens essentiels, notamment en nourriture.</span> devient un domaine administratif à part entière, visible dans les annonces et dans les archives de la ville.</p>
@@ -187,5 +204,6 @@
     const mots = contenu.innerText.trim().split(/\s+/).length;
     document.querySelector('#duree').textContent = Math.max(1, Math.ceil(mots / 210)) + ' min de lecture environ';
   </script>
+  <script src="../assets/visuels-pedagogiques.js" defer></script>
 </body>
 </html>
