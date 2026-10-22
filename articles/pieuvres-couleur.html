@@ -82,6 +82,23 @@
           <p>Schéma THOT, simplifié et non à l’échelle, d’après les descriptions anatomiques des chromatophores. <a class="source-num" href="#ref1" aria-label="Voir la source 1">[1]</a></p>
         </figure>
 
+        <figure class="chromato-interactif" aria-labelledby="chromato-interactif-titre">
+          <figcaption id="chromato-interactif-titre">À toi d’étirer le pigment</figcaption>
+          <p class="chromato-consigne" id="chromato-consigne">Fais glisser le curseur : les muscles radiaires se contractent et le sac pigmentaire s’étale.</p>
+          <svg class="chromato-svg" viewBox="0 0 600 240" role="img" aria-labelledby="chromato-svg-title chromato-svg-desc">
+            <title id="chromato-svg-title">Un chromatophore dont le sac pigmentaire peut s’étaler</title>
+            <desc id="chromato-svg-desc">Le curseur contrôle la largeur d’un sac de pigment orange. Des fibres musculaires rayonnent autour du sac.</desc>
+            <circle cx="300" cy="118" r="118" fill="#f2ede3"/>
+            <g id="chromato-fibres" stroke="#667582" stroke-width="4" stroke-linecap="round"></g>
+            <ellipse id="chromato-sac" cx="300" cy="118" rx="26" ry="22" fill="#9c503e" stroke="#743729" stroke-width="3"/>
+            <text x="300" y="222" text-anchor="middle" class="schema-note">Sac pigmentaire entouré de muscles radiaires</text>
+          </svg>
+          <label class="chromato-label" for="chromato-curseur">Niveau d’étalement du pigment</label>
+          <input id="chromato-curseur" class="chromato-curseur" type="range" min="0" max="100" value="18" aria-describedby="chromato-consigne chromato-etat" aria-valuetext="Peu étalé">
+          <p class="chromato-etat" id="chromato-etat" aria-live="polite">Au repos : le sac est compact et la tache colorée est petite.</p>
+          <noscript><p>Schéma statique : au repos, le sac pigmentaire est compact ; lorsque les muscles se contractent, il s’étale et la tache colorée devient plus visible.</p></noscript>
+        </figure>
+
         <h2 id="commande">Qui commande ces changements&nbsp;?</h2>
         <p>Les chromatophores sont reliés à un système nerveux qui peut les activer rapidement. Les yeux fournissent des informations sur l’environnement, et le cerveau coordonne les signaux envoyés aux muscles de la peau. En activant certains groupes et en en laissant d’autres au repos, la pieuvre fait varier l’ensemble du motif. <a class="source-num" href="#ref1" aria-label="Voir la source 1">[1]</a><a class="source-num" href="#ref3" aria-label="Voir la source 3">[3]</a></p>
         <p>Le mécanisme est rapide, mais il ne faut pas imaginer que l’animal copie chaque détail du décor comme une photographie. Il produit plutôt une apparence qui peut l’aider à se fondre dans le fond, à brouiller le contour de son corps ou à rendre un signal visible. Les formes et les contrastes comptent autant que la teinte exacte. <a class="source-num" href="#ref3" aria-label="Voir la source 3">[3]</a></p>
@@ -172,6 +189,46 @@
     const compterMots = texte => texte.trim().split(/\s+/).filter(Boolean).length;
     const mots = compterMots(contenuALire.innerText);
     document.querySelector("#duree").textContent = Math.max(1, Math.ceil(mots / 210)) + " min de lecture environ";
+    const curseurChromato = document.querySelector("#chromato-curseur");
+    const sacChromato = document.querySelector("#chromato-sac");
+    const fibresChromato = document.querySelector("#chromato-fibres");
+    const etatChromato = document.querySelector("#chromato-etat");
+    if (curseurChromato && sacChromato && fibresChromato && etatChromato) {
+      const centreX = 300, centreY = 118, rayonExterieur = 112;
+      const fibres = Array.from({length: 16}, (_, i) => {
+        const angle = (Math.PI * 2 * i) / 16;
+        const fibre = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        fibresChromato.appendChild(fibre);
+        return {fibre, angle};
+      });
+      const actualiserChromatophore = () => {
+        const niveau = Number(curseurChromato.value);
+        const rayonX = 26 + niveau * 0.62;
+        const rayonY = 22 + niveau * 0.24;
+        sacChromato.setAttribute("rx", rayonX);
+        sacChromato.setAttribute("ry", rayonY);
+        fibres.forEach(({fibre, angle}) => {
+          const cos = Math.cos(angle), sin = Math.sin(angle);
+          const rayonInterne = 1 / Math.sqrt((cos * cos) / (rayonX * rayonX) + (sin * sin) / (rayonY * rayonY));
+          fibre.setAttribute("x1", centreX + cos * rayonInterne);
+          fibre.setAttribute("y1", centreY + sin * rayonInterne);
+          fibre.setAttribute("x2", centreX + cos * rayonExterieur);
+          fibre.setAttribute("y2", centreY + sin * rayonExterieur);
+        });
+        if (niveau < 34) {
+          etatChromato.textContent = "Au repos : le sac est compact et la tache colorée est petite.";
+          curseurChromato.setAttribute("aria-valuetext", "Peu étalé");
+        } else if (niveau < 72) {
+          etatChromato.textContent = "Les muscles se contractent : le pigment s’étale.";
+          curseurChromato.setAttribute("aria-valuetext", "En train de s’étaler");
+        } else {
+          etatChromato.textContent = "Muscles contractés : le pigment est très étalé et plus visible.";
+          curseurChromato.setAttribute("aria-valuetext", "Très étalé");
+        }
+      };
+      curseurChromato.addEventListener("input", actualiserChromatophore);
+      actualiserChromatophore();
+    }
   </script>
 </body>
 </html>
