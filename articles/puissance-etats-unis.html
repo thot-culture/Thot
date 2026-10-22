@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="../assets/puissance-chronologie.css?v=galerie-1">
   <link rel="stylesheet" href="../assets/puissance-mobile.css">
   <link rel="stylesheet" href="../assets/glossaire-interactif.css">
+  <link rel="stylesheet" href="../assets/visuels-pedagogiques.css">
 </head>
 <body class="article-geopolitique">
   <a class="geo-skip-link" href="#texte-article">Aller directement à l’article</a>
@@ -35,6 +36,22 @@
 <p class="ouverture">Le paradoxe est simple : disposer de ressources ne garantit pas d'obtenir le résultat politique recherché. Les trois cas suivants permettent d'observer cette limite.</p>
 <p class="thot-glossaire-indication">Repère pédagogique : les mots soulignés en pointillés s’ouvrent au toucher ou au clavier.</p>
 <p>Comment expliquer ce paradoxe ? <strong>Et si la véritable question n'était pas de savoir qui est le plus fort, mais qui parvient réellement à atteindre ses objectifs ?</strong></p>
+
+<section class="thot-visual-guide" data-thot-visual aria-labelledby="guide-puissance-titre">
+  <p class="thot-visual-eyebrow">Schéma interactif · Comprendre la puissance</p>
+  <h2 id="guide-puissance-titre">Des ressources au résultat : où se joue la différence ?</h2>
+  <p>Suivez les trois étapes pour voir pourquoi posséder des moyens ne garantit pas d’atteindre son objectif.</p>
+  <div class="thot-visual-controls" role="group" aria-label="Étapes du schéma sur la puissance" hidden>
+    <button type="button" data-visual-control="ressources" aria-controls="guide-puissance-ressources" aria-pressed="true">1 · Ressources</button>
+    <button type="button" data-visual-control="actions" aria-controls="guide-puissance-actions" aria-pressed="false">2 · Actions</button>
+    <button type="button" data-visual-control="resultats" aria-controls="guide-puissance-resultats" aria-pressed="false">3 · Résultats</button>
+  </div>
+  <div class="thot-visual-panels" aria-live="polite">
+    <p class="thot-visual-panel" id="guide-puissance-ressources" data-visual-panel="ressources"><strong>1. Les ressources :</strong> une armée, de l’argent, des alliances ou une influence culturelle donnent des capacités d’action. Ce sont des moyens disponibles, pas encore un résultat politique.</p>
+    <p class="thot-visual-panel" id="guide-puissance-actions" data-visual-panel="actions"><strong>2. Les actions :</strong> un État choisit comment utiliser ses ressources — intervention, aide, sanctions ou négociations. Le choix doit correspondre à l’objectif poursuivi.</p>
+    <p class="thot-visual-panel" id="guide-puissance-resultats" data-visual-panel="resultats"><strong>3. Les résultats :</strong> ils dépendent aussi des décisions des autres acteurs, des institutions et du contexte local. En Afghanistan, par exemple, l’aide et le soutien militaire n’ont pas empêché l’effondrement du gouvernement en 2021.</p>
+  </div>
+</section>
 
 <section class="comparateur-puissance" aria-labelledby="comparateur-puissance-titre">
   <p class="comparateur-surtitre">THOT · Comparer les cas</p>
@@ -267,5 +284,6 @@
     const mots = contenu.innerText.trim().split(/\s+/).length;
     document.querySelector('#duree').textContent = Math.max(1, Math.ceil(mots / 210)) + ' min de lecture environ';
   </script>
+  <script src="../assets/visuels-pedagogiques.js" defer></script>
 </body>
 </html>
