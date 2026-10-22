@@ -1690,6 +1690,12 @@
     document.getElementById('quiz-total').textContent = questions.length + ' questions pour jouer';
 
     const labels = {mix:'✦ Un peu de tout',histoire:'🏛️ Histoire',geographie:'🌍 Géographie',sciences:'🔬 Sciences',arts:'🎨 Arts & culture',insolite:'✨ Insolite'};
+    const recommendedReads = {
+      histoire:{href:'articles/roubaix-1917.html',title:'Roubaix en 1917 : vivre sous l’occupation allemande'},
+      geographie:{href:'articles/puissance-etats-unis.html',title:'Pourquoi les États-Unis ne peuvent-ils pas tout imposer ?'},
+      sciences:{href:'articles/pieuvres-couleur.html',title:'Comment les pieuvres changent-elles de couleur ?'},
+      arts:{href:'articles/autrices-pseudonymes.html',title:'Pourquoi des autrices ont-elles publié sous un nom d’homme ?'}
+    };
     const levels = {
       facile:{label:'🌱 Facile',description:'Pour se lancer et découvrir de nouvelles choses.'},
       intermediaire:{label:'⚡ Moyen',description:'Pour celles et ceux qui aiment déjà se creuser la tête.'},
@@ -1927,6 +1933,7 @@
       renderQuestionTrack();
       $('answer-list').replaceChildren();
       $('feedback').className='feedback hidden';$('feedback').replaceChildren();
+      $('quiz-reading').className='quiz-reading hidden';$('quiz-reading').replaceChildren();
       $('next-button').classList.add('hidden');
       $('hint-panel').classList.add('hidden');
       $('hint-panel').textContent='';
@@ -1995,6 +2002,13 @@
       const detail=document.createElement('span');
       detail.textContent=(good?'':'Bonne'+(expected.length>1?'s':'')+' réponse'+(expected.length>1?'s':'')+' : '+readable(expected)+'. ')+item.why;
       feedback.append(title,detail);
+      const reading=recommendedReads[item.cat];
+      const readingBox=$('quiz-reading');
+      if(reading){
+        const intro=document.createElement('span');intro.textContent='Pour continuer dans cet univers : ';
+        const link=document.createElement('a');link.href=reading.href;link.textContent=reading.title;
+        readingBox.append(intro,link);readingBox.classList.remove('hidden');
+      }
       $('next-button').textContent=index===round.length-1?'Voir mon résultat →':'Question suivante →';
       $('next-button').classList.remove('hidden');
       $('progressbar').setAttribute('aria-valuenow',String(index+1));
