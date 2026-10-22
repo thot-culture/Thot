@@ -14,37 +14,10 @@
   <meta property="og:description" content="Brontë, George Eliot, George Sand : ce que les sources permettent réellement de dire sur leurs noms de plume.">
   <meta property="og:url" content="https://thot-culture.github.io/Thot/articles/autrices-pseudonymes.html">
   <meta name="twitter:card" content="summary">
-  <link rel="stylesheet" href="../assets/article.css">
-  <style>
-    .quiz-pseudonymes{margin:42px 0;padding:clamp(20px,4vw,34px);border:1px solid #ded8c9;border-radius:18px;background:#fffefa;box-shadow:0 12px 32px rgba(23,36,58,.06)}
-    .quiz-pseudonymes .quiz-kicker{margin:0 0 6px;color:#80643a;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
-    .quiz-pseudonymes h2{margin:0 0 10px;font-size:clamp(25px,3vw,32px)}
-    .quiz-intro{margin:0 0 20px}
-    .quiz-instruction{margin:0 0 14px;padding:12px 15px;border-radius:10px;background:#f1eee7;font-size:14px}
-    .quiz-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-    .quiz-column h3{margin:8px 0 10px;font:700 12px/1.4 "Segoe UI",Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#566171}
-    .quiz-options{display:grid;gap:9px}
-    .quiz-option{width:100%;min-height:48px;padding:10px 13px;border:1px solid #d9d5cb;border-radius:10px;background:#fff;color:#17243a;text-align:left;font:600 15px/1.35 "Segoe UI",Arial,sans-serif;cursor:pointer;transition:background .15s,border-color .15s,transform .15s}
-    .quiz-option:hover:not(:disabled){border-color:#927038;transform:translateY(-1px)}
-    .quiz-option:focus-visible,.quiz-reset:focus-visible{outline:3px solid #927038;outline-offset:3px}
-    .quiz-option[aria-pressed="true"]{border-color:#245d63;background:#eaf1ef;box-shadow:0 0 0 2px #245d63 inset}
-    .quiz-option.is-matched{border-color:#42745e;background:#edf5ef;color:#234b38}
-    .quiz-option:disabled{cursor:default;opacity:1}
-    .quiz-option.is-matched::before{content:attr(data-pair);display:inline-grid;place-items:center;width:22px;height:22px;margin-right:9px;border:1px solid #42745e;border-radius:50%;font-size:11px;font-weight:800}
-    .quiz-option.is-wrong{border-color:#a34239;background:#fbefed}
-    .quiz-status{min-height:26px;margin:14px 0 8px;font-size:14px;font-weight:650}
-    .quiz-progress{margin:0;color:#566171;font-size:13px}
-    .quiz-reset{margin-top:18px;padding:10px 15px;border:0;border-radius:8px;background:#17243a;color:#fff;font:650 14px "Segoe UI",Arial,sans-serif;cursor:pointer}
-    .quiz-explanations{margin-top:22px;padding-top:18px;border-top:1px solid #e8e5dc}
-    .quiz-explanations h3{margin:0 0 10px;font:700 16px "Segoe UI",Arial,sans-serif}
-    .quiz-explanations ol{margin:0;padding-left:22px}
-    .quiz-explanations li{margin:8px 0;font-size:14px;line-height:1.6}
-    .quiz-noscript{padding:12px;background:#f1eee7;border-radius:8px}
-    @media(max-width:560px){.quiz-grid{grid-template-columns:1fr;gap:8px}.quiz-column h3{margin-top:14px}.quiz-option{min-height:46px}}
-    @media(prefers-reduced-motion:reduce){.quiz-option{transition:none}}
-  </style>
+  <link rel="stylesheet" href="../assets/article.css?v=a11y-1">
+  <link rel="stylesheet" href="../assets/autrices-quiz.css">
 </head>
-<body>
+<body class="article-litterature">
   <a class="skip-link" href="#texte-article">Aller directement à l’article</a>
   <header class="barre"><div class="largeur"><a class="marque" href="../index.html" aria-label="THOT, accueil">THOT</a><a class="retour" href="../bibliotheque.html">← Retour aux articles</a></div></header>
   <main>
@@ -52,11 +25,12 @@
       <div class="categorie">Littérature · Histoire des autrices</div>
       <h1>Pourquoi des autrices ont-elles publié sous un nom d’homme&nbsp;?</h1>
       <p class="accroche">Currer Bell, George Eliot, George Sand : derrière ces signatures se trouvent des femmes qui ont choisi des noms de plume pour des raisons différentes.</p>
-      <div class="meta"><span>La rédaction THOT</span><span>Publié le 22 octobre 2026</span><span>Lecture : environ 3 minutes</span></div>
+      <div class="meta"><span>La rédaction THOT</span><span>Publié le 22 octobre 2026</span><span id="duree">Temps de lecture estimé</span></div>
     </div></header>
     <div class="largeur mise-en-page">
       <article id="texte-article">
         <p class="ouverture">Au XIX<sup>e</sup> siècle, plusieurs autrices ont publié sous un nom d’emprunt. Mais la question « pourquoi ? » n’a pas une réponse unique : certaines expliquent leur choix, d’autres laissent moins de traces, et toutes n’ont pas adopté un nom masculin.</p>
+        <p class="objectif-lecture"><strong>Objectif de lecture.</strong> Distinguer un fait établi par une source, une interprétation biographique et une question qui reste ouverte.</p>
 
         <div class="encadre"><strong>Repère de méthode</strong><p>Un pseudonyme remplace le nom de l’autrice. Une publication anonyme, elle, ne donne aucun nom d’auteur — ou seulement une formule comme « par une dame ». Ces stratégies ne sont pas interchangeables.</p></div>
 
@@ -96,7 +70,7 @@
             </ol>
           </div>
           <button class="quiz-reset" id="quiz-reset" type="button">Recommencer</button>
-          <noscript><p class="quiz-noscript">Le jeu interactif nécessite JavaScript. Les réponses sont données avec leurs sources dans les explications de l’article.</p></noscript>
+          <noscript><p class="quiz-noscript">Sans JavaScript, le jeu est désactivé. Les associations sont expliquées dans les sections de l’article et les sources correspondantes y sont indiquées.</p></noscript>
         </section>
 
         <h2 id="eliot">George Eliot : la signature et la vie privée</h2>
@@ -111,7 +85,7 @@
         <p>Jane Austen offre un contrepoint utile : <em>Sense and Sensibility</em> paraît en 1811 sous la mention « By a Lady » (« par une dame »), puis <em>Pride and Prejudice</em> sous « By the Author of Sense &amp; Sensibility ». La maison-musée Jane Austen’s House précise qu’on ne sait pas exactement pourquoi elle a publié anonymement. Ce cas rappelle qu’anonymat, signature féminine, initiales et pseudonyme masculin coexistent ; ils ne répondent pas nécessairement aux mêmes raisons. <a class="source-num" href="#ref5" aria-label="Voir la source 5">[5]</a></p>
         <p>Une étude publiée par le CÉRÉdI de l’Université de Rouen montre, pour les écrivaines-journalistes du XIX<sup>e</sup> siècle, une pluralité de pratiques : nom civil, initiales, anonymat et pseudonymes. Son corpus porte sur la presse féminine ; il éclaire cette diversité sans autoriser à généraliser ses conclusions à toutes les autrices ni à tous les genres littéraires. <a class="source-num" href="#ref6" aria-label="Voir la source 6">[6]</a></p>
 
-        <section class="retenir" aria-labelledby="retenir-title"><h2 id="retenir-title">Ce qu’on peut conclure</h2><ul>
+        <section class="retenir" aria-labelledby="retenir-title"><h2 id="retenir-title">Ce qu’il faut retenir</h2><ul>
           <li>Pour les Brontë, Charlotte formule explicitement la crainte des préjugés et le souhait d’éviter la publicité personnelle.</li>
           <li>Pour George Eliot, les sources biographiques avancent plusieurs motifs, dont le genre et la vie privée.</li>
           <li>Pour George Sand, les sources consultées établissent l’identité et l’histoire de plusieurs signatures, mais pas à elles seules le motif du choix de « George ».</li>
@@ -140,6 +114,14 @@
     </div>
   </main>
   <footer class="pied"><div class="largeur"><b>THOT</b><span>La curiosité n’a pas de limites.</span><a href="../notre-methode.html">Notre méthode</a></div></footer>
+  <script>
+    const contenu = document.querySelector("#texte-article");
+    const compterMots = texte => texte.trim().split(/\\s+/).filter(Boolean).length;
+    const motsAffiches = compterMots(contenu.innerText);
+    const motsSources = [...contenu.querySelectorAll(".sources")].reduce((total, source) => total + compterMots(source.innerText), 0);
+    const mots = Math.max(0, motsAffiches - motsSources);
+    document.querySelector("#duree").textContent = Math.max(1, Math.ceil(mots / 210)) + " min de lecture environ";
+  </script>
   <script>
   (() => {
     'use strict';
