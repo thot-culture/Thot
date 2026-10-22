@@ -136,7 +136,8 @@
       </article>
       <aside class="sommaire" aria-label="Sommaire de l'article">
         <p class="sommaire-surtitle">Guide de lecture</p>
-        <h2>Dans cet article</h2>
+        <details class="sommaire-details" open>
+          <summary>Dans cet article <span aria-hidden="true" class="sommaire-chevron">⌄</span></summary>
         <nav aria-label="Sections de l'article">
           <ol>
             <li><a href="#contexte"><span class="sommaire-num" aria-hidden="true">1</span><span>Une ville occupée</span></a></li>
@@ -151,6 +152,7 @@
           <a class="sommaire-annexe" href="#retenir-titre"><span class="sommaire-num" aria-hidden="true">✦</span><span>Ce qu'il faut retenir</span></a>
           <a class="sommaire-annexe" href="#sources"><span class="sommaire-num" aria-hidden="true">↗</span><span>Sources et références</span></a>
         </nav>
+        </details>
       </aside>
     </div>
   </main>
@@ -158,6 +160,25 @@
 
   <script src="../assets/article-media.js" defer></script>
   <script src="../assets/roubaix-frise.js" defer></script>
+  <script>
+    (() => {
+      const sommaire = document.querySelector('.sommaire-details');
+      if (!sommaire) return;
+      const mobile = window.matchMedia('(max-width: 850px)');
+      const updateSommaire = () => { sommaire.open = !mobile.matches; };
+      updateSommaire();
+      if (typeof mobile.addEventListener === 'function') {
+        mobile.addEventListener('change', updateSommaire);
+      } else if (typeof mobile.addListener === 'function') {
+        mobile.addListener(updateSommaire);
+      }
+      sommaire.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', () => {
+          if (mobile.matches) sommaire.open = false;
+        });
+      });
+    })();
+  </script>
   <script>
     const contenu = document.querySelector('#texte-article');
     const mots = contenu.innerText.trim().split(/\s+/).length;
