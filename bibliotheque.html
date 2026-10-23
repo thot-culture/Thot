@@ -37,7 +37,7 @@
     <a class="brand" href="index.html" aria-label="THOT, accueil"><span class="brand-symbol" aria-hidden="true">✦</span> THOT</a>
     <nav aria-label="Navigation principale"><a href="index.html">Accueil</a><a href="bibliotheque.html" aria-current="page">Bibliothèque</a><a href="notre-methode.html">Notre méthode</a><a href="quiz.html#quiz-classique">Quiz</a></nav>
   </div></header>
-  <main id="contenu">
+  <main id="contenu" tabindex="-1">
     <section class="hero"><div class="wrap">
       <p class="eyebrow">THOT / LES ARTICLES</p>
       <h1>La bibliothèque <em>des esprits curieux.</em></h1>
@@ -46,9 +46,10 @@
     </div></section>
     <section class="wrap catalogue" aria-labelledby="catalogue-title">
       <div class="intro"><div><p class="eyebrow dark">EXPLORER</p><h2 id="catalogue-title">Tous les articles</h2></div><p>Un catalogue appelé à grandir, sans sacrifier la rigueur éditoriale.</p></div>
-      <div class="search-zone">
+      <div class="search-zone" id="library-search" hidden>
         <label for="article-search">Rechercher un sujet, un lieu ou un mot-clé</label>
-        <div class="search-input"><span aria-hidden="true">⌕</span><input id="article-search" type="search" autocomplete="off" placeholder="Ex. Brontë, Roubaix, puissance…" aria-controls="article-results"><button id="clear-search" type="button" class="clear-search" hidden>Effacer</button></div>
+        <div class="search-input"><span aria-hidden="true">⌕</span><input id="article-search" type="search" autocomplete="off" placeholder="Ex. Brontë, Roubaix, puissance…" aria-controls="article-results" aria-describedby="search-help"><button id="clear-search" type="button" class="clear-search" hidden>Effacer</button></div>
+        <p class="search-help" id="search-help">Vous pouvez combiner plusieurs mots. Les accents, les tirets et l’ordre des mots ne changent pas la recherche. Pour partager une recherche, copiez l’adresse de cette page.</p>
         <div class="filters" role="group" aria-label="Filtrer les articles par discipline">
           <button type="button" data-filter="tous" aria-pressed="true">Tous les sujets</button>
           <button type="button" data-filter="histoire" aria-pressed="false">Histoire</button>
@@ -59,8 +60,9 @@
           <button type="button" data-filter="sciences-humaines" aria-pressed="false">Psychologie et société</button>
         </div>
       </div>
+      <noscript><p class="search-help">La recherche et les filtres nécessitent JavaScript. Tous les articles restent accessibles ci-dessous.</p></noscript>
       <div class="library-discovery"><p>Une envie de découverte, sans idée précise ?</p><a class="discovery-primary" href="articles/autrices-pseudonymes.html" data-surprise aria-label="Ouvrir un article au hasard parmi toute la bibliothèque"><span aria-hidden="true">✦</span> Surprends-moi</a></div>
-      <p class="results-status" id="results-status" role="status" aria-live="polite">5 articles disponibles</p>
+      <p class="results-status" id="results-status" role="status" aria-live="polite" aria-atomic="true">5 articles disponibles</p>
       <div id="article-results" class="article-grid">
 <article class="article-card discovery-card" data-category="sciences-humaines" data-keywords="psychologie sociale autorité obéissance désobéissance conformité contestation parents État lycée direction Milgram légitimité">
       <a class="discovery-card__link" href="articles/autorite.html" data-discovery-path aria-labelledby="card-autorite">
@@ -139,41 +141,12 @@
       <p class="discovery-credit"><a href="https://commons.wikimedia.org/wiki/File:ELD_-_ROUBAIX_-_Boulevard_Gambetta.JPG" target="_blank" rel="noopener noreferrer">ELD, avant 1919 · Wikimedia Commons · Domaine public<span class="discovery-sr-only"> — consulter la notice de l’image (nouvel onglet)</span></a></p>
     </article>
       </div>
-      <div class="empty hidden" id="empty-state" role="status"><span aria-hidden="true">◎</span><h3>Aucun article ne correspond à votre recherche.</h3><p>Essayez un autre mot-clé ou revenez à tous les sujets.</p><button id="reset-filters" type="button">Afficher tous les articles</button></div>
+      <div class="empty hidden" id="empty-state"><span aria-hidden="true">◎</span><h3>Aucun article ne correspond à votre recherche.</h3><p>Essayez un autre mot-clé ou revenez à tous les sujets.</p><button id="reset-filters" type="button">Afficher tous les articles</button></div>
       <div class="catalogue-foot"><p>Les textes THOT associent des sources identifiables, des explications accessibles et, selon les sujets, de petits jeux facultatifs. Un espace quiz permet aussi de se tester.</p><a href="quiz.html#quiz-classique">Découvrir les quiz THOT ↗</a></div>
     </section>
   </main>
   <footer><div class="wrap foot"><a href="index.html">THOT</a><span>La curiosité n'a pas de limites.</span><a href="notre-methode.html">Notre méthode</a><a href="index.html">Retour à l'accueil ↗</a></div></footer>
-  <script>
-    'use strict';
-    const search=document.getElementById('article-search');
-    const cards=[...document.querySelectorAll('.article-card')];
-    const filters=[...document.querySelectorAll('[data-filter]')];
-    const normalize=value=>value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLocaleLowerCase('fr').trim();
-    let category='tous';
-    function update(){
-      const query=normalize(search.value);
-      let count=0;
-      for(const card of cards){
-        const categoryMatch=category==='tous'||card.dataset.category===category;
-        const match=!query||normalize(card.textContent+' '+card.dataset.keywords).includes(query);
-        const visible=categoryMatch&&match;
-        card.hidden=!visible;
-        if(visible)count++;
-      }
-      document.getElementById('results-status').textContent=count+' article'+(count>1?'s':'')+' trouvé'+(count>1?'s':'');
-      document.getElementById('empty-state').classList.toggle('hidden',count!==0);
-      document.getElementById('clear-search').hidden=!search.value;
-      for(const button of filters)button.setAttribute('aria-pressed',String(button.dataset.filter===category));
-    }
-    function reset(){category='tous';search.value='';update();search.focus();}
-    search.addEventListener('input',update);
-    for(const button of filters)button.addEventListener('click',()=>{category=button.dataset.filter;update();});
-    document.getElementById('clear-search').addEventListener('click',()=>{search.value='';update();search.focus();});
-    document.getElementById('reset-filters').addEventListener('click',reset);
-    document.getElementById('article-total').textContent=String(cards.length);
-    update();
-  </script>
+  <script src="assets/bibliotheque.js?v=lecture-1" defer></script>
   <script src="assets/decouverte.js?v=1" defer></script>
 </body>
 </html>

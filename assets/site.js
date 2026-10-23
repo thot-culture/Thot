@@ -1681,6 +1681,10 @@
         "hint": "Distingue le support matériel, l'outil et la forme des signes de leur langue."
       }
     ];
+    if(!['THOT_QUESTIONS_FACILE','THOT_QUESTIONS_INTERMEDIAIRE','THOT_QUESTIONS_EXPERT'].every(name=>Array.isArray(window[name]))){
+      document.getElementById('quiz-load-message').textContent='Certaines questions n’ont pas pu être chargées.';
+      throw new Error('Chargement incomplet des questions THOT');
+    }
     const additionalQuestions=[
       ...window.THOT_QUESTIONS_FACILE,
       ...window.THOT_QUESTIONS_INTERMEDIAIRE,
@@ -1702,16 +1706,21 @@
       expert:{label:'🏆 Expert',description:'Pour les curieux qui veulent un vrai défi.'}
     };
     const $=id=>document.getElementById(id);
+    const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
     const screens=['screen-intro','screen-question','screen-result'];
     let selectedCategory='mix',selectedLevel='facile',round=[],index=0,score=0,answered=false,attempts=[],streak=0,bestStreak=0,selectedAnswers=new Set(),gameMode='classic',gameDay='',roundFinished=false;
     const show=id=>screens.forEach(name=>$(name).classList.toggle('hidden',name!==id));
     function shuffle(arr){const copy=[...arr];for(let i=copy.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[copy[i],copy[j]]=[copy[j],copy[i]];}return copy;}
     const storageKey='thot_v2_stats';
-    const defaults=()=>({games:0,correct:0,answered:0,bests:{},recent:{},history:{},progression:{xp:0,byCategory:{},bestStreak:0},daily:{lastCompleted:'',lastScore:0,streak:0,day:'',games:0,correct:0,claimed:[]}});
-    function loadStats(){
+    const defaults=()=>({games:0,correct:0,answered:0,bests:{},recent:{},history:{},progression:{xp:0,byCategory:{},bestStreak:0,hasPerfectGame:false},daily:{lastCompleted:'',lastScore:0,streak:0,day:'',games:0,correct:0,claimed:[],completed:{}}});
+    let storageDirty=false,storageUnavailable=false;
+    function loadStats(fallback=defaults()){
+      let saved;
+      try{saved=localStorage.getItem(storageKey);storageUnavailable=false;}
+      catch{storageUnavailable=true;return fallback;}
       try{
-        const raw=JSON.parse(localStorage.getItem(storageKey)||'null');
-        if(!raw||typeof raw!=='object')return defaults();
+        const raw=JSON.parse(saved||'null');
+        if(!raw||typeof raw!=='object'||Array.isArray(raw))return fallback;
         const stats=defaults();
         for(const key of ['games','correct','answered']){
           const n=Number(raw[key]);if(Number.isSafeInteger(n)&&n>=0)stats[key]=n;
@@ -1723,6 +1732,7 @@
           const p=raw.progression;
           if(Number.isSafeInteger(p.xp)&&p.xp>=0)stats.progression.xp=p.xp;
           if(Number.isSafeInteger(p.bestStreak)&&p.bestStreak>=0)stats.progression.bestStreak=p.bestStreak;
+          stats.progression.hasPerfectGame=p.hasPerfectGame===true;
           if(p.byCategory&&typeof p.byCategory==='object'&&!Array.isArray(p.byCategory)){
             for(const cat of ['histoire','geographie','sciences','arts','insolite']){
               if(Number.isSafeInteger(p.byCategory[cat])&&p.byCategory[cat]>=0)stats.progression.byCategory[cat]=p.byCategory[cat];
@@ -1732,22 +1742,41 @@
           // Une seule migration à partir des compteurs déjà sauvegardés.
           // Aucune catégorie historique inconnue n'est devinée.
           stats.progression.xp=stats.correct*10+stats.games*5;
-          saveProgressMigration(stats);
         }
         if(raw.daily&&typeof raw.daily==='object'&&!Array.isArray(raw.daily)){
           const d=raw.daily;
           for(const key of ['lastCompleted','day'])if(typeof d[key]==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(d[key]))stats.daily[key]=d[key];
           for(const key of ['lastScore','streak','games','correct'])if(Number.isSafeInteger(d[key])&&d[key]>=0)stats.daily[key]=d[key];
           if(Array.isArray(d.claimed))stats.daily.claimed=d.claimed.filter(v=>['daily','three','two'].includes(v));
+          if(d.completed&&typeof d.completed==='object'&&!Array.isArray(d.completed)){
+            for(const [day,score] of Object.entries(d.completed)){
+              if(/^\d{4}-\d{2}-\d{2}$/.test(day)&&Number.isInteger(score)&&score>=0&&score<=5)stats.daily.completed[day]=score;
+            }
+          }
+          if(stats.daily.lastCompleted)stats.daily.completed[stats.daily.lastCompleted]=Math.min(stats.daily.lastScore,5);
         }
+        stats.progression.hasPerfectGame=stats.progression.hasPerfectGame||Object.values(stats.bests).some(value=>Number(value)===5)||Object.values(stats.daily.completed).some(value=>value===5);
+        // Sauvegarder la migration seulement après avoir restauré le défi quotidien.
+        if(!raw.progression||typeof raw.progression!=='object'||Array.isArray(raw.progression))saveProgressMigration(stats);
         return stats;
-      }catch{return defaults();}
+      }catch{return fallback;}
     }
     function saveProgressMigration(value){
-      try{localStorage.setItem(storageKey,JSON.stringify(value));}catch{/* stockage indisponible */}
+      try{localStorage.setItem(storageKey,JSON.stringify(value));storageDirty=false;storageUnavailable=false;}
+      catch{storageDirty=true;storageUnavailable=true;}
     }
     let stats=loadStats();
-    function saveStats(){try{localStorage.setItem(storageKey,JSON.stringify(stats));}catch{/* stockage privé ou indisponible */}}
+    function refreshStorageNotice(){
+      const unavailable=storageDirty||storageUnavailable;
+      $('storage-status').classList.toggle('hidden',!unavailable);
+      $('stats-note').classList.toggle('hidden',unavailable);
+    }
+    function saveStats(){saveProgressMigration(stats);refreshStorageNotice();}
+    function reloadStats(){if(!storageDirty)stats=loadStats(stats);}
+    function syncStats(){
+      reloadStats();
+      refreshBest();refreshStats();refreshProgression();refreshDaily();refreshStorageNotice();
+    }
     function bestKey(){return selectedCategory+'|'+selectedLevel;}
     function refreshBest(){
       const best=Number(stats.bests[bestKey()]);
@@ -1769,7 +1798,7 @@
     const badgeCatalog=[
       {id:'debut',icon:'✦',title:'Premier pas',desc:'Terminer une première partie.',goal:1,get:()=>stats.games},
       {id:'assidu',icon:'◈',title:'Curieux assidu',desc:'Terminer 5 parties.',goal:5,get:()=>stats.games},
-      {id:'sansfaute',icon:'★',title:'Sans-faute',desc:'Réussir une partie à 5/5.',goal:1,get:()=>Object.values(stats.bests).some(v=>Number(v)===5)?1:0},
+      {id:'sansfaute',icon:'★',title:'Sans-faute',desc:'Réussir une partie à 5/5.',goal:1,get:()=>stats.progression.hasPerfectGame?1:0},
       {id:'serie',icon:'⚡',title:'Esprit vif',desc:'Réussir 3 réponses consécutives.',goal:3,get:()=>stats.progression.bestStreak},
       {id:'histoire',icon:'🏛️',title:'Historien',desc:'5 bonnes réponses en histoire.',goal:5,get:()=>stats.progression.byCategory.histoire||0},
       {id:'geographie',icon:'🌍',title:'Cartographe',desc:'5 bonnes réponses en géographie.',goal:5,get:()=>stats.progression.byCategory.geographie||0},
@@ -1791,8 +1820,8 @@
       const from=level.active.min,to=level.next?level.next.min:from+1;
       const ratio=level.next?Math.max(0,Math.min(1,(xp-from)/(to-from))):1;
       $('xp-fill').style.width=(ratio*100).toFixed(1)+'%';
-      $('xp-progress').setAttribute('aria-valuemin',String(from));
-      $('xp-progress').setAttribute('aria-valuemax',String(level.next?to:Math.max(xp,from+1)));
+      $('xp-progress').setAttribute('aria-valuemin',String(level.next?from:0));
+      $('xp-progress').setAttribute('aria-valuemax',String(level.next?to:Math.max(xp,1)));
       $('xp-progress').setAttribute('aria-valuenow',String(xp));
       $('xp-progress').setAttribute('aria-valuetext',level.next?xp+' XP sur '+to+' pour '+level.next.name:'Dernier niveau atteint');
       const unlocked=unlockedBadgeIds();
@@ -1830,11 +1859,11 @@
       ];
     }
     function refreshDaily(){
-      const day=utcDay(),d=stats.daily,done=d.lastCompleted===day;
+      const day=utcDay(),d=stats.daily,done=Object.prototype.hasOwnProperty.call(d.completed,day);
       $('daily-date').textContent=new Date(day+'T12:00:00Z').toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'});
       $('daily-start-button').disabled=done;
       $('daily-start-button').textContent=done?'✓ Défi déjà joué':'Relever le défi du jour ↗';
-      $('daily-status').textContent=done?'Score du jour : '+d.lastScore+'/5':'Un essai par jour';
+      $('daily-status').textContent=done?'Score du jour : '+d.completed[day]+'/5':'Un essai par jour';
       const yesterday=new Date(Date.parse(day+'T00:00:00Z')-86400000).toISOString().slice(0,10);
       const activeStreak=d.lastCompleted===day||d.lastCompleted===yesterday?d.streak:0;
       $('daily-streak').textContent='✦ Série quotidienne : '+activeStreak+' jour'+(activeStreak>1?'s':'');
@@ -1851,20 +1880,20 @@
       }
     }
     function startDaily(){
+      reloadStats();
       const day=utcDay();
-      if(stats.daily.lastCompleted===day){refreshDaily();return;}
+      if(Object.prototype.hasOwnProperty.call(stats.daily.completed,day)){refreshDaily();return;}
       gameMode='daily';gameDay=day;round=dailyQuestions(day);index=0;score=0;answered=false;roundFinished=false;attempts=[];streak=0;bestStreak=0;
       $('review-panel').classList.add('hidden');$('review-button').setAttribute('aria-expanded','false');
       show('screen-question');renderQuestion();
-      const first=$('answer-list').querySelector('button');if(first)first.focus({preventScroll:true});
-      $('quiz-classique').scrollIntoView({behavior:'smooth',block:'start'});
+      $('quiz-classique').scrollIntoView({behavior:reducedMotion.matches?'auto':'smooth',block:'start'});
     }
     function setCategory(cat){
       selectedCategory=labels[cat]?cat:'mix';
       $('chosen-category').textContent=labels[selectedCategory];
       document.querySelectorAll('[data-quiz-theme]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.quizTheme===selectedCategory)));
       refreshBest();show('screen-intro');
-      $('quiz-classique').scrollIntoView({behavior:'smooth',block:'start'});
+      $('quiz-classique').scrollIntoView({behavior:reducedMotion.matches?'auto':'smooth',block:'start'});
     }
     function setLevel(level){
       if(!levels[level])return;
@@ -1898,12 +1927,12 @@
       return shuffle(selected);
     }
     function begin(){
+      reloadStats();
       const pool=questions.filter(q=>q.level===selectedLevel&&(selectedCategory==='mix'||q.cat===selectedCategory));
       if(pool.length<5){alert('Pas assez de questions dans ce thème.');return;}
       gameMode='classic';gameDay='';round=chooseRound(pool,5);index=0;score=0;answered=false;roundFinished=false;attempts=[];streak=0;bestStreak=0;
       $('review-panel').classList.add('hidden');$('review-button').setAttribute('aria-expanded','false');
       show('screen-question');renderQuestion();
-      const first=$('answer-list').querySelector('button');if(first)first.focus({preventScroll:true});
     }
     function renderQuestionTrack(){
       const track=$('quiz-track');track.replaceChildren();
@@ -1965,6 +1994,10 @@
         }else button.addEventListener('click',()=>submitAnswer(idx));
         $('answer-list').append(button);
       });
+      // Annoncer l'énoncé avant les réponses, y compris au clavier.
+      $('question-text').setAttribute('tabindex','-1');
+      $('question-text').focus({preventScroll:true});
+      $('question-text').scrollIntoView({behavior:'auto',block:'nearest'});
     }
     function showHint(){
       if(answered)return;
@@ -2019,52 +2052,70 @@
       if(!answered||roundFinished)return;
       index++;
       if(index>=round.length){finish();$('result-title').focus({preventScroll:true});}
-      else {renderQuestion();const first=$('answer-list').querySelector('button');if(first)first.focus({preventScroll:true});}
+      else renderQuestion();
     }
     function finish(){
       if(roundFinished)return;
-      if(gameMode==='daily'&&stats.daily.lastCompleted===gameDay){roundFinished=true;return;}
+      // Relire avant d'écrire : une autre page a pu terminer une partie entre-temps.
+      reloadStats();
+      const alreadyCompleted=gameMode==='daily'&&Object.prototype.hasOwnProperty.call(stats.daily.completed,gameDay);
       roundFinished=true;
       const priorBadges=new Set(unlockedBadgeIds());
       const priorLevel=currentLevel(stats.progression.xp).active.name;
-      stats.games++;
-      stats.correct+=score;
-      stats.answered+=round.length;
-      // Le défi quotidien mélange les univers et les niveaux : il ne doit
-      // jamais modifier le record d'un quiz classique choisi auparavant.
-      if(gameMode==='classic'){
-        const best=stats.bests[bestKey()];
-        if(typeof best!=='number'||score>best)stats.bests[bestKey()]=score;
-      }
-      let earnedXP=score*10+5+(score===round.length?10:0),missionXP=0;
-      const today=utcDay();
-      if(gameMode!=='daily'||gameDay===today){
-        if(stats.daily.day!==today){stats.daily.day=today;stats.daily.games=0;stats.daily.correct=0;stats.daily.claimed=[];}
-        stats.daily.games++;stats.daily.correct+=score;
-        if(gameMode==='daily'){
-          const yesterday=new Date(Date.parse(today+'T00:00:00Z')-86400000).toISOString().slice(0,10);
-          stats.daily.streak=stats.daily.lastCompleted===yesterday?stats.daily.streak+1:1;
-          stats.daily.lastCompleted=today;stats.daily.lastScore=score;
+      let earnedXP=0,missionXP=0;
+      if(!alreadyCompleted){
+        stats.games++;
+        stats.correct+=score;
+        stats.answered+=round.length;
+        // Le défi quotidien mélange les univers et les niveaux : il ne doit
+        // jamais modifier le record d'un quiz classique choisi auparavant.
+        if(gameMode==='classic'){
+          const best=stats.bests[bestKey()];
+          if(typeof best!=='number'||score>best)stats.bests[bestKey()]=score;
         }
-        for(const goal of dailyGoals(today)){
-          if(goal.value>=goal.goal&&!stats.daily.claimed.includes(goal.id)){
-            stats.daily.claimed.push(goal.id);missionXP+=10;
+        earnedXP=score*10+5+(score===round.length?10:0);
+        if(score===round.length)stats.progression.hasPerfectGame=true;
+        if(gameMode==='daily'){
+          stats.daily.completed[gameDay]=score;
+          // Conserver aussi un défi commencé avant minuit, sans écraser un jour plus récent.
+          if(gameDay>stats.daily.lastCompleted){
+            const yesterday=new Date(Date.parse(gameDay+'T00:00:00Z')-86400000).toISOString().slice(0,10);
+            stats.daily.streak=stats.daily.lastCompleted===yesterday?stats.daily.streak+1:1;
+            stats.daily.lastCompleted=gameDay;stats.daily.lastScore=score;
           }
         }
-        earnedXP+=missionXP;
+        const today=utcDay();
+        if(gameMode!=='daily'||gameDay===today){
+          if(stats.daily.day!==today){stats.daily.day=today;stats.daily.games=0;stats.daily.correct=0;stats.daily.claimed=[];}
+          stats.daily.games++;stats.daily.correct+=score;
+          for(const goal of dailyGoals(today)){
+            if(goal.value>=goal.goal&&!stats.daily.claimed.includes(goal.id)){
+              stats.daily.claimed.push(goal.id);missionXP+=10;
+            }
+          }
+          earnedXP+=missionXP;
+        }
+        stats.progression.xp+=earnedXP;
+        stats.progression.bestStreak=Math.max(stats.progression.bestStreak,bestStreak);
+        attempts.forEach(a=>{
+          if(a.ok&&Object.prototype.hasOwnProperty.call(labels,a.category)&&a.category!=='mix')
+            stats.progression.byCategory[a.category]=(stats.progression.byCategory[a.category]||0)+1;
+        });
+        saveStats();
       }
-      stats.progression.xp+=earnedXP;
-      stats.progression.bestStreak=Math.max(stats.progression.bestStreak,bestStreak);
-      attempts.forEach(a=>{
-        if(a.ok&&Object.prototype.hasOwnProperty.call(labels,a.category)&&a.category!=='mix')
-          stats.progression.byCategory[a.category]=(stats.progression.byCategory[a.category]||0)+1;
-      });
       const newBadges=badgeCatalog.filter(b=>!priorBadges.has(b.id)&&b.get()>=b.goal);
-      saveStats();refreshBest();refreshStats();refreshProgression();refreshDaily();
+      refreshBest();refreshStats();refreshProgression();refreshDaily();
       const newLevel=currentLevel(stats.progression.xp).active.name;
       $('xp-earned').textContent='✦ +'+earnedXP+' XP'+(missionXP?' dont '+missionXP+' XP de missions':'')+' · Total : '+stats.progression.xp.toLocaleString('fr-FR')+' XP'+(newLevel!==priorLevel?' · Nouveau niveau : '+newLevel+' !':'');
       $('daily-result').classList.toggle('hidden',gameMode!=='daily');
-      $('daily-result').textContent=gameMode==='daily'?'Défi quotidien terminé : '+score+'/5. Reviens demain pour cinq autres questions.':'';
+      let dailyMessage='';
+      if(gameMode==='daily'){
+        const dateLabel=new Date(gameDay+'T12:00:00Z').toLocaleDateString('fr-FR',{day:'numeric',month:'long',timeZone:'UTC'});
+        dailyMessage=alreadyCompleted
+          ?'Ce défi a déjà été terminé dans un autre onglet : score enregistré '+stats.daily.completed[gameDay]+'/5. Cet essai ne modifie pas ta progression.'
+          :'Défi du '+dateLabel+' terminé : '+score+'/5. '+(gameDay===utcDay()?'Reviens demain pour cinq autres questions.':'Un nouveau défi est maintenant disponible.');
+      }
+      $('daily-result').textContent=dailyMessage;
       $('badges-earned').classList.toggle('hidden',newBadges.length===0);
       $('badges-earned').textContent=newBadges.length?'Badge'+(newBadges.length>1?'s':'')+' débloqué'+(newBadges.length>1?'s':'')+' : '+newBadges.map(b=>b.icon+' '+b.title).join(' · '):'';
       $('final-score').textContent=score+'/'+round.length;
@@ -2095,7 +2146,20 @@
     $('start-button').addEventListener('click',begin);
     document.querySelectorAll('[data-quiz-theme]').forEach(button=>button.addEventListener('click',()=>setCategory(button.dataset.quizTheme)));
     $('daily-start-button').addEventListener('click',startDaily);
-    document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshDaily();});
+    let dailyRefreshTimer;
+    function scheduleDailyRefresh(){
+      clearTimeout(dailyRefreshTimer);
+      const now=Date.now(),nextDay=new Date(now);nextDay.setUTCHours(24,0,0,0);
+      dailyRefreshTimer=setTimeout(()=>{syncStats();scheduleDailyRefresh();},nextDay.getTime()-now+100);
+    }
+    document.addEventListener('visibilitychange',()=>{if(!document.hidden){syncStats();scheduleDailyRefresh();}});
+    window.addEventListener('pageshow',()=>{syncStats();scheduleDailyRefresh();});
+    window.addEventListener('storage',event=>{
+      if(event.key!==storageKey&&event.key!==null)return;
+      try{if(event.storageArea!==localStorage)return;}catch{return;}
+      if(event.newValue===null){stats=defaults();storageDirty=false;}
+      syncStats();
+    });
     $('badges-button').addEventListener('click',()=>{
       const panel=$('badges-panel'),open=panel.classList.contains('hidden');
       panel.classList.toggle('hidden',!open);
@@ -2115,6 +2179,7 @@
     });
     $('change-button').addEventListener('click',()=>setCategory('mix'));
     const mobileMenu=$('mobile-menu-button'),primaryNav=$('primary-navigation');
+    const menuHeader=mobileMenu.closest('.top'),mobileViewport=window.matchMedia('(max-width: 710px)');
     function closeMobileMenu(returnFocus=false){
       primaryNav.classList.remove('is-open');
       mobileMenu.setAttribute('aria-expanded','false');
@@ -2131,6 +2196,18 @@
     document.addEventListener('keydown',event=>{
       if(event.key==='Escape'&&mobileMenu.getAttribute('aria-expanded')==='true')closeMobileMenu(true);
     });
+    document.addEventListener('click',event=>{if(!menuHeader.contains(event.target))closeMobileMenu();});
+    menuHeader.addEventListener('focusout',event=>{if(event.relatedTarget&&!menuHeader.contains(event.relatedTarget))closeMobileMenu();});
+    const syncMenuViewport=()=>closeMobileMenu(mobileViewport.matches&&primaryNav.contains(document.activeElement));
+    if(typeof mobileViewport.addEventListener==='function')mobileViewport.addEventListener('change',syncMenuViewport);
+    else if(typeof mobileViewport.addListener==='function')mobileViewport.addListener(syncMenuViewport);
+    menuHeader.setAttribute('data-menu-ready','');
     $('year').textContent=String(new Date().getFullYear());
-    refreshBest();refreshStats();refreshProgression();refreshDaily();
+    refreshBest();refreshStats();refreshProgression();refreshDaily();refreshStorageNotice();
+    document.querySelectorAll('[data-quiz-startup-disabled]').forEach(button=>{
+      if(button.id!=='daily-start-button')button.disabled=false;
+      button.removeAttribute('data-quiz-startup-disabled');
+    });
+    $('quiz-load-status').classList.add('hidden');
+    scheduleDailyRefresh();
   

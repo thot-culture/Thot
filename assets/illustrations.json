@@ -1,6 +1,6 @@
 {
   "roubaix-ville-avant-1919": {
-    "url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/ELD_-_ROUBAIX_-_Boulevard_Gambetta.JPG",
+    "url": "images/roubaix-gambetta.webp",
     "sourceUrl": "https://commons.wikimedia.org/wiki/File:ELD_-_ROUBAIX_-_Boulevard_Gambetta.JPG",
     "kind": "CARTE POSTALE HISTORIQUE",
     "date": "Avant 1919 (date exacte inconnue)",
@@ -10,8 +10,8 @@
     "credit": "Éditeur ELD ; numérisation Claude Villetaneuse ; Wikimedia Commons",
     "licence": "Domaine public",
     "licenceUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
-    "width": 1645,
-    "height": 1059
+    "width": 1200,
+    "height": 773
   },
   "roubaix-interdiction-1915": {
     "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Rassemblement_Roubaix_12.5.1915_Landesarchiv_Baden-W%C3%BCrttemberg.jpg",

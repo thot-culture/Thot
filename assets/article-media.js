@@ -25,9 +25,9 @@
     link.href = record.sourceUrl;
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
-    link.setAttribute('aria-label', 'Ouvrir la notice de cette image dans un nouvel onglet');
+    link.setAttribute('aria-label', record.alt + ' — ouvrir la notice de cette image dans un nouvel onglet');
     const img = el('img');
-    img.src = record.url;
+    img.src = new URL(record.url, script.src).href;
     img.alt = record.alt;
     const isCover = Boolean(slot.closest('.thot-cover'));
     img.loading = isCover ? 'eager' : 'lazy';

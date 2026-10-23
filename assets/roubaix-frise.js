@@ -107,4 +107,5 @@
     });
   });
   chooseEvent(0);
+  buttons.forEach(button => { button.disabled = false; });
 })();

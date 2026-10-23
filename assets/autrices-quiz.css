@@ -17,7 +17,7 @@
 .quiz-option.is-wrong{border-color:#a34239;background:#fbefed}
 .quiz-status{min-height:26px;margin:14px 0 8px;font-size:14px;font-weight:650}
 .quiz-progress{margin:0;color:#566171;font-size:13px}
-.quiz-reset{margin-top:18px;padding:10px 15px;border:0;border-radius:8px;background:#17243a;color:#fff;font:650 14px "Segoe UI",Arial,sans-serif;cursor:pointer}
+.quiz-reset{margin-top:18px;min-height:44px;padding:10px 15px;border:0;border-radius:8px;background:#17243a;color:#fff;font:650 14px "Segoe UI",Arial,sans-serif;cursor:pointer}
 .quiz-explanations{margin-top:22px;padding-top:18px;border-top:1px solid #e8e5dc}
 .quiz-explanations h3{margin:0 0 10px;font:700 16px "Segoe UI",Arial,sans-serif}
 .quiz-explanations ol{margin:0;padding-left:22px}

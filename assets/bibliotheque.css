@@ -15,7 +15,7 @@ button{cursor:pointer}
 .brand{font:750 29px Georgia,serif;letter-spacing:.08em;color:#F0D7A6;text-decoration:none;display:flex;align-items:center;gap:10px}
 .brand-symbol{font-size:29px}
 .nav nav{display:flex;flex-wrap:wrap;gap:26px}
-.nav nav a{text-decoration:none;color:#E7E8E6;font-size:14px;font-weight:750}
+.nav nav a{text-decoration:none;color:#E7E8E6;font-size:14px;font-weight:750;display:inline-flex;align-items:center;min-height:44px;min-width:44px}
 .nav nav a:hover,.nav nav a[aria-current="page"]{color:#EAC98F}
 .hero{background:linear-gradient(122deg,#17243A,#2B4559);color:#fff;padding:82px 0 77px}
 .eyebrow{font-size:12px;letter-spacing:.17em;font-weight:850;color:#E7C691;margin:0 0 16px}
@@ -35,14 +35,18 @@ button{cursor:pointer}
 .search-input>span{font-size:25px;color:#617177}
 .search-input input{flex:1;min-width:0;border:0;background:none;padding:15px 0;color:var(--ink);outline:none}
 .search-input:focus-within{outline:2px solid #927038;outline-offset:2px}
-.clear-search{border:0;background:none;color:var(--sea);font-size:12px;font-weight:850}
+.clear-search{border:0;background:none;color:var(--sea);font-size:12px;font-weight:850;min-height:44px;min-width:44px}
+.search-help{font-size:12px;line-height:1.6;color:var(--muted);margin:10px 0 0}
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
-.filters button{background:#F5F3ED;border:1px solid #E3DFD5;border-radius:99px;padding:10px 13px;color:#415057;font-size:12px;font-weight:800}
+.filters button{background:#F5F3ED;border:1px solid #E3DFD5;border-radius:99px;padding:10px 13px;color:#415057;font-size:12px;font-weight:800;min-height:44px}
 .filters button:hover{border-color:#B89558}
 .filters button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#EAD0A3}
 .results-status{font-size:13px;color:var(--muted);margin:27px 0 15px;font-weight:750}
 .article-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:21px;align-items:stretch}
 .article-card{background:var(--paper);border:1px solid var(--line);border-radius:19px;overflow:hidden;box-shadow:0 18px 34px rgba(23,36,58,.055);display:flex;flex-direction:column}
+.article-card .discovery-credit{font-size:12px}
+.article-card .discovery-photo.is-unavailable{display:grid;place-items:center;padding:24px 20px 60px}
+.library-image-fallback{color:#F2DCAF;font-size:14px;line-height:1.6;text-align:center}
 .card-art{height:207px;display:flex;flex-direction:column;justify-content:center;align-items:center;position:relative;overflow:hidden}
 .card-art:before,.card-art:after{content:"";position:absolute;width:200px;height:200px;border:1px solid rgba(235,205,154,.34);border-radius:50%}
 .card-art:after{width:300px;height:300px;border-style:dashed}
@@ -71,6 +75,6 @@ footer{background:var(--ink);color:#C3CCCE}
 .foot{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:90px;font-size:12px}
 .foot a{color:#E9D1A1;text-decoration:none;font-weight:850}
 .foot a:first-child{font:800 25px Georgia,serif}
-@media(max-width:760px){.nav{min-height:76px}.nav nav{gap:13px}.nav nav a{font-size:12px}.hero{padding:57px 0}.hero h1{font-size:clamp(37px,10vw,55px)}.catalogue{padding:50px 0 65px}.intro{display:block}.intro>p{margin-top:13px}.article-grid{grid-template-columns:1fr}.card-art{height:176px}.catalogue-foot{display:block}.catalogue-foot>a{display:inline-block;margin-top:12px}.foot{flex-wrap:wrap;padding:18px 0}.search-zone{padding:18px 15px}}
+@media(max-width:760px){.nav{min-height:76px;flex-direction:column;align-items:flex-start;gap:8px;padding:14px 0}.nav nav{gap:4px 16px;width:100%}.nav nav a{font-size:12px}.hero{padding:57px 0}.hero h1{font-size:clamp(37px,10vw,55px)}.catalogue{padding:50px 0 65px}.intro{display:block}.intro>p{margin-top:13px}.article-grid{grid-template-columns:1fr}.card-art{height:176px}.catalogue-foot{display:block}.catalogue-foot>a{display:inline-block;margin-top:12px}.foot{flex-wrap:wrap;padding:18px 0}.search-zone{padding:18px 15px}}
 @media(max-width:390px){.wrap{width:calc(100% - 28px)}.nav{flex-direction:column;gap:10px;padding:14px 0}.hero-meta span+span:before{display:none}.card-copy{padding:22px 18px}.filters{gap:6px}.filters button{font-size:11px;padding:9px 10px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

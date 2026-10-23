@@ -38,3 +38,8 @@
   line-height:1.55;
 }
 .thot-definition[hidden]{display:none!important}
+
+/* Conserver un contraste lisible lorsque le terme apparaît dans un en-tête sombre. */
+.entete .thot-terme:hover,
+.entete .thot-terme[aria-expanded="true"]{color:#F2DCAF}
+.entete .thot-terme:focus-visible{outline-color:#E7B45F}

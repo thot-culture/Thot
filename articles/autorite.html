@@ -20,8 +20,8 @@
   <meta name="twitter:description" content="Parents, État, direction scolaire : comprendre les ressorts psychologiques de l’obéissance et de la contestation.">
   <meta name="twitter:image" content="https://thot-culture.github.io/Thot/assets/images/autorite-triptyque.webp">
   <meta name="twitter:image:alt" content="Illustration en trois scènes autour des autorités familiale, politique et scolaire.">
-  <link rel="stylesheet" href="../assets/article.css?v=a11y-1">
-  <link rel="stylesheet" href="../assets/autorite.css?v=1">
+  <link rel="stylesheet" href="../assets/article.css?v=lecture-1">
+  <link rel="stylesheet" href="../assets/autorite.css?v=audit-1">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -63,7 +63,7 @@
       <div class="meta"><span>La rédaction THOT</span><span>Publié le 23 octobre 2026</span><span id="duree">Temps de lecture estimé</span></div>
     </div></header>
     <div class="largeur mise-en-page">
-      <article id="texte-article">
+      <article id="texte-article" tabindex="-1">
         <p class="ouverture">Une règle donnée par un parent, une décision publique contestée, une consigne de la direction d’un lycée : face à une autorité, on peut obéir, demander des explications ou refuser. Et une même personne peut faire les trois selon le contexte. La psychologie sociale aide à comprendre ces écarts, à condition de ne pas transformer les gens en « soumis » ou en « rebelles ».</p>
         <p class="objectif-lecture"><strong>La question à garder en tête :</strong> qu’est-ce qui fait qu’une autorité nous paraît légitime — ou, au contraire, contestable&nbsp;?</p>
         <div class="encadre"><strong>La réponse en bref</strong><p>Plusieurs éléments peuvent peser sur notre réaction : la confiance envers l’autorité, le sentiment que la règle est juste, la relation avec la personne qui la donne, les risques d’un refus et le soutien du groupe. Aucun de ces éléments ne suffit, à lui seul, à prédire ce que fera une personne.</p></div>
@@ -110,9 +110,9 @@
               <h3 id="cas-parents">À la maison</h3>
               <p>Un parent fixe une heure de retour. Tu penses que cette règle est trop stricte.</p>
               <div class="authorite-choices" role="group" aria-label="Choisir une réaction à la règle parentale">
-                <button type="button" class="authorite-choice" data-reaction="suivre" aria-pressed="false">Je la suis</button>
-                <button type="button" class="authorite-choice" data-reaction="discuter" aria-pressed="false">J’en discute</button>
-                <button type="button" class="authorite-choice" data-reaction="refuser" aria-pressed="false">Je la refuse</button>
+                <button type="button" class="authorite-choice" disabled data-reaction="suivre" aria-pressed="false">Je la suis</button>
+                <button type="button" class="authorite-choice" disabled data-reaction="discuter" aria-pressed="false">J’en discute</button>
+                <button type="button" class="authorite-choice" disabled data-reaction="refuser" aria-pressed="false">Je la refuse</button>
               </div>
               <p class="authorite-feedback" role="status" aria-live="polite"></p>
               <details><summary>Ce que la psychologie invite à regarder</summary><p>Le but de la règle, la confiance, l’âge, le sujet concerné et la place laissée à la discussion peuvent tous compter.</p></details>
@@ -122,9 +122,9 @@
               <h3 id="cas-etat">Dans l’espace public</h3>
               <p>Une décision publique est contestée lors d’une manifestation. Tu hésites à rejoindre le cortège.</p>
               <div class="authorite-choices" role="group" aria-label="Choisir une réaction face à une décision publique contestée">
-                <button type="button" class="authorite-choice" data-reaction="suivre" aria-pressed="false">Je ne rejoins pas le cortège</button>
-                <button type="button" class="authorite-choice" data-reaction="discuter" aria-pressed="false">Je cherche à comprendre</button>
-                <button type="button" class="authorite-choice" data-reaction="refuser" aria-pressed="false">Je manifeste</button>
+                <button type="button" class="authorite-choice" disabled data-reaction="suivre" aria-pressed="false">Je ne rejoins pas le cortège</button>
+                <button type="button" class="authorite-choice" disabled data-reaction="discuter" aria-pressed="false">Je cherche à comprendre</button>
+                <button type="button" class="authorite-choice" disabled data-reaction="refuser" aria-pressed="false">Je manifeste</button>
               </div>
               <p class="authorite-feedback" role="status" aria-live="polite"></p>
               <details><summary>Ce que la psychologie invite à regarder</summary><p>Le jugement sur la décision, la confiance dans les institutions, les risques perçus et le soutien des autres peuvent orienter des choix différents.</p></details>
@@ -134,9 +134,9 @@
               <h3 id="cas-direction">Au lycée</h3>
               <p>La direction demande aux élèves de libérer un accès pour une raison de sécurité. Tu n’es pas convaincu par son explication.</p>
               <div class="authorite-choices" role="group" aria-label="Choisir une réaction à la consigne de la direction">
-                <button type="button" class="authorite-choice" data-reaction="suivre" aria-pressed="false">Je libère l’accès</button>
-                <button type="button" class="authorite-choice" data-reaction="discuter" aria-pressed="false">Je demande pourquoi</button>
-                <button type="button" class="authorite-choice" data-reaction="refuser" aria-pressed="false">Je refuse</button>
+                <button type="button" class="authorite-choice" disabled data-reaction="suivre" aria-pressed="false">Je libère l’accès</button>
+                <button type="button" class="authorite-choice" disabled data-reaction="discuter" aria-pressed="false">Je demande pourquoi</button>
+                <button type="button" class="authorite-choice" disabled data-reaction="refuser" aria-pressed="false">Je refuse</button>
               </div>
               <p class="authorite-feedback" role="status" aria-live="polite"></p>
               <details><summary>Ce que la psychologie invite à regarder</summary><p>Le risque immédiat, la clarté des raisons, la confiance envers la direction et les possibilités de contestation ne pèsent pas de la même façon pour tous.</p></details>
@@ -188,7 +188,7 @@
         </section>
       </article>
       <aside class="sommaire" aria-label="Sommaire de l’article">
-        <p class="sommaire-surtitle">Dans cet article</p><h2>Explorer</h2>
+        <p class="sommaire-surtitle">Dans cet article</p><details class="sommaire-details" open><summary>Explorer</summary>
         <nav aria-label="Sommaire"><ol>
           <li><a href="#reactions"><span class="sommaire-num">01</span><span>Obéir ou être d’accord&nbsp;?</span></a></li>
           <li><a href="#parents"><span class="sommaire-num">02</span><span>Les parents</span></a></li>
@@ -199,16 +199,17 @@
           <li><a href="#retenir-title"><span class="sommaire-num">07</span><span>À retenir</span></a></li>
           <li><a href="#sources-title"><span class="sommaire-num">08</span><span>Sources</span></a></li>
         </ol></nav>
-      </aside>
+      </details></aside>
     </div>
   </main>
   <footer class="pied"><div class="largeur"><b>THOT</b><span>La curiosité n’a pas de limites.</span><a href="../notre-methode.html">Notre méthode</a></div></footer>
-  <script src="../assets/autorite-activity.js?v=1" defer></script>
+  <script src="../assets/autorite-activity.js?v=audit-1" defer></script>
   <script>
     const contenuALire = document.querySelector("#texte-article").cloneNode(true);
     contenuALire.querySelectorAll(".sources, .thot-illustration-credits, .authorite-game").forEach(element => element.remove());
     const mots = contenuALire.innerText.trim().split(/\s+/).filter(Boolean).length;
     document.querySelector("#duree").textContent = Math.max(1, Math.ceil(mots / 210)) + " min de lecture environ";
   </script>
+  <script src="../assets/puissance-sommaire.js?v=lecture-1" defer></script>
 </body>
 </html>

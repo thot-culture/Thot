@@ -1,6 +1,6 @@
 /* Portraits légendés et sélections d’œuvres pour l’article sur les autrices. */
 .portrait-autrice{margin:28px 0 34px}
-.portrait-autrice img{display:block;width:auto;max-width:100%;max-height:420px;object-fit:contain;object-position:left center;border-radius:12px;background:#ece8de}
+.portrait-autrice img{display:block;width:auto;height:auto;max-width:100%;max-height:420px;object-fit:contain;object-position:left center;border-radius:12px;background:#ece8de}
 .portrait-autrice figcaption{max-width:680px;margin-top:9px;color:#566171;font-size:13px;line-height:1.55}
 .portrait-autrice figcaption a{color:#715026;text-underline-offset:2px}
 .oeuvres-reperes{margin:28px 0 38px;padding:18px 20px;border-left:3px solid #B89558;border-radius:0 12px 12px 0;background:#fffefa}

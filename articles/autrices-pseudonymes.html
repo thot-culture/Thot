@@ -23,10 +23,10 @@
   <meta name="twitter:description" content="Trois trajectoires d’autrices et les sources qui permettent de comprendre leurs pseudonymes.">
   <meta name="twitter:image" content="https://thot-culture.github.io/Thot/assets/og-thot.png">
   <meta name="twitter:image:alt" content="THOT, le magazine des esprits curieux : histoire, géographie et sciences humaines.">
-  <link rel="stylesheet" href="../assets/article.css?v=a11y-1">
+  <link rel="stylesheet" href="../assets/article.css?v=lecture-1">
   <link rel="stylesheet" href="../assets/decouverte.css?v=1">
-  <link rel="stylesheet" href="../assets/autrices-visuels.css?v=portraits-2">
-  <link rel="stylesheet" href="../assets/autrices-quiz.css?v=article-jeu-2">
+  <link rel="stylesheet" href="../assets/autrices-visuels.css?v=audit-1">
+  <link rel="stylesheet" href="../assets/autrices-quiz.css?v=audit-1">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -87,7 +87,7 @@
       <div class="meta"><span>La rédaction THOT</span><span>Publié le 22 octobre 2026</span><span id="duree">Temps de lecture estimé</span></div>
     </div></header>
     <div class="largeur mise-en-page">
-      <article id="texte-article">
+      <article id="texte-article" tabindex="-1">
         <p class="ouverture">Au XIX<sup>e</sup> siècle, plusieurs autrices ont publié sous un nom d’emprunt. Mais la question « pourquoi ? » n’a pas une réponse unique : certaines expliquent leur choix, d’autres laissent moins de traces, et toutes n’ont pas adopté un nom masculin.</p>
         <p class="objectif-lecture"><strong>Objectif de lecture.</strong> Distinguer un fait établi par une source, une interprétation biographique et une question qui reste ouverte.</p>
 
@@ -121,8 +121,8 @@
           <p>À ton avis, cette idée est-elle clairement écrite dans les sources, ou est-ce une façon actuelle de relire l’histoire ?</p>
           <blockquote>« Les sœurs Brontë ont choisi leurs noms de plume pour défendre les droits des femmes. »</blockquote>
           <div class="pause-choices" role="group" aria-label="Choisir une réponse">
-            <button class="pause-choice" type="button" data-answer="stated" aria-pressed="false">Elles l’ont dit</button>
-            <button class="pause-choice" type="button" data-answer="interpretation" aria-pressed="false">C’est une interprétation possible</button>
+            <button class="pause-choice" type="button" data-answer="stated" aria-pressed="false" disabled>Elles l’ont dit</button>
+            <button class="pause-choice" type="button" data-answer="interpretation" aria-pressed="false" disabled>C’est une interprétation possible</button>
           </div>
           <p class="pause-feedback" id="pause-feedback" role="status" aria-live="polite"></p>
           <a class="pause-source" id="pause-source" href="#ref1" hidden>Voir la source [1]</a>
@@ -150,7 +150,7 @@
         </section>
         <h2 id="sand">George Sand : ce que la notice établit — et ce qu’elle ne dit pas</h2>
         <figure class="portrait-autrice">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/George_Sand_-_portraits.jpg" alt="Planche de plusieurs portraits photographiques de George Sand réalisés par Félix Nadar en 1864." loading="lazy" decoding="async">
+          <img src="../assets/images/autrices-nadar.webp" width="1176" height="900" alt="Planche de plusieurs portraits photographiques de George Sand réalisés par Félix Nadar en 1864." loading="lazy" decoding="async">
           <figcaption>Félix Nadar, planche de portraits photographiques de George Sand, 1864. Exemplaire issu des collections de la Bibliothèque nationale de France ; la notice Commons classe le fichier dans le domaine public. <a href="https://commons.wikimedia.org/wiki/File:George_Sand_-_portraits.jpg" target="_blank" rel="noopener noreferrer">Vérifier la notice et les conditions</a>.</figcaption>
         </figure>
 
@@ -177,23 +177,24 @@
 
         <section class="quiz-pseudonymes" id="jeu" aria-labelledby="jeu-title">
           <p class="quiz-kicker">THOT · À toi de jouer</p>
-          <h2 id="jeu-title">Petit jeu : relie chaque nom à son autrice</h2>
+          <h2 id="jeu-title" tabindex="-1">Petit jeu : relie chaque nom à son autrice</h2>
           <p class="quiz-intro">Choisis un nom de plume, puis l’autrice correspondante. Sur téléphone, touche les deux noms l’un après l’autre ; au clavier, utilise Tab et Entrée.</p>
           <p class="quiz-instruction" id="quiz-instruction">Commence par sélectionner un nom de plume dans la colonne de gauche.</p>
+          <p class="quiz-noscript" id="quiz-load-status" role="status">Le jeu n’est pas encore prêt. <a href="autrices-pseudonymes.html">Recharger la page</a> ou <a href="../quiz-autrices.html">ouvrir sa page dédiée</a>.</p>
           <div class="quiz-grid">
             <div class="quiz-column"><h3>Noms de plume</h3><div class="quiz-options" id="pseudonym-options" role="group" aria-label="Choisir un nom de plume">
-              <button class="quiz-option" type="button" data-pen="currer" aria-pressed="false">Currer Bell</button>
-              <button class="quiz-option" type="button" data-pen="ellis" aria-pressed="false">Ellis Bell</button>
-              <button class="quiz-option" type="button" data-pen="acton" aria-pressed="false">Acton Bell</button>
-              <button class="quiz-option" type="button" data-pen="eliot" aria-pressed="false">George Eliot</button>
-              <button class="quiz-option" type="button" data-pen="sand" aria-pressed="false">George Sand</button>
+              <button class="quiz-option" type="button" data-pen="currer" aria-pressed="false" disabled>Currer Bell</button>
+              <button class="quiz-option" type="button" data-pen="ellis" aria-pressed="false" disabled>Ellis Bell</button>
+              <button class="quiz-option" type="button" data-pen="acton" aria-pressed="false" disabled>Acton Bell</button>
+              <button class="quiz-option" type="button" data-pen="eliot" data-explanation="George Eliot est le pseudonyme de Mary Anne (« Marian ») Evans." aria-pressed="false" disabled>George Eliot</button>
+              <button class="quiz-option" type="button" data-pen="sand" aria-pressed="false" disabled>George Sand</button>
             </div></div>
             <div class="quiz-column"><h3>Autrices</h3><div class="quiz-options" id="author-options" role="group" aria-label="Choisir une autrice">
-              <button class="quiz-option" type="button" data-author="anne" aria-pressed="false">Anne Brontë</button>
-              <button class="quiz-option" type="button" data-author="aurore" aria-pressed="false">Aurore Dupin</button>
-              <button class="quiz-option" type="button" data-author="charlotte" aria-pressed="false">Charlotte Brontë</button>
-              <button class="quiz-option" type="button" data-author="maryanne" aria-pressed="false">Mary Anne (« Marian ») Evans</button>
-              <button class="quiz-option" type="button" data-author="emily" aria-pressed="false">Emily Brontë</button>
+              <button class="quiz-option" type="button" data-author="anne" aria-pressed="false" disabled>Anne Brontë</button>
+              <button class="quiz-option" type="button" data-author="aurore" aria-pressed="false" disabled>Aurore Dupin</button>
+              <button class="quiz-option" type="button" data-author="charlotte" aria-pressed="false" disabled>Charlotte Brontë</button>
+              <button class="quiz-option" type="button" data-author="maryanne" aria-pressed="false" disabled>Mary Anne (« Marian ») Evans</button>
+              <button class="quiz-option" type="button" data-author="emily" aria-pressed="false" disabled>Emily Brontë</button>
             </div></div>
           </div>
           <p class="quiz-status" id="quiz-status" role="status" aria-live="polite">À toi de jouer.</p>
@@ -206,7 +207,7 @@
               <li><strong>George Sand — Aurore Dupin.</strong> La notice d’autorité de la BnF confirme l’identité et signale aussi une publication en collaboration avec Jules Sandeau sous le pseudonyme « Jules Sand ». Cette notice établit des faits bibliographiques ; elle ne suffit pas à prouver pourquoi Aurore Dupin a ensuite retenu « George Sand ». <a href="#ref4">Source [4]</a></li>
             </ol>
           </div>
-          <button class="quiz-reset" id="quiz-reset" type="button">Recommencer</button>
+          <button class="quiz-reset" id="quiz-reset" type="button" disabled>Recommencer</button>
           <noscript><div class="quiz-noscript"><p>JavaScript est désactivé : voici les associations et leurs sources.</p><ul><li>Currer Bell — Charlotte Brontë ; Ellis Bell — Emily Brontë ; Acton Bell — Anne Brontë. <a href="#ref1">Sources [1]</a> et <a href="#ref7">[7]</a>.</li><li>George Eliot — Mary Anne (« Marian ») Evans. <a href="#ref3">Source [3]</a>.</li><li>George Sand — Aurore Dupin. <a href="#ref4">Source [4]</a>.</li></ul></div></noscript>
           <p class="quiz-intro">Tu peux aussi <a href="../quiz-autrices.html">refaire le jeu sur sa page dédiée</a>.</p>
         </section>
@@ -246,7 +247,7 @@
         </ol><p class="precision">Méthode : les paroles de Charlotte Brontë sont distinguées des notices rédigées par des institutions et des interprétations biographiques. Quand une source permet d’établir une identité mais pas un motif, l’article le précise.</p></section>
         <p class="vers-accueil"><a href="../bibliotheque.html">← Revenir à la bibliothèque</a></p>
       </article>
-      <aside class="sommaire" aria-label="Sommaire de l’article"><p class="sommaire-surtitle">Dans cet article</p><h2>Explorer</h2><nav><ol>
+      <aside class="sommaire" aria-label="Sommaire de l’article"><p class="sommaire-surtitle">Dans cet article</p><details class="sommaire-details" open><summary>Explorer</summary><nav><ol>
         <li><a href="#brontes"><span class="sommaire-num">01</span><span>Les sœurs Brontë</span></a></li>
         <li><a href="#eliot"><span class="sommaire-num">02</span><span>George Eliot</span></a></li>
         <li><a href="#sand"><span class="sommaire-num">03</span><span>George Sand</span></a></li>
@@ -254,7 +255,7 @@
         <li><a href="#jeu"><span class="sommaire-num">05</span><span>Petit jeu</span></a></li>
         <li><a href="#retenir-title"><span class="sommaire-num">06</span><span>À retenir</span></a></li>
         <li><a href="#sources-title"><span class="sommaire-num">07</span><span>Sources</span></a></li>
-      </ol></nav></aside>
+      </ol></nav></details></aside>
     </div>
   </main>
   <footer class="pied"><div class="largeur"><b>THOT</b><span>La curiosité n’a pas de limites.</span><a href="../notre-methode.html">Notre méthode</a></div></footer>
@@ -265,75 +266,13 @@
     const mots = compterMots(contenuALire.innerText);
     document.querySelector("#duree").textContent = Math.max(1, Math.ceil(mots / 210)) + " min de lecture environ";
   </script>
-  <script>
-  (() => {
-    'use strict';
-    const answers={currer:'charlotte',ellis:'emily',acton:'anne',eliot:'maryanne',sand:'aurore'};
-    const explanations={currer:'Currer Bell est le pseudonyme de Charlotte Brontë.',ellis:'Ellis Bell est le pseudonyme d’Emily Brontë.',acton:'Acton Bell est le pseudonyme d’Anne Brontë.',eliot:'George Eliot est le pseudonyme de Mary Anne (« Marian ») Evans.',sand:'George Sand est le pseudonyme d’Aurore Dupin.'};
-    const left=[...document.querySelectorAll('[data-pen]')];
-    const right=[...document.querySelectorAll('[data-author]')];
-    const status=document.getElementById('quiz-status');
-    const progress=document.getElementById('quiz-progress');
-    const instruction=document.getElementById('quiz-instruction');
-    const details=document.getElementById('quiz-explanations');
-    const reset=document.getElementById('quiz-reset');
-    let selected=null, matched=new Set(), score=0;
-    const clearSelection=()=>{for(const b of [...left,...right])b.setAttribute('aria-pressed','false');};
-    const updateProgress=()=>{const n=matched.size;progress.textContent=n+' association'+(n>1?'s':'')+' sur 5 trouvée'+(n>1?'s':'')+'.';};
-    for(const button of left){
-      button.addEventListener('click',()=>{
-        if(matched.has(button.dataset.pen))return;
-        selected=button.dataset.pen;
-        clearSelection();
-        button.setAttribute('aria-pressed','true');
-        instruction.textContent='Maintenant, choisis l’autrice qui correspond à '+button.textContent+'.';
-        status.textContent='Nom sélectionné : '+button.textContent+'.';
-      });
-    }
-    for(const button of right){
-      button.addEventListener('click',()=>{
-        const author=button.dataset.author;
-        if(!selected){status.textContent='Choisis d’abord un nom de plume à gauche.';return;}
-        if(matched.has(selected))return;
-        const pen=selected;
-        if(answers[pen]===author){
-          matched.add(pen);score++;
-          const l=left.find(b=>b.dataset.pen===pen);
-          l.disabled=true;button.disabled=true;
-          l.classList.add('is-matched');button.classList.add('is-matched');l.dataset.pair=String(matched.size);button.dataset.pair=String(matched.size);l.setAttribute('aria-label',l.textContent+' — paire '+matched.size+' correctement associée');button.setAttribute('aria-label',button.textContent+' — paire '+matched.size+' correctement associée');
-          l.setAttribute('aria-pressed','false');button.setAttribute('aria-pressed','false');
-          status.textContent=explanations[pen];
-          instruction.textContent='Association trouvée. Choisis le prochain nom de plume.';
-          selected=null;updateProgress();
-          if(matched.size===5){
-            details.hidden=false;
-            status.textContent='Bravo, les cinq associations sont trouvées ! Retrouve les explications et les sources juste en dessous.';
-            details.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'nearest'});
-          }
-        }else{
-          button.classList.add('is-wrong');
-          status.textContent='Ce n’est pas la bonne autrice. Essaie encore ou sélectionne un autre nom de plume.';
-          setTimeout(()=>button.classList.remove('is-wrong'),700);
-          clearSelection();selected=null;
-          instruction.textContent='Sélectionne un nom de plume dans la colonne de gauche.';
-        }
-      });
-    }
-    reset.addEventListener('click',()=>{
-      selected=null;matched=new Set();score=0;
-      for(const b of [...left,...right]){b.disabled=false;b.classList.remove('is-matched','is-wrong');delete b.dataset.pair;b.removeAttribute('aria-label');}
-      clearSelection();details.hidden=true;updateProgress();
-      status.textContent='Le jeu est réinitialisé. À toi de jouer.';
-      instruction.textContent='Commence par sélectionner un nom de plume dans la colonne de gauche.';
-      left[0].focus();
-    });
-  })();
-  </script>
+  <script src="../assets/quiz-autrices.js?v=lecture-1" defer></script>
   <script>
   (() => {
     const choices = [...document.querySelectorAll(".pause-choice")];
     const feedback = document.getElementById("pause-feedback");
     const source = document.getElementById("pause-source");
+    if (!feedback || !source) return;
     for (const choice of choices) {
       choice.addEventListener("click", () => {
         for (const item of choices) item.setAttribute("aria-pressed", String(item === choice));
@@ -344,9 +283,11 @@
         }
         source.hidden = false;
       });
+      choice.disabled = false;
     }
   })();
   </script>
 
+  <script src="../assets/puissance-sommaire.js?v=lecture-1" defer></script>
 </body>
 </html>

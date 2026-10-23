@@ -20,12 +20,15 @@
   document.querySelectorAll(".authorite-case").forEach(cas => {
     const situation = cas.dataset.case;
     const retour = cas.querySelector(".authorite-feedback");
+    if (!retour || !Object.hasOwn(explications, situation)) return;
     cas.querySelectorAll(".authorite-choice").forEach(bouton => {
+      if (!Object.hasOwn(explications[situation], bouton.dataset.reaction)) return;
       bouton.addEventListener("click", () => {
         cas.querySelectorAll(".authorite-choice").forEach(option => option.setAttribute("aria-pressed", "false"));
         bouton.setAttribute("aria-pressed", "true");
         retour.textContent = explications[situation][bouton.dataset.reaction];
       });
+      bouton.disabled = false;
     });
   });
 })();

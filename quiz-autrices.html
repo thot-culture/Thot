@@ -23,8 +23,8 @@
   <meta name="twitter:description" content="Relie cinq noms de plume à leurs autrices. Chaque réponse renvoie aux sources de l’article.">
   <meta name="twitter:image" content="https://thot-culture.github.io/Thot/assets/og-thot.png">
   <meta name="twitter:image:alt" content="THOT, le magazine des esprits curieux : histoire, géographie et sciences humaines.">
-  <link rel="stylesheet" href="assets/article.css?v=a11y-1">
-  <link rel="stylesheet" href="assets/autrices-quiz.css?v=quiz-separe-1">
+  <link rel="stylesheet" href="assets/article.css?v=lecture-1">
+  <link rel="stylesheet" href="assets/autrices-quiz.css?v=audit-1">
 </head>
 <body class="article-litterature page-quiz">
   <a class="skip-link" href="#quiz-title">Aller directement au jeu</a>
@@ -40,23 +40,24 @@
         <p class="ouverture">Cette activité complète l’article sur les pseudonymes d’autrices du XIX<sup>e</sup> siècle. <a href="articles/autrices-pseudonymes.html">Lire l’article et ses références</a>.</p>
         <section class="quiz-pseudonymes" aria-labelledby="quiz-title">
           <p class="quiz-kicker">THOT · À toi de jouer</p>
-          <h2 id="quiz-title">Relie chaque nom à son autrice</h2>
+          <h2 id="quiz-title" tabindex="-1">Relie chaque nom à son autrice</h2>
           <p class="quiz-intro">Choisis un nom de plume, puis l’autrice correspondante. Sur téléphone, touche simplement les deux noms l’un après l’autre ; au clavier, utilise Tab et Entrée.</p>
           <p class="quiz-instruction" id="quiz-instruction">Commence par sélectionner un nom de plume dans la colonne de gauche.</p>
+          <p class="quiz-noscript" id="quiz-load-status" role="status">Le jeu n’est pas encore prêt. <a href="quiz-autrices.html">Recharger la page</a> ou <a href="articles/autrices-pseudonymes.html">consulter l’article</a>.</p>
           <div class="quiz-grid">
             <div class="quiz-column"><h3>Noms de plume</h3><div class="quiz-options" id="pseudonym-options" role="group" aria-label="Choisir un nom de plume">
-              <button class="quiz-option" type="button" data-pen="currer" aria-pressed="false">Currer Bell</button>
-              <button class="quiz-option" type="button" data-pen="ellis" aria-pressed="false">Ellis Bell</button>
-              <button class="quiz-option" type="button" data-pen="acton" aria-pressed="false">Acton Bell</button>
-              <button class="quiz-option" type="button" data-pen="eliot" aria-pressed="false">George Eliot</button>
-              <button class="quiz-option" type="button" data-pen="sand" aria-pressed="false">George Sand</button>
+              <button class="quiz-option" type="button" data-pen="currer" aria-pressed="false" disabled>Currer Bell</button>
+              <button class="quiz-option" type="button" data-pen="ellis" aria-pressed="false" disabled>Ellis Bell</button>
+              <button class="quiz-option" type="button" data-pen="acton" aria-pressed="false" disabled>Acton Bell</button>
+              <button class="quiz-option" type="button" data-pen="eliot" aria-pressed="false" disabled>George Eliot</button>
+              <button class="quiz-option" type="button" data-pen="sand" aria-pressed="false" disabled>George Sand</button>
             </div></div>
             <div class="quiz-column"><h3>Autrices</h3><div class="quiz-options" id="author-options" role="group" aria-label="Choisir une autrice">
-              <button class="quiz-option" type="button" data-author="anne" aria-pressed="false">Anne Brontë</button>
-              <button class="quiz-option" type="button" data-author="aurore" aria-pressed="false">Aurore Dupin</button>
-              <button class="quiz-option" type="button" data-author="charlotte" aria-pressed="false">Charlotte Brontë</button>
-              <button class="quiz-option" type="button" data-author="maryanne" aria-pressed="false">Mary Anne (« Marian ») Evans</button>
-              <button class="quiz-option" type="button" data-author="emily" aria-pressed="false">Emily Brontë</button>
+              <button class="quiz-option" type="button" data-author="anne" aria-pressed="false" disabled>Anne Brontë</button>
+              <button class="quiz-option" type="button" data-author="aurore" aria-pressed="false" disabled>Aurore Dupin</button>
+              <button class="quiz-option" type="button" data-author="charlotte" aria-pressed="false" disabled>Charlotte Brontë</button>
+              <button class="quiz-option" type="button" data-author="maryanne" aria-pressed="false" disabled>Mary Anne (« Marian ») Evans</button>
+              <button class="quiz-option" type="button" data-author="emily" aria-pressed="false" disabled>Emily Brontë</button>
             </div></div>
           </div>
           <p class="quiz-status" id="quiz-status" role="status" aria-live="polite">À toi de jouer.</p>
@@ -69,7 +70,7 @@
               <li><strong>George Sand — Aurore Dupin.</strong> La notice d’autorité de la BnF confirme l’identité et signale aussi une publication en collaboration avec Jules Sandeau sous le pseudonyme « Jules Sand ». Cette notice établit des faits bibliographiques ; elle ne suffit pas à prouver pourquoi Aurore Dupin a ensuite retenu « George Sand ». <a href="articles/autrices-pseudonymes.html#ref4">Source [4]</a></li>
             </ol>
           </div>
-          <button class="quiz-reset" id="quiz-reset" type="button">Recommencer</button>
+          <button class="quiz-reset" id="quiz-reset" type="button" disabled>Recommencer</button>
           <noscript><p class="quiz-noscript">Sans JavaScript, le jeu interactif est désactivé. <a href="articles/autrices-pseudonymes.html">Consulte l’article</a> pour retrouver directement les associations et leurs sources.</p></noscript>
         </section>
         <p class="vers-accueil"><a href="articles/autrices-pseudonymes.html">← Revenir à l’article</a></p>
@@ -77,75 +78,6 @@
     </div>
   </main>
   <footer class="pied"><div class="largeur"><b>THOT</b><span>La curiosité n’a pas de limites.</span><a href="notre-methode.html">Notre méthode</a></div></footer>
-  <script>
-  (() => {
-    'use strict';
-    const answers={currer:'charlotte',ellis:'emily',acton:'anne',eliot:'maryanne',sand:'aurore'};
-    const explanations={currer:'Currer Bell est le pseudonyme de Charlotte Brontë.',ellis:'Ellis Bell est le pseudonyme d’Emily Brontë.',acton:'Acton Bell est le pseudonyme d’Anne Brontë.',eliot:'George Eliot est le pseudonyme de Mary Anne Evans, qui a utilisé le prénom Marian.',sand:'George Sand est le pseudonyme d’Aurore Dupin.'};
-    const left=[...document.querySelectorAll('[data-pen]')];
-    const right=[...document.querySelectorAll('[data-author]')];
-    const status=document.getElementById('quiz-status');
-    const progress=document.getElementById('quiz-progress');
-    const instruction=document.getElementById('quiz-instruction');
-    const details=document.getElementById('quiz-explanations');
-    const reset=document.getElementById('quiz-reset');
-    let selected=null, matched=new Set();
-    const clearSelection=()=>{for(const b of [...left,...right])b.setAttribute('aria-pressed','false');};
-    const updateProgress=()=>{const n=matched.size;progress.textContent=n+' association'+(n>1?'s':'')+' sur 5 trouvée'+(n>1?'s':'')+'.';};
-    for(const button of left){
-      button.addEventListener('click',()=>{
-        if(matched.has(button.dataset.pen))return;
-        selected=button.dataset.pen;
-        clearSelection();
-        button.setAttribute('aria-pressed','true');
-        instruction.textContent='Maintenant, choisis l’autrice qui correspond à '+button.textContent+'.';
-        status.textContent='Nom sélectionné : '+button.textContent+'.';
-      });
-    }
-    for(const button of right){
-      button.addEventListener('click',()=>{
-        const author=button.dataset.author;
-        if(!selected){status.textContent='Choisis d’abord un nom de plume à gauche.';return;}
-        if(matched.has(selected))return;
-        const pen=selected;
-        if(answers[pen]===author){
-          matched.add(pen);
-          const l=left.find(b=>b.dataset.pen===pen);
-          l.disabled=true;button.disabled=true;
-          l.classList.add('is-matched');button.classList.add('is-matched');
-          l.dataset.pair=String(matched.size);button.dataset.pair=String(matched.size);
-          l.setAttribute('aria-label',l.textContent+' — paire '+matched.size+' correctement associée');
-          button.setAttribute('aria-label',button.textContent+' — paire '+matched.size+' correctement associée');
-          l.setAttribute('aria-pressed','false');button.setAttribute('aria-pressed','false');
-          status.textContent=explanations[pen];
-          instruction.textContent='Association trouvée. Choisis le prochain nom de plume.';
-          selected=null;updateProgress();
-          if(matched.size===5){
-            details.hidden=false;
-            status.textContent='Bravo, les cinq associations sont trouvées ! Retrouve les explications et les sources juste en dessous.';
-            details.querySelector('h3').focus();
-            details.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'nearest'});
-          }else{
-            left.find(b=>!b.disabled)?.focus();
-          }
-        }else{
-          button.classList.add('is-wrong');
-          status.textContent='Ce n’est pas la bonne autrice. Essaie encore ou sélectionne un autre nom de plume.';
-          setTimeout(()=>button.classList.remove('is-wrong'),700);
-          clearSelection();selected=null;
-          instruction.textContent='Sélectionne un nom de plume dans la colonne de gauche.';
-        }
-      });
-    }
-    reset.addEventListener('click',()=>{
-      selected=null;matched=new Set();
-      for(const b of [...left,...right]){b.disabled=false;b.classList.remove('is-matched','is-wrong');delete b.dataset.pair;b.removeAttribute('aria-label');}
-      clearSelection();details.hidden=true;updateProgress();
-      status.textContent='Le jeu est réinitialisé. À toi de jouer.';
-      instruction.textContent='Commence par sélectionner un nom de plume dans la colonne de gauche.';
-      left[0].focus();
-    });
-  })();
-  </script>
+  <script src="assets/quiz-autrices.js?v=lecture-1" defer></script>
 </body>
 </html>

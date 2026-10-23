@@ -31,8 +31,9 @@
   <title>THOT — Articles documentés et quiz de culture générale</title>
   <link rel="stylesheet" href="assets/site.css">
   <link rel="stylesheet" href="assets/decouverte.css?v=1">
+  <link rel="stylesheet" href="assets/home.css?v=lecture-1">
 </head>
-<body>
+<body class="home-page">
   <a class="skip-link" href="#contenu">Aller au contenu</a>
   <header class="top">
     <div class="wrap nav">
@@ -55,7 +56,7 @@
     </div>
   </header>
 
-  <main id="contenu">
+  <main id="contenu" tabindex="-1">
     <section id="accueil" class="hero" aria-labelledby="main-title">
       <div class="wrap hero-inner">
         <div>
@@ -95,6 +96,14 @@
         <div><p class="editorial-eyebrow">La bibliothèque THOT</p><h2 id="articles-title">Une question. Une découverte.</h2></div>
         <p class="section-lead">Des histoires à explorer, des idées à comprendre et des sources pour aller plus loin.</p>
       </div>
+      <form class="home-search" action="bibliotheque.html" method="get" role="search" aria-label="Rechercher dans les articles THOT">
+        <label for="home-article-search">Un sujet en tête ?</label>
+        <div class="home-search__field">
+          <input id="home-article-search" name="q" type="search" placeholder="Ex. Roubaix, Brontë, camouflage…" aria-describedby="home-search-help" enterkeyhint="search">
+          <button type="submit">Rechercher <span aria-hidden="true">↗</span></button>
+        </div>
+        <p id="home-search-help">Retrouvez un sujet, un lieu ou un nom dans la bibliothèque.</p>
+      </form>
       <article class="latest-story" aria-labelledby="latest-title">
       <div class="latest-story__visual"><a href="articles/autorite.html" data-discovery-path aria-label="Lire le nouvel article : Pourquoi ne réagit-on pas tous pareil face à l’autorité ?"><div class="discovery-photo discovery-photo--latest">
         <img src="assets/images/autorite-triptyque.webp" alt="Illustration en trois scènes : un parent et un adolescent discutent, une manifestation, une responsable scolaire échange avec des élèves." width="1200" height="800" loading="lazy" decoding="async">
@@ -209,7 +218,7 @@
   </main>
   <footer><div class="wrap foot-inner"><b>THOT</b><span>Éveiller la curiosité. Éclairer les idées. Transmettre le savoir.</span><a href="notre-methode.html">Notre méthode</a><span>© <span id="year">2026</span> THOT</span></div></footer>
 
-  <!-- Banques de questions : chargées avant le moteur, sans dépendance externe. -->
+  <!-- Navigation de l’accueil et découverte aléatoire, sans dépendance externe. -->
   <script src="assets/site-home.js"></script>
   <script src="assets/decouverte.js?v=1" defer></script>
 </body>

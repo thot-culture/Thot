@@ -1,0 +1,85 @@
+/* Ajustements propres à l’accueil : aucune autre page ne charge ce fichier. */
+.home-page .hero-inner > div,
+.home-page .path-card > div { min-width: 0; }
+
+/* Les quatre articles restent répartis en deux rangées de deux cartes. */
+@media (min-width: 711px) {
+  .home-page .editorial-stories {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.home-page .discovery-photo img[hidden] { display: none; }
+.home-page .discovery-photo.is-unavailable {
+  display: grid;
+  place-items: center;
+  padding: 32px 22px 64px;
+}
+.home-page .home-image-fallback {
+  color: #F2DCAF;
+  font: 600 14px/1.6 "Segoe UI", Arial, sans-serif;
+  text-align: center;
+}
+
+.home-search {
+  margin: 0 0 32px;
+  padding: 20px;
+  border: 1px solid #d5c7ae;
+  border-radius: 14px;
+  background: #fffefa;
+  color: #17243a;
+}
+.home-search label { display: block; margin-bottom: 10px; font-weight: 750; }
+.home-search__field { display: flex; gap: 10px; }
+.home-search input {
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 10px 14px;
+  border: 1px solid #a5acac;
+  border-radius: 8px;
+  background: #fff;
+  color: #17243a;
+  font: inherit;
+}
+.home-search button {
+  min-height: 48px;
+  padding: 10px 20px;
+  border: 1px solid #17243a;
+  border-radius: 8px;
+  background: #17243a;
+  color: #fffefa;
+  font: 700 14px "Segoe UI", Arial, sans-serif;
+  cursor: pointer;
+}
+.home-search button:hover { background: #294358; }
+.home-search input:focus-visible,
+.home-search button:focus-visible { outline: 3px solid #927038; outline-offset: 3px; }
+.home-search p { margin: 10px 0 0; color: #566171; font-size: 13px; line-height: 1.6; }
+@media (max-width: 560px) {
+  .home-search { padding: 16px; }
+  .home-search__field { flex-direction: column; }
+}
+
+@media (max-width: 710px) {
+  /* Sans JavaScript, les liens restent visibles et le bouton inerte est masqué. */
+  .home-page .top:not([data-menu-ready]) { position: relative; }
+  .home-page .top:not([data-menu-ready]) .nav { flex-wrap: wrap; }
+  .home-page .top:not([data-menu-ready]) .mobile-menu-button { display: none; }
+  .home-page .top:not([data-menu-ready]) .nav-end {
+    display: flex;
+    position: static;
+    width: 100%;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  /* Le menu amélioré reste défilable en paysage ou avec un fort zoom. */
+  .home-page .top[data-menu-ready] .nav-end {
+    max-height: calc(100vh - 88px);
+    max-height: calc(100dvh - 88px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+}

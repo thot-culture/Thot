@@ -28,8 +28,9 @@
   <meta name="twitter:image:alt" content="THOT, le magazine des esprits curieux : histoire, géographie et sciences humaines.">
   <title>Le quiz THOT — Culture générale</title>
   <link rel="stylesheet" href="assets/site.css?v=quiz-accessibility-1">
+  <link rel="stylesheet" href="assets/quiz.css">
 </head>
-<body>
+<body class="quiz-page">
 <a class="skip-link" href="#contenu">Aller au contenu</a>
   <header class="top">
     <div class="wrap nav">
@@ -51,7 +52,9 @@
       </nav>
     </div>
   </header>
-  <main id="contenu">
+  <main id="contenu" tabindex="-1">
+    <div class="wrap quiz-notice" id="quiz-load-status" role="status"><span id="quiz-load-message">Le quiz n’est pas encore prêt.</span> <a href="quiz.html">Recharger la page</a> ou <a href="bibliotheque.html">lire les articles</a>.</div>
+    <noscript><p class="wrap quiz-notice">Active JavaScript pour jouer au quiz. Les articles restent accessibles depuis la navigation.</p></noscript>
     <section class="section wrap" aria-labelledby="quiz-page-title">
       <div class="section-header">
         <div><p class="kicker">L’espace quiz THOT</p><h1 id="quiz-page-title">À toi de jouer.</h1></div>
@@ -65,11 +68,11 @@
         <p class="section-lead">Cinq univers, trois niveaux et une explication après chaque réponse. <span id="quiz-total">Plus de cent questions</span>.</p>
       </div>
       <div class="category-grid">
-        <button class="category-card" type="button" data-category="histoire"><span class="category-icon" aria-hidden="true">🏛️</span><span class="category-name">Histoire</span><span class="category-meta">Rois, révolutions et anecdotes oubliées.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
-        <button class="category-card" type="button" data-category="geographie"><span class="category-icon" aria-hidden="true">🌍</span><span class="category-name">Géographie</span><span class="category-meta">Le monde a encore des secrets.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
-        <button class="category-card" type="button" data-category="sciences"><span class="category-icon" aria-hidden="true">🔬</span><span class="category-name">Sciences</span><span class="category-meta">Des étoiles jusqu'à ton ADN.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
-        <button class="category-card" type="button" data-category="arts"><span class="category-icon" aria-hidden="true">🎨</span><span class="category-name">Arts & culture</span><span class="category-meta">Des chefs-d'œuvre aux grands classiques.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
-        <button class="category-card" type="button" data-category="insolite"><span class="category-icon" aria-hidden="true">✨</span><span class="category-name">Insolite</span><span class="category-meta">Le genre de fait qu'on raconte à table.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
+        <button class="category-card" type="button" data-category="histoire" disabled data-quiz-startup-disabled><span class="category-icon" aria-hidden="true">🏛️</span><span class="category-name">Histoire</span><span class="category-meta">Rois, révolutions et anecdotes oubliées.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
+        <button class="category-card" type="button" data-category="geographie" disabled data-quiz-startup-disabled><span class="category-icon" aria-hidden="true">🌍</span><span class="category-name">Géographie</span><span class="category-meta">Le monde a encore des secrets.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
+        <button class="category-card" type="button" data-category="sciences" disabled data-quiz-startup-disabled><span class="category-icon" aria-hidden="true">🔬</span><span class="category-name">Sciences</span><span class="category-meta">Des étoiles jusqu'à ton ADN.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
+        <button class="category-card" type="button" data-category="arts" disabled data-quiz-startup-disabled><span class="category-icon" aria-hidden="true">🎨</span><span class="category-name">Arts & culture</span><span class="category-meta">Des chefs-d'œuvre aux grands classiques.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
+        <button class="category-card" type="button" data-category="insolite" disabled data-quiz-startup-disabled><span class="category-icon" aria-hidden="true">✨</span><span class="category-name">Insolite</span><span class="category-meta">Le genre de fait qu'on raconte à table.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
       </div>
     </section>
     <section id="jouer" class="game-section" aria-labelledby="quiz-title">
@@ -90,12 +93,12 @@
               <div class="quiz-intro-eyebrow">LE QUIZ · ÉDITION DÉCOUVERTE</div>
               <div class="category-tag" id="chosen-category">✦ Un peu de tout</div>
               <div class="quick-themes" role="group" aria-label="Choisir l'univers du quiz">
-                <button type="button" data-quiz-theme="mix" aria-pressed="true">✦ Mélange</button>
-                <button type="button" data-quiz-theme="histoire" aria-pressed="false">🏛️ Histoire</button>
-                <button type="button" data-quiz-theme="geographie" aria-pressed="false">🌍 Géographie</button>
-                <button type="button" data-quiz-theme="sciences" aria-pressed="false">🔬 Sciences</button>
-                <button type="button" data-quiz-theme="arts" aria-pressed="false">🎨 Arts</button>
-                <button type="button" data-quiz-theme="insolite" aria-pressed="false">✨ Insolite</button>
+                <button type="button" data-quiz-theme="mix" aria-pressed="true" disabled data-quiz-startup-disabled>✦ Mélange</button>
+                <button type="button" data-quiz-theme="histoire" aria-pressed="false" disabled data-quiz-startup-disabled>🏛️ Histoire</button>
+                <button type="button" data-quiz-theme="geographie" aria-pressed="false" disabled data-quiz-startup-disabled>🌍 Géographie</button>
+                <button type="button" data-quiz-theme="sciences" aria-pressed="false" disabled data-quiz-startup-disabled>🔬 Sciences</button>
+                <button type="button" data-quiz-theme="arts" aria-pressed="false" disabled data-quiz-startup-disabled>🎨 Arts</button>
+                <button type="button" data-quiz-theme="insolite" aria-pressed="false" disabled data-quiz-startup-disabled>✨ Insolite</button>
               </div>
               <h3>Prêt à faire chauffer tes neurones ?</h3>
               <p>5 questions, plusieurs formats et une découverte à chaque réponse. À la fin, retrouve tes erreurs et comprends les bonnes réponses.</p>
@@ -103,40 +106,40 @@
               <div class="level-pick" role="group" aria-label="Niveau de difficulté">
                 <span>Niveau de difficulté</span>
                 <div class="level-options">
-                  <button class="level-option" type="button" data-level="facile" aria-pressed="true">🌱 Facile</button>
-                  <button class="level-option" type="button" data-level="intermediaire" aria-pressed="false">⚡ Moyen</button>
-                  <button class="level-option" type="button" data-level="expert" aria-pressed="false">🏆 Expert</button>
+                  <button class="level-option" type="button" data-level="facile" aria-pressed="true" disabled data-quiz-startup-disabled>🌱 Facile</button>
+                  <button class="level-option" type="button" data-level="intermediaire" aria-pressed="false" disabled data-quiz-startup-disabled>⚡ Moyen</button>
+                  <button class="level-option" type="button" data-level="expert" aria-pressed="false" disabled data-quiz-startup-disabled>🏆 Expert</button>
                 </div>
                 <p class="level-description" id="level-description">Pour se lancer et découvrir de nouvelles choses.</p>
               </div>
-              <button type="button" class="primary" id="start-button">C'est parti ! <span aria-hidden="true">↗</span></button>
+              <button type="button" class="primary" id="start-button" disabled data-quiz-startup-disabled>C'est parti ! <span aria-hidden="true">↗</span></button>
             </div>
-            <div id="screen-question" class="hidden" aria-live="polite">
+            <div id="screen-question" class="hidden">
               <div class="quiz-stage">
                 <div class="game-status"><span id="question-counter">QUESTION 1 / 5</span><span id="current-score">0 bonne réponse</span></div>
                 <div class="game-progress" role="progressbar" aria-label="Progression du quiz" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0" id="progressbar"><div id="progressfill"></div></div>
                 <div class="quiz-stage-sub"><span class="level-pill" id="question-level">🌱 Niveau facile</span><span class="quiz-streak" id="streak-status" aria-live="off">Série : 0</span></div>
-                <h3 class="question" id="question-text"></h3>
+                <h3 class="question" id="question-text" tabindex="-1"></h3>
               </div>
               <div class="quiz-answers-head"><span id="answer-instruction">Choisis une réponse</span><span>Une explication après chaque choix</span></div>
-              <div class="answers" id="answer-list"></div>
-              <div class="quiz-tools"><button type="button" class="hint-trigger" id="hint-button" aria-expanded="false" aria-controls="hint-panel">✧ Besoin d’un indice ?</button><button type="button" class="next multi-validate hidden" id="validate-button" disabled>Valider mes réponses</button></div>
+              <div class="answers" id="answer-list" role="group" aria-labelledby="question-text" aria-describedby="answer-instruction"></div>
+              <div class="quiz-tools"><button type="button" class="hint-trigger" id="hint-button" aria-expanded="false" aria-controls="hint-panel" disabled data-quiz-startup-disabled>✧ Besoin d’un indice ?</button><button type="button" class="next multi-validate hidden" id="validate-button" disabled>Valider mes réponses</button></div>
               <div class="hint-panel hidden" id="hint-panel" role="note"></div>
               <div class="quiz-track" id="quiz-track" aria-label="Parcours des cinq questions"></div>
               <div class="feedback hidden" id="feedback" role="status"></div>
-              <div class="game-footer"><span class="game-helper">Un peu de curiosité, beaucoup de découvertes.</span><button class="next hidden" type="button" id="next-button">Question suivante →</button></div>
+              <div class="game-footer"><span class="game-helper">Un peu de curiosité, beaucoup de découvertes.</span><button class="next hidden" type="button" id="next-button" disabled data-quiz-startup-disabled>Question suivante →</button></div>
               <div class="quiz-reading hidden" id="quiz-reading" aria-live="polite"></div>
             </div>
-            <div id="screen-result" class="result hidden" aria-live="polite">
+            <div id="screen-result" class="result hidden">
               <div class="score-circle"><b id="final-score">0/5</b><small>TON SCORE</small></div>
-              <h3 id="result-title" tabindex="-1">Bien joué !</h3>
+              <h3 id="result-title" tabindex="-1" aria-describedby="result-performance xp-earned daily-result badges-earned">Bien joué !</h3>
               <p id="result-message">Ta curiosité fait des merveilles.</p>
               <p class="result-performance" id="result-performance"></p>
-              <p id="xp-earned" class="xp-earned" aria-live="polite"></p>
-              <p id="daily-result" class="daily-result hidden" aria-live="polite"></p>
-              <p id="badges-earned" class="badges-earned hidden" aria-live="polite"></p>
+              <p id="xp-earned" class="xp-earned"></p>
+              <p id="daily-result" class="daily-result hidden"></p>
+              <p id="badges-earned" class="badges-earned hidden"></p>
               <div class="result-detail" id="result-detail"></div>
-              <div class="result-actions"><button type="button" class="primary" id="replay-button">Rejouer ↗</button><button type="button" class="outlined" id="change-button">Changer de thème</button><button type="button" class="outlined review-toggle hidden" id="review-button" aria-expanded="false" aria-controls="review-panel">Revoir mes erreurs ↘</button></div>
+              <div class="result-actions"><button type="button" class="primary" id="replay-button" disabled data-quiz-startup-disabled>Rejouer ↗</button><button type="button" class="outlined" id="change-button" disabled data-quiz-startup-disabled>Changer de thème</button><button type="button" class="outlined review-toggle hidden" id="review-button" aria-expanded="false" aria-controls="review-panel" disabled data-quiz-startup-disabled>Revoir mes erreurs ↘</button></div>
               <div class="review-panel hidden" id="review-panel" role="region" aria-label="Révision des erreurs">
                 <h4 id="review-heading" tabindex="-1">Ce que tu viens d'apprendre</h4>
                 <p>Prends une minute pour comprendre ces réponses : c'est comme ça qu'on progresse.</p>
@@ -152,7 +155,7 @@
           </div>
           <p class="daily-intro">Cinq questions, cinq univers, un même défi pour tout le monde. Reviens demain pour découvrir une autre sélection.</p>
           <div class="daily-actions">
-            <button type="button" id="daily-start-button" class="daily-start">Relever le défi du jour <span aria-hidden="true">↗</span></button>
+            <button type="button" id="daily-start-button" class="daily-start" disabled data-quiz-startup-disabled>Relever le défi du jour <span aria-hidden="true">↗</span></button>
             <span id="daily-status" class="daily-status" role="status">À découvrir aujourd'hui</span>
             <span id="daily-streak" class="daily-streak">✦ Série quotidienne : 0 jour</span>
           </div>
@@ -171,7 +174,7 @@
           <div class="xp-progress" id="xp-progress" role="progressbar" aria-label="Progression d'expérience" aria-valuemin="0" aria-valuemax="150" aria-valuenow="0"><div id="xp-fill"></div></div>
           <div class="progression-bottom">
             <span id="xp-description">10 XP par bonne réponse · 5 XP par partie · 10 XP bonus au sans-faute.</span>
-            <button type="button" id="badges-button" class="badges-button" aria-expanded="false" aria-controls="badges-panel">Mes badges <span id="badge-count">0 / 9</span> <span aria-hidden="true">⌄</span></button>
+            <button type="button" id="badges-button" class="badges-button" aria-expanded="false" aria-controls="badges-panel" disabled data-quiz-startup-disabled>Mes badges <span id="badge-count">0 / 9</span> <span aria-hidden="true">⌄</span></button>
           </div>
           <div class="badges-panel hidden" id="badges-panel" role="region" aria-label="Mes badges THOT">
             <p>Les badges récompensent tes parties et tes connaissances dans chaque univers.</p>
@@ -183,7 +186,8 @@
           <div class="stat-card"><strong id="stat-correct">0</strong><span>Bonnes réponses</span></div>
           <div class="stat-card"><strong id="stat-accuracy">—</strong><span>Taux de réussite</span></div>
         </div>
-        <p class="stats-note">Ta progression est sauvegardée uniquement sur cet appareil, dans ce navigateur.</p>
+        <p class="stats-note" id="stats-note">Ta progression est sauvegardée uniquement sur cet appareil, dans ce navigateur.</p>
+        <p class="quiz-notice hidden" id="storage-status" role="status">La progression reste disponible pendant cette session, mais elle n’a pas pu être sauvegardée. Elle peut être perdue en quittant la page.</p>
       </div>
     </section>
   </main>
@@ -192,6 +196,6 @@
   <script src="assets/questions-facile.js"></script>
   <script src="assets/questions-intermediaire.js"></script>
   <script src="assets/questions-expert.js"></script>
-  <script src="assets/site.js?v=quiz-reading-1"></script>
+  <script src="assets/site.js?v=quiz-audit-2026-10-23"></script>
 </body>
 </html>

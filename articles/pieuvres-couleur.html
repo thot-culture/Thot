@@ -20,9 +20,9 @@
   <meta name="twitter:title" content="Comment les pieuvres changent-elles de couleur ? | THOT">
   <meta name="twitter:description" content="Comprendre les cellules pigmentées et les muscles qui permettent aux pieuvres de changer d’apparence.">
   <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg">
-  <link rel="stylesheet" href="../assets/article.css?v=a11y-1">
+  <link rel="stylesheet" href="../assets/article.css?v=lecture-1">
   <link rel="stylesheet" href="../assets/decouverte.css?v=1">
-  <link rel="stylesheet" href="../assets/pieuvres.css?v=2">
+  <link rel="stylesheet" href="../assets/pieuvres.css?v=audit-1">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -83,7 +83,7 @@
       <div class="meta"><span>La rédaction THOT</span><span>Publié le 22 octobre 2026</span><span id="duree">Temps de lecture estimé</span></div>
     </div></header>
     <div class="largeur mise-en-page">
-      <article id="texte-article">
+      <article id="texte-article" tabindex="-1">
         <p class="ouverture">En quelques instants, une pieuvre peut passer d’une peau pâle à une peau sombre, tachetée ou rayée. Elle n’applique pas une nouvelle couleur comme de la peinture : elle commande de minuscules éléments présents dans sa peau.</p>
         <p class="objectif-lecture"><strong>La question à garder en tête :</strong> qu’est-ce qui change réellement sous la peau — le pigment, les muscles, ou les deux ?</p>
 
@@ -119,7 +119,7 @@
             <text x="300" y="222" text-anchor="middle" class="schema-note">Sac pigmentaire entouré de muscles radiaires</text>
           </svg>
           <label class="chromato-label" for="chromato-curseur">Niveau d’étalement du pigment</label>
-          <input id="chromato-curseur" class="chromato-curseur" type="range" min="0" max="100" value="18" aria-describedby="chromato-consigne chromato-etat" aria-valuetext="Peu étalé">
+          <input id="chromato-curseur" class="chromato-curseur" disabled type="range" min="0" max="100" value="18" aria-describedby="chromato-consigne chromato-etat" aria-valuetext="Peu étalé">
           <p class="chromato-etat" id="chromato-etat" aria-live="polite">Au repos : le sac est compact et la tache colorée est petite.</p>
           <noscript><p>Schéma statique : au repos, le sac pigmentaire est compact ; lorsque les muscles se contractent, il s’étale et la tache colorée devient plus visible.</p></noscript>
         </figure>
@@ -192,7 +192,7 @@
         <p class="vers-accueil"><a href="../bibliotheque.html">← Revenir à la bibliothèque</a></p>
       </article>
       <aside class="sommaire" aria-label="Sommaire de l’article">
-        <p class="sommaire-surtitle">Dans cet article</p><h2>Explorer</h2>
+        <p class="sommaire-surtitle">Dans cet article</p><details class="sommaire-details" open><summary>Explorer</summary>
         <nav aria-label="Sommaire">
           <ol>
             <li><a href="#cellules"><span class="sommaire-num">01</span><span>Sous la peau</span></a></li>
@@ -203,7 +203,7 @@
             <li><a href="#sources-title"><span class="sommaire-num">06</span><span>Sources</span></a></li>
           </ol>
         </nav>
-      </aside>
+      </details></aside>
     </div>
   </main>
   <footer class="pied"><div class="largeur"><b>THOT</b><span>La curiosité n’a pas de limites.</span><a href="../notre-methode.html">Notre méthode</a></div></footer>
@@ -252,7 +252,9 @@
       };
       curseurChromato.addEventListener("input", actualiserChromatophore);
       actualiserChromatophore();
+      curseurChromato.disabled = false;
     }
   </script>
+  <script src="../assets/puissance-sommaire.js?v=lecture-1" defer></script>
 </body>
 </html>

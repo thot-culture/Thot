@@ -1,0 +1,24 @@
+/* Ajustements limités au quiz ; le CSS partagé reste inchangé. */
+.quiz-page .quiz-notice { padding: 16px 20px; border: 1px solid #D8CBAD; border-radius: 12px; background: #FBF8F1; color: #344052; font-size: 14px; line-height: 1.7; }
+.quiz-page .quiz-notice a { text-decoration: underline; text-underline-offset: 3px; }
+.quiz-page #quiz-load-status { margin-top: 24px; }
+.quiz-page .game-body { min-width: 0; }
+.quiz-page .question, .quiz-page .answer, .quiz-page .game-best { overflow-wrap: break-word; }
+.quiz-page .hint-trigger, .quiz-page .badges-button, .quiz-page .quick-themes button { min-height: 44px; }
+.quiz-page button:disabled { cursor: default; }
+.quiz-page button[data-quiz-startup-disabled]:hover { transform: none; }
+.quiz-page #question-text:focus-visible, .quiz-page #result-title:focus-visible { outline: 3px solid #B89558; outline-offset: 5px; border-radius: 3px; }
+.quiz-page #question-text { scroll-margin-block: 110px 24px; }
+@media (max-width: 710px) {
+  /* Garder tous les liens accessibles tant que le menu n’est pas initialisé. */
+  .quiz-page .top:not([data-menu-ready]) { position: relative; }
+  .quiz-page .top:not([data-menu-ready]) .nav { flex-wrap: wrap; }
+  .quiz-page .top:not([data-menu-ready]) .mobile-menu-button { display: none; }
+  .quiz-page .top:not([data-menu-ready]) .nav-end { display: flex; position: static; width: 100%; border: 0; box-shadow: none; padding: 0; }
+  .quiz-page .top[data-menu-ready] .nav-end { max-height: calc(100vh - 88px); max-height: calc(100dvh - 88px); overflow-y: auto; overscroll-behavior: contain; }
+}
+@media (max-width: 560px) {
+  .quiz-page .progression-head { flex-wrap: wrap; }
+  .quiz-page .progression-amount { flex-basis: 100%; align-items: flex-start; text-align: left; }
+  .quiz-page .game-top { flex-wrap: wrap; }
+}
