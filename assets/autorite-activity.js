@@ -6,7 +6,7 @@
       refuser: "Le refus peut exprimer un besoin d’autonomie ou un désaccord sur la limite posée. Il ne suffit pas à conclure à un rejet des parents."
     },
     etat: {
-      suivre: "Respecter une consigne peut traduire un accord, la prudence ou la crainte d’une sanction. Ces motifs ne sont pas équivalents.",
+      suivre: "Ne pas rejoindre la manifestation peut venir d’un accord avec la décision, de la prudence ou de la crainte des conséquences. Ces motifs ne sont pas équivalents.",
       discuter: "Chercher des explications peut être une façon de juger la décision et sa légitimité avant d’agir.",
       refuser: "Manifester est une forme de contestation collective ; les personnes présentes peuvent avoir des raisons très différentes."
     },
