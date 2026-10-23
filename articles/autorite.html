@@ -21,7 +21,7 @@
   <meta name="twitter:image" content="https://thot-culture.github.io/Thot/assets/images/autorite-triptyque.webp">
   <meta name="twitter:image:alt" content="Illustration en trois scènes autour des autorités familiale, politique et scolaire.">
   <link rel="stylesheet" href="../assets/article.css?v=lecture-1">
-  <link rel="stylesheet" href="../assets/autorite.css?v=audit-1">
+  <link rel="stylesheet" href="../assets/autorite.css?v=decode-1">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -67,6 +67,58 @@
         <p class="ouverture">Une règle donnée par un parent, une décision publique contestée, une consigne de la direction d’un lycée : face à une autorité, on peut obéir, demander des explications ou refuser. Et une même personne peut faire les trois selon le contexte. La psychologie sociale aide à comprendre ces écarts, à condition de ne pas transformer les gens en « soumis » ou en « rebelles ».</p>
         <p class="objectif-lecture"><strong>La question à garder en tête :</strong> qu’est-ce qui fait qu’une autorité nous paraît légitime — ou, au contraire, contestable&nbsp;?</p>
         <div class="encadre"><strong>La réponse en bref</strong><p>Plusieurs éléments peuvent peser sur notre réaction : la confiance envers l’autorité, le sentiment que la règle est juste, la relation avec la personne qui la donne, les risques d’un refus et le soutien du groupe. Aucun de ces éléments ne suffit, à lui seul, à prédire ce que fera une personne.</p></div>
+
+        <section class="authorite-game decode-pouvoir" id="decode-pouvoir" aria-labelledby="decode-pouvoir-title" aria-describedby="decode-consigne">
+          <p class="authorite-game__kicker">THOT · Un mini-jeu en une minute</p>
+          <h2 id="decode-pouvoir-title">Décode le pouvoir</h2>
+          <p class="authorite-game__intro" id="decode-consigne">Dans chaque scène inventée, quel indice donne le plus de poids à l’autorité ? Choisis le ressort le plus mis en avant, puis passe à la situation suivante. Au clavier, utilise Tab, puis Entrée ou Espace.</p>
+          <p class="decode-note">Plusieurs facteurs peuvent agir ensemble et des réactions différentes sont possibles. On apprend à repérer des mécanismes, sans juger les personnes : aucun score ni profil à la clé.</p>
+          <p class="decode-progress" id="decode-progress">Trois situations à explorer.</p>
+          <section class="decode-case" data-decode-case="parents" aria-labelledby="decode-parents-title">
+            <h3 id="decode-parents-title" tabindex="-1">1 · Les parents</h3>
+            <p id="decode-parents-scene">Un parent répare souvent des vélos. Alex suit son conseil pour régler les freins : « Pour ce geste, je me fie à son savoir-faire. »</p>
+            <div class="decode-choices" role="group" aria-labelledby="decode-parents-title" aria-describedby="decode-parents-scene">
+              <button class="decode-option" type="button" data-decode-option="expertise" aria-pressed="false" disabled>L’expertise</button>
+              <button class="decode-option" type="button" data-decode-option="statut" aria-pressed="false" disabled>Le statut de la personne</button>
+              <button class="decode-option" type="button" data-decode-option="legitimite" aria-pressed="false" disabled>La légitimité de la règle</button>
+              <button class="decode-option" type="button" data-decode-option="sanction" aria-pressed="false" disabled>La crainte d’une sanction</button>
+            </div>
+          </section>
+          <section class="decode-case" data-decode-case="etat" aria-labelledby="decode-etat-title">
+            <h3 id="decode-etat-title" tabindex="-1">2 · L’État</h3>
+            <p id="decode-etat-scene">Dans un pays imaginaire, Sam respecte une règle publique : « Même si elle me gêne, je la trouve justifiée et appliquée équitablement. C’est ce qui me convainc. »</p>
+            <div class="decode-choices" role="group" aria-labelledby="decode-etat-title" aria-describedby="decode-etat-scene">
+              <button class="decode-option" type="button" data-decode-option="expertise" aria-pressed="false" disabled>L’expertise</button>
+              <button class="decode-option" type="button" data-decode-option="statut" aria-pressed="false" disabled>Le statut de la personne</button>
+              <button class="decode-option" type="button" data-decode-option="legitimite" aria-pressed="false" disabled>La légitimité de la règle</button>
+              <button class="decode-option" type="button" data-decode-option="sanction" aria-pressed="false" disabled>La crainte d’une sanction</button>
+            </div>
+          </section>
+          <section class="decode-case" data-decode-case="direction" aria-labelledby="decode-direction-title">
+            <h3 id="decode-direction-title" tabindex="-1">3 · La direction d’établissement</h3>
+            <p id="decode-direction-scene">La direction du lycée imaginaire des Nuages annonce une retenue si le matériel emprunté n’est pas rendu. Lou le rapporte : « Ce qui me décide surtout, c’est la retenue que je veux éviter. »</p>
+            <div class="decode-choices" role="group" aria-labelledby="decode-direction-title" aria-describedby="decode-direction-scene">
+              <button class="decode-option" type="button" data-decode-option="expertise" aria-pressed="false" disabled>L’expertise</button>
+              <button class="decode-option" type="button" data-decode-option="statut" aria-pressed="false" disabled>Le statut de la personne</button>
+              <button class="decode-option" type="button" data-decode-option="legitimite" aria-pressed="false" disabled>La légitimité de la règle</button>
+              <button class="decode-option" type="button" data-decode-option="sanction" aria-pressed="false" disabled>La crainte d’une sanction</button>
+            </div>
+          </section>
+          <p class="decode-feedback" id="decode-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
+          <div class="decode-controls" id="decode-controls" hidden>
+            <button class="decode-next" type="button" id="decode-next" disabled>Situation suivante</button>
+            <button type="button" id="decode-reset" disabled>Recommencer le mini-jeu</button>
+          </div>
+          <details class="decode-fallback" id="decode-fallback">
+            <summary>Lire les pistes de réflexion</summary>
+            <ol>
+              <li><strong>Les parents — l’expertise :</strong> Alex cite le savoir-faire. Le lien familial et la confiance peuvent aussi compter.</li>
+              <li><strong>L’État — la légitimité de la règle :</strong> Sam dit la trouver justifiée et équitable. Cela décrit son point de vue, pas une règle universelle.</li>
+              <li><strong>La direction — la crainte d’une sanction :</strong> Lou cite la retenue à éviter. On repère ce motif sans juger la personne ni la règle.</li>
+            </ol>
+            <p>Le statut désigne la position ou la fonction d’une personne. Il peut aussi peser, même si ce n’est pas le ressort le plus explicite dans ces trois scènes. Dans la vie, ces facteurs peuvent se combiner.</p>
+          </details>
+        </section>
 
         <figure class="thot-illustration autorite-hero">
           <img src="../assets/images/autorite-triptyque.webp" alt="Illustration en trois scènes : un parent et un adolescent discutent à la maison ; des parents et des jeunes participent à une manifestation ; une responsable d’établissement échange avec des élèves." width="1200" height="800" fetchpriority="high">
@@ -204,6 +256,7 @@
   </main>
   <footer class="pied"><div class="largeur"><b>THOT</b><span>La curiosité n’a pas de limites.</span><a href="../notre-methode.html">Notre méthode</a></div></footer>
   <script src="../assets/autorite-activity.js?v=audit-1" defer></script>
+  <script src="../assets/autorite-decode.js?v=decode-1" defer></script>
   <script>
     const contenuALire = document.querySelector("#texte-article").cloneNode(true);
     contenuALire.querySelectorAll(".sources, .thot-illustration-credits, .authorite-game").forEach(element => element.remove());

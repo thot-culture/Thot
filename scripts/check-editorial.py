@@ -3,6 +3,9 @@
 
 Nécessite l'historique Git local (fourni dans le bundle de livraison).
 Le message technique de chargement ajouté au jeu est exclu de la comparaison.
+Dans l’article Autorité, le nouveau module « Décode le pouvoir » est également
+exclu : son ajout et la conservation exacte de l’article publié sont contrôlés
+séparément par scripts/test-autorite-decode.mjs.
 """
 import argparse
 from html.parser import HTMLParser
@@ -16,8 +19,9 @@ class Editorial(HTMLParser):
     VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input",
             "link", "meta", "param", "source", "track", "wbr"}
 
-    def __init__(self, html):
+    def __init__(self, html, ignored_ids=("quiz-load-status",)):
         super().__init__()
+        self.ignored_ids = set(ignored_ids)
         self.body = False
         self.stack = []
         self.words = []
@@ -33,7 +37,7 @@ class Editorial(HTMLParser):
             return
         blocked = ((self.stack[-1][1] if self.stack else False)
                    or tag in {"script", "style"}
-                   or attrs.get("id") == "quiz-load-status")
+                   or attrs.get("id") in self.ignored_ids)
         if tag not in self.VOID:
             self.stack.append((tag, blocked))
         if not blocked and tag == "a":
@@ -75,7 +79,10 @@ pages = [Path("quiz-autrices.html"), *[p.relative_to(root) for p in sorted((root
 for path in pages:
     before_html = original(path).decode()
     after_html = (root / path).read_text()
-    before, after = Editorial(before_html), Editorial(after_html)
+    ignored_ids = {"quiz-load-status"}
+    if path == Path("articles/autorite.html"):
+        ignored_ids.add("decode-pouvoir")
+    before, after = Editorial(before_html), Editorial(after_html, ignored_ids)
     require(before.words == after.words, f"texte éditorial modifié dans {path}")
     require(before.links == after.links, f"lien éditorial modifié dans {path}")
     require(before.images == after.images, f"texte alternatif modifié dans {path}")
