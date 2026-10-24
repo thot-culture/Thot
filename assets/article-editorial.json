@@ -1,0 +1,449 @@
+{
+  "version": 1,
+  "base_url": "https://thot-culture.github.io/Thot/",
+  "editorial_updated": "2026-10-24",
+  "editorial_scope": "Ajout des repères scientifiques et qualification des sources.",
+  "publication_basis": "Dates initiales reprises des mentions éditoriales et des données structurées présentes dans la version publiée 37f17ee ; aucune date déduite d’une modification de code.",
+  "articles": [
+    {
+      "slug": "autorite",
+      "published": "2026-10-23",
+      "previous_modified": "2026-10-23",
+      "social": {
+        "title": "Face à l’autorité, pourquoi réagit-on différemment ?",
+        "description": "Parents, État, direction scolaire : repérer les mécanismes de l’autorité, leurs interprétations et les limites des études.",
+        "image": "assets/social-cards/autorite.png",
+        "alt": "THOT — Face à l’autorité, pourquoi réagit-on différemment ? Trois trajectoires géométriques sous un même cercle."
+      },
+      "known": [
+        {
+          "text": "Chez 703 adolescents chiliens, l’accord avec les règles et la légitimité accordée aux parents étaient liés à l’obéissance selon le sujet abordé. Une association située, pas une loi pour toutes les familles.",
+          "refs": [
+            2
+          ]
+        },
+        {
+          "text": "Dans le protocole de Milgram publié en 1963, 26 participants sur 40 sont allés jusqu’au dernier niveau de l’appareil. Ce résultat décrit une expérience précise.",
+          "refs": [
+            10
+          ]
+        }
+      ],
+      "discussion_title": "Ce qui fait débat",
+      "discussion_note": "Une discussion sur l’interprétation des résultats, pas un jugement sur les personnes.",
+      "discussion": [
+        {
+          "text": "À la lecture en termes de soumission, Haslam et Reicher opposent une analyse centrée sur l’identification à la cause de l’expérimentateur. Leur synthèse défend cette interprétation ; elle ne démontre pas un motif unique chez tous les participants.",
+          "refs": [
+            11
+          ]
+        }
+      ],
+      "sources": {
+        "ref1": {
+          "kind": "complement",
+          "label": "Ressource complémentaire · information administrative"
+        },
+        "ref2": {
+          "kind": "primary",
+          "label": "Source primaire · étude empirique"
+        },
+        "ref3": {
+          "kind": "primary",
+          "label": "Source primaire · enquêtes originales"
+        },
+        "ref4": {
+          "kind": "primary",
+          "label": "Source primaire · communiqué d’un acteur"
+        },
+        "ref5": {
+          "kind": "complement",
+          "label": "Ressource complémentaire · presse"
+        },
+        "ref6": {
+          "kind": "primary",
+          "label": "Source primaire · texte juridique"
+        },
+        "ref7": {
+          "kind": "primary",
+          "label": "Source primaire · texte juridique"
+        },
+        "ref8": {
+          "kind": "complement",
+          "label": "Ressource complémentaire · fiche institutionnelle"
+        },
+        "ref9": {
+          "kind": "complement",
+          "label": "Ressource complémentaire · reportage"
+        },
+        "ref10": {
+          "kind": "primary",
+          "label": "Source primaire · expérience"
+        },
+        "ref11": {
+          "kind": "secondary",
+          "label": "Source secondaire · synthèse de recherche"
+        },
+        "ref12": {
+          "kind": "primary",
+          "label": "Source primaire · réplication partielle"
+        },
+        "ref13": {
+          "kind": "complement",
+          "label": "Ressource complémentaire · présentation de recherche"
+        }
+      },
+      "editorial_updated": "2026-10-24",
+      "editorial_scope": "Ajout des repères scientifiques et qualification des sources."
+    },
+    {
+      "slug": "autrices-pseudonymes",
+      "published": "2026-10-22",
+      "previous_modified": "2026-10-22",
+      "social": {
+        "title": "Autrices, pourquoi un nom d’homme ?",
+        "description": "Brontë, George Eliot, George Sand : des signatures documentées, des raisons à distinguer et des sources à lire avec prudence.",
+        "image": "assets/social-cards/autrices-pseudonymes.png",
+        "alt": "THOT — Autrices, pourquoi un nom d’homme ? Deux lettres A sur des feuillets géométriques superposés."
+      },
+      "known": [
+        {
+          "text": "Charlotte Brontë explique rétrospectivement le choix des signatures Currer, Ellis et Acton Bell : éviter la publicité personnelle et les préjugés visant les autrices. Elle décrit ces prénoms comme ambigus.",
+          "refs": [
+            1
+          ]
+        }
+      ],
+      "discussion_title": "Ce qui reste incertain",
+      "discussion_note": "Aucune controverse précise entre chercheurs n’est documentée ici : les limites concernent les sources et les intentions.",
+      "discussion": [
+        {
+          "text": "Jane Austen’s House indique que la raison de l’anonymat d’Austen n’est pas connue avec certitude. Une mention sur une page de titre établit une manière de signer, pas à elle seule une motivation.",
+          "refs": [
+            5
+          ]
+        },
+        {
+          "text": "Le témoignage de Charlotte éclaire son cas et celui de ses sœurs. Il ne suffit pas à expliquer le choix de toutes les autrices.",
+          "refs": [
+            1
+          ]
+        }
+      ],
+      "sources": {
+        "ref1": {
+          "kind": "primary",
+          "label": "Source primaire · témoignage rétrospectif"
+        },
+        "ref2": {
+          "kind": "complement",
+          "label": "Ressource complémentaire · notice muséale"
+        },
+        "ref3": {
+          "kind": "complement",
+          "label": "Ressource complémentaire · notice biographique"
+        },
+        "ref4": {
+          "kind": "complement",
+          "label": "Ressource complémentaire · notice d’autorité"
+        },
+        "ref5": {
+          "kind": "complement",
+          "label": "Ressource complémentaire · ressources patrimoniales"
+        },
+        "ref6": {
+          "kind": "secondary",
+          "label": "Source secondaire · étude historique"
+        },
+        "ref7": {
+          "kind": "complement",
+          "label": "Ressource complémentaire · notice de collection"
+        },
+        "ref8": {
+          "kind": "complement",
+          "label": "Ressource complémentaire · repères muséaux"
+        },
+        "ref9": {
+          "kind": "complement",
+          "label": "Ressource complémentaire · bibliographie de lecture"
+        },
+        "ref10": {
+          "kind": "complement",
+          "label": "Ressource complémentaire · notice bibliographique"
+        },
+        "ref11": {
+          "kind": "complement",
+          "label": "Ressource complémentaire · notice patrimoniale"
+        },
+        "ref12": {
+          "kind": "complement",
+          "label": "Ressource complémentaire · présentation d’une annonce et notices"
+        },
+        "ref13": {
+          "kind": "complement",
+          "label": "Ressource complémentaire · dossier pédagogique"
+        },
+        "ref14": {
+          "kind": "complement",
+          "label": "Ressource complémentaire · biographie institutionnelle"
+        },
+        "ref15": {
+          "kind": "secondary",
+          "label": "Source secondaire · synthèse universitaire"
+        },
+        "ref16": {
+          "kind": "secondary",
+          "label": "Source secondaire · ouvrage universitaire"
+        }
+      },
+      "editorial_updated": "2026-10-24",
+      "editorial_scope": "Ajout des repères scientifiques et qualification des sources."
+    },
+    {
+      "slug": "pieuvres-couleur",
+      "published": "2026-10-22",
+      "previous_modified": "2026-10-22",
+      "social": {
+        "title": "Comment les pieuvres changent de couleur",
+        "description": "Pigments, muscles et signaux nerveux : comprendre les changements de couleur des pieuvres et ce que les expériences permettent de conclure.",
+        "image": "assets/social-cards/pieuvres-couleur.png",
+        "alt": "THOT — Comment les pieuvres changent de couleur. Un motif circulaire évoque les cellules colorées de leur peau."
+      },
+      "known": [
+        {
+          "text": "Les chromatophores sont des organes neuromusculaires : des muscles étalent un sac contenant du pigment ; le relâchement permet sa rétraction. Le système nerveux coordonne les motifs.",
+          "refs": [
+            1
+          ]
+        },
+        {
+          "text": "Chez Octopus bimaculoides, une expérience a observé une expansion des chromatophores sous la lumière dans des fragments de peau isolés.",
+          "refs": [
+            2
+          ]
+        }
+      ],
+      "discussion_title": "Ce qui reste à comprendre",
+      "discussion_note": "Les références citées ne documentent pas ici deux thèses scientifiques opposées.",
+      "discussion": [
+        {
+          "text": "L’expérience sur la peau isolée suggère une sensibilité locale à la lumière. Son rôle dans le camouflage d’un animal entier reste à préciser : ce résultat ne prouve pas que la peau voit comme un œil, ni que toutes les espèces réagissent de la même façon.",
+          "refs": [
+            2
+          ]
+        }
+      ],
+      "sources": {
+        "ref1": {
+          "kind": "secondary",
+          "label": "Source secondaire · revue scientifique"
+        },
+        "ref2": {
+          "kind": "primary",
+          "label": "Source primaire · expérience"
+        },
+        "ref3": {
+          "kind": "secondary",
+          "label": "Source secondaire · synthèse scientifique"
+        },
+        "ref4": {
+          "kind": "secondary",
+          "label": "Source secondaire · revue scientifique"
+        },
+        "ref5": {
+          "kind": "primary",
+          "label": "Source primaire · étude anatomique"
+        }
+      },
+      "open_documents": [
+        {
+          "title": "Étude de Ramirez et Oakley : texte intégral en accès libre (PMC)",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4448664/",
+          "ref": "ref2"
+        }
+      ],
+      "editorial_updated": "2026-10-24",
+      "editorial_scope": "Ajout des repères scientifiques et qualification des sources."
+    },
+    {
+      "slug": "puissance-etats-unis",
+      "published": "2026-10-21",
+      "previous_modified": "2026-10-21",
+      "social": {
+        "title": "Les limites de la puissance américaine",
+        "description": "Avoir des moyens suffit-il à obtenir des résultats ? Des cas concrets et une discussion historique pour comprendre les limites de la puissance.",
+        "image": "assets/social-cards/puissance-etats-unis.png",
+        "alt": "THOT — Les limites de la puissance américaine. Un globe géométrique relié à plusieurs points."
+      },
+      "known": [
+        {
+          "text": "La Charte des Nations unies affirme l’égalité souveraine de ses membres. C’est un principe juridique ; il ne signifie pas une égalité de moyens militaires ou économiques.",
+          "refs": [
+            7
+          ]
+        }
+      ],
+      "discussion_title": "Ce qui fait débat",
+      "discussion_note": "Une discussion historiographique sur la manière de raconter la souveraineté.",
+      "discussion": [
+        {
+          "text": "Osiander critique le récit qui ferait des traités de 1648 l’acte de naissance, à eux seuls, du système moderne d’États souverains. Le débat porte sur cette interprétation historique, pas sur l’existence des traités.",
+          "refs": [
+            8
+          ]
+        }
+      ],
+      "sources": {
+        "ref1": {
+          "kind": "secondary",
+          "label": "Source secondaire · glossaire universitaire"
+        },
+        "ref2": {
+          "kind": "secondary",
+          "label": "Source secondaire · glossaire universitaire"
+        },
+        "ref3": {
+          "kind": "secondary",
+          "label": "Source secondaire · ouvrage, accès par notice"
+        },
+        "ref4": {
+          "kind": "secondary",
+          "label": "Source secondaire · ouvrage, présentation universitaire"
+        },
+        "ref5": {
+          "kind": "secondary",
+          "label": "Source secondaire · glossaire universitaire"
+        },
+        "ref6": {
+          "kind": "secondary",
+          "label": "Source secondaire · travaux de recherche"
+        },
+        "ref7": {
+          "kind": "primary",
+          "label": "Source primaire · texte juridique"
+        },
+        "ref8": {
+          "kind": "secondary",
+          "label": "Source secondaire · analyse historiographique"
+        },
+        "ref9": {
+          "kind": "primary",
+          "label": "Source primaire · rapport institutionnel d’enquête"
+        },
+        "ref10": {
+          "kind": "primary",
+          "label": "Source primaire · rapport institutionnel"
+        },
+        "ref11": {
+          "kind": "primary",
+          "label": "Source primaire · données institutionnelles"
+        },
+        "ref12": {
+          "kind": "complement",
+          "label": "Ressource complémentaire · dépêche de presse"
+        },
+        "ref13": {
+          "kind": "complement",
+          "label": "Ressource complémentaire · dépêche de presse"
+        },
+        "ref14": {
+          "kind": "primary",
+          "label": "Source primaire · déclaration militaire"
+        },
+        "ref15": {
+          "kind": "primary",
+          "label": "Source primaire · compte rendu institutionnel"
+        },
+        "ref16": {
+          "kind": "primary",
+          "label": "Source primaire · rapport et présentation institutionnels"
+        },
+        "ref17": {
+          "kind": "primary",
+          "label": "Source primaire · données institutionnelles"
+        },
+        "ref18": {
+          "kind": "primary",
+          "label": "Source primaire · déclaration diplomatique"
+        }
+      },
+      "editorial_updated": "2026-10-24",
+      "editorial_scope": "Ajout des repères scientifiques et qualification des sources."
+    },
+    {
+      "slug": "roubaix-1917",
+      "published": "2026-10-20",
+      "previous_modified": "2026-10-21",
+      "social": {
+        "title": "Roubaix, 1917 · Vivre sous l’occupation",
+        "description": "Affiches, consignes et vie quotidienne : explorer Roubaix sous occupation en distinguant les documents historiques et leurs limites.",
+        "image": "assets/social-cards/roubaix-1917.png",
+        "alt": "THOT — Roubaix, 1917 : vivre sous l’occupation. La date 1917 se détache sur une trame urbaine abstraite."
+      },
+      "known": [
+        {
+          "text": "La notice de l’affiche « Prescriptions concernant la récolte de 1917 » décrit la consignation de la récolte, des prix fixés et des sanctions. Elle identifie un document émanant de l’autorité occupante.",
+          "refs": [
+            6
+          ]
+        }
+      ],
+      "discussion_title": "Ce que les documents ne disent pas",
+      "discussion_note": "Aucune controverse historiographique précise n’est documentée dans les références réunies ici.",
+      "discussion": [
+        {
+          "text": "Une affiche prescrit des conduites ; elle ne mesure pas à elle seule leur application ni les réactions de chaque habitant. Une notice décrit un document, sans en remplacer la lecture.",
+          "refs": [
+            6
+          ]
+        },
+        {
+          "text": "Le témoignage de Barenne n’a pas été dépouillé pour cet article. Sa notice de catalogue ne permet donc pas d’en présenter le contenu comme s’il avait été lu.",
+          "refs": [
+            9
+          ]
+        }
+      ],
+      "sources": {
+        "ref1": {
+          "kind": "complement",
+          "label": "Ressource complémentaire · notice de fonds"
+        },
+        "ref2": {
+          "kind": "primary",
+          "label": "Source primaire · archive citée, notice indisponible"
+        },
+        "ref3": {
+          "kind": "primary",
+          "label": "Source primaire · archive citée, notice indisponible"
+        },
+        "ref4": {
+          "kind": "primary",
+          "label": "Source primaire · archive citée, notice indisponible"
+        },
+        "ref5": {
+          "kind": "complement",
+          "label": "Ressource complémentaire · instrument de recherche"
+        },
+        "ref6": {
+          "kind": "mixed",
+          "label": "Document et notice · affiche décrite par sa notice"
+        },
+        "ref7": {
+          "kind": "primary",
+          "label": "Source primaire · archive citée, notice indisponible"
+        },
+        "ref8": {
+          "kind": "primary",
+          "label": "Source primaire · affiche citée, notice indisponible"
+        },
+        "ref9": {
+          "kind": "mixed",
+          "label": "Document et notice · témoignage, accès par catalogue"
+        }
+      },
+      "editorial_updated": "2026-10-24",
+      "editorial_scope": "Ajout des repères scientifiques et qualification des sources."
+    }
+  ]
+}

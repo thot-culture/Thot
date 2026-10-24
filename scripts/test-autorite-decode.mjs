@@ -260,27 +260,26 @@ for (const mutation of incomplete) {
   assert.ok(partial.cases.every(scene => buttonsOf(scene).every(button => button.disabled)), 'Une activité incomplète garde ses choix désactivés');
 }
 
-// Vérifier le contenu existant, hors les trois ajouts autorisés et leur indentation.
-function withoutGame(markup) {
+// Conserver uniquement le bloc du jeu ; le reste de l’article est protégé par
+// scripts/check-editorial.py, indépendamment des métadonnées sociales ajoutées.
+function gameBlock(markup) {
   const opening = markup.match(/<section\b[^>]*\bid="decode-pouvoir"[^>]*>/);
-  if (opening) {
-    let depth = 1, end;
-    const rest = markup.slice(opening.index + opening[0].length);
-    for (const match of rest.matchAll(/<\/?section\b[^>]*>/g)) {
-      depth += match[0].startsWith('</') ? -1 : 1;
-      if (!depth) { end = opening.index + opening[0].length + match.index + match[0].length; break; }
-    }
-    assert.ok(end, 'La nouvelle section est correctement fermée');
-    markup = markup.slice(0, opening.index) + markup.slice(end);
+  assert.ok(opening, 'La section #decode-pouvoir existe');
+  let depth = 1, end;
+  const rest = markup.slice(opening.index + opening[0].length);
+  for (const match of rest.matchAll(/<\/?section\b[^>]*>/g)) {
+    depth += match[0].startsWith('</') ? -1 : 1;
+    if (!depth) { end = opening.index + opening[0].length + match.index + match[0].length; break; }
   }
-  return markup.replace(/<script\b[^>]*src="\.\.\/assets\/autorite-decode\.js(?:\?[^"<>]*)?"[^>]*>\s*<\/script>/g, '')
-    .replace(/(href="\.\.\/assets\/autorite\.css)\?[^"<>]*/g, '$1')
+  assert.ok(end, 'La section #decode-pouvoir est correctement fermée');
+  return markup.slice(opening.index, end)
     .split('\n').map(line => line.trim()).filter(Boolean).join('\n');
 }
-// Empreinte du HTML de `git show 039ccd8:articles/autorite.html`, normalisé
-// par withoutGame(). Aucun sous-processus ni dépôt Git requis pour lancer le test.
-const originalDigest = '282b8400d6efe3c26b964ab01d804cb3cebe8cfe4db1e9fc44c97250bb374851';
-assert.equal(createHash('sha256').update(withoutGame(html)).digest('hex'), originalDigest, 'Article, ancien jeu, sources et crédits de 039ccd8 conservés');
+// Empreinte du SEUL bloc #decode-pouvoir de `git show 37f17ee:articles/autorite.html`,
+// avec uniquement indentation et lignes vides normalisées par gameBlock().
+// Aucun sous-processus ni dépôt Git requis pour lancer ce test.
+const originalDigest = '45e4c64e7405b511ded05caabdc62bfa5fbc75286884dcb23b9e18640c517cb9';
+assert.equal(createHash('sha256').update(gameBlock(html)).digest('hex'), originalDigest, 'Bloc #decode-pouvoir de 37f17ee conservé');
 console.log('PASS : 12 réponses distinctes, 3 étapes, réponses révisables, progression/focus, reset à chaque étape, garde-fous d’initialisation et isolation de l’ancien jeu.');
-console.log('PASS : article conservé depuis 039ccd8 hors section ajoutée, nouveau script et révision CSS autorisés.');
+console.log('PASS : bloc #decode-pouvoir conservé depuis 37f17ee ; reste de l’article couvert par check-editorial.py.');
 console.log('DOM simulé : rendu mobile/ordinateur, clavier réel et lecteurs d’écran non vérifiés.');

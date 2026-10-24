@@ -1,0 +1,33 @@
+/* THOT — Repères statiques et partage amélioré progressivement. */
+.article-editorial-dates{max-width:780px;margin:14px 0 0;font-size:12.5px;line-height:1.7;color:#E1E7ED;overflow-wrap:anywhere}
+.article-editorial-dates time{white-space:nowrap}
+.article-share{margin-top:20px;max-width:780px;display:flex;align-items:center;flex-wrap:wrap;gap:8px 16px;min-width:0}
+.article-share [hidden]{display:none!important}
+.article-share__link{display:inline-flex;align-items:center;min-height:44px;color:#EAD1A6;font-size:13px;text-underline-offset:4px}
+.article-share__actions{display:flex;flex-wrap:wrap;gap:8px;min-width:0}
+.article-share button{min-height:44px;max-width:100%;padding:10px 15px;border:1px solid #EAD1A6;border-radius:9px;background:#F8F6F1;color:#17243A;font:650 13px/1.4 "Segoe UI",Arial,sans-serif;cursor:pointer;overflow-wrap:anywhere}
+.article-share button:hover:not(:disabled){background:#EAD1A6}
+.article-share button:disabled{opacity:.7;cursor:wait}
+.article-share button:focus-visible,.article-share__link:focus-visible,.article-share__manual:focus{outline:3px solid #EAD1A6;outline-offset:4px}
+.article-share .article-share__status{flex-basis:100%;min-height:1.65em;margin:0;color:#E1E7ED;font-size:13px;line-height:1.65}
+.article-share__manual{box-sizing:border-box;flex-basis:100%;width:100%;min-width:0;max-width:100%;min-height:44px;padding:10px;border:1px solid #EAD1A6;border-radius:8px;font:14px/1.5 "Segoe UI",Arial,sans-serif;color:#17243A;background:#FFFEFA}
+.science-reperes{margin:42px 0;padding:clamp(18px,3vw,28px);border:1px solid #D7D3C8;border-top:4px solid #927038;border-radius:14px;background:#FFFEFA}
+.science-reperes .science-reperes__kicker{margin:0 0 9px;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#715026}
+.science-reperes h2{margin:0 0 24px;font-size:clamp(25px,3vw,30px)}
+.science-reperes__columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.science-reperes__columns>section{min-width:0}
+.science-reperes h3{margin:0 0 12px;font:750 13px/1.5 "Segoe UI",Arial,sans-serif;color:#245D63}
+.science-reperes ul{margin:0;padding-left:19px}
+.science-reperes li{margin:0 0 13px;font-size:14.5px;line-height:1.75;overflow-wrap:anywhere}
+.science-reperes li:last-child{margin-bottom:0}
+.science-reperes .science-reperes__limite{margin:0 0 13px;font-size:13px;line-height:1.65;color:#566171}
+.sources .sources-guide{padding:15px 17px;margin:18px 0 24px;border-radius:10px;background:#ECF0F0;font-size:13px;line-height:1.75;color:#294358}
+.sources-guide__access{display:inline-block;margin-top:10px}
+.sources>ol>li{padding:15px 0 17px;border-bottom:1px solid #E8E5DC}
+.sources .source-type{display:block;width:fit-content;max-width:100%;margin:0 0 7px;padding:3px 8px;border-radius:5px;background:#ECF0F0;color:#294358;font-size:11.5px;line-height:1.6;font-weight:700;overflow-wrap:anywhere}
+.sources .source-type[data-source-kind="primary"]{background:#F1E9D8;color:#715026}
+.sources .source-type[data-source-kind="secondary"]{background:#E9EFF0;color:#24536D}
+.sources .source-type[data-source-kind="mixed"]{background:#EEEAF3;color:#524363}
+@media(max-width:640px){.science-reperes__columns{grid-template-columns:1fr;gap:24px}.science-reperes__columns>section+section{padding-top:22px;border-top:1px solid #E8E5DC}}
+@media(max-width:390px){.article-share{align-items:stretch}.article-share__actions{width:100%;flex-direction:column}.article-share button{width:100%;text-align:left}}
+@media print{.article-share{display:none}.article-editorial-dates{color:#17243A}.science-reperes{box-shadow:none;break-inside:avoid}.science-reperes__columns{display:block}.science-reperes__columns>section+section{margin-top:20px}}
