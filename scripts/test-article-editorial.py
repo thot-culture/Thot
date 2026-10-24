@@ -366,8 +366,9 @@ class EditorialTests(unittest.TestCase):
                             if "src" not in node.attrs and node.attrs.get("type") != "application/ld+json"]
                 self.assertEqual(inline(old), inline(doc), "Script inline d’origine modifié")
 
-    @unittest.skipUnless(False, "Contrôle optionnel des révisions activé avec --head")
     def test_no_unrelated_html_changed_between_revisions(self):
+        if not OPTIONS.head:
+            self.skipTest("Contrôle optionnel des révisions activé avec --head")
         changed = git("diff", "--name-only", OPTIONS.revision, OPTIONS.head, "--", "*.html").splitlines()
         expected = {f"articles/{slug}.html" for slug in SLUGS}
         self.assertFalse(set(changed) - expected, "Une page hors des cinq articles a été modifiée")
@@ -378,7 +379,4 @@ if __name__ == "__main__":
     parser.add_argument("--revision", default="37f17ee", help="Révision publiée servant de référence")
     parser.add_argument("--head", help="Révision finale à comparer pour contrôler le périmètre HTML")
     OPTIONS, unittest_args = parser.parse_known_args()
-    if OPTIONS.head:
-        test = EditorialTests.test_no_unrelated_html_changed_between_revisions
-        test.__unittest_skip__ = False
     unittest.main(argv=[__file__, *unittest_args], verbosity=2)
