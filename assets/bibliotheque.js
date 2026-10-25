@@ -49,7 +49,7 @@
     const query = url.searchParams.get('q');
     if (query !== null || !preserveSearch) search.value = query ?? '';
     const subject = url.searchParams.get('sujet');
-    category = categories.has(subject) ? subject : 'tous';
+    category = categories.has(subject) && records.some(record => record.category === subject) ? subject : 'tous';
   }
   function writeURL() {
     cancelURLWrite();

@@ -30,6 +30,7 @@
   <meta name="twitter:image:alt" content="THOT, le magazine des esprits curieux : histoire, géographie et sciences humaines.">
   <link rel="stylesheet" href="assets/bibliotheque.css">
   <link rel="stylesheet" href="assets/decouverte.css?v=1">
+  <link rel="stylesheet" href="assets/experience.css?v=1">
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -56,7 +57,7 @@
           <button type="button" data-filter="geographie" aria-pressed="false">Géographie et géopolitique</button>
           <button type="button" data-filter="sciences" aria-pressed="false">Sciences</button>
           <button type="button" data-filter="arts" aria-pressed="false">Littérature et arts</button>
-          <button type="button" data-filter="insolite" aria-pressed="false">Insolite</button>
+          <button type="button" data-filter="insolite" aria-pressed="false" hidden disabled>Insolite</button>
           <button type="button" data-filter="sciences-humaines" aria-pressed="false">Psychologie et société</button>
         </div>
       </div>
@@ -71,7 +72,7 @@
         <span class="discovery-stamp" aria-hidden="true">PSY</span>
       </div>
         <div class="discovery-card__copy">
-          <div class="discovery-meta"><span>Psychologie sociale · Sciences humaines</span><span class="reading-pill">8 min de lecture</span></div>
+          <div class="discovery-meta"><span>Psychologie sociale · Sciences humaines</span><span class="reading-pill">7 min de lecture</span></div>
           <h3 id="card-autorite">Pourquoi ne réagit-on pas tous pareil face à l’autorité ?</h3>
           <p>Parents, État, direction scolaire : comprendre les ressorts de l’obéissance, de la discussion et de la contestation.</p>
           <div class="discovery-card__bottom"><span>23 oct. 2026</span><span>Lire l’article <span aria-hidden="true">↗</span></span></div>
@@ -87,9 +88,9 @@
         <span class="discovery-stamp" aria-hidden="true">SCI</span>
       </div>
         <div class="discovery-card__copy">
-          <div class="discovery-meta"><span>Sciences · Biologie marine</span><span class="reading-pill">8 min de lecture</span></div>
+          <div class="discovery-meta"><span>Sciences · Biologie marine</span><span class="reading-pill">7 min de lecture</span></div>
           <h3 id="card-pieuvres-couleur">Comment les pieuvres changent-elles de couleur ?</h3>
-          <p>Chromatophores, muscles et signaux nerveux : comprendre le mécanisme derrière leurs changements de couleur.</p>
+          <p>Chromatophores, muscles et signaux nerveux : comprendre le mécanisme derrière leurs changements de couleur.</p><p class="discovery-affordance">Schéma à manipuler · muscles et pigments</p>
           <div class="discovery-card__bottom"><span>22 oct. 2026</span><span>Lire l’article <span aria-hidden="true">↗</span></span></div>
         </div>
       </a>
@@ -102,7 +103,7 @@
         <span class="discovery-stamp" aria-hidden="true">PLUME</span>
       </div>
         <div class="discovery-card__copy">
-          <div class="discovery-meta"><span>Littérature · Histoire des autrices</span><span class="reading-pill">9 min de lecture</span></div>
+          <div class="discovery-meta"><span>Littérature · Histoire des autrices</span><span class="reading-pill">7 min de lecture</span></div>
           <h3 id="card-autrices-pseudonymes">Pourquoi des autrices ont-elles publié sous un nom d’homme ?</h3>
           <p>Brontë, George Eliot, George Sand : trois parcours pour comprendre ce que peut cacher un nom de plume.</p>
           <div class="discovery-card__bottom"><span>22 oct. 2026</span><span>Lire l’article <span aria-hidden="true">↗</span></span></div>
@@ -117,9 +118,9 @@
         <span class="discovery-stamp" aria-hidden="true">GÉO</span>
       </div>
         <div class="discovery-card__copy">
-          <div class="discovery-meta"><span>Géographie · Géopolitique</span><span class="reading-pill">8 min de lecture</span></div>
+          <div class="discovery-meta"><span>Géographie · Géopolitique</span><span class="reading-pill">6 min de lecture</span></div>
           <h3 id="card-puissance-etats-unis">Pourquoi les États-Unis ne peuvent-ils pas tout imposer ?</h3>
-          <p>Afghanistan, Iran, Daech : pourquoi disposer de moyens considérables ne garantit-il pas le résultat attendu ?</p>
+          <p>Afghanistan, Iran, Daech : pourquoi disposer de moyens considérables ne garantit-il pas le résultat attendu ?</p><p class="discovery-affordance">Cas historiques à comparer · Afghanistan et Daech</p>
           <div class="discovery-card__bottom"><span>21 oct. 2026</span><span>Lire l’article <span aria-hidden="true">↗</span></span></div>
         </div>
       </a>
@@ -134,7 +135,7 @@
         <div class="discovery-card__copy">
           <div class="discovery-meta"><span>Histoire · Première Guerre mondiale</span><span class="reading-pill">9 min de lecture</span></div>
           <h3 id="card-roubaix-1917">Roubaix en 1917 : vivre sous l’occupation allemande</h3>
-          <p>Réquisitions, ravitaillement, contrôles : découvrir le quotidien d’une ville occupée à travers les documents d’époque.</p>
+          <p>Réquisitions, ravitaillement, contrôles : découvrir le quotidien d’une ville occupée à travers les documents d’époque.</p><p class="discovery-affordance">Document à explorer · affiche de 1917</p>
           <div class="discovery-card__bottom"><span>20 oct. 2026</span><span>Lire l’article <span aria-hidden="true">↗</span></span></div>
         </div>
       </a>
@@ -145,8 +146,9 @@
       <div class="catalogue-foot"><p>Les textes THOT associent des sources identifiables, des explications accessibles et, selon les sujets, de petits jeux facultatifs. Un espace quiz permet aussi de se tester.</p><a href="quiz.html#quiz-classique">Découvrir les quiz THOT ↗</a></div>
     </section>
   </main>
-  <footer><div class="wrap foot"><a href="index.html">THOT</a><span>La curiosité n'a pas de limites.</span><a href="notre-methode.html">Notre méthode</a><a href="index.html">Retour à l'accueil ↗</a></div></footer>
-  <script src="assets/bibliotheque.js?v=lecture-1" defer></script>
+  <footer><div class="wrap foot"><a href="index.html">THOT</a><span>La curiosité n'a pas de limites.</span><a href="notre-methode.html">Notre méthode</a><a href="index.html">Retour à l'accueil ↗</a></div><nav id="site-parcours" class="site-parcours" aria-label="Accès aux parcours THOT"><a href="index.html">Accueil</a><a href="bibliotheque.html">Bibliothèque</a><a href="quiz.html#quiz-classique">Quiz</a><a href="notre-methode.html">Notre méthode</a></nav></footer>
+  <script src="assets/bibliotheque.js?v=lecture-1&amp;release=fluidite-20261025" defer></script>
   <script src="assets/decouverte.js?v=1" defer></script>
+  <script src="assets/reading-times.js" defer></script>
 </body>
 </html>

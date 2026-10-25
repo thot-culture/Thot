@@ -14,7 +14,8 @@ ROOT = Path(__file__).resolve().parents[1]
 def local_file(article, value):
     if value.startswith(("https:", "http:", "data:", "#")):
         return None
-    target = (article.parent / value.split("?")[0]).resolve()
+    clean = value.split("?")[0]
+    target = ((ROOT / clean[len('/Thot/'):]) if clean.startswith('/Thot/') else (article.parent / clean)).resolve()
     return target if target.is_relative_to(ROOT) and target.is_file() else None
 
 
@@ -30,7 +31,12 @@ def markup(relative, javascript=True):
 
     def script(match):
         target = local_file(article, match[1])
-        return '<script>' + target.read_text() + '</script>' if target and javascript else ''
+        if not target or not javascript:
+            return ''
+        # Préserver la provenance du script lors de l’inlining pour les modules
+        # qui calculent leurs URL de médias à partir de currentScript.src.
+        source = 'https://thot.local/Thot/' + target.relative_to(ROOT).as_posix()
+        return '<script>Object.defineProperty(document.currentScript,"src",{value:' + repr(source) + '});\n' + target.read_text() + '</script>'
 
     html = re.sub(r'<script\b[^>]*src="([^"]+)"[^>]*>\s*</script>', script, html)
 

@@ -100,6 +100,8 @@
     });
     if (comparisonReady) {
       comparison.hidden = !paired;
+      const direct = document.querySelector('#comparateur-direct');
+      if (direct) direct.hidden = paired;
       referenceButton.disabled = !historical.includes(id);
       referenceButton.setAttribute('aria-pressed', String(Boolean(reference)));
       referenceButton.textContent = reference ? 'Quitter la comparaison'
@@ -118,6 +120,8 @@
       reference = reference ? null : current;
       afficherCas(current);
     });
+    const direct = document.querySelector('#comparateur-direct');
+    if (direct) direct.addEventListener('click', () => { reference = 'afghanistan'; afficherCas('daech'); });
     referenceControls.hidden = false;
   }
 

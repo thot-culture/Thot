@@ -27,6 +27,7 @@
         instruction.textContent='Maintenant, choisis l’autrice qui correspond à '+button.textContent+'.';
         status.textContent='Nom sélectionné : '+button.textContent+'.';
         if(event.detail===0)right.find(b=>!b.disabled)?.focus();
+        else right.find(b=>!b.disabled)?.scrollIntoView?.({block:'nearest',behavior:'auto'});
       });
     }
     for(const button of right){

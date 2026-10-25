@@ -76,16 +76,17 @@
 }
   </script>
   <link rel="stylesheet" href="../assets/article-editorial.css?v=science-partage-1">
+  <link rel="stylesheet" href="../assets/experience.css?v=1">
 </head>
 <body class="article-litterature">
   <a class="skip-link" href="#texte-article">Aller directement à l’article</a>
-  <header class="barre"><div class="largeur"><a class="marque" href="../index.html" aria-label="THOT, accueil">THOT</a><a class="retour" href="../bibliotheque.html">← Retour aux articles</a></div></header>
+  <header class="barre"><div class="largeur"><a class="marque" href="../index.html" aria-label="THOT, accueil">THOT</a><a class="retour" href="../bibliotheque.html">← Retour aux articles</a><nav id="site-lecture-nav" class="site-lecture-nav" aria-label="Navigation principale"><a href="../bibliotheque.html">Bibliothèque</a><a href="../quiz.html#quiz-classique">Quiz</a></nav></div></header>
   <main>
     <header class="entete"><div class="largeur">
       <div class="categorie">Littérature · Histoire des autrices</div>
       <h1>Pourquoi des autrices ont-elles publié sous un nom d’homme&nbsp;?</h1>
       <p class="accroche">Brontë, George Eliot, George Sand : trois parcours de signature, dont les raisons ne sont pas toutes également documentées.</p>
-      <div class="meta"><span>La rédaction THOT</span><span>Publié le <time datetime="2026-10-22">22 octobre 2026</time></span><span id="duree">Temps de lecture estimé</span></div>
+      <div class="meta"><span>La rédaction THOT</span><span>Publié le <time datetime="2026-10-22">22 octobre 2026</time></span><span id="duree">7 min de lecture environ</span></div>
 <!-- THOT:dates:start -->
       <p class="article-editorial-dates" id="article-editorial-dates">Dernière mise à jour éditoriale : <time datetime="2026-10-24">24 octobre 2026</time>. Ajout des repères scientifiques et qualification des sources.</p>
 <!-- THOT:dates:end -->
@@ -298,7 +299,7 @@
       </ol></nav></details></aside>
     </div>
   </main>
-  <footer class="pied"><div class="largeur"><b>THOT</b><span>La curiosité n’a pas de limites.</span><a href="../notre-methode.html">Notre méthode</a></div></footer>
+  <footer class="pied"><div class="largeur"><b>THOT</b><span>La curiosité n’a pas de limites.</span><a href="../notre-methode.html">Notre méthode</a></div><nav id="site-parcours" class="site-parcours" aria-label="Accès aux parcours THOT"><a href="../index.html">Accueil</a><a href="../bibliotheque.html">Bibliothèque</a><a href="../quiz.html#quiz-classique">Quiz</a><a href="../notre-methode.html">Notre méthode</a></nav></footer>
   <script>
     const contenuALire = document.querySelector("#texte-article").cloneNode(true);
     contenuALire.querySelectorAll(".sources, .pause-anachronisme, .related-reading").forEach(element => element.remove());
@@ -306,7 +307,7 @@
     const mots = compterMots(contenuALire.innerText);
     document.querySelector("#duree").textContent = Math.max(1, Math.ceil(mots / 210)) + " min de lecture environ";
   </script>
-  <script src="../assets/quiz-autrices.js?v=lecture-1" defer></script>
+  <script src="../assets/quiz-autrices.js?v=lecture-1&amp;release=fluidite-20261025" defer></script>
   <script>
   (() => {
     const choices = [...document.querySelectorAll(".pause-choice")];
@@ -330,5 +331,6 @@
 
   <script src="../assets/puissance-sommaire.js?v=lecture-1" defer></script>
   <script src="../assets/article-share.js?v=science-partage-1" defer></script>
+  <script src="../assets/reading-times.js" defer></script>
 </body>
 </html>

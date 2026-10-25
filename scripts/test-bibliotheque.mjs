@@ -214,12 +214,12 @@ if (!baseline) {
     assert.deepEqual(pressed(invalid), ['tous'], `Sujet non proposé ignoré : ${subject}`);
   }
   const noArticles = fixture('', -1, { href: baseURL + '?sujet=insolite' });
-  assert.deepEqual(noArticles.visible(), [], 'Une catégorie proposée sans article reste valide');
-  assert.deepEqual(pressed(noArticles), ['insolite']);
+  assert.equal(noArticles.visible().length, 5, 'Une ancienne catégorie vide retrouve le catalogue complet');
+  assert.deepEqual(pressed(noArticles), ['tous']);
   for (const button of f.filters) {
     const subject = button.dataset.filter;
     const page = fixture('', -1, { href: baseURL + '?sujet=' + subject });
-    assert.deepEqual(pressed(page), [subject], `Restauration du filtre réel : ${subject}`);
+    assert.deepEqual(pressed(page), [subject === 'insolite' ? 'tous' : subject], `Restauration du filtre réel, ou catalogue pour une catégorie vide : ${subject}`);
   }
 
   const duplicates = fixture('', -1, { href: baseURL + '?q=Roubaix&q=pieuvre&sujet=histoire&sujet=sciences&tag=a&tag=b#sources' });

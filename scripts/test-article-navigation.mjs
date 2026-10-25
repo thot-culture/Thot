@@ -130,6 +130,7 @@ assert.doesNotThrow(() => vm.runInNewContext(code, { document: { querySelector: 
 // Contrat de contenu : conserver les ancres et libellés des cinq sommaires.
 const articleMenus = [
   ['articles/puissance-etats-unis.html', 'Dans cet article', [
+    ['comparateur-puissance-titre', 'Comparer les cas historiques'],
     ['puissance', "Qu'est-ce que la puissance ?"],
     ['souverainete', 'La souveraineté westphalienne'],
     ['afghanistan', "Le cas de l'Afghanistan"],
@@ -139,6 +140,7 @@ const articleMenus = [
     ['sources', 'Sources et références']
   ]],
   ['articles/roubaix-1917.html', 'Dans cet article', [
+    ['lecture-affiche-laine', 'Explorer l’affiche sur la laine'],
     ['contexte', 'Une ville occupée'],
     ['explorer-roubaix', 'Frise interactive 1914–1918'],
     ['controle', 'Contrôler les habitants'],
@@ -150,6 +152,7 @@ const articleMenus = [
     ['sources', 'Sources et références']
   ]],
   ['articles/autorite.html', 'Explorer', [
+    ['decode-pouvoir', 'Décode le pouvoir'],
     ['reactions', 'Obéir ou être d’accord ?'],
     ['parents', 'Les parents'],
     ['etat', 'L’État'],
@@ -169,6 +172,7 @@ const articleMenus = [
     ['sources-title', 'Sources']
   ]],
   ['articles/pieuvres-couleur.html', 'Explorer', [
+    ['chromato-interactif-titre', 'Manipuler le chromatophore'],
     ['cellules', 'Sous la peau'],
     ['commande', 'Qui commande ?'],
     ['motifs', 'Motifs et camouflage'],

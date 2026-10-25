@@ -1,0 +1,96 @@
+/* Confort commun, sans remplacer les styles éditoriaux ou les états natifs. */
+[hidden]{display:none!important}
+:where(button,input,summary,a):focus-visible{outline:3px solid #927038;outline-offset:4px}
+:where(main,article,section,nav,figure,details){min-width:0}
+:where(button,input,summary){font:inherit}
+summary{cursor:pointer;min-height:44px}
+.site-parcours,.site-lecture-nav{display:flex;flex-wrap:wrap;gap:4px 20px;align-items:center}
+.site-parcours{width:min(1100px,calc(100% - 40px));margin:12px auto 0;border-top:1px solid #667582;padding-top:12px}
+.site-parcours a,.site-lecture-nav a{color:#F2DCAF;font-size:14px;min-height:44px;display:inline-flex;align-items:center}
+.barre .largeur{flex-wrap:wrap;gap:8px 20px}
+.barre .site-lecture-nav{margin-left:auto}
+.entete{padding-block:36px}
+.entete h1{margin-block:12px}
+.entete .meta{margin-top:16px}
+.entete .article-editorial-dates{margin-top:8px}
+.entete .article-share{margin-top:10px;gap:4px 12px}
+.article-share__status:empty{display:none}
+.article-share__actions{flex-direction:row!important;width:auto!important}
+.article-share__actions button{width:auto;min-height:44px}
+.activity-wayfinding{padding:14px 18px;border-left:3px solid #927038;background:#F1E9D8;font-size:14px}
+.discovery-affordance{color:#24536D;font-size:13px;font-weight:650;margin:10px 0}
+.comparateur-puissance{padding:20px;margin-block:28px}
+#comparateur-reference-commandes{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:12px 0}
+#comparateur-reference-aide{flex-basis:100%;font-size:13px;margin:0}
+#comparateur-direct{min-height:44px;border:1px solid #17243A;border-radius:9px;padding:10px 14px;background:#17243A;color:#FFFEFA;font:700 14px/1.4 "Segoe UI",sans-serif;cursor:pointer}
+#comparateur-reference{font-size:13px;padding:8px 12px}
+.comparateur-statut{margin-block:6px!important}
+.comparateur-limite{font-size:13px;margin-block:8px}
+.progression-details{margin-top:24px;border:1px solid #d6c8af;border-radius:12px;padding:12px 18px;background:#FFFEFA;color:#17243A}
+.progression-details>summary{font-weight:700;display:list-item;padding-block:8px}
+.daily-goals>summary{padding:10px;font-weight:700}
+.game-section{padding-top:20px}
+#jouer>.wrap>.section-header{margin-block:8px 18px}
+#jouer>.wrap>.section-header .kicker,#jouer>.wrap>.section-header .section-lead{display:none}
+#jouer>.wrap>.section-header h2{font-size:25px;margin:0}
+.game-intro .game-mark,.game-intro .quiz-promise{display:none}
+.game-intro{padding-block:24px}
+.game-intro h3{margin-block:14px}
+.quiz-univers{padding-block:30px}
+.chromato-interactif .chromato-reperes{margin-bottom:0}
+@media(max-width:710px){
+ .home-page .hero-inner{padding-block:30px;display:block}
+ .home-page .artifact{display:none}
+ .home-page .hero h1{font-size:clamp(38px,10vw,52px);line-height:1.08;margin:12px 0}
+ .home-page .hero h1 br{display:none}
+ .home-page .hero-description{font-size:16px;line-height:1.6;margin-bottom:18px}
+ .home-page .hero-sub{margin-top:18px;gap:6px 16px}
+ .home-page .editorial{padding-top:30px}
+ .home-page .hero-actions{gap:8px}
+ .home-page .surprise-link{flex-basis:100%;min-height:44px}
+ .entete{padding-block:26px!important}
+ .entete h1{font-size:clamp(32px,8vw,46px)!important}
+ .site-lecture-nav{gap:12px}
+ .barre .site-lecture-nav{flex-basis:100%;margin:0;border-top:1px solid #667582}
+ .chromato-interactif{padding:14px}
+ .chromato-interactif .chromato-svg{max-width:230px}
+ .chromato-interactif .chromato-modele{font-size:12px;line-height:1.5;padding:8px;margin-block:8px}
+ .chromato-interactif .chromato-consigne{font-size:14px;margin-bottom:4px}
+ .chromato-label{margin-top:4px}
+ .chromato-etat{margin-block:4px}
+ .quiz-grid{gap:12px;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .quiz-option{font-size:13px;padding:9px 7px;min-height:48px;overflow-wrap:anywhere}
+ .quiz-pseudonymes{padding:16px}
+ .quiz-instruction{font-size:13px;padding:10px;margin-bottom:10px}
+ .quiz-status{font-size:13px;padding:10px;background:#ECF0F0;border-radius:8px}
+ .authorite-game__intro,.decode-note{font-size:14px!important;line-height:1.6!important}
+ .quiz-page .section{padding-block:24px}
+ .game-body{padding:18px}
+ .quick-themes{gap:6px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition:none!important}}
+@media print{.site-parcours,.site-lecture-nav,#comparateur-direct{display:none}.progression-details>*{display:block}}
+
+@media(max-width:710px){
+ .home-page .hero::after{display:none}
+ .home-page .hero-actions .primary,.home-page .hero-actions .secondary{width:auto;flex:1 1 140px;font-size:14px;padding-inline:10px}
+ .home-page .hero-inner{padding-block:24px}
+ .home-page .hero-description{font-size:15px;line-height:1.55}
+ .home-page .latest-story{display:flex;flex-direction:column}
+ .home-page .latest-story__copy{order:-1}
+ .home-page .editorial-heading{margin-bottom:20px}
+ .home-page .home-search{margin-block:24px}
+ .quiz-pseudonymes .quiz-intro{font-size:14px;line-height:1.6;margin-bottom:12px}
+ .quiz-page .section{padding-block:16px}
+ .quiz-page .section-header .section-lead{font-size:14px;line-height:1.6;margin-bottom:0}
+ .game-intro .quiz-intro-eyebrow{display:none}
+ .game-intro{padding-block:14px}
+}
+#comparateur-entree-directe{margin-top:12px}
+
+.quiz-page main>.section{padding-block:24px}
+.quiz-page main>.section .section-header{margin-bottom:0}
+.quiz-page main>.section h1{font-size:clamp(40px,6vw,56px);margin-block:8px}
+.quiz-page .game-body{padding:22px}
+.quiz-page .game-intro{padding-block:12px}
+.quiz-page .game-intro .quiz-intro-eyebrow{display:none}

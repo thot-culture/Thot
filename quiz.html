@@ -29,6 +29,7 @@
   <title>Le quiz THOT — Culture générale</title>
   <link rel="stylesheet" href="assets/site.css?v=quiz-accessibility-1">
   <link rel="stylesheet" href="assets/quiz.css">
+  <link rel="stylesheet" href="assets/experience.css?v=1">
 </head>
 <body class="quiz-page">
 <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -62,19 +63,6 @@
       </div>
     </section>
 
-    <section id="univers" class="section wrap quiz-univers" aria-labelledby="univers-title">
-      <div class="section-header">
-        <div><p class="kicker">L'espace Quiz · Cinq univers</p><h2 id="univers-title">Testez votre curiosité.</h2></div>
-        <p class="section-lead">Cinq univers, trois niveaux et une explication après chaque réponse. <span id="quiz-total">Plus de cent questions</span>.</p>
-      </div>
-      <div class="category-grid">
-        <button class="category-card" type="button" data-category="histoire" disabled data-quiz-startup-disabled><span class="category-icon" aria-hidden="true">🏛️</span><span class="category-name">Histoire</span><span class="category-meta">Rois, révolutions et anecdotes oubliées.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
-        <button class="category-card" type="button" data-category="geographie" disabled data-quiz-startup-disabled><span class="category-icon" aria-hidden="true">🌍</span><span class="category-name">Géographie</span><span class="category-meta">Le monde a encore des secrets.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
-        <button class="category-card" type="button" data-category="sciences" disabled data-quiz-startup-disabled><span class="category-icon" aria-hidden="true">🔬</span><span class="category-name">Sciences</span><span class="category-meta">Des étoiles jusqu'à ton ADN.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
-        <button class="category-card" type="button" data-category="arts" disabled data-quiz-startup-disabled><span class="category-icon" aria-hidden="true">🎨</span><span class="category-name">Arts & culture</span><span class="category-meta">Des chefs-d'œuvre aux grands classiques.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
-        <button class="category-card" type="button" data-category="insolite" disabled data-quiz-startup-disabled><span class="category-icon" aria-hidden="true">✨</span><span class="category-name">Insolite</span><span class="category-meta">Le genre de fait qu'on raconte à table.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
-      </div>
-    </section>
     <section id="jouer" class="game-section" aria-labelledby="quiz-title">
       <div class="wrap">
         <div class="section-header">
@@ -159,12 +147,13 @@
             <span id="daily-status" class="daily-status" role="status">À découvrir aujourd'hui</span>
             <span id="daily-streak" class="daily-streak">✦ Série quotidienne : 0 jour</span>
           </div>
-          <div class="daily-goals">
+          <details class="daily-goals"><summary>Mes missions du jour</summary>
             <div class="daily-goals-title"><strong>Mes 3 missions du jour</strong><span>+10 XP par mission réussie</span></div>
             <div class="daily-goals-list" id="daily-goals-list" aria-live="polite"></div>
-          </div>
+          </details>
           <p class="daily-note">Renouvellement à minuit UTC · Résultats enregistrés uniquement dans ce navigateur.</p>
         </section>
+        <details class="progression-details" id="mon-parcours"><summary>Ma progression, mes badges et mes statistiques</summary>
         <section class="progression-panel" aria-label="Mon parcours THOT">
           <div class="progression-head">
             <span class="progression-symbol" aria-hidden="true">✦</span>
@@ -187,15 +176,31 @@
           <div class="stat-card"><strong id="stat-accuracy">—</strong><span>Taux de réussite</span></div>
         </div>
         <p class="stats-note" id="stats-note">Ta progression est sauvegardée uniquement sur cet appareil, dans ce navigateur.</p>
+
+        </details>
         <p class="quiz-notice hidden" id="storage-status" role="status">La progression reste disponible pendant cette session, mais elle n’a pas pu être sauvegardée. Elle peut être perdue en quittant la page.</p>
       </div>
     </section>
+    <section id="univers" class="section wrap quiz-univers" aria-labelledby="univers-title">
+      <div class="section-header">
+        <div><p class="kicker">L'espace Quiz · Cinq univers</p><h2 id="univers-title">Testez votre curiosité.</h2></div>
+        <p class="section-lead">Cinq univers, trois niveaux et une explication après chaque réponse. <span id="quiz-total">Plus de cent questions</span>.</p>
+      </div>
+      <div class="category-grid">
+        <button class="category-card" type="button" data-category="histoire" disabled data-quiz-startup-disabled><span class="category-icon" aria-hidden="true">🏛️</span><span class="category-name">Histoire</span><span class="category-meta">Rois, révolutions et anecdotes oubliées.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
+        <button class="category-card" type="button" data-category="geographie" disabled data-quiz-startup-disabled><span class="category-icon" aria-hidden="true">🌍</span><span class="category-name">Géographie</span><span class="category-meta">Le monde a encore des secrets.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
+        <button class="category-card" type="button" data-category="sciences" disabled data-quiz-startup-disabled><span class="category-icon" aria-hidden="true">🔬</span><span class="category-name">Sciences</span><span class="category-meta">Des étoiles jusqu'à ton ADN.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
+        <button class="category-card" type="button" data-category="arts" disabled data-quiz-startup-disabled><span class="category-icon" aria-hidden="true">🎨</span><span class="category-name">Arts & culture</span><span class="category-meta">Des chefs-d'œuvre aux grands classiques.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
+        <button class="category-card" type="button" data-category="insolite" disabled data-quiz-startup-disabled><span class="category-icon" aria-hidden="true">✨</span><span class="category-name">Insolite</span><span class="category-meta">Le genre de fait qu'on raconte à table.</span><span class="card-bottom">Explorer <span class="arrow">↗</span></span></button>
+      </div>
+    </section>
   </main>
-  <footer><div class="wrap foot-inner"><b>THOT</b><span>Éveiller la curiosité. Éclairer les idées. Transmettre le savoir.</span><span>© <span id="year">2026</span> THOT</span></div></footer>
+  <footer><div class="wrap foot-inner"><b>THOT</b><span>Éveiller la curiosité. Éclairer les idées. Transmettre le savoir.</span><span>© <span id="year">2026</span> THOT</span></div><nav id="site-parcours" class="site-parcours" aria-label="Accès aux parcours THOT"><a href="index.html">Accueil</a><a href="bibliotheque.html">Bibliothèque</a><a href="quiz.html#quiz-classique">Quiz</a><a href="notre-methode.html">Notre méthode</a></nav></footer>
   <!-- Banques de questions chargées avant le moteur du quiz. -->
   <script src="assets/questions-facile.js"></script>
   <script src="assets/questions-intermediaire.js"></script>
   <script src="assets/questions-expert.js"></script>
   <script src="assets/site.js?v=quiz-audit-2026-10-23"></script>
+  <script src="assets/reading-times.js" defer></script>
 </body>
 </html>

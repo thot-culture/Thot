@@ -128,6 +128,10 @@ for (const [file, page] of pages) {
   const meta = new Map(page.tags.filter(tag => tag.name === 'meta').map(tag => [tag.attrs.get('name') || tag.attrs.get('property'), tag.attrs.get('content')]));
   if (!meta.get('description')?.trim()) report(file, 'description SEO absente');
   if (!meta.get('viewport')?.includes('width=device-width')) report(file, 'viewport responsive absent');
+  if (file === '404.html') {
+    if (meta.get('robots') !== 'noindex') report(file, 'La page d’erreur doit déclarer noindex');
+    continue;
+  }
   const canonicalLinks = page.tags.filter(tag => tag.name === 'link' && (tag.attrs.get('rel') || '').split(/\s+/).includes('canonical'));
   const expectedCanonical = file === 'index.html' ? base.href : new URL(file, base).href;
   if (canonicalLinks.length !== 1 || canonicalLinks[0].attrs.get('href') !== expectedCanonical) report(file, 'URL canonique absente ou incohérente');
@@ -212,6 +216,10 @@ else {
   for (const file of pages.keys()) {
     if (!file.endsWith('.html')) continue;
     const expected = file === 'index.html' ? base.href : new URL(file, base).href;
+    if (file === '404.html') {
+      if (listed.includes(expected)) report('sitemap.xml', 'La page 404 doit rester hors du sitemap');
+      continue;
+    }
     if (!listed.includes(expected)) report('sitemap.xml', `page absente : ${file}`);
   }
 }

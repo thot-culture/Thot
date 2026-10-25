@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="assets/site.css">
   <link rel="stylesheet" href="assets/decouverte.css?v=1">
   <link rel="stylesheet" href="assets/home.css?v=lecture-1">
+  <link rel="stylesheet" href="assets/experience.css?v=1">
 </head>
 <body class="home-page">
   <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -47,7 +48,7 @@
       </a>
       <button id="mobile-menu-button" class="mobile-menu-button" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Ouvrir le menu"><span class="mobile-menu-lines" aria-hidden="true">☰</span><span>Menu</span></button>
       <nav id="primary-navigation" class="nav-end" aria-label="Navigation principale">
-        <a href="bibliotheque.html">Les articles</a>
+        <a href="bibliotheque.html">Bibliothèque</a>
         <a href="notre-methode.html">Notre méthode</a>
         <a href="quiz.html#quiz-classique">Jouer au quiz</a>
         <a href="quiz.html#daily-title">Défi du jour</a>
@@ -61,7 +62,7 @@
       <div class="wrap hero-inner">
         <div>
           <div class="eyebrow">Le magazine des esprits curieux</div>
-          <h1 id="main-title">La curiosité<br>est un <span class="gold">super-<br>pouvoir.</span></h1>
+          <h1 id="main-title">La curiosité<br> est un <span class="gold">super-<br>pouvoir.</span></h1>
           <p class="hero-description">Des faits étonnants, des histoires oubliées, des idées qui changent notre regard. Explorez nos articles sourcés, leurs petites pauses interactives et nos quiz de culture générale.</p>
           <div class="hero-actions">
             <a class="primary" href="bibliotheque.html">Lire les articles <span aria-hidden="true">↗</span></a>
@@ -96,6 +97,21 @@
         <div><p class="editorial-eyebrow">La bibliothèque THOT</p><h2 id="articles-title">Une question. Une découverte.</h2></div>
         <p class="section-lead">Des histoires à explorer, des idées à comprendre et des sources pour aller plus loin.</p>
       </div>
+
+      <article class="latest-story" aria-labelledby="latest-title">
+      <div class="latest-story__visual"><a href="articles/autorite.html" data-discovery-path aria-label="Lire le nouvel article : Pourquoi ne réagit-on pas tous pareil face à l’autorité ?"><div class="discovery-photo discovery-photo--latest">
+        <img src="assets/images/autorite-triptyque.webp" alt="Illustration en trois scènes : un parent et un adolescent discutent, une manifestation, une responsable scolaire échange avec des élèves." width="1200" height="800" loading="lazy" decoding="async">
+        <span class="discovery-stamp" aria-hidden="true">PSY</span>
+      </div></a><p class="discovery-credit">Illustration originale THOT, générée avec OpenAI ImageGen · 23 octobre 2026</p></div>
+      <div class="latest-story__copy">
+        <p class="latest-story__label"><span aria-hidden="true">✦</span> À la une · Dernière publication</p>
+        <div class="discovery-meta"><span>Psychologie sociale · Sciences humaines</span><span class="reading-pill">7 min de lecture</span></div>
+        <h3 id="latest-title"><a href="articles/autorite.html">Pourquoi ne réagit-on pas tous pareil face à l’autorité ?</a></h3>
+        <p>Parents, État, direction scolaire : ce qui nous fait obéir, discuter ou résister dépend-il de notre caractère — ou de la situation ?</p>
+        <p class="latest-story__invitation">Trois contextes à comparer et un jeu de mise en situation, sans score ni profil.</p>
+        <div class="latest-story__actions"><a class="discovery-primary" href="articles/autorite.html">Découvrir l’article <span aria-hidden="true">↗</span></a><span>23 oct. 2026 · La rédaction THOT</span></div>
+      </div>
+    </article>
       <form class="home-search" action="bibliotheque.html" method="get" role="search" aria-label="Rechercher dans les articles THOT">
         <label for="home-article-search">Un sujet en tête ?</label>
         <div class="home-search__field">
@@ -104,20 +120,6 @@
         </div>
         <p id="home-search-help">Retrouvez un sujet, un lieu ou un nom dans la bibliothèque.</p>
       </form>
-      <article class="latest-story" aria-labelledby="latest-title">
-      <div class="latest-story__visual"><a href="articles/autorite.html" data-discovery-path aria-label="Lire le nouvel article : Pourquoi ne réagit-on pas tous pareil face à l’autorité ?"><div class="discovery-photo discovery-photo--latest">
-        <img src="assets/images/autorite-triptyque.webp" alt="Illustration en trois scènes : un parent et un adolescent discutent, une manifestation, une responsable scolaire échange avec des élèves." width="1200" height="800" loading="lazy" decoding="async">
-        <span class="discovery-stamp" aria-hidden="true">PSY</span>
-      </div></a><p class="discovery-credit">Illustration originale THOT, générée avec OpenAI ImageGen · 23 octobre 2026</p></div>
-      <div class="latest-story__copy">
-        <p class="latest-story__label"><span aria-hidden="true">✦</span> À la une · Dernière publication</p>
-        <div class="discovery-meta"><span>Psychologie sociale · Sciences humaines</span><span class="reading-pill">8 min de lecture</span></div>
-        <h3 id="latest-title"><a href="articles/autorite.html">Pourquoi ne réagit-on pas tous pareil face à l’autorité ?</a></h3>
-        <p>Parents, État, direction scolaire : ce qui nous fait obéir, discuter ou résister dépend-il de notre caractère — ou de la situation ?</p>
-        <p class="latest-story__invitation">Trois contextes à comparer et un jeu de mise en situation, sans score ni profil.</p>
-        <div class="latest-story__actions"><a class="discovery-primary" href="articles/autorite.html">Découvrir l’article <span aria-hidden="true">↗</span></a><span>23 oct. 2026 · La rédaction THOT</span></div>
-      </div>
-    </article>
       <div class="discovery-section-heading"><h3>Encore à découvrir</h3><a href="bibliotheque.html">Tous les articles <span aria-hidden="true">↗</span></a></div>
       <div class="editorial-stories">
         <article class="discovery-card">
@@ -127,9 +129,9 @@
         <span class="discovery-stamp" aria-hidden="true">SCI</span>
       </div>
         <div class="discovery-card__copy">
-          <div class="discovery-meta"><span>Sciences · Biologie marine</span><span class="reading-pill">8 min de lecture</span></div>
+          <div class="discovery-meta"><span>Sciences · Biologie marine</span><span class="reading-pill">7 min de lecture</span></div>
           <h3 id="card-pieuvres-couleur">Comment les pieuvres changent-elles de couleur ?</h3>
-          <p>Chromatophores, muscles et signaux nerveux : comprendre le mécanisme derrière leurs changements de couleur.</p>
+          <p>Chromatophores, muscles et signaux nerveux : comprendre le mécanisme derrière leurs changements de couleur.</p><p class="discovery-affordance">Schéma à manipuler · muscles et pigments</p>
           <div class="discovery-card__bottom"><span>22 oct. 2026</span><span>Lire l’article <span aria-hidden="true">↗</span></span></div>
         </div>
       </a>
@@ -143,9 +145,9 @@
         <span class="discovery-stamp" aria-hidden="true">GÉO</span>
       </div>
         <div class="discovery-card__copy">
-          <div class="discovery-meta"><span>Géographie · Géopolitique</span><span class="reading-pill">8 min de lecture</span></div>
+          <div class="discovery-meta"><span>Géographie · Géopolitique</span><span class="reading-pill">6 min de lecture</span></div>
           <h3 id="card-puissance-etats-unis">Pourquoi les États-Unis ne peuvent-ils pas tout imposer ?</h3>
-          <p>Afghanistan, Iran, Daech : pourquoi disposer de moyens considérables ne garantit-il pas le résultat attendu ?</p>
+          <p>Afghanistan, Iran, Daech : pourquoi disposer de moyens considérables ne garantit-il pas le résultat attendu ?</p><p class="discovery-affordance">Cas historiques à comparer · Afghanistan et Daech</p>
           <div class="discovery-card__bottom"><span>21 oct. 2026</span><span>Lire l’article <span aria-hidden="true">↗</span></span></div>
         </div>
       </a>
@@ -160,7 +162,7 @@
         <div class="discovery-card__copy">
           <div class="discovery-meta"><span>Histoire · Première Guerre mondiale</span><span class="reading-pill">9 min de lecture</span></div>
           <h3 id="card-roubaix-1917">Roubaix en 1917 : vivre sous l’occupation allemande</h3>
-          <p>Réquisitions, ravitaillement, contrôles : découvrir le quotidien d’une ville occupée à travers les documents d’époque.</p>
+          <p>Réquisitions, ravitaillement, contrôles : découvrir le quotidien d’une ville occupée à travers les documents d’époque.</p><p class="discovery-affordance">Document à explorer · affiche de 1917</p>
           <div class="discovery-card__bottom"><span>20 oct. 2026</span><span>Lire l’article <span aria-hidden="true">↗</span></span></div>
         </div>
       </a>
@@ -173,7 +175,7 @@
           <span class="discovery-stamp" aria-hidden="true">PLUME</span>
         </div>
         <div class="discovery-card__copy">
-          <div class="discovery-meta"><span>Littérature · Histoire des autrices</span><span class="reading-pill">9 min de lecture</span></div>
+          <div class="discovery-meta"><span>Littérature · Histoire des autrices</span><span class="reading-pill">7 min de lecture</span></div>
           <h3 id="card-autrices-pseudonymes">Pourquoi des autrices ont-elles publié sous un nom d’homme ?</h3>
           <p>Brontë, George Eliot, George Sand : trois parcours pour comprendre ce que peut cacher un nom de plume.</p>
           <div class="discovery-card__bottom"><span>22 oct. 2026</span><span>Lire l’article <span aria-hidden="true">↗</span></span></div>
@@ -216,10 +218,11 @@
       <article><div class="why-symbol">✦</div><h3>Deux façons d'apprendre</h3><p>Des articles documentés, des pauses interactives et un espace quiz pour continuer à apprendre.</p></article>
     </section>
   </main>
-  <footer><div class="wrap foot-inner"><b>THOT</b><span>Éveiller la curiosité. Éclairer les idées. Transmettre le savoir.</span><a href="notre-methode.html">Notre méthode</a><span>© <span id="year">2026</span> THOT</span></div></footer>
+  <footer><div class="wrap foot-inner"><b>THOT</b><span>Éveiller la curiosité. Éclairer les idées. Transmettre le savoir.</span><a href="notre-methode.html">Notre méthode</a><span>© <span id="year">2026</span> THOT</span></div><nav id="site-parcours" class="site-parcours" aria-label="Accès aux parcours THOT"><a href="index.html">Accueil</a><a href="bibliotheque.html">Bibliothèque</a><a href="quiz.html#quiz-classique">Quiz</a><a href="notre-methode.html">Notre méthode</a></nav></footer>
 
   <!-- Navigation de l’accueil et découverte aléatoire, sans dépendance externe. -->
   <script src="assets/site-home.js"></script>
   <script src="assets/decouverte.js?v=1" defer></script>
+  <script src="assets/reading-times.js" defer></script>
 </body>
 </html>
