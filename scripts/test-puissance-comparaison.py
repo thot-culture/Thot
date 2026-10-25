@@ -21,8 +21,18 @@ def static_checks():
     assert 'L’Iran reste consultable seul' in html
     for target in ('ref9', 'ref10', 'ref18', 'ref15'):
         assert f'id="{target}"' in html
-    assert re.findall(r'"dateModified":\s*"([^"]+)"', html) == re.findall(r'"dateModified":\s*"([^"]+)"', old), 'Date scientifique avancée pour une seule modification d’interface'
-    print('PASS : trois fiches strictement intactes, périmètre historique explicite, sources présentes, date scientifique conservée.')
+    amendments = json.loads((ROOT / 'docs/CORRECTIONS-SCIENTIFIQUES-THOT20.json').read_text())
+    revised = [item for item in amendments['changes'] if item['path'] == 'articles/puissance-etats-unis.html']
+    if revised:
+        # La mission THOT 2.0 autorise une précision de fond, pas une simple UI.
+        assert any('exclusion des autorités extérieures' in item['new'] and item['sources'] for item in revised)
+        records = json.loads((ROOT / 'assets/article-editorial.json').read_text())['articles']
+        record = next(item for item in records if item['slug'] == 'puissance-etats-unis')
+        assert re.findall(r'"dateModified":\s*"([^"]+)"', html) == [record['editorial_updated']]
+        assert 'Krasner' in record['editorial_scope']
+    else:
+        assert re.findall(r'"dateModified":\s*"([^"]+)"', html) == re.findall(r'"dateModified":\s*"([^"]+)"', old), 'Date scientifique avancée pour une seule modification d’interface'
+    print('PASS : trois fiches strictement intactes, périmètre historique explicite, sources présentes, date cohérente avec le seul amendement scientifique autorisé.')
 
 
 def check_cells(page, reference, other):

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "chromatophore",
+    "title": "Chromatophore",
+    "text": "Un organe neuromusculaire : sac pigmentaire et muscles radiaires agissent ensemble. Le curseur déjà présent montre leur effet sur la surface colorée.",
+    "source": "https://doi.org/10.1017/S1464793101005772"
+  },
+  {
+    "id": "sac",
+    "title": "Sac pigmentaire",
+    "text": "Le pigment absorbe une partie de la lumière. L’étalement du sac modifie la surface pigmentée visible ; le dessin ne représente ni une taille ni une concentration mesurée.",
+    "source": "https://doi.org/10.1017/S1464793101005772"
+  },
+  {
+    "id": "muscles",
+    "title": "Muscles radiaires",
+    "text": "Leur raccourcissement tire le sac vers l’extérieur. Cela explique pourquoi une contraction musculaire peut agrandir la tache.",
+    "source": "https://doi.org/10.1017/S1464793101005772"
+  },
+  {
+    "id": "iridophores",
+    "title": "Iridophores",
+    "text": "Des structures en feuillets réfléchissent sélectivement la lumière par interférences. Leur apparence dépend notamment de l’éclairage et de l’angle.",
+    "source": "https://doi.org/10.1098/rsif.2008.0366.focus"
+  },
+  {
+    "id": "leucophores",
+    "title": "Leucophores",
+    "text": "Ils diffusent la lumière reçue. Leur apparence dépend donc de cette lumière ; ils ne fabriquent pas une lumière blanche. Leur présence varie selon les céphalopodes.",
+    "source": "https://doi.org/10.1098/rsif.2008.0366.focus"
+  },
+  {
+    "id": "lumiere",
+    "title": "Lumière",
+    "text": "La couleur visible résulte de l’interaction entre éclairage, pigments et structures réfléchissantes. Les flèches du dessin sont explicatives : aucune trajectoire individuelle n’est mesurée.",
+    "source": "https://doi.org/10.1098/rsif.2008.0366.focus"
+  },
+  {
+    "id": "nerfs",
+    "title": "Contrôle nerveux",
+    "text": "Les signaux nerveux coordonnent l’activité des muscles des chromatophores. Cela ne signifie pas que tous les réflecteurs de toutes les espèces sont commandés de façon identique.",
+    "source": "https://doi.org/10.1017/S1464793101005772"
+  }
+]

@@ -90,7 +90,10 @@ def inventory(root, base):
     assets = root / "assets"
     if not assets.is_dir():
         raise ValueError("Répertoire assets/ absent de --root.")
-    files = [root / name for name in HTML_FILES]
+    html_files = tuple(dict.fromkeys((*HTML_FILES, *sorted(
+        path.relative_to(root).as_posix() for path in root.rglob('*.html')
+        if path.name != '404.html' and not any(part in {'.git', 'node_modules'} for part in path.relative_to(root).parts)))))
+    files = [root / name for name in html_files]
     asset_files = sorted(path for path in assets.rglob("*") if path.is_file())
     files += asset_files + [root / "sitemap.xml"]
     jobs, anchors, errors = {}, [], []
@@ -107,7 +110,7 @@ def inventory(root, base):
     for path in files:
         relative = path.relative_to(root).as_posix()
         add(base if relative == "index.html" else urljoin(base, quote(relative, safe="/")), path)
-    for name in HTML_FILES:
+    for name in html_files:
         path = root / name
         if not path.is_file():
             continue
@@ -133,7 +136,7 @@ def inventory(root, base):
             if fragment:
                 anchors.append({"source": name, "reference": reference,
                                 "url": request_url, "fragment": fragment})
-    return jobs, anchors, sorted(set(errors)), len(asset_files)
+    return jobs, anchors, sorted(set(errors)), len(asset_files), len(html_files)
 
 
 def fetch_one(url, path, expected_sha256):
@@ -170,7 +173,7 @@ def fetch_one(url, path, expected_sha256):
 
 def audit(root, base):
     started = time.monotonic()
-    jobs, anchors, errors, asset_count = inventory(root, base)
+    jobs, anchors, errors, asset_count, html_count = inventory(root, base)
     hashes = {path: hashlib.sha256(path.read_bytes()).hexdigest() for path in set(jobs.values())}
     resources, bodies = {}, {}
     with ThreadPoolExecutor(max_workers=WORKERS) as executor:
@@ -207,7 +210,7 @@ def audit(root, base):
         "checked_at": datetime.now(timezone.utc).isoformat(),
         "base": base, "root": str(root), "workers": WORKERS, "timeout_seconds": TIMEOUT,
         "duration_seconds": round(time.monotonic() - started, 2),
-        "summary": {"html_pages": len(HTML_FILES), "asset_files": asset_count,
+        "summary": {"html_pages": html_count, "asset_files": asset_count,
                     "requests": len(resources), "failed_requests": bad_resources,
                     "anchors": len(anchor_results), "failed_anchors": bad_anchors,
                     "inventory_errors": len(errors)},

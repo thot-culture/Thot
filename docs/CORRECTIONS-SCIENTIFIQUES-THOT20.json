@@ -1,0 +1,84 @@
+{
+  "authorization": "Cahier des charges THOT 2.0, mission 2, reçu le 25 octobre 2026",
+  "base_revision": "52bb04c66da3ff1de56b8a9192f28d50f7d22883",
+  "changes": [
+    {
+      "path": "articles/puissance-etats-unis.html",
+      "old": "<p>Stephen Krasner distingue quatre dimensions de la souveraineté : l’autonomie du pouvoir à l’intérieur de l’État (<strong>westphalienne</strong>), sa reconnaissance par les autres États (<strong>juridique internationale</strong>), le contrôle réel de son territoire (<strong>intérieure</strong>) et sa capacité à réguler les échanges qui traversent ses frontières (<strong>d’interdépendance</strong>). <a class=\"source-num\" href=\"#ref6\" aria-label=\"Voir la source 6\">[6]</a></p>",
+      "new": "<p>Stephen D. Krasner distingue quatre dimensions de la souveraineté : l’exclusion des autorités extérieures des structures d’autorité d’un territoire (<strong>westphalienne</strong>), la reconnaissance mutuelle des États (<strong>juridique internationale</strong>), l’organisation de l’autorité politique et l’exercice effectif du contrôle (<strong>intérieure</strong>), et la capacité à contrôler les flux transfrontaliers (<strong>d’interdépendance</strong>). Ces dimensions distinguent notamment autorité et contrôle effectif. <a class=\"source-num\" href=\"#ref6\" aria-label=\"Voir la source 6\">[6]</a></p>",
+      "sources": [
+        "https://library.fes.de/libalt/journals/swetsfulltext/16956999.pdf",
+        "https://cddrl.fsi.stanford.edu/publications/sovereignty_organized_hypocrisy"
+      ],
+      "justification": "Définitions relues dans le texte original de Krasner (2001), p. 19–21 ; les nuances sur Westphalie restent inchangées."
+    },
+    {
+      "path": "articles/puissance-etats-unis.html",
+      "old": "<li id=\"ref6\"><span class=\"source-type\" data-source-kind=\"secondary\">Source secondaire · travaux de recherche</span> Stephen D. Krasner, Sovereignty: Organized Hypocrisy, Princeton University Press, 1999 ; « Rethinking the Sovereign State Model », Review of International Studies, vol. 27, no 5, 2001, p. 17-42. <a href=\"https://www.cambridge.org/core/journals/review-of-international-studies/article/abs/rethinking-the-sovereign-state-model/C77F748A59F937165E6495C7A4ECEC3F\" target=\"_blank\" rel=\"noopener noreferrer\">Consulter ↗</a></li>",
+      "new": "<li id=\"ref6\"><span class=\"source-type\" data-source-kind=\"secondary\">Source secondaire · travaux de recherche</span> Stephen D. Krasner, Sovereignty: Organized Hypocrisy, Princeton University Press, 1999 ; « Rethinking the Sovereign State Model », Review of International Studies, vol. 27, no 5, 2001, p. 17-42. <a href=\"https://www.cambridge.org/core/journals/review-of-international-studies/article/abs/rethinking-the-sovereign-state-model/C77F748A59F937165E6495C7A4ECEC3F\" target=\"_blank\" rel=\"noopener noreferrer\">Consulter ↗</a> Texte original : définitions p. 19–21. <a href=\"https://library.fes.de/libalt/journals/swetsfulltext/16956999.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Lire l’article de Krasner (PDF)</a></li>",
+      "sources": [
+        "https://library.fes.de/libalt/journals/swetsfulltext/16956999.pdf"
+      ],
+      "justification": "Ajout de l’accès au texte original effectivement relu."
+    },
+    {
+      "path": "articles/autorite.html",
+      "old": "<p>En 2009, Jerry Burger a réalisé une réplication partielle avec des garde-fous éthiques : les participants étaient arrêtés à 150 volts, au moment où l’apprenant protestait pour la première fois. L’étude permet une comparaison limitée avec Milgram ; elle ne reproduit pas l’expérience entière et ne tranche pas à elle seule la question de l’obéissance. Le message le plus prudent est donc celui-ci : les situations et les relations avec l’autorité comptent, mais elles ne font pas disparaître le jugement individuel. <a class=\"source-num\" href=\"#ref12\" aria-label=\"Voir la source 12\">[12]</a><a class=\"source-num\" href=\"#ref13\" aria-label=\"Voir la source 13\">[13]</a></p>",
+      "new": "<p>En 2009, Jerry Burger a réalisé une réplication partielle avec des garde-fous éthiques : les participants n’allaient pas au-delà de 150 volts simulés. À ce palier, l’apprenant exigeait explicitement l’arrêt ; des gémissements étaient déjà audibles à partir de 75 volts. Il ne s’agissait donc pas du premier signe de détresse. L’étude permet une comparaison limitée avec Milgram ; elle ne reproduit pas l’expérience entière et ne tranche pas à elle seule la question de l’obéissance. Le message le plus prudent est donc celui-ci : les situations et les relations avec l’autorité comptent, mais elles ne font pas disparaître le jugement individuel. <a class=\"source-num\" href=\"#ref12\" aria-label=\"Voir la source 12\">[12]</a><a class=\"source-num\" href=\"#ref13\" aria-label=\"Voir la source 13\">[13]</a></p>",
+      "sources": [
+        "https://www.psy.miami.edu/_assets/pdf/rpo-articles/burger-2009.pdf",
+        "https://doi.org/10.1037/a0010932"
+      ],
+      "justification": "Protocole original p. 7 : gémissements dès 75 V, demande d’arrêt à 150 V, aucun interrupteur supplémentaire autorisé."
+    },
+    {
+      "path": "articles/autorite.html",
+      "old": "<p>Au collège et au lycée, la direction organise l’établissement et veille notamment à la sécurité et au respect du règlement intérieur. Le chef d’établissement représente l’État dans l’établissement. Son autorité a des limites : c’est le conseil d’administration qui adopte le règlement intérieur, lequel doit préciser les droits et les devoirs de la communauté scolaire. Il rappelle aussi les libertés d’information et d’expression des élèves. <a class=\"source-num\" href=\"#ref6\" aria-label=\"Voir la source 6\">[6]</a><a class=\"source-num\" href=\"#ref7\" aria-label=\"Voir la source 7\">[7]</a><a class=\"source-num\" href=\"#ref8\" aria-label=\"Voir la source 8\">[8]</a></p>",
+      "new": "<p>Dans les collèges et lycées publics constitués en établissements publics locaux d’enseignement (EPLE), la direction organise l’établissement et veille notamment à la sécurité et au respect du règlement intérieur. Le chef d’établissement représente l’État dans l’établissement. Son autorité a des limites : c’est le conseil d’administration qui adopte le règlement intérieur, lequel doit préciser les droits et les devoirs de la communauté scolaire. Il rappelle aussi les libertés d’information et d’expression des élèves. <a class=\"source-num\" href=\"#ref6\" aria-label=\"Voir la source 6\">[6]</a><a class=\"source-num\" href=\"#ref7\" aria-label=\"Voir la source 7\">[7]</a><a class=\"source-num\" href=\"#ref8\" aria-label=\"Voir la source 8\">[8]</a></p>",
+      "sources": [
+        "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006071191/LEGISCTA000018377430/2026-06-20"
+      ],
+      "justification": "Précision du champ d’application EPLE, sans généralisation aux établissements privés ou à ceux relevant d’un autre chapitre."
+    },
+    {
+      "path": "articles/autorite.html",
+      "old": "<li id=\"ref6\"><span class=\"source-type\" data-source-kind=\"primary\">Source primaire · texte juridique</span> Code de l’éducation, article D. 422-5, rôle du chef d’établissement comme représentant de l’État et organe exécutif de l’établissement. <a href=\"https://www.legifrance.gouv.fr/codes/id/LEGISCTA000018380380\" target=\"_blank\" rel=\"noopener noreferrer\">Consulter sur Légifrance</a>.</li>",
+      "new": "<li id=\"ref6\"><span class=\"source-type\" data-source-kind=\"primary\">Source primaire · texte juridique</span> Code de l’éducation, article R. 421-8, direction des EPLE : le chef d’établissement représente l’État et est l’organe exécutif de l’établissement. L’article D. 422-5 concerne un autre cadre, celui d’établissements ne constituant pas des EPLE. <a href=\"https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006071191/LEGISCTA000018377430/2026-06-20\" target=\"_blank\" rel=\"noopener noreferrer\">Consulter R. 421-8 sur Légifrance</a>.</li>",
+      "sources": [
+        "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006071191/LEGISCTA000018377430/2026-06-20",
+        "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000018380380"
+      ],
+      "justification": "Substitution de la référence adaptée aux EPLE ; distinction du champ de D. 422-5, chapitre II."
+    },
+    {
+      "path": "articles/autorite.html",
+      "old": "<li id=\"ref7\"><span class=\"source-type\" data-source-kind=\"primary\">Source primaire · texte juridique</span> Code de l’éducation, article R. 421-93, règlement intérieur et droits et devoirs de la communauté éducative. <a href=\"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039016586\" target=\"_blank\" rel=\"noopener noreferrer\">Consulter sur Légifrance</a>.</li>",
+      "new": "<li id=\"ref7\"><span class=\"source-type\" data-source-kind=\"primary\">Source primaire · texte juridique</span> Code de l’éducation, article R. 421-5, règlement intérieur des EPLE, adopté par le conseil d’administration et définissant les droits et devoirs de la communauté éducative. R. 421-93 porte sur les lycées professionnels maritimes. <a href=\"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039016548/2026-07-02\" target=\"_blank\" rel=\"noopener noreferrer\">Consulter sur Légifrance</a>.</li>",
+      "sources": [
+        "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039016548/2026-07-02",
+        "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039016586"
+      ],
+      "justification": "R. 421-93 est situé dans la section des lycées professionnels maritimes ; R. 421-5 est adapté au passage général sur les EPLE."
+    },
+    {
+      "path": "articles/autrices-pseudonymes.html",
+      "old": "<p>Jane Austen offre un contrepoint utile : <em>Sense and Sensibility</em>, son premier roman publié, paraît en 1811 sous la mention « By a Lady » (« par une dame »). La page de titre de <em>Pride and Prejudice</em> indique ensuite « By the Author of Sense &amp; Sensibility » : l’autrice reste anonyme, mais ses livres sont reliés entre eux. Son nom est publiquement associé à ses œuvres après sa mort, dans la notice biographique de l’édition de 1818 de <em>Northanger Abbey</em> et <em>Persuasion</em>. <a class=\"source-num\" href=\"#ref5\" aria-label=\"Voir la source 5\">[5]</a></p>",
+      "new": "<p>Jane Austen offre un contrepoint utile : <em>Sense and Sensibility</em>, son premier roman publié, paraît en 1811 sous la mention « By a Lady » (« par une dame »). La page de titre de <em>Pride and Prejudice</em> indique ensuite « By the Author of Sense &amp; Sensibility » : l’autrice reste anonyme, mais ses livres sont reliés entre eux. Son nom est publiquement associé à ses œuvres après sa mort, dans la notice biographique de <em>Northanger Abbey</em> et <em>Persuasion</em>, parus ensemble en décembre 1817, avec la date de 1818 imprimée sur l’édition. <a class=\"source-num\" href=\"#ref5\" aria-label=\"Voir la source 5\">[5]</a></p>",
+      "sources": [
+        "https://janeaustens.house/object/first-edition-northanger-abbey-and-persuasion/",
+        "https://assets.cambridge.org/052182/4192/excerpt/0521824192_excerpt.htm"
+      ],
+      "justification": "Distinguer la mise en vente de décembre 1817 et la date imprimée 1818, confirmées par le musée et l’édition universitaire."
+    },
+    {
+      "path": "articles/autrices-pseudonymes.html",
+      "old": "<li id=\"ref5\"><span class=\"source-type\" data-source-kind=\"complement\">Ressource complémentaire · ressources patrimoniales</span> Jane Austen’s House, « Publication », sur la mention « By the Author of “Sense &amp; Sensibility” » dans la première édition de <em>Pride and Prejudice</em> et sur l’absence de certitude quant au motif de l’anonymat ; British Library, « Jane Austen: names and notability », sur l’édition de 1811 de <em>Sense and Sensibility</em> et son attribution « By a Lady ». <a href=\"https://janeaustens.house/online-exhibition/the-making-of-pride-and-prejudice/the-making-of-pride-and-prejudice-4/\">Jane Austen’s House</a> · <a href=\"https://www.bl.uk/stories/blogs/posts/jane-austen-names-and-notability\">British Library</a>.</li>",
+      "new": "<li id=\"ref5\"><span class=\"source-type\" data-source-kind=\"complement\">Ressource complémentaire · ressources patrimoniales</span> Jane Austen’s House, « Publication », sur la mention « By the Author of “Sense &amp; Sensibility” » dans la première édition de <em>Pride and Prejudice</em> et sur l’absence de certitude quant au motif de l’anonymat ; British Library, « Jane Austen: names and notability », sur l’édition de 1811 de <em>Sense and Sensibility</em> et son attribution « By a Lady ». <a href=\"https://janeaustens.house/online-exhibition/the-making-of-pride-and-prejudice/the-making-of-pride-and-prejudice-4/\">Jane Austen’s House</a> · <a href=\"https://www.bl.uk/stories/blogs/posts/jane-austen-names-and-notability\">British Library</a>. Chronologie des éditions posthumes : <a href=\"https://janeaustens.house/object/first-edition-northanger-abbey-and-persuasion/\">Jane Austen’s House, notice de première édition</a> · <a href=\"https://assets.cambridge.org/052182/4192/excerpt/0521824192_excerpt.htm\">Cambridge University Press, introduction et note sur le texte</a>.</li>",
+      "sources": [
+        "https://janeaustens.house/object/first-edition-northanger-abbey-and-persuasion/",
+        "https://assets.cambridge.org/052182/4192/excerpt/0521824192_excerpt.htm"
+      ],
+      "justification": "Ajout des deux sources de la précision de date, sans retirer les références antérieures."
+    }
+  ]
+}

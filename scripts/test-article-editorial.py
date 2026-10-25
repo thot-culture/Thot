@@ -14,6 +14,7 @@ import json
 from pathlib import Path
 import re
 import subprocess
+import runpy
 import unittest
 from urllib.parse import urlsplit
 
@@ -151,7 +152,7 @@ class EditorialTests(unittest.TestCase):
             slug = record["slug"]
             path = f"articles/{slug}.html"
             cls.pages[slug] = Document((ROOT / path).read_text())
-            cls.originals[slug] = Document(git("show", f"{OPTIONS.revision}:{path}"))
+            cls.originals[slug] = Document(runpy.run_path(str(ROOT / "scripts/editorial-amendments.py"))["amended_reference"](git("show", f"{OPTIONS.revision}:{path}"), path))
 
     def one(self, nodes, message):
         self.assertEqual(len(nodes), 1, message)

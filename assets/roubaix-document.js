@@ -1,23 +1,28 @@
 /* THOT — Lecture détaillée de l’unique affiche explicitement sélectionnée. */
 (() => {
   'use strict';
-  const root = document.querySelector('#lecture-affiche-laine');
-  if (!root) return;
-  const viewport = root.querySelector('#laine-viewport');
-  const surface = root.querySelector('#laine-surface');
-  const image = root.querySelector('#laine-image');
-  const marker = root.querySelector('#laine-zone');
-  const controls = root.querySelector('#laine-commandes');
-  const status = root.querySelector('#laine-statut');
+  function mount(root) {
+  const viewport = root.querySelector('[data-document-part="viewport"]') || root.querySelector('#laine-viewport');
+  const surface = root.querySelector('[data-document-part="surface"]') || root.querySelector('#laine-surface');
+  const image = root.querySelector('[data-document-part="image"]') || root.querySelector('#laine-image');
+  const marker = root.querySelector('[data-document-part="marker"]') || root.querySelector('#laine-zone');
+  const controls = root.querySelector('[data-document-part="controls"]') || root.querySelector('#laine-commandes');
+  const status = root.querySelector('[data-document-part="status"]') || root.querySelector('#laine-statut');
   const buttons = [...root.querySelectorAll('[data-document-action]')];
   if (!viewport || !surface || !image || !marker || !controls || !status ||
       !image.dataset.fullSrc || buttons.length !== 4) return;
-  const width = 1238, height = 1685;
+  let config = null;
+  const configNode = root.querySelector('[data-document-config]');
+  if (configNode) { try { config = JSON.parse(configNode.textContent); } catch { return; } }
+  const width = config ? Number(config.width) : 1238, height = config ? Number(config.height) : 1685;
+  if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0) return;
   // Coordonnées relues sur le scan, en pixels du fichier original intact.
-  const regions = {
+  const legacyRegions = {
     date: { x: 700, y: 1517, w: 392, h: 48, label: 'La date imprimée : Roubaix, le 30 Octobre 1917.' },
     objet: { x: 48, y: 255, w: 1136, h: 390, label: 'Le titre : prélèvement des laines et mélanges de laines provenant des matelas et coussins.' }
   };
+  const regions = config ? config.regions : legacyRegions;
+  if (!regions || Object.values(regions).some(r => !r || ![r.x,r.y,r.w,r.h].every(Number.isFinite) || r.x<0 || r.y<0 || r.w<=0 || r.h<=0 || r.x+r.w>width || r.y+r.h>height || typeof r.label!=='string')) return;
   const preview = image.getAttribute('src');
   let loaded = false, loading = false, zoom = 1, region = null, pending = null;
   function fitWidth() { return Math.max(1, Math.min(viewport.clientWidth || 300, (viewport.clientHeight || 420) * width / height)); }
@@ -57,7 +62,8 @@
     loading = true;
     announce('Chargement de l’affiche originale. La transcription reste disponible.');
     updateButtons();
-    const cleanup = () => { image.removeEventListener('load', ready); image.removeEventListener('error', failed); };
+    let loadingTimeout;
+    const cleanup = () => { clearTimeout(loadingTimeout); image.removeEventListener('load', ready); image.removeEventListener('error', failed); };
     const ready = () => {
       cleanup(); loading = false; loaded = true;
       const action = pending; pending = null;
@@ -72,6 +78,7 @@
     };
     image.addEventListener('load', ready);
     image.addEventListener('error', failed);
+    loadingTimeout = setTimeout(failed, 15000);
     image.setAttribute('src', image.dataset.fullSrc);
   }
   function changeZoom(next) {
@@ -117,4 +124,9 @@
   if (typeof ResizeObserver === 'function') new ResizeObserver(resize).observe(viewport);
   else window.addEventListener('resize', resize);
   render(); controls.hidden = false;
+  }
+  const roots = [...document.querySelectorAll('[data-document-reader]')];
+  const legacy = document.querySelector('#lecture-affiche-laine');
+  if (legacy && !roots.includes(legacy)) roots.push(legacy);
+  roots.forEach(mount);
 })();

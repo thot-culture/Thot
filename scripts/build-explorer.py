@@ -1,0 +1,108 @@
+#!/usr/bin/env python3
+"""Construit Explorer, ses pages autonomes et ses visuels de partage originaux."""
+from pathlib import Path
+from html import escape as e
+from io import BytesIO
+import argparse,json,re,runpy,textwrap,sys
+from PIL import Image,ImageDraw,ImageFont
+R=Path(__file__).resolve().parents[1]
+C=runpy.run_path(str(R/'scripts/explorer-components.py'))
+COLLECTIONS={'atlas':('Atlas THOT','Des lieux aux preuves, sans carte inventée.'),'chronologies':('Chronologies THOT','Des événements à parcourir et à remettre en contexte.'),'archives':('Archives THOT','Des documents authentiques, leurs textes et leurs limites.'),'defis':('Défis THOT','Jeux, enquêtes et expériences visuelles pour apprendre en agissant.')}
+RES=json.loads((R/'assets/explorer/catalogue.json').read_text())['resources']
+def jsdata(id,data):return '<script type="application/json" id="'+id+'">'+json.dumps(data,ensure_ascii=False).replace('</','<\\/')+'</script>'
+def fix_paths(html):return html.replace('href="../assets/','href="/Thot/assets/').replace('src="../assets/','src="/Thot/assets/').replace('data-full-src="../assets/','data-full-src="/Thot/assets/')
+def head(name,title,desc,image='assets/og-thot.png'):
+ canonical='https://thot-culture.github.io/Thot/'+name
+ return f'''<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="{e(desc,quote=True)}"><title>{e(title)} — THOT Explorer</title><link rel="canonical" href="{canonical}"><meta property="og:url" content="{canonical}"><meta property="og:type" content="website"><meta property="og:title" content="{e(title,quote=True)} — THOT Explorer"><meta property="og:description" content="{e(desc,quote=True)}"><meta property="og:image" content="https://thot-culture.github.io/Thot/{image}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="Carte typographique THOT : {e(title,quote=True)}"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="/Thot/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/Thot/assets/explorer/explorer.css?v=thot20"><link rel="stylesheet" href="/Thot/assets/explorer/illustrations.css?v=thot20"><link rel="stylesheet" href="/Thot/assets/roubaix-document.css?v=thot20"><link rel="stylesheet" href="/Thot/assets/pieuvres.css?v=chromato-2"><link rel="stylesheet" href="/Thot/assets/puissance-comparateur.css?v=comparaison-2"></head>'''
+def shell(name,title,desc,body,image='assets/og-thot.png',scripts=()):
+ return head(name,title,desc,image)+'''<body><a class="skip-link" href="#contenu">Aller au contenu</a><header class="explorer-top"><div class="explorer-wrap explorer-nav"><a class="explorer-brand" href="/Thot/index.html" aria-label="THOT, accueil">THOT</a><nav aria-label="Navigation principale"><a href="/Thot/index.html">Accueil</a><a href="/Thot/bibliotheque.html">Bibliothèque</a><a href="/Thot/explorer.html" aria-current="true">Explorer</a><a href="/Thot/quiz.html#quiz-classique">Quiz</a><a href="/Thot/notre-methode.html">Notre méthode</a></nav></div></header><main class="explorer-wrap" id="contenu" tabindex="-1">'''+body+'''</main><footer class="explorer-footer"><div class="explorer-wrap"><b>THOT · La connaissance s’explore</b><nav aria-label="Poursuivre"><a href="/Thot/explorer.html">Toutes les ressources</a><a href="/Thot/enquetes/index.html">Les enquêtes THOT</a><a href="/Thot/notre-methode.html">Notre méthode</a></nav></div></footer>'''+''.join('<script src="/Thot/'+src+'" defer></script>' for src in scripts)+'''</body></html>\n'''
+def resource(item,body,scripts=()):
+ article=f'<a href="/Thot/{item["article"]}">Lire l’article lié</a>' if item['article'] else ''
+ sources=''.join(f'<li><a href="{e(ref["url"],quote=True)}">{e(ref["label"])}</a></li>' for ref in item['references'])
+ intro=f'''<a class="explorer-back" href="/Thot/explorer.html">← Toutes les ressources Explorer</a><header class="resource-header"><p class="eyebrow">{e(COLLECTIONS[item['collection']][0])} · {e(item['category'])}</p><h1>{e(item['title'])}</h1><p class="lead">{e(item['description'])}</p><p class="resource-date">Publication : <time datetime="{item['date_published']}">25 octobre 2026</time>{(' · Période : '+e(item['period'])) if item['period'] else ''}. {article}</p></header>'''
+ schema={'@context':'https://schema.org','@type':'LearningResource','name':item['title'],'description':item['description'],'url':'https://thot-culture.github.io/Thot/'+item['url'],'inLanguage':'fr','datePublished':item['date_published'],'learningResourceType':item['category'],'image':'https://thot-culture.github.io/Thot/'+item['share_image'],'publisher':{'@type':'Organization','name':'THOT'},'citation':[ref['url'] for ref in item['references']]}
+ links=jsdata('resource-schema',schema).replace('type="application/json"','type="application/ld+json"')+'<section class="resource-provenance"><h2>Notice de la ressource</h2><ul>'+sources+'</ul><p>Cette adresse permet d’utiliser la ressource sans lire l’article. Les références, limites et crédits restent accessibles dans cette page.</p></section>'
+ return shell(item['url'],item['title'],item['description'],intro+body+links,item['share_image'],scripts)
+def timeline():
+ source=(R/'assets/roubaix-frise.js').read_text()
+ events=json.loads(re.search(r'const events = (\[[\s\S]*?\n\]);',source)[1])
+ assert len(events)==8
+ controls=''.join(f'<button type="button" data-timeline-index="{i}" aria-pressed="false" aria-controls="timeline-details">{e(item["short"])}</button>' for i,item in enumerate(events))
+ static=''.join(f'<li><h3>{e(item["date"])} — {e(item["title"])}</h3><p>{e(item["body"])}</p><p class="nuance">{e(item["nuance"])}</p><a href="#{item["ref"]}">Source [{item["ref"][3:]}]</a></li>' for item in events)
+ body='<section class="timeline-widget" data-timeline><h2>Huit événements, sans raccourcir leurs nuances</h2><div class="timeline-controls" role="group" aria-label="Choisir un événement" hidden>'+controls+'</div><div id="timeline-details" class="timeline-details" hidden><h3 data-event-title tabindex="-1"></h3><p data-event-body></p><p class="nuance" data-event-nuance></p><a data-event-source href="#ref1">Source [1]</a></div><p role="status" aria-live="polite" data-event-status></p><details open class="timeline-continuous"><summary>Lire les huit événements en continu</summary><ol>'+static+'</ol></details>'+jsdata('timeline-data',events)+'</section>'+C['refs']('roubaix-1917')
+ return body,events
+
+def archive():
+ html=(R/'articles/roubaix-1917.html').read_text();body=C['block'](html,'id','lecture-affiche-laine')
+ data=json.loads((R/'docs/DOCUMENT-ROUBAIX-LAINE.json').read_text())
+ config={'width':data['width'],'height':data['height'],'regions':{key:dict(zip(['x','y','w','h'],value),label={'date':'La date imprimée : Roubaix, le 30 Octobre 1917.','objet':'Le prélèvement des laines et mélanges de laines provenant de matelas et coussins.'}[key]) for key,value in data['regions'].items()}}
+ body=body.replace('id="lecture-affiche-laine"','id="lecture-affiche-laine" data-document-reader',1)
+ i=body.index('>')+1;body=body[:i]+jsdata('document-config',config).replace('type="application/json"','type="application/json" data-document-config')+body[i:]
+ return fix_paths(body)
+def atlas():
+ return '''<section class="atlas-notice"><h2>Un dossier documentaire, pas une carte de 1917</h2><p>Aucun fond historique adapté, avec une numérisation et des droits vérifiés, n’a été retenu pour cette version. La carte et la comparaison avec un fond actuel sont reportées. Nous ne plaçons donc ni point GPS ni bâtiment supposé.</p><p>Le catalogue du <a href="https://ccfr.bnf.fr/portailccfr/ark%3A/16871/004a1829167">fonds de cartes et plans de Roubaix (CCFr)</a> constitue une piste de recherche, pas une autorisation de reproduire ses cartes ni une preuve de leur contenu.</p></section><section class="places-widget" data-places><h2>Trois questions de localisation</h2><div class="place-controls" role="group" aria-label="Choisir une mention documentaire" hidden><button type="button" data-place="grand-chemin" aria-pressed="true" aria-controls="place-grand-chemin">Grand-Chemin</button><button type="button" data-place="courtrai" aria-pressed="false" aria-controls="place-courtrai">Rue de Courtrai</button><button type="button" data-place="batiments" aria-pressed="false" aria-controls="place-batiments">Bâtiments administratifs</button></div><section id="place-grand-chemin" data-place-panel="grand-chemin"><h3>Rue du Grand-Chemin : une salle de gymnastique mentionnée</h3><p>La notice de la convocation du 1er juillet 1917 citée dans l’article situe les revues d’appel à la salle de gymnastique de cette rue. Le calendrier annoncé est du 9 au 13 juillet ; il ne prouve pas une présence effective.</p><p class="nuance">Nous disposons ici d’une mention par notice, pas d’un plan de la salle ni d’une adresse numérotée vérifiée. L’emplacement exact reste à établir.</p><a href="/Thot/articles/roubaix-1917.html#ref2">Titre, date et cote de la notice dans l’article</a></section><section id="place-courtrai" data-place-panel="courtrai"><h3>5, rue de Courtrai : une adresse imprimée</h3><p>L’affiche du 30 octobre 1917 demande, dans certains cas, une livraison au magasin installé par la Ville au « 5, rue de Courtrai », près de la rue des Sept Ponts. Cette mention est lisible dans la transcription relue sur le document.</p><p class="nuance">Un numéro de rue de 1917 ne suffit pas à désigner une parcelle actuelle. Aucune concordance de numérotation ou de bâti n’est affirmée ici.</p><a href="/Thot/explorer/archives/roubaix-laine-1917.html#transcription-laine">Consulter le document et sa transcription</a></section><section id="place-batiments" data-place-panel="batiments"><h3>Fonction administrative ne signifie pas localisation prouvée</h3><p>L’affiche permet d’identifier une fonction de dépôt municipal. Elle ne donne ni les limites d’une parcelle, ni une liste de tous les bâtiments administratifs occupés.</p><p class="nuance">Pour ajouter des repères géographiques, il faudra confronter plans datés, annuaires, archives de voirie et cotes des documents. Une reconstitution éventuelle devra rester distinguée des faits attestés.</p><a href="/Thot/articles/roubaix-1917.html#sources">Revenir au corpus et à ses limites</a></section><p role="status" aria-live="polite" data-place-status></p></section>'''
+def anagrams():
+ data=json.loads((R/'assets/explorer/anagrammes.json').read_text())
+ subjects=list(dict.fromkeys(w['discipline'] for w in data))
+ fallback=''.join(f'<li><strong>{e(w["word"])} · {e(w["discipline"])}</strong><p>{e(w["explanation"])}</p><a href="{w["source"]}">Définition de référence</a></li>' for w in data)
+ return '''<section data-anagrams class="anagram-widget"><h2>Remettez un mot en place, puis découvrez son sens</h2><p>Première sélection de huit mots vérifiés, dans cinq disciplines. Aucun niveau de difficulté n’est encore étalonné. Accents, espaces et casse ne bloquent pas la réponse.</p><div class="anagram-play" hidden><label for="anagram-subject">Discipline</label><select id="anagram-subject"><option value="">Toutes les disciplines</option>'''+''.join('<option>'+e(x)+'</option>' for x in subjects)+'''</select><p data-word-category></p><p class="mixed-letters" data-mixed aria-label="Lettres à remettre dans l’ordre"></p><form data-word-form><label for="anagram-answer">Votre mot</label><input id="anagram-answer" autocomplete="off" autocapitalize="characters" spellcheck="false" maxlength="40" required><button type="submit">Vérifier le mot</button></form><div class="anagram-actions"><button type="button" data-hint-word aria-expanded="false" aria-controls="anagram-hint">Afficher un indice</button><button type="button" data-new-word>Un autre mot</button></div><p id="anagram-hint" hidden></p><div data-word-feedback role="status" aria-live="polite" aria-atomic="true"></div></div><noscript><p>Pour jouer sans JavaScript, choisissez un mot dans la liste, mélangez ses lettres sur papier puis retrouvez sa définition.</p></noscript><details class="wordbank"><summary>Les huit mots et leurs références (contient les solutions)</summary><ol>'''+fallback+'</ol></details>'+jsdata('anagram-data',data)+'</section>'
+def chromatophore():
+ html=(R/'articles/pieuvres-couleur.html').read_text()
+ body=C['block'](html,'class','chromato-interactif')
+ script=next(text for text in re.findall(r'<script>([\s\S]*?)</script>',html) if 'chromato-curseur' in text)
+ # Ne pas emporter le calcul de durée de lecture propre à l’article.
+ script=script[script.index('    const curseurChromato'): ]
+ return body+'<script>'+script+'</script><p>Le dessin, ses seize fibres et la valeur interne du curseur sont illustratifs ; ils ne constituent pas des mesures biologiques.</p>'+C['refs']('pieuvres-couleur')
+def comparator():
+ html=(R/'articles/puissance-etats-unis.html').read_text()
+ body=C['block'](html,'class','comparateur-puissance')
+ body=body.replace(C['block'](body,'id','comparateur-iran'),'')
+ body=re.sub(r'<button\b[^>]*data-cas="iran"[^>]*>[\s\S]*?</button>','',body)
+ body=body.replace('Trois situations, trois limites à la puissance','Deux situations historiques, quatre critères').replace('L’Iran reste consultable seul : ses informations récentes demandent une actualisation séparée.','Ces cas ne constituent pas une expérience contrôlée commune.')
+ body=body.replace('href="#ref16"','href="#ref15"').replace('Source [16]','Source [15]')
+ body=re.sub(r'(?m)^[ \t]+$','',body)
+ return body+'<p>Comparaison limitée aux périodes indiquées : Afghanistan (2001–2021, bilan SIGAR 2022) et Daech (2019). Aucune analyse de la situation iranienne actuelle n’est ajoutée.</p>'+C['refs']('puissance-etats-unis',{'ref9','ref10','ref14','ref15','ref18'})
+def vignette(icon):
+ motifs={'archive':'<path d="M85 35H225V165H85Z M110 65H200 M110 90H200 M110 115H180"/>','timeline':'<path d="M40 100H280"/><circle cx="70" cy="100" r="12"/><circle cx="160" cy="100" r="12"/><circle cx="250" cy="100" r="12"/>','atlas':'<path d="M45 55L120 35L200 60L275 40V145L200 165L120 140L45 160Z M120 35V140 M200 60V165"/>','letters':'<path d="M50 50H125V130H50Z M140 75H215V155H140Z"/><text x="72" y="105" fill="#f8f6f1" stroke="none" font-family="Georgia" font-size="40">A</text><text x="162" y="130" fill="#f8f6f1" stroke="none" font-family="Georgia" font-size="40">Z</text>','skin':'<circle cx="160" cy="100" r="50"/><path d="M160 20V50 M160 150V180 M80 100H110 M210 100H240 M100 40L125 65 M195 135L220 160"/>','compare':'<path d="M70 150V80H120V150 M180 150V40H230V150 M40 150H270"/>','investigation':'<circle cx="130" cy="85" r="45"/><path d="M164 118L225 175 M110 70H150 M110 90H145"/>'}
+ return '<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 320 200"><rect width="320" height="200" fill="#17243a"/><g fill="none" stroke="#e4c593" stroke-width="5" stroke-linejoin="round">'+motifs[icon]+'</g></svg>\n'
+def card(item):
+ return f'''<article class="explorer-card" data-resource="{item['id']}" data-discipline="{e(item['discipline'],quote=True)}" data-collection="{item['collection']}" data-category="{e(item['category'],quote=True)}"><a href="/Thot/{item['url']}"><img src="/Thot/{item['thumbnail']}" alt="Vignette illustrative THOT, sans valeur de document historique" width="640" height="400" loading="lazy" decoding="async"><div class="explorer-card-copy"><p class="card-type">{e(item['category'])}</p><h3>{e(item['title'])}</h3><p>{e(item['description'])}</p><p class="card-meta">{e(item['discipline'])}{(' · '+e(item['period'])) if item['period'] else ''}</p><span class="card-action">Explorer cette ressource →</span></div></a></article>'''
+def home():
+ disciplines=list(dict.fromkeys(item['discipline'] for item in RES));categories=list(dict.fromkeys(item['category'] for item in RES))
+ coll=''.join(f'<a class="collection-card" href="?collection={id}#catalogue"><strong>{e(title)}</strong><span>{e(desc)}</span></a>' for id,(title,desc) in COLLECTIONS.items())
+ return '''<header class="explorer-hero"><p class="eyebrow">Le musée numérique des curieux</p><h1>Explorer</h1><p class="lead">Des connaissances à parcourir, des documents à examiner, des idées à mettre à l’épreuve.</p><p>Entrez directement dans une ressource : aucune lecture préalable n’est nécessaire. Archives authentiques, illustrations pédagogiques et cas fictifs sont toujours distingués.</p></header><section aria-labelledby="nouveautes"><h2 id="nouveautes">À découvrir dans cette première collection</h2><div class="new-links"><a href="/Thot/explorer/archives/roubaix-laine-1917.html">Une affiche de 1917 à lire de près</a><a href="/Thot/explorer/sciences/couleurs-cephalopodes.html">Pigments, reflets et lumière</a><a href="/Thot/explorer/defis/anagrammes.html">Huit mots du savoir</a></div></section><section aria-labelledby="collections"><h2 id="collections">Quatre portes d’entrée</h2><div class="collection-grid">'''+coll+'''</div><p class="catalogue-note">Atlas : un dossier de lieux documentés est disponible ; la carte historique reste reportée faute de fond et de localisations suffisamment vérifiés.</p></section><section id="catalogue" aria-labelledby="catalogue-titre"><h2 id="catalogue-titre">Le catalogue Explorer</h2><p>Dix ressources utiles, à leur propre adresse. Les jeux et schémas contemporains figurent dans Défis et expériences ; ils ne sont pas présentés comme des archives.</p><form class="explorer-search" role="search" aria-label="Rechercher dans Explorer" hidden><label for="explorer-query">Un sujet, une époque, un mécanisme</label><input id="explorer-query" type="search" placeholder="Ex. Roubaix, lumière, image…"><div class="filter-grid"><label>Discipline<select id="explorer-discipline"><option value="">Toutes les disciplines</option>'''+''.join('<option>'+e(x)+'</option>' for x in disciplines)+'''</select></label><label>Collection<select id="explorer-collection"><option value="">Toutes les collections</option>'''+''.join('<option value="'+id+'">'+e(v[0])+'</option>' for id,v in COLLECTIONS.items())+'''</select></label><label>Catégorie<select id="explorer-category"><option value="">Toutes les catégories</option>'''+''.join('<option>'+e(x)+'</option>' for x in categories)+'''</select></label></div><button type="reset">Retrouver tout le catalogue</button></form><noscript><p>Les dix ressources sont accessibles ci-dessous ; recherche et filtres nécessitent JavaScript.</p></noscript><p class="explorer-results" role="status" aria-live="polite">10 ressources disponibles.</p><div class="explorer-empty" hidden><h3>Aucune ressource pour cette recherche</h3><p>Essayez un terme plus large ou retrouvez toutes les ressources.</p><button type="button" data-reset-explorer>Afficher toutes les ressources</button></div><div class="explorer-grid">'''+''.join(card(item) for item in RES)+'</div></section>'
+def share_image(item):
+ image=Image.new('RGB',(1200,630),'#17243a');draw=ImageDraw.Draw(image)
+ def font(size,bold=False):return ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans'+('-Bold' if bold else '')+'.ttf',size)
+ draw.rectangle((40,40,1160,590),outline='#927038',width=3);draw.text((80,70),'THOT / EXPLORER',font=font(27,True),fill='#e4c593')
+ lines=textwrap.wrap(item['title'],width=31)
+ for i,line in enumerate(lines[:3]):draw.text((80,175+i*80),line,font=font(52,True),fill='#f8f6f1')
+ draw.text((80,500),COLLECTIONS[item['collection']][0]+' · '+item['discipline'],font=font(23),fill='#e4c593')
+ b=BytesIO();image.save(b,format='PNG',optimize=True);return b.getvalue()
+def outputs():
+ result={R/'explorer.html':shell('explorer.html','Explorer : cartes, documents, frises et jeux','Dix ressources autonomes pour explorer les connaissances : documents, chronologies, schémas et défis.',home(),scripts=('assets/explorer/catalogue.js?v=thot20',))}
+ tb,events=timeline();result[R/'assets/explorer/roubaix-evenements.json']=json.dumps(events,ensure_ascii=False,indent=2)+'\n'
+ for item in RES:
+  assert item['available'] and item['references'] and item['collection'] in COLLECTIONS
+  result[R/item['thumbnail']]=vignette(item['icon']);result[R/item['share_image']]=share_image(item)
+  if item['url'].startswith('enquetes/'):continue
+  id=item['id'];scripts=[]
+  if id=='laine-1917':body=archive();scripts=['assets/visuels-pedagogiques.js','assets/roubaix-document.js?v=thot20']
+  elif id=='roubaix-chronologie':body=tb;scripts=['assets/explorer/timeline.js?v=thot20']
+  elif id=='roubaix-lieux':body=atlas();scripts=['assets/explorer/atlas.js?v=thot20']
+  elif id=='anagrammes':body=anagrams();scripts=['assets/explorer/anagrammes.js?v=thot20']
+  elif id=='peau-cephalopodes':body=C['skin']();scripts=['assets/explorer/illustrations.js?v=thot20']
+  elif id=='chromatophore':body=chromatophore()
+  elif id=='puissance-comparaison':body=comparator();scripts=['assets/puissance-comparateur.js?v=thot20']
+  else:raise ValueError(id)
+  result[R/item['url']]=resource(item,body,scripts)
+ return result
+if __name__=='__main__':
+ ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--check',action='store_true');a=ap.parse_args();bad=[]
+ for p,text in outputs().items():
+  body=text.encode() if isinstance(text,str) else text
+  if a.check:
+   if not p.exists() or p.read_bytes()!=body:bad.append(str(p.relative_to(R)))
+  else:p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(body)
+ if bad:sys.exit('Sorties Explorer à régénérer : '+', '.join(bad))
+ print('PASS : catalogue, pages autonomes, huit événements, vignettes et partages cohérents.' if a.check else 'Explorer généré, aucune publication effectuée.')

@@ -15,6 +15,7 @@ import json
 from pathlib import Path
 import re
 import subprocess
+import runpy
 
 
 class Editorial(HTMLParser):
@@ -122,9 +123,9 @@ for path in pages:
         ignored_ids.add("decode-pouvoir")
     if path == Path("articles/roubaix-1917.html"):
         # Ajouts documentaires validés ; le commentaire historique reste comparé.
-        ignored_ids.update({"document-laine", "transcription-laine", "roubaix-reperes-texte"})
+        ignored_ids.update({"document-laine", "transcription-laine", "roubaix-reperes-texte", "roubaix-atlas-acces"})
     if path == Path("articles/pieuvres-couleur.html"):
-        ignored_ids.update({"chromato-modele", "chromato-reperes", "chromato-etats-statiques"})
+        ignored_ids.update({"chromato-modele", "chromato-reperes", "chromato-etats-statiques", "cephalo-atlas"})
     if path == Path("articles/puissance-etats-unis.html"):
         ignored_ids.update({"comparateur-reference-commandes", "comparateur-simultane"})
     # Seuls les libellés de durée et les ajouts d’interface nommés sont normalisés.
@@ -135,6 +136,7 @@ for path in pages:
     ignored_ids.update({"site-parcours", "site-lecture-nav", "activites-autorite-aide", "comparateur-entree-directe",
                         "toc-interaction-" + path.stem})
     before_html, after_html = duration_ui(before_html), duration_ui(after_html)
+    before_html = runpy.run_path(str(root / "scripts/editorial-amendments.py"))["amended_reference"](before_html, path)
     before = Editorial(before_html)
     ignored_span_ids = {"editorial-previous-label"} if path == Path("articles/roubaix-1917.html") else set()
     after = Editorial(after_html, ignored_ids, ignore_source_types=path in article_pages,

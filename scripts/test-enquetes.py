@@ -17,10 +17,11 @@ def static_checks():
  js=(ROOT/'assets/enquetes/enquetes.js').read_text()
  assert not re.search(r'localStorage|sessionStorage|fetch\s*\(|XMLHttpRequest|innerHTML',js)
  # Les articles et le moteur/banques/dates ne sont même pas modifiés.
- for name in ['assets/site.js','assets/article-editorial.json','assets/illustrations.json',*[str(p.relative_to(ROOT)) for p in (ROOT/'articles').glob('*.html')],*[str(p.relative_to(ROOT)) for p in (ROOT/'assets').glob('questions-*.js')]]:
+ for name in ['assets/site.js','assets/illustrations.json',*[str(p.relative_to(ROOT)) for p in (ROOT/'assets').glob('questions-*.js')]]:
   assert (ROOT/name).read_bytes()==subprocess.check_output(['git','show','52bb04c:'+name],cwd=ROOT),name
  subprocess.run(['python3','scripts/build-enquetes.py','--check'],cwd=ROOT,check=True)
- print('PASS : 90 %, 1 %, 990 absents, +2 €, +25 %, image intacte, absence de stockage/réseau, articles/quiz/sources protégés.')
+ subprocess.run(['python3','scripts/check-editorial.py'],cwd=ROOT,check=True)
+ print('PASS : 90 %, 1 %, 990 absents, +2 €, +25 %, image intacte, absence de stockage/réseau, quiz/sources protégés ; articles comparés avec les amendements autorisés.')
 
 def browser_checks(out):
  from playwright.sync_api import sync_playwright
