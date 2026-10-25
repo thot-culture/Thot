@@ -1,0 +1,33 @@
+{
+  "document": "Avis sur les laines et mélanges de laines provenant de matelas et coussins",
+  "date": "1917-10-30",
+  "institution": "Landesarchiv Baden-Württemberg, Hauptstaatsarchiv Stuttgart",
+  "shelfmark": "J 151 Nr 1451",
+  "source_url": "https://commons.wikimedia.org/wiki/File:%22Ville_de_Roubaix_-_Avis_%C3%A0_la_Population_-_pr%C3%A9l%C3%A8vement_de_laines_%26_M%C3%A9langes_de_laines_provenant_de_Matelas_et_Coussins%22_(Einsch%C3%A4rfung_fr%C3%BCherer_Anordnu_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_1451.jpg",
+  "institution_url": "https://www.landesarchiv-bw.de/plink/?f=1-107093-1",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "checked_on": "2026-10-25",
+  "original": "assets/images/roubaix-laines-1917-original.jpg",
+  "sha1": "7abb531df5971f90dffb4a47eef23f295beaafb1",
+  "width": 1238,
+  "height": 1685,
+  "size": 2325252,
+  "preview": "assets/images/roubaix-laines-1917-apercu.jpg",
+  "regions": {
+    "date": [
+      700,
+      1517,
+      392,
+      48
+    ],
+    "objet": [
+      48,
+      255,
+      1136,
+      390
+    ]
+  },
+  "transcription": "Relue sur le scan ; césures, retours à la ligne et exposants normalisés ; annotations manuscrites non interprétées.",
+  "modifications": "Original inchangé ; aperçu Wikimedia ; annotations DOM séparées et transcription THOT."
+}

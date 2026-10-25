@@ -120,6 +120,9 @@ for path in pages:
         ignored_ids.update(new_article_ids)
     if path == Path("articles/autorite.html"):
         ignored_ids.add("decode-pouvoir")
+    if path == Path("articles/roubaix-1917.html"):
+        # Ajouts documentaires validés ; le commentaire historique reste comparé.
+        ignored_ids.update({"document-laine", "transcription-laine", "roubaix-reperes-texte"})
     before = Editorial(before_html)
     ignored_span_ids = {"editorial-previous-label"} if path == Path("articles/roubaix-1917.html") else set()
     after = Editorial(after_html, ignored_ids, ignore_source_types=path in article_pages,
