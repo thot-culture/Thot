@@ -125,6 +125,8 @@ for path in pages:
         ignored_ids.update({"document-laine", "transcription-laine", "roubaix-reperes-texte"})
     if path == Path("articles/pieuvres-couleur.html"):
         ignored_ids.update({"chromato-modele", "chromato-reperes", "chromato-etats-statiques"})
+    if path == Path("articles/puissance-etats-unis.html"):
+        ignored_ids.update({"comparateur-reference-commandes", "comparateur-simultane"})
     before = Editorial(before_html)
     ignored_span_ids = {"editorial-previous-label"} if path == Path("articles/roubaix-1917.html") else set()
     after = Editorial(after_html, ignored_ids, ignore_source_types=path in article_pages,

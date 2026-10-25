@@ -119,3 +119,35 @@
   .comparateur-cas[hidden]{display:block!important}
   .comparateur-cas{break-inside:avoid}
 }
+
+/* Lecture simultanée choisie par le lecteur, limitée aux cas historiques. */
+#comparateur-reference-commandes[hidden],#comparateur-simultane[hidden]{display:none!important}
+#comparateur-reference-commandes{margin:14px 0 20px}
+#comparateur-reference-aide,.comparateur-limite{font-size:14px;line-height:1.65}
+#comparateur-reference{min-height:46px;padding:10px 15px;border:1px solid #927038;border-radius:10px;background:#fffefa;color:#17243a;font:700 14px/1.4 "Segoe UI",Arial,sans-serif;cursor:pointer;max-width:100%}
+#comparateur-reference:hover{background:#f6f0e4}
+#comparateur-reference[aria-pressed="true"]{background:#17243a;color:#fffefa;border-color:#17243a}
+#comparateur-reference:disabled{color:#566171;background:#f3efe7;border-color:#cfc8ba;cursor:default}
+#comparateur-reference:focus-visible{outline:3px solid #927038;outline-offset:3px}
+.comparateur-table{width:100%;table-layout:fixed;border-collapse:collapse;background:#fffefa;font-size:14px;line-height:1.65}
+.comparateur-table caption{text-align:left;font-weight:700;color:#17243a;margin:12px 0}
+.comparateur-table th,.comparateur-table td{padding:14px 12px;text-align:left;vertical-align:top;border:1px solid #ded8cc;overflow-wrap:anywhere}
+.comparateur-table thead th{background:#eae5db;color:#17243a;width:40%}
+.comparateur-table thead th:first-child{width:20%}
+.comparateur-table tbody th{font-size:12px;background:#f6f3ec}
+.comparateur-table small{display:block;margin-top:7px;font-size:12px;font-weight:400;line-height:1.6}
+.comparateur-cellule-cas{display:none}
+@media(max-width:650px){
+  .comparateur-table,.comparateur-table thead,.comparateur-table tbody{display:block}
+  .comparateur-table caption{display:block;width:100%;box-sizing:border-box}
+  .comparateur-table thead tr{display:grid;grid-template-columns:1fr 1fr}
+  .comparateur-table thead th:first-child{display:none}
+  .comparateur-table thead th{width:auto;padding:12px 8px;font-size:13px}
+  .comparateur-table tbody tr{display:grid;grid-template-columns:minmax(0,1fr);margin-top:16px}
+  .comparateur-table tbody th{font-size:14px;padding:10px 12px}
+  .comparateur-table td{border-top:0}
+  .comparateur-cellule-cas{display:block;margin-bottom:7px;font-size:12px;font-weight:700;color:#314c5a}
+}
+@media print{
+  #comparateur-reference-commandes,#comparateur-simultane{display:none!important}
+}

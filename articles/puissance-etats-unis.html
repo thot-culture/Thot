@@ -23,7 +23,7 @@
   <meta name="twitter:image:alt" content="THOT — Les limites de la puissance américaine. Un globe géométrique relié à plusieurs points.">
   <link rel="stylesheet" href="../assets/article.css?v=lecture-1">
   <link rel="stylesheet" href="../assets/decouverte.css?v=1">
-  <link rel="stylesheet" href="../assets/puissance-comparateur.css">
+  <link rel="stylesheet" href="../assets/puissance-comparateur.css?v=comparaison-2">
   <link rel="stylesheet" href="../assets/puissance-chronologie.css?v=a11y-1">
   <link rel="stylesheet" href="../assets/puissance-mobile.css">
   <link rel="stylesheet" href="../assets/glossaire-interactif.css?v=audit-1">
@@ -135,8 +135,20 @@
     <button type="button" data-cas="daech" aria-controls="comparateur-daech" aria-pressed="false">Daech</button>
   </div>
   <p class="comparateur-statut" role="status" aria-live="polite" hidden>Étude affichée : Afghanistan.</p>
+  <div id="comparateur-reference-commandes" hidden>
+    <p id="comparateur-reference-aide">Gardez l’Afghanistan ou Daech comme référence, puis choisissez l’autre cas pour lire les mêmes critères ensemble. L’Iran reste consultable seul : ses informations récentes demandent une actualisation séparée.</p>
+    <button id="comparateur-reference" type="button" aria-pressed="false" aria-controls="comparateur-simultane" aria-describedby="comparateur-reference-aide">Garder l’Afghanistan comme référence</button>
+  </div>
+  <div id="comparateur-simultane" hidden>
+    <p class="comparateur-limite" id="comparateur-limite">Les périodes, les acteurs et les objectifs diffèrent. Cette lecture croisée aide à distinguer moyens et résultats ; elle ne mesure pas une efficacité commune et ne classe pas les deux situations.</p>
+    <table class="comparateur-table" role="table" aria-describedby="comparateur-limite">
+      <caption>Deux cas historiques, critère par critère</caption>
+      <thead role="rowgroup"><tr role="row"><th scope="col" role="columnheader">Critère</th><th id="comparaison-reference" scope="col" role="columnheader"></th><th id="comparaison-cas" scope="col" role="columnheader"></th></tr></thead>
+      <tbody role="rowgroup"></tbody>
+    </table>
+  </div>
 
-  <section class="comparateur-cas" id="comparateur-afghanistan" data-cas-panel="afghanistan" aria-labelledby="comparateur-afghanistan-titre">
+  <section class="comparateur-cas" id="comparateur-afghanistan" data-cas-panel="afghanistan" data-periode="2001–2021 · bilan SIGAR, novembre 2022" data-comparaison-sources="ref9 ref10" aria-labelledby="comparateur-afghanistan-titre">
     <h3 id="comparateur-afghanistan-titre">Afghanistan</h3>
     <dl class="comparateur-reperes">
       <div><dt>Acteur</dt><dd>Un gouvernement afghan soutenu par les États-Unis et leurs partenaires, face à l’insurrection talibane.</dd></div>
@@ -158,7 +170,7 @@
     <p class="comparateur-note"><strong>Ce que le cas montre :</strong> exercer une pression peut produire des conséquences sans entraîner automatiquement les concessions recherchées. Cette situation reste évolutive. <a href="#ref12">Source [12]</a> · <a href="#ref13">Source [13]</a></p>
   </section>
 
-  <section class="comparateur-cas" id="comparateur-daech" data-cas-panel="daech" aria-labelledby="comparateur-daech-titre">
+  <section class="comparateur-cas" id="comparateur-daech" data-cas-panel="daech" data-periode="2019 · bilans de juin et août 2019" data-comparaison-sources="ref18 ref15" aria-labelledby="comparateur-daech-titre">
     <h3 id="comparateur-daech-titre">Daech</h3>
     <dl class="comparateur-reperes">
       <div><dt>Acteur</dt><dd>Une organisation terroriste non étatique, qui a contrôlé des territoires en Irak et en Syrie.</dd></div>
@@ -377,7 +389,7 @@
       </aside></div></main>
   <footer class="pied"><div class="largeur"><b>THOT</b><span>Éveiller la curiosité. Éclairer les idées. Transmettre le savoir.</span></div></footer>
   <script src="../assets/puissance-sommaire.js?v=lecture-1" defer></script>
-  <script src="../assets/puissance-comparateur.js"></script>
+  <script src="../assets/puissance-comparateur.js?v=comparaison-2"></script>
   <script src="../assets/puissance-chronologie.js"></script>
   <script src="../assets/glossaire-interactif.js?v=audit-1" defer></script>
   <script>

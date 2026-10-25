@@ -1,0 +1,44 @@
+{
+  "verification_date": "2026-10-25",
+  "scope": "Mode simultané du comparateur existant : Afghanistan et Daech. Les quatre critères reprennent les fiches originales, sans nouvel indice ou chiffre.",
+  "rights": "Texte THOT existant, réagencé. Aucune carte, figure, photographie ou page de rapport reproduite.",
+  "sources": [
+    {
+      "reference": 9,
+      "title": "SIGAR 23-05-IP — Why the Afghan Government Collapsed",
+      "date": "2022-11",
+      "url": "https://www.govinfo.gov/content/pkg/GOVPUB-S-PURL-gpo220710/pdf/GOVPUB-S-PURL-gpo220710.pdf",
+      "verification": "PDF téléchargé et texte consulté : résumé p. PDF 2–5, six facteurs et bilan institutionnel ; chute de Kaboul le 15 août 2021 p. PDF 3/24.",
+      "sha256": "1f022bf59ebdd4192876828e9920f785e250ff906aa26497f33a57a66072d9b3"
+    },
+    {
+      "reference": 10,
+      "title": "SIGAR — Quarterly Report to the United States Congress",
+      "date": "2021-10-30",
+      "url": "https://www.sigar.mil/pdf/quarterlyreports/2021-10-30qr.pdf",
+      "consulted_copy": "https://www.ecoi.net/en/file/local/2063773/2021-10-30qr.pdf",
+      "copy_catalogue": "https://www.ecoi.net/en/document/2063773.html",
+      "verification": "Original indisponible depuis cet environnement. Copie du rapport citant sa provenance téléchargée sur ecoi.net ; p. PDF 28, 88,3 milliards de dollars affectés entre 2002 et 2021, affirmation originale de la fiche.",
+      "sha256": "a1c977e911fe0dd6653c87dc65092e44ed741c7ab72ffcf344922be8d64fe672"
+    },
+    {
+      "reference": 18,
+      "title": "Joint Statement by the Political Directors of the Global Coalition to Defeat ISIS",
+      "date": "2019-06-25",
+      "url": "https://2017-2021.state.gov/joint-statement-by-the-political-directors-of-the-global-coalition-to-defeat-isis/",
+      "verification": "Version indexée du texte institutionnel consultée par recherche : 80 membres, annonce de la fin du contrôle territorial le 23 mars 2019, maintien de la menace. L’ouverture directe renvoie une difficulté technique ; le seul statut HTTP 200 ne valide pas le contenu. Aucun texte intégral recopié sur THOT."
+    },
+    {
+      "reference": 15,
+      "title": "Conseil de sécurité — SC/13931",
+      "date": "2019-08-27",
+      "url": "https://press.un.org/en/2019/sc13931.doc.htm",
+      "verification": "Version indexée du compte rendu consultée : perte de l’assise territoriale syrienne et persistance de réseaux affiliés. Numéro et date recoupés avec le répertoire officiel des séances (S/PV.8605). L’ouverture directe renvoie un contrôle d’accès ; la nouvelle interface renvoie à la référence existante sans reproduire de document."
+    }
+  ],
+  "unverified_and_excluded_from_new_mode": [
+    "Iran : les deux dépêches Reuters de 2026 n’ont pas pu être relues ; aucune nouvelle comparaison de ce cas.",
+    "Daech : la référence 16 de 2026 reste inchangée dans la fiche d’origine mais n’est pas reprise dans les en-têtes du mode historique ; le bilan de 2019 est appuyé sur les références 15 et 18.",
+    "Déclaration CENTCOM (référence 14) : accès direct refusé, non utilisée comme seule preuve pour ce développement."
+  ]
+}
