@@ -170,6 +170,7 @@ for (const [file, text] of contents) {
       if (attrs.has('src')) continue;
       try {
         if (attrs.get('type') === 'application/ld+json') { JSON.parse(match[2]); jsonLD++; }
+        else if (attrs.get('type') === 'application/json') { JSON.parse(match[2]); }
         else { new vm.Script(match[2], { filename: `${file}, script ${position}` }); scripts++; }
       } catch (error) { report(file, `script ${position} : ${error.message}`); }
     }
