@@ -131,7 +131,10 @@ def sources_without_labels(node):
 
 
 def external_assets(document, tag, attribute):
-    return [node.attrs[attribute] for node in document.select(tag)
+    def reference(value):
+        # La version de cache de la feuille modifiée peut évoluer, pas son chemin.
+        return value.split('?')[0] if value.split('?')[0] == '../assets/pieuvres.css' else value
+    return [reference(node.attrs[attribute]) for node in document.select(tag)
             if attribute in node.attrs and
             (tag != "link" or "stylesheet" in node.attrs.get("rel", "").split())]
 

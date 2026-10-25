@@ -24,3 +24,17 @@
 .chromato-curseur:focus-visible{outline:3px solid #927038;outline-offset:4px;border-radius:5px}
 .chromato-etat{min-height:24px;margin:8px 0 0;font-size:14px;color:#44515d}
 @media(max-width:560px){.chromato-interactif{padding:16px}.chromato-interactif figcaption{font-size:19px}}
+
+/* P1 — Repères qualitatifs dans le schéma existant, sans nouvelle animation. */
+.chromato-interactif .chromato-modele{font-size:13px;line-height:1.65;color:#566171;margin:12px 0;padding:12px;border-left:3px solid #B89558;background:#F8F6F1}
+.chromato-interactif .chromato-svg{max-width:360px}
+.chromato-svg>.schema-note{display:none}
+.chromato-reperes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:16px 0 20px}
+.chromato-reperes>div{min-width:0;padding-top:10px;border-top:2px solid #E3DFD5}
+.chromato-reperes dt{font-size:13px;line-height:1.5;font-weight:750;color:#294358}
+.chromato-reperes dd{margin:7px 0 0;font-size:13px;line-height:1.65;color:#44515D}
+.chromato-etats-statiques{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:20px 0}
+.chromato-etats-statiques figure{margin:0;min-width:0}
+.chromato-etats-statiques svg{display:block;width:100%;max-width:280px;height:auto;margin:auto}
+.chromato-etats-statiques figure figcaption{font:650 13px/1.6 "Segoe UI",Arial,sans-serif;margin-top:12px}
+@media(max-width:560px){.chromato-reperes{grid-template-columns:1fr;gap:9px}.chromato-reperes>div{padding-top:9px}.chromato-reperes dd{margin-top:4px}.chromato-etats-statiques{grid-template-columns:1fr}}

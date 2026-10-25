@@ -97,7 +97,7 @@ assert.equal(slider.getAttribute('min'), '0');
 assert.equal(slider.getAttribute('max'), '100');
 assert.equal(slider.value, '18');
 assert.match(pieuvres, /<label\b[^>]*for="chromato-curseur"/, 'Le curseur possède un libellé associé');
-assert.equal(slider.getAttribute('aria-describedby'), 'chromato-consigne chromato-etat');
+assert.equal(slider.getAttribute('aria-describedby'), 'chromato-modele chromato-consigne chromato-etat');
 for (const id of slider.getAttribute('aria-describedby').split(' ')) elementParId(pieuvres, id);
 assert.equal(etat.getAttribute('aria-live'), 'polite');
 const svgTag = pieuvres.match(/<svg\b[^>]*class="chromato-svg"[^>]*>/)?.[0] ?? '';

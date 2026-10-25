@@ -22,7 +22,7 @@
   <meta name="twitter:image" content="https://thot-culture.github.io/Thot/assets/social-cards/pieuvres-couleur.png">
   <link rel="stylesheet" href="../assets/article.css?v=lecture-1">
   <link rel="stylesheet" href="../assets/decouverte.css?v=1">
-  <link rel="stylesheet" href="../assets/pieuvres.css?v=audit-1">
+  <link rel="stylesheet" href="../assets/pieuvres.css?v=chromato-2">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -47,7 +47,7 @@
     "url": "https://thot-culture.github.io/Thot/"
   },
   "datePublished": "2026-10-22",
-  "dateModified": "2026-10-24",
+  "dateModified": "2026-10-25",
   "inLanguage": "fr-FR",
   "articleSection": "Sciences · Biologie marine",
   "about": [
@@ -87,7 +87,7 @@
       <p class="accroche">Des cellules pigmentées, des muscles minuscules et des signaux nerveux : le mécanisme derrière leurs changements de couleur.</p>
       <div class="meta"><span>La rédaction THOT</span><span>Publié le <time datetime="2026-10-22">22 octobre 2026</time></span><span id="duree">Temps de lecture estimé</span></div>
 <!-- THOT:dates:start -->
-      <p class="article-editorial-dates" id="article-editorial-dates">Dernière mise à jour éditoriale : <time datetime="2026-10-24">24 octobre 2026</time>. Ajout des repères scientifiques et qualification des sources.</p>
+      <p class="article-editorial-dates" id="article-editorial-dates">Dernière mise à jour éditoriale : <time datetime="2026-10-25">25 octobre 2026</time>. Clarification du schéma de chromatophore et des limites du modèle illustratif.</p>
 <!-- THOT:dates:end -->
 <!-- THOT:share:start -->
       <div class="article-share" id="article-share" data-article-share>
@@ -125,21 +125,35 @@
         <p>Quand les muscles se contractent, ils tirent le sac pigmentaire vers l’extérieur : il s’aplatit et s’élargit. La tache colorée devient alors plus grande et plus nette. Quand les muscles se relâchent, le sac reprend une forme plus compacte ; la tache se réduit et devient moins visible.</p>
         <p>Le changement ne vient donc pas d’un pigment qui voyagerait d’un bout à l’autre du corps. C’est surtout la <strong>forme du sac pigmentaire</strong> qui change. Une explication simplifiée consiste à imaginer un petit parasol : fermé, il occupe peu de place ; ouvert, il en couvre davantage. Le chromatophore n’est pas un parasol, mais l’image aide à visualiser l’effet de l’étirement.</p>
 
-        <figure class="chromato-interactif" aria-labelledby="chromato-interactif-titre">
+        <figure class="chromato-interactif" aria-labelledby="chromato-interactif-titre" aria-describedby="chromato-modele">
           <figcaption id="chromato-interactif-titre">À toi d’étirer le pigment</figcaption>
+          <p class="chromato-modele" id="chromato-modele">Schéma qualitatif, non à l’échelle. Le nombre de fibres, la forme et la couleur sont illustratifs ; le curseur n’indique pas une mesure biologique.</p>
           <p class="chromato-consigne" id="chromato-consigne">Fais glisser le curseur : les muscles radiaires se contractent et le sac pigmentaire s’étale.</p>
-          <svg class="chromato-svg" viewBox="0 0 600 240" role="img" aria-labelledby="chromato-svg-title chromato-svg-desc">
+          <svg class="chromato-svg" viewBox="160 0 280 240" role="img" aria-labelledby="chromato-svg-title chromato-svg-desc">
             <title id="chromato-svg-title">Un chromatophore dont le sac pigmentaire peut s’étaler</title>
             <desc id="chromato-svg-desc">Le curseur contrôle la largeur d’un sac de pigment orange. Des fibres musculaires rayonnent autour du sac.</desc>
             <circle cx="300" cy="118" r="118" fill="#f2ede3"/>
             <g id="chromato-fibres" stroke="#667582" stroke-width="4" stroke-linecap="round"></g>
             <ellipse id="chromato-sac" cx="300" cy="118" rx="26" ry="22" fill="#9c503e" stroke="#743729" stroke-width="3"/>
+            <g id="chromato-reference" aria-hidden="true" fill="none" stroke-dasharray="5 4">
+              <ellipse cx="300" cy="118" rx="26" ry="22" stroke="#17243A" stroke-width="5"/>
+              <ellipse cx="300" cy="118" rx="26" ry="22" stroke="#FFFEFA" stroke-width="2"/>
+            </g>
             <text x="300" y="222" text-anchor="middle" class="schema-note">Sac pigmentaire entouré de muscles radiaires</text>
           </svg>
+          <dl class="chromato-reperes" id="chromato-reperes">
+            <div><dt>Les traits rayonnants</dt><dd>Les muscles radiaires se raccourcissent et tirent sur le sac pigmentaire.</dd></div>
+            <div><dt>La tache colorée</dt><dd>Le sac s’étale : sa surface colorée apparente augmente.</dd></div>
+            <div><dt>Le contour pointillé</dt><dd>Le sac au repos reste visible comme référence pendant la manipulation. <a class="source-num" href="#ref1" aria-label="Voir la source 1">[1]</a></dd></div>
+          </dl>
           <label class="chromato-label" for="chromato-curseur">Niveau d’étalement du pigment</label>
-          <input id="chromato-curseur" class="chromato-curseur" disabled type="range" min="0" max="100" value="18" aria-describedby="chromato-consigne chromato-etat" aria-valuetext="Peu étalé">
+          <input id="chromato-curseur" class="chromato-curseur" disabled type="range" min="0" max="100" value="18" aria-describedby="chromato-modele chromato-consigne chromato-etat" aria-valuetext="Peu étalé">
           <p class="chromato-etat" id="chromato-etat" aria-live="polite">Au repos : le sac est compact et la tache colorée est petite.</p>
           <noscript><p>Schéma statique : au repos, le sac pigmentaire est compact ; lorsque les muscles se contractent, il s’étale et la tache colorée devient plus visible.</p></noscript>
+          <noscript><div class="chromato-etats-statiques" id="chromato-etats-statiques">
+              <figure><svg viewBox="160 0 280 240" role="img" aria-labelledby="chromato-static-repos"><title id="chromato-static-repos">Muscles relâchés : sac compact, petite tache colorée.</title><circle cx="300" cy="118" r="118" fill="#F2EDE3"/><g stroke="#667582" stroke-width="4" stroke-linecap="round"><line x1="326.00" y1="118.00" x2="412.00" y2="118.00"/><line x1="323.35" y1="127.67" x2="403.47" y2="160.86"/><line x1="316.79" y1="134.79" x2="379.20" y2="197.20"/><line x1="308.60" y1="138.76" x2="342.86" y2="221.47"/><line x1="300.00" y1="140.00" x2="300.00" y2="230.00"/><line x1="291.40" y1="138.76" x2="257.14" y2="221.47"/><line x1="283.21" y1="134.79" x2="220.80" y2="197.20"/><line x1="276.65" y1="127.67" x2="196.53" y2="160.86"/><line x1="274.00" y1="118.00" x2="188.00" y2="118.00"/><line x1="276.65" y1="108.33" x2="196.53" y2="75.14"/><line x1="283.21" y1="101.21" x2="220.80" y2="38.80"/><line x1="291.40" y1="97.24" x2="257.14" y2="14.53"/><line x1="300.00" y1="96.00" x2="300.00" y2="6.00"/><line x1="308.60" y1="97.24" x2="342.86" y2="14.53"/><line x1="316.79" y1="101.21" x2="379.20" y2="38.80"/><line x1="323.35" y1="108.33" x2="403.47" y2="75.14"/></g><ellipse cx="300" cy="118" rx="26" ry="22" fill="#9C503E" stroke="#743729" stroke-width="3"/></svg><figcaption>Muscles relâchés : sac compact, petite tache colorée.</figcaption></figure>
+              <figure><svg viewBox="160 0 280 240" role="img" aria-labelledby="chromato-static-etale"><title id="chromato-static-etale">Muscles contractés : sac étalé, tache colorée plus grande.</title><circle cx="300" cy="118" r="118" fill="#F2EDE3"/><g stroke="#667582" stroke-width="4" stroke-linecap="round"><line x1="388.00" y1="118.00" x2="412.00" y2="118.00"/><line x1="368.97" y1="146.57" x2="403.47" y2="160.86"/><line x1="340.77" y1="158.77" x2="379.20" y2="197.20"/><line x1="318.62" y1="162.96" x2="342.86" y2="221.47"/><line x1="300.00" y1="164.00" x2="300.00" y2="230.00"/><line x1="281.38" y1="162.96" x2="257.14" y2="221.47"/><line x1="259.23" y1="158.77" x2="220.80" y2="197.20"/><line x1="231.03" y1="146.57" x2="196.53" y2="160.86"/><line x1="212.00" y1="118.00" x2="188.00" y2="118.00"/><line x1="231.03" y1="89.43" x2="196.53" y2="75.14"/><line x1="259.23" y1="77.23" x2="220.80" y2="38.80"/><line x1="281.38" y1="73.04" x2="257.14" y2="14.53"/><line x1="300.00" y1="72.00" x2="300.00" y2="6.00"/><line x1="318.62" y1="73.04" x2="342.86" y2="14.53"/><line x1="340.77" y1="77.23" x2="379.20" y2="38.80"/><line x1="368.97" y1="89.43" x2="403.47" y2="75.14"/></g><ellipse cx="300" cy="118" rx="88" ry="46" fill="#9C503E" stroke="#743729" stroke-width="3"/></svg><figcaption>Muscles contractés : sac étalé, tache colorée plus grande.</figcaption></figure>
+          </div></noscript>
         </figure>
 
         <h2 id="commande">Qui commande ces changements&nbsp;?</h2>
