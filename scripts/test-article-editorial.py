@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """Contrôles statiques indépendants des cinq articles THOT (Python + Pillow).
 
 Ne lance ni générateur ni navigateur et n'effectue aucun accès réseau.
@@ -6,6 +7,7 @@ Comparer aussi une future publication : --head <révision>, avec --revision
 pour choisir la sauvegarde de départ. Les tests visuels et le comportement
 réel des API de partage doivent faire l'objet de vérifications séparées.
 """
+import portable_io  # Encodage CLI stable, sans dépendance système.
 import argparse
 from collections import Counter
 from datetime import date
@@ -112,7 +114,7 @@ def read_json(text):
 
 def git(*args):
     return subprocess.check_output(["git", *args], cwd=ROOT, text=True,
-                                   timeout=10)
+                                   timeout=10, encoding="utf-8")
 
 
 def article_json(document):
@@ -145,13 +147,13 @@ def external_assets(document, tag, attribute):
 class EditorialTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.config = read_json((ROOT / "assets/article-editorial.json").read_text())
+        cls.config = read_json((ROOT / "assets/article-editorial.json").read_text(encoding="utf-8"))
         cls.records = cls.config["articles"]
         cls.pages, cls.originals = {}, {}
         for record in cls.records:
             slug = record["slug"]
             path = f"articles/{slug}.html"
-            cls.pages[slug] = Document((ROOT / path).read_text())
+            cls.pages[slug] = Document((ROOT / path).read_text(encoding="utf-8"))
             cls.originals[slug] = Document(runpy.run_path(str(ROOT / "scripts/editorial-amendments.py"))["amended_reference"](git("show", f"{OPTIONS.revision}:{path}"), path))
 
     def one(self, nodes, message):

@@ -1,38 +1,50 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """Comparaison historique : références intactes, vrais boutons et repli sans JS."""
+import portable_io  # Encodage CLI stable, sans dépendance système.
 from pathlib import Path
 import argparse
 import json
 import re
 import subprocess
 import sys
+import runpy
 sys.dont_write_bytecode = True
 from browser_fixture import ROOT, chromium, page_for, no_overflow
 
 
 def static_checks():
-    html = (ROOT / 'articles/puissance-etats-unis.html').read_text()
-    old = subprocess.check_output(['git', 'show', '917714a:articles/puissance-etats-unis.html'], cwd=ROOT, text=True)
+    html = (ROOT / 'articles/puissance-etats-unis.html').read_text(encoding="utf-8")
+    old = subprocess.check_output(['git', 'show', '917714a:articles/puissance-etats-unis.html'], cwd=ROOT, text=True, encoding="utf-8")
     pattern = r'<section class="comparateur-cas"[^>]*>([\s\S]*?)</section>'
     assert len(re.findall(pattern, html)) == 3
-    assert re.findall(pattern, html) == re.findall(pattern, old), 'Ancienne fiche ou source modifiée'
+    # Les changements de fond permis sont décrits par fragments exacts et sources.
+    approved = json.loads((ROOT / 'docs/CORRECTIONS-AUDIT-20261026.json').read_text(encoding='utf-8'))['changes']
+    expected = re.findall(pattern, old)
+    for index, fragment in enumerate(expected):
+        for amendment in approved:
+            if amendment['old'] in fragment:
+                assert fragment.count(amendment['old']) == 1 and amendment['sources']
+                fragment = fragment.replace(amendment['old'], amendment['new'], 1)
+        expected[index] = fragment
+    assert re.findall(pattern, html) == expected, 'Fiche modifiée hors des corrections éditoriales autorisées'
     assert 'id="comparateur-reference-commandes" hidden' in html
     assert 'id="comparateur-simultane" hidden' in html
     assert 'L’Iran reste consultable seul' in html
     for target in ('ref9', 'ref10', 'ref18', 'ref15'):
         assert f'id="{target}"' in html
-    amendments = json.loads((ROOT / 'docs/CORRECTIONS-SCIENTIFIQUES-THOT20.json').read_text())
+    amendments = json.loads((ROOT / 'docs/CORRECTIONS-SCIENTIFIQUES-THOT20.json').read_text(encoding="utf-8"))
     revised = [item for item in amendments['changes'] if item['path'] == 'articles/puissance-etats-unis.html']
     if revised:
         # La mission THOT 2.0 autorise une précision de fond, pas une simple UI.
         assert any('exclusion des autorités extérieures' in item['new'] and item['sources'] for item in revised)
-        records = json.loads((ROOT / 'assets/article-editorial.json').read_text())['articles']
+        records = json.loads((ROOT / 'assets/article-editorial.json').read_text(encoding="utf-8"))['articles']
         record = next(item for item in records if item['slug'] == 'puissance-etats-unis')
         assert re.findall(r'"dateModified":\s*"([^"]+)"', html) == [record['editorial_updated']]
         assert 'Krasner' in record['editorial_scope']
     else:
         assert re.findall(r'"dateModified":\s*"([^"]+)"', html) == re.findall(r'"dateModified":\s*"([^"]+)"', old), 'Date scientifique avancée pour une seule modification d’interface'
-    print('PASS : trois fiches strictement intactes, périmètre historique explicite, sources présentes, date cohérente avec le seul amendement scientifique autorisé.')
+    print('PASS : trois fiches conservées avec les seuls amendements documentés, périmètre historique explicite, sources et date cohérentes.')
 
 
 def check_cells(page, reference, other):
@@ -122,7 +134,7 @@ def browser_checks(output):
         # Si le nouveau tableau est incomplet, le choix de fiche d’origine reste utilisable.
         context, page, errors = page_for(browser, 'articles/puissance-etats-unis.html', 390, javascript=False)
         page.evaluate("document.querySelector('#comparateur-simultane').remove()")
-        page.evaluate((ROOT / 'assets/puissance-comparateur.js').read_text())
+        page.evaluate((ROOT / 'assets/puissance-comparateur.js').read_text(encoding="utf-8"))
         assert not page.locator('#comparateur-reference-commandes').is_visible()
         assert page.locator('.comparateur-choix').is_visible()
         assert page.locator('#comparateur-afghanistan').is_visible()
@@ -133,14 +145,14 @@ def browser_checks(output):
               'without_javascript': True, 'reduced_motion': True,
               'method': 'Chromium réel avec fixture locale des HTML/CSS/JS, sans navigation réseau.',
               'limits': ['Photographies externes non chargées.', 'Lecteur d’écran et téléphone physique non testés.']}
-    (output / 'puissance-tests.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
+    (output / 'puissance-tests.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding="utf-8")
     print('PASS : Chromium à 320/390/768/1440 px, référence dans les deux sens, quatre critères et sources exacts, Entrée/Espace natifs, focus, Iran séparé, repli sans JS, garde composant incomplet, aucun débordement ni erreur JavaScript.')
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--browser', action='store_true')
-    parser.add_argument('--output', type=Path, default=Path('/workspace/THOT-INTERACTIVITE-TESTS'))
+    parser.add_argument('--output', type=Path, default=ROOT.parent / 'THOT-INTERACTIVITE-TESTS')
     args = parser.parse_args()
     static_checks()
     if args.browser:

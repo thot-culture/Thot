@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """Compare le contenu protégé des six dernières pages avec la révision auditée.
 
 Nécessite l'historique Git local (fourni dans le bundle de livraison).
@@ -9,6 +10,7 @@ est conservé par une empreinte dédiée dans scripts/test-autorite-decode.mjs.
 Les données JSON-LD sont comparées comme objets ; seuls image et dateModified
 peuvent évoluer dans les cinq articles, jamais datePublished.
 """
+import portable_io  # Encodage CLI stable, sans dépendance système.
 import argparse
 from html.parser import HTMLParser
 import json
@@ -115,7 +117,7 @@ new_article_ids = {"article-editorial-dates", "article-share",
 pages = [Path("quiz-autrices.html"), *[p.relative_to(root) for p in sorted((root / "articles").glob("*.html"))]]
 for path in pages:
     before_html = original(path).decode()
-    after_html = (root / path).read_text()
+    after_html = (root / path).read_text(encoding="utf-8")
     ignored_ids = {"quiz-load-status"}
     if path in article_pages:
         ignored_ids.update(new_article_ids)
@@ -131,6 +133,9 @@ for path in pages:
     # Seuls les libellés de durée et les ajouts d’interface nommés sont normalisés.
     # Le générateur --check vérifie indépendamment chaque durée.
     def duration_ui(html):
+        # Libellé de commande du sommaire, distinct du contenu de l’article.
+        html = html.replace('<summary>Explorer</summary>', '<summary>Sommaire</summary>')
+        html = html.replace('<p class="sommaire-surtitle">Dans cet article</p><h2>Explorer</h2>', '<p class="sommaire-surtitle">Dans cet article</p><h2>Sommaire</h2>')
         html = re.sub(r'(<span id="duree">)[^<]*', r'\1Temps de lecture estimé', html)
         return re.sub(r'\d+ min de lecture', 'DUREE min de lecture', html)
     ignored_ids.update({"site-parcours", "site-lecture-nav", "activites-autorite-aide", "comparateur-entree-directe",
@@ -150,7 +155,7 @@ for path in pages:
     print(f"PASS conservation : {path}, {len(after.words)} mots, {len(after.links)} liens éditoriaux")
 
 before = json.loads(original("assets/illustrations.json"))
-after = json.loads((root / "assets/illustrations.json").read_text())
+after = json.loads((root / "assets/illustrations.json").read_text(encoding="utf-8"))
 require(before.keys() == after.keys(), "liste des illustrations modifiée")
 for key, record in before.items():
     require(record.keys() == after[key].keys(), f"champs modifiés dans {key}")
@@ -160,5 +165,6 @@ for key, record in before.items():
         require(value == after[key][field], f"illustration {key}, champ {field} modifié")
 for level in ("facile", "intermediaire", "expert"):
     path = f"assets/questions-{level}.js"
-    require(original(path) == (root / path).read_bytes(), f"banque {level} modifiée")
-print("PASS catalogue : légendes, crédits, licences et notices conservés ; banques de questions inchangées.")
+    expected = runpy.run_path(str(root / "scripts/editorial-amendments.py"))["amended_quiz_bank"](original(path).decode("utf-8"), path)
+    require(expected.encode("utf-8") == (root / path).read_bytes(), f"banque {level} modifiée hors des explications autorisées")
+print("PASS catalogue : légendes, crédits et notices conservés ; banques inchangées sauf dix explications documentées.")

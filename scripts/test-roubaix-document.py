@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """Source intacte et lecture réelle dans Chromium via une fixture locale hors réseau."""
+import portable_io  # Encodage CLI stable, sans dépendance système.
 from pathlib import Path
 import argparse
 import hashlib
@@ -13,8 +15,8 @@ from browser_fixture import ROOT, chromium, page_for, no_overflow
 
 
 def static_checks():
-    html = (ROOT / 'articles/roubaix-1917.html').read_text()
-    source = json.loads((ROOT / 'docs/DOCUMENT-ROUBAIX-LAINE.json').read_text())
+    html = (ROOT / 'articles/roubaix-1917.html').read_text(encoding="utf-8")
+    source = json.loads((ROOT / 'docs/DOCUMENT-ROUBAIX-LAINE.json').read_text(encoding="utf-8"))
     assert source['sha1'] == '7abb531df5971f90dffb4a47eef23f295beaafb1'
     original = (ROOT / source['original']).read_bytes()
     assert hashlib.sha1(original).hexdigest() == source['sha1']
@@ -24,7 +26,7 @@ def static_checks():
     with Image.open(ROOT / source['preview']) as image:
         assert image.size == (500, 681); image.verify()
     assert (ROOT / source['preview']).stat().st_size < 160000
-    before = subprocess.check_output(['git', 'show', '917714a:articles/roubaix-1917.html'], cwd=ROOT, text=True)
+    before = subprocess.check_output(['git', 'show', '917714a:articles/roubaix-1917.html'], cwd=ROOT, text=True, encoding="utf-8")
     guide = r'<section class="thot-visual-guide"[\s\S]*?</section>'
     assert re.search(guide, before)[0] == re.search(guide, html)[0], 'Commentaire original modifié'
     assert len(re.findall(r'<li><strong>', html[html.index('id="roubaix-reperes-texte"'):html.index('class="thot-simple-intro"')])) == 8
@@ -100,14 +102,14 @@ def browser_checks(output):
     report = {'ok': True, 'views': results, 'keyboard': True, 'load_failure': True, 'without_javascript': True,
               'method': 'Chromium réel, fixture locale avec CSS/JS et images locales réels incorporés ; aucune navigation réseau.',
               'limits': ['Ressources externes non chargées.', 'Lecteur d’écran et téléphone physique non testés.']}
-    (output / 'roubaix-tests.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
+    (output / 'roubaix-tests.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding="utf-8")
     print('PASS : Chromium à 320/390/768/1440 px, zoom, repères, clavier réel, panne image, sans JS, aucun débordement ni erreur JavaScript.')
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--browser', action='store_true')
-    parser.add_argument('--output', type=Path, default=Path('/workspace/THOT-INTERACTIVITE-TESTS'))
+    parser.add_argument('--output', type=Path, default=ROOT.parent / 'THOT-INTERACTIVITE-TESTS')
     args = parser.parse_args()
     static_checks()
     if args.browser:

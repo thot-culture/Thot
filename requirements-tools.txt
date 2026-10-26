@@ -1,0 +1,2 @@
+# Génération des cartes sociales (polices fournies dans tools/fonts/dejavu).
+Pillow==12.3.0

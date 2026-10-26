@@ -21,7 +21,7 @@ const decode = value => value.replace(/&(?:amp|quot|apos|lt|gt|#\d+|#x[\da-f]+);
 async function walk(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
   const nested = await Promise.all(entries
-    .filter(entry => !['.git', 'node_modules'].includes(entry.name))
+    .filter(entry => !['.git', 'node_modules', '.venv', 'venv', '__pycache__'].includes(entry.name))
     .map(entry => entry.isDirectory() ? walk(resolve(directory, entry.name)) : resolve(directory, entry.name)));
   return nested.flat();
 }

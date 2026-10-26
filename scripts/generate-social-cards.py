@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """Render THOT's original typographic Open Graph cards with Pillow.
 
 No network access, photos, random data or website build dependency.
 Run with --help for generation and deterministic verification commands.
 """
 from __future__ import annotations
+import portable_io  # Encodage CLI stable, sans dépendance système.
 
 import argparse
 from dataclasses import dataclass
@@ -22,7 +24,7 @@ NAVY = '#17243A'
 CREAM = '#F8F6F1'
 GOLD = '#B89558'
 MUTED = '#455164'
-DEFAULT_FONT_DIR = Path('/usr/share/fonts/truetype/dejavu')
+DEFAULT_FONT_DIR = ROOT / 'tools' / 'fonts' / 'dejavu'
 
 
 @dataclass(frozen=True)
@@ -72,7 +74,7 @@ def font(font_dir: Path, filename: str, size: int) -> ImageFont.FreeTypeFont:
     if not path.is_file():
         raise SystemExit(
             f'Police requise absente : {path}\n'
-            'Installer fonts-dejavu-core ou utiliser --font-directory avec les mêmes fichiers.')
+            'Restaurer tools/fonts/dejavu ou utiliser --font-directory avec les mêmes fichiers et leurs licences.')
     return ImageFont.truetype(str(path), size * SCALE)
 
 

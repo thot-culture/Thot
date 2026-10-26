@@ -1,0 +1,105 @@
+{
+  "base": "8157d53",
+  "changes": [
+    {
+      "path": "assets/questions-intermediaire.js",
+      "question": "Dans quel pays se trouve la région historique de Transylvanie ?",
+      "old": "Winston Churchill devient Premier ministre britannique en mai 1940 et dirige le pays jusqu'en juillet 1945.",
+      "new": "La Transylvanie est une région historique située dans l’actuelle Roumanie.",
+      "reason": "Explication décalée de question ; réponse et identifiant textuel conservés.",
+      "sources": [
+        "https://whc.unesco.org/en/list/596/"
+      ]
+    },
+    {
+      "path": "assets/questions-intermediaire.js",
+      "question": "Quel fleuve traverse Prague ?",
+      "old": "La Transylvanie se situe aujourd'hui en Roumanie, bien que son histoire soit liée à plusieurs royaumes et empires.",
+      "new": "Prague est traversée par la Vltava.",
+      "reason": "Explication décalée de question ; réponse et identifiant textuel conservés.",
+      "sources": [
+        "https://pid.cz/en/ferries/"
+      ]
+    },
+    {
+      "path": "assets/questions-intermediaire.js",
+      "question": "Quelle péninsule comprend principalement la Norvège et la Suède ?",
+      "old": "Prague est traversée par la Vltava, nommée Moldau en allemand, affluent de l'Elbe.",
+      "new": "La péninsule Scandinave comprend principalement la Norvège et la Suède.",
+      "reason": "Explication décalée de question ; réponse et identifiant textuel conservés.",
+      "sources": [
+        "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Earth_from_Space_Scandinavian_Peninsula"
+      ]
+    },
+    {
+      "path": "assets/questions-intermediaire.js",
+      "question": "Quel pays a pour capitale Addis-Abeba ?",
+      "old": "La péninsule Scandinave comprend principalement la Norvège et la Suède, et une partie du nord-ouest de la Finlande.",
+      "new": "Addis-Abeba est la capitale de l’Éthiopie.",
+      "reason": "Explication décalée de question ; réponse et identifiant textuel conservés.",
+      "sources": [
+        "https://pap.au.int/en/member-states/ethiopia"
+      ]
+    },
+    {
+      "path": "assets/questions-intermediaire.js",
+      "question": "Dans quel océan se trouvent les Maldives ?",
+      "old": "Addis-Abeba est la capitale de l'Éthiopie et le siège de l'Union africaine.",
+      "new": "Les Maldives forment un archipel de l’océan Indien.",
+      "reason": "Explication décalée de question ; réponse et identifiant textuel conservés.",
+      "sources": [
+        "https://incois.gov.in/site/services/about_maldives.jsp"
+      ]
+    },
+    {
+      "path": "assets/questions-intermediaire.js",
+      "question": "Quel détroit sépare la France de l'Angleterre au point le plus étroit ?",
+      "old": "Les Maldives sont un archipel situé dans l'océan Indien, au sud-ouest de l'Inde.",
+      "new": "Le pas de Calais, ou détroit de Douvres, forme la partie la plus étroite de la Manche entre la France et l’Angleterre.",
+      "reason": "Explication décalée de question ; réponse et identifiant textuel conservés.",
+      "sources": [
+        "https://science.nasa.gov/earth/earth-observatory/the-strait-of-dover-6840/"
+      ]
+    },
+    {
+      "path": "assets/questions-intermediaire.js",
+      "question": "Quel pays partage l'île d'Hispaniola avec Haïti ?",
+      "old": "Le pas de Calais est le passage le plus étroit entre les côtes anglaises et françaises.",
+      "new": "L’île d’Hispaniola est partagée entre Haïti et la République dominicaine.",
+      "reason": "Explication décalée de question ; réponse et identifiant textuel conservés.",
+      "sources": [
+        "https://science.nasa.gov/missions/landsat/hispaniolas-changing-forests/"
+      ]
+    },
+    {
+      "path": "assets/questions-intermediaire.js",
+      "question": "Quel pays du Moyen-Orient possède la ville historique de Pétra ?",
+      "old": "L'île d'Hispaniola est partagée entre Haïti et la République dominicaine.",
+      "new": "Pétra est un ancien site nabatéen situé dans l’actuelle Jordanie.",
+      "reason": "Explication décalée de question ; réponse et identifiant textuel conservés.",
+      "sources": [
+        "https://www.doa.gov.jo/EN/ListDetails/World_Heritage_Sites_in_Jordan/1158/2"
+      ]
+    },
+    {
+      "path": "assets/questions-intermediaire.js",
+      "question": "À quel État appartient le Groenland en tant que territoire autonome ?",
+      "old": "Pétra est un ancien site nabatéen situé dans l'actuelle Jordanie.",
+      "new": "Le Groenland dispose d’une large autonomie au sein du royaume du Danemark ; il n’est pas un État indépendant.",
+      "reason": "Explication décalée de question ; réponse et identifiant textuel conservés.",
+      "sources": [
+        "https://um.dk/en/foreign-policy/the-arctic/greenland-and-the-faroe-islands"
+      ]
+    },
+    {
+      "path": "assets/questions-intermediaire.js",
+      "question": "Quel homme politique dirige le Royaume-Uni pendant la majeure partie de la Seconde Guerre mondiale ?",
+      "old": "Le Groenland est un territoire autonome du royaume du Danemark, sans être un État souverain.",
+      "new": "Winston Churchill est Premier ministre britannique de 1940 à 1945, pendant la majeure partie de la Seconde Guerre mondiale.",
+      "reason": "Explication décalée de question ; réponse et identifiant textuel conservés.",
+      "sources": [
+        "https://www.gov.uk/government/history/past-prime-ministers/winston-churchill?m=0"
+      ]
+    }
+  ]
+}

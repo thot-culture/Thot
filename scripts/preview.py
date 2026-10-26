@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """Aperçu local fidèle au préfixe GitHub Pages : http://127.0.0.1:8765/Thot/."""
+import portable_io  # Encodage CLI stable, sans dépendance système.
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import urlsplit

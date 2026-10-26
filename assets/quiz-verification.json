@@ -1,0 +1,5571 @@
+{
+  "version": 1,
+  "reviewed_batch": "2026-10-26",
+  "verified_count": 24,
+  "records": [
+    {
+      "id": "q-5e60d9fc9d2b5713",
+      "question": "Quelle cité grecque met fin à la domination militaire spartiate lors de la bataille de Leuctres, en 371 av. J.-C. ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Athènes",
+          "Thèbes",
+          "Corinthe",
+          "Argos"
+        ],
+        "correct": 1,
+        "why": "À Leuctres, l’armée thébaine commandée notamment par Épaminondas bat les Spartiates. Cette victoire bouleverse l’équilibre des puissances grecques."
+      }
+    },
+    {
+      "id": "q-d97a56957463d16a",
+      "question": "En quelle année la Magna Carta est-elle scellée en Angleterre ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "1066",
+          "1215",
+          "1453",
+          "1689"
+        ],
+        "correct": 1,
+        "why": "La Magna Carta est scellée en 1215 sous Jean sans Terre. Elle devient un texte de référence dans l’histoire des limites imposées au pouvoir royal."
+      }
+    },
+    {
+      "id": "q-45afb7c5327294c7",
+      "question": "Quel événement parisien du 14 juillet 1789 est devenu un symbole de la Révolution française ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le sacre de Napoléon",
+          "La prise de la Bastille",
+          "La bataille de Waterloo",
+          "La Commune de Paris"
+        ],
+        "correct": 1,
+        "why": "La prise de la Bastille, le 14 juillet 1789, est l’un des événements emblématiques du début de la Révolution française."
+      }
+    },
+    {
+      "id": "q-01afa0e81ccf9022",
+      "question": "Où l’archiduc François-Ferdinand est-il assassiné en 1914 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Vienne",
+          "Berlin",
+          "Sarajevo",
+          "Prague"
+        ],
+        "correct": 2,
+        "why": "L’assassinat a lieu à Sarajevo, le 28 juin 1914. Il déclenche une crise diplomatique qui mène à la Première Guerre mondiale."
+      }
+    },
+    {
+      "id": "q-d19cf2971da3db56",
+      "question": "En quelle année la pierre de Rosette est-elle découverte ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "1799",
+          "1822",
+          "1889",
+          "1922"
+        ],
+        "correct": 0,
+        "why": "Des soldats français découvrent la pierre de Rosette en 1799. Elle contribuera au déchiffrement des hiéroglyphes, notamment grâce à Champollion."
+      }
+    },
+    {
+      "id": "q-37aafb30caa131f3",
+      "question": "Quelle est la capitale de l’Australie ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Sydney",
+          "Melbourne",
+          "Canberra",
+          "Perth"
+        ],
+        "correct": 2,
+        "why": "Canberra est la capitale fédérale de l’Australie. Sydney et Melbourne sont plus peuplées, mais ne sont pas la capitale."
+      }
+    },
+    {
+      "id": "q-1014e50a2b89d8c0",
+      "question": "Quels sont les deux pays qui entourent la Mongolie ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Chine et Russie",
+          "Chine et Inde",
+          "Russie et Kazakhstan",
+          "Inde et Pakistan"
+        ],
+        "correct": 0,
+        "why": "La Mongolie est enclavée entre la Russie au nord et la Chine au sud, à l’est et à l’ouest."
+      }
+    },
+    {
+      "id": "q-640c3eff3f686d86",
+      "question": "Dans quelle mer le Danube se jette-t-il ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Mer du Nord",
+          "Mer Baltique",
+          "Mer Adriatique",
+          "Mer Noire"
+        ],
+        "correct": 3,
+        "why": "Le Danube traverse ou borde plusieurs pays européens avant de former un vaste delta sur la mer Noire."
+      }
+    },
+    {
+      "id": "q-7b2f24fad793ffe1",
+      "question": "Quel pays est entièrement enclavé dans l’Afrique du Sud ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Eswatini",
+          "Lesotho",
+          "Botswana",
+          "Namibie"
+        ],
+        "correct": 1,
+        "why": "Le Lesotho est totalement entouré par l’Afrique du Sud. L’Eswatini possède aussi une frontière avec le Mozambique."
+      }
+    },
+    {
+      "id": "q-57756ecc847f7fb0",
+      "question": "Quelle ville est la capitale constitutionnelle de la Bolivie ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La Paz",
+          "Santa Cruz",
+          "Sucre",
+          "Cochabamba"
+        ],
+        "correct": 2,
+        "why": "Sucre est la capitale constitutionnelle de la Bolivie, tandis que La Paz accueille le gouvernement et le parlement."
+      }
+    },
+    {
+      "id": "q-175b793d510687f7",
+      "question": "Quel gaz est le plus abondant dans l’atmosphère terrestre ?",
+      "status": "verified",
+      "verified_on": "2026-10-26",
+      "sources": [
+        {
+          "title": "NASA — Atmosphère terrestre",
+          "url": "https://science.nasa.gov/earth/facts/"
+        }
+      ],
+      "justification": "Composition près de la surface : environ 78 % d’azote et 21 % d’oxygène.",
+      "answer_snapshot": {
+        "a": [
+          "Oxygène",
+          "Azote",
+          "Dioxyde de carbone",
+          "Argon"
+        ],
+        "correct": 1,
+        "why": "L’azote représente environ 78 % de l’atmosphère terrestre, contre environ 21 % pour l’oxygène."
+      }
+    },
+    {
+      "id": "q-15f1d612b40ea600",
+      "question": "Combien de cœurs possède une pieuvre ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Un",
+          "Deux",
+          "Trois",
+          "Quatre"
+        ],
+        "correct": 2,
+        "why": "La pieuvre possède trois cœurs : deux dirigent le sang vers les branchies et un vers le reste du corps."
+      }
+    },
+    {
+      "id": "q-7051d825ccaceb8b",
+      "question": "Pourquoi Mars paraît-elle rouge ?",
+      "status": "verified",
+      "verified_on": "2026-10-26",
+      "sources": [
+        {
+          "title": "NASA — Mars : surface et couleur",
+          "url": "https://science.nasa.gov/mars/facts/"
+        }
+      ],
+      "justification": "La couleur rougeâtre est attribuée à l’oxydation du fer des roches, du régolithe et de la poussière.",
+      "answer_snapshot": {
+        "a": [
+          "Ses océans",
+          "Le fer oxydé de sa surface",
+          "Son atmosphère de méthane",
+          "La lumière de Jupiter"
+        ],
+        "correct": 1,
+        "why": "La poussière et les roches martiennes contiennent des oxydes de fer, responsables de cette couleur rougeâtre."
+      }
+    },
+    {
+      "id": "q-e8a41f6560c2bd4d",
+      "question": "Quelle est la vitesse approximative de la lumière dans le vide ?",
+      "status": "verified",
+      "verified_on": "2026-10-26",
+      "sources": [
+        {
+          "title": "NIST — Vitesse de la lumière dans le vide",
+          "url": "https://physics.nist.gov/cuu/Constants/Value/c.html"
+        }
+      ],
+      "justification": "Valeur exacte : 299 792 458 m/s, soit environ 300 000 km/s. La comparaison avec le tour terrestre est un ordre de grandeur.",
+      "answer_snapshot": {
+        "a": [
+          "3 000 km/s",
+          "30 000 km/s",
+          "300 000 km/s",
+          "3 000 000 km/s"
+        ],
+        "correct": 2,
+        "why": "La lumière se déplace dans le vide à environ 299 792 km/s. En une seconde, elle ferait plus de sept fois le tour de la Terre."
+      }
+    },
+    {
+      "id": "q-124d993f4caae859",
+      "question": "Que signifie le A dans ADN ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Aminé",
+          "Acide",
+          "Atomique",
+          "Actif"
+        ],
+        "correct": 1,
+        "why": "ADN signifie « acide désoxyribonucléique ». Cette molécule contient l’information génétique des êtres vivants."
+      }
+    },
+    {
+      "id": "q-5c7ebd75c5df06f6",
+      "question": "Qui a peint Guernica ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Salvador Dalí",
+          "Pablo Picasso",
+          "Joan Miró",
+          "Francisco de Goya"
+        ],
+        "correct": 1,
+        "why": "Picasso peint Guernica en 1937, après le bombardement de la ville basque pendant la guerre d’Espagne."
+      }
+    },
+    {
+      "id": "q-55e07b8a3402668d",
+      "question": "Qui a composé La Flûte enchantée ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Beethoven",
+          "Vivaldi",
+          "Mozart",
+          "Bach"
+        ],
+        "correct": 2,
+        "why": "La Flûte enchantée est un opéra de Mozart créé à Vienne en 1791, quelques mois avant sa mort."
+      }
+    },
+    {
+      "id": "q-779e3915701f7763",
+      "question": "Quel écrivain est l’auteur des Misérables ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Émile Zola",
+          "Honoré de Balzac",
+          "Victor Hugo",
+          "Gustave Flaubert"
+        ],
+        "correct": 2,
+        "why": "Victor Hugo publie Les Misérables en 1862. Jean Valjean, Cosette et Javert en sont parmi les personnages les plus connus."
+      }
+    },
+    {
+      "id": "q-e0ba2f3ea10e9204",
+      "question": "Quel peintre a réalisé Impression, soleil levant ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Claude Monet",
+          "Auguste Renoir",
+          "Edgar Degas",
+          "Paul Cézanne"
+        ],
+        "correct": 0,
+        "why": "Cette toile de Claude Monet, présentée en 1874, donne son nom au mouvement impressionniste."
+      }
+    },
+    {
+      "id": "q-e888b16a3fac8704",
+      "question": "Qui a peint La Joconde ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Raphaël",
+          "Michel-Ange",
+          "Léonard de Vinci",
+          "Le Caravage"
+        ],
+        "correct": 2,
+        "why": "Léonard de Vinci peint La Joconde au début du XVIe siècle. L’œuvre est aujourd’hui conservée au musée du Louvre."
+      }
+    },
+    {
+      "id": "q-5896c4aaf0b2e3fd",
+      "question": "Quel animal est particulièrement associé au dieu égyptien Thot ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le lion",
+          "L’ibis",
+          "Le scarabée",
+          "Le crocodile"
+        ],
+        "correct": 1,
+        "why": "Thot, dieu égyptien lié au savoir, à l’écriture et au calcul, est souvent représenté avec une tête d’ibis ; il peut aussi apparaître sous la forme d’un babouin."
+      }
+    },
+    {
+      "id": "q-525998e873385443",
+      "question": "En quelle année ont lieu les premiers Jeux olympiques modernes ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "1796",
+          "1850",
+          "1896",
+          "1924"
+        ],
+        "correct": 2,
+        "why": "Les premiers Jeux olympiques de l’ère moderne se déroulent à Athènes en 1896, sous l’impulsion notamment de Pierre de Coubertin."
+      }
+    },
+    {
+      "id": "q-77800ec9f0d3c239",
+      "question": "Comment s’appelle le premier timbre-poste adhésif émis au monde ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Penny Black",
+          "Blue Mauritius",
+          "Red Dragon",
+          "One Cent Magenta"
+        ],
+        "correct": 0,
+        "why": "Le Penny Black apparaît au Royaume-Uni en 1840. Il porte le portrait de la reine Victoria et vaut un penny."
+      }
+    },
+    {
+      "id": "q-f3399878e098a945",
+      "question": "Quel animal est un symbole national traditionnel de l’Écosse ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La licorne",
+          "Le panda",
+          "Le koala",
+          "Le flamant rose"
+        ],
+        "correct": 0,
+        "why": "La licorne est l’animal national traditionnel de l’Écosse. Elle apparaît dans son héraldique depuis plusieurs siècles."
+      }
+    },
+    {
+      "id": "q-b4aa8a7adba78e49",
+      "question": "De quelles deux lettres grecques vient le mot « alphabet » ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Gamma et delta",
+          "Alpha et bêta",
+          "Pi et sigma",
+          "Oméga et thêta"
+        ],
+        "correct": 1,
+        "why": "Le mot alphabet vient des deux premières lettres de l’alphabet grec : alpha et bêta."
+      }
+    },
+    {
+      "id": "q-67ef9a68af8c743f",
+      "question": "Quel empereur français est vaincu à Waterloo en 1815 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Napoléon Ier",
+          "Charlemagne",
+          "Louis XIV",
+          "Napoléon III"
+        ],
+        "correct": 0,
+        "why": "Napoléon Ier est défait par les armées alliées en juin 1815. Sa défaite met fin aux Cent-Jours."
+      }
+    },
+    {
+      "id": "q-8fff03db983e46d5",
+      "question": "Qui est surnommé « le Roi-Soleil » ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "François Ier",
+          "Henri IV",
+          "Louis XIV",
+          "Louis XVI"
+        ],
+        "correct": 2,
+        "why": "Louis XIV règne personnellement de 1661 à 1715 et fait de Versailles le centre du pouvoir royal."
+      }
+    },
+    {
+      "id": "q-cdc2ac9ea0ddf8a2",
+      "question": "Quel siècle voit débuter la Première Guerre mondiale ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "XVIIIe",
+          "XIXe",
+          "XXe",
+          "XXIe"
+        ],
+        "correct": 2,
+        "why": "La Première Guerre mondiale commence en 1914, au début du XXe siècle."
+      }
+    },
+    {
+      "id": "q-45fb00f5773079a0",
+      "question": "Dans quelle civilisation les pyramides de Gizeh ont-elles été construites ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Romaine",
+          "Égyptienne",
+          "Maya",
+          "Grecque"
+        ],
+        "correct": 1,
+        "why": "Les grandes pyramides de Gizeh ont été édifiées durant l'Ancien Empire égyptien."
+      }
+    },
+    {
+      "id": "q-4492ed708b3f4b00",
+      "question": "Qui a été la première femme à recevoir un prix Nobel ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Marie Curie",
+          "Simone Veil",
+          "George Sand",
+          "Ada Lovelace"
+        ],
+        "correct": 0,
+        "why": "Marie Curie reçoit le prix Nobel de physique en 1903, puis celui de chimie en 1911."
+      }
+    },
+    {
+      "id": "q-de7f7a47d971275c",
+      "question": "Quel mur est tombé le 9 novembre 1989 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Mur d'Hadrien",
+          "Mur de Berlin",
+          "Grande Muraille",
+          "Mur des Lamentations"
+        ],
+        "correct": 1,
+        "why": "L'ouverture du mur de Berlin devient un symbole de la fin de la division de l'Europe durant la guerre froide."
+      }
+    },
+    {
+      "id": "q-63bccc367176fe2e",
+      "question": "Quel traité de 1919 impose les principales conditions de paix à l'Allemagne ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Traité de Versailles",
+          "Traité de Maastricht",
+          "Traité de Rome",
+          "Traité de Tordesillas"
+        ],
+        "correct": 0,
+        "why": "Signé en juin 1919, le traité de Versailles fixe les conditions de paix avec l'Allemagne après la Première Guerre mondiale."
+      }
+    },
+    {
+      "id": "q-3185875394fe9af4",
+      "question": "Quel souverain anglais rompt avec Rome au XVIe siècle ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Henri II",
+          "Henri VIII",
+          "Édouard Ier",
+          "Richard III"
+        ],
+        "correct": 1,
+        "why": "Sous Henri VIII, l'Église d'Angleterre rompt avec l'autorité du pape dans les années 1530."
+      }
+    },
+    {
+      "id": "q-64468f6e4218b732",
+      "question": "Quel chef carthaginois franchit les Alpes avec son armée pendant la deuxième guerre punique ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Hannibal",
+          "Scipion",
+          "César",
+          "Périclès"
+        ],
+        "correct": 0,
+        "why": "Hannibal traverse les Alpes en 218 av. J.-C. pour porter la guerre sur le territoire romain."
+      }
+    },
+    {
+      "id": "q-5fe81aa996213ef2",
+      "question": "Quel texte de 1598 accorde des droits limités aux protestants français ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Édit de Nantes",
+          "Code civil",
+          "Déclaration des droits",
+          "Édit de Villers-Cotterêts"
+        ],
+        "correct": 0,
+        "why": "L'édit de Nantes, promulgué par Henri IV, organise une coexistence religieuse limitée dans le royaume."
+      }
+    },
+    {
+      "id": "q-143d76916ec007eb",
+      "question": "À quelle date Constantinople tombe-t-elle aux mains des Ottomans ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "1204",
+          "1348",
+          "1453",
+          "1517"
+        ],
+        "correct": 2,
+        "why": "La prise de Constantinople par Mehmed II en 1453 marque la fin de l'Empire byzantin."
+      }
+    },
+    {
+      "id": "q-d40e06446d6c68fa",
+      "question": "Quel nom porte la période de gouvernement révolutionnaire française de 1793-1794 associée aux mesures d'exception ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La Régence",
+          "La Terreur",
+          "La Restauration",
+          "Le Directoire"
+        ],
+        "correct": 1,
+        "why": "La Terreur désigne notamment la répression politique liée au gouvernement révolutionnaire en 1793-1794."
+      }
+    },
+    {
+      "id": "q-a6584477960c6000",
+      "question": "Quel historien antique écrit La Guerre du Péloponnèse ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Tacite",
+          "Hérodote",
+          "Thucydide",
+          "Polybe"
+        ],
+        "correct": 2,
+        "why": "Thucydide analyse le conflit entre Athènes, Sparte et leurs alliés au Ve siècle av. J.-C."
+      }
+    },
+    {
+      "id": "q-c6d065c98e7b08e8",
+      "question": "Qui commande les forces thébaines à Leuctres en 371 av. J.-C. ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Miltiade",
+          "Épaminondas",
+          "Alcibiade",
+          "Démosthène"
+        ],
+        "correct": 1,
+        "why": "Épaminondas est l'un des principaux chefs thébains de cette victoire contre Sparte."
+      }
+    },
+    {
+      "id": "q-8d150895dce57cdd",
+      "question": "Quel souverain promulgue l'ordonnance de Villers-Cotterêts en 1539 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Louis XI",
+          "Charles VII",
+          "François Ier",
+          "Henri III"
+        ],
+        "correct": 2,
+        "why": "François Ier promulgue cette ordonnance, qui renforce notamment l'usage du français dans les actes de justice."
+      }
+    },
+    {
+      "id": "q-1280f079d4b3de55",
+      "question": "Quel congrès redessine une grande partie de l'Europe après la chute de Napoléon ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Congrès de Vienne",
+          "Congrès de Berlin",
+          "Congrès de Paris de 1856",
+          "Congrès de Vérone"
+        ],
+        "correct": 0,
+        "why": "Le congrès de Vienne (1814-1815) organise un nouvel équilibre diplomatique européen."
+      }
+    },
+    {
+      "id": "q-b0e69d5436bb67b9",
+      "question": "Quelle dynastie règne sur la France lors du massacre de la Saint-Barthélemy en 1572 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Capétiens directs",
+          "Valois",
+          "Bourbons",
+          "Mérovingiens"
+        ],
+        "correct": 1,
+        "why": "Charles IX appartient à la dynastie des Valois lors du massacre de 1572."
+      }
+    },
+    {
+      "id": "q-563c4772c2883735",
+      "question": "Quelle réforme introduit les départements français en 1790 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Réforme territoriale de la Constituante",
+          "Concordat",
+          "Code Napoléon",
+          "Loi de séparation"
+        ],
+        "correct": 0,
+        "why": "L'Assemblée constituante crée les départements dans une réorganisation du territoire révolutionnaire."
+      }
+    },
+    {
+      "id": "q-fe8003520cf53ed0",
+      "question": "Quel est le plus grand océan de la planète ?",
+      "status": "verified",
+      "verified_on": "2026-10-26",
+      "sources": [
+        {
+          "title": "NOAA — Le plus grand bassin océanique",
+          "url": "https://oceanservice.noaa.gov/facts/biggestocean.html"
+        }
+      ],
+      "justification": "Le Pacifique possède la plus grande superficie parmi les bassins océaniques.",
+      "answer_snapshot": {
+        "a": [
+          "Atlantique",
+          "Indien",
+          "Pacifique",
+          "Arctique"
+        ],
+        "correct": 2,
+        "why": "Le Pacifique couvre une surface plus étendue que tous les autres océans."
+      }
+    },
+    {
+      "id": "q-796d973586b1893c",
+      "question": "Sur quel continent se trouve le Kenya ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Asie",
+          "Afrique",
+          "Europe",
+          "Amérique du Sud"
+        ],
+        "correct": 1,
+        "why": "Le Kenya se situe en Afrique de l'Est, au bord de l'océan Indien."
+      }
+    },
+    {
+      "id": "q-38fdfeda1880318f",
+      "question": "Quelle est la capitale de l'Italie ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Milan",
+          "Naples",
+          "Rome",
+          "Turin"
+        ],
+        "correct": 2,
+        "why": "Rome devient officiellement la capitale du royaume d'Italie en 1871, après la prise de la ville l'année précédente. Avant elle, Turin puis Florence avaient exercé ce rôle."
+      }
+    },
+    {
+      "id": "q-3fbfb8849e562877",
+      "question": "Quel fleuve traverse Paris ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La Loire",
+          "Le Rhône",
+          "La Seine",
+          "La Garonne"
+        ],
+        "correct": 2,
+        "why": "La Seine traverse Paris avant de rejoindre la Manche en Normandie."
+      }
+    },
+    {
+      "id": "q-8f7d23ffc1b7e29d",
+      "question": "Quelle chaîne de montagnes sépare traditionnellement la France et l'Espagne ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Alpes",
+          "Pyrénées",
+          "Apennins",
+          "Carpates"
+        ],
+        "correct": 1,
+        "why": "Les Pyrénées s'étendent entre l'Atlantique et la Méditerranée, le long de la frontière franco-espagnole."
+      }
+    },
+    {
+      "id": "q-1c96a37f075dfef8",
+      "question": "Dans quel pays se trouve la ville de Kyoto ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Chine",
+          "Japon",
+          "Corée du Sud",
+          "Thaïlande"
+        ],
+        "correct": 1,
+        "why": "Kyoto a été le siège de la cour impériale japonaise pendant plus d'un millénaire, avant le transfert de la capitale à Tokyo au début de l'ère Meiji."
+      }
+    },
+    {
+      "id": "q-5060ee4a37234425",
+      "question": "Quelle est la capitale de la Nouvelle-Zélande ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Auckland",
+          "Christchurch",
+          "Wellington",
+          "Dunedin"
+        ],
+        "correct": 2,
+        "why": "Wellington est la capitale néo-zélandaise, même si Auckland est plus peuplée."
+      }
+    },
+    {
+      "id": "q-d97ddb4c648bc74d",
+      "question": "Quel détroit sépare l'Europe de l'Afrique à l'ouest de la Méditerranée ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Bosphore",
+          "Gibraltar",
+          "Béring",
+          "Malacca"
+        ],
+        "correct": 1,
+        "why": "Le détroit de Gibraltar relie l'Atlantique à la Méditerranée entre l'Espagne et le Maroc."
+      }
+    },
+    {
+      "id": "q-80394da26d18e1b2",
+      "question": "Dans quel pays se trouve le lac Titicaca avec la Bolivie ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Chili",
+          "Pérou",
+          "Équateur",
+          "Argentine"
+        ],
+        "correct": 1,
+        "why": "Le lac Titicaca s'étend de part et d'autre de la frontière entre le Pérou et la Bolivie."
+      }
+    },
+    {
+      "id": "q-a1b512accc6178a7",
+      "question": "À quelle mer le port jordanien d’Aqaba donne-t-il accès ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Mer Rouge",
+          "Mer Noire",
+          "Mer Baltique",
+          "Mer Caspienne"
+        ],
+        "correct": 0,
+        "why": "La Jordanie possède un court littoral sur le golfe d'Aqaba, partie de la mer Rouge."
+      }
+    },
+    {
+      "id": "q-e79b06ac0547a406",
+      "question": "Quel fleuve passe par Budapest ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le Rhin",
+          "La Vistule",
+          "Le Danube",
+          "L'Elbe"
+        ],
+        "correct": 2,
+        "why": "Budapest s'étend de part et d'autre du Danube, qui traverse aussi Vienne et Bratislava."
+      }
+    },
+    {
+      "id": "q-34260ec28da61c96",
+      "question": "Quel pays d'Amérique du Sud ne possède aucun accès à la mer, comme le Paraguay ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Uruguay",
+          "Bolivie",
+          "Pérou",
+          "Suriname"
+        ],
+        "correct": 1,
+        "why": "La Bolivie et le Paraguay sont les deux États enclavés d'Amérique du Sud."
+      }
+    },
+    {
+      "id": "q-47b6f9853fc8341a",
+      "question": "Quelle capitale se trouve sur l'île de Honshū ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Séoul",
+          "Taipei",
+          "Tokyo",
+          "Manille"
+        ],
+        "correct": 2,
+        "why": "Tokyo est située sur Honshū, la plus vaste des îles principales du Japon. Elle se trouve dans la région du Kantō, sur la côte orientale de l'île."
+      }
+    },
+    {
+      "id": "q-822197649e3d7644",
+      "question": "Quel pays possède l'enclave de Cabinda, séparée de son territoire principal ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Angola",
+          "Mozambique",
+          "Namibie",
+          "Zambie"
+        ],
+        "correct": 0,
+        "why": "Cabinda est une province angolaise séparée du reste du pays par une bande territoriale de la République démocratique du Congo."
+      }
+    },
+    {
+      "id": "q-2aa23268fc6550f1",
+      "question": "Quel détroit relie la mer Noire à la mer de Marmara ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Gibraltar",
+          "Dardanelles",
+          "Bosphore",
+          "Ormuz"
+        ],
+        "correct": 2,
+        "why": "Le Bosphore traverse Istanbul et relie la mer Noire à la mer de Marmara ; les Dardanelles mènent ensuite vers la mer Égée."
+      }
+    },
+    {
+      "id": "q-ff27fbcb82fe6e2e",
+      "question": "Dans quel État se situe le point culminant de l'Afrique, le Kilimandjaro ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Kenya",
+          "Tanzanie",
+          "Ouganda",
+          "Éthiopie"
+        ],
+        "correct": 1,
+        "why": "Le Kilimandjaro se trouve en Tanzanie, près de la frontière kenyane."
+      }
+    },
+    {
+      "id": "q-bd60bfbb6f40091f",
+      "question": "Quel État insulaire se situe à l'est de Madagascar dans l'océan Indien ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Maurice",
+          "Cap-Vert",
+          "Barbade",
+          "Malte"
+        ],
+        "correct": 0,
+        "why": "L'île Maurice est située à l'est de Madagascar, dans l'archipel des Mascareignes."
+      }
+    },
+    {
+      "id": "q-4bd5a08485c1ad42",
+      "question": "Quel désert occupe une grande partie de la Mongolie méridionale et de la Chine septentrionale ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Kalahari",
+          "Gobi",
+          "Atacama",
+          "Taklamakan"
+        ],
+        "correct": 1,
+        "why": "Le Gobi s'étend sur le sud de la Mongolie et le nord de la Chine."
+      }
+    },
+    {
+      "id": "q-08cce2bb4d568a12",
+      "question": "Quelle planète est la plus proche du Soleil ?",
+      "status": "verified",
+      "verified_on": "2026-10-26",
+      "sources": [
+        {
+          "title": "NASA — Mercure",
+          "url": "https://science.nasa.gov/mercury/"
+        }
+      ],
+      "justification": "Mercure est explicitement décrite comme la planète la plus proche du Soleil.",
+      "answer_snapshot": {
+        "a": [
+          "Terre",
+          "Mars",
+          "Mercure",
+          "Vénus"
+        ],
+        "correct": 2,
+        "why": "Mercure est la planète du Système solaire la plus proche du Soleil."
+      }
+    },
+    {
+      "id": "q-3c85f7ccfa3591ea",
+      "question": "Quel organe pompe le sang dans le corps humain ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le foie",
+          "Le cœur",
+          "Le rein",
+          "Le poumon"
+        ],
+        "correct": 1,
+        "why": "Le cœur propulse le sang dans les circulations pulmonaire et générale."
+      }
+    },
+    {
+      "id": "q-63a445da08cb9332",
+      "question": "Quelle est la formule chimique de l'eau ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "CO₂",
+          "O₂",
+          "H₂O",
+          "NaCl"
+        ],
+        "correct": 2,
+        "why": "Une molécule d'eau contient deux atomes d'hydrogène et un atome d'oxygène."
+      }
+    },
+    {
+      "id": "q-6429ca1b3bb8292f",
+      "question": "Comment s'appelle le processus par lequel les plantes utilisent la lumière pour produire de la matière organique ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Photosynthèse",
+          "Fermentation",
+          "Érosion",
+          "Osmose"
+        ],
+        "correct": 0,
+        "why": "La photosynthèse utilise notamment l'énergie lumineuse, l'eau et le dioxyde de carbone."
+      }
+    },
+    {
+      "id": "q-cc650a40a4126e3f",
+      "question": "Combien de pattes possède un insecte adulte ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Quatre",
+          "Six",
+          "Huit",
+          "Dix"
+        ],
+        "correct": 1,
+        "why": "Les insectes adultes ont trois paires de pattes, soit six au total."
+      }
+    },
+    {
+      "id": "q-5a6875d8019a288b",
+      "question": "Quel satellite naturel tourne autour de la Terre ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Titan",
+          "Phobos",
+          "La Lune",
+          "Europe"
+        ],
+        "correct": 2,
+        "why": "La Lune est l'unique satellite naturel permanent de la Terre."
+      }
+    },
+    {
+      "id": "q-1e98b30fea2a01d4",
+      "question": "Quel scientifique propose les lois du mouvement et de la gravitation universelle ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Isaac Newton",
+          "Albert Einstein",
+          "Charles Darwin",
+          "Louis Pasteur"
+        ],
+        "correct": 0,
+        "why": "Newton publie ses lois du mouvement et de la gravitation dans les Principia en 1687."
+      }
+    },
+    {
+      "id": "q-c0413f2b989c865c",
+      "question": "Quelle unité mesure l'intensité du courant électrique ?",
+      "status": "verified",
+      "verified_on": "2026-10-26",
+      "sources": [
+        {
+          "title": "BIPM — Ampère",
+          "url": "https://www.bipm.org/en/si-base-units/ampere"
+        }
+      ],
+      "justification": "L’ampère est l’unité SI de courant électrique ; le volt correspond à une différence de potentiel.",
+      "answer_snapshot": {
+        "a": [
+          "Volt",
+          "Ampère",
+          "Watt",
+          "Ohm"
+        ],
+        "correct": 1,
+        "why": "L'ampère mesure l'intensité électrique ; le volt mesure la différence de potentiel."
+      }
+    },
+    {
+      "id": "q-2785b115da863109",
+      "question": "Quel élément chimique a pour symbole Fe ?",
+      "status": "verified",
+      "verified_on": "2026-10-26",
+      "sources": [
+        {
+          "title": "IUPAC — Origine des symboles chimiques",
+          "url": "https://list.iupac.org/reports/periodic_table/index.html"
+        }
+      ],
+      "justification": "Fe dérive de ferrum. Passage institutionnel consulté dans l’index ; l’accès direct automatisé est restreint.",
+      "answer_snapshot": {
+        "a": [
+          "Fluor",
+          "Fer",
+          "Francium",
+          "Phosphore"
+        ],
+        "correct": 1,
+        "why": "Le symbole chimique Fe vient du latin ferrum, qui désigne le fer. C'est pourquoi il ne reprend pas les deux premières lettres de son nom français."
+      }
+    },
+    {
+      "id": "q-d13b972cfa586bf9",
+      "question": "Quel type d'étoile est le Soleil ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Naine blanche",
+          "Géante rouge",
+          "Naine jaune de séquence principale",
+          "Étoile à neutrons"
+        ],
+        "correct": 2,
+        "why": "Le Soleil est une étoile de type spectral G2V, appartenant à la séquence principale."
+      }
+    },
+    {
+      "id": "q-90d4ce06ef8e0669",
+      "question": "Quel phénomène explique principalement les marées terrestres ?",
+      "status": "verified",
+      "verified_on": "2026-10-26",
+      "sources": [
+        {
+          "title": "NOAA — Causes des marées",
+          "url": "https://oceanservice.noaa.gov/education/tutorial_tides/tides02_cause.html"
+        }
+      ],
+      "justification": "Attractions de la Lune et du Soleil ; leur effet différentiel produit les forces de marée.",
+      "answer_snapshot": {
+        "a": [
+          "Le vent",
+          "L'attraction gravitationnelle de la Lune et du Soleil",
+          "La rotation de Mars",
+          "Les courants océaniques seulement"
+        ],
+        "correct": 1,
+        "why": "Les marées résultent surtout de l'effet différentiel des attractions gravitationnelles lunaire et solaire."
+      }
+    },
+    {
+      "id": "q-7bafb8f0d685d13e",
+      "question": "Comment nomme-t-on une particule de lumière ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Proton",
+          "Neutron",
+          "Photon",
+          "Électron"
+        ],
+        "correct": 2,
+        "why": "Le photon est le quantum de lumière, autrement dit une excitation élémentaire du champ électromagnétique. Il transporte de l'énergie, même s'il n'a pas de masse au repos."
+      }
+    },
+    {
+      "id": "q-078e8dcfd2d7aee4",
+      "question": "Quel organite est le principal lieu de production d'ATP par respiration cellulaire chez les eucaryotes ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le noyau",
+          "La mitochondrie",
+          "Le ribosome",
+          "Le lysosome"
+        ],
+        "correct": 1,
+        "why": "La mitochondrie réalise notamment la phosphorylation oxydative qui produit une grande part de l'ATP cellulaire."
+      }
+    },
+    {
+      "id": "q-a5a24ffc1cd4259f",
+      "question": "Quelle particule subatomique porte une charge électrique négative ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Proton",
+          "Neutron",
+          "Électron",
+          "Photon"
+        ],
+        "correct": 2,
+        "why": "L'électron a une charge négative ; le proton porte une charge positive."
+      }
+    },
+    {
+      "id": "q-f3d6937d27d4c280",
+      "question": "Quel nom porte la limite au-delà de laquelle la lumière ne peut plus s'échapper d'un trou noir ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Horizon des événements",
+          "Héliopause",
+          "Zone habitable",
+          "Photosphère"
+        ],
+        "correct": 0,
+        "why": "L'horizon des événements est la frontière causale au-delà de laquelle aucun signal ne peut atteindre l'extérieur du trou noir."
+      }
+    },
+    {
+      "id": "q-b8e4ae1258bb4763",
+      "question": "Quel physicien a formulé le principe d'incertitude en mécanique quantique ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Niels Bohr",
+          "Werner Heisenberg",
+          "Enrico Fermi",
+          "Max Planck"
+        ],
+        "correct": 1,
+        "why": "Heisenberg formule en 1927 un principe limitant la précision simultanée de certaines paires d'observables."
+      }
+    },
+    {
+      "id": "q-c03a1518e7ebad1b",
+      "question": "Quel acide nucléique utilise l'uracile à la place de la thymine dans ses bases courantes ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "ADN",
+          "ARN",
+          "Protéine",
+          "Lipide"
+        ],
+        "correct": 1,
+        "why": "L'ARN contient en général de l'uracile, alors que l'ADN utilise de la thymine."
+      }
+    },
+    {
+      "id": "q-5a4f09e4e4d9dda1",
+      "question": "Quel processus produit de l'énergie dans le cœur du Soleil ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Fission nucléaire",
+          "Fusion nucléaire",
+          "Combustion chimique",
+          "Désintégration du carbone"
+        ],
+        "correct": 1,
+        "why": "Le Soleil tire l'essentiel de son énergie de la fusion de l'hydrogène en hélium."
+      }
+    },
+    {
+      "id": "q-18a0d93d9347160d",
+      "question": "Qui a écrit Le Petit Prince ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Jules Verne",
+          "Antoine de Saint-Exupéry",
+          "Albert Camus",
+          "Marcel Proust"
+        ],
+        "correct": 1,
+        "why": "Le Petit Prince paraît en 1943 sous la plume d'Antoine de Saint-Exupéry."
+      }
+    },
+    {
+      "id": "q-4cd9eade83a5409b",
+      "question": "Quel instrument possède des touches blanches et noires ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Violon",
+          "Trompette",
+          "Piano",
+          "Flûte"
+        ],
+        "correct": 2,
+        "why": "Le piano est un instrument à clavier dont les touches commandent des marteaux frappant des cordes."
+      }
+    },
+    {
+      "id": "q-5fa54656f0b63436",
+      "question": "Dans quelle ville se trouve le musée du Louvre ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Londres",
+          "Madrid",
+          "Paris",
+          "Rome"
+        ],
+        "correct": 2,
+        "why": "Le musée du Louvre se trouve à Paris, dans un ancien palais royal sur la rive droite de la Seine. Il est devenu un musée ouvert au public à la Révolution française, en 1793."
+      }
+    },
+    {
+      "id": "q-9f08e3f2b178f329",
+      "question": "Quel auteur a créé le personnage de Sherlock Holmes ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Agatha Christie",
+          "Arthur Conan Doyle",
+          "J. R. R. Tolkien",
+          "Charles Dickens"
+        ],
+        "correct": 1,
+        "why": "Arthur Conan Doyle fait apparaître Sherlock Holmes dans Une étude en rouge en 1887."
+      }
+    },
+    {
+      "id": "q-a34ce73c0f6e4c80",
+      "question": "Quelle couleur obtient-on en mélangeant du bleu et du jaune en peinture ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Violet",
+          "Orange",
+          "Vert",
+          "Rose"
+        ],
+        "correct": 2,
+        "why": "Dans le mélange traditionnel de pigments, le bleu et le jaune donnent généralement du vert."
+      }
+    },
+    {
+      "id": "q-182853c29f3ffe7f",
+      "question": "Quel art pratique principalement un chorégraphe ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Danse",
+          "Sculpture",
+          "Architecture",
+          "Photographie"
+        ],
+        "correct": 0,
+        "why": "Un chorégraphe imagine, compose et organise les mouvements d'une œuvre dansée, qu'elle soit classique, contemporaine ou issue d'autres styles de danse."
+      }
+    },
+    {
+      "id": "q-a53ec86df5cbc1b2",
+      "question": "À quel mouvement artistique Salvador Dalí est-il particulièrement associé ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Cubisme",
+          "Surréalisme",
+          "Impressionnisme",
+          "Pointillisme"
+        ],
+        "correct": 1,
+        "why": "Dalí est une figure majeure du surréalisme, notamment pour ses images oniriques."
+      }
+    },
+    {
+      "id": "q-223a22b8afcdc23b",
+      "question": "Qui est l'auteur de Madame Bovary ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Gustave Flaubert",
+          "Victor Hugo",
+          "Émile Zola",
+          "Stendhal"
+        ],
+        "correct": 0,
+        "why": "Flaubert publie Madame Bovary en volume en 1857 après sa parution en feuilleton."
+      }
+    },
+    {
+      "id": "q-3fd6b8504074aaaf",
+      "question": "Dans quelle ville se trouve la basilique de la Sagrada Família ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Lisbonne",
+          "Barcelone",
+          "Florence",
+          "Bruxelles"
+        ],
+        "correct": 1,
+        "why": "La Sagrada Família est l'œuvre architecturale emblématique d'Antoni Gaudí à Barcelone."
+      }
+    },
+    {
+      "id": "q-30bac4e2834ae1cd",
+      "question": "Qui a écrit la pièce En attendant Godot ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Samuel Beckett",
+          "Eugène Ionesco",
+          "Jean Racine",
+          "Jean Anouilh"
+        ],
+        "correct": 0,
+        "why": "Samuel Beckett écrit En attendant Godot à la fin des années 1940 ; sa création parisienne date de 1953."
+      }
+    },
+    {
+      "id": "q-df5fee4ff1909e21",
+      "question": "Quel compositeur a écrit Les Quatre Saisons ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Bach",
+          "Vivaldi",
+          "Haydn",
+          "Debussy"
+        ],
+        "correct": 1,
+        "why": "Les Quatre Saisons sont un ensemble de quatre concertos pour violon d'Antonio Vivaldi."
+      }
+    },
+    {
+      "id": "q-86e8369d59b4af4b",
+      "question": "Quel peintre est associé au plafond de la chapelle Sixtine ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Raphaël",
+          "Titien",
+          "Michel-Ange",
+          "Botticelli"
+        ],
+        "correct": 2,
+        "why": "Michel-Ange peint les fresques de la voûte de la chapelle Sixtine entre 1508 et 1512."
+      }
+    },
+    {
+      "id": "q-d4173a37876ff4db",
+      "question": "Quel romancier est l'auteur du cycle À la recherche du temps perdu ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Marcel Proust",
+          "André Gide",
+          "Louis-Ferdinand Céline",
+          "François Mauriac"
+        ],
+        "correct": 0,
+        "why": "Proust publie les premiers volumes de sa Recherche à partir de 1913."
+      }
+    },
+    {
+      "id": "q-589121a92dd3fc64",
+      "question": "Quel mouvement artistique est associé à Piet Mondrian et au groupe De Stijl ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Expressionnisme abstrait",
+          "Néoplasticisme",
+          "Rococo",
+          "Baroque"
+        ],
+        "correct": 1,
+        "why": "Mondrian développe un langage abstrait fondé sur les lignes orthogonales et les couleurs primaires."
+      }
+    },
+    {
+      "id": "q-482eb940758b99c9",
+      "question": "Qui réalise le film Rashōmon, sorti en 1950 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Yasujirō Ozu",
+          "Akira Kurosawa",
+          "Kenji Mizoguchi",
+          "Hayao Miyazaki"
+        ],
+        "correct": 1,
+        "why": "Rashōmon est réalisé par Akira Kurosawa et contribue à la reconnaissance internationale du cinéma japonais."
+      }
+    },
+    {
+      "id": "q-65ecb6712716e92a",
+      "question": "Quel architecte a conçu la Villa Savoye à Poissy ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le Corbusier",
+          "Frank Lloyd Wright",
+          "Auguste Perret",
+          "Jean Nouvel"
+        ],
+        "correct": 0,
+        "why": "La Villa Savoye, conçue par Le Corbusier et Pierre Jeanneret, illustre les principes de l'architecture moderne."
+      }
+    },
+    {
+      "id": "q-35137cbb2cae4048",
+      "question": "Quel auteur latin a écrit les Métamorphoses ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Horace",
+          "Ovide",
+          "Virgile",
+          "Cicéron"
+        ],
+        "correct": 1,
+        "why": "Les Métamorphoses d'Ovide rassemblent des récits mythologiques de transformations."
+      }
+    },
+    {
+      "id": "q-cefde46ac9282c85",
+      "question": "Dans quel roman apparaît le personnage de Raskolnikov ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Anna Karénine",
+          "Crime et Châtiment",
+          "Les Frères Karamazov",
+          "Le Joueur"
+        ],
+        "correct": 1,
+        "why": "Raskolnikov est le protagoniste de Crime et Châtiment de Fiodor Dostoïevski."
+      }
+    },
+    {
+      "id": "q-6e2ced12ec3a5ff1",
+      "question": "Quel animal est capable de changer rapidement de couleur grâce à des cellules spécialisées ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Caméléon",
+          "Cheval",
+          "Pigeon",
+          "Lapin"
+        ],
+        "correct": 0,
+        "why": "Les caméléons modifient leur apparence grâce à des structures particulières de leur peau, notamment pour communiquer et réguler leur température."
+      }
+    },
+    {
+      "id": "q-3de93d0f61f394ae",
+      "question": "Quel objet a été inventé avant le téléphone portable ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le fax",
+          "Le smartphone",
+          "Le GPS automobile",
+          "La tablette tactile moderne"
+        ],
+        "correct": 0,
+        "why": "Des systèmes de télécopie existent au XIXe siècle, bien avant la téléphonie mobile."
+      }
+    },
+    {
+      "id": "q-aaefa49aff1e4b50",
+      "question": "Quel fruit porte ses petites structures ressemblant à des graines sur l'extérieur ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Banane",
+          "Fraise",
+          "Pomme",
+          "Cerise"
+        ],
+        "correct": 1,
+        "why": "Les petits grains visibles à la surface des fraises sont des akènes ; la partie rouge est un réceptacle charnu."
+      }
+    },
+    {
+      "id": "q-db3a41ed854ff0a4",
+      "question": "Quel animal peut dormir debout grâce à un mécanisme de verrouillage des membres ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Cheval",
+          "Dauphin",
+          "Manchot",
+          "Poulpe"
+        ],
+        "correct": 0,
+        "why": "Le cheval peut se reposer debout grâce à son appareil de soutien, même si le sommeil paradoxal nécessite généralement de se coucher."
+      }
+    },
+    {
+      "id": "q-fb6448f49f681466",
+      "question": "Quel animal produit traditionnellement la soie utilisée en textile ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Abeille",
+          "Ver à soie",
+          "Araignée de mer",
+          "Fourmi"
+        ],
+        "correct": 1,
+        "why": "Le ver à soie, larve du bombyx du mûrier, produit un fil pour former son cocon."
+      }
+    },
+    {
+      "id": "q-ee5440d542d221a6",
+      "question": "Quelle boisson doit son nom à une région d'Éthiopie selon une étymologie populaire non certaine ?",
+      "status": "needs_review",
+      "verified_on": null,
+      "sources": [
+        {
+          "title": "Académie française — Café",
+          "url": "https://www.dictionnaire-academie.fr/article/A9C0148"
+        }
+      ],
+      "justification": "Le rattachement populaire à Kaffa n’est pas établi par la référence institutionnelle consultée, qui décrit une filiation via le turc et l’arabe. Reformulation à prévoir lors d’une prochaine revue ; question non comptée comme vérifiée.",
+      "answer_snapshot": {
+        "a": [
+          "Thé",
+          "Café",
+          "Cacao",
+          "Maté"
+        ],
+        "correct": 1,
+        "why": "L'origine exacte du mot café est discutée ; le rapprochement avec Kaffa, en Éthiopie, est souvent cité, sans être assuré."
+      }
+    },
+    {
+      "id": "q-7d1a73d7c6e6d672",
+      "question": "Pourquoi les flamants roses ont-ils souvent un plumage rose ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "À cause de la lumière solaire",
+          "Grâce à des pigments apportés par leur alimentation",
+          "À cause du sel marin seul",
+          "Grâce à leur sang"
+        ],
+        "correct": 1,
+        "why": "Des caroténoïdes issus de leur nourriture contribuent à la couleur de leur plumage."
+      }
+    },
+    {
+      "id": "q-015b65147ab75ba3",
+      "question": "Quel aliment a été utilisé comme monnaie par certaines sociétés mésoaméricaines ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Fèves de cacao",
+          "Pommes de terre",
+          "Tomates",
+          "Grains de riz"
+        ],
+        "correct": 0,
+        "why": "Des fèves de cacao ont servi d'unité d'échange dans diverses sociétés mésoaméricaines."
+      }
+    },
+    {
+      "id": "q-c68cf817c60f7f56",
+      "question": "Quel est le principal composant chimique des perles naturelles ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Quartz",
+          "Carbonate de calcium",
+          "Fer",
+          "Silicium pur"
+        ],
+        "correct": 1,
+        "why": "Les perles sont surtout constituées de carbonate de calcium organisé en nacre."
+      }
+    },
+    {
+      "id": "q-5b8d8dd040c262c4",
+      "question": "Pourquoi les bananes commerciales courantes sont-elles généralement sans graines dures ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Elles poussent sous l'eau",
+          "Elles sont souvent triploïdes et peu fertiles",
+          "Elles sont récoltées avant leur floraison",
+          "Les graines se dissolvent dans le fruit"
+        ],
+        "correct": 1,
+        "why": "De nombreuses bananes cultivées sont triploïdes et se multiplient de manière végétative."
+      }
+    },
+    {
+      "id": "q-dc2b58531a525c09",
+      "question": "Quelle ville est connue pour son ancien système de courrier pneumatique urbain ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Paris",
+          "Venise",
+          "Athènes",
+          "Reykjavík"
+        ],
+        "correct": 0,
+        "why": "Paris a utilisé un réseau de tubes pneumatiques pour transporter des messages pendant plus d'un siècle."
+      }
+    },
+    {
+      "id": "q-ca4246ed2c78ffd4",
+      "question": "Quel animal est célèbre pour sa « danse » indiquant une source de nourriture ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Abeille",
+          "Loutre",
+          "Hérisson",
+          "Hibou"
+        ],
+        "correct": 0,
+        "why": "Les abeilles mellifères communiquent notamment par des danses fournissant des indications sur les ressources."
+      }
+    },
+    {
+      "id": "q-a20624c1b8970d1a",
+      "question": "Quel dispositif antique grec découvert dans une épave servait à modéliser des cycles astronomiques ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Machine d'Anticythère",
+          "Sphère armillaire de Tycho",
+          "Astrolabe de Prague",
+          "Boussole de Delphes"
+        ],
+        "correct": 0,
+        "why": "La machine d'Anticythère est un mécanisme à engrenages de l'Antiquité grecque lié aux calculs calendaires et astronomiques."
+      }
+    },
+    {
+      "id": "q-ffeecc88f0b9ff65",
+      "question": "Comment s'appelle l'illusion qui donne l'impression que la Lune est plus grande près de l'horizon ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Parallaxe stellaire",
+          "Illusion lunaire",
+          "Effet Doppler",
+          "Aberration chromatique"
+        ],
+        "correct": 1,
+        "why": "L'illusion lunaire est un phénomène perceptif : la taille angulaire de la Lune varie peu entre l'horizon et le zénith."
+      }
+    },
+    {
+      "id": "q-02ba5b0d9a9fa2c4",
+      "question": "Quel matériau préindustriel tiré de peaux animales était fréquemment utilisé pour les manuscrits ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Papyrus",
+          "Parchemin",
+          "Béton",
+          "Linoléum"
+        ],
+        "correct": 1,
+        "why": "Le parchemin est fabriqué à partir de peaux animales préparées, notamment de mouton, de chèvre ou de veau."
+      }
+    },
+    {
+      "id": "q-8d5f8baf57c540cb",
+      "question": "Quel oiseau est connu pour offrir parfois des cailloux lors de la parade nuptiale chez certaines espèces ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Manchot",
+          "Aigle royal",
+          "Autruche",
+          "Colibri"
+        ],
+        "correct": 0,
+        "why": "Certaines espèces de manchots utilisent des cailloux pour construire le nid, ce qui peut faire partie des interactions de couple."
+      }
+    },
+    {
+      "id": "q-584e7baf61b3fe92",
+      "question": "Quelle civilisation a utilisé des cordelettes nouées appelées quipus pour consigner des informations ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Inca",
+          "Viking",
+          "Égyptienne",
+          "Phénicienne"
+        ],
+        "correct": 0,
+        "why": "Les quipus étaient employés dans l'administration andine, notamment sous l'Empire inca."
+      }
+    },
+    {
+      "id": "q-b09b1d0079f9ff1a",
+      "question": "Quel nom donne-t-on au minuscule animal à huit pattes célèbre pour résister à des conditions extrêmes ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Rotifère",
+          "Tardigrade",
+          "Plancton",
+          "Collembole"
+        ],
+        "correct": 1,
+        "why": "Certains tardigrades peuvent survivre à des conditions extrêmes lorsqu'ils entrent dans un état de dormance."
+      }
+    },
+    {
+      "id": "q-e43e56525fa40b72",
+      "question": "La Première Guerre mondiale commence en 1914.",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 0,
+        "why": "Le conflit débute à l'été 1914, après la crise provoquée par l'assassinat de François-Ferdinand. Il s'achève en novembre 1918."
+      }
+    },
+    {
+      "id": "q-e901c99e714120fe",
+      "question": "Quels événements se déroulent au XVIIIe siècle ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La prise de la Bastille",
+          "Le sacre de Napoléon Ier",
+          "La Déclaration d'indépendance des États-Unis",
+          "La bataille de Waterloo"
+        ],
+        "correct": [
+          0,
+          2
+        ],
+        "why": "La Bastille est prise en 1789 et la Déclaration d'indépendance américaine date de 1776. Le sacre de Napoléon a lieu en 1804 et Waterloo en 1815."
+      }
+    },
+    {
+      "id": "q-8157579eb99e29be",
+      "question": "La guerre de Cent Ans oppose principalement les royaumes de France et d'Angleterre.",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 0,
+        "why": "De 1337 à 1453, les couronnes française et anglaise s'affrontent dans une succession de conflits, avec des alliances variables."
+      }
+    },
+    {
+      "id": "q-8cbed35c3485d907",
+      "question": "Quels souverains ont régné sur la France pendant au moins une partie du XVIe siècle ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "François Ier",
+          "Henri II",
+          "Henri IV",
+          "Louis XIII"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "François Ier règne de 1515 à 1547, Henri II de 1547 à 1559 et Henri IV de 1589 à 1610. Louis XIII monte sur le trône en 1610."
+      }
+    },
+    {
+      "id": "q-ff553eaff1ddaf56",
+      "question": "La paix d'Augsbourg de 1555 garantit la liberté de religion individuelle à tous les habitants du Saint-Empire.",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 1,
+        "why": "La paix d'Augsbourg reconnaît le droit de certains princes de choisir entre catholicisme et luthéranisme pour leur territoire ; elle n'établit pas une liberté religieuse individuelle générale."
+      }
+    },
+    {
+      "id": "q-888e0dd42d050d39",
+      "question": "Quelles institutions existaient dans la République romaine avant l'établissement du principat d'Auguste ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le Sénat",
+          "Le consulat",
+          "Le tribunat de la plèbe",
+          "La préfecture du prétoire sous l'Empire"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "Le Sénat, les consuls et les tribuns de la plèbe appartiennent à la vie politique républicaine. La préfecture du prétoire, dans sa forme impériale, apparaît sous Auguste."
+      }
+    },
+    {
+      "id": "q-3d1257e5b6ed1496",
+      "question": "L'équateur traverse le continent africain.",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 0,
+        "why": "L'équateur traverse notamment le Gabon, le Congo, la République démocratique du Congo, l'Ouganda, le Kenya et la Somalie."
+      }
+    },
+    {
+      "id": "q-6b8d0fa33041658d",
+      "question": "Quels pays se trouvent en Amérique du Sud ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La Colombie",
+          "Le Pérou",
+          "Le Portugal",
+          "L'Uruguay"
+        ],
+        "correct": [
+          0,
+          1,
+          3
+        ],
+        "why": "La Colombie, le Pérou et l'Uruguay sont sud-américains. Le Portugal se trouve en Europe, même s'il partage sa langue avec le Brésil."
+      }
+    },
+    {
+      "id": "q-7edcdd14ff9bd1fe",
+      "question": "Le canal de Suez relie directement la mer Méditerranée à la mer Noire.",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 1,
+        "why": "Le canal de Suez relie la Méditerranée à la mer Rouge, en Égypte. La mer Noire communique avec la Méditerranée par les détroits turcs."
+      }
+    },
+    {
+      "id": "q-fd640f66f793db1a",
+      "question": "Quels pays possèdent un littoral sur la mer Baltique ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "L'Estonie",
+          "La Finlande",
+          "La Pologne",
+          "La Norvège"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "L'Estonie, la Finlande et la Pologne bordent la mer Baltique. La Norvège possède un littoral sur les mers du Nord, de Norvège et de Barents, mais pas sur la Baltique."
+      }
+    },
+    {
+      "id": "q-659628a7655c0095",
+      "question": "Le Lesotho possède un accès direct à l'océan Indien.",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 1,
+        "why": "Le Lesotho est un État enclavé, entièrement entouré par l'Afrique du Sud : il n'a pas de littoral."
+      }
+    },
+    {
+      "id": "q-03b7dc0d9d696d28",
+      "question": "Quels États ont une frontière terrestre avec l'Iran ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "L'Azerbaïdjan",
+          "L'Afghanistan",
+          "Le Turkménistan",
+          "Oman"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "L'Iran a des frontières terrestres avec l'Azerbaïdjan, l'Afghanistan et le Turkménistan. Oman en est séparé par les eaux du détroit d'Ormuz et du golfe d'Oman."
+      }
+    },
+    {
+      "id": "q-af251623b7213837",
+      "question": "Une araignée possède six pattes.",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 1,
+        "why": "Les araignées adultes sont des arachnides à huit pattes ; les insectes adultes possèdent six pattes."
+      }
+    },
+    {
+      "id": "q-32fec35d8d437d96",
+      "question": "Quels objets appartiennent au Système solaire ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Mars",
+          "Titan",
+          "Saturne",
+          "Sirius"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "Mars et Saturne sont des planètes du Système solaire ; Titan est une lune de Saturne. Sirius est une étoile extérieure au Système solaire."
+      }
+    },
+    {
+      "id": "q-8aa53e065973e2fe",
+      "question": "Le numéro atomique de l'oxygène est 8.",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 0,
+        "why": "Le noyau d'un atome d'oxygène possède huit protons, ce qui définit son numéro atomique 8."
+      }
+    },
+    {
+      "id": "q-fe93a82caca13126",
+      "question": "Quels éléments chimiques sont des gaz nobles dans les conditions ordinaires ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "L'hélium",
+          "Le néon",
+          "L'argon",
+          "L'azote"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "L'hélium, le néon et l'argon appartiennent à la colonne des gaz nobles. L'azote est un gaz majoritaire de l'air, mais ce n'est pas un gaz noble."
+      }
+    },
+    {
+      "id": "q-e3c57348f264289c",
+      "question": "Dans l'ADN à double brin, l'adénine s'apparie normalement avec la cytosine.",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 1,
+        "why": "Dans l'ADN, l'adénine s'apparie normalement avec la thymine, tandis que la cytosine s'apparie avec la guanine."
+      }
+    },
+    {
+      "id": "q-ec446136934af585",
+      "question": "Quelles affirmations sont compatibles avec la sélection naturelle en biologie évolutive ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Des variations héréditaires peuvent influencer la reproduction",
+          "L'environnement peut modifier les pressions de sélection",
+          "Tous les caractères acquis pendant la vie sont hérités",
+          "La fréquence de certains caractères peut évoluer entre générations"
+        ],
+        "correct": [
+          0,
+          1,
+          3
+        ],
+        "why": "La variation héréditaire, les succès reproducteurs différents et l'évolution des fréquences de caractères sont centraux dans la sélection naturelle. La transmission systématique de tous les caractères acquis n'en découle pas."
+      }
+    },
+    {
+      "id": "q-fb8b641001c79c3e",
+      "question": "Victor Hugo est l'auteur du roman Notre-Dame de Paris.",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 0,
+        "why": "Victor Hugo publie Notre-Dame de Paris en 1831. Le roman met notamment en scène Esmeralda et Quasimodo."
+      }
+    },
+    {
+      "id": "q-fd2daae5590d52d3",
+      "question": "Quels instruments appartiennent à la famille des cordes ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le violon",
+          "Le violoncelle",
+          "La harpe",
+          "La trompette"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "Le violon, le violoncelle et la harpe produisent leurs sons grâce à des cordes vibrantes. La trompette est un instrument à vent de la famille des cuivres."
+      }
+    },
+    {
+      "id": "q-9373e8f0d068e53f",
+      "question": "Le cubisme apparaît avant l'impressionnisme.",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 1,
+        "why": "L'impressionnisme se développe dans la seconde moitié du XIXe siècle, tandis que le cubisme apparaît au début du XXe siècle, notamment avec Picasso et Braque."
+      }
+    },
+    {
+      "id": "q-9c9c7daa1ca0117b",
+      "question": "Quelles pièces ont été écrites par Molière ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le Misanthrope",
+          "L'Avare",
+          "Tartuffe",
+          "Le Cid"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "Le Misanthrope, L'Avare et Tartuffe sont des comédies de Molière. Le Cid est une pièce de Pierre Corneille."
+      }
+    },
+    {
+      "id": "q-4a154ab452e113de",
+      "question": "L'école du Bauhaus est fondée en France en 1919.",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 1,
+        "why": "Walter Gropius fonde le Bauhaus à Weimar, en Allemagne, en 1919. Cette école marquera le design, l'architecture et les arts appliqués."
+      }
+    },
+    {
+      "id": "q-271c4da379fcae17",
+      "question": "Quelles pièces sont des tragédies de Jean Racine ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Phèdre",
+          "Andromaque",
+          "Britannicus",
+          "Le Cid"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "Phèdre, Andromaque et Britannicus sont des tragédies de Racine. Le Cid est une pièce de Corneille, longtemps qualifiée de tragi-comédie."
+      }
+    },
+    {
+      "id": "q-9b3a644f6933caee",
+      "question": "Le miel est fabriqué par les abeilles à partir de substances sucrées récoltées, notamment le nectar.",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 0,
+        "why": "Les abeilles transforment notamment le nectar des fleurs grâce à des enzymes et à une réduction de sa teneur en eau pour produire du miel."
+      }
+    },
+    {
+      "id": "q-9b727f349e17dbbd",
+      "question": "Quels animaux pondent des œufs ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La tortue",
+          "L'autruche",
+          "L'ornithorynque",
+          "Le dauphin"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "Les tortues, les autruches et les ornithorynques pondent des œufs. Le dauphin est un mammifère vivipare."
+      }
+    },
+    {
+      "id": "q-938bcf709cf9cdd7",
+      "question": "Les poulpes possèdent un squelette interne composé d'os.",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 1,
+        "why": "Les poulpes ont un corps mou sans squelette osseux interne. Leur bec est une structure dure, mais ce n'est pas un os."
+      }
+    },
+    {
+      "id": "q-3f9f1042287f7acf",
+      "question": "Quelles techniques ou inventions existaient déjà au XIXe siècle ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La photographie",
+          "Le télégraphe électrique",
+          "Le téléphone",
+          "Le micro-ordinateur personnel"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "La photographie, le télégraphe électrique et le téléphone se développent au XIXe siècle. Les micro-ordinateurs personnels se diffusent au XXe siècle."
+      }
+    },
+    {
+      "id": "q-79d0c7e496029350",
+      "question": "La machine d'Anticythère a été découverte dans une épave de la mer Égée au début du XXe siècle.",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 0,
+        "why": "Le mécanisme est découvert en 1901 parmi les vestiges d'une épave près de l'île grecque d'Anticythère. Il permettait de calculer des cycles astronomiques."
+      }
+    },
+    {
+      "id": "q-46576d35b83aaac2",
+      "question": "Quels éléments caractérisent l'écriture cunéiforme de la Mésopotamie ancienne ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Des tablettes d'argile",
+          "Un stylet souvent en roseau",
+          "Des empreintes en forme de coins",
+          "L'alphabet latin comme système principal"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "Les scribes mésopotamiens inscrivaient souvent des signes en forme de coins avec un stylet sur des tablettes d'argile. L'alphabet latin n'est pas le système du cunéiforme."
+      }
+    },
+    {
+      "id": "q-d2085fc6dca1c390",
+      "question": "En quelle année Louis XVI est-il exécuté à Paris ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "1793",
+          "1789",
+          "1799",
+          "1815"
+        ],
+        "correct": 0,
+        "why": "Louis XVI est guillotiné le 21 janvier 1793, quelques mois après l'abolition de la monarchie."
+      }
+    },
+    {
+      "id": "q-22fb752643feece4",
+      "question": "Quel souverain romain reçoit le titre d'Auguste en 27 av. J.-C. ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Octavien",
+          "Néron",
+          "Jules César",
+          "Trajan"
+        ],
+        "correct": 0,
+        "why": "Octavien, fils adoptif de César, reçoit le titre d'Auguste et inaugure le principat."
+      }
+    },
+    {
+      "id": "q-f562e2fce8ff7b3b",
+      "question": "À quelle technique Johannes Gutenberg est-il associé au XVe siècle en Europe ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "L'imprimerie à caractères mobiles",
+          "La photographie",
+          "Le télégraphe électrique",
+          "La radiodiffusion"
+        ],
+        "correct": 0,
+        "why": "Gutenberg perfectionne l'impression à caractères métalliques mobiles en Europe vers le milieu du XVe siècle."
+      }
+    },
+    {
+      "id": "q-2f6e24f4101e5d23",
+      "question": "Dans quelle ville de Grèce antique se déroulaient les Jeux olympiques antiques ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Olympie",
+          "Athènes",
+          "Sparte",
+          "Delphes"
+        ],
+        "correct": 0,
+        "why": "Les concours olympiques antiques se tenaient dans le sanctuaire de Zeus à Olympie."
+      }
+    },
+    {
+      "id": "q-a98c3a8c700e7b3b",
+      "question": "À quel conflit Jeanne d'Arc est-elle particulièrement associée ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La guerre de Cent Ans",
+          "Les guerres napoléoniennes",
+          "La guerre de Trente Ans",
+          "La guerre des Gaules"
+        ],
+        "correct": 0,
+        "why": "Jeanne d'Arc joue un rôle militaire et politique durant la guerre de Cent Ans, notamment en 1429."
+      }
+    },
+    {
+      "id": "q-0664bdeec671e410",
+      "question": "Quel explorateur atteint les Caraïbes en 1492 pour le compte de la Castille ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Christophe Colomb",
+          "Vasco de Gama",
+          "Fernand de Magellan",
+          "James Cook"
+        ],
+        "correct": 0,
+        "why": "Christophe Colomb arrive dans les Caraïbes en octobre 1492 lors de sa première traversée de l'Atlantique."
+      }
+    },
+    {
+      "id": "q-88233d422cd16c70",
+      "question": "Quelle civilisation antique a construit le Colisée de Rome ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Les Romains",
+          "Les Phéniciens",
+          "Les Perses",
+          "Les Étrusques"
+        ],
+        "correct": 0,
+        "why": "Le Colisée est un amphithéâtre inauguré à Rome sous la dynastie flavienne, au Ier siècle."
+      }
+    },
+    {
+      "id": "q-739ac7f0407a515e",
+      "question": "Quel document de 1789 affirme en France la liberté et l'égalité en droits ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La Déclaration des droits de l'homme et du citoyen",
+          "Le Code civil",
+          "L'édit de Nantes",
+          "La Charte de 1814"
+        ],
+        "correct": 0,
+        "why": "La Déclaration du 26 août 1789 pose des principes de liberté et d'égalité juridique."
+      }
+    },
+    {
+      "id": "q-ff5da3dc4e5f7c16",
+      "question": "Charlemagne est couronné empereur à Rome en l'an 800.",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 0,
+        "why": "Le pape Léon III couronne Charlemagne empereur à Rome le jour de Noël de l'an 800."
+      }
+    },
+    {
+      "id": "q-89e05a2eda240984",
+      "question": "Quels personnages ont participé à la vie politique de la Révolution française ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Maximilien Robespierre",
+          "Georges Danton",
+          "Olympe de Gouges",
+          "Louis XIV"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "Robespierre et Danton sont des acteurs révolutionnaires, tandis qu'Olympe de Gouges intervient dans les débats sur les droits ; Louis XIV meurt en 1715."
+      }
+    },
+    {
+      "id": "q-485a6202425b225e",
+      "question": "Quelle ville est la capitale du Canada ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Ottawa",
+          "Toronto",
+          "Montréal",
+          "Vancouver"
+        ],
+        "correct": 0,
+        "why": "Ottawa est la capitale fédérale du Canada, située dans la province de l'Ontario."
+      }
+    },
+    {
+      "id": "q-1b55f1eca20085dd",
+      "question": "Quel désert s'étend sur une vaste partie de l'Afrique du Nord ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le Sahara",
+          "Le Gobi",
+          "L'Atacama",
+          "Le Kalahari"
+        ],
+        "correct": 0,
+        "why": "Le Sahara s'étend sur plusieurs pays du nord du continent africain."
+      }
+    },
+    {
+      "id": "q-ae45d518e77c7308",
+      "question": "Quel fleuve traverse Le Caire ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le Nil",
+          "Le Congo",
+          "Le Niger",
+          "Le Zambèze"
+        ],
+        "correct": 0,
+        "why": "Le Caire est situé sur le Nil, dont les eaux se dirigent ensuite vers son delta méditerranéen."
+      }
+    },
+    {
+      "id": "q-f2038d6d47e49111",
+      "question": "Sur quel continent se trouve la chaîne de l'Himalaya ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "L'Asie",
+          "L'Europe",
+          "L'Amérique du Sud",
+          "L'Afrique"
+        ],
+        "correct": 0,
+        "why": "L'Himalaya s'étend notamment entre le Népal, l'Inde, le Bhoutan et la Chine."
+      }
+    },
+    {
+      "id": "q-49499bb1582a2218",
+      "question": "Sur quel continent s'étend principalement la cordillère des Andes ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "L'Amérique du Sud",
+          "L'Afrique",
+          "L'Asie",
+          "L'Europe"
+        ],
+        "correct": 0,
+        "why": "Les Andes longent la bordure occidentale de l'Amérique du Sud."
+      }
+    },
+    {
+      "id": "q-917f05a6eb231eac",
+      "question": "Quelle ville est la capitale de l'Espagne ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Madrid",
+          "Barcelone",
+          "Séville",
+          "Valence"
+        ],
+        "correct": 0,
+        "why": "Madrid est le siège des principales institutions nationales espagnoles."
+      }
+    },
+    {
+      "id": "q-782f5374f615ed8a",
+      "question": "Quelle mer borde Marseille ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La Méditerranée",
+          "La mer Noire",
+          "La mer Baltique",
+          "La mer du Nord"
+        ],
+        "correct": 0,
+        "why": "Marseille est un grand port français sur la mer Méditerranée."
+      }
+    },
+    {
+      "id": "q-a15c05f992c68628",
+      "question": "Quel pays est constitué notamment des îles de Java, Sumatra et Bornéo en partie ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "L'Indonésie",
+          "Les Philippines",
+          "Le Japon",
+          "Madagascar"
+        ],
+        "correct": 0,
+        "why": "L'Indonésie comprend Java, Sumatra ainsi qu'une partie de Bornéo, appelée Kalimantan."
+      }
+    },
+    {
+      "id": "q-9267cfa0cc09c1a9",
+      "question": "Quel pays européen a Lisbonne pour capitale ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le Portugal",
+          "L'Espagne",
+          "L'Italie",
+          "La Grèce"
+        ],
+        "correct": 0,
+        "why": "Lisbonne est la capitale du Portugal, sur la façade atlantique de la péninsule Ibérique."
+      }
+    },
+    {
+      "id": "q-e992a3a8df0eccd2",
+      "question": "La mer Caspienne n'a pas de liaison naturelle directe avec les océans.",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 0,
+        "why": "Malgré son nom, la mer Caspienne est un bassin endoréique fermé, sans communication naturelle directe avec l'océan mondial."
+      }
+    },
+    {
+      "id": "q-ae1633255aae7d0e",
+      "question": "Lesquels de ces États se trouvent en Afrique ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le Ghana",
+          "Le Sénégal",
+          "La Tunisie",
+          "Le Chili"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "Ghana, Sénégal et Tunisie sont des États africains ; le Chili se trouve en Amérique du Sud."
+      }
+    },
+    {
+      "id": "q-69a4acadb06d4023",
+      "question": "Quel gaz est principalement transporté des poumons vers les tissus par le sang ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le dioxygène",
+          "Le diazote",
+          "L'hélium",
+          "Le néon"
+        ],
+        "correct": 0,
+        "why": "L'hémoglobine des globules rouges transporte le dioxygène depuis les poumons vers les tissus."
+      }
+    },
+    {
+      "id": "q-a365a1c87f428d5d",
+      "question": "Combien de planètes compte le Système solaire selon la classification actuelle ?",
+      "status": "verified",
+      "verified_on": "2026-10-26",
+      "sources": [
+        {
+          "title": "NASA — Planètes et classification",
+          "url": "https://science.nasa.gov/solar-system/planets/"
+        }
+      ],
+      "justification": "Huit planètes selon la définition de l’UAI de 2006 ; Pluton figure parmi les planètes naines. Vérification datée car la classification est conventionnelle.",
+      "answer_snapshot": {
+        "a": [
+          "Huit",
+          "Sept",
+          "Neuf",
+          "Dix"
+        ],
+        "correct": 0,
+        "why": "Le Système solaire comprend huit planètes ; Pluton est classée parmi les planètes naines depuis 2006."
+      }
+    },
+    {
+      "id": "q-f921c9190ea2ece4",
+      "question": "À quelle température l'eau pure bout-elle environ au niveau de la mer ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "100 °C",
+          "0 °C",
+          "50 °C",
+          "150 °C"
+        ],
+        "correct": 0,
+        "why": "À la pression atmosphérique normale, l'eau pure entre en ébullition vers 100 °C."
+      }
+    },
+    {
+      "id": "q-4e2143bd933464fb",
+      "question": "Combien de temps la Terre met-elle environ pour accomplir une révolution autour du Soleil ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Un an",
+          "Un jour",
+          "Une semaine",
+          "Un mois"
+        ],
+        "correct": 0,
+        "why": "La révolution terrestre dure environ 365,25 jours, ce qui détermine la durée de l'année."
+      }
+    },
+    {
+      "id": "q-feacb9e6d622a708",
+      "question": "Quel élément chimique a pour symbole Au ?",
+      "status": "verified",
+      "verified_on": "2026-10-26",
+      "sources": [
+        {
+          "title": "Royal Society of Chemistry — Or",
+          "url": "https://periodic-table.rsc.org/element/79/gold"
+        }
+      ],
+      "justification": "Le symbole Au est relié au latin aurum dans la présentation de l’élément.",
+      "answer_snapshot": {
+        "a": [
+          "L'or",
+          "L'argent",
+          "Le cuivre",
+          "L'aluminium"
+        ],
+        "correct": 0,
+        "why": "Au vient du latin aurum, qui désigne l'or."
+      }
+    },
+    {
+      "id": "q-d054e0de6069c202",
+      "question": "Quel organe permet principalement les échanges gazeux entre l'air et le sang ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Les poumons",
+          "Le foie",
+          "L'estomac",
+          "Les reins"
+        ],
+        "correct": 0,
+        "why": "Les échanges de dioxygène et de dioxyde de carbone ont lieu dans les alvéoles pulmonaires."
+      }
+    },
+    {
+      "id": "q-f47591ea5ca2ec9e",
+      "question": "Les chauves-souris sont des mammifères.",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 0,
+        "why": "Les chauves-souris sont des mammifères volants qui allaitent leurs petits, contrairement aux oiseaux."
+      }
+    },
+    {
+      "id": "q-2284aa58d0d5c299",
+      "question": "Quels animaux sont des mammifères ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La baleine",
+          "La chauve-souris",
+          "Le dauphin",
+          "Le crocodile"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "Baleines, chauves-souris et dauphins allaitent leurs petits ; le crocodile est un reptile."
+      }
+    },
+    {
+      "id": "q-22105d51b20c1d68",
+      "question": "Qui a peint La Nuit étoilée, en 1889 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Vincent van Gogh",
+          "Claude Monet",
+          "Paul Cézanne",
+          "Paul Gauguin"
+        ],
+        "correct": 0,
+        "why": "Vincent van Gogh réalise La Nuit étoilée durant son séjour à Saint-Rémy-de-Provence en 1889."
+      }
+    },
+    {
+      "id": "q-0a9645c4638eca64",
+      "question": "Quel compositeur est associé à l'Ode à la joie de sa Neuvième Symphonie ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Ludwig van Beethoven",
+          "Wolfgang Amadeus Mozart",
+          "Frédéric Chopin",
+          "Antonio Vivaldi"
+        ],
+        "correct": 0,
+        "why": "Le dernier mouvement de la Neuvième Symphonie de Beethoven met en musique un poème de Schiller."
+      }
+    },
+    {
+      "id": "q-70d547b3e4d24ea3",
+      "question": "Qui a écrit Les Trois Mousquetaires ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Alexandre Dumas",
+          "Victor Hugo",
+          "Émile Zola",
+          "Jules Verne"
+        ],
+        "correct": 0,
+        "why": "Alexandre Dumas publie Les Trois Mousquetaires en feuilleton en 1844."
+      }
+    },
+    {
+      "id": "q-a85627eb4b1cf4d2",
+      "question": "Quel instrument possède six cordes dans sa forme classique la plus courante ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La guitare",
+          "Le violon",
+          "La harpe de concert",
+          "La contrebasse"
+        ],
+        "correct": 0,
+        "why": "La guitare classique possède généralement six cordes, jouées en les pinçant ou en les grattant."
+      }
+    },
+    {
+      "id": "q-4de8a4be69985fee",
+      "question": "Dans quelle ville se trouve le palais Garnier, célèbre opéra du XIXe siècle ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Paris",
+          "Lyon",
+          "Vienne",
+          "Milan"
+        ],
+        "correct": 0,
+        "why": "L'Opéra Garnier est construit à Paris sous le Second Empire et inauguré en 1875."
+      }
+    },
+    {
+      "id": "q-63dd2c2ca3cf7694",
+      "question": "À quel poète grec antique attribue-t-on traditionnellement L'Odyssée ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Homère",
+          "Hésiode",
+          "Sophocle",
+          "Euripide"
+        ],
+        "correct": 0,
+        "why": "L'Odyssée est traditionnellement attribuée à Homère, bien que la question de sa composition reste débattue."
+      }
+    },
+    {
+      "id": "q-735f69ecf80a83a0",
+      "question": "Quelle technique artistique consiste à assembler de petits éléments colorés pour former une image ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La mosaïque",
+          "La gravure",
+          "La lithographie",
+          "Le fusain"
+        ],
+        "correct": 0,
+        "why": "La mosaïque compose une image à partir de tesselles de pierre, de verre ou d'autres matériaux."
+      }
+    },
+    {
+      "id": "q-ded3d976b38677fa",
+      "question": "Les projections de cinéma muet pouvaient être accompagnées de musique jouée en salle.",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 0,
+        "why": "Des musiciens accompagnaient fréquemment les films muets, au piano ou avec un ensemble instrumental."
+      }
+    },
+    {
+      "id": "q-dfdb451d3b1b4041",
+      "question": "Quels domaines relèvent des genres littéraires ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le roman",
+          "La poésie",
+          "Le théâtre",
+          "La sculpture"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "Roman, poésie et théâtre sont des genres ou modes littéraires ; la sculpture relève principalement des arts plastiques."
+      }
+    },
+    {
+      "id": "q-4e3abfb007bb45ef",
+      "question": "Quel est le plus grand animal vivant connu ?",
+      "status": "verified",
+      "verified_on": "2026-10-26",
+      "sources": [
+        {
+          "title": "NOAA Fisheries — Baleine bleue",
+          "url": "https://www.fisheries.noaa.gov/species/blue-whale"
+        }
+      ],
+      "justification": "La baleine bleue est le plus grand animal vivant connu ; les dimensions de plusieurs dizaines de mètres sont confirmées.",
+      "answer_snapshot": {
+        "a": [
+          "La baleine bleue",
+          "L'éléphant d'Afrique",
+          "Le requin-baleine",
+          "Le cachalot"
+        ],
+        "correct": 0,
+        "why": "La baleine bleue est le plus grand animal vivant connu, atteignant plusieurs dizaines de mètres."
+      }
+    },
+    {
+      "id": "q-122b8e687932bb45",
+      "question": "Que contient principalement la bosse d'un dromadaire ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "De la graisse",
+          "De l'eau liquide",
+          "De l'air",
+          "Du sable"
+        ],
+        "correct": 0,
+        "why": "La bosse du dromadaire est une réserve de graisse, et non une citerne d'eau."
+      }
+    },
+    {
+      "id": "q-4e894d7406657504",
+      "question": "Quelle ville italienne est particulièrement associée à l'histoire de la pizza napolitaine ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Naples",
+          "Venise",
+          "Turin",
+          "Florence"
+        ],
+        "correct": 0,
+        "why": "La pizza napolitaine s'est développée à Naples, où sa tradition culinaire est particulièrement forte."
+      }
+    },
+    {
+      "id": "q-fed820d6deec3c6c",
+      "question": "Quel oiseau marin de l'hémisphère Sud est célèbre pour ne pas pouvoir voler ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le manchot",
+          "Le goéland",
+          "Le cormoran",
+          "Le fou de Bassan"
+        ],
+        "correct": 0,
+        "why": "Les manchots sont des oiseaux nageurs dont les ailes sont adaptées à la propulsion sous l'eau."
+      }
+    },
+    {
+      "id": "q-9cfd44ccf6b1e87b",
+      "question": "Quel oiseau construit parfois une structure décorée pour attirer une partenaire ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le jardinier satiné",
+          "Le colibri",
+          "Le flamant rose",
+          "Le martin-pêcheur"
+        ],
+        "correct": 0,
+        "why": "Certains oiseaux jardiniers aménagent des tonnelles ornées d'objets colorés pour la parade nuptiale."
+      }
+    },
+    {
+      "id": "q-a963a7c7985ad041",
+      "question": "Comment nomme-t-on la saveur souvent associée au glutamate ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Umami",
+          "Astringence",
+          "Piquant",
+          "Mentholé"
+        ],
+        "correct": 0,
+        "why": "L'umami est une des cinq saveurs de base généralement décrites, notamment liée à la détection de glutamates."
+      }
+    },
+    {
+      "id": "q-2e453b7f06a47190",
+      "question": "Quel animal porte son petit dans une poche ventrale ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le kangourou",
+          "Le lama",
+          "Le rhinocéros",
+          "Le tatou"
+        ],
+        "correct": 0,
+        "why": "La femelle kangourou porte et allaite son petit dans une poche appelée marsupium."
+      }
+    },
+    {
+      "id": "q-012a994648fbb0cc",
+      "question": "Quelle plante fournit les grains que l'on torréfie pour préparer le café ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le caféier",
+          "Le cacaoyer",
+          "Le théier",
+          "Le poivrier"
+        ],
+        "correct": 0,
+        "why": "Les grains de café sont les graines des fruits du caféier, appelés cerises de café."
+      }
+    },
+    {
+      "id": "q-32f6a14e589f00dc",
+      "question": "Les autruches enfouissent systématiquement leur tête dans le sable pour échapper au danger.",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Vrai",
+          "Faux"
+        ],
+        "correct": 1,
+        "why": "Les autruches ne cachent pas leur tête sous le sable pour fuir un danger : c'est un mythe populaire."
+      }
+    },
+    {
+      "id": "q-43dadcf8d02d65c8",
+      "question": "Quels aliments consommés en Europe proviennent de plantes domestiquées en Amérique ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La pomme de terre",
+          "La tomate",
+          "Le cacao",
+          "Le riz"
+        ],
+        "correct": [
+          0,
+          1,
+          2
+        ],
+        "why": "La pomme de terre, la tomate et le cacao viennent du continent américain ; le riz asiatique est domestiqué en Asie."
+      }
+    },
+    {
+      "id": "q-c7bba6db5679d41f",
+      "question": "Quel ensemble de traités conclut la guerre de Trente Ans en 1648 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Les traités de Westphalie",
+          "Le traité de Versailles",
+          "Le congrès de Vienne",
+          "La paix d'Augsbourg"
+        ],
+        "correct": 0,
+        "why": "Les traités de Westphalie sont conclus en 1648 et mettent fin à la guerre de Trente Ans dans le Saint-Empire."
+      }
+    },
+    {
+      "id": "q-9ece292f5a8051c0",
+      "question": "Qui fait promulguer le Code civil français en 1804 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Napoléon Bonaparte",
+          "Louis XVIII",
+          "Napoléon III",
+          "Charles X"
+        ],
+        "correct": 0,
+        "why": "Napoléon Bonaparte, Premier consul en 1804, fait promulguer le Code civil des Français."
+      }
+    },
+    {
+      "id": "q-eae6007673f5413c",
+      "question": "Qui dirige l'URSS pendant la Seconde Guerre mondiale ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Joseph Staline",
+          "Vladimir Lénine",
+          "Nikita Khrouchtchev",
+          "Mikhaïl Gorbatchev"
+        ],
+        "correct": 0,
+        "why": "Joseph Staline dirige l'Union soviétique pendant la Seconde Guerre mondiale, notamment lors de l'invasion allemande de 1941."
+      }
+    },
+    {
+      "id": "q-c8cd5c43646ddd35",
+      "question": "Quelle dynastie succède aux Mérovingiens chez les Francs ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Les Carolingiens",
+          "Les Capétiens",
+          "Les Valois",
+          "Les Bourbons"
+        ],
+        "correct": 0,
+        "why": "Pépin le Bref devient roi en 751, marquant l'avènement des Carolingiens après les Mérovingiens."
+      }
+    },
+    {
+      "id": "q-b0c4d041939994c5",
+      "question": "Quel événement de 1066 bouleverse la monarchie anglaise ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La conquête normande",
+          "La guerre des Deux-Roses",
+          "La Révolution glorieuse",
+          "La bataille d'Azincourt"
+        ],
+        "correct": 0,
+        "why": "Guillaume de Normandie remporte Hastings en 1066 et devient roi d'Angleterre."
+      }
+    },
+    {
+      "id": "q-cba8b6a04d991e20",
+      "question": "Quel traité de 1957 établit la Communauté économique européenne ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le traité de Rome",
+          "Le traité de Maastricht",
+          "Le traité de Nice",
+          "Le traité de Lisbonne"
+        ],
+        "correct": 0,
+        "why": "Le traité de Rome, signé en mars 1957, fonde la Communauté économique européenne."
+      }
+    },
+    {
+      "id": "q-fa133a5f607ff58c",
+      "question": "Quel mouvement du XVIe siècle est associé à Martin Luther ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La Réforme protestante",
+          "La Contre-Réforme catholique",
+          "Le Grand Schisme d'Orient",
+          "Le concile de Trente"
+        ],
+        "correct": 0,
+        "why": "Les critiques de Martin Luther, notamment en 1517, sont à l'origine d'une branche majeure de la Réforme protestante."
+      }
+    },
+    {
+      "id": "q-21b99b640fe78795",
+      "question": "Quel sultan ottoman conquiert Constantinople en 1453 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Mehmed II",
+          "Soliman le Magnifique",
+          "Sélim Ier",
+          "Bayezid II"
+        ],
+        "correct": 0,
+        "why": "Mehmed II prend Constantinople en 1453 et transforme durablement le centre de l'Empire ottoman."
+      }
+    },
+    {
+      "id": "q-aa59dc97f2f32372",
+      "question": "Quelle assemblée adopte la Déclaration des droits de l'homme et du citoyen en 1789 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "L'Assemblée nationale constituante",
+          "La Convention nationale",
+          "Le Directoire",
+          "Le Sénat impérial"
+        ],
+        "correct": 0,
+        "why": "La Déclaration des droits de l'homme et du citoyen est adoptée par l'Assemblée nationale constituante le 26 août 1789."
+      }
+    },
+    {
+      "id": "q-0d6ac0d68f5b8d95",
+      "question": "Dans quel pays se trouve la région historique de Transylvanie ?",
+      "status": "verified",
+      "verified_on": "2026-10-26",
+      "sources": [
+        {
+          "title": "UNESCO — Sites de Transylvanie, Roumanie",
+          "url": "https://whc.unesco.org/en/list/596/"
+        }
+      ],
+      "justification": "La notice patrimoniale situe en Roumanie les sites de Transylvanie ; l’explication est limitée à la localisation actuelle.",
+      "answer_snapshot": {
+        "a": [
+          "La Roumanie",
+          "La Hongrie",
+          "La Bulgarie",
+          "La Serbie"
+        ],
+        "correct": 0,
+        "why": "La Transylvanie est une région historique située dans l’actuelle Roumanie."
+      }
+    },
+    {
+      "id": "q-a1e2adf769edeb42",
+      "question": "Quel fleuve traverse Prague ?",
+      "status": "verified",
+      "verified_on": "2026-10-26",
+      "sources": [
+        {
+          "title": "Transports publics de Prague — Traversées de la Vltava",
+          "url": "https://pid.cz/en/ferries/"
+        }
+      ],
+      "justification": "Le réseau public décrit explicitement les traversées de la Vltava dans Prague.",
+      "answer_snapshot": {
+        "a": [
+          "La Vltava",
+          "Le Danube",
+          "Le Rhin",
+          "La Seine"
+        ],
+        "correct": 0,
+        "why": "Prague est traversée par la Vltava."
+      }
+    },
+    {
+      "id": "q-da0a166dcb3b5192",
+      "question": "Quelle péninsule comprend principalement la Norvège et la Suède ?",
+      "status": "verified",
+      "verified_on": "2026-10-26",
+      "sources": [
+        {
+          "title": "ESA — Péninsule Scandinave",
+          "url": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Earth_from_Space_Scandinavian_Peninsula"
+        }
+      ],
+      "justification": "L’ESA décrit la péninsule comprenant la Norvège et la Suède ; ne pas confondre péninsule et ensemble culturel des pays scandinaves.",
+      "answer_snapshot": {
+        "a": [
+          "La péninsule Scandinave",
+          "La péninsule Ibérique",
+          "La péninsule Balkanique",
+          "La péninsule du Jutland"
+        ],
+        "correct": 0,
+        "why": "La péninsule Scandinave comprend principalement la Norvège et la Suède."
+      }
+    },
+    {
+      "id": "q-72bd136ef16fa920",
+      "question": "Quel pays a pour capitale Addis-Abeba ?",
+      "status": "verified",
+      "verified_on": "2026-10-26",
+      "sources": [
+        {
+          "title": "Parlement panafricain — Éthiopie",
+          "url": "https://pap.au.int/en/member-states/ethiopia"
+        }
+      ],
+      "justification": "La fiche officielle indique Addis-Abeba comme capitale de l’Éthiopie.",
+      "answer_snapshot": {
+        "a": [
+          "L'Éthiopie",
+          "L'Érythrée",
+          "Le Kenya",
+          "Le Soudan"
+        ],
+        "correct": 0,
+        "why": "Addis-Abeba est la capitale de l’Éthiopie."
+      }
+    },
+    {
+      "id": "q-7da01638c29e3b7b",
+      "question": "Dans quel océan se trouvent les Maldives ?",
+      "status": "verified",
+      "verified_on": "2026-10-26",
+      "sources": [
+        {
+          "title": "INCOIS — Maldives",
+          "url": "https://incois.gov.in/site/services/about_maldives.jsp"
+        }
+      ],
+      "justification": "L’institut océanographique indien situe les Maldives dans l’océan Indien.",
+      "answer_snapshot": {
+        "a": [
+          "L'océan Indien",
+          "L'océan Pacifique",
+          "L'océan Atlantique",
+          "L'océan Arctique"
+        ],
+        "correct": 0,
+        "why": "Les Maldives forment un archipel de l’océan Indien."
+      }
+    },
+    {
+      "id": "q-1b1e0a5cac07aaf6",
+      "question": "Quel détroit sépare la France de l'Angleterre au point le plus étroit ?",
+      "status": "verified",
+      "verified_on": "2026-10-26",
+      "sources": [
+        {
+          "title": "NASA — Détroit de Douvres",
+          "url": "https://science.nasa.gov/earth/earth-observatory/the-strait-of-dover-6840/"
+        }
+      ],
+      "justification": "Le détroit de Douvres est décrit comme la partie la plus étroite de la Manche séparant la Grande-Bretagne de la France.",
+      "answer_snapshot": {
+        "a": [
+          "Le pas de Calais",
+          "Le détroit de Gibraltar",
+          "Le Bosphore",
+          "Le détroit de Malacca"
+        ],
+        "correct": 0,
+        "why": "Le pas de Calais, ou détroit de Douvres, forme la partie la plus étroite de la Manche entre la France et l’Angleterre."
+      }
+    },
+    {
+      "id": "q-95bc6a691f7dab70",
+      "question": "Quel pays partage l'île d'Hispaniola avec Haïti ?",
+      "status": "verified",
+      "verified_on": "2026-10-26",
+      "sources": [
+        {
+          "title": "NASA Landsat — Hispaniola",
+          "url": "https://science.nasa.gov/missions/landsat/hispaniolas-changing-forests/"
+        }
+      ],
+      "justification": "La présentation décrit l’île partagée par Haïti et la République dominicaine.",
+      "answer_snapshot": {
+        "a": [
+          "La République dominicaine",
+          "Cuba",
+          "La Jamaïque",
+          "Le Belize"
+        ],
+        "correct": 0,
+        "why": "L’île d’Hispaniola est partagée entre Haïti et la République dominicaine."
+      }
+    },
+    {
+      "id": "q-42761b03bc1c71ff",
+      "question": "Quel pays du Moyen-Orient possède la ville historique de Pétra ?",
+      "status": "verified",
+      "verified_on": "2026-10-26",
+      "sources": [
+        {
+          "title": "Département des Antiquités de Jordanie — Pétra",
+          "url": "https://www.doa.gov.jo/EN/ListDetails/World_Heritage_Sites_in_Jordan/1158/2"
+        }
+      ],
+      "justification": "L’institution situe la cité nabatéenne de Pétra dans le sud de la Jordanie.",
+      "answer_snapshot": {
+        "a": [
+          "La Jordanie",
+          "Le Liban",
+          "La Syrie",
+          "L'Irak"
+        ],
+        "correct": 0,
+        "why": "Pétra est un ancien site nabatéen situé dans l’actuelle Jordanie."
+      }
+    },
+    {
+      "id": "q-f6b42124ed6f8c76",
+      "question": "À quel État appartient le Groenland en tant que territoire autonome ?",
+      "status": "verified",
+      "verified_on": "2026-10-26",
+      "sources": [
+        {
+          "title": "Ministère danois des Affaires étrangères — Autonomie",
+          "url": "https://um.dk/en/foreign-policy/the-arctic/greenland-and-the-faroe-islands"
+        }
+      ],
+      "justification": "Le Groenland fait partie du royaume du Danemark et dispose d’une large autonomie ; information évolutive vérifiée à cette date.",
+      "answer_snapshot": {
+        "a": [
+          "Le Danemark",
+          "La Norvège",
+          "L'Islande",
+          "Le Canada"
+        ],
+        "correct": 0,
+        "why": "Le Groenland dispose d’une large autonomie au sein du royaume du Danemark ; il n’est pas un État indépendant."
+      }
+    },
+    {
+      "id": "q-d245c95bfb3a02e3",
+      "question": "Quel homme politique dirige le Royaume-Uni pendant la majeure partie de la Seconde Guerre mondiale ?",
+      "status": "verified",
+      "verified_on": "2026-10-26",
+      "sources": [
+        {
+          "title": "Gouvernement britannique — Winston Churchill",
+          "url": "https://www.gov.uk/government/history/past-prime-ministers/winston-churchill?m=0"
+        }
+      ],
+      "justification": "Le premier mandat couvre 1940–1945, soit la majeure partie de la guerre ; le mandat de 1951–1955 est distinct.",
+      "answer_snapshot": {
+        "a": [
+          "Winston Churchill",
+          "Neville Chamberlain",
+          "Clement Attlee",
+          "Anthony Eden"
+        ],
+        "correct": 0,
+        "why": "Winston Churchill est Premier ministre britannique de 1940 à 1945, pendant la majeure partie de la Seconde Guerre mondiale."
+      }
+    },
+    {
+      "id": "q-83bf64b79ebe5a9b",
+      "question": "Quel scientifique propose en 1913 un modèle atomique à niveaux d'énergie quantifiés ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Niels Bohr",
+          "Ernest Rutherford",
+          "John Dalton",
+          "James Chadwick"
+        ],
+        "correct": 0,
+        "why": "Le modèle atomique de Niels Bohr, présenté en 1913, utilise des niveaux d'énergie quantifiés."
+      }
+    },
+    {
+      "id": "q-a7c96c07d713eb8c",
+      "question": "Quel est le rôle principal des ribosomes ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Synthétiser les protéines",
+          "Stocker l'ADN nucléaire",
+          "Produire le dioxygène",
+          "Digérer les lipides"
+        ],
+        "correct": 0,
+        "why": "Les ribosomes assemblent des acides aminés pour produire des protéines à partir d'une information génétique."
+      }
+    },
+    {
+      "id": "q-91c8e758ae39661d",
+      "question": "Quelle unité SI mesure la force ?",
+      "status": "verified",
+      "verified_on": "2026-10-26",
+      "sources": [
+        {
+          "title": "NIST — Unités dérivées du SI, tableau 4",
+          "url": "https://www.nist.gov/pml/special-publication-330/sp-330-section-2"
+        }
+      ],
+      "justification": "Force : newton ; énergie : joule ; puissance : watt ; pression : pascal.",
+      "answer_snapshot": {
+        "a": [
+          "Le newton",
+          "Le joule",
+          "Le watt",
+          "Le pascal"
+        ],
+        "correct": 0,
+        "why": "Le newton est l'unité SI de force ; le joule mesure l'énergie, le watt la puissance et le pascal la pression."
+      }
+    },
+    {
+      "id": "q-2e3d6cc7d2c317cf",
+      "question": "Quel processus transforme une roche à l'état solide sous pression et température ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le métamorphisme",
+          "L'érosion",
+          "La sédimentation",
+          "La condensation"
+        ],
+        "correct": 0,
+        "why": "Le métamorphisme transforme des roches à l'état solide sous l'effet de variations de pression, de température et de fluides."
+      }
+    },
+    {
+      "id": "q-1e030fd29af08b98",
+      "question": "Quelle liaison réunit les deux atomes de la molécule O₂ ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Une liaison covalente double",
+          "Une liaison ionique",
+          "Une liaison métallique",
+          "Une liaison hydrogène"
+        ],
+        "correct": 0,
+        "why": "Dans O₂, les deux atomes d'oxygène sont liés par une liaison covalente double."
+      }
+    },
+    {
+      "id": "q-2aac55191b0bf995",
+      "question": "Quel naturaliste publie De l'origine des espèces en 1859 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Charles Darwin",
+          "Gregor Mendel",
+          "Louis Pasteur",
+          "Alexander Fleming"
+        ],
+        "correct": 0,
+        "why": "Charles Darwin publie De l'origine des espèces en 1859 et y développe le mécanisme de la sélection naturelle."
+      }
+    },
+    {
+      "id": "q-4a0ed955a25c040b",
+      "question": "Quel instrument mesure la pression atmosphérique ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le baromètre",
+          "Le thermomètre",
+          "L'anémomètre",
+          "L'hygromètre"
+        ],
+        "correct": 0,
+        "why": "Le baromètre mesure la pression atmosphérique, contrairement à l'anémomètre, qui mesure la vitesse du vent."
+      }
+    },
+    {
+      "id": "q-79686f306a8dd3bf",
+      "question": "Quelle partie du cerveau coordonne principalement la précision des mouvements ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le cervelet",
+          "L'hippocampe",
+          "L'hypothalamus",
+          "Le bulbe olfactif"
+        ],
+        "correct": 0,
+        "why": "Le cervelet contribue à la coordination et à la précision des mouvements et à l'équilibre."
+      }
+    },
+    {
+      "id": "q-cad1ac8da33c7157",
+      "question": "Quel composé domine la composition minérale d'une coquille d'œuf de poule ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le carbonate de calcium",
+          "Le chlorure de sodium",
+          "La silice",
+          "Le sulfate de cuivre"
+        ],
+        "correct": 0,
+        "why": "La coquille d'un œuf de poule se compose en majeure partie de carbonate de calcium."
+      }
+    },
+    {
+      "id": "q-e642cf11ae4f78f0",
+      "question": "Quel phénomène sépare la lumière blanche en couleurs à travers un prisme ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La dispersion",
+          "La diffraction",
+          "La réflexion totale",
+          "La polarisation"
+        ],
+        "correct": 0,
+        "why": "Un prisme disperse la lumière : ses différentes longueurs d'onde subissent des déviations distinctes."
+      }
+    },
+    {
+      "id": "q-6cb8e67a18054de8",
+      "question": "Qui a créé le commissaire Maigret ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Georges Simenon",
+          "Maurice Leblanc",
+          "Gaston Leroux",
+          "Marcel Pagnol"
+        ],
+        "correct": 0,
+        "why": "Georges Simenon crée le commissaire Maigret, personnage central de nombreux romans policiers."
+      }
+    },
+    {
+      "id": "q-8d4c3aa43591ec84",
+      "question": "Qui a composé le ballet Le Lac des cygnes ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Piotr Ilitch Tchaïkovski",
+          "Igor Stravinsky",
+          "Sergueï Prokofiev",
+          "Dmitri Chostakovitch"
+        ],
+        "correct": 0,
+        "why": "Tchaïkovski compose la musique du Lac des cygnes, ballet créé en 1877 à Moscou."
+      }
+    },
+    {
+      "id": "q-79cb542c22f58d8a",
+      "question": "Qui a peint Un dimanche après-midi à l'île de la Grande Jatte ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Georges Seurat",
+          "Henri Matisse",
+          "Gustave Courbet",
+          "Francisco de Goya"
+        ],
+        "correct": 0,
+        "why": "Georges Seurat peint Un dimanche après-midi à l'île de la Grande Jatte en utilisant la technique divisionniste."
+      }
+    },
+    {
+      "id": "q-09de4dd77047a5da",
+      "question": "Qui est l'auteur de L'Étranger (1942) ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Albert Camus",
+          "Jean-Paul Sartre",
+          "André Gide",
+          "Louis-Ferdinand Céline"
+        ],
+        "correct": 0,
+        "why": "Albert Camus publie L'Étranger en 1942, avec Meursault comme personnage principal."
+      }
+    },
+    {
+      "id": "q-1ae769c74e369fe2",
+      "question": "Quel art japonais consiste à plier du papier ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "L'origami",
+          "L'ikebana",
+          "Le shodō",
+          "Le bonsaï"
+        ],
+        "correct": 0,
+        "why": "L'origami désigne l'art japonais du pliage du papier ; l'ikebana est l'art de la composition florale."
+      }
+    },
+    {
+      "id": "q-d6a474f6a005af84",
+      "question": "Qui réalise Les Temps modernes en 1936 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Charlie Chaplin",
+          "Buster Keaton",
+          "Fritz Lang",
+          "Alfred Hitchcock"
+        ],
+        "correct": 0,
+        "why": "Charlie Chaplin réalise Les Temps modernes en 1936, satire de la société industrielle."
+      }
+    },
+    {
+      "id": "q-15d9b39940a2dfe9",
+      "question": "Quel romancier français écrit Germinal ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Émile Zola",
+          "Honoré de Balzac",
+          "Gustave Flaubert",
+          "Guy de Maupassant"
+        ],
+        "correct": 0,
+        "why": "Émile Zola publie Germinal en 1885, roman consacré à une communauté de mineurs."
+      }
+    },
+    {
+      "id": "q-707594092dea2dac",
+      "question": "Quel mouvement pictural est associé à Claude Monet ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "L'impressionnisme",
+          "Le cubisme",
+          "Le fauvisme",
+          "Le surréalisme"
+        ],
+        "correct": 0,
+        "why": "Claude Monet est une figure majeure de l'impressionnisme, dont le nom est lié à son tableau Impression, soleil levant."
+      }
+    },
+    {
+      "id": "q-1b930a4a067e81ad",
+      "question": "Quel architecte est associé à la Sagrada Família à Barcelone ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Antoni Gaudí",
+          "Santiago Calatrava",
+          "Rafael Moneo",
+          "Frank Gehry"
+        ],
+        "correct": 0,
+        "why": "Antoni Gaudí reprend le chantier de la Sagrada Família en 1883 et transforme le projet dans un style moderniste."
+      }
+    },
+    {
+      "id": "q-6bde2a2d64349031",
+      "question": "Quel auteur dramatique a écrit Cyrano de Bergerac ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Edmond Rostand",
+          "Alfred de Musset",
+          "Victor Hugo",
+          "Pierre Corneille"
+        ],
+        "correct": 0,
+        "why": "Edmond Rostand écrit Cyrano de Bergerac, pièce créée en 1897."
+      }
+    },
+    {
+      "id": "q-8085e7111ed994b8",
+      "question": "Quel métal liquide à température ordinaire était autrefois courant dans les thermomètres ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le mercure",
+          "Le gallium",
+          "L'étain",
+          "Le plomb"
+        ],
+        "correct": 0,
+        "why": "Le mercure est un métal liquide à température ambiante, historiquement employé dans les thermomètres."
+      }
+    },
+    {
+      "id": "q-2f59343c187503b0",
+      "question": "Quel céphalopode possède trois cœurs, comme la pieuvre ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La seiche",
+          "Le phoque",
+          "Le dauphin",
+          "La méduse"
+        ],
+        "correct": 0,
+        "why": "La seiche, comme les autres céphalopodes, possède trois cœurs : deux branchiaux et un systémique."
+      }
+    },
+    {
+      "id": "q-a9d26774b7108967",
+      "question": "Quel appareil Alexander Bain contribue-t-il à préfigurer en 1843 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le télécopieur",
+          "Le phonographe",
+          "La caméra vidéo",
+          "Le téléphone mobile"
+        ],
+        "correct": 0,
+        "why": "Alexander Bain dépose en 1843 un brevet concernant un système de transmission électrique d'images, ancêtre du fax."
+      }
+    },
+    {
+      "id": "q-e47aa4adbf4e7c14",
+      "question": "Quel micro-organisme permet de faire lever la pâte à pain ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La levure",
+          "Le plancton animal",
+          "Une mousse",
+          "Une algue brune"
+        ],
+        "correct": 0,
+        "why": "La levure de boulanger est un champignon unicellulaire produisant du dioxyde de carbone durant la fermentation."
+      }
+    },
+    {
+      "id": "q-915ec6e502c2c0cf",
+      "question": "Quel fruit est botaniquement une baie ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La banane",
+          "La framboise",
+          "La fraise",
+          "La mûre"
+        ],
+        "correct": 0,
+        "why": "En classification botanique, la banane est une baie, contrairement à la fraise, qui est un faux-fruit."
+      }
+    },
+    {
+      "id": "q-06c2ab98d28c5fd4",
+      "question": "Que se produit-il lors d'une éclipse de Lune ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La Terre se trouve entre le Soleil et la Lune",
+          "La Lune se trouve entre le Soleil et la Terre",
+          "Mars cache la Lune",
+          "Vénus cache le Soleil"
+        ],
+        "correct": 0,
+        "why": "Une éclipse lunaire se produit lorsque la Terre projette son ombre sur la Lune."
+      }
+    },
+    {
+      "id": "q-5cf124dfd3582335",
+      "question": "Quel reptile projette rapidement sa langue pour attraper des insectes ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le caméléon",
+          "La tortue",
+          "Le crocodile",
+          "L'iguane marin"
+        ],
+        "correct": 0,
+        "why": "Les caméléons capturent certaines proies grâce à une langue projetée très rapidement."
+      }
+    },
+    {
+      "id": "q-88931aeadaa81223",
+      "question": "Quel matériau compose principalement la mine d'un crayon ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le graphite",
+          "Le plomb",
+          "Le charbon de bois pur",
+          "L'étain"
+        ],
+        "correct": 0,
+        "why": "Le cœur de la mine d'un crayon moderne est fait d'un mélange de graphite et d'argile."
+      }
+    },
+    {
+      "id": "q-30220e950e3c18f0",
+      "question": "Quel mammifère marin pratique le sommeil uni-hémisphérique ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le dauphin",
+          "Le lamantin",
+          "Le morse",
+          "La loutre de mer"
+        ],
+        "correct": 0,
+        "why": "Les dauphins peuvent dormir d'un seul hémisphère cérébral à la fois, ce qui permet de maintenir une vigilance partielle."
+      }
+    },
+    {
+      "id": "q-923e3c850b20f7ea",
+      "question": "Quel pigment donne leur couleur verte aux feuilles ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La chlorophylle",
+          "La mélanine",
+          "L'hémoglobine",
+          "La kératine"
+        ],
+        "correct": 0,
+        "why": "La chlorophylle absorbe une partie de la lumière et donne aux feuilles leur couleur verte."
+      }
+    },
+    {
+      "id": "q-0a0dcdc2ffc20ec9",
+      "question": "Quel édit de 1685 révoque l'édit de Nantes ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "L'édit de Fontainebleau",
+          "L'édit de Saint-Germain",
+          "L'édit de Beaulieu",
+          "L'édit de Roussillon"
+        ],
+        "correct": 0,
+        "why": "L'édit de Fontainebleau signé par Louis XIV en 1685 révoque l'édit de Nantes de 1598."
+      }
+    },
+    {
+      "id": "q-e70961e5b6be4281",
+      "question": "Quel texte de 1804 réorganise le statut juridique des Français ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le Code civil",
+          "La Constitution de l'an VIII",
+          "La Charte de 1814",
+          "La Déclaration de 1793"
+        ],
+        "correct": 0,
+        "why": "Le Code civil des Français est promulgué en 1804 sous Napoléon Bonaparte, alors Premier consul."
+      }
+    },
+    {
+      "id": "q-433d7b1b0e27aeb1",
+      "question": "Quel empereur romain promulgue l'édit de Milan avec Licinius en 313 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Constantin Ier",
+          "Dioclétien",
+          "Néron",
+          "Théodose Ier"
+        ],
+        "correct": 0,
+        "why": "Constantin et Licinius publient en 313 des mesures de tolérance religieuse généralement appelées édit de Milan."
+      }
+    },
+    {
+      "id": "q-0c251be5bb97db32",
+      "question": "Quelle bataille de 216 av. J.-C. voit Hannibal vaincre une armée romaine ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Cannes",
+          "Zama",
+          "Actium",
+          "Pharsale"
+        ],
+        "correct": 0,
+        "why": "À Cannes en 216 av. J.-C., Hannibal inflige une défaite majeure aux légions romaines."
+      }
+    },
+    {
+      "id": "q-80abe33988cfdca3",
+      "question": "Quelle bataille navale de 1571 oppose une coalition chrétienne aux Ottomans ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Lépante",
+          "Trafalgar",
+          "Salamine",
+          "Aboukir"
+        ],
+        "correct": 0,
+        "why": "La bataille de Lépante oppose en 1571 la flotte de la Sainte Ligue à celle de l'Empire ottoman."
+      }
+    },
+    {
+      "id": "q-aab673ae80c56703",
+      "question": "Quel souverain anglais est exécuté après la guerre civile en 1649 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Charles Ier",
+          "Jacques II",
+          "Henri VIII",
+          "Charles II"
+        ],
+        "correct": 0,
+        "why": "Charles Ier d'Angleterre est jugé puis exécuté en janvier 1649 au terme de la guerre civile."
+      }
+    },
+    {
+      "id": "q-2a8378e2d4e69544",
+      "question": "Quel traité met officiellement fin à la guerre entre la France et l'Allemagne en 1871 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le traité de Francfort",
+          "Le traité de Verdun",
+          "Le traité de Tordesillas",
+          "Le traité de Brest-Litovsk"
+        ],
+        "correct": 0,
+        "why": "Le traité de Francfort du 10 mai 1871 met fin à la guerre franco-allemande de 1870-1871."
+      }
+    },
+    {
+      "id": "q-1ebacea799018cbf",
+      "question": "Quel historien grec est surnommé le père de l'histoire par Cicéron ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Hérodote",
+          "Polybe",
+          "Tacite",
+          "Tite-Live"
+        ],
+        "correct": 0,
+        "why": "Cicéron qualifie Hérodote de père de l'histoire ; ses Histoires relatent notamment les guerres médiques."
+      }
+    },
+    {
+      "id": "q-47a54c9aec6777e6",
+      "question": "Qui fonde en 1600 la Compagnie anglaise des Indes orientales par charte royale ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Élisabeth Ire",
+          "Victoria",
+          "Anne Stuart",
+          "Marie Tudor"
+        ],
+        "correct": 0,
+        "why": "Élisabeth Ire accorde en 1600 la charte qui établit la Compagnie anglaise des Indes orientales."
+      }
+    },
+    {
+      "id": "q-d37f2b2e6ebd9172",
+      "question": "Quel pape convoque le concile de Trente en 1545 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Paul III",
+          "Léon X",
+          "Clément VII",
+          "Pie IX"
+        ],
+        "correct": 0,
+        "why": "Paul III convoque le concile de Trente, qui s'ouvre en 1545 et joue un rôle majeur dans la réforme catholique."
+      }
+    },
+    {
+      "id": "q-c939aeb5dfe88332",
+      "question": "Quel traité de 843 partage l'Empire carolingien entre les petits-fils de Charlemagne ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le traité de Verdun",
+          "Le traité de Meerssen",
+          "Le traité de Troyes",
+          "Le traité de Brétigny"
+        ],
+        "correct": 0,
+        "why": "Le traité de Verdun de 843 partage l'Empire carolingien entre les trois fils de Louis le Pieux."
+      }
+    },
+    {
+      "id": "q-84b409a913093531",
+      "question": "Quel détroit relie la mer d'Azov à la mer Noire ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le détroit de Kertch",
+          "Le Bosphore",
+          "Les Dardanelles",
+          "Le détroit de Messine"
+        ],
+        "correct": 0,
+        "why": "Le détroit de Kertch relie la mer d'Azov à la mer Noire, entre la Crimée et la péninsule de Taman."
+      }
+    },
+    {
+      "id": "q-a32d579b49d7df65",
+      "question": "Quel fleuve africain se jette dans l'Atlantique près de Banana, en RDC ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le Congo",
+          "Le Niger",
+          "Le Zambèze",
+          "Le Nil"
+        ],
+        "correct": 0,
+        "why": "Le fleuve Congo atteint l'Atlantique près de Banana, à l'extrême ouest de la République démocratique du Congo."
+      }
+    },
+    {
+      "id": "q-6b6587e98f79aca0",
+      "question": "Quel sommet est le plus haut du massif des Alpes ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le mont Blanc",
+          "Le Cervin",
+          "Le mont Rose",
+          "Le Gran Paradiso"
+        ],
+        "correct": 0,
+        "why": "Le mont Blanc, culminant à environ 4 806 mètres selon les mesures, est généralement considéré comme le sommet des Alpes."
+      }
+    },
+    {
+      "id": "q-176388d8879a57e0",
+      "question": "Quelle fosse océanique abrite le point le plus profond connu des océans ?",
+      "status": "verified",
+      "verified_on": "2026-10-26",
+      "sources": [
+        {
+          "title": "NOAA — Profondeur des océans",
+          "url": "https://oceanservice.noaa.gov/facts/oceandepth.html"
+        }
+      ],
+      "justification": "Le Challenger Deep se situe dans la fosse des Mariannes ; aucune profondeur exacte supposée définitive n’est demandée.",
+      "answer_snapshot": {
+        "a": [
+          "La fosse des Mariannes",
+          "La fosse du Japon",
+          "La fosse de Porto Rico",
+          "La fosse des Tonga"
+        ],
+        "correct": 0,
+        "why": "Le Challenger Deep, dans la fosse des Mariannes, est le point océanique le plus profond connu."
+      }
+    },
+    {
+      "id": "q-97f5b63744292023",
+      "question": "Quel détroit sépare Sumatra de la péninsule Malaise ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le détroit de Malacca",
+          "Le détroit de Lombok",
+          "Le détroit de la Sonde",
+          "Le détroit de Makassar"
+        ],
+        "correct": 0,
+        "why": "Le détroit de Malacca sépare Sumatra de la péninsule Malaise et constitue une route maritime majeure."
+      }
+    },
+    {
+      "id": "q-c3b4f0dfa492de89",
+      "question": "Quel pays enclavé possède une frontière avec la Chine et l'Afghanistan ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le Tadjikistan",
+          "Le Kirghizistan",
+          "L'Ouzbékistan",
+          "Le Kazakhstan"
+        ],
+        "correct": 0,
+        "why": "Le Tadjikistan est frontalier de la Chine et de l'Afghanistan ; les autres choix ne touchent pas ces deux pays."
+      }
+    },
+    {
+      "id": "q-c4bb73b1eb874c64",
+      "question": "Quel fleuve rejoint le Rhône dans la ville de Lyon ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La Saône",
+          "La Durance",
+          "L'Isère",
+          "L'Ain"
+        ],
+        "correct": 0,
+        "why": "La Saône se jette dans le Rhône à Lyon, en arrivant par sa rive droite."
+      }
+    },
+    {
+      "id": "q-7f318ae9bcbc33b6",
+      "question": "Quel État américain est séparé du reste des États-Unis par le Canada ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "L'Alaska",
+          "Hawaï",
+          "Le Maine",
+          "Washington"
+        ],
+        "correct": 0,
+        "why": "L'Alaska est séparé des autres États américains par le territoire canadien."
+      }
+    },
+    {
+      "id": "q-d01f4610e3f4bb1f",
+      "question": "Quel lac d'Afrique de l'Est est traversé par l'équateur ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le lac Victoria",
+          "Le lac Malawi",
+          "Le lac Tanganyika",
+          "Le lac Turkana"
+        ],
+        "correct": 0,
+        "why": "Le lac Victoria est traversé par l'équateur et partagé entre l'Ouganda, le Kenya et la Tanzanie."
+      }
+    },
+    {
+      "id": "q-9de01b4fb55df793",
+      "question": "Quel pays africain possède le littoral de la région appelée Côte des Squelettes ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La Namibie",
+          "L'Angola",
+          "Le Mozambique",
+          "Le Gabon"
+        ],
+        "correct": 0,
+        "why": "La Côte des Squelettes s'étend sur le littoral atlantique de la Namibie, au bord du désert du Namib."
+      }
+    },
+    {
+      "id": "q-c711ed76882bd278",
+      "question": "Quelle région russe se trouve enclavée entre la Pologne et la Lituanie ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "L'oblast de Kaliningrad",
+          "L'oblast de Mourmansk",
+          "L'oblast de Pskov",
+          "L'oblast de Belgorod"
+        ],
+        "correct": 0,
+        "why": "L'oblast russe de Kaliningrad est séparé du reste de la Russie et situé entre la Pologne et la Lituanie."
+      }
+    },
+    {
+      "id": "q-9eb84e219cb82ced",
+      "question": "Quelle particule médie l'interaction électromagnétique dans le modèle standard ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le photon",
+          "Le gluon",
+          "Le boson W",
+          "Le boson de Higgs"
+        ],
+        "correct": 0,
+        "why": "Le photon est le quantum du champ électromagnétique ; les gluons transportent l'interaction forte."
+      }
+    },
+    {
+      "id": "q-fd561ceb040c8a62",
+      "question": "Quelle structure cellulaire assure la phosphorylation oxydative chez les eucaryotes ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La membrane interne mitochondriale",
+          "La membrane nucléaire",
+          "Le lysosome",
+          "L'appareil de Golgi"
+        ],
+        "correct": 0,
+        "why": "Chez les eucaryotes, la chaîne respiratoire et l'ATP synthase se trouvent dans la membrane interne des mitochondries."
+      }
+    },
+    {
+      "id": "q-070c3e8412acd94e",
+      "question": "Quelle loi décrit la relation entre pression et volume d'un gaz idéal à température constante ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La loi de Boyle-Mariotte",
+          "La loi de Charles",
+          "La loi de Dalton",
+          "La loi de Faraday"
+        ],
+        "correct": 0,
+        "why": "La loi de Boyle-Mariotte indique que, pour une quantité donnée de gaz à température constante, le produit pression × volume demeure constant."
+      }
+    },
+    {
+      "id": "q-302b3287b7c9fab9",
+      "question": "Quel nom porte l'enzyme qui copie l'ADN lors de sa réplication ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "L'ADN polymérase",
+          "La ligase ARN",
+          "La pepsine",
+          "L'amylase"
+        ],
+        "correct": 0,
+        "why": "L'ADN polymérase synthétise un nouveau brin d'ADN à partir d'une matrice pendant la réplication."
+      }
+    },
+    {
+      "id": "q-f80932bd31a368d3",
+      "question": "Quel élément a le numéro atomique 26 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le fer",
+          "Le cobalt",
+          "Le nickel",
+          "Le chrome"
+        ],
+        "correct": 0,
+        "why": "Le fer est l'élément de numéro atomique 26 ; le cobalt porte le numéro 27 et le nickel le numéro 28."
+      }
+    },
+    {
+      "id": "q-27b152e5cd007640",
+      "question": "Quel physicien a énoncé les trois lois du mouvement publiées en 1687 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Isaac Newton",
+          "Galilée",
+          "James Clerk Maxwell",
+          "Michael Faraday"
+        ],
+        "correct": 0,
+        "why": "Newton présente les trois lois du mouvement dans ses Principia publiés en 1687."
+      }
+    },
+    {
+      "id": "q-55ed8589363ca049",
+      "question": "Quel phénomène provoque le décalage vers le rouge des galaxies lointaines dans l'Univers en expansion ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "L'expansion de l'espace",
+          "La diffraction solaire",
+          "La rotation de la Terre",
+          "La réfraction atmosphérique"
+        ],
+        "correct": 0,
+        "why": "Le décalage cosmologique vers le rouge découle de l'étirement des longueurs d'onde avec l'expansion de l'Univers."
+      }
+    },
+    {
+      "id": "q-c0502fb86cfb1932",
+      "question": "Quelle unité SI mesure la capacité électrique ?",
+      "status": "verified",
+      "verified_on": "2026-10-26",
+      "sources": [
+        {
+          "title": "NIST — Unités dérivées du SI, tableau 4",
+          "url": "https://www.nist.gov/pml/special-publication-330/sp-330-section-2"
+        }
+      ],
+      "justification": "La capacité électrique se mesure en farads ; la résistance en ohms.",
+      "answer_snapshot": {
+        "a": [
+          "Le farad",
+          "L'ohm",
+          "Le tesla",
+          "Le siemens"
+        ],
+        "correct": 0,
+        "why": "Le farad est l'unité SI de capacité électrique ; l'ohm mesure la résistance électrique."
+      }
+    },
+    {
+      "id": "q-e8f843f9fc96340d",
+      "question": "Quel savant propose la dérive des continents en 1912 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Alfred Wegener",
+          "Charles Lyell",
+          "James Hutton",
+          "Alexander von Humboldt"
+        ],
+        "correct": 0,
+        "why": "Alfred Wegener présente en 1912 l'idée que les continents ont dérivé les uns par rapport aux autres."
+      }
+    },
+    {
+      "id": "q-3e15f6db9f6fe0fb",
+      "question": "Quel savant met en évidence la radioactivité naturelle des sels d'uranium en 1896 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Henri Becquerel",
+          "Marie Curie",
+          "Ernest Rutherford",
+          "William Crookes"
+        ],
+        "correct": 0,
+        "why": "Henri Becquerel découvre en 1896 que des sels d'uranium émettent spontanément un rayonnement qui impressionne une plaque photographique."
+      }
+    },
+    {
+      "id": "q-053bf496a166b25d",
+      "question": "Quelle molécule porte l'information transcrite de l'ADN vers les ribosomes ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "L'ARN messager",
+          "L'ARN ribosomique seul",
+          "Un triglycéride",
+          "L'ATP"
+        ],
+        "correct": 0,
+        "why": "L'ARN messager véhicule une séquence issue de la transcription d'un gène jusqu'aux ribosomes."
+      }
+    },
+    {
+      "id": "q-24cf0516b6989dc9",
+      "question": "Quelle branche mathématique étudie notamment les propriétés préservées par déformation continue ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La topologie",
+          "La théorie des nombres",
+          "La géométrie projective",
+          "La combinatoire"
+        ],
+        "correct": 0,
+        "why": "La topologie étudie notamment les propriétés invariantes sous des déformations continues."
+      }
+    },
+    {
+      "id": "q-4aeefd8b13f2db3d",
+      "question": "Quel nom porte le changement direct de l'état solide à l'état gazeux ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La sublimation",
+          "La fusion",
+          "La condensation",
+          "La liquéfaction"
+        ],
+        "correct": 0,
+        "why": "La sublimation est le passage direct d'un solide à un gaz, sans étape liquide."
+      }
+    },
+    {
+      "id": "q-c9839d8a65c0bf0b",
+      "question": "Quel dramaturge écrit Bérénice en 1670 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Jean Racine",
+          "Molière",
+          "Pierre Corneille",
+          "Marivaux"
+        ],
+        "correct": 0,
+        "why": "Jean Racine fait représenter Bérénice en 1670, une tragédie du théâtre classique français."
+      }
+    },
+    {
+      "id": "q-97e9722c14dff77a",
+      "question": "Quel architecte conçoit la maison sur la cascade, Fallingwater ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Frank Lloyd Wright",
+          "Le Corbusier",
+          "Ludwig Mies van der Rohe",
+          "Walter Gropius"
+        ],
+        "correct": 0,
+        "why": "Frank Lloyd Wright conçoit Fallingwater, maison bâtie au-dessus d'une cascade en Pennsylvanie."
+      }
+    },
+    {
+      "id": "q-27d41fabab1f538e",
+      "question": "Quel compositeur écrit le cycle de lieder Voyage d'hiver ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Franz Schubert",
+          "Robert Schumann",
+          "Johannes Brahms",
+          "Richard Wagner"
+        ],
+        "correct": 0,
+        "why": "Franz Schubert compose Winterreise (Voyage d'hiver), cycle de vingt-quatre lieder sur des poèmes de Wilhelm Müller."
+      }
+    },
+    {
+      "id": "q-694c693486e2b190",
+      "question": "Quel peintre est associé à la série des Cathédrales de Rouen ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Claude Monet",
+          "Alfred Sisley",
+          "Camille Pissarro",
+          "Édouard Manet"
+        ],
+        "correct": 0,
+        "why": "Claude Monet peint plusieurs vues de la cathédrale de Rouen dans des conditions lumineuses différentes."
+      }
+    },
+    {
+      "id": "q-3b8406ddcd73f673",
+      "question": "Qui réalise le film Les Sept Samouraïs en 1954 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Akira Kurosawa",
+          "Yasujirō Ozu",
+          "Kenji Mizoguchi",
+          "Hayao Miyazaki"
+        ],
+        "correct": 0,
+        "why": "Akira Kurosawa réalise Les Sept Samouraïs en 1954, film majeur du cinéma japonais."
+      }
+    },
+    {
+      "id": "q-dc13b9c3ef866f3e",
+      "question": "Quel auteur écrit Le Maître et Marguerite ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Mikhaïl Boulgakov",
+          "Fiodor Dostoïevski",
+          "Léon Tolstoï",
+          "Ivan Tourgueniev"
+        ],
+        "correct": 0,
+        "why": "Mikhaïl Boulgakov écrit Le Maître et Marguerite, roman publié après sa mort."
+      }
+    },
+    {
+      "id": "q-365b4a5d10448934",
+      "question": "Quel mouvement artistique est associé à André Breton et son manifeste de 1924 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le surréalisme",
+          "Le futurisme",
+          "Le dadaïsme",
+          "Le réalisme socialiste"
+        ],
+        "correct": 0,
+        "why": "André Breton publie le Manifeste du surréalisme en 1924, texte fondateur de ce mouvement."
+      }
+    },
+    {
+      "id": "q-160f72d5d0e1a145",
+      "question": "Quel roman de Virginia Woolf, paru en 1925, suit notamment Clarissa Dalloway ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Mrs Dalloway",
+          "La Promenade au phare",
+          "Orlando",
+          "Les Vagues"
+        ],
+        "correct": 0,
+        "why": "Mrs Dalloway de Virginia Woolf paraît en 1925 et suit notamment une journée de Clarissa Dalloway."
+      }
+    },
+    {
+      "id": "q-54f2779d119e99ee",
+      "question": "Quel compositeur crée Le Sacre du printemps en 1913 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Igor Stravinsky",
+          "Maurice Ravel",
+          "Claude Debussy",
+          "Erik Satie"
+        ],
+        "correct": 0,
+        "why": "Igor Stravinsky compose Le Sacre du printemps, créé à Paris en 1913 avec les Ballets russes."
+      }
+    },
+    {
+      "id": "q-4157f9ebc60cb84b",
+      "question": "Quel sculpteur français est l'auteur du Penseur ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Auguste Rodin",
+          "Antoine Bourdelle",
+          "Aristide Maillol",
+          "Jean-Baptiste Carpeaux"
+        ],
+        "correct": 0,
+        "why": "Auguste Rodin crée Le Penseur dans le cadre de son projet La Porte de l'Enfer."
+      }
+    },
+    {
+      "id": "q-8d34f5faaa0d80f6",
+      "question": "Quel peintre flamand est l'auteur des Époux Arnolfini (1434) ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Jan van Eyck",
+          "Pieter Brueghel l'Ancien",
+          "Pierre Paul Rubens",
+          "Hans Memling"
+        ],
+        "correct": 0,
+        "why": "Jan van Eyck peint Les Époux Arnolfini en 1434 ; l'œuvre est conservée à la National Gallery de Londres."
+      }
+    },
+    {
+      "id": "q-b7128e65c59066a3",
+      "question": "Quel livre de poésie Charles Baudelaire publie-t-il en 1857 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Les Fleurs du mal",
+          "Alcools",
+          "Les Illuminations",
+          "Paroles"
+        ],
+        "correct": 0,
+        "why": "Charles Baudelaire publie Les Fleurs du mal en 1857, recueil au cœur de la poésie moderne française."
+      }
+    },
+    {
+      "id": "q-3df43e394e62203f",
+      "question": "Quel mécanisme antique est considéré comme un calculateur astronomique analogique ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La machine d'Anticythère",
+          "L'astrolabe d'Oxford",
+          "Le pendule de Foucault",
+          "La sphère de Magdebourg"
+        ],
+        "correct": 0,
+        "why": "La machine d'Anticythère, découverte dans une épave grecque en 1901, modélisait des cycles astronomiques."
+      }
+    },
+    {
+      "id": "q-a1605fb813b70741",
+      "question": "Quel minéral est le principal constituant du lapis-lazuli bleu ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La lazurite",
+          "Le quartz",
+          "Le feldspath potassique",
+          "L'olivine"
+        ],
+        "correct": 0,
+        "why": "La lazurite est le principal minéral responsable du bleu du lapis-lazuli."
+      }
+    },
+    {
+      "id": "q-dfaa6ff06fc336bf",
+      "question": "Quel animal a des globules sanguins utilisant l'hémocyanine au lieu de l'hémoglobine ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "La pieuvre",
+          "Le dauphin",
+          "Le manchot",
+          "Le lézard"
+        ],
+        "correct": 0,
+        "why": "Les pieuvres utilisent l'hémocyanine, pigment respiratoire contenant du cuivre, dans leur sang."
+      }
+    },
+    {
+      "id": "q-8cdaacadc9f76318",
+      "question": "Quel système de numération babylonien utilisait principalement la base 60 ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le système sexagésimal",
+          "Le système binaire",
+          "Le système décimal pur",
+          "Le système duodécimal pur"
+        ],
+        "correct": 0,
+        "why": "Le système babylonien de numération utilise une base sexagésimale, c'est-à-dire fondée sur 60."
+      }
+    },
+    {
+      "id": "q-5e4b03b80b6a8300",
+      "question": "Quelle substance était principalement utilisée pour préparer la pourpre de Tyr antique ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Des mollusques marins",
+          "Des fleurs de safran",
+          "Du charbon",
+          "Des feuilles d'indigotier"
+        ],
+        "correct": 0,
+        "why": "La pourpre de Tyr était produite à partir de sécrétions de certains mollusques marins, notamment des murex."
+      }
+    },
+    {
+      "id": "q-056dd970f83f7ea8",
+      "question": "Quel phénomène permet à un gecko d'adhérer à des surfaces très lisses ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Des forces d'adhésion entre ses soies microscopiques et la surface",
+          "Des ventouses remplies d'air",
+          "Une colle liquide permanente",
+          "Des griffes magnétiques"
+        ],
+        "correct": 0,
+        "why": "L'adhésion des geckos est favorisée par des soies microscopiques permettant des interactions de surface, notamment les forces de van der Waals."
+      }
+    },
+    {
+      "id": "q-3c5f4d9df8ceda99",
+      "question": "Quel métal est liquide vers 30 °C mais solide à 20 °C ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le gallium",
+          "Le fer",
+          "Le cuivre",
+          "Le tungstène"
+        ],
+        "correct": 0,
+        "why": "Le gallium fond vers 29,8 °C : il peut ainsi devenir liquide dans une main chaude."
+      }
+    },
+    {
+      "id": "q-675077c0cd3d22b0",
+      "question": "Quelle unité astronomique historique correspond approximativement à la distance parcourue par la lumière en un an ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "L'année-lumière",
+          "L'unité astronomique",
+          "Le parsec",
+          "Le rayon terrestre"
+        ],
+        "correct": 0,
+        "why": "L'année-lumière correspond à la distance que parcourt la lumière dans le vide en une année, soit environ 9 460 milliards de kilomètres."
+      }
+    },
+    {
+      "id": "q-36d0178f5adf490f",
+      "question": "Quel organisme fabrique des structures calcaires qui peuvent former des récifs coralliens ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "Le polype corallien",
+          "Le plancton végétal seul",
+          "L'éponge siliceuse",
+          "La méduse adulte"
+        ],
+        "correct": 0,
+        "why": "Les polypes de coraux constructeurs produisent des squelettes calcaires dont l'accumulation forme des récifs."
+      }
+    },
+    {
+      "id": "q-4b3776be52d68e61",
+      "question": "Quel matériau organique provient de résine fossilisée et peut contenir des inclusions d'insectes ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "L'ambre",
+          "Le jade",
+          "L'obsidienne",
+          "Le basalte"
+        ],
+        "correct": 0,
+        "why": "L'ambre est une résine végétale fossilisée qui peut conserver des organismes piégés."
+      }
+    },
+    {
+      "id": "q-35f6d76f148c639b",
+      "question": "Quel mammifère est ovipare parmi ces espèces ?",
+      "status": "not_reviewed",
+      "verified_on": null,
+      "sources": [],
+      "justification": "",
+      "answer_snapshot": {
+        "a": [
+          "L'échidné",
+          "Le wombat",
+          "Le koala",
+          "Le paresseux"
+        ],
+        "correct": 0,
+        "why": "L'échidné, comme l'ornithorynque, est un mammifère monotrème qui pond des œufs."
+      }
+    }
+  ]
+}

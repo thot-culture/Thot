@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """Vrai navigateur sur URLs /Thot/, réponses du dépôt interceptées ; aucun site public modifié."""
+import portable_io  # Encodage CLI stable, sans dépendance système.
 import sys
 sys.dont_write_bytecode=True
 from browser_fixture import ROOT,chromium,markup
@@ -7,7 +9,7 @@ from pathlib import Path
 import json,mimetypes
 from urllib.parse import urlsplit,unquote
 from playwright.sync_api import sync_playwright
-OUT=Path('/workspace/THOT-FLUIDITE-TESTS');OUT.mkdir(exist_ok=True)
+OUT=ROOT.parent/'THOT-STABILISATION-20261026'/'tests'/'navigation';OUT.mkdir(parents=True,exist_ok=True)
 BASE='https://thot.local/Thot/'
 PAGES=['index.html','bibliotheque.html','notre-methode.html','quiz.html','quiz-autrices.html',*[str(p.relative_to(ROOT)) for p in sorted((ROOT/'articles').glob('*.html'))],'404.html']
 def route(request):
@@ -35,7 +37,7 @@ with sync_playwright() as pw:
    assert p.locator('h1').count()==1,name
    p.screenshot(path=str(OUT/(name.replace('/','-')+f'-{width}.png')))
    if name.startswith('articles/'):
-    expected=json.loads((ROOT/'assets/reading-times.json').read_text())['articles'][Path(name).stem]['minutes']
+    expected=json.loads((ROOT/'assets/reading-times.json').read_text(encoding="utf-8"))['articles'][Path(name).stem]['minutes']
     assert p.locator('#duree').inner_text()==str(expected)+' min de lecture environ'
    if name=='articles/pieuvres-couleur.html':
     slider=p.locator('#chromato-curseur');slider.focus();p.keyboard.press('End');assert slider.input_value()=='100'
@@ -82,5 +84,5 @@ with sync_playwright() as pw:
   p.close()
  c.close();b.close()
 report={'ok':True,'views':results,'search_and_reset':True,'quiz_full_path':True,'daily_persistence':'Suites DOM existantes, pas de stockage navigateur persistant dans cette fixture','storage_unavailable':True,'without_js':True,'method':'Chromium réel sur fixtures inline ; navigation réseau bloquée, images externes exclues. URL et persistance couvertes séparément par les suites DOM.'}
-(OUT/'browser.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+(OUT/'browser.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n', encoding="utf-8")
 print('PASS : 44 vues, 11 pages, clavier, 3 interactions, recherche, parcours quiz, stockage refusé, sans JS.')

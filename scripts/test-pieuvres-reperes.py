@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """Repère au repos et clavier du schéma qualitatif réel, sans copie de figure tierce."""
+import portable_io  # Encodage CLI stable, sans dépendance système.
 from pathlib import Path
 import argparse
 import json
@@ -11,8 +13,8 @@ from browser_fixture import ROOT, chromium, page_for, no_overflow
 
 
 def static_checks():
-    html = (ROOT / 'articles/pieuvres-couleur.html').read_text()
-    old = subprocess.check_output(['git', 'show', '917714a:articles/pieuvres-couleur.html'], cwd=ROOT, text=True)
+    html = (ROOT / 'articles/pieuvres-couleur.html').read_text(encoding="utf-8")
+    old = subprocess.check_output(['git', 'show', '917714a:articles/pieuvres-couleur.html'], cwd=ROOT, text=True, encoding="utf-8")
     assert re.findall(r'<script>([\s\S]*?)</script>', html) == re.findall(r'<script>([\s\S]*?)</script>', old), 'Ancien script du curseur modifié'
     assert 'Schéma qualitatif, non à l’échelle' in html
     assert 'le curseur n’indique pas une mesure biologique' in html
@@ -74,14 +76,14 @@ def browser_checks(output):
               'reduced_motion': True, 'without_javascript': True,
               'method': 'Chromium réel avec fixture locale CSS/JS réels, sans navigation réseau.',
               'limits': ['Photographies externes non chargées.', 'Lecteur d’écran et téléphone physique non testés.']}
-    (output / 'pieuvres-tests.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n')
+    (output / 'pieuvres-tests.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding="utf-8")
     print('PASS : Chromium à 320/390/768/1440 px, Home/End/flèche réels, fibres raccourcies et sac étalé, référence fixe, réduction des animations, sans JS, aucun débordement ni erreur JavaScript.')
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--browser', action='store_true')
-    parser.add_argument('--output', type=Path, default=Path('/workspace/THOT-INTERACTIVITE-TESTS'))
+    parser.add_argument('--output', type=Path, default=ROOT.parent / 'THOT-INTERACTIVITE-TESTS')
     args = parser.parse_args()
     static_checks()
     if args.browser:

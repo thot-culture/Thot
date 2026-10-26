@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """Génère les ajouts éditoriaux statiques THOT ; --check par défaut, --write explicite.
 
 Les références et le texte préexistants restent en place. Les dates sont des
 données éditoriales explicites : ce script ne les déduit jamais de Git ou de l’horloge.
 """
+import portable_io  # Encodage CLI stable, sans dépendance système.
 import argparse
 from datetime import date
 from html import escape
@@ -165,17 +167,17 @@ def main():
     mode.add_argument("--write", action="store_true", help="Écrire les ajouts statiques dans les articles")
     mode.add_argument("--check", action="store_true", help="Vérifier les pages sans les écrire (défaut)")
     args = parser.parse_args()
-    config = json.loads((ROOT / "assets/article-editorial.json").read_text())
+    config = json.loads((ROOT / "assets/article-editorial.json").read_text(encoding="utf-8"))
     planned = []
     for record in config["articles"]:
         path = ROOT / "articles" / (record["slug"] + ".html")
-        before = path.read_text()
+        before = path.read_text(encoding="utf-8")
         after = update(before, record, config)
         if before != after:
             planned.append((path, after))
     if args.write:
         for path, after in planned:
-            path.write_text(after)
+            path.write_text(after, encoding="utf-8")
         print(f"PASS : {len(planned)} article(s) généré(s), aucune date calculée automatiquement.")
         return 0
     if planned:

@@ -93,8 +93,8 @@
           "label": "Ressource complémentaire · présentation de recherche"
         }
       },
-      "editorial_updated": "2026-10-25",
-      "editorial_scope": "Correction du protocole de Burger et des références juridiques applicables aux EPLE ; autres parties non réévaluées."
+      "editorial_updated": "2026-10-26",
+      "editorial_scope": "Distinction entre l’expérience de Burger en 2006 et sa publication en 2009 ; autres parties non réévaluées."
     },
     {
       "slug": "autrices-pseudonymes",
@@ -367,8 +367,8 @@
           "label": "Source primaire · déclaration diplomatique"
         }
       },
-      "editorial_updated": "2026-10-25",
-      "editorial_scope": "Précision des quatre dimensions de Krasner à partir du texte original de 2001 ; autres parties non réévaluées."
+      "editorial_updated": "2026-10-26",
+      "editorial_scope": "Correction de Bagram (2 juillet 2021), clarification des acteurs du comparateur et accès alternatifs aux rapports SIGAR et à la déclaration de coalition ; définitions de Krasner conservées, actualité iranienne non réévaluée."
     },
     {
       "slug": "roubaix-1917",
@@ -411,15 +411,15 @@
         },
         "ref2": {
           "kind": "primary",
-          "label": "Source primaire · archive citée, notice indisponible"
+          "label": "Source primaire · archive citée, accès direct non confirmé"
         },
         "ref3": {
           "kind": "primary",
-          "label": "Source primaire · archive citée, notice indisponible"
+          "label": "Source primaire · archive citée, accès direct non confirmé"
         },
         "ref4": {
           "kind": "primary",
-          "label": "Source primaire · archive citée, notice indisponible"
+          "label": "Source primaire · archive citée, accès direct non confirmé"
         },
         "ref5": {
           "kind": "complement",
@@ -431,19 +431,19 @@
         },
         "ref7": {
           "kind": "primary",
-          "label": "Source primaire · archive citée, notice indisponible"
+          "label": "Source primaire · archive citée, accès direct non confirmé"
         },
         "ref8": {
           "kind": "primary",
-          "label": "Source primaire · affiche citée, notice indisponible"
+          "label": "Source primaire · affiche citée, accès direct non confirmé"
         },
         "ref9": {
           "kind": "mixed",
           "label": "Document et notice · témoignage, accès par catalogue"
         }
       },
-      "editorial_updated": "2026-10-25",
-      "editorial_scope": "Ajout de la lecture documentaire et de la transcription de l’affiche sur la laine."
+      "editorial_updated": "2026-10-26",
+      "editorial_scope": "Rétablissement du corpus de 972 affiches et précision des limites d’accès aux notices ; autres parties non réévaluées."
     }
   ]
 }

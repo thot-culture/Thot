@@ -2035,6 +2035,7 @@
       const detail=document.createElement('span');
       detail.textContent=(good?'':'Bonne'+(expected.length>1?'s':'')+' réponse'+(expected.length>1?'s':'')+' : '+readable(expected)+'. ')+item.why;
       feedback.append(title,detail);
+      window.THOT_QUIZ_REFERENCES?.render(feedback,item);
       const reading=recommendedReads[item.cat];
       const readingBox=$('quiz-reading');
       if(reading){

@@ -22,3 +22,5 @@
   .quiz-page .progression-amount { flex-basis: 100%; align-items: flex-start; text-align: left; }
   .quiz-page .game-top { flex-wrap: wrap; }
 }
+
+.quiz-references{margin-top:16px;padding-top:12px;border-top:1px solid currentColor;font-size:14px}.quiz-references p{margin:0 0 6px}.quiz-references ul{margin:0;padding-left:20px}.quiz-references a{display:inline-flex;align-items:center;min-height:44px;max-width:100%;color:inherit;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}.quiz-references a:focus-visible{outline:3px solid currentColor;outline-offset:4px}

@@ -147,7 +147,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "La Serbie"
     ],
     "correct": 0,
-    "why": "Winston Churchill devient Premier ministre britannique en mai 1940 et dirige le pays jusqu'en juillet 1945.",
+    "why": "La Transylvanie est une région historique située dans l’actuelle Roumanie.",
     "hint": "Localise d'abord la région ou le pays sur une carte du monde."
   },
   {
@@ -162,7 +162,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "La Seine"
     ],
     "correct": 0,
-    "why": "La Transylvanie se situe aujourd'hui en Roumanie, bien que son histoire soit liée à plusieurs royaumes et empires.",
+    "why": "Prague est traversée par la Vltava.",
     "hint": "Localise d'abord la région ou le pays sur une carte du monde."
   },
   {
@@ -177,7 +177,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "La péninsule du Jutland"
     ],
     "correct": 0,
-    "why": "Prague est traversée par la Vltava, nommée Moldau en allemand, affluent de l'Elbe.",
+    "why": "La péninsule Scandinave comprend principalement la Norvège et la Suède.",
     "hint": "Localise d'abord la région ou le pays sur une carte du monde."
   },
   {
@@ -192,7 +192,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Le Soudan"
     ],
     "correct": 0,
-    "why": "La péninsule Scandinave comprend principalement la Norvège et la Suède, et une partie du nord-ouest de la Finlande.",
+    "why": "Addis-Abeba est la capitale de l’Éthiopie.",
     "hint": "Localise d'abord la région ou le pays sur une carte du monde."
   },
   {
@@ -207,7 +207,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "L'océan Arctique"
     ],
     "correct": 0,
-    "why": "Addis-Abeba est la capitale de l'Éthiopie et le siège de l'Union africaine.",
+    "why": "Les Maldives forment un archipel de l’océan Indien.",
     "hint": "Localise d'abord la région ou le pays sur une carte du monde."
   },
   {
@@ -222,7 +222,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Le détroit de Malacca"
     ],
     "correct": 0,
-    "why": "Les Maldives sont un archipel situé dans l'océan Indien, au sud-ouest de l'Inde.",
+    "why": "Le pas de Calais, ou détroit de Douvres, forme la partie la plus étroite de la Manche entre la France et l’Angleterre.",
     "hint": "Localise d'abord la région ou le pays sur une carte du monde."
   },
   {
@@ -237,7 +237,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Le Belize"
     ],
     "correct": 0,
-    "why": "Le pas de Calais est le passage le plus étroit entre les côtes anglaises et françaises.",
+    "why": "L’île d’Hispaniola est partagée entre Haïti et la République dominicaine.",
     "hint": "Localise d'abord la région ou le pays sur une carte du monde."
   },
   {
@@ -252,7 +252,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "L'Irak"
     ],
     "correct": 0,
-    "why": "L'île d'Hispaniola est partagée entre Haïti et la République dominicaine.",
+    "why": "Pétra est un ancien site nabatéen situé dans l’actuelle Jordanie.",
     "hint": "Localise d'abord la région ou le pays sur une carte du monde."
   },
   {
@@ -267,7 +267,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Le Canada"
     ],
     "correct": 0,
-    "why": "Pétra est un ancien site nabatéen situé dans l'actuelle Jordanie.",
+    "why": "Le Groenland dispose d’une large autonomie au sein du royaume du Danemark ; il n’est pas un État indépendant.",
     "hint": "Localise d'abord la région ou le pays sur une carte du monde."
   },
   {
@@ -282,7 +282,7 @@ window.THOT_QUESTIONS_INTERMEDIAIRE = [
       "Anthony Eden"
     ],
     "correct": 0,
-    "why": "Le Groenland est un territoire autonome du royaume du Danemark, sans être un État souverain.",
+    "why": "Winston Churchill est Premier ministre britannique de 1940 à 1945, pendant la majeure partie de la Seconde Guerre mondiale.",
     "hint": "Pense au Premier ministre associé à la résistance britannique durant le Blitz."
   },
   {

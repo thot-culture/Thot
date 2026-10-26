@@ -1,8 +1,0 @@
-(() => {
- 'use strict';const root=document.querySelector('[data-timeline]');if(!root)return;
- const node=root.querySelector('#timeline-data');let events;try{events=JSON.parse(node.textContent);}catch{return;}
- const buttons=[...root.querySelectorAll('[data-timeline-index]')],panel=root.querySelector('#timeline-details'),title=root.querySelector('[data-event-title]'),body=root.querySelector('[data-event-body]'),nuance=root.querySelector('[data-event-nuance]'),source=root.querySelector('[data-event-source]'),status=root.querySelector('[data-event-status]');
- if(!Array.isArray(events)||events.length!==buttons.length||!panel||!title||!body||!nuance||!source||!status)return;
- function select(index,focus=false){const item=events[index];if(!item)return;title.textContent=item.date+' — '+item.title;body.textContent=item.body;nuance.textContent=item.nuance;source.href='#'+item.ref;source.textContent='Source ['+item.ref.slice(3)+']';buttons.forEach((b,i)=>b.setAttribute('aria-pressed',String(i===index)));status.textContent='Événement affiché : '+item.date+'. La lecture continue et les sources restent disponibles.';if(focus)buttons[index].focus();}
- buttons.forEach((button,index)=>{button.addEventListener('click',()=>select(index));button.addEventListener('keydown',event=>{let next=index;if(['ArrowRight','ArrowDown'].includes(event.key))next=(index+1)%events.length;else if(['ArrowLeft','ArrowUp'].includes(event.key))next=(index-1+events.length)%events.length;else if(event.key==='Home')next=0;else if(event.key==='End')next=events.length-1;else return;event.preventDefault();select(next,true);});});select(0);panel.hidden=false;root.querySelector('.timeline-controls').hidden=false;
-})();

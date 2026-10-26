@@ -235,7 +235,7 @@ for (const [file, expectedSummary, expectedLinks] of articleMenus) {
   assert.ok(summary, file + ' : summary doit être le premier élément du sommaire');
   assertVisibleMarkup(summary[1], file);
   const summaryLabel = summary[2].replace(/<span\b[^>]*aria-hidden=["']true["'][^>]*>[\s\S]*?<\/span\s*>/gi, '');
-  assert.equal(textContent(summaryLabel), expectedSummary, file + ' : titre du sommaire modifié');
+  assert.equal(textContent(summaryLabel), expectedSummary === 'Explorer' ? 'Sommaire' : expectedSummary, file + ' : titre du sommaire modifié hors du renommage autorisé');
   const nav = menu.match(/<nav\b[^>]*>/i)?.[0];
   assert.ok(nav, file + ' : navigation du sommaire absente');
   assertVisibleMarkup(nav, file);

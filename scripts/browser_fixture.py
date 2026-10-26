@@ -1,12 +1,16 @@
+# -*- coding: utf-8 -*-
 """Fixture Chromium locale : CSS/JS réels, médias locaux incorporés sans retouche.
 
 Aucune navigation réseau : les ressources externes ne sont pas vérifiées ici.
 Ne remplace pas les contrôles HTTP après publication ni un lecteur d’écran réel.
 """
+import portable_io  # Encodage CLI stable, sans dépendance système.
 import base64
 import mimetypes
 from pathlib import Path
 import re
+import os
+import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -21,11 +25,11 @@ def local_file(article, value):
 
 def markup(relative, javascript=True):
     article = ROOT / relative
-    html = article.read_text()
+    html = article.read_text(encoding="utf-8")
 
     def css(match):
         target = local_file(article, match[1])
-        return '<style>' + target.read_text() + '</style>' if target else ''
+        return '<style>' + target.read_text(encoding="utf-8") + '</style>' if target else ''
 
     html = re.sub(r'<link\b[^>]*rel="stylesheet"[^>]*href="([^"]+)"[^>]*>', css, html)
 
@@ -36,7 +40,7 @@ def markup(relative, javascript=True):
         # Préserver la provenance du script lors de l’inlining pour les modules
         # qui calculent leurs URL de médias à partir de currentScript.src.
         source = 'https://thot.local/Thot/' + target.relative_to(ROOT).as_posix()
-        return '<script>Object.defineProperty(document.currentScript,"src",{value:' + repr(source) + '});\n' + target.read_text() + '</script>'
+        return '<script>Object.defineProperty(document.currentScript,"src",{value:' + repr(source) + '});\n' + target.read_text(encoding="utf-8") + '</script>'
 
     html = re.sub(r'<script\b[^>]*src="([^"]+)"[^>]*>\s*</script>', script, html)
 
@@ -51,8 +55,11 @@ def markup(relative, javascript=True):
 
 
 def chromium(playwright):
+    configured = os.environ.get('THOT_CHROMIUM_EXECUTABLE')
+    executable = configured or shutil.which('chromium') or shutil.which('chromium-browser')
+    options = {'executable_path': executable} if executable else {}
     return playwright.chromium.launch(
-        executable_path='/usr/lib/chromium/chromium', headless=True,
+        **options, headless=True,
         args=['--no-sandbox', '--disable-crashpad-for-testing', '--disable-dev-shm-usage'],
         timeout=10000)
 

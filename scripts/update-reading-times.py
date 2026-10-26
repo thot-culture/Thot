@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """Durées reproductibles à 210 mots/min, hors sources, documents et activités facultatives."""
+import portable_io  # Encodage CLI stable, sans dépendance système.
 import argparse,json,re,sys
 from pathlib import Path
 from html.parser import HTMLParser
@@ -21,13 +23,13 @@ class Reading(HTMLParser):
 def outputs():
  records={}
  for p in sorted((ROOT/'articles').glob('*.html')):
-  parser=Reading();parser.feed(p.read_text());words=len(parser.words)
+  parser=Reading();parser.feed(p.read_text(encoding="utf-8"));words=len(parser.words)
   records[p.stem]={'words':words,'minutes':max(1,(words+209)//210)}
  config={'method':'210 mots/min ; texte principal, hors sources, figures et activités facultatives. Estimation, pauses documentaires en supplément.','articles':records}
  result={ROOT/'assets/reading-times.json':json.dumps(config,ensure_ascii=False,indent=2)+'\n'}
  result[ROOT/'assets/reading-times.js']='/* Généré par scripts/update-reading-times.py, sans accès réseau. */\n(() => { const times = '+json.dumps(records,ensure_ascii=False)+'; const slug = (new URL(document.querySelector("link[rel=canonical]")?.href || location.href)).pathname.split("/").pop().replace(/\\.html$/, ""); const target = document.getElementById("duree"); if (target && times[slug]) target.textContent = times[slug].minutes + " min de lecture environ"; })();\n'
  for p in list(ROOT.glob('*.html'))+list((ROOT/'articles').glob('*.html')):
-  s=p.read_text()
+  s=p.read_text(encoding="utf-8")
   if p.stem in records:s=re.sub(r'(<span id="duree">)[^<]+',lambda m:m[1]+str(records[p.stem]['minutes'])+' min de lecture environ',s)
   # Cartes et recommandations : le lien de l’article identifie la durée, jamais sa position.
   pattern=r'<(?:article|section)\b[^>]*class="[^"]*(?:discovery-card|latest-story|related-reading)[^"]*"[\s\S]*?</(?:article|section)>'
@@ -42,7 +44,7 @@ if __name__=='__main__':
  ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--check',action='store_true');args=ap.parse_args();bad=[]
  for p,text in outputs().items():
   if args.check:
-   if not p.exists() or p.read_text()!=text:bad.append(str(p.relative_to(ROOT)))
-  else:p.write_text(text)
+   if not p.exists() or p.read_text(encoding="utf-8")!=text:bad.append(str(p.relative_to(ROOT)))
+  else:p.write_text(text, encoding="utf-8")
  if bad:sys.exit('Durées à régénérer : '+', '.join(bad))
  print('PASS : durées communes et rendus statiques cohérents' if args.check else 'Durées générées, contenu scientifique inchangé.')

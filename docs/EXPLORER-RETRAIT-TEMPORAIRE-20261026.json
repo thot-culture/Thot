@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-26",
+  "base": "8157d53dbbe6fd9852b84079f87d28da8469d8c5",
+  "backup_branch": "backup/thot20-complet-20261026-8157d53",
+  "removed_pages": [
+    "explorer.html",
+    "explorer/sciences/chromatophore.html",
+    "explorer/sciences/couleurs-cephalopodes.html",
+    "explorer/defis/anagrammes.html",
+    "explorer/atlas/roubaix-lieux-documentes.html",
+    "explorer/archives/roubaix-laine-1917.html",
+    "explorer/chronologies/roubaix-1914-1918.html",
+    "explorer/geopolitique/comparer-puissance.html",
+    "enquetes/image.html",
+    "enquetes/hausse.html",
+    "enquetes/lumo.html",
+    "enquetes/index.html"
+  ],
+  "shared_files_kept": [
+    "assets/explorer/illustrations.js",
+    "assets/explorer/illustrations.css",
+    "assets/explorer/structures-peau.json",
+    "scripts/explorer-components.py",
+    "assets/roubaix-document.js"
+  ],
+  "old_urls": "HTTP 404 avec explication de retrait temporaire et liens choisis vers les articles ; pas de redirection automatique. GitHub Pages statique ne permet pas de fixer un statut 503 par URL."
+}

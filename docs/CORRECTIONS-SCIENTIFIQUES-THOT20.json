@@ -79,6 +79,190 @@
         "https://assets.cambridge.org/052182/4192/excerpt/0521824192_excerpt.htm"
       ],
       "justification": "Ajout des deux sources de la précision de date, sans retirer les références antérieures."
+    },
+    {
+      "path": "articles/puissance-etats-unis.html",
+      "old": "<span class=\"chronologie-date\">1 juil. 2021</span>Bagram",
+      "new": "<span class=\"chronologie-date\">2 juil. 2021</span>Bagram",
+      "sources": [
+        "https://www.govinfo.gov/content/pkg/GOVPUB-S-PURL-gpo220547/pdf/GOVPUB-S-PURL-gpo220547.pdf",
+        "https://www.ecoi.net/en/file/local/2063773/2021-10-30qr.pdf"
+      ],
+      "reason": "Date d’achèvement du retrait de Bagram : 2 juillet 2021, SIGAR 23-16-IP et rapport trimestriel 2021.",
+      "mission": "stabilisation-20261026"
+    },
+    {
+      "path": "articles/puissance-etats-unis.html",
+      "old": "Le 1<sup>er</sup> juillet, les forces américaines quittent la base aérienne de Bagram",
+      "new": "Le 2 juillet 2021, les forces américaines achèvent leur retrait de la base aérienne de Bagram",
+      "sources": [
+        "https://www.govinfo.gov/content/pkg/GOVPUB-S-PURL-gpo220547/pdf/GOVPUB-S-PURL-gpo220547.pdf",
+        "https://www.ecoi.net/en/file/local/2063773/2021-10-30qr.pdf"
+      ],
+      "reason": "Date d’achèvement du retrait de Bagram : 2 juillet 2021, SIGAR 23-16-IP et rapport trimestriel 2021.",
+      "mission": "stabilisation-20261026"
+    },
+    {
+      "path": "articles/puissance-etats-unis.html",
+      "old": "<strong>1<sup>er</sup> juillet 2021 —</strong> les forces américaines quittent la base de Bagram.",
+      "new": "<strong>2 juillet 2021 —</strong> les forces américaines achèvent leur retrait de la base de Bagram.",
+      "sources": [
+        "https://www.govinfo.gov/content/pkg/GOVPUB-S-PURL-gpo220547/pdf/GOVPUB-S-PURL-gpo220547.pdf",
+        "https://www.ecoi.net/en/file/local/2063773/2021-10-30qr.pdf"
+      ],
+      "reason": "Date d’achèvement du retrait de Bagram : 2 juillet 2021, SIGAR 23-16-IP et rapport trimestriel 2021.",
+      "mission": "stabilisation-20261026"
+    },
+    {
+      "path": "articles/puissance-etats-unis.html",
+      "old": "\n    <h3 id=\"comparateur-afghanistan-titre\">Afghanistan</h3>\n    <dl class=\"comparateur-reperes\">\n      <div><dt>Acteur</dt><dd>Un gouvernement afghan soutenu par les États-Unis et leurs partenaires, face à l’insurrection talibane.</dd></div>\n      <div><dt>Objectif</dt><dd>Renverser le régime taliban, puis soutenir des institutions afghanes capables de gouverner.</dd></div>\n      <div><dt>Moyens</dt><dd>Intervention militaire, aide et accompagnement des forces afghanes. Le Congrès américain a affecté 88,3 milliards de dollars au fonds ASFF pour les former, les équiper et les soutenir entre 2002 et 2021. <a href=\"#ref10\">Source [10]</a></dd></div>\n      <div><dt>Résultat observé</dt><dd>Après près de vingt ans, le gouvernement s’effondre en 2021 et les talibans reprennent Kaboul.</dd></div>\n    </dl>\n    <p class=\"comparateur-note\"><strong>Ce que le cas montre :</strong> les moyens militaires et financiers n’ont pas garanti la pérennité du gouvernement. Le rapport du SIGAR décrit plusieurs facteurs, plutôt qu’une cause unique. <a href=\"#ref9\">Source [9]</a></p>\n  ",
+      "new": "\n    <h3 id=\"comparateur-afghanistan-titre\">Afghanistan</h3>\n    <dl class=\"comparateur-reperes\">\n      <div><dt>Acteurs en présence</dt><dd>Les États-Unis et leurs partenaires soutiennent le gouvernement et les forces afghanes face aux talibans.</dd></div>\n      <div><dt>Objectif de l’acteur de référence</dt><dd>Pour les États-Unis et leurs partenaires : renverser le régime taliban en 2001, puis soutenir des institutions afghanes capables de gouverner.</dd></div>\n      <div><dt>Moyens mobilisés</dt><dd>Intervention militaire, aide et accompagnement des forces afghanes. Le Congrès américain a affecté 88,3 milliards de dollars au fonds ASFF pour les former, les équiper et les soutenir entre 2002 et 2021. <a href=\"#ref10\">Source [10]</a></dd></div>\n      <div><dt>Résultat observé et limites</dt><dd>Le gouvernement soutenu s’effondre en 2021 et les talibans reprennent Kaboul. Les institutions ne perdurent pas ; le SIGAR identifie plusieurs facteurs interdépendants.</dd></div>\n    </dl>\n    <p class=\"comparateur-note\"><strong>Ce que le cas montre :</strong> les moyens militaires et financiers n’ont pas garanti la pérennité du gouvernement. Le rapport du SIGAR décrit plusieurs facteurs, plutôt qu’une cause unique. <a href=\"#ref9\">Source [9]</a></p>\n  ",
+      "sources": [
+        "https://www.govinfo.gov/content/pkg/GOVPUB-S-PURL-gpo220547/pdf/GOVPUB-S-PURL-gpo220547.pdf",
+        "https://www.ecoi.net/en/file/local/2063773/2021-10-30qr.pdf"
+      ],
+      "reason": "Distinguer les acteurs en présence de l’objectif poursuivi par l’acteur de référence ; conserver les données et références existantes.",
+      "mission": "stabilisation-20261026"
+    },
+    {
+      "path": "articles/puissance-etats-unis.html",
+      "old": "\n    <h3 id=\"comparateur-iran-titre\">Iran</h3>\n    <dl class=\"comparateur-reperes\">\n      <div><dt>Acteur</dt><dd>Un État souverain doté de ses propres institutions, d’un territoire et de capacités d’action régionales.</dd></div>\n      <div><dt>Objectif</dt><dd>Obtenir des concessions politiques dans un contexte de désaccords, notamment sur le nucléaire et les relations régionales.</dd></div>\n      <div><dt>Moyens</dt><dd>Sanctions, pressions économiques, mesures militaires et négociations. Les exportations iraniennes de pétrole brut et de condensats sont passées de plus de 2,5 millions de barils par jour en 2017 à moins de 0,4 million en 2020. L’EIA cite les sanctions et le recul de la demande lié à la pandémie. <a href=\"#ref17\">Source [17]</a></dd></div>\n      <div><dt>Résultat observé</dt><dd>Les pressions ont des effets économiques rapportés ; au 21 octobre 2026, aucun accord n’est accepté par les deux parties.</dd></div>\n    </dl>\n    <p class=\"comparateur-note\"><strong>Ce que le cas montre :</strong> exercer une pression peut produire des conséquences sans entraîner automatiquement les concessions recherchées. Cette situation reste évolutive. <a href=\"#ref12\">Source [12]</a> · <a href=\"#ref13\">Source [13]</a></p>\n  ",
+      "new": "\n    <h3 id=\"comparateur-iran-titre\">Iran</h3>\n    <dl class=\"comparateur-reperes\">\n      <div><dt>Acteurs en présence</dt><dd>Les États-Unis exercent des pressions sur l’Iran, État souverain doté de ses propres institutions, d’un territoire et de capacités d’action régionales.</dd></div>\n      <div><dt>Objectif de l’acteur de référence</dt><dd>Pour les États-Unis : obtenir des concessions politiques dans un contexte de désaccords, notamment sur le nucléaire et les relations régionales.</dd></div>\n      <div><dt>Moyens mobilisés</dt><dd>Sanctions, pressions économiques, mesures militaires et négociations. Les exportations iraniennes de pétrole brut et de condensats sont passées de plus de 2,5 millions de barils par jour en 2017 à moins de 0,4 million en 2020. L’EIA cite les sanctions et le recul de la demande lié à la pandémie. <a href=\"#ref17\">Source [17]</a></dd></div>\n      <div><dt>Résultat observé et limites</dt><dd>Les pressions ont des effets économiques rapportés ; au 21 octobre 2026, aucun accord n’est accepté par les deux parties.</dd></div>\n    </dl>\n    <p class=\"comparateur-note\"><strong>Ce que le cas montre :</strong> exercer une pression peut produire des conséquences sans entraîner automatiquement les concessions recherchées. Cette situation reste évolutive. <a href=\"#ref12\">Source [12]</a> · <a href=\"#ref13\">Source [13]</a></p>\n  ",
+      "sources": [
+        "https://www.eia.gov/todayinenergy/detail.php?id=49116"
+      ],
+      "reason": "Distinguer les acteurs en présence de l’objectif poursuivi par l’acteur de référence ; conserver les données et références existantes.",
+      "mission": "stabilisation-20261026"
+    },
+    {
+      "path": "articles/puissance-etats-unis.html",
+      "old": "\n    <h3 id=\"comparateur-daech-titre\">Daech</h3>\n    <dl class=\"comparateur-reperes\">\n      <div><dt>Acteur</dt><dd>Une organisation terroriste non étatique, qui a contrôlé des territoires en Irak et en Syrie.</dd></div>\n      <div><dt>Objectif</dt><dd>Mettre fin à son contrôle territorial et réduire ses capacités d’action.</dd></div>\n      <div><dt>Moyens</dt><dd>Opérations d’une coalition internationale et de forces partenaires locales. En 2019, elle réunissait 80 membres. <a href=\"#ref18\">Source [18]</a></dd></div>\n      <div><dt>Résultat observé</dt><dd>Le dernier territoire contrôlé en Syrie est libéré en 2019 ; les rapports de l’ONU signalent ensuite la persistance de réseaux affiliés.</dd></div>\n    </dl>\n    <p class=\"comparateur-note\"><strong>Ce que le cas montre :</strong> la fin du contrôle territorial constitue un résultat majeur, sans signifier à elle seule la disparition de l’organisation. <a href=\"#ref14\">Source [14]</a> · <a href=\"#ref16\">Source [16]</a></p>\n  ",
+      "new": "\n    <h3 id=\"comparateur-daech-titre\">Daech</h3>\n    <dl class=\"comparateur-reperes\">\n      <div><dt>Acteurs en présence</dt><dd>Les États-Unis, la coalition internationale et des forces partenaires locales combattent Daech, organisation terroriste non étatique, en Irak et en Syrie.</dd></div>\n      <div><dt>Objectif de l’acteur de référence</dt><dd>Pour la coalition et ses partenaires : mettre fin au contrôle territorial de Daech et réduire ses capacités d’action.</dd></div>\n      <div><dt>Moyens mobilisés</dt><dd>Opérations d’une coalition internationale et de forces partenaires locales. En 2019, elle réunissait 80 membres. <a href=\"#ref18\">Source [18]</a></dd></div>\n      <div><dt>Résultat observé et limites</dt><dd>Le dernier réduit territorial de Daech en Syrie est repris en 2019 ; la perte de ce territoire ne signifie pas la disparition de l’organisation, dont des réseaux persistent.</dd></div>\n    </dl>\n    <p class=\"comparateur-note\"><strong>Ce que le cas montre :</strong> la fin du contrôle territorial constitue un résultat majeur, sans signifier à elle seule la disparition de l’organisation. <a href=\"#ref14\">Source [14]</a> · <a href=\"#ref16\">Source [16]</a></p>\n  ",
+      "sources": [
+        "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/1760415/statement-from-gen-joseph-votel-on-liberating-the-last-territory-held-by-daesh/",
+        "https://press.un.org/en/2019/sc13931.doc.htm"
+      ],
+      "reason": "Distinguer les acteurs en présence de l’objectif poursuivi par l’acteur de référence ; conserver les données et références existantes.",
+      "mission": "stabilisation-20261026"
+    },
+    {
+      "path": "articles/puissance-etats-unis.html",
+      "old": "Choisissez un cas pour comparer l’acteur, l’objectif, les moyens et le résultat observé.",
+      "new": "Le point de vue retenu est celui des États-Unis, avec leurs partenaires dans les cas concernés. Distinguez les acteurs en présence, l’objectif de cette intervention, ses moyens et le résultat observé.",
+      "sources": [
+        "https://www.govinfo.gov/content/pkg/GOVPUB-S-PURL-gpo220547/pdf/GOVPUB-S-PURL-gpo220547.pdf",
+        "https://www.ecoi.net/en/file/local/2063773/2021-10-30qr.pdf"
+      ],
+      "reason": "Expliciter le même point de vue pour les deux cas comparés, sans score quantitatif.",
+      "mission": "stabilisation-20261026"
+    },
+    {
+      "path": "articles/puissance-etats-unis.html",
+      "old": "<li id=\"ref10\"><span class=\"source-type\" data-source-kind=\"primary\">Source primaire · rapport institutionnel</span> Special Inspector General for Afghanistan Reconstruction (SIGAR), Quarterly Report to the United States Congress, 30 octobre 2021. <a href=\"https://www.sigar.mil/pdf/quarterlyreports/2021-10-30qr.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Consulter ↗</a></li>",
+      "new": "<li id=\"ref10\"><span class=\"source-type\" data-source-kind=\"primary\">Source primaire · rapport institutionnel</span> Special Inspector General for Afghanistan Reconstruction (SIGAR), Quarterly Report to the United States Congress, 30 octobre 2021. <a href=\"https://www.sigar.mil/pdf/quarterlyreports/2021-10-30qr.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Consulter ↗</a> Accès alternatif au même rapport : <a href=\"https://www.ecoi.net/en/file/local/2063773/2021-10-30qr.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">copie conservée par ecoi.net (Croix-Rouge autrichienne)</a>, p. 18 pour les 88,3 milliards ASFF. Pour Bagram : SIGAR, <em>Why the Afghan Security Forces Collapsed</em>, 23-16-IP, février 2023, p. 4 (p. 11 du PDF) : <a href=\"https://www.govinfo.gov/content/pkg/GOVPUB-S-PURL-gpo220547/pdf/GOVPUB-S-PURL-gpo220547.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">exemplaire institutionnel GovInfo</a>. L’accès automatisé au site SIGAR d’origine est indisponible lors du contrôle du 26 octobre 2026 ; cela ne prouve pas une suppression.</li>",
+      "sources": [
+        "https://www.govinfo.gov/content/pkg/GOVPUB-S-PURL-gpo220547/pdf/GOVPUB-S-PURL-gpo220547.pdf",
+        "https://www.ecoi.net/en/file/local/2063773/2021-10-30qr.pdf"
+      ],
+      "reason": "Conserver le lien SIGAR, ajouter un exemplaire de même rapport et une source institutionnelle explicite sur le 2 juillet.",
+      "mission": "stabilisation-20261026"
+    },
+    {
+      "path": "articles/autorite.html",
+      "old": "En 2009, Jerry Burger a réalisé une réplication partielle avec des garde-fous éthiques :",
+      "new": "Jerry Burger a réalisé en 2006 une réplication partielle, publiée en 2009, avec des garde-fous éthiques :",
+      "sources": [
+        "https://www.psy.miami.edu/_assets/pdf/rpo-articles/burger-2009.pdf"
+      ],
+      "reason": "Distinguer réalisation en 2006 (résumé et discussion) et publication en janvier 2009.",
+      "mission": "stabilisation-20261026"
+    },
+    {
+      "path": "articles/roubaix-1917.html",
+      "old": "les Archives municipales de Roubaix ont numérisé <strong><button",
+      "new": "les Archives municipales de Roubaix ont numérisé un corpus de <strong>972 <button",
+      "sources": [
+        "https://www.armarium-hautsdefrance.fr/document/85546"
+      ],
+      "reason": "Rétablir la phrase complète ; corpus de 972 affiches confirmé par la description institutionnelle, sans changer le glossaire.",
+      "mission": "stabilisation-20261026"
+    },
+    {
+      "path": "articles/roubaix-1917.html",
+      "old": "<li id=\"ref2\"><span class=\"source-type\" data-source-kind=\"primary\">Source primaire · archive citée, notice indisponible</span> <strong>Archives municipales de Roubaix</strong>, « Revues d'appel », 1er juillet 1917, cote <strong>AFF_001_D_0685</strong>. <span class=\"notice-indisponible\">Notice directe retirée en raison d'une erreur de certificat du site source ; référence archivistique conservée.</span></li>",
+      "new": "<li id=\"ref2\"><span class=\"source-type\" data-source-kind=\"primary\">Source primaire · archive citée, accès direct non confirmé</span> <strong>Archives municipales de Roubaix</strong>, « Revues d'appel », 1er juillet 1917, cote <strong>AFF_001_D_0685</strong>. <span class=\"notice-indisponible\">Accès automatisé à la notice non confirmé le 26 octobre 2026 ; cela ne permet pas de conclure à une suppression. Référence archivistique conservée.</span></li>",
+      "sources": [
+        "https://www.armarium-hautsdefrance.fr/document/85546"
+      ],
+      "reason": "Ne pas confondre accès automatique impossible et suppression de document ; aucune lecture du document entier revendiquée.",
+      "mission": "stabilisation-20261026"
+    },
+    {
+      "path": "articles/puissance-etats-unis.html",
+      "old": "<li id=\"ref18\"><span class=\"source-type\" data-source-kind=\"primary\">Source primaire · déclaration diplomatique</span> U.S. Department of State, « Joint Statement by the Political Directors of the Global Coalition to Defeat ISIS », 2019. <a href=\"https://2017-2021.state.gov/joint-statement-by-the-political-directors-of-the-global-coalition-to-defeat-isis/\" target=\"_blank\" rel=\"noopener noreferrer\">Consulter ↗</a></li>",
+      "new": "<li id=\"ref18\"><span class=\"source-type\" data-source-kind=\"primary\">Source primaire · déclaration diplomatique</span> U.S. Department of State, « Joint Statement by the Political Directors of the Global Coalition to Defeat ISIS », 2019. <a href=\"https://2017-2021.state.gov/joint-statement-by-the-political-directors-of-the-global-coalition-to-defeat-isis/\" target=\"_blank\" rel=\"noopener noreferrer\">Consulter ↗</a> Accès alternatif institutionnel : <a href=\"https://www.diplomatie.gouv.fr/IMG/pdf/paris_roadmap_-_final_version_fr_2__cle09b5d2.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">version française de la même Feuille de route, ministère de l’Europe et des Affaires étrangères (PDF)</a>. La page d’archives américaine refuse l’accès automatisé lors du contrôle ; la référence d’origine est conservée.</li>",
+      "sources": [
+        "https://www.diplomatie.gouv.fr/IMG/pdf/paris_roadmap_-_final_version_fr_2__cle09b5d2.pdf"
+      ],
+      "reason": "Copie institutionnelle française du même communiqué de coalition de juin 2019 ; accès américain restreint, sans suppression de la référence originale.",
+      "mission": "stabilisation-20261026"
+    },
+    {
+      "path": "articles/roubaix-1917.html",
+      "old": "<li id=\"ref3\"><span class=\"source-type\" data-source-kind=\"primary\">Source primaire · archive citée, notice indisponible</span> <strong>Archives municipales de Roubaix</strong>, « Avis. Demande de selliers pour les carrosseries de Roubaix », 13 janvier 1917, cote <strong>AFF_001_D_0150</strong>. <span class=\"notice-indisponible\">Notice directe retirée en raison d'une erreur de certificat du site source ; référence archivistique conservée.</span></li>",
+      "new": "<li id=\"ref3\"><span class=\"source-type\" data-source-kind=\"primary\">Source primaire · archive citée, notice indisponible</span> <strong>Archives municipales de Roubaix</strong>, « Avis. Demande de selliers pour les carrosseries de Roubaix », 13 janvier 1917, cote <strong>AFF_001_D_0150</strong>. <span class=\"notice-indisponible\">Notice municipale retrouvée dans l’index de recherche ; accès direct et lecture intégrale de l’affiche non confirmés le 26 octobre 2026. Référence conservée.</span> <a href=\"https://bn-r.cd-script.fr/fr/notice.php?from=&amp;id=AFF_001_D_0150&amp;searchurl=%2Ffr%2Frecherche-resultat.php%3Ffl%3D%26from%3D%26q%3DGrand%2Bplace%26sort%3Dtri_annee%2520asc%2Ctri_titre%2520asc%26start%3D990%26version%3D2.2&amp;startpic=0\" target=\"_blank\" rel=\"noopener noreferrer\">Notice municipale (accès direct non confirmé)</a>.</li>",
+      "sources": [
+        "https://bn-r.cd-script.fr/fr/notice.php?from=&id=AFF_001_D_0150&searchurl=%2Ffr%2Frecherche-resultat.php%3Ffl%3D%26from%3D%26q%3DGrand%2Bplace%26sort%3Dtri_annee%2520asc%2Ctri_titre%2520asc%26start%3D990%26version%3D2.2&startpic=0"
+      ],
+      "reason": "Notice municipale retrouvée dans l’index ; lien conservé avec limite d’accès explicite, aucune consultation intégrale revendiquée.",
+      "mission": "stabilisation-20261026"
+    },
+    {
+      "path": "articles/roubaix-1917.html",
+      "old": "<li id=\"ref4\"><span class=\"source-type\" data-source-kind=\"primary\">Source primaire · archive citée, notice indisponible</span> <strong>Archives municipales de Roubaix</strong>, « Offre d'emplois », 5 mars 1917, cote <strong>AFF_001_D_0632</strong>. <span class=\"notice-indisponible\">Notice directe retirée en raison d'une erreur de certificat du site source ; référence archivistique conservée.</span></li>",
+      "new": "<li id=\"ref4\"><span class=\"source-type\" data-source-kind=\"primary\">Source primaire · archive citée, notice indisponible</span> <strong>Archives municipales de Roubaix</strong>, « Offre d'emplois », 5 mars 1917, cote <strong>AFF_001_D_0632</strong>. <span class=\"notice-indisponible\">Notice municipale retrouvée dans l’index de recherche ; accès direct et lecture intégrale de l’affiche non confirmés le 26 octobre 2026. Référence conservée.</span> <a href=\"https://bn-r.cd-script.fr/fr/notice.php?from=periode&amp;id=AFF_001_D_0632&amp;searchurl=%2Ffr%2Frecherche-resultat.php%3Ffl%3D%26from%3Dperiode%26q%3Dchrono%253A%25221914-1918%2522%26sort%3Dtri_annee%2520asc%2Ctri_titre%2520asc%26start%3D1020%26version%3D2.2\" target=\"_blank\" rel=\"noopener noreferrer\">Notice municipale (accès direct non confirmé)</a>.</li>",
+      "sources": [
+        "https://bn-r.cd-script.fr/fr/notice.php?from=periode&id=AFF_001_D_0632&searchurl=%2Ffr%2Frecherche-resultat.php%3Ffl%3D%26from%3Dperiode%26q%3Dchrono%253A%25221914-1918%2522%26sort%3Dtri_annee%2520asc%2Ctri_titre%2520asc%26start%3D1020%26version%3D2.2"
+      ],
+      "reason": "Notice municipale retrouvée dans l’index ; lien conservé avec limite d’accès explicite, aucune consultation intégrale revendiquée.",
+      "mission": "stabilisation-20261026"
+    },
+    {
+      "path": "articles/roubaix-1917.html",
+      "old": "<li id=\"ref7\"><span class=\"source-type\" data-source-kind=\"primary\">Source primaire · archive citée, notice indisponible</span> <strong>Archives municipales de Roubaix</strong>, « Départ vers le sud de la France », 19 décembre 1917, cote <strong>AFF_001_D_0759</strong>. <span class=\"notice-indisponible\">Notice directe retirée en raison d'une erreur de certificat du site source ; référence archivistique conservée.</span></li>",
+      "new": "<li id=\"ref7\"><span class=\"source-type\" data-source-kind=\"primary\">Source primaire · archive citée, notice indisponible</span> <strong>Archives municipales de Roubaix</strong>, « Départ vers le sud de la France », 19 décembre 1917, cote <strong>AFF_001_D_0759</strong>. <span class=\"notice-indisponible\">Notice municipale retrouvée dans l’index de recherche ; accès direct et lecture intégrale de l’affiche non confirmés le 26 octobre 2026. Référence conservée.</span> <a href=\"https://bn-r.cd-script.fr/fr/notice.php?from=theme&amp;id=AFF_001_D_0759&amp;image=RBX_AMR_AFF_001_D_0759_1&amp;searchurl=%2Ffr%2Frecherche-resultat.php%3Ffl%3D%26from%3Dtheme%26q%3Dtheme%253A%2522Guerres%2522%26sort%3Dtri_annee%2520asc%2Ctri_titre%2520asc%26start%3D920%26version%3D2.2&amp;startpic=0\" target=\"_blank\" rel=\"noopener noreferrer\">Notice municipale (accès direct non confirmé)</a>.</li>",
+      "sources": [
+        "https://bn-r.cd-script.fr/fr/notice.php?from=theme&id=AFF_001_D_0759&image=RBX_AMR_AFF_001_D_0759_1&searchurl=%2Ffr%2Frecherche-resultat.php%3Ffl%3D%26from%3Dtheme%26q%3Dtheme%253A%2522Guerres%2522%26sort%3Dtri_annee%2520asc%2Ctri_titre%2520asc%26start%3D920%26version%3D2.2&startpic=0"
+      ],
+      "reason": "Notice municipale retrouvée dans l’index ; lien conservé avec limite d’accès explicite, aucune consultation intégrale revendiquée.",
+      "mission": "stabilisation-20261026"
+    },
+    {
+      "path": "articles/roubaix-1917.html",
+      "old": "<li id=\"ref8\"><span class=\"source-type\" data-source-kind=\"primary\">Source primaire · affiche citée, notice indisponible</span> <strong>Archives municipales de Roubaix</strong>, « Bombes jetées par un aviateur ennemi », affiche de la commandanture allemande signée Hofmann, 12 août 1917, cote <strong>AFF_001_D_0705</strong> (source émanant de l'autorité occupante). <span class=\"notice-indisponible\">Notice directe retirée en raison d'une erreur de certificat du site source ; référence archivistique conservée.</span></li>",
+      "new": "<li id=\"ref8\"><span class=\"source-type\" data-source-kind=\"primary\">Source primaire · affiche citée, notice indisponible</span> <strong>Archives municipales de Roubaix</strong>, « Bombes jetées par un aviateur ennemi », affiche de la commandanture allemande signée Hofmann, 12 août 1917, cote <strong>AFF_001_D_0705</strong> (source émanant de l'autorité occupante). <span class=\"notice-indisponible\">Notice municipale retrouvée dans l’index de recherche ; accès direct et lecture intégrale de l’affiche non confirmés le 26 octobre 2026. Référence conservée.</span> <a href=\"https://bn-r.cd-script.fr/fr/notice.php?id=AFF_001_D_0705\" target=\"_blank\" rel=\"noopener noreferrer\">Notice municipale (accès direct non confirmé)</a>.</li>",
+      "sources": [
+        "https://bn-r.cd-script.fr/fr/notice.php?id=AFF_001_D_0705"
+      ],
+      "reason": "Notice municipale retrouvée dans l’index ; lien conservé avec limite d’accès explicite, aucune consultation intégrale revendiquée.",
+      "mission": "stabilisation-20261026"
+    },
+    {
+      "path": "articles/roubaix-1917.html",
+      "old": "<p class=\"precision\">Les liens vers l'ancien domaine bn-r.cd-script.fr ont été retirés car son certificat HTTPS est signalé comme non sûr. Les titres, dates et cotes restent indiqués pour retrouver les documents. <a href=\"https://www.armarium-hautsdefrance.fr/document/85546\" target=\"_blank\" rel=\"noopener noreferrer\">Le lien L'Armarium</a> présente le fonds, pas les cinq notices individuelles.</p>",
+      "new": "<p class=\"precision\">Quatre notices municipales ont été retrouvées dans l’index de recherche et sont reliées ci-dessus ; leur accès direct et la lecture intégrale des affiches n’ont pas été confirmés. La notice des revues d’appel reste à retrouver. Les titres, dates et cotes sont conservés. <a href=\"https://www.armarium-hautsdefrance.fr/document/85546\" target=\"_blank\" rel=\"noopener noreferrer\">Le lien L'Armarium</a> présente le fonds, pas les cinq notices individuelles.</p>",
+      "sources": [
+        "https://bn-r.cd-script.fr/fr/notice.php?from=&id=AFF_001_D_0150&searchurl=%2Ffr%2Frecherche-resultat.php%3Ffl%3D%26from%3D%26q%3DGrand%2Bplace%26sort%3Dtri_annee%2520asc%2Ctri_titre%2520asc%26start%3D990%26version%3D2.2&startpic=0",
+        "https://bn-r.cd-script.fr/fr/notice.php?from=periode&id=AFF_001_D_0632&searchurl=%2Ffr%2Frecherche-resultat.php%3Ffl%3D%26from%3Dperiode%26q%3Dchrono%253A%25221914-1918%2522%26sort%3Dtri_annee%2520asc%2Ctri_titre%2520asc%26start%3D1020%26version%3D2.2",
+        "https://bn-r.cd-script.fr/fr/notice.php?from=theme&id=AFF_001_D_0759&image=RBX_AMR_AFF_001_D_0759_1&searchurl=%2Ffr%2Frecherche-resultat.php%3Ffl%3D%26from%3Dtheme%26q%3Dtheme%253A%2522Guerres%2522%26sort%3Dtri_annee%2520asc%2Ctri_titre%2520asc%26start%3D920%26version%3D2.2&startpic=0",
+        "https://bn-r.cd-script.fr/fr/notice.php?id=AFF_001_D_0705"
+      ],
+      "reason": "Distinguer contenu indexé, restriction d’accès et lecture intégrale ; ne pas conclure à une suppression.",
+      "mission": "stabilisation-20261026"
     }
-  ]
+  ],
+  "stabilisation_20261026": {
+    "authorization": "Cahier des charges du 26 octobre 2026 : retrait temporaire et corrections de l’audit, publication autorisée.",
+    "base": "8157d53dbbe6fd9852b84079f87d28da8469d8c5"
+  }
 }

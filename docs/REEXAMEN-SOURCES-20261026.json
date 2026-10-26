@@ -1,0 +1,83 @@
+{
+  "checked_on": "2026-10-26",
+  "scope": "Réexamen ciblé des sources modifiées ou signalées ; pas de nouvelle vérification intégrale de toutes les bibliographies.",
+  "observations": [
+    {
+      "source": "SIGAR 23-05-IP (novembre 2022)",
+      "url": "https://www.govinfo.gov/content/pkg/GOVPUB-S-PURL-gpo220710/pdf/GOVPUB-S-PURL-gpo220710.pdf",
+      "status": "accessible_pdf",
+      "read_scope": "p. 3 : retrait achevé de Bagram au 2 juillet 2021 ; passages de synthèse sur les facteurs."
+    },
+    {
+      "source": "SIGAR 23-16-IP (février 2023)",
+      "url": "https://www.govinfo.gov/content/pkg/GOVPUB-S-PURL-gpo220547/pdf/GOVPUB-S-PURL-gpo220547.pdf",
+      "status": "accessible_pdf",
+      "read_scope": "p. 4, p. 11 du PDF : date de Bagram."
+    },
+    {
+      "source": "SIGAR trimestriel du 30 octobre 2021",
+      "url": "https://www.sigar.mil/pdf/quarterlyreports/2021-10-30qr.pdf",
+      "status": "automatic_access_unavailable",
+      "meaning": "Échec 502 via outil web ; ne prouve pas une suppression.",
+      "alternative": "https://www.ecoi.net/en/file/local/2063773/2021-10-30qr.pdf",
+      "alternative_status": "accessible_pdf",
+      "read_scope": "p. 18 : 88,3 milliards de dollars ASFF, 2002–2021. Copie de même rapport, vérification du titre et de la date."
+    },
+    {
+      "source": "Burger (2009), texte original",
+      "url": "https://www.psy.miami.edu/_assets/pdf/rpo-articles/burger-2009.pdf",
+      "status": "accessible_pdf",
+      "read_scope": "Résumé et discussion : réplication en 2006 ; pied de page de publication janvier 2009. Le protocole partiel à 150 volts reste inchangé."
+    },
+    {
+      "source": "Notices municipales de Roubaix",
+      "status": "mixed_access",
+      "read_scope": "Description de fonds L’Armarium accessible : 972 affiches, août 1914–décembre 1918. Quatre notices individuelles retrouvées dans les extraits indexés ; pas de lecture intégrale des affiches. La cinquième, AFF_001_D_0685, reste non retrouvée.",
+      "details": "docs/ROUBAIX-NOTICES-REEXAMEN-20261026.json"
+    },
+    {
+      "source": "Code de l’éducation, R421-8",
+      "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006071191/LEGISCTA000018377430/",
+      "status": "institutional_index_consulted",
+      "read_scope": "Chef d’établissement, représentant de l’État, organe exécutif ; cadre EPLE confirmé par la section."
+    },
+    {
+      "source": "Code de l’éducation, R421-5",
+      "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039016548/",
+      "status": "automatic_access_restricted_403",
+      "read_scope": "Référence déjà corrigée et conservée ; pas de nouvelle lecture intégrale directe revendiquée."
+    },
+    {
+      "source": "Communiqué CENTCOM du 23 mars 2019",
+      "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/1760415/statement-from-gen-joseph-votel-on-liberating-the-last-territory-held-by-daesh/",
+      "status": "automatic_access_restricted_403",
+      "meaning": "Référence conservée ; limite d’accès, pas suppression établie."
+    },
+    {
+      "source": "ONU SC/13931, 27 août 2019",
+      "url": "https://press.un.org/en/2019/sc13931.doc.htm",
+      "status": "direct_timeout_index_consulted",
+      "read_scope": "Extrait institutionnel indexé : perte territoriale et persistance des réseaux. Pas de lecture intégrale directe revendiquée."
+    },
+    {
+      "source": "Coalition, Feuille de route de Paris du 25 juin 2019",
+      "url": "https://2017-2021.state.gov/joint-statement-by-the-political-directors-of-the-global-coalition-to-defeat-isis/",
+      "status": "automatic_access_forbidden",
+      "alternative": "https://www.diplomatie.gouv.fr/IMG/pdf/paris_roadmap_-_final_version_fr_2__cle09b5d2.pdf",
+      "alternative_status": "accessible_pdf",
+      "read_scope": "Même déclaration en français : défaite territoriale annoncée le 23 mars 2019, poursuite de la lutte contre les cellules ; version américaine consultable aussi dans l’index (80 membres)."
+    },
+    {
+      "source": "EIA, pétrole iranien en 2020",
+      "url": "https://www.eia.gov/todayinenergy/detail.php?id=49116",
+      "status": "accessible_html",
+      "read_scope": "Présentation institutionnelle consultée ; seul le point de vue du comparateur est clarifié. Actualité politique de 2026 non réévaluée."
+    },
+    {
+      "source": "IUPAC, symboles chimiques (question du quiz sur Fe)",
+      "url": "https://list.iupac.org/reports/periodic_table/index.html",
+      "status": "direct_403_institutional_index_consulted",
+      "read_scope": "Extrait indexé explicite : Fe dérive de ferrum. Vérification du fait à partir de cet extrait, pas de lecture directe intégrale."
+    }
+  ]
+}

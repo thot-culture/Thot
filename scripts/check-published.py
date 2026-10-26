@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """Compare le site publié aux fichiers locaux, sans publier ni appeler de source externe.
 
 Usage : python3 scripts/check-published.py --root . --report /tmp/thot-publication.json
 Chaque URL, y compris sa version de cache, fait l'objet d'un vrai GET.
 Les ancres sont recherchées dans les HTML téléchargés, pas seulement dans le dépôt.
 """
+import portable_io  # Encodage CLI stable, sans dépendance système.
 
 import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -92,7 +94,7 @@ def inventory(root, base):
         raise ValueError("Répertoire assets/ absent de --root.")
     html_files = tuple(dict.fromkeys((*HTML_FILES, *sorted(
         path.relative_to(root).as_posix() for path in root.rglob('*.html')
-        if path.name != '404.html' and not any(part in {'.git', 'node_modules'} for part in path.relative_to(root).parts)))))
+        if path.name != '404.html' and not any(part in {'.git', 'node_modules', '.venv', 'venv', '__pycache__'} for part in path.relative_to(root).parts)))))
     files = [root / name for name in html_files]
     asset_files = sorted(path for path in assets.rglob("*") if path.is_file())
     files += asset_files + [root / "sitemap.xml"]
