@@ -21,6 +21,9 @@ Le générateur utilise ces mêmes fichiers sur tous les systèmes, sans recherc
 Le moteur de composition est explicitement `ImageFont.Layout.BASIC` pour ces cartes en français :
 Pillow ne choisit plus implicitement RAQM sous Linux et BASIC sous Windows, ce qui changeait les espacements.
 Les cinq cartes typographiques ont été régénérées avec ce moteur commun, sans changer leurs titres ni leurs compositions.
+Le PNG utilise ensuite un conteneur RGB sans métadonnées variables, un filtre Sub et un profil DEFLATE fixes,
+compressés par la bibliothèque zlib standard de Python. Cela évite les variations de l’encodeur Pillow/zlib-ng entre plateformes.
+Le contrôle reste strict sur les octets du PNG, en plus des dimensions et des polices ; il n’est pas remplacé par une simple comparaison visuelle.
 `--font-directory` permet de sélectionner une copie des mêmes fichiers ; il ne garantit pas des images identiques si les polices diffèrent.
 Ne pas remplacer silencieusement une police manquante par Arial ou une autre fonte.
 

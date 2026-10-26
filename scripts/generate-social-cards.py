@@ -13,6 +13,8 @@ from dataclasses import dataclass
 from io import BytesIO
 import json
 import math
+import struct
+import zlib
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont, features
@@ -25,6 +27,30 @@ CREAM = '#F8F6F1'
 GOLD = '#B89558'
 MUTED = '#455164'
 DEFAULT_FONT_DIR = ROOT / 'tools' / 'fonts' / 'dejavu'
+
+
+def canonical_png(image: Image.Image) -> bytes:
+    """PNG RGB sans métadonnées variables, filtre Sub et profil DEFLATE fixes.
+
+    Les encodeurs Pillow/zlib-ng Windows et Linux peuvent produire des octets
+    différents à pixels identiques. Le conteneur et le filtrage sont ici
+    explicites ; la bibliothèque zlib standard effectue la compression.
+    """
+    image = image.convert('RGB')
+    pixels = image.tobytes()
+    stride = image.width * 3
+    filtered = bytearray()
+    for start in range(0, len(pixels), stride):
+        row = pixels[start:start + stride]
+        filtered.append(1)  # Filtre PNG Sub : différence avec le pixel de gauche.
+        filtered.extend((value - (row[i - 3] if i >= 3 else 0)) & 255
+                        for i, value in enumerate(row))
+    compressor = zlib.compressobj(9, zlib.DEFLATED, 15, 8, zlib.Z_FIXED)
+    compressed = compressor.compress(bytes(filtered)) + compressor.flush()
+    def chunk(kind, data):
+        return struct.pack('>I', len(data)) + kind + data + struct.pack('>I', zlib.crc32(kind + data) & 0xffffffff)
+    header = struct.pack('>IIBBBBB', image.width, image.height, 8, 2, 0, 0, 0)
+    return b'\x89PNG\r\n\x1a\n' + chunk(b'IHDR', header) + chunk(b'IDAT', compressed) + chunk(b'IEND', b'')
 
 
 @dataclass(frozen=True)
@@ -223,9 +249,7 @@ def render(slug: str, card: Card, font_dir: Path) -> bytes:
     c.image = c.image.resize(SIZE, Image.Resampling.LANCZOS)
     # A fixed palette keeps smooth type edges while limiting transfer size.
     c.image = c.image.quantize(colors=256, method=Image.Quantize.MEDIANCUT, dither=Image.Dither.NONE)
-    output = BytesIO()
-    c.image.save(output, format='PNG', optimize=True, compress_level=9)
-    return output.getvalue()
+    return canonical_png(c.image)
 
 
 def main():
