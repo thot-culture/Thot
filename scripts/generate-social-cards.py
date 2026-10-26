@@ -15,7 +15,7 @@ import json
 import math
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, features
 
 ROOT = Path(__file__).resolve().parents[1]
 SIZE = (1200, 630)
@@ -252,6 +252,14 @@ def main():
             raise SystemExit(f'{slug} : {len(content)} octets, budget de 200 Ko dépassé.')
         if args.check:
             if not destination.is_file() or destination.read_bytes() != content:
+                if destination.is_file():
+                    with Image.open(destination) as stored, Image.open(BytesIO(content)) as generated:
+                        pixels_equal = stored.convert('RGBA').tobytes() == generated.convert('RGBA').tobytes()
+                        print('Diagnostic : pixels identiques = ' + str(pixels_equal) +
+                              '; FreeType=' + str(features.version('freetype2')) +
+                              '; RAQM=' + str(features.version('raqm')) +
+                              '; zlib=' + str(features.version('zlib')) +
+                              '; zlib-ng=' + str(features.version('zlib_ng')))
                 raise SystemExit(f'{destination} : absent ou à régénérer avec les polices/Pillow documentés.')
         else:
             destination.write_bytes(content)
