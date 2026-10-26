@@ -1,0 +1,16 @@
+{
+  "base": "0aa6d452be6e5b1add58aa5cc54ee3d88fb307fa",
+  "branch": "work/explorer-aral-rome-20261026",
+  "publication_authorized": false,
+  "pages": [
+    "explorer.html",
+    "explorer/enquetes/mer-aral.html",
+    "explorer/atlas/rome-expansion.html"
+  ],
+  "navigation_only": [
+    "index.html",
+    "bibliotheque.html"
+  ],
+  "old_pages_reused": [],
+  "retirement_exception": "Seule l’URL explorer.html accueille une page entièrement nouvelle. Les onze autres anciennes pages autonomes restent retirées. Les protections documentaires et du quiz sont intégralement conservées."
+}

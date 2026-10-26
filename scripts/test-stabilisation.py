@@ -29,14 +29,25 @@ process.stdout.write(JSON.stringify(c.bank));'''
 def static_checks():
     retirement = json.loads((ROOT/'docs/EXPLORER-RETRAIT-TEMPORAIRE-20261026.json').read_text(encoding='utf-8'))
     assert len(retirement['removed_pages']) == 12
-    assert all(not (ROOT/name).exists() for name in retirement['removed_pages'])
+    reconstruction = json.loads((ROOT/'docs/EXPLORER-RECONSTRUCTION.json').read_text(encoding='utf-8'))
+    assert reconstruction['base'] == '0aa6d452be6e5b1add58aa5cc54ee3d88fb307fa'
+    assert reconstruction['publication_authorized'] is False
+    assert reconstruction['pages'] == ['explorer.html','explorer/enquetes/mer-aral.html','explorer/atlas/rome-expansion.html']
+    assert all(not (ROOT/name).exists() for name in retirement['removed_pages'] if name != 'explorer.html')
+    assert all((ROOT/name).is_file() for name in reconstruction['pages'])
     assert all((ROOT/name).is_file() for name in retirement['shared_files_kept'])
-    htmls = [*ROOT.glob('*.html'), *(ROOT/'articles').glob('*.html')]
+    htmls = [p for p in [*ROOT.glob('*.html'), *(ROOT/'articles').glob('*.html')] if p.name != 'explorer.html']
     assert len(htmls) == 11
     for p in htmls:
         s = p.read_text(encoding='utf-8')
+        if p.name in reconstruction['navigation_only']:
+            s = s.replace('<a href="explorer.html">Explorer</a>', '')
         assert not re.search(r'<a\b[^>]*href="[^"]*(?:explorer(?:\.html|/)|enquetes/)', s), p
     sitemap=(ROOT/'sitemap.xml').read_text(encoding='utf-8')
+    for name in reconstruction['pages']:
+        entry = '  <url><loc>https://thot-culture.github.io/Thot/'+name+'</loc></url>\n'
+        assert entry in sitemap
+        sitemap = sitemap.replace(entry, '')
     assert sitemap.count('<url>') == 10 and 'explorer' not in sitemap and 'enquetes/' not in sitemap
     assert 'temporairement retirées' in (ROOT/'404.html').read_text(encoding='utf-8')
     old, current = bank(BASE), bank()
@@ -81,7 +92,7 @@ def static_checks():
                 assert any(k.arg=='encoding' for k in n.keywords), (p,n.lineno)
     for cmd in [[sys.executable,'scripts/build-quiz-references.py','--check'],[sys.executable,'scripts/check-editorial.py']]:
         subprocess.run(cmd,cwd=ROOT,check=True)
-    print('PASS : douze pages retirées, dépendances conservées, 300 questions identiques sauf dix explications sourcées, 24 vérifiées, scores et sélection inchangés, UTF-8 et polices contrôlés.')
+    print('PASS : onze anciennes pages toujours retirées, trois nouvelles pages autorisées distinctes, dépendances conservées, 300 questions identiques sauf dix explications sourcées, 24 vérifiées, scores et sélection inchangés, UTF-8 et polices contrôlés.')
 
 if __name__=='__main__':
     static_checks()
