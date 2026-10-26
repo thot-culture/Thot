@@ -169,6 +169,27 @@
       "checked_on": "2026-10-26",
       "source_snapshot_sha256": "f693bbb37034d4cd74a9433b41408fec4cd463a3a4c30d21ef99ee98f868c7a8",
       "consultation": "Notice et droits réellement consultés ; fichier image original téléchargé avant conversion de format."
+    },
+    {
+      "id": "temple-dendur",
+      "title": "Le temple de Dendur",
+      "date": "Règne d’Auguste · 27 av.–14 apr. J.-C.",
+      "nature": "Temple de grès, Nubie ; aujourd’hui au Met, New York",
+      "description": "Un pouvoir romain représenté dans la tradition pharaonique : Auguste apparaît dans les reliefs du temple.",
+      "text": "Édifié en Nubie, le temple honore notamment Isis, Pedesi et Pihor. La notice du musée décrit Auguste figuré en pharaon. L’architecture et ses images documentent une représentation locale du pouvoir, sans résumer les expériences de tous les habitants.",
+      "limits": "Origine : Dendur en Nubie, non Alexandrie. Aucun lieu de découverte précis n’est ajouté à la carte. La notice du Met présente une discordance : son en-tête indique un achèvement avant 10 apr. J.-C., son récit une construction vers 15 av. J.-C. Nous retenons le règne d’Auguste plutôt qu’une année exacte.",
+      "image": "/Thot/assets/explorer-v2/media/met-547802.webp",
+      "alt": "Temple de Dendur et sa porte de grès, exposés dans une salle vitrée du Metropolitan Museum of Art.",
+      "credit": "The Metropolitan Museum of Art · Gift of Egypt, 1967 · 68.154 · photographie DP240337. Réduction et conversion WebP THOT ; aucun recadrage ou ajout.",
+      "license": "CC0 · Open Access / domaine public",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": {
+        "title": "The Met · The Temple of Dendur, 547802",
+        "url": "https://www.metmuseum.org/art/collection/search/547802"
+      },
+      "checked_on": "2026-10-26",
+      "source_snapshot_sha256": "6cffd236650e3cdbf162e0588cee11216f995e40047d5731e177658a013a7371",
+      "consultation": "Notice et droits réellement consultés ; fichier image original téléchargé avant conversion de format."
     }
   ],
   "bibliography": [

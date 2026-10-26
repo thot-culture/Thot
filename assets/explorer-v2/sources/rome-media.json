@@ -85,5 +85,18 @@
     "display_path": "assets/explorer-v2/media/met-248042.webp",
     "display_bytes": 45876,
     "changes": "Redimensionnement, orientation EXIF et conversion WebP, sans retouche du sujet."
+  },
+  {
+    "id": "temple-dendur",
+    "source_url": "https://images.metmuseum.org/CRDImages/eg/original/DP240337.jpg",
+    "source_notice": "https://www.metmuseum.org/art/collection/search/547802",
+    "original_sha256": "fff6d92fd37c3b0e03c949b5af1900f3ea8b2cd8c8e7111c570ed21d72c386b6",
+    "original_bytes": 2864342,
+    "display_path": "assets/explorer-v2/media/met-547802.webp",
+    "display_sha256": "b02628d6c61dbbbe1dfa5199d68a7a8165495cb10fdfb29932aae2e22de77edc",
+    "display_bytes": 112280,
+    "license": "CC0 · Open Access / domaine public",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "changes": "Réduction proportionnelle et WebP uniquement ; original intact dans le dossier de recherche."
   }
 ]

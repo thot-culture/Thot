@@ -190,47 +190,95 @@
     {
       "id": "d09",
       "title": "Quand le fond devient une source de poussières",
-      "nature": "Fiche de lecture institutionnelle",
-      "date": "7 mai 2025",
-      "author": "Programme des Nations unies pour le développement",
+      "nature": "Image satellite et fiche de lecture institutionnelle",
+      "date": "Image : 13 juin 2006 ; communiqué : 7 mai 2025",
+      "author": "NASA Earth Observatory / NASA-GSFC ; PNUD",
       "source": {
         "title": "PNUD Ouzbékistan · Étude des tempêtes de poussières, 7 mai 2025",
         "url": "https://www.undp.org/uzbekistan/press-releases/undp-and-uzbekistan-join-forces-combat-dust-storms-southern-aral-sea-region"
       },
-      "description": "Le PNUD décrit les tempêtes transportant sels et particules fines dans la région sud de la mer d’Aral. Ces poussières menacent la santé, l’agriculture et les écosystèmes. Le texte présente des travaux de modélisation et de végétalisation.",
-      "shows": "L’assèchement a des conséquences environnementales et humaines ; l’exposition et les réponses publiques font l’objet d’études.",
-      "limits": "Une menace régionale n’est pas un diagnostic médical individuel. Le document ne mesure pas ici la part exacte de chaque source de poussière et ne permet pas d’attribuer chaque maladie à la mer d’Aral.",
+      "description": "L’image Aqua/MODIS montre un épisode de poussières le 13 juin 2006. La notice NASA indique que le fond asséché est une origine probable de cet épisode. Le communiqué du PNUD, daté de 2025, documente les menaces régionales pour la santé, l’agriculture et les écosystèmes.",
+      "shows": "La vue MODIS montre un panache de poussière au-dessus de la région sud le 13 juin 2006. Le PNUD documente séparément les risques régionaux pour la santé, l’agriculture et les écosystèmes.",
+      "limits": "Une image ne donne pas la composition chimique des poussières ni un diagnostic médical. La NASA qualifie ici leur origine de probable ; le communiqué de 2025 ne décrit pas ce seul épisode de 2006.",
       "tags": [
         "consequences"
       ],
-      "credit": "Notice et visualisation originales THOT, d’après la source indiquée.",
-      "license": "Texte de lecture original ; données factuelles citées, document source non reproduit."
+      "credit": "Image NASA : Jeff Schmaltz, MODIS Rapid Response Team, NASA-Goddard Space Flight Center. Conversion WebP THOT, original conservé. Fiche THOT d’après le PNUD.",
+      "license": "Image NASA selon les règles de réutilisation ; synthèse originale THOT, sans reproduction du communiqué.",
+      "media": {
+        "src": "/Thot/assets/explorer-v2/media/aral-dust-2006.webp",
+        "original_src": "/Thot/assets/explorer-v2/media/aral-dust-2006.jpg",
+        "alt": "Voile clair de poussières sur la partie orientale de la mer d’Aral, image Aqua MODIS du 13 juin 2006."
+      },
+      "additional_sources": [
+        {
+          "title": "NASA Earth Observatory · Dust Storm over the Aral Sea, 15 juin 2006",
+          "url": "https://science.nasa.gov/earth/earth-observatory/dust-storm-over-the-aral-sea-6654/"
+        }
+      ],
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
     },
     {
       "id": "d10",
       "title": "Au Nord, une restauration partielle",
-      "nature": "Fiche de lecture institutionnelle",
-      "date": "Barrage achevé en août 2005 ; bilan octobre 2008",
-      "author": "Banque mondiale",
+      "nature": "Image Landsat d’un aménagement et fiche de lecture",
+      "date": "Mosaïque : juillet–septembre 2006 ; bilan : octobre 2008",
+      "author": "USGS / EROS ; Banque mondiale",
       "source": {
         "title": "Banque mondiale · Feature Stories, n° 23, octobre 2008",
         "url": "https://documents1.worldbank.org/curated/en/888771468089960580/pdf/462360BRI0Box31e0no0FS231Kazakhstan.pdf"
       },
       "description": "Le projet du Syr-Daria et de l’Aral du Nord comprend la digue de Kok-Aral. Le bilan de 2008 rapporte une remontée du niveau au Nord après l’achèvement de la digue en 2005 et une reprise des ressources aquatiques.",
       "shows": "Une partie de la mer a une trajectoire différente : le Nord peut retenir davantage d’eau grâce à un aménagement.",
-      "limits": "Cette restauration ne reconstitue pas toute la mer de 1960. La digue modifie les échanges vers le Sud, et ce bilan daté ne garantit pas seul la situation actuelle.",
+      "limits": "La mosaïque rassemble plusieurs acquisitions et utilise de fausses couleurs ; ce n’est pas une photographie en couleurs naturelles. L’image seule ne date pas la construction et ne mesure pas les débits. La restauration du Nord ne signifie pas le retour de toute la mer de 1960.",
       "tags": [
         "restoration",
         "hydrology"
       ],
-      "credit": "Notice et visualisation originales THOT, d’après la source indiquée.",
-      "license": "Texte de lecture original ; données factuelles citées, document source non reproduit.",
+      "credit": "Image USGS / EROS : Landsat 5, mosaïque des 31 juillet, 23 et 30 août et 1er septembre 2006, chemins/lignes 160–162/27–30. Conversion WebP THOT, original conservé.",
+      "license": "Image gouvernementale USGS, domaine public selon les conditions USGS ; fiche de lecture THOT.",
       "additional_sources": [
         {
-          "title": "NASA Earth Observatory · World of Change: Shrinking Aral Sea",
+          "title": "USGS / EROS · Kok Aral Dam",
+          "url": "https://eros.usgs.gov/earthshots/kok-aral-dam"
+        },
+        {
+          "title": "NASA · Série de la mer d’Aral",
           "url": "https://science.nasa.gov/earth/earth-observatory/world-of-change/aral-sea/"
         }
-      ]
+      ],
+      "media": {
+        "src": "/Thot/assets/explorer-v2/media/aral-dam-2006.webp",
+        "original_src": "/Thot/assets/explorer-v2/media/aral-dam-2006.png",
+        "alt": "Vue Landsat en fausses couleurs de la digue de Kok-Aral et des eaux retenues au Nord en 2006."
+      },
+      "license_url": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits"
+    },
+    {
+      "id": "d11",
+      "title": "Le Nord avant la séparation · 1964",
+      "nature": "Image satellite déclassifiée ARGON KH-5",
+      "date": "22 août 1964",
+      "author": "USGS / EROS · mission ARGON KH-5 9066A",
+      "source": {
+        "title": "USGS / EROS · North Aral Sea",
+        "url": "https://eros.usgs.gov/earthshots/north-aral-sea"
+      },
+      "description": "Cette vue en niveaux de gris, publiée dans la série Earthshots de l’USGS, documente la partie nord de la mer d’Aral en 1964. Le détroit de Berg la relie encore au Sud.",
+      "shows": "Une archive antérieure aux vues MODIS du dossier donne un état ancien du Nord et de sa liaison avec le Sud.",
+      "limits": "Cette vue ne couvre pas toute la mer et ne constitue pas une carte exacte du rivage de 1960. Les emprises et résolutions des autres images diffèrent : on ne peut pas superposer leurs pixels sans traitement géographique. Elle ne révèle pas à elle seule la cause du recul.",
+      "tags": [
+        "observation",
+        "evolution"
+      ],
+      "credit": "USGS / EROS, image ARGON KH-5 9066A du 22 août 1964. Conversion WebP THOT sans retouche ; fichier institutionnel original conservé.",
+      "license": "Domaine public : image gouvernementale USGS, sous réserve des conditions USGS.",
+      "license_url": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+      "media": {
+        "src": "/Thot/assets/explorer-v2/media/aral-north-1964.webp",
+        "original_src": "/Thot/assets/explorer-v2/media/aral-north-1964.png",
+        "alt": "Archive satellite en noir et blanc de la mer d’Aral du Nord et de sa liaison au Sud, le 22 août 1964."
+      }
     }
   ],
   "hypotheses": [

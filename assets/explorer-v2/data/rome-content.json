@@ -235,6 +235,24 @@
         "url": "https://www.metmuseum.org/art/collection/search/248042"
       },
       "place_id": "roma"
+    },
+    {
+      "id": "temple-dendur",
+      "title": "Le temple de Dendur",
+      "date": "Règne d’Auguste · 27 av.–14 apr. J.-C.",
+      "nature": "Temple de grès, Nubie ; aujourd’hui au Met, New York",
+      "description": "Un pouvoir romain représenté dans la tradition pharaonique : Auguste apparaît dans les reliefs du temple.",
+      "text": "Édifié en Nubie, le temple honore notamment Isis, Pedesi et Pihor. La notice du musée décrit Auguste figuré en pharaon. L’architecture et ses images documentent une représentation locale du pouvoir, sans résumer les expériences de tous les habitants.",
+      "limits": "Origine : Dendur en Nubie, non Alexandrie. Aucun lieu de découverte précis n’est ajouté à la carte. La notice du Met présente une discordance : son en-tête indique un achèvement avant 10 apr. J.-C., son récit une construction vers 15 av. J.-C. Nous retenons le règne d’Auguste plutôt qu’une année exacte.",
+      "image": "/Thot/assets/explorer-v2/media/met-547802.webp",
+      "alt": "Temple de Dendur et sa porte de grès, exposés dans une salle vitrée du Metropolitan Museum of Art.",
+      "credit": "The Metropolitan Museum of Art · Gift of Egypt, 1967 · 68.154 · photographie DP240337. Réduction et conversion WebP THOT ; aucun recadrage ou ajout.",
+      "license": "CC0 · Open Access / domaine public",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": {
+        "title": "The Met · The Temple of Dendur, 547802",
+        "url": "https://www.metmuseum.org/art/collection/search/547802"
+      }
     }
   ],
   "places": [
@@ -315,6 +333,90 @@
         "url": "https://pleiades.stoa.org/places/167717"
       },
       "limits": "Point représentatif Pleiades, pas emprise urbaine ni preuve d’existence ou d’intégration à Rome à la date affichée."
+    },
+    {
+      "id": "massalia",
+      "name": "Massalia · Marseille",
+      "pleiades_id": "148127",
+      "text": "Cité fondée par des Grecs de Phocée vers 600 av. J.-C., Massalia établit ses propres implantations et s’allie à Rome pendant les guerres puniques. Son histoire rappelle que la Gaule n’est pas un territoire homogène attendant la conquête.",
+      "document_ids": [],
+      "person_ids": [
+        "caesar"
+      ],
+      "source": {
+        "title": "Pleiades · Massalia/Massilia",
+        "url": "https://pleiades.stoa.org/places/148127"
+      },
+      "limits": "Point représentatif du site selon Pleiades, pas une emprise urbaine, une zone de bataille ou une preuve de son statut à toutes les dates."
+    },
+    {
+      "id": "tarraco",
+      "name": "Tarraco · Tarragone",
+      "pleiades_id": "246349",
+      "text": "Un site ibérique en relation avec des marchands grecs et phéniciens devient un centre romain important à partir du IIIe siècle av. J.-C. Ce repère permet d’observer la présence romaine en Hispanie sans confondre sa ville et la conquête de toute la péninsule.",
+      "document_ids": [],
+      "person_ids": [],
+      "source": {
+        "title": "Pleiades · Col. Tarraco",
+        "url": "https://pleiades.stoa.org/places/246349"
+      },
+      "limits": "Point représentatif du site selon Pleiades, pas une emprise urbaine, une zone de bataille ou une preuve de son statut à toutes les dates."
+    },
+    {
+      "id": "actium",
+      "name": "Actium · sanctuaire et mémorial",
+      "pleiades_id": "530771",
+      "text": "Ce repère localise le sanctuaire d’Apollon près duquel Octavien commémore sa victoire navale de 31 av. J.-C. Il ne localise pas les positions exactes des flottes. Une victoire et un mémorial ne sont pas le même type de trace.",
+      "document_ids": [],
+      "person_ids": [
+        "augustus"
+      ],
+      "source": {
+        "title": "Pleiades · Actium",
+        "url": "https://pleiades.stoa.org/places/530771"
+      },
+      "limits": "Point représentatif du site selon Pleiades, pas une emprise urbaine, une zone de bataille ou une preuve de son statut à toutes les dates."
+    },
+    {
+      "id": "cannae",
+      "name": "Cannae · Cannes",
+      "pleiades_id": "442523",
+      "text": "Près de cette agglomération d’Apulie, l’armée romaine subit une défaite majeure face aux Carthaginois en 216 av. J.-C. Une bataille perdue ne résume pas à elle seule l’issue d’une guerre.",
+      "document_ids": [],
+      "person_ids": [
+        "hannibal"
+      ],
+      "source": {
+        "title": "Pleiades · Cannae",
+        "url": "https://pleiades.stoa.org/places/442523"
+      },
+      "limits": "Point représentatif du site selon Pleiades, pas une emprise urbaine, une zone de bataille ou une preuve de son statut à toutes les dates."
+    },
+    {
+      "id": "ephesos",
+      "name": "Ephesos · Éphèse",
+      "pleiades_id": "599612",
+      "text": "Une grande métropole d’Ionie, en Asie Mineure. Sa présence aide à lire l’échelle orientale de la domination romaine sans réduire les sociétés locales à une couleur sur la carte.",
+      "document_ids": [],
+      "person_ids": [],
+      "source": {
+        "title": "Pleiades · Ephesus/Arsinoe(ia)",
+        "url": "https://pleiades.stoa.org/places/599612"
+      },
+      "limits": "Point représentatif du site selon Pleiades, pas une emprise urbaine, une zone de bataille ou une preuve de son statut à toutes les dates."
+    },
+    {
+      "id": "antioch",
+      "name": "Antiochia · Antioche",
+      "pleiades_id": "658381",
+      "text": "Fondée vers 300 av. J.-C. par Séleucos Ier, Antioche est un grand centre d’échanges et l’une des villes de la tétrapole syrienne. La ville a une histoire antérieure et postérieure à l’emprise romaine affichée.",
+      "document_ids": [],
+      "person_ids": [],
+      "source": {
+        "title": "Pleiades · Antiochia/Theoupolis",
+        "url": "https://pleiades.stoa.org/places/658381"
+      },
+      "limits": "Point représentatif du site selon Pleiades, pas une emprise urbaine, une zone de bataille ou une preuve de son statut à toutes les dates."
     }
   ],
   "bibliography": [
@@ -331,5 +433,279 @@
       "url": "https://www.metmuseum.org/pt/toah/ht/04/afw.html"
     }
   ],
-  "layer_limits": "Seules les emprises, contours, autres ensembles présents dans la source et cinq lieux de repérage sont proposés. Ni voies ni batailles ne sont tracées sans données vérifiées. Les lieux sont un index transchronologique, pas une liste des villes romaines à chaque époque."
+  "layer_limits": "Les emprises et contours restent ceux des huit états sourcés. Onze lieux et quatre repères d’événements forment des index documentaires transchronologiques. Aucun itinéraire, champ de bataille ou découpage provincial précis n’est inventé. Les voies AWMC ont été examinées mais ne sont pas ajoutées sans chronologie individuelle vérifiée.",
+  "events": [
+    {
+      "id": "cannae216",
+      "title": "Cannes : une défaite romaine",
+      "date": "216 av. J.-C.",
+      "year": -216,
+      "place_id": "cannae",
+      "chapter_id": "punic",
+      "text": "L’armée romaine est vaincue près de Cannae pendant la deuxième guerre punique. Le site de référence ne constitue pas la restitution des lignes de combat.",
+      "source": {
+        "title": "Pleiades · Cannae",
+        "url": "https://pleiades.stoa.org/places/442523"
+      },
+      "limits": "Repère du site antique ; position et emprise exactes du champ de bataille non tracées.",
+      "person_ids": [
+        "hannibal"
+      ]
+    },
+    {
+      "id": "carthage146",
+      "title": "La destruction de Carthage",
+      "date": "146 av. J.-C.",
+      "year": -146,
+      "place_id": "carthage",
+      "chapter_id": "mediterranean",
+      "text": "La destruction de Carthage par les armées romaines marque la fin de la troisième guerre punique. La conquête implique ici une destruction urbaine, pas seulement une extension de couleur.",
+      "source": {
+        "title": "The Met · Western North Africa, 1000 B.C.–1 A.D.",
+        "url": "https://www.metmuseum.org/pt/toah/ht/04/afw.html"
+      },
+      "limits": "Repère de la ville ; aucune localisation des opérations de siège n’est inventée."
+    },
+    {
+      "id": "actium31",
+      "title": "Actium : victoire et mémoire",
+      "date": "31 av. J.-C.",
+      "year": -31,
+      "place_id": "actium",
+      "chapter_id": "augustus",
+      "text": "Octavien commémore sa victoire navale sur Marc Antoine près du sanctuaire d’Apollon. Ce repère montre le lien entre événement et commémoration.",
+      "source": {
+        "title": "Pleiades · Actium",
+        "url": "https://pleiades.stoa.org/places/530771"
+      },
+      "limits": "Le point est celui du sanctuaire/mémorial, pas une position connue des flottes.",
+      "person_ids": [
+        "augustus"
+      ]
+    },
+    {
+      "id": "rome27",
+      "title": "Le titre d’Auguste",
+      "date": "27 av. J.-C.",
+      "year": -27,
+      "place_id": "roma",
+      "chapter_id": "augustus",
+      "text": "Le Sénat accorde le titre d’Auguste à Octavien. Le changement de régime politique ne signifie pas que tous les territoires sont conquis cette année-là.",
+      "source": {
+        "title": "The Met · The Roman Republic",
+        "url": "https://www.metmuseum.org/essays/the-roman-republic"
+      },
+      "limits": "Rome sert de repère civique ; aucune salle ni position précise de la cérémonie n’est indiquée.",
+      "person_ids": [
+        "augustus"
+      ]
+    }
+  ],
+  "regions": [
+    {
+      "id": "gaul",
+      "title": "Regarder la Gaule",
+      "zoom": 2.3,
+      "center": [
+        2,
+        46
+      ],
+      "text": "La conquête s’inscrit dans une fin de République déjà expansive. Les deux cartes disponibles autour de César sont celles de 60 et de 1 av. J.-C. : le second état inclut des transformations postérieures à sa mort. Ce cadrage n’ajoute aucune frontière provinciale.",
+      "source": {
+        "title": "The Met · The Roman Republic",
+        "url": "https://www.metmuseum.org/essays/the-roman-republic"
+      },
+      "document_ids": [
+        "coin-caesar"
+      ],
+      "person_ids": [
+        "caesar"
+      ],
+      "periods": [
+        "bc60",
+        "bc1"
+      ]
+    },
+    {
+      "id": "hispania",
+      "title": "Regarder l’Hispanie",
+      "zoom": 2.7,
+      "center": [
+        -4,
+        40
+      ],
+      "text": "Tarraco devient un centre romain important dès le IIIe siècle av. J.-C. Observer le site et deux états territoriaux permet de distinguer une implantation locale de la domination sur une péninsule entière. Ce cadrage n’est pas un découpage administratif.",
+      "source": {
+        "title": "Pleiades · Col. Tarraco",
+        "url": "https://pleiades.stoa.org/places/246349"
+      },
+      "periods": [
+        "bc200",
+        "bc100"
+      ]
+    },
+    {
+      "id": "east",
+      "title": "Regarder l’Orient",
+      "zoom": 2.1,
+      "center": [
+        33,
+        36
+      ],
+      "text": "Éphèse et Antioche sont des repères de sociétés qui ont leur histoire propre. Le modèle de 117 ne permet pas de reconstituer toutes les occupations éphémères de Trajan en Orient. Ce cadrage ne crée pas de provinces supplémentaires.",
+      "source": {
+        "title": "The Met · The Roman Empire",
+        "url": "https://www.metmuseum.org/essays/the-roman-empire-27-b-c-393-a-d"
+      },
+      "person_ids": [
+        "trajan"
+      ],
+      "document_ids": [
+        "coin-trajan"
+      ],
+      "periods": [
+        "ad100",
+        "ad117"
+      ]
+    }
+  ],
+  "journeys": [
+    {
+      "id": "hannibal",
+      "title": "Hannibal : une expansion qui rencontre des adversaires",
+      "steps": [
+        {
+          "title": "Deux puissances en Méditerranée",
+          "epoch": "bc300",
+          "place_id": "carthage",
+          "date": "Avant les guerres puniques",
+          "text": "Commence par Carthage et Rome dans l’état schématique de 300 av. J.-C. Le monde méditerranéen ne se résume pas aux possessions futures de Rome.",
+          "source": {
+            "title": "The Met · Western North Africa, 1000 B.C.–1 A.D.",
+            "url": "https://www.metmuseum.org/pt/toah/ht/04/afw.html"
+          }
+        },
+        {
+          "title": "Une victoire ne termine pas la guerre",
+          "epoch": "bc200",
+          "place_id": "cannae",
+          "date": "Événement : 216 av. J.-C.",
+          "text": "Examine le repère de Cannes, où Rome est vaincue. La carte disponible est plus tardive : vers 200 av. J.-C. Elle ne représente pas le contrôle territorial le jour de la bataille. Aucun itinéraire d’Hannibal n’est dessiné.",
+          "source": {
+            "title": "Pleiades · Cannae",
+            "url": "https://pleiades.stoa.org/places/442523"
+          }
+        }
+      ]
+    },
+    {
+      "id": "caesar",
+      "title": "César : conquérir ne suffit pas à expliquer le régime",
+      "steps": [
+        {
+          "title": "Avant les conquêtes de César",
+          "epoch": "bc60",
+          "region_id": "gaul",
+          "date": "Carte : vers 60 av. J.-C.",
+          "text": "Observe le cadrage de la Gaule. Un état initial permet une comparaison, mais pas le suivi de chaque campagne.",
+          "source": {
+            "title": "The Met · The Roman Republic",
+            "url": "https://www.metmuseum.org/essays/the-roman-republic"
+          }
+        },
+        {
+          "title": "Une source produite pendant les crises",
+          "epoch": "bc60",
+          "place_id": "roma",
+          "date": "Document : 47–46 av. J.-C.",
+          "text": "Le denier de César porte un message politique. Sa datation diffère de celle de la carte contextuelle ; la monnaie n’atteste pas le contour de l’Empire.",
+          "document_id": "coin-caesar",
+          "source": {
+            "title": "The Met · The Roman Republic",
+            "url": "https://www.metmuseum.org/essays/the-roman-republic"
+          }
+        },
+        {
+          "title": "Après César, d’autres transformations",
+          "epoch": "bc1",
+          "region_id": "gaul",
+          "date": "Carte : 1 av. J.-C. ; César est mort en 44",
+          "text": "Le territoire est plus étendu, mais plusieurs décennies et d’autres acteurs séparent ces deux cartes. Ne transforme pas toute différence en conquête personnelle de César.",
+          "source": {
+            "title": "The Met · The Roman Republic",
+            "url": "https://www.metmuseum.org/essays/the-roman-republic"
+          }
+        }
+      ]
+    },
+    {
+      "id": "augustus",
+      "title": "Auguste : territoire dominé et régime politique",
+      "steps": [
+        {
+          "title": "De la victoire à la mémoire",
+          "epoch": "bc1",
+          "place_id": "actium",
+          "date": "Événement : 31 av. J.-C.",
+          "text": "Le sanctuaire/mémorial renvoie à la victoire d’Octavien. La carte contextuelle montre un état plus tardif, sous Auguste ; elle ne restitue pas l’année de la bataille.",
+          "source": {
+            "title": "Pleiades · Actium",
+            "url": "https://pleiades.stoa.org/places/530771"
+          }
+        },
+        {
+          "title": "Un nouveau titre, des pouvoirs concentrés",
+          "epoch": "bc1",
+          "place_id": "roma",
+          "date": "Repère politique : 27 av. J.-C.",
+          "text": "Le titre d’Auguste marque une transformation du régime. Rome possède déjà des territoires sous la République. Nous gardons le même état territorial de 1 av. J.-C. : aucune frontière exacte de 27 n’est inventée.",
+          "source": {
+            "title": "The Met · The Roman Republic",
+            "url": "https://www.metmuseum.org/essays/the-roman-republic"
+          }
+        },
+        {
+          "title": "Un pouvoir romain en images égyptiennes",
+          "epoch": "bc1",
+          "place_id": "alexandria",
+          "date": "Document : règne d’Auguste",
+          "text": "Le temple de Dendur, en Nubie, représente Auguste dans la tradition pharaonique. Alexandrie sert ici de repère égyptien général, pas de lieu d’origine du temple. L’objet est aujourd’hui au Met, à New York.",
+          "document_id": "temple-dendur",
+          "source": {
+            "title": "The Met · Temple de Dendur",
+            "url": "https://www.metmuseum.org/art/collection/search/547802"
+          }
+        }
+      ]
+    },
+    {
+      "id": "trajan",
+      "title": "Trajan : regarder l’apogée avec ses limites",
+      "steps": [
+        {
+          "title": "Un état au début du règne",
+          "epoch": "ad100",
+          "region_id": "east",
+          "date": "Carte : vers 100 apr. J.-C.",
+          "text": "Observe l’Orient au début du règne de Trajan. Un modèle territorial n’explique pas à lui seul les campagnes ou les résistances.",
+          "source": {
+            "title": "The Met · The Roman Empire",
+            "url": "https://www.metmuseum.org/essays/the-roman-empire-27-b-c-393-a-d"
+          }
+        },
+        {
+          "title": "L’apogée et les différences de modèles",
+          "epoch": "ad117",
+          "region_id": "east",
+          "date": "Carte : vers 117 apr. J.-C.",
+          "text": "La seconde carte vient d’une autre base. Les différences ne sont donc pas toutes des conquêtes. Les occupations orientales éphémères ne sont pas exhaustivement représentées. Le sesterce donne un autre regard, celui du message impérial.",
+          "document_id": "coin-trajan",
+          "source": {
+            "title": "The Met · The Roman Empire",
+            "url": "https://www.metmuseum.org/essays/the-roman-empire-27-b-c-393-a-d"
+          }
+        }
+      ]
+    }
+  ]
 }

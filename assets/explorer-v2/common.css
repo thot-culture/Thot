@@ -7,3 +7,7 @@
 @media print{.xp-nav,.xp-footer,.xp-breadcrumb{display:none}.xp-main{max-width:none;padding:0}.xp-header{border:0}.xp-source-section:not([open])>*:not(summary){display:block}}
 
 .xp-experience:not(.xp-atlas-promo) .xp-cover{display:flex;flex-direction:column}.xp-experience:not(.xp-atlas-promo) .xp-cover img{flex:1;object-position:center bottom}.xp-experience:not(.xp-atlas-promo) .xp-cover figcaption{position:static;flex:none}
+/* Hiérarchie et lecture : crédits conservés, sans texte minuscule. */
+.xp-brand span,.xp-kicker{font-size:12px}.xp-cover figcaption,.xp-atlas-promo figcaption,.xp-meta,.xp-breadcrumb,.xp-footer,.xp-source-section li{font-size:14px}.xp-nav a{font-size:14px}.xp-promise p,.xp-source-section p,.xp-experience-copy>p:not(.xp-kicker,.xp-question),.xp-hero .xp-lead{font-size:16px}
+.xp-experience .xp-cover{box-shadow:0 10px 26px #17243a10}.xp-button{transition:background .15s,box-shadow .15s}.xp-button:focus-visible,.xp-button:hover{box-shadow:0 5px 18px #166d7133}.xp-cover:focus-within{outline:2px solid #166d71;outline-offset:4px}
+@media(max-width:700px){.xp-nav a{font-size:14px}.xp-button{font-size:15px}.xp-kicker{letter-spacing:.1em}.xp-cover figcaption{font-size:13px}.xp-main{padding-inline:16px}}

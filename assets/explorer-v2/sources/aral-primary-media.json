@@ -1,0 +1,44 @@
+[
+  {
+    "original": "assets/explorer-v2/media/aral-north-1964.png",
+    "original_sha256": "15960aa3df4d5babdb6aa947894a77724f4f6cf489ee764f886d7182fe1f6621",
+    "display": "assets/explorer-v2/media/aral-north-1964.webp",
+    "display_sha256": "2011be3e81d45efd508c24a230643cab71d2c5bb2e01c9444d5e2108dd4ff163",
+    "display_bytes": 104454,
+    "changes": "Redimensionnement et conversion WebP uniquement ; fichier institutionnel original conservé intact.",
+    "source_url": "https://eros.usgs.gov/sites/eros.usgs.gov/files/2020-12/aral_1964_North.png",
+    "checked_on": "2026-10-26",
+    "consultation": "Fichier institutionnel téléchargé et image réellement examinée ; notices et droits consultés.",
+    "license": "Domaine public USGS, sous réserve des crédits tiers ; aucun crédit tiers indiqué pour cette image.",
+    "license_url": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+    "notice_snapshot_sha256": "f649b94a3485cddc333667936a226e1e0b03da9dcd8d2cdd30f0089109db7157"
+  },
+  {
+    "original": "assets/explorer-v2/media/aral-dam-2006.png",
+    "original_sha256": "0757691aa28ce6e53fb846b69fe2ca545b0ff2744d08c4a06001a4a647d9f883",
+    "display": "assets/explorer-v2/media/aral-dam-2006.webp",
+    "display_sha256": "2b521f7e3eefc226b7a7e427c1b3a899948014ce1aeeeedb2c76a24c1f59a5d4",
+    "display_bytes": 94568,
+    "changes": "Redimensionnement et conversion WebP uniquement ; fichier institutionnel original conservé intact.",
+    "source_url": "https://eros.usgs.gov/sites/eros.usgs.gov/files/2020-12/aral_2006_Dam.png",
+    "checked_on": "2026-10-26",
+    "consultation": "Fichier institutionnel téléchargé et image réellement examinée ; notices et droits consultés.",
+    "license": "Domaine public USGS, sous réserve des crédits tiers ; aucun crédit tiers indiqué pour cette image.",
+    "license_url": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+    "notice_snapshot_sha256": "f29c2555e857811fd6e1782a78f8e98d30705031f232d9ffc4d4d16a6a4bcb54"
+  },
+  {
+    "original": "assets/explorer-v2/media/aral-dust-2006.jpg",
+    "original_sha256": "305f759d3e1a8eef476fce6f767894525d771ed01587bb12056cd561043f3326",
+    "display": "assets/explorer-v2/media/aral-dust-2006.webp",
+    "display_sha256": "3a249f5114516b804b8baf68caf6f70f431543530c1948967877c86898d67914",
+    "display_bytes": 95516,
+    "changes": "Redimensionnement et conversion WebP uniquement ; fichier institutionnel original conservé intact.",
+    "source_url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/imagerecords/6000/6654/aral_amo_2006164_lrg.jpg",
+    "checked_on": "2026-10-26",
+    "consultation": "Fichier institutionnel téléchargé et image réellement examinée ; notices et droits consultés.",
+    "license": "Conditions NASA de réutilisation des médias ; crédit Jeff Schmaltz, MODIS Rapid Response Team, NASA-GSFC.",
+    "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "notice_snapshot_sha256": "0464c55f5f94fe5a3852b6f6f3def3eb86fdfd57436ceb60385f8af5f4d063fd"
+  }
+]

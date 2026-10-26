@@ -15,3 +15,28 @@
 @media(max-width:560px){.atlas-hero h1{font-size:37px}.atlas-hero-note{display:none}.atlas-opening{font-size:16px}.atlas-hero{padding-top:16px}}
 /* Les images remplissent leur cadre sans donner à la grille leur taille intrinsèque. */
 .atlas-library-image{position:relative}.atlas-library-image img{position:absolute;inset:0;width:100%;height:100%;min-height:0;min-width:0;object-fit:contain}
+/* Finitions : mêmes documents, commandes plus lisibles et nouveaux repères sourcés. */
+.rome-atlas .atlas-kicker,.rome-atlas .atlas-credit{font-size:12px!important;letter-spacing:.08em}
+.rome-atlas .atlas-source,.rome-atlas .atlas-legend,.rome-atlas .atlas-map-help,.rome-atlas .atlas-caution,.rome-atlas .atlas-reveal-control p,.rome-atlas .atlas-hero-note{font-size:14px}
+.rome-atlas button,.rome-atlas .atlas-action,.rome-atlas select,.rome-atlas .atlas-layers label,.rome-atlas .atlas-layers legend,.rome-atlas .atlas-compare-controls label{font-size:14px!important;min-height:48px}
+.rome-atlas .atlas-story [data-story-body],.rome-atlas .atlas-card #atlas-card-content,.rome-atlas .atlas-library-copy>p:not(.atlas-kicker),.rome-atlas .atlas-library-static,.rome-atlas .atlas-readable-chapters p{font-size:15px;line-height:1.7}
+.rome-atlas .atlas-library-static summary,.rome-atlas .atlas-zoom-controls output,.rome-atlas .atlas-status,.rome-atlas .atlas-period-selector>label,.rome-atlas .atlas-selection>label,.rome-atlas .atlas-compare-switch{font-size:14px}
+.rome-atlas .atlas-pan-controls button,.rome-atlas .atlas-zoom-controls button[data-atlas-zoom=in],.rome-atlas .atlas-zoom-controls button[data-atlas-zoom=out]{width:48px;min-height:48px}
+.atlas-compare-badges{position:absolute;top:76px;left:12px;right:12px;z-index:1;display:flex;justify-content:space-between;gap:10px;pointer-events:none}
+.atlas-compare-badges span{background:#fffdf7f2;border:2px solid #173c45;padding:7px 10px;border-radius:7px;font-size:14px;font-weight:750;max-width:47%}
+.atlas-compare-badges span:last-child{border-color:#9f4b31}
+.atlas-compare-controls label:last-child{color:#813b29}
+.atlas-journey{padding:22px;background:#eaf1e8;border:1px solid #a9c4b7;border-left:5px solid #166d71;border-radius:14px;margin:0 0 16px}
+.atlas-journey h3{font-size:29px;margin:8px 0 14px}.atlas-journey #atlas-journey-date{font-weight:700;font-size:14px}.atlas-journey-navigation{display:flex;flex-wrap:wrap;gap:9px;margin-top:15px}
+.atlas-regions{grid-column:1/-1;display:flex;gap:10px;flex-wrap:wrap;align-items:center}.atlas-regions>span{font-size:14px;flex-basis:100%}
+.rome-atlas[data-show-events=false] #atlas-event-layer{display:none}
+.atlas-event{fill:#fffdf7;stroke:#803c29;stroke-width:3px;cursor:pointer}.atlas-event rect{vector-effect:non-scaling-stroke}.atlas-event:hover,.atlas-event:focus-visible{fill:#f5cc8e;outline:2px solid #17243a}
+.atlas-library-card{transition:border-color .15s,box-shadow .15s}.atlas-library-card:focus-within{border-color:#166d71;box-shadow:0 0 0 2px #166d7122}
+@media(max-width:800px){.rome-atlas .atlas-card{position:relative;inset:auto;width:100%;max-height:none;border:0;border-top:1px solid #b6cccc;border-radius:0;box-shadow:none}.atlas-story{max-height:none}.atlas-journey{padding:17px}.atlas-compare-badges{top:75px}.atlas-compare-badges span{font-size:12px}.rome-atlas .atlas-library-card--person{grid-template-columns:110px minmax(0,1fr)}.rome-atlas .atlas-chapters{grid-template-columns:1fr}.atlas-map-stage{height:420px}.atlas-zoom-controls button[data-atlas-zoom=reset]{max-width:120px;line-height:1.2}.atlas-layers{grid-template-columns:1fr 1fr}}
+@media(max-width:360px){.rome-atlas .atlas-library-card--person{display:flex}.atlas-library-card--person .atlas-library-image{height:210px;min-height:0}.atlas-compare-controls{grid-template-columns:1fr}.atlas-compare-controls>span{display:none}.atlas-journey-navigation button{flex:1 1 100%}}
+#atlas-city-layer .atlas-city-hit,#atlas-event-layer .atlas-event-hit{fill:transparent;stroke:none;pointer-events:all}
+.atlas-event-legend i{border:0;font-size:22px;line-height:1;color:#803c29}.rome-atlas[data-show-events=false] .atlas-event-legend{display:none}
+@media(prefers-reduced-motion:reduce){.atlas-library-card{transition:none}}
+#atlas-city-layer text{pointer-events:none}.atlas-map-compass span{font-size:12px}
+/* Aussi appliqué aux symboles de la carte statique sans JavaScript. */
+.atlas-city-hit,.atlas-event-hit{fill:transparent;stroke:none;pointer-events:all}

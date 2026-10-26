@@ -14,3 +14,57 @@
 
 .aral-doc-preview{height:80px;border-radius:5px;overflow:hidden;background:#e8ecde;display:grid;place-items:center;margin-bottom:13px;color:#71816b}.aral-doc-preview img{display:block;width:100%;height:100%;object-fit:cover;object-position:center bottom}.aral-doc-preview svg{display:block;width:100%;height:100%;font:14px system-ui}.aral-doc-preview span{font:700 11px/1.5 system-ui;letter-spacing:.15em;text-align:center}.aral-board-controls input{min-height:44px}#aral-remove-selected{font-size:11px;margin-top:10px;min-height:44px;width:100%}.aral-experience:not(.is-enhanced) .aral-doc-preview{display:none}
 .aral-doc-preview{position:relative}.aral-doc-preview>img,.aral-doc-preview>svg{position:absolute;inset:0;min-height:0;min-width:0}
+
+/* Finitions après audit : sélection, plateau aéré et commandes sans glisser. */
+.aral-board-canvas,.aral-threads{width:1200px;height:1320px}
+.aral-paper{width:248px;height:248px;transform:none;transition:box-shadow .16s,border-color .16s}
+.aral-paper:nth-child(even){transform:none}
+.aral-paper.is-active{border:3px solid #166d71;box-shadow:0 0 0 4px #fffdf7,0 8px 22px #173c4533}
+.aral-paper-handle{min-height:48px;font-size:14px;touch-action:none;cursor:grab;padding:9px 12px}
+.aral-paper-open{font-size:20px;min-height:65px;line-height:1.25}
+.aral-paper-remove{min-height:44px;font-size:13px;padding:8px 12px}
+.aral-paper-type{font-size:14px}.aral-paper>img{height:78px}
+.aral-threads g.is-dimmed{opacity:.45}
+.aral-threads text{font:750 15px system-ui;stroke:none}
+.aral-board-mode{display:flex;gap:6px;padding:10px 14px;background:#e3eadc}
+.aral-board-mode button{flex:1;min-height:48px;font-size:14px}
+.aral-relation-legend{display:grid;grid-template-columns:1fr 1fr;gap:9px 15px;padding:14px;font-size:13px;line-height:1.4;background:#fffdf7;border-top:1px solid #c6d1bd}
+.aral-relation-legend span{padding-left:10px;border-left:4px solid #166d71}
+.aral-relation-legend [data-kind=contradict]{border-color:#a4422c;border-style:dashed}
+.aral-relation-legend [data-kind=context]{border-color:#66508d;border-style:dotted}
+.aral-relation-legend [data-kind=inconclusive]{border-color:#566068;border-style:double}
+.aral-board-viewport{height:560px;scrollbar-width:auto;scrollbar-color:#758e72 #e6e8dc;scroll-padding:30px}
+.aral-board-controls{gap:10px;align-items:center}.aral-board-controls label{font-size:14px;flex:1 1 100%}
+.aral-board-controls input{flex:1;min-width:100px}.aral-board-controls button{font-size:13px;min-height:48px;margin-left:0}
+.aral-evidence-list{padding:14px;display:grid;gap:10px;max-height:620px;overflow:auto;background:#e7ebdd}
+.aral-evidence-item{border:1px solid #bdcab2;border-radius:10px;background:#fffdf7;padding:12px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
+.aral-evidence-item>button:first-child{text-align:left;border:2px solid transparent;font-size:16px;line-height:1.45;min-height:52px;background:transparent;padding:7px}
+.aral-evidence-item>button.is-active{border-color:#166d71;background:#e4efde;color:#113c3c}
+.aral-evidence-item>p{grid-column:1;margin:0;padding:0 9px;font-size:13px;color:#455b4a}
+.aral-evidence-item>button:last-child{grid-column:2;grid-row:1/3;align-self:center;font-size:14px;min-height:48px}
+.aral-active-description{padding:12px;background:#dfeadb;border-left:4px solid #166d71;font-size:15px;font-weight:650;line-height:1.5;margin:0 0 15px}
+.aral-selected-actions{display:flex;gap:8px;margin-top:10px}.aral-selected-actions button{flex:1;font-size:14px;min-height:48px;line-height:1.4}
+.aral-links-list{display:grid;gap:12px}.aral-links-list li{font-size:14px;margin:0;padding:15px;background:#fffdf7;border-width:4px}
+.aral-link-kind{display:block;margin:6px 0;font-weight:650}.aral-link-actions{justify-content:start;gap:10px;margin-top:12px}.aral-link-actions button{font-size:14px;min-height:48px;padding:10px 14px}
+.aral-review-state{color:#6e4726}.aral-link-form label,.aral-position-controls>label{font-size:14px}
+.aral-link-form select,.aral-link-form input,.aral-position-controls select{font-size:15px;min-height:48px}
+.aral-link-form h4{font-size:28px}.aral-form-actions button,.aral-move-buttons button,#aral-remove-selected{font-size:14px;min-height:48px}
+.aral-feedback-criteria{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:25px 0}
+.aral-criterion{background:#fffdf7;border:1px solid #bdcbb4;border-radius:10px;padding:18px}
+.aral-criterion h3{font-size:23px;margin:8px 0 13px}.aral-criterion p{font-size:14px;margin:0}.aral-criterion-state{font-weight:750;color:#704122}
+.aral-criterion[data-present=true] .aral-criterion-state{color:#14594d}
+.aral-desk-heading{scroll-margin-top:70px}
+@media(min-width:1101px){.aral-workspace.is-board-wide .aral-desk{display:block}.aral-workspace.is-board-wide .aral-panel{display:none}.aral-workspace.is-board-wide .aral-desk[data-current-view=board] .aral-board-panel,.aral-workspace.is-board-wide .aral-desk[data-current-view=documents] .aral-documents,.aral-workspace.is-board-wide .aral-desk[data-current-view=argument] .aral-argument{display:block}.aral-workspace.is-board-wide .aral-mobile-tabs:not([hidden]){display:flex}.aral-workspace.is-board-wide .aral-board-viewport{height:650px}}
+@media(max-width:1100px){#aral-wide-board{display:none}.aral-mobile-tabs:not([hidden]){position:sticky;top:0;z-index:12;background:#fffdf7;border-bottom:1px solid #b7c6ad;padding:8px 0;box-shadow:0 5px 12px #17243a0b}.aral-mobile-tabs button{font-size:14px;min-height:54px;line-height:1.4;padding:8px 5px}.aral-mobile-tabs span{display:block;font-size:13px;font-weight:500}.aral-board-viewport{height:500px}.aral-panel{scroll-margin-top:88px}.aral-evidence-list{max-height:none;overflow:visible}}
+@media(max-width:700px){.aral-board-controls button{flex:1;line-height:1.4}.aral-relation-legend{font-size:13px;gap:10px}.aral-link-endpoints{grid-template-columns:1fr}.aral-position-controls{padding:16px}.aral-evidence-item{grid-template-columns:1fr}.aral-evidence-item>button:last-child{grid-column:1;grid-row:auto;justify-self:start}.aral-selected-actions{flex-direction:column}.aral-feedback-criteria{grid-template-columns:1fr}.aral-feedback{padding:24px 18px}.aral-feedback p,.aral-feedback li{font-size:16px}.aral-mobile-tabs button{font-size:13px}}
+@media(prefers-reduced-motion:reduce){.aral-paper{transition:none}}
+/* Dernière passe typographique, y compris les notices secondaires. */
+.aral-experience .aral-kicker,.aral-experience .aral-doc-nature,.aral-experience .aral-piece-id,.aral-experience .aral-seen,.aral-experience .aral-doc-preview span{font-size:12px}
+.aral-experience .aral-opening-credit,.aral-experience .aral-storage,.aral-experience .aral-board-instructions,.aral-experience .aral-document-credit,.aral-experience .aral-time,.aral-experience .aral-resume,.aral-experience .aral-panel-note{font-size:14px;line-height:1.65}
+.aral-experience button,.aral-experience select,.aral-experience .aral-link-form label{font-size:14px;min-height:48px}.aral-experience .aral-opening-copy>p:not([class]),.aral-experience .aral-document-dialog p,.aral-experience .aral-hypothesis,.aral-experience .aral-proof-label{font-size:16px;line-height:1.65}
+.aral-experience .aral-mobile-tabs button{font-size:13px}.aral-experience .aral-paper-open{font-size:19px;line-height:1.2}.aral-experience .aral-paper-handle,.aral-experience .aral-paper-remove{font-size:13px;min-height:44px}
+.aral-paper{transition:border-color .15s,box-shadow .15s}.aral-experience .aral-feedback-criteria p{font-size:15px}.aral-hypothesis input{flex-shrink:0}
+@media(prefers-reduced-motion:reduce){.aral-paper{transition:none}}
+.aral-experience .aral-document-credit{font-size:14px!important}.aral-experience .aral-panel-heading>p,.aral-experience .aral-board-error,.aral-experience .aral-link-error,.aral-experience .aral-paper-type,.aral-experience .aral-data-figure figcaption,.aral-experience .aral-static-doc{font-size:14px}
+.aral-board-pan{display:flex;gap:7px;padding:10px 14px;flex-wrap:wrap}.aral-board-pan button{flex:1;min-width:58px;padding-inline:8px}
+.aral-experience .aral-chapter-label,.aral-experience .aral-step{font-size:12px}

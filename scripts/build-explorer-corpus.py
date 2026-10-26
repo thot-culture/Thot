@@ -89,3 +89,16 @@ for id,name,num,text,docids,personids in [
     places.append({'id':id,'name':name,'pleiades_id':num,'text':text,'document_ids':docids,'person_ids':personids,'source':src('Pleiades · '+name,'https://pleiades.stoa.org/places/'+str(num)),'limits':'Point représentatif Pleiades, pas emprise urbaine ni preuve d’existence ou d’intégration à Rome à la date affichée.'})
 dump('data/rome-content.json',{'chapters':[dict(id=id,title=title,steps=steps,description=description,body=body,source=source) for id,title,steps,description,body,source in chapters],'people':people,'documents':documents,'places':places,'bibliography':[REP,EMP,PUNIC],'layer_limits':'Seules les emprises, contours, autres ensembles présents dans la source et cinq lieux de repérage sont proposés. Ni voies ni batailles ne sont tracées sans données vérifiées. Les lieux sont un index transchronologique, pas une liste des villes romaines à chaque époque.'})
 print('Corpus construit : 10 pièces Aral ; 6 chapitres, 4 personnages, 3 monnaies, 5 lieux romains.')
+
+# Enrichissements documentaires relus : conserver les notices initiales et leurs ID.
+extra=json.loads((OUT/'data/explorer-additions.json').read_text(encoding='utf-8'))
+a=json.loads((OUT/'data/aral.json').read_text(encoding='utf-8'));r=json.loads((OUT/'data/rome-content.json').read_text(encoding='utf-8'))
+for update in extra['aral_updates']:
+    next(doc for doc in a['documents'] if doc['id']==update['id']).update(update)
+a['documents'].extend(extra['aral_new'])
+r['places'].extend(extra['rome_places'])
+r['documents'].extend(extra.get('rome_documents',[]))
+r['events']=extra['rome_events'];r['regions']=extra['rome_regions'];r['journeys']=extra['rome_journeys']
+r['layer_limits']='Les emprises et contours restent ceux des huit états sourcés. Onze lieux et quatre repères d’événements forment des index documentaires transchronologiques. Aucun itinéraire, champ de bataille ou découpage provincial précis n’est inventé. Les voies AWMC ont été examinées mais ne sont pas ajoutées sans chronologie individuelle vérifiée.'
+dump('data/aral.json',a);dump('data/rome-content.json',r)
+print('Enrichissement :',len(a['documents']),'pièces ;',len(r['places']),'lieux ;',len(r['events']),'repères datés.')

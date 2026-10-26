@@ -102,5 +102,145 @@
     "license_url": "https://creativecommons.org/licenses/by/3.0/",
     "checked_on": "2026-10-26",
     "json_sha256": "960052c8c4bb97c21bf466ebfb2fad1da336c33b1d99ceb4ec5df4ca7c4995a9"
+  },
+  {
+    "id": "massalia",
+    "pleiades_id": "148127",
+    "title": "Massalia/Massilia",
+    "reprPoint": [
+      5.382499,
+      43.296854
+    ],
+    "creators": [
+      {
+        "username": null,
+        "name": "S. Loseby"
+      }
+    ],
+    "source": "https://pleiades.stoa.org/places/148127",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "checked_on": "2026-10-26",
+    "json_sha256": "3306cbcc5765e396fcc82b9cc3454d825211b71699cca9e87d50a7c532662cc7"
+  },
+  {
+    "id": "tarraco",
+    "pleiades_id": "246349",
+    "title": "Col. Tarraco",
+    "reprPoint": [
+      1.2583375,
+      41.116892
+    ],
+    "creators": [
+      {
+        "username": null,
+        "name": "H.S. Sivan"
+      },
+      {
+        "username": null,
+        "name": "S.J. Keay"
+      },
+      {
+        "username": null,
+        "name": "R.W. Mathisen"
+      }
+    ],
+    "source": "https://pleiades.stoa.org/places/246349",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "checked_on": "2026-10-26",
+    "json_sha256": "17dab375a8077e62035e848e2b426044f2ee5bd9c16c7cbacbcc621961c9c055"
+  },
+  {
+    "id": "actium",
+    "pleiades_id": "530771",
+    "title": "Actium",
+    "reprPoint": [
+      20.765852,
+      38.953891
+    ],
+    "creators": [
+      {
+        "username": null,
+        "name": "W.M. Murray"
+      }
+    ],
+    "source": "https://pleiades.stoa.org/places/530771",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "checked_on": "2026-10-26",
+    "json_sha256": "ee761692aceac0e9396a2268d0e590df8793e6166e31959b3669b305b9a56d16"
+  },
+  {
+    "id": "cannae",
+    "pleiades_id": "442523",
+    "title": "Cannae",
+    "reprPoint": [
+      16.151832758913518,
+      41.29668333101128
+    ],
+    "creators": [
+      {
+        "username": null,
+        "name": "I.E.M. Edlund Berry"
+      },
+      {
+        "username": null,
+        "name": "A.M. Small"
+      }
+    ],
+    "source": "https://pleiades.stoa.org/places/442523",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "checked_on": "2026-10-26",
+    "json_sha256": "3167d219c8ee90fe8c61378eac9c295920890b75d397f3d7e849d7d13917a1be"
+  },
+  {
+    "id": "ephesos",
+    "pleiades_id": "599612",
+    "title": "Ephesus/Arsinoe(ia)",
+    "reprPoint": [
+      27.34240298195866,
+      37.940164271971945
+    ],
+    "creators": [
+      {
+        "username": null,
+        "name": "C. Foss"
+      },
+      {
+        "username": null,
+        "name": "G. Reger"
+      }
+    ],
+    "source": "https://pleiades.stoa.org/places/599612",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "checked_on": "2026-10-26",
+    "json_sha256": "8470af6ada252498ddfd37c4fcb6c4cbb40673a6b5bb312310f303adeee95eb4"
+  },
+  {
+    "id": "antioch",
+    "pleiades_id": "658381",
+    "title": "Antiochia/Theoupolis",
+    "reprPoint": [
+      36.17684236666667,
+      36.2158868
+    ],
+    "creators": [
+      {
+        "username": null,
+        "name": "T. Sinclair"
+      },
+      {
+        "username": null,
+        "name": "P.-L. Gatier"
+      }
+    ],
+    "source": "https://pleiades.stoa.org/places/658381",
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "checked_on": "2026-10-26",
+    "json_sha256": "d55577e8e6c12960afa0b9baa4b622efb423bef40199491a54a6496b218be41e"
   }
 ]

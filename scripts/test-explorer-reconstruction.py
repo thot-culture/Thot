@@ -19,7 +19,7 @@ import subprocess
 import sys
 import zipfile
 ROOT=Path(__file__).resolve().parents[1];ASSET=ROOT/'assets/explorer-v2';BASE='0aa6d452be6e5b1add58aa5cc54ee3d88fb307fa'
-PAGES=['explorer.html','explorer/enquetes/mer-aral.html','explorer/atlas/rome-expansion.html'];WIDTHS=(390,768,1024,1440)
+PAGES=['explorer.html','explorer/enquetes/mer-aral.html','explorer/atlas/rome-expansion.html'];WIDTHS=(320,390,768,1440)
 
 def read(path):return json.loads(path.read_text(encoding='utf-8'))
 def static_checks():
@@ -36,9 +36,9 @@ def static_checks():
             for page in PAGES:current=current.replace(('  <url><loc>https://thot-culture.github.io/Thot/'+page+'</loc></url>\n').encode('utf-8'),b'')
         assert current==before,'Modification non autorisée du socle : '+name
     aral=read(ASSET/'data/aral.json');rome=read(ASSET/'data/rome-content.json');geo=read(ASSET/'data/rome-geography.json')
-    assert len(aral['documents'])==10 and len(rome['chapters'])==6 and len(rome['people'])==4 and len(rome['documents'])==3
+    assert len(aral['documents'])==11 and len(rome['chapters'])==6 and len(rome['people'])==4 and len(rome['documents'])==4
     assert [e['year'] for e in geo['epochs']]==[-400,-300,-200,-100,-60,-1,100,117]
-    assert len({d['id'] for d in aral['documents']})==10
+    assert len({d['id'] for d in aral['documents']})==11
     for doc in aral['documents']:
         for k in ('id','title','nature','date','author','source','description','shows','limits','credit','license','tags'):assert doc[k],(doc['id'],k)
     assert hashlib.sha1((ASSET/'media/moynaq-original.jpg').read_bytes()).hexdigest()=='e1d1f651519c503a9688df5badd35b3249526d3e'
@@ -108,16 +108,17 @@ def browser_checks(out):
             capture(page,'aral-ouverture-'+str(width));page.locator('#aral-start').focus();page.keyboard.press('Enter')
             assert page.locator('#aral-dossier').is_visible();assert page.locator('#aral-help').is_hidden()
             assert 'indisponible' in page.locator('#aral-storage').inner_text() # Refus natif, origine opaque.
-            for n in range(1,11):
+            for n in range(1,12):
                 id='d'+str(n).zfill(2);view(page,'documents');page.locator('[data-open-doc='+id+']').click();assert page.locator('#aral-document').is_visible();assert page.locator('#aral-document-title').inner_text()
                 assert 'Ce qu’elle ne permet pas' in page.locator('#aral-document-body').inner_text()
                 if n==1:
                     page.locator('#aral-doc-zoom').focus();page.keyboard.press('End');assert page.locator('.aral-image-controls output').inner_text()=='300 %'
                     page.get_by_role('button',name='Vue entière',exact=True).click();assert page.locator('.aral-image-controls output').inner_text()=='100 %'
                 page.locator('#aral-doc-add').click();assert page.locator('[data-board-card='+id+']').count()==1
-            assert len(page.evaluate('THOT_ARAL.getState().seen'))==10
+            assert len(page.evaluate('THOT_ARAL.getState().seen'))==11
+            view(page,'board');page.locator('[data-board-mode=map]').click()
             before=page.evaluate('THOT_ARAL.getState().cards.d01.x');handle=page.locator('[data-move-card=d01]');handle.focus();page.keyboard.press('ArrowRight');assert page.evaluate('THOT_ARAL.getState().cards.d01.x')==before+25
-            page.locator('#aral-selected-card').select_option('d01');page.locator('[data-board-move=down]').click();assert page.evaluate('THOT_ARAL.getState().cards.d01.y')==49
+            page.locator('#aral-selected-card').select_option('d01');page.locator('[data-board-move=down]').click();assert page.evaluate('THOT_ARAL.getState().cards.d01.y')==75
             # Glisser réel d'une poignée, en plus de l'alternative clavier.
             handle.scroll_into_view_if_needed();bounds=handle.bounding_box();before=page.evaluate('THOT_ARAL.getState().cards.d01.x');page.mouse.move(bounds['x']+20,bounds['y']+15);page.mouse.down();page.mouse.move(bounds['x']+60,bounds['y']+35,steps=5);page.mouse.up();assert page.evaluate('THOT_ARAL.getState().cards.d01.x')>before
             page.locator('#aral-arrange').click();page.locator('#aral-link-from').select_option('d04');page.locator('#aral-link-to').select_option('d06');page.locator('#aral-link-kind').select_option('context');page.locator('#aral-link-note').fill('Les prélèvements réduisent les apports au lac.');page.locator('#aral-link-save').click();assert len(page.evaluate('THOT_ARAL.getState().links'))==1
@@ -126,18 +127,18 @@ def browser_checks(out):
             view(page,'argument')
             for id in ('d04','d06','d07'):page.locator('[data-proof-role='+id+']').select_option('support')
             page.locator('[data-proof-role=d08]').select_option('insufficient');page.locator('[data-proof-role=d10]').select_option('counter')
-            view(page,'board');capture(page,'aral-tableau-'+str(width),'.aral-workspace')
+            view(page,'board');page.locator('#aral-board-zoom').evaluate('(e)=>{e.value=60;e.dispatchEvent(new Event("input",{bubbles:true}))}');capture(page,'aral-tableau-'+str(width),'.aral-workspace')
             submit(page,'irrigation','Les prélèvements pour irriguer diminuent les apports des fleuves ; le Nord et le Sud ont des trajectoires différentes. Les années sèches aggravent certaines phases.')
-            assert 'Un mécanisme étayé' in page.locator('#aral-feedback-title').inner_text();assert 'D06' in page.locator('#aral-feedback-body').inner_text();assert 'ne réfute pas' in page.locator('#aral-feedback-body').inner_text();capture(page,'aral-bilan-'+str(width),'#aral-feedback')
+            assert 'Des appuis documentaires' in page.locator('#aral-feedback-title').inner_text();assert 'D06' in page.locator('#aral-feedback-body').inner_text();assert 'ne réfute pas' in page.locator('#aral-feedback-body').inner_text();capture(page,'aral-bilan-'+str(width),'#aral-feedback')
             page.locator('#aral-revise').click();assert page.locator('#aral-feedback').is_hidden();assert len(page.evaluate('THOT_ARAL.getState().links'))==1
             submit(page,'disappearance','Toute la mer a définitivement disparu.');assert 'trop générale' in page.locator('#aral-feedback-body').inner_text()
             page.locator('#aral-revise').click();submit(page,'climate','Seul le climat explique toute la transformation.');assert 'ne suffisent pas' in page.locator('#aral-feedback-body').inner_text()
             page.locator('#aral-revise').click();submit(page,'uncertain','Il manque encore des éléments pour préciser chaque variation.');assert 'Suspendre' in page.locator('#aral-feedback-body').inner_text();page.locator('#aral-revise').click()
-            for id in ['d'+str(n).zfill(2) for n in range(1,11)]:page.locator('[data-proof-role='+id+']').select_option('none')
+            for id in ['d'+str(n).zfill(2) for n in range(1,12)]:page.locator('[data-proof-role='+id+']').select_option('none')
             submit(page,'irrigation','Je n’ai pas encore retenu de preuve.');assert 'Aucune pièce n’est retenue' in page.locator('#aral-feedback-body').inner_text();page.locator('#aral-revise').click()
             view(page,'board');page.locator('[data-delete-link]').click();assert len(page.evaluate('THOT_ARAL.getState().links'))==0
             page.locator('#aral-selected-card').select_option('d01');page.locator('#aral-remove-selected').click();assert 'd01' not in page.evaluate('THOT_ARAL.getState().cards')
-            page.locator('#aral-reset').click();page.locator('#aral-reset-cancel').click();assert len(page.evaluate('THOT_ARAL.getState().seen'))==10
+            page.locator('#aral-reset').click();page.locator('#aral-reset-cancel').click();assert len(page.evaluate('THOT_ARAL.getState().seen'))==11
             page.locator('#aral-reset').click();page.locator('#aral-reset-confirm').click();state=page.evaluate('THOT_ARAL.getState()');assert state['cards']=={} and state['seen']==[] and state['links']==[] and not state['hypothesis'];good(page,errors,console);c.close();results.append({'page':'aral','width':width,'result':'PASS','storage':'Refus natif : fonctionnement maintenu'})
             c,page,errors,console=page_for(browser,PAGES[2],width)
             assert page.locator('#atlas-primary [data-territory]').count()>0;capture(page,'rome-carte-'+str(width))
@@ -149,7 +150,7 @@ def browser_checks(out):
             page.locator('#atlas-map').focus();page.keyboard.press('ArrowRight');page.keyboard.press('Home');assert page.evaluate('THOT_ATLAS.getState().zoom')==1
             page.locator('#atlas-territory-select').select_option('place:roma');assert page.locator('#atlas-card').is_visible();assert 'Roma' in page.locator('#atlas-card-title').inner_text();capture(page,'rome-fiche-'+str(width),'.atlas-map-shell')
             page.locator('[data-atlas-close-card]').click();assert page.locator('#atlas-card').is_hidden();assert page.evaluate('document.activeElement.id')=='atlas-territory-select'
-            page.locator('#atlas-city-layer [data-place=roma] circle').click();assert page.locator('#atlas-card').is_visible();page.locator('[data-atlas-close-card]').click()
+            page.locator('#atlas-city-layer [data-place=roma] circle').first.click();assert page.locator('#atlas-card').is_visible();page.locator('[data-atlas-close-card]').click()
             territory=page.locator('#atlas-primary [data-roman=true]').first;territory.focus();page.keyboard.press('Enter');assert page.locator('#atlas-card').is_visible();page.locator('[data-atlas-close-card]').click()
             for layer in ('cities','territories','borders','neighbors'):
                 box=page.locator('[data-atlas-layer='+layer+']')
@@ -177,7 +178,7 @@ def browser_checks(out):
         # Reprise simulée, dans deux pages neuves, avec le vrai code de lecture/écriture.
         c,page,errors,console=page_for(browser,PAGES[1],390,storage={'quiz-sentinel':'préservé'})
         page.locator('#aral-start').click();page.locator('[data-add-doc=d04]').click();view(page,'documents');page.locator('[data-add-doc=d06]').click()
-        page.locator('#aral-selected-card').select_option('d04');page.locator('[data-board-move=right]').click()
+        view(page,'board');page.locator('#aral-selected-card').select_option('d04');page.locator('[data-board-move=right]').click()
         page.locator('#aral-link-from').select_option('d04');page.locator('#aral-link-to').select_option('d06');page.locator('#aral-link-kind').select_option('context');page.locator('#aral-link-note').fill('Mécanisme hydrologique');page.locator('#aral-link-save').click();page.locator('#aral-hint').click()
         view(page,'argument');page.locator('[data-proof-role=d04]').select_option('support');page.locator('[data-proof-role=d06]').select_option('support')
         submit(page,'irrigation','Un argument conservé avec ses preuves et ses relations.');page.wait_for_timeout(350)
@@ -189,12 +190,16 @@ def browser_checks(out):
         page.evaluate("Object.defineProperty(window,'localStorage',{value:{setItem(){throw new Error('quota')},getItem(){return null}},configurable:true})")
         page.locator('#aral-conclusion').fill('La sauvegarde échoue mais le dossier reste utilisable.');page.wait_for_timeout(350);assert 'indisponible' in page.locator('#aral-storage').inner_text();good(page,errors,console);c.close()
         c,page,errors,console=page_for(browser,PAGES[1],390,storage={'thot.explorer.aral.v1':'{corrompu'})
-        assert 'indisponible' not in page.locator('#aral-storage').inner_text();page.locator('#aral-start').click();assert page.evaluate('THOT_ARAL.getState().cards')=={};good(page,errors,console);c.close()
+        assert 'indisponible' not in page.locator('#aral-storage').inner_text();page.locator('#aral-start').click();assert page.evaluate('THOT_ARAL.getState().cards')=={}
+        page.locator('[data-add-doc=d04]').click();page.wait_for_timeout(350);assert 'thot.explorer.aral.v1' in page.evaluate('({...window.__testSaved})')
+        page.evaluate("window.__testSaved['quiz-sentinel']='intact'");page.locator('#aral-reset').click();page.locator('#aral-reset-confirm').click()
+        assert page.evaluate("window.__testSaved['thot.explorer.aral.v1']") is None
+        assert page.evaluate("window.__testSaved['quiz-sentinel']")=='intact';good(page,errors,console);c.close()
         results.append({'test':'stockage simulé : positions, relations, rôles, hypothèse, indice, texte et bilan restaurés ; clé quiz intacte ; erreur quota et JSON corrompu','result':'PASS','limit':'Ne remplace pas un rechargement HTTP avec stockage natif.'})
         # Sans JavaScript : 10 pièces, récits et notices demeurent consultables.
         for name in PAGES:
             c,page,errors,console=page_for(browser,name,390,javascript=False)
-            if name==PAGES[1]:assert page.locator('.aral-static-doc').count()==10;assert page.locator('#aral-start').is_hidden();page.locator('.aral-static-doc').first.locator('summary').click();assert page.locator('.aral-static-doc').first.get_attribute('open') is not None
+            if name==PAGES[1]:assert page.locator('.aral-static-doc').count()==11;assert page.locator('#aral-start').is_hidden();page.locator('.aral-static-doc').first.locator('summary').click();assert page.locator('.aral-static-doc').first.get_attribute('open') is not None
             if name==PAGES[2]:assert page.locator('.atlas-readable-chapters section').count()==6;assert page.locator('.atlas-epoch-sources li').count()==8;assert page.locator('[data-atlas-mode=free]').first.is_hidden()
             good(page,errors,console);c.close()
         # Échec d'image dynamique réel : le texte et la source du document restent disponibles.

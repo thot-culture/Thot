@@ -10,6 +10,10 @@
   const byId = new Map(docs.map(doc => [doc.id, doc]));
   const $ = id => root.querySelector('#' + id);
   const KEY = 'thot.explorer.aral.v1';
+  const BOARD = {width:1200, height:1320, cardWidth:248, cardHeight:248};
+  const kindSymbols = {confirm:'+',contradict:'≠',context:'i',inconclusive:'?'};
+  const kindDashes = {confirm:'none',contradict:'12 6',context:'4 6',inconclusive:'1 7'};
+  let drawnZoom = 1;
   const kinds = {confirm: 'Se confirment', contradict: 'Se contredisent', context: 'Apportent du contexte', inconclusive: 'Ne permettent pas de conclure'};
   const kindColors = {confirm: '#166d71', contradict: '#b24d35', context: '#7661a3', inconclusive: '#646d73'};
   const roleLabels = {none: 'Non retenue', support: 'Appui à mon hypothèse', counter: 'Contre mon hypothèse', insufficient: 'Insuffisante pour conclure'};
@@ -22,7 +26,7 @@
   const sourceOf = doc => typeof doc.source === 'object' ? doc.source : {url: doc.source, title: 'Consulter la source originale'};
   const mediaOf = doc => typeof doc.media === 'object' ? doc.media : {src: doc.media, alt: doc.alt || doc.title};
   function link(url, text) { const node = el('a', text); try { const parsed = new URL(url, location.href); if (['https:', 'http:'].includes(parsed.protocol)) node.href = parsed.href; } catch {} return node; }
-  const fresh = () => ({version: 1, started: false, seen: [], cards: {}, links: [], roles: {}, hypothesis: '', customHypothesis: '', conclusion: '', hintIndex: 0, zoom: 80, view: 'documents', lastFeedback: false});
+  const fresh = () => ({version: 1, started: false, seen: [], cards: {}, links: [], roles: {}, hypothesis: '', customHypothesis: '', conclusion: '', hintIndex: 0, zoom: 100, activeCard: '', boardMode: matchMedia('(max-width: 700px)').matches ? 'list' : 'map', view: 'documents', lastFeedback: false});
   function sanitize(raw) {
     const value = fresh();
     if (!raw || raw.version !== 1) return value;
@@ -30,16 +34,18 @@
     value.seen = [...new Set(Array.isArray(raw.seen) ? raw.seen.filter(id => byId.has(id)) : [])];
     for (const doc of docs) {
       const point = raw.cards && raw.cards[doc.id];
-      if (point && typeof point === 'object') value.cards[doc.id] = {x: clamp(point.x, 8, 780), y: clamp(point.y, 8, 544)};
+      if (point && typeof point === 'object') value.cards[doc.id] = {x: clamp(point.x, 8, BOARD.width-BOARD.cardWidth-8), y: clamp(point.y, 8, BOARD.height-BOARD.cardHeight-8)};
       const role = raw.roles && raw.roles[doc.id];
       if (point && Object.hasOwn(roleLabels, role)) value.roles[doc.id] = role;
     }
-    value.links = (Array.isArray(raw.links) ? raw.links : []).filter(item => item && item.from !== item.to && value.cards[item.from] && value.cards[item.to] && Object.hasOwn(kinds, item.kind)).slice(0, 60).map((item, index) => ({id: 'l' + index, from: item.from, to: item.to, kind: item.kind, note: short(item.note, 240)}));
+    value.links = (Array.isArray(raw.links) ? raw.links : []).filter(item => item && item.from !== item.to && value.cards[item.from] && value.cards[item.to] && Object.hasOwn(kinds, item.kind)).slice(0, 60).map((item, index) => ({id: 'l' + index, from: item.from, to: item.to, kind: item.kind, note: short(item.note, 240), review:['unresolved','scoped','open'].includes(item.review)?item.review:'unresolved'}));
     const hypotheses = new Set([...(data.hypotheses || []).map(item => item.id), 'irrigation', 'climate', 'disappearance', 'uncertain', 'custom']);
     value.hypothesis = hypotheses.has(raw.hypothesis) ? raw.hypothesis : '';
     value.customHypothesis = short(raw.customHypothesis, 300);
     value.conclusion = short(raw.conclusion);
-    value.hintIndex = clamp(raw.hintIndex, 0, 100);
+    value.hintIndex = Math.floor(clamp(raw.hintIndex, 0, 100000));
+    value.activeCard = value.cards[raw.activeCard] ? raw.activeCard : Object.keys(value.cards)[0] || "";
+    value.boardMode = ["map","list"].includes(raw.boardMode) ? raw.boardMode : value.boardMode;
     value.zoom = clamp(raw.zoom, 50, 125);
     value.view = ['documents', 'board', 'argument'].includes(raw.view) ? raw.view : 'documents';
     value.lastFeedback = raw.lastFeedback === true;
@@ -105,6 +111,18 @@
       result.relations.push({from: a.id, to: b.id, kind: kinds[item.kind], note: item.note || '', comment});
     }
     result.next.push('Pour aller plus loin, il faudrait examiner les débits réellement arrivés à chaque partie du lac, les prélèvements, l’évaporation et leurs variations avec des séries comparables.');
+    const unresolved=links.filter(item=>item.kind==='contradict'&&(!item.review||item.review==='unresolved'));
+    if(unresolved.length)result.issues.push(unresolved.length+' relation(s) de contradiction restent à examiner. Précise les lieux, les dates et les variables avant de décider si les pièces s’opposent réellement.');
+    for(const item of links.filter(item=>item.kind==='contradict'&&item.review==='scoped'))result.next.push('Tu indiques un écart de portée pour '+item.from.toUpperCase()+' / '+item.to.toUpperCase()+'. Cette déclaration ne suffit pas à le valider : explicite la période ou l’échelle dans ta note.');
+    if(supports('evolution')&&!supports('hydrology')&&!supports('irrigation'))result.issues.push('Les observations retenues décrivent un changement ; elles ne suffisent pas à prouver une causalité. Cherche un mécanisme et une donnée sur les apports ou prélèvements.');
+    result.criteria=[
+      {label:'Des pièces retenues explicitement',present:selected.length>0,detail:selected.length+' pièce(s), avec leur rôle déclaré.'},
+      {label:'Deux familles de pièces sur le mécanisme',present:supports('hydrology')&&supports('irrigation'),detail:'Hydrologie et prélèvements ; leur sélection ne garantit pas à elle seule la qualité du lien.'},
+      {label:'Le climat et le devenir du Nord pris en compte',present:included('climate')&&included('restoration'),detail:'Des nuances documentaires, pas des causes qui s’excluent automatiquement.'},
+      {label:'Les désaccords ont un état explicite',present:links.length>0&&!unresolved.length,detail:unresolved.length?'Il reste des contradictions à examiner.':'Le statut est ta déclaration, pas une validation automatique.'}
+    ];
+    if(input.hypothesis==='irrigation'&&supports('irrigation')&&supports('hydrology')&&result.issues.length)result.title='Des appuis documentaires, des nuances à examiner';
+    if(input.hypothesis==='custom')result.title='Une proposition à discuter avec les documents';
     return result;
   }
 
@@ -112,7 +130,7 @@
   try { const stored = localStorage.getItem(KEY); if (stored) { try { state = sanitize(JSON.parse(stored)); } catch { state = fresh(); } } } catch { storageAvailable = false; }
   const announce = text => { $('aral-status').textContent = text; };
   function storageMessage() { $('aral-storage').textContent = storageAvailable ? 'Reprise automatique sur cet appareil uniquement. Aucun compte ni envoi à un serveur.' : 'La reprise locale est indisponible dans ce navigateur. Tu peux poursuivre toute l’enquête ; garde la page ouverte pour conserver ce dossier.'; }
-  function saveNow() { clearTimeout(saveTimer); if (!storageAvailable) return; try { localStorage.setItem(KEY, JSON.stringify(state)); } catch { storageAvailable = false; storageMessage(); } }
+  function saveNow() { clearTimeout(saveTimer); if (!storageAvailable) return; try { if(state.seen.length || Object.keys(state.cards).length || state.hypothesis || state.customHypothesis || state.conclusion || state.hintIndex) localStorage.setItem(KEY, JSON.stringify(state)); else localStorage.removeItem(KEY); } catch { storageAvailable = false; storageMessage(); } }
   function save() { clearTimeout(saveTimer); saveTimer = setTimeout(saveNow, 250); }
   window.addEventListener('pagehide', saveNow);
   window.THOT_ARAL = {evaluate, getState: () => JSON.parse(JSON.stringify(state)), storageKey: KEY};
@@ -133,6 +151,8 @@
     root.querySelectorAll('[data-add-doc]').forEach(node => { const included = Boolean(state.cards[node.dataset.addDoc]); node.hidden = included; });
     $('aral-seen-count').textContent = state.seen.length + ' / ' + docs.length + ' pièces ouvertes';
     $('aral-board-count').textContent = Object.keys(state.cards).length + ' pièces · ' + state.links.length + ' relations';
+    const retained=Object.values(state.roles).filter(role=>role && role!=='none').length;
+    for(const [view,count] of [['documents',state.seen.length+'/'+docs.length],['board',Object.keys(state.cards).length],['argument',retained+' preuves']]) root.querySelector('[data-tab-count='+view+']').textContent=count;
   }
   function docBody(doc) {
     const box = $('aral-document-body'); box.replaceChildren();
@@ -142,6 +162,8 @@
     box.append(el('p', [doc.author, doc.credit].filter(Boolean).join(' · '), 'aral-document-credit'));
     if (doc.license_url) box.append(link(doc.license_url, doc.license || 'Conditions de réutilisation')); else box.append(el('p', doc.license || 'Voir les conditions dans la source.'));
     const p = el('p'); p.append(link(source.url, source.title || 'Consulter la source originale')); box.append(p);
+    for(const additional of doc.additional_sources || []){const row=el('p');row.append(link(additional.url,additional.title));box.append(row);}
+    if(doc.media?.original_src){const row=el('p'),a=el('a','Ouvrir le fichier institutionnel original, sans conversion');a.href=doc.media.original_src;row.append(a);box.append(row);}
   }
   function closeDocument() {
     $('aral-document').close();
@@ -173,35 +195,85 @@
     const present = Boolean(state.cards[id]); $('aral-doc-add').hidden = present; $('aral-document-added').hidden = !present;
     markSeen(id); $('aral-document').showModal();
   }
-  function boardZoom() {
-    const factor = Number(state.zoom) / 100; const size = root.querySelector('.aral-board-size'), canvas = root.querySelector('[data-aral-canvas]');
-    size.style.width = 1000 * factor + 'px'; size.style.height = 780 * factor + 'px'; canvas.style.transform = 'scale(' + factor + ')';
-    $('aral-board-zoom').value = state.zoom; $('aral-board-zoom-value').textContent = state.zoom + ' %';
+  function boardZoom(keepCenter = true) {
+    const viewport=root.querySelector('.aral-board-viewport');
+    const cx=(viewport.scrollLeft+viewport.clientWidth/2)/drawnZoom,cy=(viewport.scrollTop+viewport.clientHeight/2)/drawnZoom;
+    const factor=Number(state.zoom)/100;
+    root.querySelector('.aral-board-size').style.width=BOARD.width*factor+'px';
+    root.querySelector('.aral-board-size').style.height=BOARD.height*factor+'px';
+    root.querySelector('[data-aral-canvas]').style.transform='scale('+factor+')';
+    if(keepCenter){viewport.scrollLeft=cx*factor-viewport.clientWidth/2;viewport.scrollTop=cy*factor-viewport.clientHeight/2;}
+    drawnZoom=factor;$('aral-board-zoom').value=state.zoom;$('aral-board-zoom-value').textContent=state.zoom+' %';
+  }
+  function setBoardMode(mode) {
+    state.boardMode=mode;
+    root.querySelector('.aral-board-viewport').hidden=mode!=='map';
+    $('aral-evidence-list').hidden=mode!=='list';$('aral-board-pan').hidden=mode!=='map';
+    root.querySelectorAll('[data-board-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.boardMode===mode)));
+    root.querySelectorAll('#aral-fit-board,#aral-center-selected').forEach(b=>b.disabled=mode!=='map');
+    $('aral-board-zoom').disabled=mode!=='map';boardZoom(false);save();
+  }
+  function selectCard(id,center=false) {
+    if(!state.cards[id])return;
+    state.activeCard=id;$('aral-selected-card').value=id;
+    root.querySelectorAll('[data-board-card],[data-select-card]').forEach(node=>{
+      const active=(node.dataset.boardCard||node.dataset.selectCard)===id;node.classList.toggle('is-active',active);
+      if(node.matches('button'))node.setAttribute('aria-pressed',String(active));
+    });
+    $('aral-active-description').textContent='Pièce active : '+id.toUpperCase()+' · '+byId.get(id).title;
+    drawThreads();if(center)centerCard();save();
+  }
+  function centerCard(){
+    const p=state.cards[state.activeCard];if(!p)return;
+    const box=root.querySelector('.aral-board-viewport');box.scrollTo({left:(p.x+BOARD.cardWidth/2)*drawnZoom-box.clientWidth/2,top:(p.y+BOARD.cardHeight/2)*drawnZoom-box.clientHeight/2,behavior:'auto'});
   }
   function drawThreads() {
-    const target = root.querySelector('.aral-threads'); target.replaceChildren();
-    for (const item of state.links) {
-      const a = state.cards[item.from], b = state.cards[item.to]; if (!a || !b) continue;
-      const x1 = a.x + 105, y1 = a.y + 110, x2 = b.x + 105, y2 = b.y + 110;
-      const path = svg('path', {d: `M ${x1} ${y1} Q ${(x1+x2)/2+35} ${(y1+y2)/2-35} ${x2} ${y2}`, fill: 'none', stroke: kindColors[item.kind], 'stroke-width': '3', 'stroke-dasharray': item.kind === 'inconclusive' ? '7 6' : 'none'});
-      const label = svg('text', {x: (x1+x2)/2+17, y: (y1+y2)/2-20, 'text-anchor': 'middle', fill: kindColors[item.kind]}); label.textContent = kinds[item.kind]; target.append(path, label);
+    const target=root.querySelector('.aral-threads');target.replaceChildren();
+    state.links.forEach((item,index)=>{
+      const a=state.cards[item.from],b=state.cards[item.to];if(!a||!b)return;
+      const dx=b.x-a.x,dy=b.y-a.y,horizontal=Math.abs(dx)>Math.abs(dy);
+      const x1=a.x+(horizontal?(dx>0?BOARD.cardWidth:0):BOARD.cardWidth/2),y1=a.y+(horizontal?BOARD.cardHeight/2:(dy>0?BOARD.cardHeight:0));
+      const x2=b.x+(horizontal?(dx>0?0:BOARD.cardWidth):BOARD.cardWidth/2),y2=b.y+(horizontal?BOARD.cardHeight/2:(dy>0?0:BOARD.cardHeight));
+      const lane=(index%5-2)*16;
+      const cx1=horizontal?x1+(dx>0?90:-90):x1+lane,cy1=horizontal?y1+lane:y1+(dy>0?90:-90);
+      const cx2=horizontal?x2+(dx>0?-90:90):x2-lane,cy2=horizontal?y2-lane:y2+(dy>0?-90:90);
+      const d=`M${x1} ${y1}C${cx1} ${cy1} ${cx2} ${cy2} ${x2} ${y2}`;
+      const group=svg('g',{'data-thread':item.id,'data-kind':item.kind});
+      if(state.activeCard&&!([item.from,item.to].includes(state.activeCard)))group.classList.add('is-dimmed');
+      const halo=svg('path',{d,fill:'none',stroke:'#fffdf7','stroke-width':'9'});
+      const line=svg('path',{d,fill:'none',stroke:kindColors[item.kind],'stroke-width':'4','stroke-dasharray':kindDashes[item.kind],'stroke-linecap':'round'});
+      const x=(x1+3*cx1+3*cx2+x2)/8,y=(y1+3*cy1+3*cy2+y2)/8;
+      const label=svg('g',{});label.append(svg('rect',{x:x-32,y:y-17,width:64,height:34,rx:17,fill:'#fffdf7',stroke:kindColors[item.kind],'stroke-width':2}));
+      const text=svg('text',{x,y:y+5,'text-anchor':'middle',fill:kindColors[item.kind]});text.textContent='R'+(index+1)+' '+kindSymbols[item.kind];label.append(text);group.append(halo,line,label);target.append(group);
+    });
+  }
+  function renderEvidenceList(){
+    const list=$('aral-evidence-list');list.replaceChildren();
+    for(const id of Object.keys(state.cards)){
+      const item=el('article',undefined,'aral-evidence-item');if(state.activeCard===id)item.classList.add('is-active');
+      const choose=button(id.toUpperCase()+' · '+byId.get(id).title,{'data-select-card':id,'aria-pressed':String(state.activeCard===id)});
+      choose.addEventListener('click',()=>selectCard(id));
+      const open=button('Examiner',{'aria-label':'Examiner la pièce '+id.toUpperCase()});open.addEventListener('click',()=>openDocument(id,open));
+      const count=state.links.filter(link=>link.from===id||link.to===id).length;
+      item.append(choose,el('p',count+' relation(s) · '+(roleLabels[state.roles[id]]||roleLabels.none)),open);list.append(item);
     }
+    if(!list.childElementCount)list.append(el('p','Ajoute une pièce depuis Documents pour commencer.'));
   }
   function move(id, dx, dy, speak = true) {
     const point = state.cards[id]; if (!point) return;
-    point.x = clamp(point.x + dx, 8, 780); point.y = clamp(point.y + dy, 8, 544);
+    point.x = clamp(point.x + dx, 8, BOARD.width-BOARD.cardWidth-8); point.y = clamp(point.y + dy, 8, BOARD.height-BOARD.cardHeight-8);
     const card = root.querySelector('[data-board-card="' + id + '"]'); if (card) { card.style.left = point.x + 'px'; card.style.top = point.y + 'px'; }
     drawThreads(); save(); if (speak) announce('Pièce ' + id.toUpperCase() + ' déplacée. Position ' + Math.round(point.x) + ', ' + Math.round(point.y) + ' dans le tableau.');
   }
   function cardFor(id) {
     const doc = byId.get(id), point = state.cards[id];
     const card = el('article', undefined, 'aral-paper'); card.dataset.boardCard = id; card.style.left = point.x + 'px'; card.style.top = point.y + 'px';
-    const handle = button(id.toUpperCase() + ' · Déplacer', {'data-move-card': id, 'aria-describedby': 'aral-board-instructions'}); handle.className = 'aral-paper-handle';
-    handle.addEventListener('focus', () => { $('aral-selected-card').value = id; });
+    const handle = button(id.toUpperCase() + ' · Déplacer', {'data-move-card': id, 'aria-label':'Sélectionner ou déplacer la pièce '+id.toUpperCase(), 'aria-describedby': 'aral-board-instructions'}); handle.className = 'aral-paper-handle';
+    handle.addEventListener('focus',()=>selectCard(id));handle.addEventListener('click',()=>selectCard(id));
     handle.addEventListener('keydown', event => { const step = event.shiftKey ? 5 : 25, moves = {ArrowLeft: [-step, 0], ArrowRight: [step, 0], ArrowUp: [0, -step], ArrowDown: [0, step]}; if (moves[event.key]) { event.preventDefault(); move(id, ...moves[event.key]); } });
     let drag;
-    handle.addEventListener('pointerdown', event => { if (event.button !== 0) return; event.preventDefault(); handle.focus(); drag = {x: event.clientX, y: event.clientY, left: state.cards[id].x, top: state.cards[id].y}; handle.setPointerCapture(event.pointerId); card.classList.add('is-moving'); });
-    handle.addEventListener('pointermove', event => { if (!drag) return; const factor = state.zoom / 100; const point = state.cards[id]; move(id, drag.left + (event.clientX-drag.x)/factor - point.x, drag.top + (event.clientY-drag.y)/factor - point.y, false); });
+    handle.addEventListener('pointerdown', event => { if (event.button !== 0) return; handle.focus(); selectCard(id); drag = {x: event.clientX, y: event.clientY, left: state.cards[id].x, top: state.cards[id].y}; handle.setPointerCapture(event.pointerId); card.classList.add('is-moving'); });
+    handle.addEventListener('pointermove', event => { if (!drag || Math.abs(event.clientX-drag.x)+Math.abs(event.clientY-drag.y)<8) return; const factor = state.zoom / 100; const point = state.cards[id]; move(id, drag.left + (event.clientX-drag.x)/factor - point.x, drag.top + (event.clientY-drag.y)/factor - point.y, false); });
     function finishDrag() { if (!drag) return; drag = null; card.classList.remove('is-moving'); save(); announce('Position de la pièce ' + id.toUpperCase() + ' conservée.'); }
     handle.addEventListener('pointerup', finishDrag); handle.addEventListener('pointercancel', finishDrag);
     const media = mediaOf(doc); if (media.src) { const image = el('img'); image.src = media.src; image.alt = ''; image.draggable = false; image.addEventListener('error', () => { image.hidden = true; }); card.append(image); } else card.append(el('p', doc.nature || 'Document', 'aral-paper-type'));
@@ -220,21 +292,21 @@
     for (const id of ids) {
       const label = el('label', id.toUpperCase() + ' · ' + byId.get(id).title, 'aral-proof-label'); const select = el('select'); select.dataset.proofRole = id;
       for (const [role, text] of Object.entries(roleLabels)) { const option = el('option', text); option.value = role; select.append(option); }
-      select.value = state.roles[id] || 'none'; select.addEventListener('change', () => { state.roles[id] = select.value; save(); }); label.append(select); box.append(label);
+      select.value = state.roles[id] || 'none'; select.addEventListener('change', () => { state.roles[id] = select.value; updateCatalogue();renderEvidenceList();save(); }); label.append(select); box.append(label);
     }
   }
-  function cancelLinkEdit() { editingLink = null; $('aral-link-save').textContent = 'Relier ces pièces'; $('aral-link-cancel').hidden = true; $('aral-link-note').value = ''; }
+  function cancelLinkEdit() { editingLink = null; $('aral-link-save').textContent = 'Relier ces pièces'; $('aral-link-cancel').hidden = true; $('aral-link-note').value = ''; $('aral-link-review').value='unresolved';$('aral-link-review-label').hidden=$('aral-link-kind').value!=='contradict'; }
   function renderLinks() {
     const list = root.querySelector('.aral-links-list'); list.replaceChildren();
     for (const item of state.links) {
       const li = el('li'); li.dataset.linkId = item.id; li.dataset.kind = item.kind;
-      const title = el('strong', item.from.toUpperCase() + ' ↔ ' + item.to.toUpperCase()); const kind = el('span', kinds[item.kind], 'aral-link-kind'); li.append(title, kind);
+      const title = el('strong', 'R'+(state.links.indexOf(item)+1)+' · '+item.from.toUpperCase() + ' ↔ ' + item.to.toUpperCase()); const kind = el('span', kinds[item.kind], 'aral-link-kind'); li.append(title, kind);if(item.kind==='contradict')li.append(el('p',item.review==='scoped'?'Écart de portée repéré par toi':item.review==='open'?'Désaccord maintenu, à documenter':'Désaccord à examiner','aral-review-state'));
       if (item.note) li.append(el('p', item.note));
       const actions = el('div', undefined, 'aral-link-actions');
       const edit = button('Modifier', {'data-edit-link': item.id, 'aria-label': 'Modifier la relation ' + item.from.toUpperCase() + ' et ' + item.to.toUpperCase()});
-      edit.addEventListener('click', () => { editingLink = item.id; $('aral-link-from').value = item.from; $('aral-link-to').value = item.to; $('aral-link-kind').value = item.kind; $('aral-link-note').value = item.note; $('aral-link-save').textContent = 'Enregistrer la relation'; $('aral-link-cancel').hidden = false; $('aral-link-from').focus(); });
+      edit.addEventListener('click', () => { editingLink = item.id; $('aral-link-from').value = item.from; $('aral-link-to').value = item.to; $('aral-link-kind').value = item.kind; $('aral-link-note').value = item.note;$('aral-link-review').value=item.review||'unresolved';$('aral-link-review-label').hidden=item.kind!=='contradict';selectCard(item.from,true); $('aral-link-save').textContent = 'Enregistrer la relation'; $('aral-link-cancel').hidden = false; $('aral-link-from').focus(); });
       const remove = button('Supprimer', {'data-delete-link': item.id, 'aria-label': 'Supprimer la relation ' + item.from.toUpperCase() + ' et ' + item.to.toUpperCase()});
-      remove.addEventListener('click', () => { state.links = state.links.filter(link => link.id !== item.id); if (editingLink === item.id) cancelLinkEdit(); renderLinks(); drawThreads(); updateCatalogue(); save(); $('aral-link-from').focus(); announce('Relation supprimée.'); });
+      remove.addEventListener('click', () => { state.links = state.links.filter(link => link.id !== item.id); if (editingLink === item.id) cancelLinkEdit(); renderLinks(); drawThreads(); renderEvidenceList(); updateCatalogue(); save(); $('aral-link-from').focus(); announce('Relation supprimée.'); });
       actions.append(edit, remove); li.append(actions); list.append(li);
     }
   }
@@ -242,19 +314,20 @@
     const ids = Object.keys(state.cards), container = root.querySelector('.aral-board-cards'); container.replaceChildren(...ids.map(cardFor)); root.querySelector('.aral-board-empty').hidden = ids.length > 0;
     fillSelect($('aral-selected-card'), ids, 'Choisir une pièce'); fillSelect($('aral-link-from'), ids, 'Choisir une pièce'); fillSelect($('aral-link-to'), ids, 'Choisir une pièce');
     root.querySelector('.aral-position-controls').hidden = !ids.length; $('aral-link-form').hidden = ids.length < 2;
-    proofRoles(); renderLinks(); boardZoom(); drawThreads(); updateCatalogue();
+    proofRoles();renderLinks();renderEvidenceList();boardZoom(false);drawThreads();updateCatalogue();if(state.activeCard)selectCard(state.activeCard);else $('aral-active-description').textContent='Aucune pièce active. Ajoute une pièce depuis Documents.';setBoardMode(state.boardMode);
   }
   function addDoc(id) {
     if (!byId.has(id) || state.cards[id]) return;
-    const index = Object.keys(state.cards).length; state.cards[id] = {x: 24 + index % 4 * 240, y: 24 + Math.floor(index / 4) * 245}; state.roles[id] = 'none'; state.started = true;
-    renderBoard(); $('aral-selected-card').value = id; setView('board'); save(); announce('Pièce ' + id.toUpperCase() + ' ajoutée au tableau, sans sélection automatique comme preuve.');
+    let index=0;while(Object.values(state.cards).some(p=>Math.abs(p.x-(56+index%3*390))<20&&Math.abs(p.y-(50+Math.floor(index/3)*310))<20))index++; state.cards[id] = {x:56+index%3*390,y:50+Math.floor(index/3)*310}; state.roles[id] = 'none';state.activeCard=id;state.started = true;
+    renderBoard(); $('aral-selected-card').value = id; setView('board');selectCard(id,true); save(); announce('Pièce ' + id.toUpperCase() + ' ajoutée au tableau, sans sélection automatique comme preuve.');
   }
   function removeDoc(id) {
-    delete state.cards[id]; delete state.roles[id]; state.links = state.links.filter(item => item.from !== id && item.to !== id); cancelLinkEdit(); renderBoard(); save(); $('aral-selected-card').focus(); announce('Pièce ' + id.toUpperCase() + ' retirée ; les relations qui en dépendaient sont retirées aussi.');
+    delete state.cards[id]; delete state.roles[id];if(state.activeCard===id)state.activeCard=Object.keys(state.cards)[0]||''; state.links = state.links.filter(item => item.from !== id && item.to !== id); cancelLinkEdit(); renderBoard(); save(); $('aral-selected-card').focus(); announce('Pièce ' + id.toUpperCase() + ' retirée ; les relations qui en dépendaient sont retirées aussi.');
   }
   function appendList(target, heading, lines) { const section = el('section'); section.append(el('h3', heading)); const list = el('ul'); for (const line of lines) list.append(el('li', line)); section.append(list); target.append(section); }
   function feedback(focus = true) {
     const result = evaluate(state); const box = $('aral-feedback-body'); box.replaceChildren(); $('aral-feedback-title').textContent = result.title;
+    const criteria=$('aral-feedback-criteria');criteria.replaceChildren();for(const item of result.criteria){const card=el('div',undefined,'aral-criterion');card.dataset.present=String(item.present);card.append(el('p',item.present?'Présent dans tes choix':'À examiner','aral-criterion-state'),el('h3',item.label),el('p',item.detail));criteria.append(card);}
     const quote = el('blockquote', state.conclusion); box.append(el('p', 'Ton explication proposée :', 'aral-feedback-label'), quote);
     appendList(box, 'Ce qui est établi, et à quelle échelle', result.established);
     const evidence = el('section'); evidence.append(el('h3', 'Les pièces réellement retenues'));
@@ -269,7 +342,7 @@
 
   $('aral-start').hidden = false; $('aral-start').textContent = state.started ? 'Reprendre le dossier →' : 'Entrer dans le dossier →'; $('aral-start').addEventListener('click', start);
   $('aral-dossier').hidden = !state.started; if (state.started) { $('aral-resume').hidden = false; $('aral-resume').textContent = 'Ton dossier est repris avec ' + Object.keys(state.cards).length + ' pièces au tableau. Tu peux toujours le recommencer.'; }
-  root.querySelectorAll('.aral-doc-actions, .aral-session-tools, .aral-mobile-tabs, .aral-board-controls, .aral-argument-interactive').forEach(node => { node.hidden = false; });
+  root.querySelectorAll('.aral-doc-actions, .aral-session-tools, .aral-mobile-tabs, .aral-board-controls, .aral-board-mode, .aral-argument-interactive').forEach(node => { node.hidden = false; });
   root.querySelectorAll('[data-static-doc]').forEach(node => { node.hidden = true; });
   root.querySelectorAll('[data-open-doc]').forEach(node => node.addEventListener('click', () => openDocument(node.dataset.openDoc, node)));
   root.querySelectorAll('[data-add-doc]').forEach(node => node.addEventListener('click', () => { addDoc(node.dataset.addDoc); setView('board', true); }));
@@ -277,17 +350,26 @@
   $('aral-document-close').addEventListener('click', closeDocument);
   $('aral-document').addEventListener('close', () => { if (opener && document.contains(opener) && !matchMedia('(max-width: 1100px)').matches) opener.focus(); });
   $('aral-doc-add').addEventListener('click', () => { addDoc(activeDocument); closeDocument(); setView('board', true); });
+  root.querySelectorAll('[data-board-mode]').forEach(b=>b.addEventListener('click',()=>setBoardMode(b.dataset.boardMode)));
+  $('aral-selected-card').addEventListener('change',e=>selectCard(e.target.value));
+  root.querySelectorAll('[data-board-pan]').forEach(b=>b.addEventListener('click',()=>{const delta={left:[-240,0],right:[240,0],up:[0,-200],down:[0,200]}[b.dataset.boardPan];root.querySelector('.aral-board-viewport').scrollBy({left:delta[0],top:delta[1],behavior:'auto'});announce('Vue du tableau déplacée ; positions des pièces inchangées.');}));
+  $('aral-center-selected').addEventListener('click',centerCard);
+  $('aral-connect-selected').addEventListener('click',()=>{if(!state.activeCard)return;$('aral-link-from').value=state.activeCard;$('aral-link-to').focus();announce('Choisis la seconde pièce, puis la nature du lien.');});
+  $('aral-fit-board').addEventListener('click',()=>{const box=root.querySelector('.aral-board-viewport');state.zoom=Math.max(50,Math.min(100,Math.floor(box.clientWidth/BOARD.width*100/5)*5));boardZoom(false);box.scrollTo(0,0);save();announce('Vue d’ensemble. Réagrandis ou passe à la liste pour lire les titres.');});
+  $('aral-wide-board').addEventListener('click',()=>{const wide=$('aral-dossier').classList.toggle('is-board-wide');$('aral-wide-board').setAttribute('aria-pressed',String(wide));$('aral-wide-board').textContent=wide?'Revenir aux trois espaces':'Tableau en grand';setView('board');});
+  $('aral-link-kind').addEventListener('change',e=>{$('aral-link-review-label').hidden=e.target.value!=='contradict';});
   $('aral-board-zoom').addEventListener('input', event => { state.zoom = Number(event.target.value); boardZoom(); save(); });
-  $('aral-arrange').addEventListener('click', () => { Object.keys(state.cards).forEach((id, index) => { state.cards[id] = {x: 24 + index % 4 * 240, y: 24 + Math.floor(index / 4) * 245}; }); renderBoard(); save(); announce('Pièces rangées en lignes. Les relations et rôles sont conservés.'); });
+  $('aral-arrange').addEventListener('click', () => { Object.keys(state.cards).forEach((id, index) => { state.cards[id] = {x:56+index%3*390,y:50+Math.floor(index/3)*310}; }); renderBoard();centerCard();save(); announce('Pièces rangées en lignes. Les relations et rôles sont conservés.'); });
   root.querySelectorAll('[data-board-move]').forEach(node => node.addEventListener('click', () => { const id = $('aral-selected-card').value; if (!id) { announce('Choisis d’abord une pièce à déplacer.'); $('aral-selected-card').focus(); return; } const moves = {left: [-25, 0], right: [25, 0], up: [0, -25], down: [0, 25]}; move(id, ...moves[node.dataset.boardMove]); }));
   $('aral-remove-selected').addEventListener('click', () => { const id=$('aral-selected-card').value; if(id)removeDoc(id);else {announce('Choisis d’abord une pièce.');$('aral-selected-card').focus();} });
   $('aral-link-cancel').addEventListener('click', cancelLinkEdit);
   $('aral-link-form').addEventListener('submit', event => {
-    event.preventDefault(); const from = $('aral-link-from').value, to = $('aral-link-to').value, kind = $('aral-link-kind').value, note = $('aral-link-note').value.trim();
+    event.preventDefault(); const from = $('aral-link-from').value, to = $('aral-link-to').value, kind = $('aral-link-kind').value, note = $('aral-link-note').value.trim(),review=$('aral-link-review').value;
     if (!state.cards[from] || !state.cards[to] || from === to || !Object.hasOwn(kinds, kind)) { $('aral-link-error').textContent = 'Choisis deux pièces différentes présentes sur ton tableau.'; return; }
     const existing = state.links.find(item => item.id === editingLink) || state.links.find(item => item.from === from && item.to === to && item.kind === kind);
-    if (existing) Object.assign(existing, {from, to, kind, note}); else state.links.push({id: 'l' + Date.now().toString(36) + Math.random().toString(36).slice(2, 5), from, to, kind, note});
-    $('aral-link-error').textContent = 'Relation enregistrée : ' + kinds[kind].toLowerCase() + '.'; cancelLinkEdit(); renderLinks(); drawThreads(); updateCatalogue(); save();
+    if(!existing&&state.links.length>=60){$('aral-link-error').textContent='Le dossier conserve au maximum 60 relations. Révise ou supprime un lien avant d’en ajouter un.';return;}
+    if (existing) Object.assign(existing, {from, to, kind, note, review}); else state.links.push({id: 'l' + Date.now().toString(36) + Math.random().toString(36).slice(2, 5), from, to, kind, note, review});
+    $('aral-link-error').textContent = 'Relation enregistrée : ' + kinds[kind].toLowerCase() + '.'; cancelLinkEdit();renderLinks();drawThreads();renderEvidenceList();updateCatalogue();save();
   });
   root.querySelectorAll('[name=aral-hypothesis]').forEach(node => { node.checked = node.value === state.hypothesis; node.addEventListener('change', () => { state.hypothesis = node.value; save(); }); });
   $('aral-conclusion').value = state.conclusion; $('aral-custom-hypothesis').value = state.customHypothesis;

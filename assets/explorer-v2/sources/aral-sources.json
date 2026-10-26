@@ -175,46 +175,90 @@
     {
       "id": "d09",
       "title": "Quand le fond devient une source de poussières",
-      "nature": "Fiche de lecture institutionnelle",
-      "date": "7 mai 2025",
-      "author": "Programme des Nations unies pour le développement",
+      "nature": "Image satellite et fiche de lecture institutionnelle",
+      "date": "Image : 13 juin 2006 ; communiqué : 7 mai 2025",
+      "author": "NASA Earth Observatory / NASA-GSFC ; PNUD",
       "source": {
         "title": "PNUD Ouzbékistan · Étude des tempêtes de poussières, 7 mai 2025",
         "url": "https://www.undp.org/uzbekistan/press-releases/undp-and-uzbekistan-join-forces-combat-dust-storms-southern-aral-sea-region"
       },
-      "credit": "Notice et visualisation originales THOT, d’après la source indiquée.",
-      "license": "Texte de lecture original ; données factuelles citées, document source non reproduit.",
-      "limits": "Une menace régionale n’est pas un diagnostic médical individuel. Le document ne mesure pas ici la part exacte de chaque source de poussière et ne permet pas d’attribuer chaque maladie à la mer d’Aral.",
+      "credit": "Image NASA : Jeff Schmaltz, MODIS Rapid Response Team, NASA-Goddard Space Flight Center. Conversion WebP THOT, original conservé. Fiche THOT d’après le PNUD.",
+      "license": "Image NASA selon les règles de réutilisation ; synthèse originale THOT, sans reproduction du communiqué.",
+      "limits": "Une image ne donne pas la composition chimique des poussières ni un diagnostic médical. La NASA qualifie ici leur origine de probable ; le communiqué de 2025 ne décrit pas ce seul épisode de 2006.",
       "checked_on": "2026-10-26",
       "consultation": "Document téléchargé et contenu textuel consulté ; figures scientifiques non reproduites.",
       "downloaded_source": "undp.html",
-      "source_sha256": "dee4ea5721bd92fcdf4e40bdcf9317fe3807bc3f0ec5fd2a2f049d5eb5aa13c4"
+      "source_sha256": "dee4ea5721bd92fcdf4e40bdcf9317fe3807bc3f0ec5fd2a2f049d5eb5aa13c4",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "additional_sources": [
+        {
+          "title": "NASA Earth Observatory · Dust Storm over the Aral Sea, 15 juin 2006",
+          "url": "https://science.nasa.gov/earth/earth-observatory/dust-storm-over-the-aral-sea-6654/"
+        }
+      ],
+      "media": "assets/explorer-v2/media/aral-dust-2006.webp",
+      "media_sha256": "3a249f5114516b804b8baf68caf6f70f431543530c1948967877c86898d67914",
+      "media_bytes": 95516,
+      "media_changes": "Réduction proportionnelle et conversion WebP ; original institutionnel intact accessible séparément."
     },
     {
       "id": "d10",
       "title": "Au Nord, une restauration partielle",
-      "nature": "Fiche de lecture institutionnelle",
-      "date": "Barrage achevé en août 2005 ; bilan octobre 2008",
-      "author": "Banque mondiale",
+      "nature": "Image Landsat d’un aménagement et fiche de lecture",
+      "date": "Mosaïque : juillet–septembre 2006 ; bilan : octobre 2008",
+      "author": "USGS / EROS ; Banque mondiale",
       "source": {
         "title": "Banque mondiale · Feature Stories, n° 23, octobre 2008",
         "url": "https://documents1.worldbank.org/curated/en/888771468089960580/pdf/462360BRI0Box31e0no0FS231Kazakhstan.pdf"
       },
-      "credit": "Notice et visualisation originales THOT, d’après la source indiquée.",
-      "license": "Texte de lecture original ; données factuelles citées, document source non reproduit.",
-      "limits": "Cette restauration ne reconstitue pas toute la mer de 1960. La digue modifie les échanges vers le Sud, et ce bilan daté ne garantit pas seul la situation actuelle.",
+      "credit": "Image USGS / EROS : Landsat 5, mosaïque des 31 juillet, 23 et 30 août et 1er septembre 2006, chemins/lignes 160–162/27–30. Conversion WebP THOT, original conservé.",
+      "license": "Image gouvernementale USGS, domaine public selon les conditions USGS ; fiche de lecture THOT.",
+      "limits": "La mosaïque rassemble plusieurs acquisitions et utilise de fausses couleurs ; ce n’est pas une photographie en couleurs naturelles. L’image seule ne date pas la construction et ne mesure pas les débits. La restauration du Nord ne signifie pas le retour de toute la mer de 1960.",
       "checked_on": "2026-10-26",
       "consultation": "Document téléchargé et contenu textuel consulté ; figures scientifiques non reproduites.",
       "downloaded_source": "wb-restoration.pdf",
       "source_sha256": "103a6dd916173186728313b6d35e1e4103b6547e8238b60422d775dd6f21b171",
+      "license_url": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
       "additional_sources": [
         {
-          "title": "NASA Earth Observatory · World of Change: Shrinking Aral Sea",
+          "title": "USGS / EROS · Kok Aral Dam",
+          "url": "https://eros.usgs.gov/earthshots/kok-aral-dam"
+        },
+        {
+          "title": "NASA · Série de la mer d’Aral",
           "url": "https://science.nasa.gov/earth/earth-observatory/world-of-change/aral-sea/"
         }
-      ]
+      ],
+      "media": "assets/explorer-v2/media/aral-dam-2006.webp",
+      "media_sha256": "2b521f7e3eefc226b7a7e427c1b3a899948014ce1aeeeedb2c76a24c1f59a5d4",
+      "media_bytes": 94568,
+      "media_changes": "Réduction proportionnelle et conversion WebP ; original institutionnel intact accessible séparément."
+    },
+    {
+      "id": "d11",
+      "title": "Le Nord avant la séparation · 1964",
+      "nature": "Image satellite déclassifiée ARGON KH-5",
+      "date": "22 août 1964",
+      "author": "USGS / EROS · mission ARGON KH-5 9066A",
+      "source": {
+        "title": "USGS / EROS · North Aral Sea",
+        "url": "https://eros.usgs.gov/earthshots/north-aral-sea"
+      },
+      "credit": "USGS / EROS, image ARGON KH-5 9066A du 22 août 1964. Conversion WebP THOT sans retouche ; fichier institutionnel original conservé.",
+      "license": "Domaine public : image gouvernementale USGS, sous réserve des conditions USGS.",
+      "limits": "Cette vue ne couvre pas toute la mer et ne constitue pas une carte exacte du rivage de 1960. Les emprises et résolutions des autres images diffèrent : on ne peut pas superposer leurs pixels sans traitement géographique. Elle ne révèle pas à elle seule la cause du recul.",
+      "checked_on": "2026-10-26",
+      "consultation": "Document téléchargé et contenu textuel consulté ; figures scientifiques non reproduites.",
+      "downloaded_source": "usgs-north.html",
+      "source_sha256": "f649b94a3485cddc333667936a226e1e0b03da9dcd8d2cdd30f0089109db7157",
+      "license_url": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+      "media": "assets/explorer-v2/media/aral-north-1964.webp",
+      "media_sha256": "2011be3e81d45efd508c24a230643cab71d2c5bb2e01c9444d5e2108dd4ff163",
+      "media_bytes": 104454,
+      "media_changes": "Réduction proportionnelle et conversion WebP ; original institutionnel intact accessible séparément."
     }
   ],
+  "primary_media_register": "aral-primary-media.json",
   "rights_notes": [
     "Photographie de Moynaq : Sebastian Kluger, CC BY-SA 3.0, fichier original conservé.",
     "NASA : conditions NASA de réutilisation des médias, pas de licence Creative Commons inventée ; aucune suggestion de soutien.",
