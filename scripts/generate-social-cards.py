@@ -75,7 +75,9 @@ def font(font_dir: Path, filename: str, size: int) -> ImageFont.FreeTypeFont:
         raise SystemExit(
             f'Police requise absente : {path}\n'
             'Restaurer tools/fonts/dejavu ou utiliser --font-directory avec les mêmes fichiers et leurs licences.')
-    return ImageFont.truetype(str(path), size * SCALE)
+    # Les cartes sont en français (alphabet latin). Ne pas dépendre du choix
+    # implicite RAQM/BASIC de Pillow : RAQM est absent du wheel Windows.
+    return ImageFont.truetype(str(path), size * SCALE, layout_engine=ImageFont.Layout.BASIC)
 
 
 def xy(point):

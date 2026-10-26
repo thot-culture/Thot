@@ -18,6 +18,9 @@ Sous un système où l’exécutable Python s’appelle `python3`, utiliser ce n
 Pillow est fixé à la version utilisée pour cette livraison. Les trois polices DejaVu sont fournies dans
 `tools/fonts/dejavu/`, avec leur licence Bitstream Vera et leurs empreintes SHA-256.
 Le générateur utilise ces mêmes fichiers sur tous les systèmes, sans rechercher une police système différente.
+Le moteur de composition est explicitement `ImageFont.Layout.BASIC` pour ces cartes en français :
+Pillow ne choisit plus implicitement RAQM sous Linux et BASIC sous Windows, ce qui changeait les espacements.
+Les cinq cartes typographiques ont été régénérées avec ce moteur commun, sans changer leurs titres ni leurs compositions.
 `--font-directory` permet de sélectionner une copie des mêmes fichiers ; il ne garantit pas des images identiques si les polices diffèrent.
 Ne pas remplacer silencieusement une police manquante par Arial ou une autre fonte.
 
