@@ -1,0 +1,106 @@
+[
+  {
+    "id": "roma",
+    "pleiades_id": "423025",
+    "title": "Roma",
+    "reprPoint": [
+      12.491258174554883,
+      41.8899769864849
+    ],
+    "source": "https://pleiades.stoa.org/places/423025",
+    "creators": [
+      {
+        "username": null,
+        "name": "L. Quilici"
+      },
+      {
+        "username": null,
+        "name": "S. Quilici Gigli"
+      }
+    ],
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "checked_on": "2026-10-26",
+    "json_sha256": "d602f3bc04b9241fe4516a9c1a46ee473946b3fd195f742e067a5cf613ea3fe4"
+  },
+  {
+    "id": "carthage",
+    "pleiades_id": "314921",
+    "title": "Carthago",
+    "reprPoint": [
+      10.323056,
+      36.853056
+    ],
+    "source": "https://pleiades.stoa.org/places/314921",
+    "creators": [
+      {
+        "username": null,
+        "name": "R.B. Hitchner"
+      }
+    ],
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "checked_on": "2026-10-26",
+    "json_sha256": "e074161975b62cc1c8a1be10c6610b995a67638bbb03301ff405b0acbcd30394"
+  },
+  {
+    "id": "athens",
+    "pleiades_id": "579885",
+    "title": "Athenae",
+    "reprPoint": [
+      23.723954796773654,
+      37.97164747289856
+    ],
+    "source": "https://pleiades.stoa.org/places/579885",
+    "creators": [
+      {
+        "username": null,
+        "name": "J.S. Traill"
+      }
+    ],
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "checked_on": "2026-10-26",
+    "json_sha256": "4156a6fb8a276a1cdbb0e6bb38382b30632468a76f05dca485c985974a41dcb9"
+  },
+  {
+    "id": "alexandria",
+    "pleiades_id": "727070",
+    "title": "Alexandria",
+    "reprPoint": [
+      29.909773,
+      31.201435
+    ],
+    "source": "https://pleiades.stoa.org/places/727070",
+    "creators": [
+      {
+        "username": null,
+        "name": "A. Bernand"
+      }
+    ],
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "checked_on": "2026-10-26",
+    "json_sha256": "ef28d6a0e40e5ec660456638b74ee9cd033d827716eb7e78bd169be099575c22"
+  },
+  {
+    "id": "lyon",
+    "pleiades_id": "167717",
+    "title": "Col. Lugdunum",
+    "reprPoint": [
+      4.8194815,
+      45.758866
+    ],
+    "source": "https://pleiades.stoa.org/places/167717",
+    "creators": [
+      {
+        "username": null,
+        "name": "E. Bertrand"
+      }
+    ],
+    "license": "CC BY 3.0",
+    "license_url": "https://creativecommons.org/licenses/by/3.0/",
+    "checked_on": "2026-10-26",
+    "json_sha256": "960052c8c4bb97c21bf466ebfb2fad1da336c33b1d99ceb4ec5df4ca7c4995a9"
+  }
+]

@@ -1,0 +1,335 @@
+{
+  "chapters": [
+    {
+      "id": "italy",
+      "title": "Rome et la conquête de l’Italie",
+      "steps": [
+        "bc400",
+        "bc300"
+      ],
+      "description": "Une cité parmi d’autres",
+      "body": "Au IVe siècle av. J.-C., Rome n’est pas encore l’empire visible à la fin du parcours. Comparez deux états schématiques, vers 400 puis 300 av. J.-C.\nLes conquêtes et les alliances sont des relations de pouvoir différentes. Une couleur ne signifie pas que tous les habitants ont le même statut, la même langue ou les mêmes droits. Les contours de ces cartes mondiales sont très généralisés.",
+      "source": {
+        "title": "The Met · The Roman Republic (2000)",
+        "url": "https://www.metmuseum.org/essays/the-roman-republic"
+      }
+    },
+    {
+      "id": "punic",
+      "title": "Rome face à Carthage : les guerres puniques",
+      "steps": [
+        "bc300",
+        "bc200"
+      ],
+      "description": "La Méditerranée devient un enjeu",
+      "body": "Les guerres puniques opposent Rome et Carthage au IIIe et au IIe siècle av. J.-C. Hannibal appartient à cette histoire : l’expansion n’est ni paisible, ni inévitable.\nL’état vers 200 av. J.-C. suit de près la deuxième guerre punique ; il ne représente pas la destruction de Carthage, survenue en 146 av. J.-C. Il n’existe pas ici d’état cartographique pour chacune des campagnes. Le portrait d’Hannibal proposé est une sculpture moderne, pas un témoignage visuel antique.",
+      "source": {
+        "title": "The Met · Western North Africa, 1000 B.C.–1 A.D.",
+        "url": "https://www.metmuseum.org/pt/toah/ht/04/afw.html"
+      }
+    },
+    {
+      "id": "mediterranean",
+      "title": "La domination s’étend en Méditerranée",
+      "steps": [
+        "bc200",
+        "bc100"
+      ],
+      "description": "Gagner des territoires, gouverner des sociétés",
+      "body": "Au cours des derniers siècles de la République, conquêtes et diplomatie étendent les territoires administrés hors d’Italie. Le récit du Met cite notamment la Sicile, l’Hispanie, l’Afrique et la Macédoine.\nCes gains n’apportent pas la même prospérité à tous. La répartition des richesses et des terres, les engagements militaires et les tensions politiques accompagnent l’expansion. La carte ne montre pas directement ces effets sociaux.",
+      "source": {
+        "title": "The Met · The Roman Republic (2000)",
+        "url": "https://www.metmuseum.org/essays/the-roman-republic"
+      }
+    },
+    {
+      "id": "caesar",
+      "title": "César, les conquêtes et les crises de la République",
+      "steps": [
+        "bc100",
+        "bc60",
+        "bc1"
+      ],
+      "description": "Un empire territorial avant le régime impérial",
+      "body": "Rome domine déjà un grand espace sous la République. César participe aux conquêtes et aux conflits qui aboutissent à la concentration du pouvoir puis à son assassinat en 44 av. J.-C.\nL’atlas ne possède pas de carte exacte de chaque campagne de César : le passage de 60 à 1 av. J.-C. couvre plusieurs décennies. Il inclut des transformations postérieures à sa mort. Ne lui attribuez pas tous les territoires ajoutés entre ces deux états. Une monnaie est une source sur le message d’un pouvoir, pas une carte de ses conquêtes.",
+      "source": {
+        "title": "The Met · The Roman Republic (2000)",
+        "url": "https://www.metmuseum.org/essays/the-roman-republic"
+      }
+    },
+    {
+      "id": "augustus",
+      "title": "Auguste et la naissance du régime impérial",
+      "steps": [
+        "bc1"
+      ],
+      "description": "Changer de régime sans repartir de zéro",
+      "body": "Octavien reçoit le titre d’Auguste en 27 av. J.-C. Le nouveau régime concentre des pouvoirs tout en conservant des institutions et des formes républicaines.\nLa carte disponible ici représente 1 av. J.-C., sous son règne ; ce n’est pas une carte de l’année 27. Le denier daté vers 29–27 av. J.-C. permet de regarder comment une image politique se construit au moment de cette transition.",
+      "source": {
+        "title": "Christopher S. Lightfoot, The Met · The Roman Empire (2000)",
+        "url": "https://www.metmuseum.org/essays/the-roman-empire-27-b-c-393-a-d"
+      }
+    },
+    {
+      "id": "trajan",
+      "title": "Des premiers empereurs à Trajan",
+      "steps": [
+        "ad100",
+        "ad117"
+      ],
+      "description": "L’apogée n’est pas une frontière éternelle",
+      "body": "Sous Trajan, empereur de 98 à 117 apr. J.-C., Rome mène notamment des guerres en Dacie et contre les Parthes. L’extension de l’Empire atteint un sommet vers la fin de son règne.\nL’état AWMC de 117 est une reconstitution d’emprise, pas un relevé de chaque occupation militaire éphémère en Orient. Il ne prouve pas un contrôle uniforme ou durable. La source diffère de celle de 100 : leurs écarts de dessin ne sont pas tous des conquêtes. L’expansion implique également guerre, domination et résistances ; ce parcours s’arrête ici, sans suggérer que les frontières resteront fixes.",
+      "source": {
+        "title": "Christopher S. Lightfoot, The Met · The Roman Empire (2000)",
+        "url": "https://www.metmuseum.org/essays/the-roman-empire-27-b-c-393-a-d"
+      }
+    }
+  ],
+  "people": [
+    {
+      "id": "hannibal",
+      "name": "Hannibal",
+      "dates": "247–vers 183 av. J.-C.",
+      "role": "Général carthaginois, adversaire de Rome pendant la deuxième guerre punique.",
+      "text": "Regarder l’expansion depuis Carthage permet de sortir d’un récit centré sur les seules victoires romaines. Cette sculpture de Sébastien Slodtz, réalisée en 1704 et conservée au Louvre (MR 2093), représente Hannibal selon une interprétation moderne. Elle n’atteste pas son apparence.",
+      "image": "/Thot/assets/explorer-v2/media/hannibal.webp",
+      "alt": "Sculpture moderne d’Hannibal par Sébastien Slodtz, 1704.",
+      "credit": "Photographie : Alain08, d’après Jastrow ; extraction Commons. Redimensionnement et conversion WebP THOT, sans retouche du sujet.",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": {
+        "title": "Notice de l’œuvre et de la photographie, Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Hannibal_Slodtz_Louvre_MR2093_(cropped2).png"
+      },
+      "limits": "Représentation moderne, non portrait antique.",
+      "additional_sources": [
+        {
+          "title": "The Met · Western North Africa, 1000 B.C.–1 A.D.",
+          "url": "https://www.metmuseum.org/pt/toah/ht/04/afw.html"
+        }
+      ]
+    },
+    {
+      "id": "caesar",
+      "name": "Jules César",
+      "dates": "Fin de la République · mort en 44 av. J.-C.",
+      "role": "Général et homme politique de la fin de la République.",
+      "text": "Les conquêtes, les guerres civiles et la dictature de César appartiennent à la crise de la République. La carte de 1 av. J.-C. ne doit pas être lue comme le bilan de ses seules actions. Le portrait de Tusculum, conservé à Turin, est une œuvre antique attribuée à la fin de la République (vers les années 50–40 av. J.-C. dans la notice).",
+      "image": "/Thot/assets/explorer-v2/media/caesar.webp",
+      "alt": "Portrait antique dit de Tusculum, identifié comme Jules César.",
+      "credit": "Ángel M. Felicísimo · photographie via Wikimedia Commons. Redimensionnement et conversion WebP THOT.",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "source": {
+        "title": "Portrait de Tusculum, notice Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Retrato_de_Julio_C%C3%A9sar_(26724093101).jpg"
+      },
+      "additional_sources": [
+        {
+          "title": "The Met · The Roman Republic (2000)",
+          "url": "https://www.metmuseum.org/essays/the-roman-republic"
+        }
+      ],
+      "limits": "Une identification de portrait et sa datation relèvent de l’étude de l’objet ; elles ne sont pas une photographie du personnage vivant."
+    },
+    {
+      "id": "augustus",
+      "name": "Auguste",
+      "dates": "Règne : 27 av. J.-C.–14 apr. J.-C.",
+      "role": "Premier empereur ; le titre d’Auguste lui est accordé en 27 av. J.-C.",
+      "text": "L’Auguste de Prima Porta est une statue antique conservée au Vatican. Sa posture, sa cuirasse et ses attributs participent à une représentation du pouvoir. Ce n’est pas une image neutre du quotidien de l’empereur. Le cliché de 2023 est distinct de l’ancienneté de l’œuvre.",
+      "image": "/Thot/assets/explorer-v2/media/augustus.webp",
+      "alt": "Statue antique d’Auguste de Prima Porta, photographiée au Vatican.",
+      "credit": "Justin Benttinen, 8 septembre 2023 · Commons. Version redressée par l’auteur ; redimensionnement et conversion WebP THOT.",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": {
+        "title": "Auguste de Prima Porta, Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Augustus_of_Prima_Porta.jpg"
+      },
+      "additional_sources": [
+        {
+          "title": "Christopher S. Lightfoot, The Met · The Roman Empire (2000)",
+          "url": "https://www.metmuseum.org/essays/the-roman-empire-27-b-c-393-a-d"
+        }
+      ],
+      "limits": "Portrait de pouvoir antique, distinct d’une reconstitution moderne ou d’une photographie du règne."
+    },
+    {
+      "id": "trajan",
+      "name": "Trajan",
+      "dates": "Règne : 98–117 apr. J.-C.",
+      "role": "Empereur associé aux guerres de Dacie et d’Orient.",
+      "text": "Le portrait conservé à la Glyptothèque de Munich (inv. 336) provient d’une statue plus grande que nature. Cette tête antique rappelle que les représentations impériales occupent aussi l’espace public. Les contours de 117 ne suffisent pas à dire combien de temps chaque conquête a été contrôlée.",
+      "image": "/Thot/assets/explorer-v2/media/trajan.webp",
+      "alt": "Tête antique de Trajan, Glyptothèque de Munich, inventaire 336.",
+      "credit": "Bibi Saint-Pol, 8 février 2007 · Commons. Redimensionnement et conversion WebP THOT ; historique des adaptations disponible dans la source.",
+      "license": "Domaine public (photographie libérée par son auteur)",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": {
+        "title": "Trajan, Glyptothèque, Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Traianus_Glyptothek_Munich_336.jpg"
+      },
+      "additional_sources": [
+        {
+          "title": "Christopher S. Lightfoot, The Met · The Roman Empire (2000)",
+          "url": "https://www.metmuseum.org/essays/the-roman-empire-27-b-c-393-a-d"
+        }
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "id": "coin-caesar",
+      "title": "Denier de Jules César",
+      "date": "47–46 av. J.-C.",
+      "nature": "Argent ; atelier indiqué en Afrique par le musée.",
+      "description": "La notice identifie une tête de Vénus et, au revers, Énée portant Anchise et le palladium. Le nom CAESAR associe cette histoire à un acteur politique.",
+      "text": "La notice identifie une tête de Vénus et, au revers, Énée portant Anchise et le palladium. Le nom CAESAR associe cette histoire à un acteur politique.",
+      "limits": "Le lieu d’émission est indiqué à l’échelle de l’Afrique par le musée ; aucune coordonnée précise d’atelier n’est inventée. Le lien avec Carthage ci-dessous est un repère régional de contexte, pas un lieu de découverte.",
+      "image": "/Thot/assets/explorer-v2/media/met-248033.webp",
+      "alt": "Denier de Jules César, photographie du Metropolitan Museum of Art.",
+      "credit": "The Metropolitan Museum of Art · Rogers Fund, 1908 · objet 08.170.80. Redimensionnement et conversion WebP THOT.",
+      "license": "CC0 · Open Access / domaine public",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": {
+        "title": "Notice et provenance de l’objet · The Met",
+        "url": "https://www.metmuseum.org/art/collection/search/248033"
+      },
+      "place_id": "carthage"
+    },
+    {
+      "id": "coin-augustus",
+      "title": "Denier d’Octavien, futur Auguste",
+      "date": "Vers 29–27 av. J.-C.",
+      "nature": "Argent ; Rome ou Brundisium selon le musée.",
+      "description": "Le musée décrit la tête d’Octavien et un trophée sur une proue de navire. L’image montre un message de victoire, pas l’ensemble des expériences des populations dominées.",
+      "text": "Le musée décrit la tête d’Octavien et un trophée sur une proue de navire. L’image montre un message de victoire, pas l’ensemble des expériences des populations dominées.",
+      "limits": "L’atelier est incertain : Rome ou Brundisium. Le rattachement à Rome n’est donc pas une identification certaine du lieu de frappe, ni un lieu de découverte.",
+      "image": "/Thot/assets/explorer-v2/media/met-248037.webp",
+      "alt": "Denier d’Octavien, futur Auguste, photographie du Metropolitan Museum of Art.",
+      "credit": "The Metropolitan Museum of Art · Rogers Fund, 1908 · objet 08.170.89. Redimensionnement et conversion WebP THOT.",
+      "license": "CC0 · Open Access / domaine public",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": {
+        "title": "Notice et provenance de l’objet · The Met",
+        "url": "https://www.metmuseum.org/art/collection/search/248037"
+      },
+      "place_id": "roma"
+    },
+    {
+      "id": "coin-trajan",
+      "title": "Sesterce de Trajan",
+      "date": "103–111 apr. J.-C.",
+      "nature": "Bronze ; atelier de Rome.",
+      "description": "La notice décrit un buste de l’empereur et un pont au-dessus d’un fleuve, probablement le Danube. Les inscriptions célèbrent le pouvoir impérial.",
+      "text": "La notice décrit un buste de l’empereur et un pont au-dessus d’un fleuve, probablement le Danube. Les inscriptions célèbrent le pouvoir impérial.",
+      "limits": "L’identification du fleuve est proposée comme probable par le musée. Une monnaie ne prouve pas à elle seule la localisation exacte d’un pont.",
+      "image": "/Thot/assets/explorer-v2/media/met-248042.webp",
+      "alt": "Sesterce de Trajan, photographie du Metropolitan Museum of Art.",
+      "credit": "The Metropolitan Museum of Art · Rogers Fund, 1908 · objet 08.170.120. Redimensionnement et conversion WebP THOT.",
+      "license": "CC0 · Open Access / domaine public",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": {
+        "title": "Notice et provenance de l’objet · The Met",
+        "url": "https://www.metmuseum.org/art/collection/search/248042"
+      },
+      "place_id": "roma"
+    }
+  ],
+  "places": [
+    {
+      "id": "roma",
+      "name": "Roma · Rome",
+      "pleiades_id": 423025,
+      "text": "Centre politique de la République puis du régime impérial. Les monnaies associées renseignent des représentations du pouvoir ; elles ne sont pas présentées comme des trouvailles archéologiques faites ici.",
+      "document_ids": [
+        "coin-augustus",
+        "coin-trajan"
+      ],
+      "person_ids": [
+        "caesar",
+        "augustus",
+        "trajan"
+      ],
+      "source": {
+        "title": "Pleiades · Roma · Rome",
+        "url": "https://pleiades.stoa.org/places/423025"
+      },
+      "limits": "Point représentatif Pleiades, pas emprise urbaine ni preuve d’existence ou d’intégration à Rome à la date affichée."
+    },
+    {
+      "id": "carthage",
+      "name": "Carthago · Carthage",
+      "pleiades_id": 314921,
+      "text": "Puissance méditerranéenne opposée à Rome pendant les guerres puniques. Le denier de César est associé à cette fiche comme contexte régional africain, plusieurs générations après ces conflits, et non comme une découverte locale.",
+      "document_ids": [
+        "coin-caesar"
+      ],
+      "person_ids": [
+        "hannibal"
+      ],
+      "source": {
+        "title": "Pleiades · Carthago · Carthage",
+        "url": "https://pleiades.stoa.org/places/314921"
+      },
+      "limits": "Point représentatif Pleiades, pas emprise urbaine ni preuve d’existence ou d’intégration à Rome à la date affichée."
+    },
+    {
+      "id": "athens",
+      "name": "Athenae · Athènes",
+      "pleiades_id": 579885,
+      "text": "Un lieu du monde grec pour repérer l’extension de la domination romaine en Méditerranée orientale. Sa présence dans la carte ne signifie pas que son statut reste identique à toutes les dates.",
+      "document_ids": [],
+      "person_ids": [],
+      "source": {
+        "title": "Pleiades · Athenae · Athènes",
+        "url": "https://pleiades.stoa.org/places/579885"
+      },
+      "limits": "Point représentatif Pleiades, pas emprise urbaine ni preuve d’existence ou d’intégration à Rome à la date affichée."
+    },
+    {
+      "id": "alexandria",
+      "name": "Alexandria · Alexandrie",
+      "pleiades_id": 727070,
+      "text": "Un repère du monde hellénistique et de l’Égypte. Les cartes sont des états territoriaux distincts, pas un récit continu de toutes les transformations locales.",
+      "document_ids": [],
+      "person_ids": [
+        "augustus"
+      ],
+      "source": {
+        "title": "Pleiades · Alexandria · Alexandrie",
+        "url": "https://pleiades.stoa.org/places/727070"
+      },
+      "limits": "Point représentatif Pleiades, pas emprise urbaine ni preuve d’existence ou d’intégration à Rome à la date affichée."
+    },
+    {
+      "id": "lyon",
+      "name": "Lugdunum · Lyon",
+      "pleiades_id": 167717,
+      "text": "Ce repère localise le site, mais ne doit pas être pris pour une ville existant sous ce nom dès 400 av. J.-C. La couche de lieux est un index documentaire transchronologique.",
+      "document_ids": [],
+      "person_ids": [],
+      "source": {
+        "title": "Pleiades · Lugdunum · Lyon",
+        "url": "https://pleiades.stoa.org/places/167717"
+      },
+      "limits": "Point représentatif Pleiades, pas emprise urbaine ni preuve d’existence ou d’intégration à Rome à la date affichée."
+    }
+  ],
+  "bibliography": [
+    {
+      "title": "The Met · The Roman Republic (2000)",
+      "url": "https://www.metmuseum.org/essays/the-roman-republic"
+    },
+    {
+      "title": "Christopher S. Lightfoot, The Met · The Roman Empire (2000)",
+      "url": "https://www.metmuseum.org/essays/the-roman-empire-27-b-c-393-a-d"
+    },
+    {
+      "title": "The Met · Western North Africa, 1000 B.C.–1 A.D.",
+      "url": "https://www.metmuseum.org/pt/toah/ht/04/afw.html"
+    }
+  ],
+  "layer_limits": "Seules les emprises, contours, autres ensembles présents dans la source et cinq lieux de repérage sont proposés. Ni voies ni batailles ne sont tracées sans données vérifiées. Les lieux sont un index transchronologique, pas une liste des villes romaines à chaque époque."
+}

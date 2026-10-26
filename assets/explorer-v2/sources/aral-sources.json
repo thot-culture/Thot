@@ -1,0 +1,224 @@
+{
+  "checked_on": "2026-10-26",
+  "records": [
+    {
+      "id": "d01",
+      "title": "Les bateaux de Moynaq",
+      "nature": "Photographie documentaire",
+      "date": "20 mars 2011",
+      "author": "Sebastian Kluger",
+      "source": {
+        "title": "Wikimedia Commons · Moynaq Aral-Sea Ships",
+        "url": "https://commons.wikimedia.org/wiki/File:Moynaq_Aral-Sea_Ships.jpg"
+      },
+      "credit": "Photographie Sebastian Kluger · Wikimedia Commons · fichier original intact ; cadrage d’affichage réversible.",
+      "license": "CC BY-SA 3.0",
+      "limits": "La photographie seule ne donne ni la date du recul de l’eau, ni son étendue totale, ni ses causes. Elle ne permet pas de décrire la situation actuelle de chaque bassin.",
+      "checked_on": "2026-10-26",
+      "consultation": "Document téléchargé et contenu textuel consulté ; figures scientifiques non reproduites.",
+      "downloaded_source": "moynaq.html",
+      "source_sha256": "1fe216f89943adfc0ed27e2dcf2f6cca5fcd4b1de54763e652422121d6e0a752",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "media": "assets/explorer-v2/media/moynaq-original.jpg",
+      "media_sha256": "316b94cd489a87627141138eb3931b45a6fb62fafe42605f028596a514cd254f",
+      "media_bytes": 265581,
+      "media_changes": "Fichier documentaire intact ; cadrage uniquement en CSS, image entière dans la pièce."
+    },
+    {
+      "id": "d02",
+      "title": "La mer vue de l’espace · 2000",
+      "nature": "Image satellite Terra / MODIS",
+      "date": "25 août 2000",
+      "author": "NASA Earth Observatory",
+      "source": {
+        "title": "NASA Earth Observatory · World of Change: Shrinking Aral Sea",
+        "url": "https://science.nasa.gov/earth/earth-observatory/world-of-change/aral-sea/"
+      },
+      "credit": "NASA Earth Observatory · images MODIS du satellite Terra · fichiers de la série conservés.",
+      "license": "Média NASA réutilisé selon les règles NASA, sans suggestion de soutien à THOT.",
+      "limits": "Deux vues d’été permettent de comparer des états, pas d’en déduire seules un mécanisme causal. Couleurs, sédiments et profondeur changent ; une zone sèche à une date ne prouve pas un assèchement définitif.",
+      "checked_on": "2026-10-26",
+      "consultation": "Document téléchargé et contenu textuel consulté ; figures scientifiques non reproduites.",
+      "downloaded_source": "nasa-aral.txt",
+      "source_sha256": "e673c7e7eb4c492dee7c6aed44c9266ad8387f9049b2b13db005691eb5b4f960",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "media": "assets/explorer-v2/media/aral-2000.jpg",
+      "media_sha256": "6f6576c802f0397c8c10350fc899ed701c0dd1d135f27e9160352ef1ba275355",
+      "media_bytes": 204342,
+      "media_changes": "Fichier documentaire intact ; cadrage uniquement en CSS, image entière dans la pièce."
+    },
+    {
+      "id": "d03",
+      "title": "La mer vue de l’espace · 2014",
+      "nature": "Image satellite Terra / MODIS",
+      "date": "19 août 2014",
+      "author": "NASA Earth Observatory",
+      "source": {
+        "title": "NASA Earth Observatory · World of Change: Shrinking Aral Sea",
+        "url": "https://science.nasa.gov/earth/earth-observatory/world-of-change/aral-sea/"
+      },
+      "credit": "NASA Earth Observatory · images MODIS du satellite Terra · fichiers de la série conservés.",
+      "license": "Média NASA réutilisé selon les règles NASA, sans suggestion de soutien à THOT.",
+      "limits": "Deux vues d’été permettent de comparer des états, pas d’en déduire seules un mécanisme causal. Couleurs, sédiments et profondeur changent ; une zone sèche à une date ne prouve pas un assèchement définitif.",
+      "checked_on": "2026-10-26",
+      "consultation": "Document téléchargé et contenu textuel consulté ; figures scientifiques non reproduites.",
+      "downloaded_source": "nasa-aral.txt",
+      "source_sha256": "e673c7e7eb4c492dee7c6aed44c9266ad8387f9049b2b13db005691eb5b4f960",
+      "license_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+      "media": "assets/explorer-v2/media/aral-2014.jpg",
+      "media_sha256": "f2cb300c2ffa05ba7fe19c950aee9c007742b751db1b5c4ce1d0ca32069c25ea",
+      "media_bytes": 202191,
+      "media_changes": "Fichier documentaire intact ; cadrage uniquement en CSS, image entière dans la pièce."
+    },
+    {
+      "id": "d04",
+      "title": "Deux fleuves, un lac sans débouché",
+      "nature": "Carte de repérage et fiche hydrologique",
+      "date": "Géographie de repérage ; bilan décrit en 2011",
+      "author": "Natural Earth ; Conrad et Kobildjanova",
+      "source": {
+        "title": "Conrad et Kobildjanova, The Economics of an Environmental Disaster: The Aral Sea (2011), p. 1 et tableau 1 p. 6",
+        "url": "https://www.cs.cornell.edu/courses/cs6702/2011sp/readings/AralSea2011.pdf"
+      },
+      "credit": "Notice et visualisation originales THOT, d’après la source indiquée.",
+      "license": "Texte de lecture original ; données factuelles citées, document source non reproduit.",
+      "limits": "La carte représente des axes fluviaux modernes généralisés ; elle ne mesure pas les débits ni le fonctionnement de chaque canal. Le bilan est qualitatif, pas une simulation.",
+      "checked_on": "2026-10-26",
+      "consultation": "Document téléchargé et contenu textuel consulté ; figures scientifiques non reproduites.",
+      "downloaded_source": "cornell.pdf",
+      "source_sha256": "749c200ad71fbb89f4695086bca7e918fd820481c9504847260904d30b364bfa",
+      "additional_sources": [
+        {
+          "title": "Natural Earth · fleuves à 1:50 millions (domaine public)",
+          "url": "https://github.com/nvkelso/natural-earth-vector/blob/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_rivers_lake_centerlines.geojson"
+        }
+      ]
+    },
+    {
+      "id": "d05",
+      "title": "La superficie à cinq dates",
+      "nature": "Visualisation originale de données publiées",
+      "date": "1960, 1971, 1976, 1989, 2009",
+      "author": "Conrad et Kobildjanova (2011), d’après Micklin (2010)",
+      "source": {
+        "title": "Conrad et Kobildjanova, The Economics of an Environmental Disaster: The Aral Sea (2011), p. 1 et tableau 1 p. 6",
+        "url": "https://www.cs.cornell.edu/courses/cs6702/2011sp/readings/AralSea2011.pdf"
+      },
+      "credit": "Notice et visualisation originales THOT, d’après la source indiquée.",
+      "license": "Texte de lecture original ; données factuelles citées, document source non reproduit.",
+      "limits": "Ces mesures ne sont pas un relevé annuel et ne décrivent pas l’état en 2026. Additionner les bassins masque leurs trajectoires différentes. La série ne suffit pas à identifier une cause.",
+      "checked_on": "2026-10-26",
+      "consultation": "Document téléchargé et contenu textuel consulté ; figures scientifiques non reproduites.",
+      "downloaded_source": "cornell.pdf",
+      "source_sha256": "749c200ad71fbb89f4695086bca7e918fd820481c9504847260904d30b364bfa"
+    },
+    {
+      "id": "d06",
+      "title": "L’eau prélevée pour irriguer",
+      "nature": "Visualisation originale de statistiques",
+      "date": "1960 à 2004",
+      "author": "SIC ICWC",
+      "source": {
+        "title": "SIC ICWC · Basic indicators of water and land use in the Aral Sea basin",
+        "url": "https://cawater-info.net/bk/water_land_resources_use/english/docs/table6.pdf"
+      },
+      "credit": "Notice et visualisation originales THOT, d’après la source indiquée.",
+      "license": "Texte de lecture original ; données factuelles citées, document source non reproduit.",
+      "limits": "Un prélèvement n’est pas la totalité de l’eau consommée : des retours sont possibles. Ces chiffres ne mesurent pas directement le débit atteignant la mer. La corrélation avec sa superficie ne remplace pas l’explication hydrologique.",
+      "checked_on": "2026-10-26",
+      "consultation": "Document téléchargé et contenu textuel consulté ; figures scientifiques non reproduites.",
+      "downloaded_source": "irrigation.pdf",
+      "source_sha256": "759180de490e4bf07929de385081b0d676051b34719ddfb6e2124a612808f43a"
+    },
+    {
+      "id": "d07",
+      "title": "Des cultures qui demandent de l’eau",
+      "nature": "Fiche de lecture scientifique et données",
+      "date": "1960 à 2004 ; publication scientifique 2011",
+      "author": "SIC ICWC ; Conrad et Kobildjanova",
+      "source": {
+        "title": "Conrad et Kobildjanova, The Economics of an Environmental Disaster: The Aral Sea (2011), p. 1 et tableau 1 p. 6",
+        "url": "https://www.cs.cornell.edu/courses/cs6702/2011sp/readings/AralSea2011.pdf"
+      },
+      "credit": "Notice et visualisation originales THOT, d’après la source indiquée.",
+      "license": "Texte de lecture original ; données factuelles citées, document source non reproduit.",
+      "limits": "Ce total n’est pas une superficie de coton et n’attribue pas chaque prélèvement à une culture. Il ne suffit pas à évaluer les choix ou les besoins de chaque personne.",
+      "checked_on": "2026-10-26",
+      "consultation": "Document téléchargé et contenu textuel consulté ; figures scientifiques non reproduites.",
+      "downloaded_source": "cornell.pdf",
+      "source_sha256": "749c200ad71fbb89f4695086bca7e918fd820481c9504847260904d30b364bfa",
+      "additional_sources": [
+        {
+          "title": "SIC ICWC · Basic indicators of water and land use in the Aral Sea basin",
+          "url": "https://cawater-info.net/bk/water_land_resources_use/english/docs/table6.pdf"
+        }
+      ]
+    },
+    {
+      "id": "d08",
+      "title": "Des années sèches qui aggravent le recul",
+      "nature": "Fiche de lecture de la série satellite",
+      "date": "2005–2009 ; fluctuations 2009–2018",
+      "author": "NASA Earth Observatory",
+      "source": {
+        "title": "NASA Earth Observatory · World of Change: Shrinking Aral Sea",
+        "url": "https://science.nasa.gov/earth/earth-observatory/world-of-change/aral-sea/"
+      },
+      "credit": "Notice et visualisation originales THOT, d’après la source indiquée.",
+      "license": "Texte de lecture original ; données factuelles citées, document source non reproduit.",
+      "limits": "Ces variations à certaines dates n’établissent pas que le climat explique seul le recul depuis les années 1960. Il faut distinguer l’évolution de longue durée et les facteurs aggravants.",
+      "checked_on": "2026-10-26",
+      "consultation": "Document téléchargé et contenu textuel consulté ; figures scientifiques non reproduites.",
+      "downloaded_source": "nasa-aral.txt",
+      "source_sha256": "e673c7e7eb4c492dee7c6aed44c9266ad8387f9049b2b13db005691eb5b4f960"
+    },
+    {
+      "id": "d09",
+      "title": "Quand le fond devient une source de poussières",
+      "nature": "Fiche de lecture institutionnelle",
+      "date": "7 mai 2025",
+      "author": "Programme des Nations unies pour le développement",
+      "source": {
+        "title": "PNUD Ouzbékistan · Étude des tempêtes de poussières, 7 mai 2025",
+        "url": "https://www.undp.org/uzbekistan/press-releases/undp-and-uzbekistan-join-forces-combat-dust-storms-southern-aral-sea-region"
+      },
+      "credit": "Notice et visualisation originales THOT, d’après la source indiquée.",
+      "license": "Texte de lecture original ; données factuelles citées, document source non reproduit.",
+      "limits": "Une menace régionale n’est pas un diagnostic médical individuel. Le document ne mesure pas ici la part exacte de chaque source de poussière et ne permet pas d’attribuer chaque maladie à la mer d’Aral.",
+      "checked_on": "2026-10-26",
+      "consultation": "Document téléchargé et contenu textuel consulté ; figures scientifiques non reproduites.",
+      "downloaded_source": "undp.html",
+      "source_sha256": "dee4ea5721bd92fcdf4e40bdcf9317fe3807bc3f0ec5fd2a2f049d5eb5aa13c4"
+    },
+    {
+      "id": "d10",
+      "title": "Au Nord, une restauration partielle",
+      "nature": "Fiche de lecture institutionnelle",
+      "date": "Barrage achevé en août 2005 ; bilan octobre 2008",
+      "author": "Banque mondiale",
+      "source": {
+        "title": "Banque mondiale · Feature Stories, n° 23, octobre 2008",
+        "url": "https://documents1.worldbank.org/curated/en/888771468089960580/pdf/462360BRI0Box31e0no0FS231Kazakhstan.pdf"
+      },
+      "credit": "Notice et visualisation originales THOT, d’après la source indiquée.",
+      "license": "Texte de lecture original ; données factuelles citées, document source non reproduit.",
+      "limits": "Cette restauration ne reconstitue pas toute la mer de 1960. La digue modifie les échanges vers le Sud, et ce bilan daté ne garantit pas seul la situation actuelle.",
+      "checked_on": "2026-10-26",
+      "consultation": "Document téléchargé et contenu textuel consulté ; figures scientifiques non reproduites.",
+      "downloaded_source": "wb-restoration.pdf",
+      "source_sha256": "103a6dd916173186728313b6d35e1e4103b6547e8238b60422d775dd6f21b171",
+      "additional_sources": [
+        {
+          "title": "NASA Earth Observatory · World of Change: Shrinking Aral Sea",
+          "url": "https://science.nasa.gov/earth/earth-observatory/world-of-change/aral-sea/"
+        }
+      ]
+    }
+  ],
+  "rights_notes": [
+    "Photographie de Moynaq : Sebastian Kluger, CC BY-SA 3.0, fichier original conservé.",
+    "NASA : conditions NASA de réutilisation des médias, pas de licence Creative Commons inventée ; aucune suggestion de soutien.",
+    "Fiches de lecture et graphiques originaux THOT, faits et chiffres cités ; aucun rapport complet ou figure tierce non autorisée reproduit.",
+    "Hydrographie Natural Earth, domaine public. Les données et leurs limites sont identifiées."
+  ]
+}

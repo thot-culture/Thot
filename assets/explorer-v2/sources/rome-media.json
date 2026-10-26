@@ -1,0 +1,89 @@
+[
+  {
+    "id": "hannibal",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Hannibal_Slodtz_Louvre_MR2093_%28cropped2%29.png",
+    "original": "hannibal-original.png",
+    "width": 464,
+    "height": 572,
+    "original_sha256": "98c93d01b462fe423f7ab2e604ac4514d67fd50a2032edde2b87951927c26b6d",
+    "display_sha256": "323db7fda0e931f408c2ec30d2490515bba9acdb241ce2f98dcb1783343d8280",
+    "display_path": "assets/explorer-v2/media/hannibal.webp",
+    "display_bytes": 23020,
+    "changes": "Redimensionnement, orientation EXIF et conversion WebP, sans retouche du sujet."
+  },
+  {
+    "id": "caesar",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Retrato_de_Julio_C%C3%A9sar_%2826724093101%29.jpg",
+    "original": "caesar-original.jpg",
+    "width": 624,
+    "height": 1100,
+    "original_sha256": "e8cdd9d338449597b5b3890be304ec5e3b9fcbcd16a10f5df824c3dce5aa55da",
+    "display_sha256": "a1a9a8f693eb41ae986ee5ba98a51d6f11d19f922e7182eaf88c949c7824f836",
+    "display_path": "assets/explorer-v2/media/caesar.webp",
+    "display_bytes": 37492,
+    "changes": "Redimensionnement, orientation EXIF et conversion WebP, sans retouche du sujet."
+  },
+  {
+    "id": "augustus",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Augustus_of_Prima_Porta.jpg",
+    "original": "augustus-original.jpg",
+    "width": 667,
+    "height": 1000,
+    "original_sha256": "4cbc8932158b4ee57f151ba51c238904bea77ce37441a63dc0ea3ad302daedb9",
+    "display_sha256": "27b8ba5b4cce9bd2225167669b71d1238916806a32932ded8bdf539594fc53e3",
+    "display_path": "assets/explorer-v2/media/augustus.webp",
+    "display_bytes": 155362,
+    "changes": "Redimensionnement, orientation EXIF et conversion WebP, sans retouche du sujet."
+  },
+  {
+    "id": "trajan",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Traianus_Glyptothek_Munich_336.jpg",
+    "original": "trajan-original.jpg",
+    "width": 802,
+    "height": 1100,
+    "original_sha256": "c022e014690de3e04ba337fa8abcff1e6b93fc85748e371df05eeb2586ecfbed",
+    "display_sha256": "f4c4901177921cd21e1489c2fb9a2870b37a948dda3c5dbef3c934d743911868",
+    "display_path": "assets/explorer-v2/media/trajan.webp",
+    "display_bytes": 63006,
+    "changes": "Redimensionnement, orientation EXIF et conversion WebP, sans retouche du sujet."
+  },
+  {
+    "id": "met-248033",
+    "url": "https://images.metmuseum.org/CRDImages/gr/original/DP143309.jpg",
+    "original": "met-248033-original.jpg",
+    "primaryIIIF": "536519",
+    "width": 1000,
+    "height": 950,
+    "original_sha256": "c0f0187744ae8373b10c8d51976aed9137ee5130eb407f5e235d43d16d2704cd",
+    "display_sha256": "de0b56c1f9317ef037be4f78068c295541b893a8f39ffd54b7c2a5c43ed165d2",
+    "display_path": "assets/explorer-v2/media/met-248033.webp",
+    "display_bytes": 105960,
+    "changes": "Redimensionnement, orientation EXIF et conversion WebP, sans retouche du sujet."
+  },
+  {
+    "id": "met-248037",
+    "url": "https://images.metmuseum.org/CRDImages/gr/original/LC-08_170_89b.jpg",
+    "original": "met-248037-original.jpg",
+    "primaryIIIF": "1642430",
+    "width": 1000,
+    "height": 841,
+    "original_sha256": "87b78cfde5e0e35b17f400bd7271abbfaccfd4bd0a5143b7a7d7707807965ce7",
+    "display_sha256": "8d4bfcc5f92a3e7aa7292a2cad6c80b14a3decd7824b724688fa16763310c585",
+    "display_path": "assets/explorer-v2/media/met-248037.webp",
+    "display_bytes": 117310,
+    "changes": "Redimensionnement, orientation EXIF et conversion WebP, sans retouche du sujet."
+  },
+  {
+    "id": "met-248042",
+    "url": "https://images.metmuseum.org/CRDImages/gr/original/DP-15733-011.jpg",
+    "original": "met-248042-original.jpg",
+    "primaryIIIF": "1819596",
+    "width": 1000,
+    "height": 750,
+    "original_sha256": "e3afbedd52d82021957c6b88f9b2f4273ada4c23aa5de75debd481a3338585eb",
+    "display_sha256": "b93a85b9b3ec149b66222b0d7742081595948ee3c3a09e9f369fcdc0e92008d7",
+    "display_path": "assets/explorer-v2/media/met-248042.webp",
+    "display_bytes": 45876,
+    "changes": "Redimensionnement, orientation EXIF et conversion WebP, sans retouche du sujet."
+  }
+]

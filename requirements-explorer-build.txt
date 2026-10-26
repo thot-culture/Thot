@@ -1,0 +1,3 @@
+# Dépendances de préparation seulement ; aucune dépendance JS à charger.
+-r requirements-tools.txt
+Shapely==2.1.2

@@ -1,0 +1,206 @@
+{
+  "checked_on": "2026-10-26",
+  "records": [
+    {
+      "id": "hannibal",
+      "name": "Hannibal",
+      "dates": "247–vers 183 av. J.-C.",
+      "role": "Général carthaginois, adversaire de Rome pendant la deuxième guerre punique.",
+      "text": "Regarder l’expansion depuis Carthage permet de sortir d’un récit centré sur les seules victoires romaines. Cette sculpture de Sébastien Slodtz, réalisée en 1704 et conservée au Louvre (MR 2093), représente Hannibal selon une interprétation moderne. Elle n’atteste pas son apparence.",
+      "image": "/Thot/assets/explorer-v2/media/hannibal.webp",
+      "alt": "Sculpture moderne d’Hannibal par Sébastien Slodtz, 1704.",
+      "credit": "Photographie : Alain08, d’après Jastrow ; extraction Commons. Redimensionnement et conversion WebP THOT, sans retouche du sujet.",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "source": {
+        "title": "Notice de l’œuvre et de la photographie, Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Hannibal_Slodtz_Louvre_MR2093_(cropped2).png"
+      },
+      "limits": "Représentation moderne, non portrait antique.",
+      "additional_sources": [
+        {
+          "title": "The Met · Western North Africa, 1000 B.C.–1 A.D.",
+          "url": "https://www.metmuseum.org/pt/toah/ht/04/afw.html"
+        }
+      ],
+      "checked_on": "2026-10-26",
+      "source_snapshot_sha256": "6a1c00cf86305b9d4dece2aa2b807ab8c48b14c1556e6f421c475e6e2253d950",
+      "consultation": "Notice et droits réellement consultés ; fichier image original téléchargé avant conversion de format."
+    },
+    {
+      "id": "caesar",
+      "name": "Jules César",
+      "dates": "Fin de la République · mort en 44 av. J.-C.",
+      "role": "Général et homme politique de la fin de la République.",
+      "text": "Les conquêtes, les guerres civiles et la dictature de César appartiennent à la crise de la République. La carte de 1 av. J.-C. ne doit pas être lue comme le bilan de ses seules actions. Le portrait de Tusculum, conservé à Turin, est une œuvre antique attribuée à la fin de la République (vers les années 50–40 av. J.-C. dans la notice).",
+      "image": "/Thot/assets/explorer-v2/media/caesar.webp",
+      "alt": "Portrait antique dit de Tusculum, identifié comme Jules César.",
+      "credit": "Ángel M. Felicísimo · photographie via Wikimedia Commons. Redimensionnement et conversion WebP THOT.",
+      "license": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "source": {
+        "title": "Portrait de Tusculum, notice Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Retrato_de_Julio_C%C3%A9sar_(26724093101).jpg"
+      },
+      "additional_sources": [
+        {
+          "title": "The Met · The Roman Republic (2000)",
+          "url": "https://www.metmuseum.org/essays/the-roman-republic"
+        }
+      ],
+      "limits": "Une identification de portrait et sa datation relèvent de l’étude de l’objet ; elles ne sont pas une photographie du personnage vivant.",
+      "checked_on": "2026-10-26",
+      "source_snapshot_sha256": "061a422bac71e410da2fb5dfbef6ff565f47e61ccb02bae46f1d6b8b8fdda105",
+      "consultation": "Notice et droits réellement consultés ; fichier image original téléchargé avant conversion de format."
+    },
+    {
+      "id": "augustus",
+      "name": "Auguste",
+      "dates": "Règne : 27 av. J.-C.–14 apr. J.-C.",
+      "role": "Premier empereur ; le titre d’Auguste lui est accordé en 27 av. J.-C.",
+      "text": "L’Auguste de Prima Porta est une statue antique conservée au Vatican. Sa posture, sa cuirasse et ses attributs participent à une représentation du pouvoir. Ce n’est pas une image neutre du quotidien de l’empereur. Le cliché de 2023 est distinct de l’ancienneté de l’œuvre.",
+      "image": "/Thot/assets/explorer-v2/media/augustus.webp",
+      "alt": "Statue antique d’Auguste de Prima Porta, photographiée au Vatican.",
+      "credit": "Justin Benttinen, 8 septembre 2023 · Commons. Version redressée par l’auteur ; redimensionnement et conversion WebP THOT.",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "source": {
+        "title": "Auguste de Prima Porta, Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Augustus_of_Prima_Porta.jpg"
+      },
+      "additional_sources": [
+        {
+          "title": "Christopher S. Lightfoot, The Met · The Roman Empire (2000)",
+          "url": "https://www.metmuseum.org/essays/the-roman-empire-27-b-c-393-a-d"
+        }
+      ],
+      "limits": "Portrait de pouvoir antique, distinct d’une reconstitution moderne ou d’une photographie du règne.",
+      "checked_on": "2026-10-26",
+      "source_snapshot_sha256": "eaf94bdd7ebb442e20cc42b1af0fa5a512d26c548db479084e77d5b5ca7b55ba",
+      "consultation": "Notice et droits réellement consultés ; fichier image original téléchargé avant conversion de format."
+    },
+    {
+      "id": "trajan",
+      "name": "Trajan",
+      "dates": "Règne : 98–117 apr. J.-C.",
+      "role": "Empereur associé aux guerres de Dacie et d’Orient.",
+      "text": "Le portrait conservé à la Glyptothèque de Munich (inv. 336) provient d’une statue plus grande que nature. Cette tête antique rappelle que les représentations impériales occupent aussi l’espace public. Les contours de 117 ne suffisent pas à dire combien de temps chaque conquête a été contrôlée.",
+      "image": "/Thot/assets/explorer-v2/media/trajan.webp",
+      "alt": "Tête antique de Trajan, Glyptothèque de Munich, inventaire 336.",
+      "credit": "Bibi Saint-Pol, 8 février 2007 · Commons. Redimensionnement et conversion WebP THOT ; historique des adaptations disponible dans la source.",
+      "license": "Domaine public (photographie libérée par son auteur)",
+      "license_url": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "source": {
+        "title": "Trajan, Glyptothèque, Commons",
+        "url": "https://commons.wikimedia.org/wiki/File:Traianus_Glyptothek_Munich_336.jpg"
+      },
+      "additional_sources": [
+        {
+          "title": "Christopher S. Lightfoot, The Met · The Roman Empire (2000)",
+          "url": "https://www.metmuseum.org/essays/the-roman-empire-27-b-c-393-a-d"
+        }
+      ],
+      "checked_on": "2026-10-26",
+      "source_snapshot_sha256": "815f010995940ad1b9b03abd858745021e04debbfc368a00ff2b84ffcaca46f2",
+      "consultation": "Notice et droits réellement consultés ; fichier image original téléchargé avant conversion de format."
+    },
+    {
+      "id": "coin-caesar",
+      "title": "Denier de Jules César",
+      "date": "47–46 av. J.-C.",
+      "nature": "Argent ; atelier indiqué en Afrique par le musée.",
+      "description": "La notice identifie une tête de Vénus et, au revers, Énée portant Anchise et le palladium. Le nom CAESAR associe cette histoire à un acteur politique.",
+      "text": "La notice identifie une tête de Vénus et, au revers, Énée portant Anchise et le palladium. Le nom CAESAR associe cette histoire à un acteur politique.",
+      "limits": "Le lieu d’émission est indiqué à l’échelle de l’Afrique par le musée ; aucune coordonnée précise d’atelier n’est inventée. Le lien avec Carthage ci-dessous est un repère régional de contexte, pas un lieu de découverte.",
+      "image": "/Thot/assets/explorer-v2/media/met-248033.webp",
+      "alt": "Denier de Jules César, photographie du Metropolitan Museum of Art.",
+      "credit": "The Metropolitan Museum of Art · Rogers Fund, 1908 · objet 08.170.80. Redimensionnement et conversion WebP THOT.",
+      "license": "CC0 · Open Access / domaine public",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": {
+        "title": "Notice et provenance de l’objet · The Met",
+        "url": "https://www.metmuseum.org/art/collection/search/248033"
+      },
+      "place_id": "carthage",
+      "checked_on": "2026-10-26",
+      "source_snapshot_sha256": "7a638b4b4afad20ff9ad61d42be83d0cf28ed838662fe45fb7e51d43f015179e",
+      "consultation": "Notice et droits réellement consultés ; fichier image original téléchargé avant conversion de format."
+    },
+    {
+      "id": "coin-augustus",
+      "title": "Denier d’Octavien, futur Auguste",
+      "date": "Vers 29–27 av. J.-C.",
+      "nature": "Argent ; Rome ou Brundisium selon le musée.",
+      "description": "Le musée décrit la tête d’Octavien et un trophée sur une proue de navire. L’image montre un message de victoire, pas l’ensemble des expériences des populations dominées.",
+      "text": "Le musée décrit la tête d’Octavien et un trophée sur une proue de navire. L’image montre un message de victoire, pas l’ensemble des expériences des populations dominées.",
+      "limits": "L’atelier est incertain : Rome ou Brundisium. Le rattachement à Rome n’est donc pas une identification certaine du lieu de frappe, ni un lieu de découverte.",
+      "image": "/Thot/assets/explorer-v2/media/met-248037.webp",
+      "alt": "Denier d’Octavien, futur Auguste, photographie du Metropolitan Museum of Art.",
+      "credit": "The Metropolitan Museum of Art · Rogers Fund, 1908 · objet 08.170.89. Redimensionnement et conversion WebP THOT.",
+      "license": "CC0 · Open Access / domaine public",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": {
+        "title": "Notice et provenance de l’objet · The Met",
+        "url": "https://www.metmuseum.org/art/collection/search/248037"
+      },
+      "place_id": "roma",
+      "checked_on": "2026-10-26",
+      "source_snapshot_sha256": "d254d04e28c3313d6cfbb08c0878d0982550567f2de6618ce476f138105f4376",
+      "consultation": "Notice et droits réellement consultés ; fichier image original téléchargé avant conversion de format."
+    },
+    {
+      "id": "coin-trajan",
+      "title": "Sesterce de Trajan",
+      "date": "103–111 apr. J.-C.",
+      "nature": "Bronze ; atelier de Rome.",
+      "description": "La notice décrit un buste de l’empereur et un pont au-dessus d’un fleuve, probablement le Danube. Les inscriptions célèbrent le pouvoir impérial.",
+      "text": "La notice décrit un buste de l’empereur et un pont au-dessus d’un fleuve, probablement le Danube. Les inscriptions célèbrent le pouvoir impérial.",
+      "limits": "L’identification du fleuve est proposée comme probable par le musée. Une monnaie ne prouve pas à elle seule la localisation exacte d’un pont.",
+      "image": "/Thot/assets/explorer-v2/media/met-248042.webp",
+      "alt": "Sesterce de Trajan, photographie du Metropolitan Museum of Art.",
+      "credit": "The Metropolitan Museum of Art · Rogers Fund, 1908 · objet 08.170.120. Redimensionnement et conversion WebP THOT.",
+      "license": "CC0 · Open Access / domaine public",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source": {
+        "title": "Notice et provenance de l’objet · The Met",
+        "url": "https://www.metmuseum.org/art/collection/search/248042"
+      },
+      "place_id": "roma",
+      "checked_on": "2026-10-26",
+      "source_snapshot_sha256": "f693bbb37034d4cd74a9433b41408fec4cd463a3a4c30d21ef99ee98f868c7a8",
+      "consultation": "Notice et droits réellement consultés ; fichier image original téléchargé avant conversion de format."
+    }
+  ],
+  "bibliography": [
+    {
+      "title": "The Met · The Roman Republic (2000)",
+      "url": "https://www.metmuseum.org/essays/the-roman-republic"
+    },
+    {
+      "title": "Christopher S. Lightfoot, The Met · The Roman Empire (2000)",
+      "url": "https://www.metmuseum.org/essays/the-roman-empire-27-b-c-393-a-d"
+    },
+    {
+      "title": "The Met · Western North Africa, 1000 B.C.–1 A.D.",
+      "url": "https://www.metmuseum.org/pt/toah/ht/04/afw.html"
+    }
+  ],
+  "bibliography_snapshots": [
+    {
+      "file": "met-republic.html",
+      "sha256": "f2d40cb1d2ef0d9e087eaff210a91fd727fc0892849b25e6d8bb536cec29d6a8"
+    },
+    {
+      "file": "met-empire.html",
+      "sha256": "37afd6ee5bfe2a81b5d24543ca59ce0483485c8b8595e0219b716c20c1aa14ac"
+    },
+    {
+      "file": "met-punic.html",
+      "sha256": "0a773f2edd09f4eefb6e685d7d5a4682f4156aaac038a171cb22bbd93428faa2"
+    }
+  ],
+  "cartography_register": "geography-sources.json",
+  "places_register": "pleiades-places.json",
+  "media_register": "rome-media.json",
+  "rights_note": "Notices THOT originales ; images des quatre représentations selon leurs licences propres, monnaies Met sous CC0. L’API Met renvoyait 410 : vérification faite sur les notices HTML du musée et leurs images primaires identifiées par IIIF, pas par l’API."
+}
