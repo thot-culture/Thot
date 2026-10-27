@@ -40,6 +40,61 @@
     for (const child of original.children) { const node = child.cloneNode(true); node.removeAttribute('id'); node.querySelectorAll('[id]').forEach(n => n.removeAttribute('id')); target.append(node); }
     target.querySelectorAll('[data-territory],[data-place],[data-event]').forEach(node => { node.setAttribute('role','button'); node.setAttribute('tabindex','0'); node.setAttribute('aria-label', node.dataset.name || places.get(node.dataset.place)?.name || events.get(node.dataset.event)?.title || 'Ouvrir la fiche'); });
   }
+  let activeMapItem='';
+  const labelMetrics=new WeakMap();
+  function syncMarkers(){
+    const merged=new Set(root.dataset.showEvents==='true'?[...events.values()].map(e=>e.place_id):[]);
+    svg.querySelectorAll('#atlas-city-layer [data-place]').forEach(g=>{
+      const duplicate=merged.has(g.dataset.place);g.toggleAttribute('hidden',duplicate);
+      g.setAttribute('tabindex',duplicate?'-1':'0');g.setAttribute('aria-hidden',String(duplicate));
+    });
+  }
+  function layoutLabels(scale){
+    syncMarkers();
+    const bounds=svg.getBoundingClientRect(),gap=4;
+    const anchorGroups=[...svg.querySelectorAll('#atlas-city-layer [data-place]:not([hidden]),#atlas-event-layer [data-event]')].filter(g=>g.dataset.event?root.dataset.showEvents==='true':root.dataset.showCities!=='false');
+    const anchors=anchorGroups.map(g=>{const dot=g.querySelector('circle'),point=svg.createSVGPoint();point.x=g.dataset.event?0:dot.cx.baseVal.value;point.y=g.dataset.event?0:dot.cy.baseVal.value;return {g,point:point.matrixTransform(g.getScreenCTM())};});
+    const screenScale=Math.hypot(svg.getScreenCTM().a,svg.getScreenCTM().b)||scale;
+    for(const anchor of anchors){
+      const nearest=Math.min(...anchors.filter(a=>a!==anchor).map(a=>Math.hypot(a.point.x-anchor.point.x,a.point.y-anchor.point.y)));
+      const radius=Math.max(1.5,Math.min(anchor.g.dataset.event?10:5,nearest/(2*Math.SQRT2)-2));
+      anchor.g.querySelector('circle').setAttribute('r',String(Math.max(1,Math.min(22,nearest/2-1))/screenScale));
+      if(anchor.g.dataset.event){const edge=radius/Math.SQRT2/screenScale;const rect=anchor.g.querySelector('rect');for(const [key,value] of Object.entries({x:-edge,y:-edge,width:2*edge,height:2*edge}))rect.setAttribute(key,String(value));}
+      else anchor.g.querySelector('circle:not(.atlas-city-hit)').setAttribute('r',String(radius/screenScale));
+    }
+    const overlap=(a,b)=>a.left<b.right+gap&&a.right>b.left-gap&&a.top<b.bottom+gap&&a.bottom>b.top-gap;
+    const shown=node=>!node.closest('[hidden]')&&getComputedStyle(node).display!=='none'&&node.getBoundingClientRect().width>0;
+    const markers=[...svg.querySelectorAll('#atlas-city-layer [data-place]:not([hidden]) circle:not(.atlas-city-hit),#atlas-event-layer rect')].filter(shown).filter(n=>!(n.closest('#atlas-city-layer')&&root.dataset.showCities==='false')&&!(n.closest('#atlas-event-layer')&&root.dataset.showEvents!=='true')).map(n=>n.getBoundingClientRect());
+    if(state.compare){const line=$('atlas-divider').querySelector('line').getBoundingClientRect();markers.push({left:line.left-3,right:line.right+3,top:bounds.top,bottom:bounds.bottom});markers.push($('atlas-divider').querySelector('circle').getBoundingClientRect());}
+    const compass=root.querySelector('.atlas-map-compass');if(compass)markers.push(compass.getBoundingClientRect());
+    const labels=[...svg.querySelectorAll('#atlas-city-layer text,#atlas-event-layer text')];
+    const accepted=[];
+    labels.sort((a,b)=>Number((b.parentNode.dataset.place||b.parentNode.dataset.event)===activeMapItem)-Number((a.parentNode.dataset.place||a.parentNode.dataset.event)===activeMapItem));
+    for(const text of labels){
+      text.style.visibility='hidden';text.setAttribute('aria-hidden','true');
+      const group=text.parentNode,isEvent=Boolean(group.dataset.event);
+      if(group.hasAttribute('hidden')||(isEvent?root.dataset.showEvents!=='true':root.dataset.showCities==='false'))continue;
+      const point=isEvent?{x:0,y:0}:{x:group.querySelector('circle').cx.baseVal.value,y:group.querySelector('circle').cy.baseVal.value};
+      text.style.fontSize=(14/scale)+'px';
+      let metrics=labelMetrics.get(text);
+      if(!metrics||metrics.scale!==scale){
+        text.setAttribute('x','0');text.setAttribute('y','0');text.setAttribute('text-anchor','start');
+        const box=text.getBBox();metrics={scale,x:box.x,y:box.y,width:box.width,height:box.height};labelMetrics.set(text,metrics);
+      }
+      const matrix=group.getScreenCTM();
+      // Measure once per size, then test candidate boxes mathematically while panning.
+      const candidates=[[12,-10,'start'],[12,23,'start'],[-12,-10,'end'],[-12,23,'end'],[0,-15,'middle'],[0,28,'middle'],[15,5,'start'],[-15,5,'end']];
+      for(const [dx,dy,anchor] of candidates){
+        const x=point.x+dx/scale,y=point.y+dy/scale;
+        const offset=anchor==='end'?metrics.width:anchor==='middle'?metrics.width/2:0;
+        const left=(x+metrics.x-offset)*matrix.a+matrix.e,top=(y+metrics.y)*matrix.d+matrix.f;
+        const box={left,top,right:left+metrics.width*matrix.a,bottom:top+metrics.height*matrix.d};
+        if(box.left<bounds.left+gap||box.right>bounds.right-gap||box.top<bounds.top+gap||box.bottom>bounds.bottom-gap)continue;
+        if(markers.some(marker=>overlap(box,marker))||accepted.some(other=>overlap(box,other)))continue;
+        text.setAttribute('x',String(x));text.setAttribute('y',String(y));text.setAttribute('text-anchor',anchor);text.style.visibility='visible';accepted.push(box);break;
+      }
+    }
+  }
   function mapView() {
     const w = 1200/state.zoom, h = 720/state.zoom;
     state.x = Math.max(-100, Math.min(1300-w, state.x)); state.y = Math.max(-60, Math.min(780-h, state.y));
@@ -51,7 +106,6 @@
     divider.querySelector('circle').setAttribute('cx',split); divider.querySelector('circle').setAttribute('cy',state.y+h/2);
     divider.querySelector('path').setAttribute('transform',`translate(${split-600} ${state.y+h/2-360})`);
     const scale=Math.min(svg.clientWidth/w,svg.clientHeight/h) || 1;
-    svg.querySelectorAll('#atlas-city-layer text').forEach(t=>t.style.fontSize=(13/scale)+'px');
     const hits=[...svg.querySelectorAll('#atlas-city-layer .atlas-city-hit')];
     svg.querySelectorAll('#atlas-city-layer circle').forEach(c=>{
       let radius=5/scale;
@@ -64,8 +118,7 @@
     });
     svg.querySelectorAll('#atlas-event-layer rect').forEach(r=>{for(const [key,value] of Object.entries({x:-8,y:-8,width:16,height:16}))r.setAttribute(key,String(value/scale));});
     svg.querySelectorAll('#atlas-event-layer circle').forEach(c=>c.setAttribute('r',String(22/scale)));
-    // Declutter labels only: all eleven sites remain available through the list.
-    const boxes=[];svg.querySelectorAll('#atlas-city-layer text').forEach(t=>{t.style.visibility='visible';const b=t.getBoundingClientRect();if(boxes.some(a=>!(b.right<a.left||b.left>a.right||b.bottom<a.top||b.top>a.bottom)))t.style.visibility='hidden';else boxes.push(b);});
+    layoutLabels(scale);
     $('atlas-zoom-value').textContent = Math.round(state.zoom*100)+' %';
     $('atlas-reveal-value').textContent = 'A : '+state.reveal+' % · B : '+(100-state.reveal)+' %';
     $('atlas-reveal').setAttribute('aria-valuetext',state.reveal+' % de la vue pour A ; '+(100-state.reveal)+' % pour B');
@@ -126,12 +179,13 @@
   function closeCard(restore=true) { $('atlas-card').hidden=true; if (restore && cardOpener?.isConnected) cardOpener.focus(); }
   function openCard(kind,id,opener=document.activeElement) {
     const item=kind==='place'?places.get(id):kind==='event'?events.get(id):kind==='region'?regions.get(id):data.territories[id]; if (!item) return;
-    cardOpener=opener;$('atlas-card-kind').textContent=kind==='place'?'LIEU DE REPÉRAGE · TOUTES PÉRIODES':kind==='event'?'ÉVÉNEMENT · '+item.date+' · CARTE : '+epochs.get(state.epoch).label:kind==='region'?'CADRAGE DE LECTURE · FRONTIÈRES INCHANGÉES':'TERRITOIRE · '+epochs.get(item.epoch_id).label;
+    activeMapItem=id;mapView();cardOpener=opener;$('atlas-card-kind').textContent=kind==='place'?'LIEU DE REPÉRAGE · TOUTES PÉRIODES':kind==='event'?'ÉVÉNEMENT · '+item.date+' · CARTE : '+epochs.get(state.epoch).label:kind==='region'?'CADRAGE DE LECTURE · FRONTIÈRES INCHANGÉES':'TERRITOIRE · '+epochs.get(item.epoch_id).label;
     $('atlas-card-title').textContent=item.title || item.name;
     const box=$('atlas-card-content'); box.replaceChildren();paragraphs(box,item.text);paragraphs(box,item.limits);box.append(source(item.source));
     if (item.name_in_source) box.append(make('p','Nom dans la base : '+item.name_in_source,'atlas-credit'));
     if (kind==='place') box.append(make('p','Coordonnées représentatives : '+Number(item.lat).toFixed(3)+'° N, '+Number(item.lon).toFixed(3)+'° E · Pleiades, CC BY 3.0.','atlas-credit'));
     if(kind==='region'&&item.periods){box.append(btn('Comparer ces deux états disponibles',()=>{if(state.mode==='guided')mode('free');endJourney();state.before=item.periods[0];state.after=item.periods[1];state.compare=true;$('atlas-compare-toggle').checked=true;closeCard(false);renderMap();announce('Comparaison de deux états documentés, sans interpolation.');}));}
+    if(kind==='event'&&places.has(item.place_id))box.append(btn('Consulter aussi la fiche du lieu',()=>openCard('place',item.place_id,document.activeElement)));
     linked(box,item);$('atlas-card').hidden=false;$('atlas-card-title').focus();announce('Fiche ouverte : '+(item.title || item.name));
   }
   function openModal(kind,id,opener=document.activeElement) {
@@ -187,7 +241,9 @@
     if(value==='guided')chapter(state.chapter,state.step);else announce('Exploration libre. Toutes les périodes et notices restent accessibles.');
   }
   root.querySelectorAll('.atlas-interactive').forEach(el=>{el.hidden=false;});$('atlas-text-fallback').open=false;
-  cloneLayer('atlas-cities',$('atlas-city-layer'));cloneLayer('atlas-events',$('atlas-event-layer'));renderMap();
+  cloneLayer('atlas-cities',$('atlas-city-layer'));cloneLayer('atlas-events',$('atlas-event-layer'));
+  for(const group of $('atlas-event-layer').querySelectorAll('[data-event]')){const item=events.get(group.dataset.event),text=document.createElementNS('http://www.w3.org/2000/svg','text');text.textContent=(places.get(item.place_id)?.name.split(' · ')[0]||item.title)+' · '+item.date;group.append(text);}
+  renderMap();
   $('atlas-journey-previous').addEventListener('click',()=>startJourney(journey.id,journeyStep-1));
   $('atlas-journey-next').addEventListener('click',()=>startJourney(journey.id,journeyStep+1));
   $('atlas-journey-close').addEventListener('click',()=>{endJourney(true);svg.focus();});
@@ -212,7 +268,7 @@
   root.querySelectorAll('[data-atlas-zoom]').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.atlasZoom==='reset'){state.zoom=1;state.x=0;state.y=0;mapView();}else zoomTo(state.zoom*(b.dataset.atlasZoom==='in'?1.4:1/1.4));announce('Grossissement : '+Math.round(state.zoom*100)+' %.');}));
   const pans={left:[-100,0],right:[100,0],up:[0,-70],down:[0,70]};
   root.querySelectorAll('[data-atlas-pan]').forEach(b=>b.addEventListener('click',()=>{const a=pans[b.dataset.atlasPan];state.x+=a[0]/state.zoom;state.y+=a[1]/state.zoom;mapView();announce('Vue déplacée.');}));
-  root.querySelectorAll('[data-atlas-layer]').forEach(c=>c.addEventListener('change',()=>{root.dataset['show'+c.dataset.atlasLayer[0].toUpperCase()+c.dataset.atlasLayer.slice(1)]=String(c.checked);fillSelection();announce('Couche '+c.parentNode.textContent.trim()+(c.checked?' affichée.':' masquée.'));}));
+  root.querySelectorAll('[data-atlas-layer]').forEach(c=>c.addEventListener('change',()=>{root.dataset['show'+c.dataset.atlasLayer[0].toUpperCase()+c.dataset.atlasLayer.slice(1)]=String(c.checked);fillSelection();mapView();announce('Couche '+c.parentNode.textContent.trim()+(c.checked?' affichée.':' masquée.'));}));
   $('atlas-territory-select').addEventListener('change',e=>{const [kind,id]=e.target.value.split(':');openCard(kind,id,e.target);});
   $('atlas-close-card')?.addEventListener('click',()=>closeCard());root.querySelector('[data-atlas-close-card]').addEventListener('click',()=>closeCard());
   svg.addEventListener('click',e=>{if(lastDrag){lastDrag=false;return;}const t=e.target.closest('[data-territory],[data-place],[data-event]') || lastPointerTarget; lastPointerTarget=null;if(t)openCard(t.dataset.event?'event':t.dataset.place?'place':'territory',t.dataset.event||t.dataset.place||t.dataset.territory,t);});

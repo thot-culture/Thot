@@ -68,3 +68,23 @@
 .aral-experience .aral-document-credit{font-size:14px!important}.aral-experience .aral-panel-heading>p,.aral-experience .aral-board-error,.aral-experience .aral-link-error,.aral-experience .aral-paper-type,.aral-experience .aral-data-figure figcaption,.aral-experience .aral-static-doc{font-size:14px}
 .aral-board-pan{display:flex;gap:7px;padding:10px 14px;flex-wrap:wrap}.aral-board-pan button{flex:1;min-width:58px;padding-inline:8px}
 .aral-experience .aral-chapter-label,.aral-experience .aral-step{font-size:12px}
+/* Recette : navigation dans le flux et titres complets, sans retirer de preuve. */
+.aral-experience .aral-mobile-tabs:not([hidden]){position:static;box-shadow:none;z-index:auto;scroll-margin:0}
+.aral-reading-steps{display:flex;flex-wrap:wrap;gap:8px 24px;padding:16px 16px 16px 36px;background:#edf2e6;border-radius:10px;font-size:14px}
+.aral-reading-steps li{padding-left:3px}.aral-bilan-scope{border-left:3px solid #166d71;padding:12px 16px;background:#fffdf7}
+.aral-experience .aral-paper{height:280px;display:grid;grid-template-rows:44px 66px minmax(0,1fr) 44px}
+.aral-experience .aral-paper>img{width:100%;height:66px;min-height:0;object-fit:cover}
+.aral-experience .aral-paper-type{font-size:12px;line-height:1.35;padding:8px 12px;overflow:hidden}
+.aral-experience .aral-paper-open{font-family:Georgia,serif;font-size:18px;line-height:1.25;min-height:0;white-space:normal;overflow-wrap:anywhere;text-overflow:clip;overflow:visible;padding:8px 12px}
+.aral-experience .aral-paper-remove{min-height:44px}.aral-active-description,.aral-endpoint-title,.aral-evidence-item button{white-space:normal;overflow-wrap:anywhere}
+.aral-endpoint-title{display:block;font-weight:650;font-size:15px;line-height:1.5;background:#fffdf7;padding:10px;border-left:3px solid #166d71;margin:5px 0 8px}
+.aral-next-step{margin:15px;max-width:calc(100% - 30px);background:#166d71;color:white}
+.aral-experience[data-board-presentation=list] .aral-board-controls,.aral-experience[data-board-presentation=list] .aral-move-buttons,.aral-experience[data-board-presentation=list] #aral-center-selected{display:none}
+.aral-experience[data-board-presentation=list] .aral-position-controls>label,.aral-experience[data-board-presentation=list] #aral-selected-card{display:none}
+.aral-experience[data-board-presentation=list] .aral-selected-actions{margin-top:0}
+.aral-experience[data-board-presentation=list] .aral-board-instructions{font-size:14px}
+.aral-document-dialog>footer{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+@media(max-width:700px){.aral-next-step{width:calc(100% - 30px)}.aral-document-dialog>footer button{width:100%}.aral-reading-steps{display:grid;gap:8px}.aral-experience .aral-evidence-item{padding:12px}.aral-experience .aral-evidence-item>button:first-child{font-size:16px}}
+.aral-board-canvas,.aral-threads{height:1440px}
+.aral-back-step{background:#fffdf7;color:#166d71}
+.aral-experience .aral-paper-handle{grid-row:1}.aral-experience .aral-paper>img,.aral-experience .aral-paper-type{grid-row:2}.aral-experience .aral-paper-open{grid-row:3}.aral-experience .aral-paper-remove{grid-row:4}

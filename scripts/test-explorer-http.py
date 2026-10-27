@@ -28,7 +28,7 @@ if __name__=='__main__':
     for url in sorted(urls):
         with urlopen(url,timeout=10) as response:
             assert response.status==200,(url,response.status)
-            if url.endswith('.js'):assert 'javascript' in response.headers.get('Content-Type',''),url
+            if urlsplit(url).path.endswith('.js'):assert 'javascript' in response.headers.get('Content-Type',''),url
     retired=json.loads((ROOT/'docs/EXPLORER-RETRAIT-TEMPORAIRE-20261026.json').read_text(encoding='utf-8'))['removed_pages']
     for name in retired:
         if name=='explorer.html':continue

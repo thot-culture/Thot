@@ -10,7 +10,7 @@
   const byId = new Map(docs.map(doc => [doc.id, doc]));
   const $ = id => root.querySelector('#' + id);
   const KEY = 'thot.explorer.aral.v1';
-  const BOARD = {width:1200, height:1320, cardWidth:248, cardHeight:248};
+  const BOARD = {width:1200, height:1440, cardWidth:248, cardHeight:280};
   const kindSymbols = {confirm:'+',contradict:'≠',context:'i',inconclusive:'?'};
   const kindDashes = {confirm:'none',contradict:'12 6',context:'4 6',inconclusive:'1 7'};
   let drawnZoom = 1;
@@ -60,7 +60,7 @@
     const support = selected.filter(doc => input.roles[doc.id] === 'support');
     const supports = tag => support.some(doc => has(doc, tag));
     const included = tag => selected.some(doc => has(doc, tag));
-    const result = {title: 'Une conclusion à ajuster à la portée des pièces', established: [], relevant: [], issues: [], next: [], relations: []};
+    const result = {title: 'Des choix à confronter à la portée des pièces', established: [], relevant: [], issues: [], next: [], relations: []};
     result.established.push('Les photographies et images datées montrent un recul et une fragmentation du plan d’eau. Une image seule ne révèle pas la cause de ce changement.');
     if (supports('irrigation') && supports('hydrology')) {
       result.established.push('Tu rapproches des prélèvements d’eau et du fonctionnement hydrologique du bassin : cela documente le mécanisme principal du recul, au-delà de la seule coïncidence entre deux courbes.');
@@ -119,7 +119,7 @@
       {label:'Des pièces retenues explicitement',present:selected.length>0,detail:selected.length+' pièce(s), avec leur rôle déclaré.'},
       {label:'Deux familles de pièces sur le mécanisme',present:supports('hydrology')&&supports('irrigation'),detail:'Hydrologie et prélèvements ; leur sélection ne garantit pas à elle seule la qualité du lien.'},
       {label:'Le climat et le devenir du Nord pris en compte',present:included('climate')&&included('restoration'),detail:'Des nuances documentaires, pas des causes qui s’excluent automatiquement.'},
-      {label:'Les désaccords ont un état explicite',present:links.length>0&&!unresolved.length,detail:unresolved.length?'Il reste des contradictions à examiner.':'Le statut est ta déclaration, pas une validation automatique.'}
+      {label:'Les contradictions signalées ont été examinées',applicable:links.some(item=>item.kind==='contradict'),present:links.some(item=>item.kind==='contradict')&&!unresolved.length,detail:unresolved.length?'Il reste des contradictions à examiner.':links.some(item=>item.kind==='contradict')?'Le statut est ta déclaration, pas une validation automatique.':'Aucune contradiction déclarée. Rien à résoudre automatiquement ; vérifie aussi les périodes et les échelles.'}
     ];
     if(input.hypothesis==='irrigation'&&supports('irrigation')&&supports('hydrology')&&result.issues.length)result.title='Des appuis documentaires, des nuances à examiner';
     if(input.hypothesis==='custom')result.title='Une proposition à discuter avec les documents';
@@ -192,7 +192,7 @@
     } else if (doc.visual_html) {
       const visual = el('div', undefined, 'aral-trusted-visual'); visual.innerHTML = doc.visual_html; mediaBox.append(visual);
     }
-    const present = Boolean(state.cards[id]); $('aral-doc-add').hidden = present; $('aral-document-added').hidden = !present;
+    const present = Boolean(state.cards[id]);$('aral-doc-next').hidden=Object.keys(state.cards).length<2; $('aral-doc-add').hidden = present; $('aral-document-added').hidden = !present;
     markSeen(id); $('aral-document').showModal();
   }
   function boardZoom(keepCenter = true) {
@@ -206,13 +206,14 @@
     drawnZoom=factor;$('aral-board-zoom').value=state.zoom;$('aral-board-zoom-value').textContent=state.zoom+' %';
   }
   function setBoardMode(mode) {
-    state.boardMode=mode;
+    state.boardMode=mode;root.dataset.boardPresentation=mode;
     root.querySelector('.aral-board-viewport').hidden=mode!=='map';
     $('aral-evidence-list').hidden=mode!=='list';$('aral-board-pan').hidden=mode!=='map';
     root.querySelectorAll('[data-board-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.boardMode===mode)));
     root.querySelectorAll('#aral-fit-board,#aral-center-selected').forEach(b=>b.disabled=mode!=='map');
     $('aral-board-zoom').disabled=mode!=='map';boardZoom(false);save();
   }
+  function endpointTitles(){for(const side of ['from','to']){const id=$('aral-link-'+side).value;$('aral-link-'+side+'-title').textContent=byId.has(id)?id.toUpperCase()+' · '+byId.get(id).title:'Choisis une pièce';}}
   function selectCard(id,center=false) {
     if(!state.cards[id])return;
     state.activeCard=id;$('aral-selected-card').value=id;
@@ -304,7 +305,7 @@
       if (item.note) li.append(el('p', item.note));
       const actions = el('div', undefined, 'aral-link-actions');
       const edit = button('Modifier', {'data-edit-link': item.id, 'aria-label': 'Modifier la relation ' + item.from.toUpperCase() + ' et ' + item.to.toUpperCase()});
-      edit.addEventListener('click', () => { editingLink = item.id; $('aral-link-from').value = item.from; $('aral-link-to').value = item.to; $('aral-link-kind').value = item.kind; $('aral-link-note').value = item.note;$('aral-link-review').value=item.review||'unresolved';$('aral-link-review-label').hidden=item.kind!=='contradict';selectCard(item.from,true); $('aral-link-save').textContent = 'Enregistrer la relation'; $('aral-link-cancel').hidden = false; $('aral-link-from').focus(); });
+      edit.addEventListener('click', () => { editingLink = item.id; $('aral-link-from').value = item.from; $('aral-link-to').value = item.to; $('aral-link-kind').value = item.kind; $('aral-link-note').value = item.note;$('aral-link-review').value=item.review||'unresolved';$('aral-link-review-label').hidden=item.kind!=='contradict';selectCard(item.from,true); $('aral-link-save').textContent = 'Enregistrer la relation'; $('aral-link-cancel').hidden = false; endpointTitles();$('aral-link-from').focus(); });
       const remove = button('Supprimer', {'data-delete-link': item.id, 'aria-label': 'Supprimer la relation ' + item.from.toUpperCase() + ' et ' + item.to.toUpperCase()});
       remove.addEventListener('click', () => { state.links = state.links.filter(link => link.id !== item.id); if (editingLink === item.id) cancelLinkEdit(); renderLinks(); drawThreads(); renderEvidenceList(); updateCatalogue(); save(); $('aral-link-from').focus(); announce('Relation supprimée.'); });
       actions.append(edit, remove); li.append(actions); list.append(li);
@@ -314,7 +315,7 @@
     const ids = Object.keys(state.cards), container = root.querySelector('.aral-board-cards'); container.replaceChildren(...ids.map(cardFor)); root.querySelector('.aral-board-empty').hidden = ids.length > 0;
     fillSelect($('aral-selected-card'), ids, 'Choisir une pièce'); fillSelect($('aral-link-from'), ids, 'Choisir une pièce'); fillSelect($('aral-link-to'), ids, 'Choisir une pièce');
     root.querySelector('.aral-position-controls').hidden = !ids.length; $('aral-link-form').hidden = ids.length < 2;
-    proofRoles();renderLinks();renderEvidenceList();boardZoom(false);drawThreads();updateCatalogue();if(state.activeCard)selectCard(state.activeCard);else $('aral-active-description').textContent='Aucune pièce active. Ajoute une pièce depuis Documents.';setBoardMode(state.boardMode);
+    endpointTitles();proofRoles();renderLinks();renderEvidenceList();boardZoom(false);drawThreads();updateCatalogue();if(state.activeCard)selectCard(state.activeCard);else $('aral-active-description').textContent='Aucune pièce active. Ajoute une pièce depuis Documents.';setBoardMode(state.boardMode);
   }
   function addDoc(id) {
     if (!byId.has(id) || state.cards[id]) return;
@@ -322,18 +323,19 @@
     renderBoard(); $('aral-selected-card').value = id; setView('board');selectCard(id,true); save(); announce('Pièce ' + id.toUpperCase() + ' ajoutée au tableau, sans sélection automatique comme preuve.');
   }
   function removeDoc(id) {
-    delete state.cards[id]; delete state.roles[id];if(state.activeCard===id)state.activeCard=Object.keys(state.cards)[0]||''; state.links = state.links.filter(item => item.from !== id && item.to !== id); cancelLinkEdit(); renderBoard(); save(); $('aral-selected-card').focus(); announce('Pièce ' + id.toUpperCase() + ' retirée ; les relations qui en dépendaient sont retirées aussi.');
+    delete state.cards[id]; delete state.roles[id];if(state.activeCard===id)state.activeCard=Object.keys(state.cards)[0]||''; state.links = state.links.filter(item => item.from !== id && item.to !== id); cancelLinkEdit(); renderBoard(); save(); if(state.boardMode==='list'){const next=root.querySelector('[data-select-card="'+state.activeCard+'"]');if(next)next.focus();else setView('documents',true);}else $('aral-selected-card').focus(); announce('Pièce ' + id.toUpperCase() + ' retirée ; les relations qui en dépendaient sont retirées aussi.');
   }
   function appendList(target, heading, lines) { const section = el('section'); section.append(el('h3', heading)); const list = el('ul'); for (const line of lines) list.append(el('li', line)); section.append(list); target.append(section); }
   function feedback(focus = true) {
     const result = evaluate(state); const box = $('aral-feedback-body'); box.replaceChildren(); $('aral-feedback-title').textContent = result.title;
-    const criteria=$('aral-feedback-criteria');criteria.replaceChildren();for(const item of result.criteria){const card=el('div',undefined,'aral-criterion');card.dataset.present=String(item.present);card.append(el('p',item.present?'Présent dans tes choix':'À examiner','aral-criterion-state'),el('h3',item.label),el('p',item.detail));criteria.append(card);}
+    const criteria=$('aral-feedback-criteria');criteria.replaceChildren();for(const item of result.criteria){const card=el('div',undefined,'aral-criterion');card.dataset.present=String(item.present);card.append(el('p',item.applicable===false?'Aucune contradiction déclarée':item.present?'Repéré dans tes choix':'À compléter ou à discuter','aral-criterion-state'),el('h3',item.label),el('p',item.detail));criteria.append(card);}
+    box.append(el('p','Ce bilan porte sur les pièces, leurs rôles et les liens que tu as choisis. Il ne valide pas le sens de ton texte libre. Tu peux réviser chaque choix.','aral-bilan-scope'));
     const quote = el('blockquote', state.conclusion); box.append(el('p', 'Ton explication proposée :', 'aral-feedback-label'), quote);
-    appendList(box, 'Ce qui est établi, et à quelle échelle', result.established);
+    appendList(box, 'Ce que le dossier permet d’établir', result.established);
     const evidence = el('section'); evidence.append(el('h3', 'Les pièces réellement retenues'));
     if (!result.relevant.length) evidence.append(el('p', 'Aucune pièce retenue pour l’instant.'));
     for (const piece of result.relevant) { const p = el('p'); p.append(el('strong', piece.id.toUpperCase() + ' · ' + piece.role + ' — '), el('span', piece.title + '. ' + piece.shows)); evidence.append(p); } box.append(evidence);
-    if (result.issues.length) appendList(box, 'Les limites de ton raisonnement', result.issues);
+    if (result.issues.length) appendList(box, 'Ce que tes choix ne permettent pas encore de soutenir', result.issues);
     if (result.relations.length) { const section = el('section'); section.append(el('h3', 'Retour sur tes relations')); for (const item of result.relations) { section.append(el('h4', item.from.toUpperCase() + ' ↔ ' + item.to.toUpperCase() + ' · ' + item.kind), el('p', item.comment)); if (item.note) section.append(el('blockquote', item.note)); } box.append(section); }
     appendList(box, 'À vérifier ou à explorer ensuite', result.next);
     box.append(el('p', 'Ce bilan ne juge ni les personnes ni leur « niveau d’esprit critique ». Il rapproche tes choix de critères documentaires ; ton argumentation libre reste à discuter.', 'aral-evaluation-note'));
@@ -353,8 +355,12 @@
   root.querySelectorAll('[data-board-mode]').forEach(b=>b.addEventListener('click',()=>setBoardMode(b.dataset.boardMode)));
   $('aral-selected-card').addEventListener('change',e=>selectCard(e.target.value));
   root.querySelectorAll('[data-board-pan]').forEach(b=>b.addEventListener('click',()=>{const delta={left:[-240,0],right:[240,0],up:[0,-200],down:[0,200]}[b.dataset.boardPan];root.querySelector('.aral-board-viewport').scrollBy({left:delta[0],top:delta[1],behavior:'auto'});announce('Vue du tableau déplacée ; positions des pièces inchangées.');}));
+  for(const side of ['from','to'])$('aral-link-'+side).addEventListener('change',endpointTitles);
+  $('aral-more-documents').hidden=false;$('aral-more-documents').addEventListener('click',()=>setView('documents',true));
+  $('aral-prepare-conclusion').hidden=false;$('aral-prepare-conclusion').addEventListener('click',()=>{setView('argument',true);$('aral-proofs-title').tabIndex=-1;$('aral-proofs-title').focus();});
+  $('aral-doc-next').addEventListener('click',()=>{closeDocument();setView('board',true);$('aral-link-from').focus();});
   $('aral-center-selected').addEventListener('click',centerCard);
-  $('aral-connect-selected').addEventListener('click',()=>{if(!state.activeCard)return;$('aral-link-from').value=state.activeCard;$('aral-link-to').focus();announce('Choisis la seconde pièce, puis la nature du lien.');});
+  $('aral-connect-selected').addEventListener('click',()=>{if(!state.activeCard)return;$('aral-link-from').value=state.activeCard;endpointTitles();$('aral-link-to').focus();announce('Choisis la seconde pièce, puis la nature du lien.');});
   $('aral-fit-board').addEventListener('click',()=>{const box=root.querySelector('.aral-board-viewport');state.zoom=Math.max(50,Math.min(100,Math.floor(box.clientWidth/BOARD.width*100/5)*5));boardZoom(false);box.scrollTo(0,0);save();announce('Vue d’ensemble. Réagrandis ou passe à la liste pour lire les titres.');});
   $('aral-wide-board').addEventListener('click',()=>{const wide=$('aral-dossier').classList.toggle('is-board-wide');$('aral-wide-board').setAttribute('aria-pressed',String(wide));$('aral-wide-board').textContent=wide?'Revenir aux trois espaces':'Tableau en grand';setView('board');});
   $('aral-link-kind').addEventListener('change',e=>{$('aral-link-review-label').hidden=e.target.value!=='contradict';});

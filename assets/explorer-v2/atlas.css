@@ -40,3 +40,15 @@
 #atlas-city-layer text{pointer-events:none}.atlas-map-compass span{font-size:12px}
 /* Aussi appliqué aux symboles de la carte statique sans JavaScript. */
 .atlas-city-hit,.atlas-event-hit{fill:transparent;stroke:none;pointer-events:all}
+/* Recette mobile : commandes et dates dans le flux, jamais superposées au plan. */
+.atlas-map-toolbar{padding:12px;background:#edf3ee;border-bottom:1px solid #b6cccc}
+.rome-atlas .atlas-zoom-controls,.rome-atlas .atlas-pan-controls{position:static;max-width:none;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+.rome-atlas .atlas-zoom-controls button[data-atlas-zoom=reset]{max-width:none;flex:1 1 120px}
+.rome-atlas .atlas-zoom-controls output{align-self:center;font-size:14px}
+.rome-atlas .atlas-pan-controls{justify-content:flex-end;background:#edf3ee;padding:10px 12px;border-top:1px solid #b6cccc}
+.rome-atlas .atlas-compare-badges{position:static;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:12px;background:#fffdf7;pointer-events:auto}
+.rome-atlas .atlas-compare-badges span{max-width:none;overflow-wrap:anywhere;font-size:14px}
+.rome-atlas .atlas-reveal-control label{display:block}.rome-atlas #atlas-reveal-value{display:block;margin-top:6px}
+.rome-atlas .atlas-map-heading>div{min-width:0}.rome-atlas #atlas-current-date{overflow-wrap:anywhere}
+@media(max-width:560px){.rome-atlas .atlas-compare-controls,.rome-atlas .atlas-compare-badges{grid-template-columns:1fr}.atlas-compare-controls>span{display:none}.rome-atlas .atlas-zoom-controls{display:grid;grid-template-columns:48px 48px minmax(0,1fr)}.rome-atlas .atlas-zoom-controls output{grid-column:1/-1}.rome-atlas .atlas-zoom-controls button{padding-inline:8px}.rome-atlas .atlas-map-stage{height:340px}}
+#atlas-event-layer text{font-family:"Segoe UI",Arial,sans-serif;font-weight:600;fill:#17243a;stroke:#fffdf7;stroke-width:3px;paint-order:stroke;pointer-events:none}

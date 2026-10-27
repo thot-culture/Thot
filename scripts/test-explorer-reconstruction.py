@@ -59,7 +59,7 @@ _CACHE={}
 def fixture(name):
     if name in _CACHE:return _CACHE[name]
     html=(ROOT/name).read_text(encoding='utf-8')
-    html=re.sub(r'<link\b[^>]*rel="stylesheet"[^>]*href="([^"]+)"[^>]*>',lambda m:'<style>'+(ROOT/m[1].removeprefix('/Thot/')).read_text(encoding='utf-8')+'</style>',html)
+    html=re.sub(r'<link\b[^>]*rel="stylesheet"[^>]*href="([^"]+)"[^>]*>',lambda m:'<style>'+(ROOT/m[1].split('?',1)[0].removeprefix('/Thot/')).read_text(encoding='utf-8')+'</style>',html)
     html=re.sub(r'<script\b[^>]*src="[^"]+"[^>]*>\s*</script>','',html)
     for f in (ASSET/'media').iterdir():
         if f.suffix in ('.jpg','.webp','.png'):
@@ -178,7 +178,7 @@ def browser_checks(out):
         # Reprise simulée, dans deux pages neuves, avec le vrai code de lecture/écriture.
         c,page,errors,console=page_for(browser,PAGES[1],390,storage={'quiz-sentinel':'préservé'})
         page.locator('#aral-start').click();page.locator('[data-add-doc=d04]').click();view(page,'documents');page.locator('[data-add-doc=d06]').click()
-        view(page,'board');page.locator('#aral-selected-card').select_option('d04');page.locator('[data-board-move=right]').click()
+        view(page,'board');page.locator('[data-board-mode=map]').click();page.locator('#aral-selected-card').select_option('d04');page.locator('[data-board-move=right]').click()
         page.locator('#aral-link-from').select_option('d04');page.locator('#aral-link-to').select_option('d06');page.locator('#aral-link-kind').select_option('context');page.locator('#aral-link-note').fill('Mécanisme hydrologique');page.locator('#aral-link-save').click();page.locator('#aral-hint').click()
         view(page,'argument');page.locator('[data-proof-role=d04]').select_option('support');page.locator('[data-proof-role=d06]').select_option('support')
         submit(page,'irrigation','Un argument conservé avec ses preuves et ses relations.');page.wait_for_timeout(350)

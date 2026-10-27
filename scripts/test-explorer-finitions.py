@@ -17,7 +17,7 @@ recipe=importlib.util.module_from_spec(spec);spec.loader.exec_module(recipe)
 
 def conservation():
     baseline='d8ac141d78ed6014ad7f1edec1d8fc693640a23c'
-    allowed={'explorer.html','scripts/audit-explorer-sources.py','scripts/build-explorer-corpus.py','scripts/build-explorer-reconstruction.py','scripts/explorer_aral_view.py','scripts/explorer_atlas_view.py','scripts/test-explorer-reconstruction.py'}
+    allowed={'scripts/test-explorer-http.py','explorer.html','scripts/audit-explorer-sources.py','scripts/build-explorer-corpus.py','scripts/build-explorer-reconstruction.py','scripts/explorer_aral_view.py','scripts/explorer_atlas_view.py','scripts/test-explorer-reconstruction.py'}
     for name in subprocess.check_output(['git','ls-tree','-r','--name-only',baseline],cwd=ROOT,text=True,encoding='utf-8').splitlines():
         if name in allowed or name.startswith(('assets/explorer-v2/','explorer/')):continue
         assert (ROOT/name).read_bytes()==subprocess.check_output(['git','show',baseline+':'+name],cwd=ROOT),name
@@ -56,7 +56,7 @@ def run(out):
             for source,target,kind in [('d02','d03','confirm'),('d04','d06','context'),('d03','d10','contradict'),('d08','d06','inconclusive')]:
                 page.locator('#aral-link-from').select_option(source);page.locator('#aral-link-to').select_option(target);page.locator('#aral-link-kind').select_option(kind)
                 page.locator('#aral-link-note').fill('Comparer dates, variables et échelles.');page.locator('#aral-link-save').tap()
-            before=page.evaluate('THOT_ARAL.getState()');page.locator('#aral-arrange').tap();after=page.evaluate('THOT_ARAL.getState()')
+            before=page.evaluate('THOT_ARAL.getState()');page.locator('[data-board-mode=map]').tap();page.locator('#aral-arrange').tap();after=page.evaluate('THOT_ARAL.getState()')
             assert before['links']==after['links'] and before['roles']==after['roles'] and set(before['cards'])==set(after['cards'])
             assert len({(v['x'],v['y']) for v in after['cards'].values()})==6
             assert page.locator('.aral-threads [data-thread]').count()==4
@@ -64,6 +64,7 @@ def run(out):
             if width>=1101:
                 page.locator('#aral-wide-board').tap();assert page.locator('.is-board-wide').count()==1
             if width<=700:
+                page.locator('[data-board-mode=list]').tap()
                 page.locator('[data-select-card=d04]').tap();assert page.locator('#aral-selected-card').input_value()=='d04'
                 capture(page,'aral-liste-mobile-'+str(width),'#aral-board-panel')
                 page.locator('[data-board-mode=map]').tap()

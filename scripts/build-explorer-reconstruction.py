@@ -7,20 +7,25 @@ from html import escape as e
 import json
 import re
 import argparse
+import hashlib
 from explorer_aral_view import render as aral_view
 from explorer_atlas_view import render as atlas_view
 ROOT=Path(__file__).resolve().parents[1];ASSET=ROOT/'assets/explorer-v2'
 BASE='https://thot-culture.github.io/Thot/'
+
+def asset_url(name):
+    digest=hashlib.sha256((ASSET/name).read_bytes()).hexdigest()[:12]
+    return '/Thot/assets/explorer-v2/'+name+'?v='+digest
 
 def read(name):return json.loads((ASSET/name).read_text(encoding='utf-8'))
 def header():
     return '''<a class="xp-skip" href="#contenu">Aller au contenu</a><header class="xp-header"><div class="xp-bar"><a class="xp-brand" href="/Thot/index.html" aria-label="THOT, accueil">THOT<span>La curiosité<br>en mouvement</span></a><nav class="xp-nav" aria-label="Navigation principale"><a href="/Thot/index.html">Accueil</a><a href="/Thot/bibliotheque.html">Bibliothèque</a><a href="/Thot/explorer.html" aria-current="page">Explorer</a><a href="/Thot/quiz.html#quiz-classique">Quiz</a><a href="/Thot/notre-methode.html">Notre méthode</a></nav></div></header>'''
 def shell(path,title,description,body,css='',js='',crumb=''):
     share_image='assets/explorer-v2/media/met-248042.webp' if path.endswith('rome-expansion.html') else 'assets/explorer-v2/media/moynaq-original.jpg'
-    scripts='<script src="/Thot/assets/explorer-v2/'+js+'" defer></script>' if js else ''
-    style='<link rel="stylesheet" href="/Thot/assets/explorer-v2/'+css+'">' if css else ''
+    scripts='<script src="'+asset_url(js)+'" defer></script>' if js else ''
+    style='<link rel="stylesheet" href="'+asset_url(css)+'">' if css else ''
     breadcrumb='<nav class="xp-breadcrumb" aria-label="Fil d’Ariane"><a href="/Thot/explorer.html">Explorer</a><span aria-hidden="true">/</span><span>'+e(crumb)+'</span></nav>' if crumb else ''
-    return '<!doctype html>\n<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+e(title)+' — THOT</title><meta name="description" content="'+e(description,quote=True)+'"><link rel="canonical" href="'+BASE+path+'"><meta property="og:type" content="website"><meta property="og:title" content="'+e(title,quote=True)+' — THOT"><meta property="og:description" content="'+e(description,quote=True)+'"><meta property="og:url" content="'+BASE+path+'"><meta property="og:image" content="'+BASE+share_image+'"><meta name="theme-color" content="#fffdf7"><link rel="stylesheet" href="/Thot/assets/explorer-v2/common.css">'+style+scripts+'</head><body>'+header()+'<main class="xp-main" id="contenu" tabindex="-1">'+breadcrumb+body+'</main><footer class="xp-footer"><b>THOT</b><p>Observer. Relier. Comprendre.<br>La connaissance commence par une question.</p><nav aria-label="Liens de pied de page"><a href="/Thot/explorer.html">Retour à Explorer</a><a href="/Thot/bibliotheque.html">Les articles</a><a href="/Thot/notre-methode.html">Notre méthode</a></nav></footer></body></html>\n'
+    return '<!doctype html>\n<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+e(title)+' — THOT</title><meta name="description" content="'+e(description,quote=True)+'"><link rel="canonical" href="'+BASE+path+'"><meta property="og:type" content="website"><meta property="og:title" content="'+e(title,quote=True)+' — THOT"><meta property="og:description" content="'+e(description,quote=True)+'"><meta property="og:url" content="'+BASE+path+'"><meta property="og:image" content="'+BASE+share_image+'"><meta name="theme-color" content="#fffdf7"><link rel="stylesheet" href="'+asset_url('common.css')+'">'+style+scripts+'</head><body>'+header()+'<main class="xp-main" id="contenu" tabindex="-1">'+breadcrumb+body+'</main><footer class="xp-footer"><b>THOT</b><p>Observer. Relier. Comprendre.<br>La connaissance commence par une question.</p><nav aria-label="Liens de pied de page"><a href="/Thot/explorer.html">Retour à Explorer</a><a href="/Thot/bibliotheque.html">Les articles</a><a href="/Thot/notre-methode.html">Notre méthode</a></nav></footer></body></html>\n'
 
 def source_list(items):
     seen=set();rows=[]
