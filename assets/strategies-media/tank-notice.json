@@ -1,0 +1,105 @@
+{
+  "continue": {
+    "iistart": "2015-04-14T13:09:00Z",
+    "continue": "||"
+  },
+  "query": {
+    "normalized": [
+      {
+        "from": "File:The_Battle_of_Cambrai,_November-december_1917_Q6284.jpg",
+        "to": "File:The Battle of Cambrai, November-december 1917 Q6284.jpg"
+      }
+    ],
+    "pages": {
+      "39575010": {
+        "pageid": 39575010,
+        "ns": 6,
+        "title": "File:The Battle of Cambrai, November-december 1917 Q6284.jpg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/44/The_Battle_of_Cambrai%2C_November-december_1917_Q6284.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:The_Battle_of_Cambrai,_November-december_1917_Q6284.jpg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=39575010",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2025-07-28 14:05:10",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "The Battle of Cambrai, November-december 1917 Q6284",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Mark IV tank|Battle of Cambrai (1917)|Images uploaded by Fæ|Artworks without Wikidata item|Ministry of Information First World War Official Collection|UK Government artistic works|PD-scan (PD-UKGov)|World War I in 1917|Photographs from the Imperial War Museum|1917 black and white photographs|World War I Photographs by John Warwick Brooke",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Artist": {
+                "value": "<bdi><a href=\"https://www.wikidata.org/wiki/Q29267899\" class=\"extiw\" title=\"d:Q29267899\"><span title=\"British photographer (1886–1929)\">John Warwick Brooke</span></a></bdi>",
+                "source": "commons-desc-page"
+              },
+              "ImageDescription": {
+                "value": "<i>The Battle of Cambrai, November-december 1917</i><br>\nA British Mark IV tank at Wailly. This shows how it would appear to occupants of the German trenches during the Battle of Cambrai. This was the first occasion on which tanks were launched en masse in a surprise attack and it clearly demonstrated the potential of the armoured vehicle.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "21 October 1917",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<a rel=\"nofollow\" class=\"external free\" href=\"http://media.iwm.org.uk/iwm/mediaLib//20/media-20982/large.jpg\">http://media.iwm.org.uk/iwm/mediaLib//20/media-20982/large.jpg</a><div style=\"margin:0.5em\"></div>\n<div class=\"center centered\" style=\"width:auto\">\n<table style=\"width:100%; border:1px solid var(--border-color-notice,black); background:var(--background-color-neutral,#E0E0E0); padding:0; text-align:center; color:inherit\">\n<tbody><tr>\n<td align=\"left\"><span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:IWMLondonThumbnail.jpg\" class=\"mw-file-description\" title=\"Image of the exterior main entrance to the Imperial War Museum in London.\"><img alt=\"\" src=\"https://upload.wikimedia.org/wikipedia/commons/c/c3/IWMLondonThumbnail.jpg?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail_unscaled\" decoding=\"async\" loading=\"lazy\" width=\"80\" height=\"54\" class=\"mw-file-element\" data-file-width=\"80\" data-file-height=\"54\"></a></span>\n</td>\n<td>This photograph <a rel=\"nofollow\" class=\"external text\" href=\"https://www.iwm.org.uk/collections/item/object/205124999\">Q 6284</a> comes from the collections of the <a rel=\"nofollow\" class=\"external text\" href=\"https://www.iwm.org.uk\">Imperial War Museums</a>.\n</td>\n<td align=\"right\"><span typeof=\"mw:File\"><a href=\"//commons.wikimedia.org/wiki/File:Flag_of_the_United_Kingdom_(3-5).svg\" class=\"mw-file-description\" title=\"Flag of the United Kingdom.\"><img alt=\"\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/120px-Flag_of_the_United_Kingdom_%283-5%29.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"80\" height=\"48\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/250px-Flag_of_the_United_Kingdom_%283-5%29.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"1000\" data-file-height=\"600\"></a></span>\n</td></tr></tbody></table></div>",
+                "source": "commons-desc-page"
+              },
+              "Permission": {
+                "value": "This image was created and released by the Imperial War Museum on the <a rel=\"nofollow\" class=\"external text\" href=\"http://www.iwm.org.uk/corporate/privacy-copyright/licence\">IWM Non Commercial Licence</a>. Photographs taken, or artworks created, by a member of the forces during their active service duties are covered by Crown Copyright provisions. Faithful reproductions may be reused under that licence, which is considered expired 50 years after their creation.",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseShortName": {
+                "value": "Public domain",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Public domain",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Copyrighted": {
+                "value": "False",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "pd",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

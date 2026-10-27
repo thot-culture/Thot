@@ -1,0 +1,156 @@
+[
+  {
+    "id": 1,
+    "theme": "Antiquité",
+    "reference": "Polybe, Histoires, III, 107–118, traduction W. R. Paton, Loeb, 1922. Récit antique postérieur aux faits.",
+    "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3*.html",
+    "checked": "2026-10-27"
+  },
+  {
+    "id": 2,
+    "theme": "Antiquité",
+    "reference": "Michael P. Fronda, Between Rome and Carthage: Southern Italy during the Second Punic War, Cambridge University Press, 2010. Notice et résumé consultés ; ouvrage intégral non consulté.",
+    "url": "https://www.cambridge.org/core/books/between-rome-and-carthage/AF20772D2B328FD83D113B6383A5E2F6",
+    "checked": "2026-10-27"
+  },
+  {
+    "id": 3,
+    "theme": "Moyen Âge",
+    "reference": "Timothy May, « The Military Machine », The Cambridge History of the Mongol Empire, vol. I, 2023, p. 460–487 ; en ligne le 1er janvier 2024. Résumé éditorial consulté ; chapitre intégral en accès restreint.",
+    "url": "https://www.cambridge.org/core/books/abs/cambridge-history-of-the-mongol-empire/military-machine/97F57DAD8A288A4151EADA7751F61988",
+    "checked": "2026-10-27"
+  },
+  {
+    "id": 4,
+    "theme": "Moyen Âge",
+    "reference": "Qamar Adamjee et Stefano Carboni, « The Legacy of Genghis Khan », Metropolitan Museum of Art, 1er octobre 2003.",
+    "url": "https://www.metmuseum.org/essays/the-legacy-of-genghis-khan",
+    "checked": "2026-10-27"
+  },
+  {
+    "id": 5,
+    "theme": "Poudre et fortifications",
+    "reference": "Columbia University, Asia for Educators, « Technological Advances during the Song: Gunpowder », sans date.",
+    "url": "https://afe.easia.columbia.edu/songdynasty-module/tech-gunpowder.html",
+    "checked": "2026-10-27"
+  },
+  {
+    "id": 6,
+    "theme": "Poudre et fortifications",
+    "reference": "Historic England, Artillery Defences, Introduction to Heritage Assets, 2018.",
+    "url": "https://historicengland.org.uk/images-books/publications/iha-artillery-defences/heag197-artillery-defences/",
+    "checked": "2026-10-27"
+  },
+  {
+    "id": 7,
+    "theme": "Poudre et fortifications",
+    "reference": "English Heritage, « Significance of Pendennis Castle », section The Elizabethan Fortress, sans date.",
+    "url": "https://www.english-heritage.org.uk/visit/places/pendennis-castle/history-and-stories/history/significance/",
+    "checked": "2026-10-27"
+  },
+  {
+    "id": 8,
+    "theme": "Napoléon et XIXe siècle",
+    "reference": "Pierre Branda, « 1812, l’année de tous les défis », Fondation Napoléon. Préparatifs financiers et matériels.",
+    "url": "https://www.napoleon.org/histoire-des-2-empires/articles/1812-lannee-de-tous-les-defis",
+    "checked": "2026-10-27"
+  },
+  {
+    "id": 9,
+    "theme": "Napoléon et XIXe siècle",
+    "reference": "Marie-Pierre Rey, « 1812 – la campagne de Russie », préface au vol. 12 de la Correspondance générale de Napoléon Bonaparte, Fondation Napoléon.",
+    "url": "https://www.napoleon.org/histoire-des-2-empires/articles/1812-la-campagne-de-russie-preface-de-mp-rey-au-tome-12-de-la-correspondance-generale-de-napoleon-bonaparte",
+    "checked": "2026-10-27"
+  },
+  {
+    "id": 10,
+    "theme": "Napoléon et XIXe siècle",
+    "reference": "National Army Museum, « Abyssinia Expedition », sans date. Transports, accords de passage et pillage.",
+    "url": "https://www.nam.ac.uk/explore/abyssinia",
+    "checked": "2026-10-27"
+  },
+  {
+    "id": 11,
+    "theme": "XXe siècle",
+    "reference": "National Army Museum, « 1918: Year of victory », sans date. Apprentissage tactique et limites logistiques.",
+    "url": "https://www.nam.ac.uk/explore/1918-victory",
+    "checked": "2026-10-27"
+  },
+  {
+    "id": 12,
+    "theme": "XXe siècle",
+    "reference": "Australian War Memorial, « The Battle of Amiens: 8 August 1918 », sans date.",
+    "url": "https://www.awm.gov.au/visit/exhibitions/1918/battles/amiens",
+    "checked": "2026-10-27"
+  },
+  {
+    "id": 13,
+    "theme": "XXe siècle",
+    "reference": "Smithsonian National Museum of American History, « Battle of the Atlantic », exposition The Price of Freedom, sans date.",
+    "url": "https://americanhistory.si.edu/explore/exhibitions/price-of-freedom/online/world-war-ii/battle-atlantic",
+    "checked": "2026-10-27"
+  },
+  {
+    "id": 14,
+    "theme": "XXe siècle",
+    "reference": "Office of the Historian, US Department of State, « U.S. Involvement in the Vietnam War: The Tet Offensive, 1968 », sans date. Perspective institutionnelle américaine.",
+    "url": "https://history.state.gov/milestones/1961-1968/tet",
+    "checked": "2026-10-27"
+  },
+  {
+    "id": 15,
+    "theme": "Ukraine · analyses datées",
+    "reference": "IHEDN, « Ukraine–Russie : quand la guerre des drones redéfinit le champ de bataille », 19 février 2026. Entretiens avec Grégoire de Saint-Quentin, Mat Hauser et Ronald Hatto ; analyses d’experts.",
+    "url": "https://ihedn.fr/dossier-special/ukraine-dossier-special/ukraine-russie-quand-la-guerre-des-drones-redefinit-le-champ-de-bataille/",
+    "checked": "2026-10-27"
+  },
+  {
+    "id": 16,
+    "theme": "Ukraine · analyses datées",
+    "reference": "Matthew Slusher, Lessons from the Ukraine Conflict: Modern Warfare in the Age of Autonomy, Information, and Resilience, CSIS, 2 mai 2025. Analyse à distinguer des faits établis. Résumé éditorial consulté.",
+    "url": "https://www.csis.org/analysis/lessons-ukraine-conflict-modern-warfare-age-autonomy-information-and-resilience",
+    "checked": "2026-10-27"
+  },
+  {
+    "id": 17,
+    "theme": "Ukraine · analyses datées",
+    "reference": "Ministère des Armées, « [Décryptage] La dronisation du champ de bataille », 26 octobre 2026. Présentation institutionnelle des adaptations françaises.",
+    "url": "https://www.defense.gouv.fr/actualites/decryptage-dronisation-du-champ-bataille",
+    "checked": "2026-10-27"
+  },
+  {
+    "id": 18,
+    "theme": "Ukraine · conséquences civiles",
+    "reference": "Human Rights Watch, World Report 2026, chapitre « Ukraine », janvier 2026, portant sur 2025.",
+    "url": "https://www.hrw.org/world-report/2026/country-chapters/ukraine",
+    "checked": "2026-10-27"
+  },
+  {
+    "theme": "Ukraine · repères historiques",
+    "reference": "United Nations University, « Ukraine (2014, 2022) », Assembly for Peace, sans date. Repères et résolutions des Nations unies.",
+    "url": "https://assemblyforpeace.unu.edu/cases/ukraine-2014-2022/",
+    "id": 19,
+    "checked": "2026-10-27"
+  },
+  {
+    "theme": "Ukraine · industrie et ressources",
+    "reference": "IISS, The Military Balance 2025: Editor’s Introduction, février 2025. Présentation éditoriale consultée ; volume intégral non consulté.",
+    "url": "https://www.iiss.org/publications/the-military-balance/2025/editors-introduction/",
+    "id": 20,
+    "checked": "2026-10-27"
+  },
+  {
+    "theme": "XXe siècle · premiers chars",
+    "reference": "National Army Museum, « Battle of the Somme », sans date. Premier emploi des chars en septembre 1916.",
+    "url": "https://www.nam.ac.uk/explore/battle-somme",
+    "id": 21,
+    "checked": "2026-10-27"
+  },
+  {
+    "theme": "XXe siècle · détection",
+    "reference": "Naval History and Heritage Command, « Radar and Sonar », 2023. Principes distincts des deux moyens de détection.",
+    "url": "https://www.history.navy.mil/browse-by-topic/exploration-and-innovation/radar-sonar.html",
+    "id": 22,
+    "checked": "2026-10-27"
+  }
+]

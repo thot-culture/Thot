@@ -1,0 +1,87 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "94542220": {
+        "pageid": 94542220,
+        "ns": 6,
+        "title": "File:Hannibal Slodtz Louvre MR2093 (cropped2).png",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Hannibal_Slodtz_Louvre_MR2093_%28cropped2%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Hannibal_Slodtz_Louvre_MR2093_(cropped2).png",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=94542220",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2020-09-28 20:40:34",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Hannibal Slodtz Louvre MR2093 (cropped2)",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "GFDL|License migration redundant|Artworks without Wikidata item|Hannibal by Sébastien Slodtz|PD-old-100-expired|Self-published work|Artworks with known accession number|Extracted images|CC-PD-Mark",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Artist": {
+                "value": "<div class=\"fn value\">\nSébastien Slodtz (French, 1655–1726)</div>",
+                "source": "commons-desc-page"
+              },
+              "ImageDescription": {
+                "value": "Hannibal Barca counting the rings of the Roman knights killed at the Battle of Cannae (216 BC). Marble, 1704.",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "Modified version of <a href=\"//commons.wikimedia.org/wiki/File:Hannibal_Slodtz_Louvre_MR2093.jpg\" title=\"File:Hannibal Slodtz Louvre MR2093.jpg\">Hannibal Slodtz Louvre MR2093.jpg</a> (2008) by author <a href=\"//commons.wikimedia.org/wiki/User:Jastrow\" title=\"User:Jastrow\">Jastrow</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "Public domain",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Public domain",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Copyrighted": {
+                "value": "False",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "pd",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

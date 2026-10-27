@@ -1,0 +1,36 @@
+/* Styles limités à la nouvelle page. Identité issue de article.css. */
+.article-strategies .barre nav{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:flex-end}
+.article-strategies .barre nav a{color:#fff;font-size:13px;min-height:44px;display:inline-flex;align-items:center}
+.article-strategies .sm-draft{font-size:12px;color:#ead1a6;margin:16px 0}
+.article-strategies .sm-hero-art{display:flex;align-items:center;gap:20px;margin-top:40px;padding-top:24px;border-top:1px solid #74818b;max-width:900px;color:#ead1a6;font-size:11px;letter-spacing:.15em;font-weight:700}
+.article-strategies .sm-hero-art i{height:1px;background:#b89558;flex:1}
+.article-strategies .sm-chapter{display:block;font:750 11px/1.6 'Segoe UI',sans-serif;letter-spacing:.16em;color:#715026;margin-bottom:12px}
+.article-strategies .sm-module{margin:38px 0;padding:clamp(16px,3vw,28px);background:#fffefa;border:1px solid #d8d2c6;border-top:4px solid #927038;border-radius:14px}
+.article-strategies .sm-module h3{margin:8px 0 18px;font-size:27px}
+.article-strategies .sm-kicker{font-size:10px;letter-spacing:.14em;font-weight:800;color:#715026;margin:0}
+.article-strategies .sm-controls{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0}
+.article-strategies [hidden]{display:none!important}
+.article-strategies button{font:650 13px/1.45 'Segoe UI',sans-serif;cursor:pointer;min-height:44px;padding:10px 14px;border:1px solid #b8ae99;border-radius:8px;background:#fffefa;color:#17243a;max-width:100%}
+.article-strategies button[aria-pressed=true]{background:#17243a;color:#fff;border-color:#17243a}
+.article-strategies button:focus-visible,.article-strategies summary:focus-visible{outline:3px solid #927038;outline-offset:4px}
+.article-strategies .sm-date{font:700 15px/1.5 'Segoe UI',sans-serif;color:#715026;margin-top:20px}
+.article-strategies .sm-panels h4{font:700 18px/1.4 Georgia,serif;margin:20px 0}
+.article-strategies .sm-panels p{font-size:15px}
+.article-strategies .sm-panels svg{width:100%;height:auto;background:#f4f0e6;border-radius:10px;display:block}
+.article-strategies svg text{font:16px 'Segoe UI',sans-serif;fill:#17243a}
+.article-strategies .sm-note{padding:22px;border-left:3px solid #245d63;background:#ecf0f0;margin:26px 0}
+.article-strategies .sm-note>strong{display:block;margin-bottom:10px}
+.article-strategies .sm-note p{font-size:15px;margin:0}
+.article-strategies .thot-illustration>img{display:block;width:100%;height:auto;max-height:450px;object-fit:contain;background:#ebe5d8}
+.article-strategies .sm-chain{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:28px 20px;background:#e8eeee}
+.article-strategies .sm-chain span{background:#fffefa;border-bottom:3px solid #927038;border-radius:6px;text-align:center;padding:14px 5px;font-size:13px;font-weight:700;overflow-wrap:anywhere}
+.article-strategies .sm-route{display:grid;justify-items:center;padding:22px 12px;background:#ecf0f0;border-radius:10px;margin:18px 0}
+.article-strategies .sm-route span{padding:10px 12px;border:1px solid #bac5c4;border-radius:6px;background:#fffefa;text-align:center;font-size:14px;max-width:100%}
+.article-strategies .sm-module details{padding:15px 0;border-top:1px solid #d8d2c6}
+.article-strategies .sm-module summary{cursor:pointer;font-weight:650;min-height:44px;line-height:1.6;padding:5px 0}
+.article-strategies .sm-module details p{margin:14px 0 0;font-size:15px}
+.article-strategies #texte-article:focus{outline:none}
+@media(max-width:560px){.article-strategies .barre .largeur{gap:12px}.article-strategies .barre nav{gap:0 12px}.article-strategies .barre nav a{font-size:12px}.article-strategies .sm-hero-art{gap:8px;font-size:9px;letter-spacing:.05em;flex-wrap:wrap}.article-strategies .sm-chain{grid-template-columns:1fr;padding:20px}.article-strategies .sm-module .thot-illustration-caption{padding:15px}.article-strategies .sm-module h3{font-size:24px}}
+@media print{.article-strategies [data-sm-panel][hidden]{display:block!important}.article-strategies .sm-controls{display:none!important}.article-strategies .sm-module{break-inside:avoid}.article-strategies .entete .sm-draft{color:#17243a}}
+
+.article-strategies .sm-module h2{margin:8px 0 18px;font-size:27px}.article-strategies [data-sm-module=frise] .sm-controls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:2px solid #b89558;padding-bottom:16px}.article-strategies .sm-control-date{display:block;font-size:11px;margin-bottom:5px}.article-strategies .sm-legend{font-size:13px;color:#566171;line-height:1.6;margin-top:12px}@media(max-width:560px){.article-strategies [data-sm-module=frise] .sm-controls{grid-template-columns:repeat(2,minmax(0,1fr))}}

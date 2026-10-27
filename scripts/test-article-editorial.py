@@ -148,7 +148,7 @@ class EditorialTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.config = read_json((ROOT / "assets/article-editorial.json").read_text(encoding="utf-8"))
-        cls.records = cls.config["articles"]
+        cls.records = [record for record in cls.config["articles"] if record.get("layout") != "authored"]
         cls.pages, cls.originals = {}, {}
         for record in cls.records:
             slug = record["slug"]
@@ -170,7 +170,7 @@ class EditorialTests(unittest.TestCase):
         self.assertEqual(len(self.records), 5)
         self.assertEqual({row["slug"] for row in self.records}, SLUGS)
         self.assertEqual(self.config["base_url"], PUBLIC_BASE)
-        self.assertEqual({path.stem for path in (ROOT / "articles").glob("*.html")}, SLUGS)
+        self.assertEqual({path.stem for path in (ROOT / "articles").glob("*.html")}, {row["slug"] for row in self.config["articles"]})
         images = [row["social"]["image"] for row in self.records]
         self.assertEqual(len(images), len(set(images)))
         self.assertEqual(date.fromisoformat(self.config["editorial_updated"]).isoformat(),

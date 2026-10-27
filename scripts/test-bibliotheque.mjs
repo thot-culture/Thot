@@ -116,8 +116,11 @@ function fixture(initial = '', brokenImage = -1, options = {}) {
   return { document, window, nodes, filters, cards, query, filter, visible, history, historyCalls, historyAttempts, timers, advance, navigate };
 }
 
+const catalogueCategories = [...(baseline ? [] : ['histoire']), 'sciences-humaines', 'sciences', 'arts', 'geographie', 'histoire'];
+const totalCatalogue = catalogueCategories.length;
+const histoireCategories = catalogueCategories.filter(category => category === 'histoire');
 const f = fixture();
-assert.equal(f.visible().length, 5);
+assert.equal(f.visible().length, totalCatalogue);
 for (const [query, expected] of [
   ['CHARLOTTE   BRONTE', ['arts']],
   ['Unis États', ['geographie']],
@@ -126,8 +129,8 @@ for (const [query, expected] of [
   ['réquisition Roubaix', ['histoire']],
   ['arts', ['arts']],
   ['Nadar', ['arts']],
-  ['2026', ['sciences-humaines', 'sciences', 'arts', 'geographie', 'histoire']],
-  ['   ', ['sciences-humaines', 'sciences', 'arts', 'geographie', 'histoire']],
+  ['2026', catalogueCategories],
+  ['   ', catalogueCategories],
   ['zzzintrouvable', []]
 ]) {
   f.query(query); assert.deepEqual(f.visible(), expected, `Recherche : ${query}`);
@@ -135,7 +138,7 @@ for (const [query, expected] of [
 f.query('');
 for (const button of f.filters) {
   const category = button.dataset.filter; f.filter(category);
-  const expected = category === 'tous' ? 5 : category === 'insolite' ? 0 : 1;
+  const expected = category === 'tous' ? totalCatalogue : catalogueCategories.filter(value => value === category).length;
   assert.equal(f.visible().length, expected, `Filtre : ${category}`);
   assert.equal(f.filters.filter(b => b.getAttribute('aria-pressed') === 'true').length, 1);
   assert.equal(button.getAttribute('aria-pressed'), 'true');
@@ -143,18 +146,18 @@ for (const button of f.filters) {
 f.query('roubaix'); assert.equal(f.visible().length, 0, 'Le filtre reste combiné à la recherche');
 f.filter('histoire'); assert.deepEqual(f.visible(), ['histoire']);
 f.nodes['clear-search'].emit('click');
-assert.deepEqual(f.visible(), ['histoire'], 'Effacer conserve le filtre choisi');
+assert.deepEqual(f.visible(), histoireCategories, 'Effacer conserve le filtre choisi');
 assert.equal(f.nodes['clear-search'].hidden, true);
 assert.equal(f.document.activeElement, f.nodes['article-search']);
 f.query('pieuvre'); assert.equal(f.visible().length, 0);
 assert.equal(f.nodes['results-status'].textContent, 'Aucun article trouvé');
 assert.equal(f.nodes['empty-state'].classList.contains('hidden'), false);
 f.nodes['reset-filters'].emit('click');
-assert.equal(f.visible().length, 5);
+assert.equal(f.visible().length, totalCatalogue);
 assert.equal(f.nodes['article-search'].value, '');
 assert.equal(f.nodes['empty-state'].classList.contains('hidden'), true);
 assert.equal(f.document.activeElement, f.nodes['article-search']);
-assert.equal(f.nodes['article-total'].textContent, '5');
+assert.equal(f.nodes['article-total'].textContent, String(totalCatalogue));
 assert.equal(f.nodes['library-search'].hidden, false, 'Commandes révélées après initialisation');
 f.nodes['article-search'].value = 'Brontë'; f.window.emit('pageshow');
 assert.deepEqual(f.visible(), ['arts'], 'Retour arrière et valeur restaurée sans input');
@@ -214,7 +217,7 @@ if (!baseline) {
     assert.deepEqual(pressed(invalid), ['tous'], `Sujet non proposé ignoré : ${subject}`);
   }
   const noArticles = fixture('', -1, { href: baseURL + '?sujet=insolite' });
-  assert.equal(noArticles.visible().length, 5, 'Une ancienne catégorie vide retrouve le catalogue complet');
+  assert.equal(noArticles.visible().length, totalCatalogue, 'Une ancienne catégorie vide retrouve le catalogue complet');
   assert.deepEqual(pressed(noArticles), ['tous']);
   for (const button of f.filters) {
     const subject = button.dataset.filter;
@@ -274,7 +277,7 @@ if (!baseline) {
   assert.equal(back.historyAttempts.length, 0, 'Le retour arrière ne réécrit pas la destination restaurée');
   back.navigate(baseURL + '?origine=menu');
   assert.equal(back.nodes['article-search'].value, '');
-  assert.equal(back.visible().length, 5);
+  assert.equal(back.visible().length, totalCatalogue);
   assert.deepEqual(pressed(back), ['tous'], 'Absence de paramètres : remise à zéro après popstate');
   back.navigate(baseURL + '?q=muscles%20couleur&sujet=sciences');
   assert.deepEqual(back.visible(), ['sciences'], 'Le retour avant restaure à nouveau recherche et catégorie');
@@ -299,13 +302,13 @@ if (!baseline) {
     assert.deepEqual(page.visible(), ['histoire'], 'La recherche fonctionne malgré une API URL/historique indisponible ou refusée');
     page.filter('histoire');
     page.nodes['clear-search'].emit('click');
-    assert.deepEqual(page.visible(), ['histoire']);
+    assert.deepEqual(page.visible(), histoireCategories);
     assert.equal(page.document.activeElement, page.nodes['article-search']);
     page.query('pieuvre');
     page.window.emit('popstate');
     assert.equal(page.timers.size, 0);
     page.nodes['reset-filters'].emit('click');
-    assert.equal(page.visible().length, 5);
+    assert.equal(page.visible().length, totalCatalogue);
   }
   console.log('PASS : restauration q/sujet, rechargement/retour arrière, délai 250 ms, actions immédiates, flush change/pagehide, doublons, filtres invalides, conservation paramètres/hash/préfixe/history.state et APIs refusées/incomplètes.');
 }
@@ -334,8 +337,8 @@ for (const storageFails of [false, true]) {
   for (const changes of [{ ctrlKey: true }, { metaKey: true }, { shiftKey: true }, { altKey: true }, { button: 1 }]) click(changes);
   assert.equal(destinations.length, 2, 'Les clics natifs sont préservés');
 }
-assert.equal(new Set(articleLinks.map(tag => tag.href)).size, 5);
-console.log('PASS : les 5 articles restent dans le catalogue surprise ; stockage refusé et clics natifs préservés.');
+assert.equal(new Set(articleLinks.map(tag => tag.href)).size, totalCatalogue);
+console.log('PASS : les 6 articles restent dans le catalogue surprise ; stockage refusé et clics natifs préservés.');
 
 const ids = tags.filter(tag => tag.id).map(tag => tag.id);
 assert.equal(new Set(ids).size, ids.length);
@@ -379,5 +382,5 @@ for (const tag of tags) {
 assert.ok(Object.hasOwn(tags.find(tag => tag.id === 'library-search'), 'hidden'));
 assert.match(html, /<noscript>[\s\S]*Tous les articles restent accessibles/);
 assert.equal(tags.filter(tag => tag.role === 'status').length, 1, 'Un seul statut pour annoncer le résultat');
-console.log(`PASS : ${internal} liens/ressources internes, ${scripts} scripts, IDs, ARIA, métadonnées, 5 images décrites et dimensionnées ; catalogue statique accessible sans JS.`);
+console.log(`PASS : ${internal} liens/ressources internes, ${scripts} scripts, IDs, ARIA, métadonnées, 6 images décrites et dimensionnées ; catalogue statique accessible sans JS.`);
 console.log(`NON VÉRIFIÉ : rendu ordinateur/mobile, CSS calculé, lecteur d’écran, HTTP des liens et de l’image externe (${externalImages}), performances réelles.`);

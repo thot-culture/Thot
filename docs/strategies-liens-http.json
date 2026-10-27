@@ -1,0 +1,151 @@
+[
+  {
+    "id": 1,
+    "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3*.html",
+    "status": null,
+    "result": "The request was canceled due to the configured HttpClient.Timeout of 25 seconds elapsing."
+  },
+  {
+    "id": 2,
+    "url": "https://www.cambridge.org/core/books/between-rome-and-carthage/AF20772D2B328FD83D113B6383A5E2F6",
+    "status": 200,
+    "bytes": 931780,
+    "result": "HTTP accessible"
+  },
+  {
+    "id": 3,
+    "url": "https://www.cambridge.org/core/books/abs/cambridge-history-of-the-mongol-empire/military-machine/97F57DAD8A288A4151EADA7751F61988",
+    "status": 200,
+    "bytes": 990307,
+    "result": "HTTP accessible"
+  },
+  {
+    "id": 4,
+    "url": "https://www.metmuseum.org/essays/the-legacy-of-genghis-khan",
+    "status": 429,
+    "result": "Response status code does not indicate success: 429 (Too Many Requests)."
+  },
+  {
+    "id": 5,
+    "url": "https://afe.easia.columbia.edu/songdynasty-module/tech-gunpowder.html",
+    "status": 200,
+    "bytes": 20519,
+    "result": "HTTP accessible"
+  },
+  {
+    "id": 6,
+    "url": "https://historicengland.org.uk/images-books/publications/iha-artillery-defences/heag197-artillery-defences/",
+    "status": 403,
+    "result": "Response status code does not indicate success: 403 (Forbidden)."
+  },
+  {
+    "id": 7,
+    "url": "https://www.english-heritage.org.uk/visit/places/pendennis-castle/history-and-stories/history/significance/",
+    "status": 200,
+    "bytes": 81937,
+    "result": "HTTP accessible"
+  },
+  {
+    "id": 8,
+    "url": "https://www.napoleon.org/histoire-des-2-empires/articles/1812-lannee-de-tous-les-defis",
+    "status": 200,
+    "bytes": 90290,
+    "result": "HTTP accessible"
+  },
+  {
+    "id": 9,
+    "url": "https://www.napoleon.org/histoire-des-2-empires/articles/1812-la-campagne-de-russie-preface-de-mp-rey-au-tome-12-de-la-correspondance-generale-de-napoleon-bonaparte",
+    "status": 200,
+    "bytes": 76484,
+    "result": "HTTP accessible"
+  },
+  {
+    "id": 10,
+    "url": "https://www.nam.ac.uk/explore/abyssinia",
+    "status": 200,
+    "bytes": 82531,
+    "result": "HTTP accessible"
+  },
+  {
+    "id": 11,
+    "url": "https://www.nam.ac.uk/explore/1918-victory",
+    "status": 200,
+    "bytes": 103176,
+    "result": "HTTP accessible"
+  },
+  {
+    "id": 12,
+    "url": "https://www.awm.gov.au/visit/exhibitions/1918/battles/amiens",
+    "status": 200,
+    "bytes": 73698,
+    "result": "HTTP accessible"
+  },
+  {
+    "id": 13,
+    "url": "https://americanhistory.si.edu/explore/exhibitions/price-of-freedom/online/world-war-ii/battle-atlantic",
+    "status": 403,
+    "result": "Response status code does not indicate success: 403 (Forbidden)."
+  },
+  {
+    "id": 14,
+    "url": "https://history.state.gov/milestones/1961-1968/tet",
+    "status": 200,
+    "bytes": 29038,
+    "result": "HTTP accessible"
+  },
+  {
+    "id": 15,
+    "url": "https://ihedn.fr/dossier-special/ukraine-dossier-special/ukraine-russie-quand-la-guerre-des-drones-redefinit-le-champ-de-bataille/",
+    "status": 200,
+    "bytes": 272431,
+    "result": "HTTP accessible"
+  },
+  {
+    "id": 16,
+    "url": "https://www.csis.org/analysis/lessons-ukraine-conflict-modern-warfare-age-autonomy-information-and-resilience",
+    "status": 200,
+    "bytes": 141173,
+    "result": "HTTP accessible"
+  },
+  {
+    "id": 17,
+    "url": "https://www.defense.gouv.fr/actualites/decryptage-dronisation-du-champ-bataille",
+    "status": 200,
+    "bytes": 59310,
+    "result": "HTTP accessible"
+  },
+  {
+    "id": 18,
+    "url": "https://www.hrw.org/world-report/2026/country-chapters/ukraine",
+    "status": 403,
+    "result": "Response status code does not indicate success: 403 (Forbidden)."
+  },
+  {
+    "id": 19,
+    "url": "https://assemblyforpeace.unu.edu/cases/ukraine-2014-2022/",
+    "status": 200,
+    "bytes": 106222,
+    "result": "HTTP accessible"
+  },
+  {
+    "id": 20,
+    "url": "https://www.iiss.org/publications/the-military-balance/2025/editors-introduction/",
+    "status": 200,
+    "bytes": 51798,
+    "result": "HTTP accessible"
+  },
+  {
+    "id": 21,
+    "url": "https://www.nam.ac.uk/explore/battle-somme",
+    "status": 200,
+    "bytes": 92689,
+    "result": "HTTP accessible"
+  },
+  {
+    "id": 22,
+    "url": "https://www.history.navy.mil/browse-by-topic/exploration-and-innovation/radar-sonar.html",
+    "status": 200,
+    "bytes": 278929,
+    "result": "HTTP accessible"
+  }
+]

@@ -444,6 +444,111 @@
       },
       "editorial_updated": "2026-10-26",
       "editorial_scope": "Rétablissement du corpus de 972 affiches et précision des limites d’accès aux notices ; autres parties non réévaluées."
+    },
+    {
+      "slug": "evolution-strategies-militaires",
+      "layout": "authored",
+      "published": "2026-10-27",
+      "editorial_updated": "2026-10-27",
+      "editorial_scope": "Première publication de la version validée le 27 octobre 2026 ; contenu et quatre activités conservés.",
+      "social": {
+        "title": "Pourquoi les nouvelles armes ne suffisent-elles pas à gagner une guerre ?",
+        "description": "De la légion romaine aux drones, comment les technologies, les tactiques et la logistique ont transformé la manière de combattre.",
+        "image": "assets/strategies-media/social.png",
+        "alt": "THOT — Armes, tactiques et logistique : comprendre les transformations militaires."
+      },
+      "sources": {
+        "ref1": {
+          "kind": "primary",
+          "label": "Référence documentaire — voir la qualification détaillée dans le texte."
+        },
+        "ref2": {
+          "kind": "secondary",
+          "label": "Référence documentaire — voir la qualification détaillée dans le texte."
+        },
+        "ref3": {
+          "kind": "secondary",
+          "label": "Référence documentaire — voir la qualification détaillée dans le texte."
+        },
+        "ref4": {
+          "kind": "secondary",
+          "label": "Référence documentaire — voir la qualification détaillée dans le texte."
+        },
+        "ref5": {
+          "kind": "secondary",
+          "label": "Référence documentaire — voir la qualification détaillée dans le texte."
+        },
+        "ref6": {
+          "kind": "secondary",
+          "label": "Référence documentaire — voir la qualification détaillée dans le texte."
+        },
+        "ref7": {
+          "kind": "secondary",
+          "label": "Référence documentaire — voir la qualification détaillée dans le texte."
+        },
+        "ref8": {
+          "kind": "secondary",
+          "label": "Référence documentaire — voir la qualification détaillée dans le texte."
+        },
+        "ref9": {
+          "kind": "secondary",
+          "label": "Référence documentaire — voir la qualification détaillée dans le texte."
+        },
+        "ref10": {
+          "kind": "secondary",
+          "label": "Référence documentaire — voir la qualification détaillée dans le texte."
+        },
+        "ref11": {
+          "kind": "secondary",
+          "label": "Référence documentaire — voir la qualification détaillée dans le texte."
+        },
+        "ref12": {
+          "kind": "secondary",
+          "label": "Référence documentaire — voir la qualification détaillée dans le texte."
+        },
+        "ref13": {
+          "kind": "secondary",
+          "label": "Référence documentaire — voir la qualification détaillée dans le texte."
+        },
+        "ref14": {
+          "kind": "secondary",
+          "label": "Référence documentaire — voir la qualification détaillée dans le texte."
+        },
+        "ref15": {
+          "kind": "secondary",
+          "label": "Référence documentaire — voir la qualification détaillée dans le texte."
+        },
+        "ref16": {
+          "kind": "secondary",
+          "label": "Référence documentaire — voir la qualification détaillée dans le texte."
+        },
+        "ref17": {
+          "kind": "secondary",
+          "label": "Référence documentaire — voir la qualification détaillée dans le texte."
+        },
+        "ref18": {
+          "kind": "secondary",
+          "label": "Référence documentaire — voir la qualification détaillée dans le texte."
+        },
+        "ref19": {
+          "kind": "secondary",
+          "label": "Référence documentaire — voir la qualification détaillée dans le texte."
+        },
+        "ref20": {
+          "kind": "secondary",
+          "label": "Référence documentaire — voir la qualification détaillée dans le texte."
+        },
+        "ref21": {
+          "kind": "secondary",
+          "label": "Référence documentaire — voir la qualification détaillée dans le texte."
+        },
+        "ref22": {
+          "kind": "secondary",
+          "label": "Référence documentaire — voir la qualification détaillée dans le texte."
+        }
+      },
+      "source_manifest": "docs/strategies-sources.json",
+      "media_manifest": "docs/strategies-images.json"
     }
   ]
 }

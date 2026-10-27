@@ -1,0 +1,94 @@
+{
+  "continue": {
+    "iistart": "2008-01-17T06:28:15Z",
+    "continue": "||"
+  },
+  "query": {
+    "pages": {
+      "297925": {
+        "pageid": 297925,
+        "ns": 6,
+        "title": "File:Minard.png",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Minard.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Minard.png",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=297925",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2008-01-17 19:55:54",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Minard",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Images with annotations|Author died more than 100 years ago public domain images|Figurative Map of the Russian campaign 1812 by Minard|Featured pictures on Wikipedia, English|Featured diagrams|Featured pictures on Wikipedia, Turkish|CC-PD-Mark|English-language diagrams|Featured pictures in the public domain|Featured pictures of history of Russia|Featured pictures of history of France|Early flow diagrams|File description pages with long original description",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "featured|poty",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Charles Minard's 1869 chart showing the number of men in Napoleon’s 1812 Russian campaign army, their movements, as well as the temperature they encountered on the return path. Lithograph, 62 × 30 cm",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "Published November 20, 1869",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "see upload log",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"https://en.wikipedia.org/wiki/Charles_Minard\" class=\"extiw\" title=\"w:Charles Minard\">Charles Minard</a> (1781–1870)",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "Public domain",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Public domain",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Copyrighted": {
+                "value": "False",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "pd",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -83,6 +83,20 @@ def update(html, record, config):
     canonical = config["base_url"] + "articles/" + slug + ".html"
     if not re.search(r'<link\b[^>]*rel="canonical"[^>]*href="' + re.escape(canonical) + '"', html):
         raise ValueError(f"Canonique inattendue : {slug}")
+    if record.get("layout") == "authored":
+        # Une page validée manuellement ne reçoit pas les blocs générés des anciens articles.
+        documents = re.findall(r'<script[^>]*type="application/ld\+json"[^>]*>([\s\S]*?)</script>', html)
+        data = next((json.loads(item) for item in documents if json.loads(item).get("@type") == "Article"), {})
+        if data.get("datePublished") != record["published"] or data.get("dateModified") != updated:
+            raise ValueError(f"Dates du registre contradictoires : {slug}")
+        refs = set(re.findall(r'<li\b[^>]*id="(ref\d+)"', html))
+        if refs != set(record["sources"]):
+            raise ValueError(f"Références du registre contradictoires : {slug}")
+        if data.get("creativeWorkStatus") == "Draft" or re.search(r'<meta[^>]*name="robots"[^>]*content="[^"]*noindex', html):
+            raise ValueError(f"Article encore en brouillon : {slug}")
+        if data.get("image") != config["base_url"] + record["social"]["image"]:
+            raise ValueError(f"Image sociale contradictoire : {slug}")
+        return html
     html = remove_generated(html)
     html = re.sub(r'<span\b[^>]*class="source-type"[^>]*>[^<]*</span>\s*', '', html)
     refs = set(re.findall(r'<li\b[^>]*id="(ref\d+)"', html))

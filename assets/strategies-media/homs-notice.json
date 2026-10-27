@@ -1,0 +1,94 @@
+{
+  "continue": {
+    "iistart": "2007-10-06T14:52:30Z",
+    "continue": "||"
+  },
+  "query": {
+    "pages": {
+      "2868984": {
+        "pageid": 2868984,
+        "ns": 6,
+        "title": "File:1281BattleOfHoms.JPG",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/03/1281BattleOfHoms.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:1281BattleOfHoms.JPG",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=2868984",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2026-03-15 15:49:28",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "1281BattleOfHoms",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Cilicia|Images with annotations|1281|Mongol conquests|History of cavalry|Battle of Homs (1281)|PD-Art (PD-US)|Flags of Egypt in art|Islamic hexagonal star|Template Unknown (unspecified)|PD-Art missing SDC copyright status|PD-US missing SDC copyright status|Horse archers in art|Mamluks in art|Mongols in art|Ilkhanate military|BNF Nouvelle acquisition française 886",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "1281 Battle of Homs",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "14<sup>th</sup> century<div style=\"display: none;\">date QS:P,+1350-00-00T00:00:00Z/7</div>",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "A manuscript of Hayton of Coricos' <i>Fleur des histoires de la terre d'Orient</i>, 14th century, <a rel=\"nofollow\" class=\"external text\" href=\"https://gallica.bnf.fr/ark:/12148/btv1b6000425w/f66.item\">Bibliothèque nationale de France, NAF 886, folio No. 27, verso</a> (chapter begins on folio No. 27, recto: \"Quant le temps de la saison vint...\").",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "Unknown<span style=\"display: none;\">Unknown </span>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "Public domain",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Public domain",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Copyrighted": {
+                "value": "False",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "pd",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
