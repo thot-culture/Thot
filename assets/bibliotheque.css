@@ -45,6 +45,8 @@ button{cursor:pointer}
 .article-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:21px;align-items:stretch}
 .article-card{background:var(--paper);border:1px solid var(--line);border-radius:19px;overflow:hidden;box-shadow:0 18px 34px rgba(23,36,58,.055);display:flex;flex-direction:column}
 .article-card .discovery-credit{font-size:12px}
+/* Les compositions typographiques restent entières dans le cadre commun des cartes. */
+.article-card .discovery-photo--integrale img{object-fit:contain}
 .article-card .discovery-photo.is-unavailable{display:grid;place-items:center;padding:24px 20px 60px}
 .library-image-fallback{color:#F2DCAF;font-size:14px;line-height:1.6;text-align:center}
 .card-art{height:207px;display:flex;flex-direction:column;justify-content:center;align-items:center;position:relative;overflow:hidden}
