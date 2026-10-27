@@ -376,7 +376,7 @@ for (const tag of tags) {
     if (new URL(tag.src, base).origin !== site.origin) externalImages++;
   }
   if (tag.tag === 'script' && tag.src) {
-    new vm.Script(await readFile(resolve(root, tag.src.split('?')[0]), 'utf8'), { filename: tag.src }); scripts++;
+    new vm.Script(await readFile(resolve(root, tag.src.split('?')[0].replace(/^\/Thot\//, '')), 'utf8'), { filename: tag.src }); scripts++;
   }
 }
 assert.ok(Object.hasOwn(tags.find(tag => tag.id === 'library-search'), 'hidden'));

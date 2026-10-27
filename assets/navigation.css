@@ -1,0 +1,20 @@
+/* Comportement partagé ; couleurs et typographie héritées des pages THOT. */
+body>header>div:first-child{flex-wrap:wrap}
+body>header [data-site-navigation]{display:flex;position:static;flex-wrap:wrap;gap:4px 18px;width:auto;max-width:100%;margin-left:auto;align-items:center}
+body>header [data-site-navigation] a{display:inline-flex;align-items:center;min-height:44px;font-size:14px;white-space:normal;line-height:1.4}
+body>header [data-site-navigation] [aria-current=page]{text-decoration:underline;text-underline-offset:5px}
+body>header .mobile-menu-button{display:none}
+[data-site-utility]{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 22px;padding:16px 20px;font:14px/1.6 "Segoe UI",sans-serif}
+[data-site-utility] a{color:inherit;display:inline-flex;align-items:center;min-height:44px;text-underline-offset:3px}
+.site-info-footer{background:#17243a;color:#f4ebda}
+body>header a:focus-visible,body>header button:focus-visible,[data-site-utility] a:focus-visible{outline:3px solid #e7b45f;outline-offset:3px}
+@media(max-width:710px){
+ body>header>div:first-child{display:flex;flex-direction:row;flex-wrap:wrap;align-items:center;gap:8px 16px}
+ body>header[data-menu-ready] .mobile-menu-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-left:auto;min-height:44px;padding:8px 12px;border:1px solid currentColor;border-radius:8px;background:transparent;color:inherit;font:600 14px/1.4 "Segoe UI",sans-serif;cursor:pointer}
+ body>header [data-site-navigation]{position:static;flex:1 0 100%;width:100%;margin:0;padding:8px 0;box-shadow:none;border:0;border-radius:0;background:transparent;flex-direction:column;align-items:stretch;gap:0}
+ body>header[data-menu-ready] [data-site-navigation]{display:none}
+ body>header[data-menu-ready] [data-site-navigation].is-open{display:flex}
+ body>header [data-site-navigation] a,body>header.top [data-site-navigation] a:not(.nav-cta){width:100%;min-height:44px;padding:10px 4px;color:inherit}
+ body>header .retour{flex-basis:100%;order:3}
+}
+@media print{body>header .mobile-menu-button,body>header [data-site-navigation],[data-site-utility]{display:none!important}}

@@ -1,0 +1,26 @@
+name: Signaler une erreur sur THOT
+description: Correction éditoriale, source, lien ou problème technique
+title: "[Correction] "
+body:
+  - type: markdown
+    attributes:
+      value: "Ce signalement est public. Ne publiez aucune information personnelle ou confidentielle."
+  - type: input
+    id: page
+    attributes:
+      label: Adresse de la page THOT
+      placeholder: https://thot-culture.github.io/Thot/…
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Passage ou problème observé
+      description: Pour un bug, précisez les étapes, le navigateur et la taille d’écran.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Correction proposée et sources
+      description: Ajoutez si possible un lien vers une source vérifiable.

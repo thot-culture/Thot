@@ -95,7 +95,12 @@
       }
     }
   }
+  let pendingMapFrame = 0;
+  function scheduleMapView() {
+    if (!pendingMapFrame) pendingMapFrame = requestAnimationFrame(() => { pendingMapFrame = 0; mapView(); });
+  }
   function mapView() {
+    if (pendingMapFrame) { cancelAnimationFrame(pendingMapFrame); pendingMapFrame = 0; }
     const w = 1200/state.zoom, h = 720/state.zoom;
     state.x = Math.max(-100, Math.min(1300-w, state.x)); state.y = Math.max(-60, Math.min(780-h, state.y));
     svg.setAttribute('viewBox', `${state.x} ${state.y} ${w} ${h}`);
@@ -248,7 +253,7 @@
   $('atlas-journey-next').addEventListener('click',()=>startJourney(journey.id,journeyStep+1));
   $('atlas-journey-close').addEventListener('click',()=>{endJourney(true);svg.focus();});
   root.querySelectorAll('[data-atlas-region]').forEach(b=>b.addEventListener('click',()=>{endJourney();focusArea(regions.get(b.dataset.atlasRegion));openCard('region',b.dataset.atlasRegion,b);}));
-  window.addEventListener('resize',mapView);
+  window.addEventListener('resize',scheduleMapView);
   root.querySelectorAll('[data-atlas-mode]').forEach(b=>b.addEventListener('click',()=>mode(b.dataset.atlasMode)));
   root.querySelectorAll('[data-atlas-chapter]').forEach(b=>b.addEventListener('click',()=>chapter(data.chapters.findIndex(c=>c.id===b.dataset.atlasChapter))));
   root.querySelectorAll('[data-atlas-step]').forEach(b=>b.addEventListener('click',()=>{const d=b.dataset.atlasStep==='next'?1:-1;let step=state.step+d,index=state.chapter;if(step<0){index--;step=data.chapters[index].steps.length-1;}else if(step>=data.chapters[index].steps.length){index++;step=0;}chapter(index,step);}));
@@ -264,7 +269,7 @@
   $('atlas-period').addEventListener('change',e=>chooseEpoch(e.target.value));root.querySelectorAll('[data-atlas-period]').forEach(b=>b.addEventListener('click',()=>chooseEpoch(b.dataset.atlasPeriod)));
   $('atlas-compare-toggle').addEventListener('change',e=>{endJourney();state.compare=e.target.checked;if(state.compare&&state.mode==='guided')mode('free');closeCard(false);renderMap();announce(state.compare?'Comparaison activée. Les deux dates sont alignées ; déplacez le curseur pour les révéler.':'Comparaison désactivée.');});
   for(const id of ['before','after'])$('atlas-'+id).addEventListener('change',e=>{state[id]=e.target.value;closeCard(false);renderMap();announce('Comparaison : '+epochs.get(state.before).label+' et '+epochs.get(state.after).label);});
-  $('atlas-reveal').addEventListener('input',e=>{state.reveal=Number(e.target.value);mapView();});
+  $('atlas-reveal').addEventListener('input',e=>{state.reveal=Number(e.target.value);scheduleMapView();});
   root.querySelectorAll('[data-atlas-zoom]').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.atlasZoom==='reset'){state.zoom=1;state.x=0;state.y=0;mapView();}else zoomTo(state.zoom*(b.dataset.atlasZoom==='in'?1.4:1/1.4));announce('Grossissement : '+Math.round(state.zoom*100)+' %.');}));
   const pans={left:[-100,0],right:[100,0],up:[0,-70],down:[0,70]};
   root.querySelectorAll('[data-atlas-pan]').forEach(b=>b.addEventListener('click',()=>{const a=pans[b.dataset.atlasPan];state.x+=a[0]/state.zoom;state.y+=a[1]/state.zoom;mapView();announce('Vue déplacée.');}));
@@ -283,8 +288,8 @@
   svg.addEventListener('pointermove',e=>{
     if(!pointers.has(e.pointerId)||!start)return;pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});const dx=e.clientX-start.x,dy=e.clientY-start.y;if(Math.abs(dx)+Math.abs(dy)>5)lastDrag=true;
     if(pointers.size===2&&start.distance){zoomTo(start.zoom*distance()/start.distance);return;}
-    if(start.reveal){const point=svg.createSVGPoint();point.x=e.clientX;point.y=e.clientY;const p=point.matrixTransform(svg.getScreenCTM().inverse());state.reveal=Math.round(Math.max(0,Math.min(100,(p.x-state.x)/(1200/state.zoom)*100)));$('atlas-reveal').value=state.reveal;mapView();return;}
-    const rect=svg.getBoundingClientRect();const units=Math.min(rect.width/(1200/state.zoom),rect.height/(720/state.zoom));state.x=start.vx-dx/units;state.y=start.vy-dy/units;mapView();svg.classList.add('is-dragging');
+    if(start.reveal){const point=svg.createSVGPoint();point.x=e.clientX;point.y=e.clientY;const p=point.matrixTransform(svg.getScreenCTM().inverse());state.reveal=Math.round(Math.max(0,Math.min(100,(p.x-state.x)/(1200/state.zoom)*100)));$('atlas-reveal').value=state.reveal;scheduleMapView();return;}
+    const rect=svg.getBoundingClientRect();const units=Math.min(rect.width/(1200/state.zoom),rect.height/(720/state.zoom));state.x=start.vx-dx/units;state.y=start.vy-dy/units;scheduleMapView();svg.classList.add('is-dragging');
   });
   function endPointer(e){pointers.delete(e.pointerId);start=null;svg.classList.remove('is-dragging');}
   svg.addEventListener('pointerup',endPointer);svg.addEventListener('pointercancel',endPointer);

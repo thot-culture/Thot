@@ -24,3 +24,9 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install -r requirements-tools.txt
       - run: python scripts/test-portabilite.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/check-site.mjs
+      - run: python scripts/build-explorer-reconstruction.py --check
+      - run: python scripts/site_chrome.py --check

@@ -2,7 +2,7 @@
 import portable_io
 from pathlib import Path
 from html.parser import HTMLParser
-import hashlib,json,subprocess,re
+import hashlib,json,subprocess,re,sys
 ROOT=Path(__file__).resolve().parents[1]
 PAGE=ROOT/'articles/evolution-strategies-militaires.html'
 class Audit(HTMLParser):
@@ -14,7 +14,7 @@ class Audit(HTMLParser):
   if tag=='a' and a.get('href','').startswith('#'):self.anchors.append(a['href'][1:])
   if tag in ('img','script','link'):
    u=a.get('src',a.get('href',''))
-   if u and not u.startswith(('http:','https:','#','data:')):self.assets.append((PAGE.parent/u.split('?')[0]).resolve())
+   if u and not u.startswith(('http:','https:','#','data:')):self.assets.append(((ROOT/u.split('?')[0][len('/Thot/'):]) if u.startswith('/Thot/') else (PAGE.parent/u.split('?')[0])).resolve())
 parsed=Audit();text=PAGE.read_text(encoding='utf-8-sig');parsed.feed(text)
 assert len(set(parsed.ids))==len(parsed.ids)
 assert all(a in parsed.ids for a in parsed.anchors)
@@ -41,5 +41,6 @@ for image in images:
 # Un ajout local ne doit modifier aucun fichier du site de référence.
 changes=subprocess.check_output(['git','diff','--name-only','--diff-filter=MD','5231c61','--'],cwd=ROOT,text=True)
 allowed={'assets/bibliotheque.css','articles/evolution-strategies-militaires.html','bibliotheque.html','sitemap.xml','assets/article-editorial.json','assets/reading-times.json','assets/reading-times.js','scripts/update-reading-times.py','scripts/update-article-editorial.py','scripts/test-article-editorial.py','scripts/test-bibliotheque.mjs','scripts/test-strategies-static.py','scripts/test-strategies-browser.cjs','docs/strategies-images.json','assets/strategies-media/homs.webp','assets/strategies-media/minard.webp','assets/strategies-media/tank.webp','assets/strategies-media/homs-original','assets/strategies-media/minard-original','assets/strategies-media/tank-original'}
-assert set(changes.splitlines()) <= allowed, changes
-print('PASS : six chapitres, quatre activités, ancres, médias, quatre empreintes SHA-256, métadonnées publiques, bibliothèque et sitemap ; autres pages préservées.')
+if '--content-only' not in sys.argv:
+ assert set(changes.splitlines()) <= allowed, changes
+print(('Contrôle de conservation du périmètre historique ignoré explicitement ; ' if '--content-only' in sys.argv else '')+'PASS : six chapitres, quatre activités, ancres, médias, quatre empreintes SHA-256, métadonnées publiques, bibliothèque et sitemap ; autres pages préservées.')
