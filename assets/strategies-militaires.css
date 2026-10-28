@@ -1,3 +1,14 @@
+/* Bandeau documentaire : le voile garantit le contraste même sur les pixels blancs. */
+.article-strategies .entete{position:relative;isolation:isolate;background:#17243a;overflow:hidden}
+.article-strategies .sm-hero-image{position:absolute;z-index:-2;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%}
+.article-strategies .entete::before{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,rgba(23,36,58,.97) 0%,rgba(23,36,58,.88) 45%,rgba(23,36,58,.80) 100%)}
+.article-strategies .entete h1{max-width:850px}
+.article-strategies .sm-hero-credit{max-width:780px;margin:24px 0 0;font-size:12px;line-height:1.7;color:#e1e7ed}
+.article-strategies .sm-hero-credit a{color:#ead1a6;display:inline-block;text-decoration:underline}
+.article-strategies .sm-hero-credit a:focus-visible{outline-color:#ead1a6}
+@media(max-width:560px){.article-strategies .sm-hero-image{object-position:52% center}.article-strategies .entete::before{background:rgba(23,36,58,.84)}}
+@media print{.article-strategies .entete{background:transparent;overflow:visible}.article-strategies .sm-hero-image,.article-strategies .entete::before{display:none}.article-strategies .sm-hero-credit,.article-strategies .sm-hero-credit a{color:#17243a}}
+
 /* Styles limités à la nouvelle page. Identité issue de article.css. */
 .article-strategies .barre nav{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:flex-end}
 .article-strategies .barre nav a{color:#fff;font-size:13px;min-height:44px;display:inline-flex;align-items:center}
