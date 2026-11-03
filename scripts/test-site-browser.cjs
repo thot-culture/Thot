@@ -6,7 +6,7 @@ fs.mkdirSync(out,{recursive:true});
 const base=process.env.THOT_BASE_URL||'http://127.0.0.1:8765/Thot/';
 const executablePath=process.env.THOT_BROWSER_EXECUTABLE;
 const pages=['index.html','bibliotheque.html','explorer.html','notre-methode.html','quiz.html','quiz-autrices.html','mentions-legales.html','confidentialite.html','contact.html',...fs.readdirSync(path.join(root,'articles')).filter(x=>x.endsWith('.html')).map(x=>'articles/'+x),'explorer/atlas/rome-expansion.html','explorer/enquetes/mer-aral.html','404.html'];
-const report=process.argv.includes('--storage-only')?JSON.parse(fs.readFileSync(path.join(out,'recette-site.json'),'utf8')):{base,date:'2026-10-27',pages:[],errors:[],limits:['Affichage et tactile simulés dans Chromium ; OS indiqué par les journaux de CI ; aucun téléphone physique, Safari, Firefox ou lecteur d’écran réel.']};
+const report=process.argv.includes('--storage-only')?JSON.parse(fs.readFileSync(path.join(out,'recette-site.json'),'utf8')):{base,date:new Date().toISOString().slice(0,10),pages:[],errors:[],limits:['Affichage et tactile simulés dans Chromium ; OS indiqué par les journaux de CI ; aucun téléphone physique, Safari, Firefox ou lecteur d’écran réel.']};
 const url=p=>new URL(p,base).href;
 (async()=>{let browser,ctx,profile;
 try{

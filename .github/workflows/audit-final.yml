@@ -32,6 +32,7 @@ jobs:
         run: python scripts/audit-final-before.py
       - name: Sorties attendues des générateurs (artefact, sans commit ni déploiement)
         run: |
+          python scripts/build-explorer-reconstruction.py
           python scripts/update-article-editorial.py --write
           python scripts/sync-publication.py --write
           python scripts/update-reading-times.py
@@ -67,6 +68,10 @@ jobs:
           NODE_PATH: ${{ runner.temp }}/thot-audit/node_modules
           THOT_OUTPUT_DIR: ${{ runner.temp }}/evidence/performance
         run: node scripts/audit-final-performance.cjs
+      - name: Liens externes et production (lecture seule)
+        env:
+          THOT_OUTPUT_DIR: ${{ runner.temp }}/evidence/links
+        run: python scripts/audit-final-links.py
       - name: Résumé des résultats et planches de contrôle
         if: always()
         env:

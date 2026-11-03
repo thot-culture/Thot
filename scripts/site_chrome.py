@@ -35,9 +35,14 @@ def normalize(page, html):
     html = re.sub(r'<nav\b([^>]*aria-label="Navigation principale"[^>]*)>.*?</nav>', menu, html, count=1, flags=re.S)
     if 'id="mobile-menu-button"' not in html:
         html = html.replace('<nav id="primary-navigation"', '<button id="mobile-menu-button" class="mobile-menu-button" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Ouvrir le menu"><span aria-hidden="true">☰</span> Menu</button><nav id="primary-navigation"', 1)
-    if page not in ('index.html', 'quiz.html'):
-        html = re.sub(r'<script src="/Thot/assets/navigation\.js[^\"]*" defer></script>', '', html)
-        html = html.replace('</body>', '<script src="'+version('navigation.js')+'" defer></script></body>')
+    # Installer le menu avant le premier rendu du main évite son déplacement
+    # lorsque les autres scripts différés ou les images prennent du temps.
+    html = re.sub(r'\s*<script data-site-menu>[\s\S]*?</script>', '', html)
+    html = re.sub(r'<script src="/Thot/assets/navigation\.js[^\"]*" defer></script>', '', html)
+    menu_script = (ROOT/'assets/navigation.js').read_text(encoding='utf-8')
+    html = html.replace('</header>', '</header><script data-site-menu>'+menu_script+'</script>', 1)
+    if not re.search(r'<link\b[^>]*rel="(?:shortcut )?icon"', html):
+        html = html.replace('</head>', '<link rel="icon" type="image/svg+xml" href="/Thot/assets/favicon.svg"></head>')
     utility = '<nav data-site-utility aria-label="Informations du site">'+links([('contact.html','Contact et corrections'),('mentions-legales.html','Informations légales'),('confidentialite.html','Confidentialité')])+'</nav>'
     html = re.sub(r'<nav data-site-utility.*?</nav>', '', html, flags=re.S)
     if '</footer>' in html:

@@ -4,7 +4,7 @@ const {spawn}=require('node:child_process');
 const {pathToFileURL}=require('node:url');
 const {chromium}=require(process.env.THOT_PLAYWRIGHT||'playwright');
 const chromeLauncher=require('chrome-launcher');
-const root=path.resolve(__dirname,'..'),out=process.env.THOT_OUTPUT_DIR||path.join(root,'work/performance');
+const root=path.resolve(process.env.THOT_AUDIT_ROOT||path.join(__dirname,'..')),out=process.env.THOT_OUTPUT_DIR||path.join(root,'work/performance');
 fs.mkdirSync(out,{recursive:true});
 const server=spawn(process.env.PYTHON||'python',['scripts/preview.py','--port','8867'],{cwd:root,stdio:'ignore'});
 let chrome;

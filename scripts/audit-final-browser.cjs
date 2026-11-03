@@ -14,6 +14,97 @@ const pages=['index.html','bibliotheque.html','explorer.html','notre-methode.htm
 fs.mkdirSync(out,{recursive:true});
 const report={pages:[],interactions:[],limitations:['Linux Chromium, tactile et mobile simulés ; aucun téléphone ou lecteur d’écran réel.',
 'Les erreurs de serveurs externes sont consignées séparément et ne prouvent pas une erreur du code local.']};
+
+async function activities(p,name){
+ const done=[];
+ if(name==='articles/autorite.html'){
+  for(const block of await p.locator('.authorite-case').all()){
+   for(const choice of await block.locator('.authorite-choice').all()){
+    await choice.focus();await p.keyboard.press('Enter');assert.equal(await choice.getAttribute('aria-pressed'),'true');
+    assert((await block.locator('.authorite-feedback').innerText()).trim());
+   }
+  }
+  for(let n=0;n<3;n++){
+   for(const choice of await p.locator('[data-decode-case]:visible [data-decode-option]').all()){
+    await choice.click();assert((await p.locator('#decode-feedback').innerText()).trim());
+   }
+   if(n<2)await p.locator('#decode-next').click();
+  }
+  assert((await p.locator('#decode-progress').innerText()).includes('3 sur 3'));
+  await p.locator('#decode-reset').click();assert((await p.locator('#decode-progress').innerText()).includes('1 sur 3'));
+  done.push('trois situations, toutes réponses, trois scènes Décode et réinitialisation');
+ }
+ if(['quiz-autrices.html','articles/autrices-pseudonymes.html'].includes(name)){
+  const pairs={currer:'charlotte',ellis:'emily',acton:'anne',eliot:'maryanne',sand:'aurore'};
+  await p.locator('[data-pen=currer]').focus();await p.keyboard.press('Enter');
+  await p.locator('[data-author=emily]').click();assert((await p.locator('#quiz-status').innerText()).includes('pas la bonne'));
+  for(const [pen,author] of Object.entries(pairs)){
+   await p.locator('[data-pen='+pen+']').focus();await p.keyboard.press('Enter');
+   assert(await p.locator(':focus').getAttribute('data-author'));
+   await p.locator('[data-author='+author+']').click();assert(await p.locator('[data-pen='+pen+']').isDisabled());
+  }
+  assert(await p.locator('#quiz-explanations').isVisible());await p.locator('#quiz-reset').click();
+  assert.equal(await p.locator('[data-pen]:disabled').count(),0);done.push('jeu autrices complet, erreur, clavier, explications, réinitialisation');
+ }
+ if(name==='articles/pieuvres-couleur.html'){
+  const slider=p.locator('#chromato-curseur');await slider.focus();await p.keyboard.press('End');assert.equal(await slider.inputValue(),'100');
+  await p.keyboard.press('Home');assert.equal(await slider.inputValue(),'0');
+  for(const id of ['chromatophore','sac','muscles','iridophores','leucophores','lumiere','nerfs']){
+   await p.locator('[data-structure='+id+']').click();assert(await p.locator('[data-structure-panel='+id+']').isVisible());
+  }
+  await p.locator('[data-skin-toggle=iridophores]').uncheck();assert(await p.locator('[data-skin-layer=iridophores]').isHidden());
+  await p.locator('[data-skin-toggle=iridophores]').check();done.push('curseur clavier, sept structures, couches activables');
+ }
+ if(name==='articles/puissance-etats-unis.html'){
+  for(const button of await p.locator('[data-cas]').all()){
+   await button.click();assert.equal(await button.getAttribute('aria-pressed'),'true');
+  }
+  for(const button of await p.locator('[data-etape]').all()){
+   await button.focus();await p.keyboard.press('Space');assert.equal(await button.getAttribute('aria-pressed'),'true');
+  }
+  await p.locator('#comparateur-direct').click();assert(await p.locator('.comparateur-table').isVisible());
+  assert.equal(await p.locator('.comparateur-table tbody tr').count(),4);
+  done.push('trois cas, chronologie au clavier, tableau comparatif');
+ }
+ if(name==='articles/roubaix-1917.html'){
+  for(const button of await p.locator('[data-date-index]').all()){
+   await button.click();assert.equal(await button.getAttribute('aria-pressed'),'true');assert((await p.locator('#timeline-title').innerText()).trim());
+  }
+  await p.locator('[data-date-index]').first().focus();await p.keyboard.press('End');
+  assert.equal(await p.locator('[data-date-index]').last().getAttribute('aria-pressed'),'true');
+  await p.locator('[data-document-action=open]').click();await p.waitForFunction(()=>document.getElementById('laine-statut').textContent.includes('Grossissement'));
+  for(const button of await p.locator('#lecture-affiche-laine [data-visual-control]').all()){
+   await button.click();assert((await p.locator('#laine-statut').innerText()).trim());
+  }
+  await p.locator('[data-document-action=reset]').click();assert((await p.locator('#laine-statut').innerText()).includes('Vue entière'));
+  done.push('huit dates et clavier, original chargé, repères du document, remise à zéro');
+ }
+ if(name==='articles/evolution-strategies-militaires.html'){
+  for(const module of await p.locator('[data-sm-module]').all()){
+   for(const button of await module.locator('[data-sm-select]').all()){
+    await button.focus();await p.keyboard.press('Enter');assert.equal(await button.getAttribute('aria-pressed'),'true');
+    assert.equal(await module.locator('[data-sm-panel]:visible').count(),1);
+   }
+  }
+  for(const detail of await p.locator('[data-sm-module=document] details').all()){
+   await detail.locator('summary').focus();await p.keyboard.press('Enter');assert(await detail.locator('p').isVisible());
+  }
+  done.push('tous les états des trois modules, trois notices documentaires au clavier');
+ }
+ for(const term of await p.locator('.thot-terme').all()){
+  await term.focus();await p.keyboard.press('Enter');assert.equal(await term.getAttribute('aria-expanded'),'true');
+  await p.keyboard.press('Escape');assert.equal(await term.getAttribute('aria-expanded'),'false');
+  assert(await term.evaluate(e=>document.activeElement===e));
+ }
+ if(await p.locator('.thot-terme').count())done.push('glossaire, Échap, restitution du focus');
+ for(const copy of await p.locator('[data-share-copy]:visible').all()){
+  await copy.click();await p.waitForFunction(()=>[...document.querySelectorAll('[data-share-status]')].some(e=>e.textContent.trim()));
+  done.push('copie du lien avec résultat utilisateur explicite');
+ }
+ assert(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Débordement après interactions '+name);
+ return done;
+}
+
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 const server=spawn(process.env.PYTHON||'python',['scripts/preview.py','--port','8865'],{cwd:root,stdio:'ignore'});
 let browser;
@@ -57,6 +148,7 @@ try{
      if(name==='articles/roubaix-1917.html')await p.locator('.thot-document-overline').screenshot({path:path.join(out,'roubaix-contrast-'+width+'.png')});
      if(name==='index.html')await p.locator('.latest-story').screenshot({path:path.join(out,'home-feature-'+width+'.png')});
     }
+    item.activities=await activities(p,name);
     assert.deepEqual(item.errors,[]);assert.deepEqual(item.localHttpErrors,[]);
     assert.deepEqual(item.axe.violations,[],'Violations axe '+name+' '+width);
     item.result='PASS';

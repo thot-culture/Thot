@@ -2179,30 +2179,6 @@
       if(willOpen)$('review-heading').focus({preventScroll:true});
     });
     $('change-button').addEventListener('click',()=>setCategory('mix'));
-    const mobileMenu=$('mobile-menu-button'),primaryNav=$('primary-navigation');
-    const menuHeader=mobileMenu.closest('.top'),mobileViewport=window.matchMedia('(max-width: 710px)');
-    function closeMobileMenu(returnFocus=false){
-      primaryNav.classList.remove('is-open');
-      mobileMenu.setAttribute('aria-expanded','false');
-      mobileMenu.setAttribute('aria-label','Ouvrir le menu');
-      if(returnFocus)mobileMenu.focus();
-    }
-    mobileMenu.addEventListener('click',()=>{
-      const open=mobileMenu.getAttribute('aria-expanded')!=='true';
-      primaryNav.classList.toggle('is-open',open);
-      mobileMenu.setAttribute('aria-expanded',String(open));
-      mobileMenu.setAttribute('aria-label',open?'Fermer le menu':'Ouvrir le menu');
-    });
-    primaryNav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>closeMobileMenu()));
-    document.addEventListener('keydown',event=>{
-      if(event.key==='Escape'&&mobileMenu.getAttribute('aria-expanded')==='true')closeMobileMenu(true);
-    });
-    document.addEventListener('click',event=>{if(!menuHeader.contains(event.target))closeMobileMenu();});
-    menuHeader.addEventListener('focusout',event=>{if(event.relatedTarget&&!menuHeader.contains(event.relatedTarget))closeMobileMenu();});
-    const syncMenuViewport=()=>closeMobileMenu(mobileViewport.matches&&primaryNav.contains(document.activeElement));
-    if(typeof mobileViewport.addEventListener==='function')mobileViewport.addEventListener('change',syncMenuViewport);
-    else if(typeof mobileViewport.addListener==='function')mobileViewport.addListener(syncMenuViewport);
-    menuHeader.setAttribute('data-menu-ready','');
     $('year').textContent=String(new Date().getFullYear());
     refreshBest();refreshStats();refreshProgression();refreshDaily();refreshStorageNotice();
     document.querySelectorAll('[data-quiz-startup-disabled]').forEach(button=>{
