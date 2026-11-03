@@ -194,7 +194,10 @@ try{
   assert(await q.locator('#primary-navigation').isHidden());
   const top=await q.locator('main').evaluate(e=>e.getBoundingClientRect().top);
   await q.waitForLoadState('domcontentloaded');
-  assert(Math.abs((await q.locator('main').evaluate(e=>e.getBoundingClientRect().top))-top)<=1,'Le main se déplace au chargement des scripts '+name);
+  const after=await q.locator('main').evaluate(e=>e.getBoundingClientRect().top);
+  const trace={name,before:top,after,header:await q.locator('header').first().evaluate(e=>e.getBoundingClientRect().height),scrollY:await q.evaluate(()=>scrollY)};
+  report.slowLoading=(report.slowLoading||[]).concat(trace);
+  assert(Math.abs(after-top)<=1,'Le main se déplace au chargement des scripts '+JSON.stringify(trace));
   await slow.close();
  }
  report.interactions.push('PASS menu prêt avant le main et position stable avec JS externes retardés de 1,2 seconde, quatre gabarits');

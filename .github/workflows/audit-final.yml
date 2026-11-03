@@ -64,11 +64,13 @@ jobs:
           python scripts/preview.py > "$RUNNER_TEMP/preview.log" 2>&1 &
           node scripts/test-site-browser.cjs
       - name: Performance mobile de laboratoire
+        if: always()
         env:
           NODE_PATH: ${{ runner.temp }}/thot-audit/node_modules
           THOT_OUTPUT_DIR: ${{ runner.temp }}/evidence/performance
         run: node scripts/audit-final-performance.cjs
       - name: Liens externes et production (lecture seule)
+        if: always()
         env:
           THOT_OUTPUT_DIR: ${{ runner.temp }}/evidence/links
         run: python scripts/audit-final-links.py
