@@ -27,3 +27,8 @@
 
 /* Le message de repli réapparaît en cas d'échec ou de chargement bloqué. */
 html[data-quiz-loading] .quiz-page #quiz-load-status { display: none; }
+
+/* Le record conserve sa ligne avant et après la lecture du stockage local. */
+@media (max-width: 560px) {
+  .quiz-page .game-best { flex-basis: 100%; }
+}

@@ -239,15 +239,17 @@ try{
   const slow=await browser.newContext({viewport:{width:390,height:900}});
   await slow.route('**/*.js*',async route=>{await sleep(1200);await route.continue()});
   const q=await slow.newPage();await q.goto(base+name,{waitUntil:'commit'});await q.locator('main').waitFor({state:'attached'});
-  assert(await q.locator('header').getAttribute('data-menu-ready')!==null,'Menu initialisé trop tard '+name);
+  assert(await q.locator('header[data-site-header]').getAttribute('data-menu-ready')!==null,'Menu initialisé trop tard '+name);
   assert(await q.locator('#primary-navigation').isHidden());
   const top=await q.locator('main').evaluate(e=>e.getBoundingClientRect().top);
+  const gameTop=name==='quiz.html'?await q.locator('.game-body').evaluate(e=>e.getBoundingClientRect().top):null;
   const mapTop=name.includes('rome-expansion')?await q.locator('.atlas-map-shell').evaluate(e=>e.getBoundingClientRect().top):null;
   await q.waitForLoadState('domcontentloaded');
   const after=await q.locator('main').evaluate(e=>e.getBoundingClientRect().top);
   const trace={name,before:top,after,header:await q.locator('header').first().evaluate(e=>e.getBoundingClientRect().height),scrollY:await q.evaluate(()=>scrollY)};
   report.slowLoading=(report.slowLoading||[]).concat(trace);
   assert(Math.abs(after-top)<=1,'Le main se déplace au chargement des scripts '+JSON.stringify(trace));
+  if(gameTop!==null)assert(Math.abs((await q.locator('.game-body').evaluate(e=>e.getBoundingClientRect().top))-gameTop)<=1,'Le quiz se déplace après lecture du record');
   if(mapTop!==null)assert(Math.abs((await q.locator('.atlas-map-shell').evaluate(e=>e.getBoundingClientRect().top))-mapTop)<=1,'La carte se déplace au chargement des commandes');
   await slow.close();
  }
