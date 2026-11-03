@@ -40,7 +40,7 @@ def normalize(page, html):
     html = re.sub(r'\s*<script data-site-menu>[\s\S]*?</script>', '', html)
     html = re.sub(r'<script src="/Thot/assets/navigation\.js[^\"]*" defer></script>', '', html)
     menu_script = (ROOT/'assets/navigation.js').read_text(encoding='utf-8')
-    html = re.sub(r'\\s*<script data-quiz-startup>[\\s\\S]*?</script>', '', html)
+    html = re.sub(r'\s*<script data-quiz-startup>[\s\S]*?</script>', '', html)
     startup = ''
     if page == 'quiz.html':
         startup = '<script data-quiz-startup>'+(ROOT/'assets/quiz-startup.js').read_text(encoding='utf-8')+'</script>'
