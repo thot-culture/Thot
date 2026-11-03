@@ -20,6 +20,11 @@ def amended_reference(html,path):
   old,new=strip_source_types(item['old']),strip_source_types(item['new'])
   assert text.count(old)==1, f"Ancien fragment absent ou ambigu : {path} / {old[:60]}"
   text=text.replace(old,new,1)
+ repairs=json.loads((ROOT/'docs/audit-final/liens-repares.json').read_text(encoding='utf-8'))
+ for item in repairs:
+  if item['path']!=str(path):continue
+  assert text.count(item['old'])+text.count(item['new'])==1, f"Lien absent ou ambigu : {path}"
+  text=text.replace(item['old'],item['new'])
  return text
 
 def amended_quiz_bank(text, path):

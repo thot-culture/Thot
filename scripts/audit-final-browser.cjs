@@ -91,6 +91,55 @@ async function activities(p,name){
   }
   done.push('tous les états des trois modules, trois notices documentaires au clavier');
  }
+
+ if(name==='explorer/atlas/rome-expansion.html'){
+  for(const person of ['hannibal','caesar','augustus','trajan']){
+   const trigger=p.locator('[data-atlas-person='+person+']');
+   await trigger.click();assert(await p.locator('#atlas-modal').isVisible());await p.keyboard.press('Escape');
+   assert(await trigger.evaluate(e=>e===document.activeElement));
+   await trigger.click();await p.getByRole('button',{name:'Suivre le parcours sur la carte'}).click();
+   assert.equal(await p.evaluate(()=>document.activeElement.id),'atlas-journey-title');
+   let steps=0;while(!await p.locator('#atlas-journey-next').isDisabled()){
+    assert(steps++<6);await p.locator('#atlas-journey-next').click();
+   }
+   await p.locator('#atlas-journey-close').click();
+  }
+  for(const trigger of await p.locator('[data-atlas-document]').all()){
+   await trigger.click();assert(await p.locator('#atlas-modal').isVisible());
+   const range=p.locator('#atlas-modal input[type=range]');
+   if(await range.count()){await range.focus();await p.keyboard.press('End');assert.equal(await range.inputValue(),'300')}
+   await p.keyboard.press('Escape');assert(await trigger.evaluate(e=>e===document.activeElement));
+  }
+  done.push('quatre personnages, quatre parcours complets, quatre documents, agrandissement, dialogues Échap et focus');
+ }
+ if(name==='explorer/enquetes/mer-aral.html'){
+  await p.locator('#aral-start').click();
+  for(let n=1;n<=11;n++){
+   if(n>1)await p.locator('#aral-more-documents').click();
+   const id='d'+String(n).padStart(2,'0'),trigger=p.locator('[data-open-doc='+id+']');
+   await trigger.click();assert(await p.locator('#aral-document').isVisible());
+   await p.keyboard.press('Escape');assert(await trigger.evaluate(e=>e===document.activeElement));
+   await trigger.click();await p.locator('#aral-doc-add').click();
+  }
+  await p.locator('[data-board-mode=map]').click();await p.locator('#aral-arrange').click();
+  await p.locator('[data-board-mode=list]').click();await p.locator('[data-select-card=d09]').click();
+  await p.locator('#aral-connect-selected').click();await p.locator('#aral-link-to').selectOption('d06');
+  await p.locator('#aral-link-note').fill('Une conséquence ne suffit pas à établir la cause.');await p.locator('#aral-link-save').click();
+  assert.equal(await p.evaluate(()=>THOT_ARAL.getState().links.length),1);
+  await p.locator('#aral-prepare-conclusion').click();
+  for(const [id,role] of [['d04','support'],['d06','support'],['d08','insufficient'],['d10','counter']]){
+   await p.locator('[data-proof-role='+id+']').selectOption(role);
+  }
+  await p.locator('[name=aral-hypothesis][value=irrigation]').check();
+  await p.locator('#aral-conclusion').fill('Les prélèvements diminuent les apports ; le climat peut aggraver certains épisodes. Le Nord diffère du Sud.');
+  await p.locator('#aral-submit').click();assert(await p.locator('#aral-feedback').isVisible());
+  await p.locator('#aral-revise').click();assert.equal(await p.evaluate(()=>document.activeElement.id),'aral-conclusion');
+  await p.locator('#aral-reset').click();await p.keyboard.press('Escape');
+  await p.locator('#aral-reset').click();await p.locator('#aral-reset-confirm').click();
+  assert.deepEqual(await p.evaluate(()=>THOT_ARAL.getState().cards),{});
+  done.push('onze pièces, dialogues Échap et focus, tableau/carte, relation, argument et bilan, révision, remise à zéro');
+ }
+
  for(const term of await p.locator('.thot-terme').all()){
   await term.focus();await p.keyboard.press('Enter');assert.equal(await term.getAttribute('aria-expanded'),'true');
   await p.keyboard.press('Escape');assert.equal(await term.getAttribute('aria-expanded'),'false');
@@ -186,21 +235,36 @@ try{
 
  // Retarder les JS externes reproduit la cause du CLS : le menu doit déjà
  // fonctionner lorsque le main apparaît, avant les contrôleurs des activités.
- for(const name of ['index.html','quiz.html','articles/pieuvres-couleur.html','explorer/enquetes/mer-aral.html']){
+ for(const name of ['index.html','quiz.html','articles/pieuvres-couleur.html','explorer/enquetes/mer-aral.html','explorer/atlas/rome-expansion.html']){
   const slow=await browser.newContext({viewport:{width:390,height:900}});
   await slow.route('**/*.js*',async route=>{await sleep(1200);await route.continue()});
   const q=await slow.newPage();await q.goto(base+name,{waitUntil:'commit'});await q.locator('main').waitFor({state:'attached'});
   assert(await q.locator('header').getAttribute('data-menu-ready')!==null,'Menu initialisé trop tard '+name);
   assert(await q.locator('#primary-navigation').isHidden());
   const top=await q.locator('main').evaluate(e=>e.getBoundingClientRect().top);
+  const mapTop=name.includes('rome-expansion')?await q.locator('.atlas-map-shell').evaluate(e=>e.getBoundingClientRect().top):null;
   await q.waitForLoadState('domcontentloaded');
   const after=await q.locator('main').evaluate(e=>e.getBoundingClientRect().top);
   const trace={name,before:top,after,header:await q.locator('header').first().evaluate(e=>e.getBoundingClientRect().height),scrollY:await q.evaluate(()=>scrollY)};
   report.slowLoading=(report.slowLoading||[]).concat(trace);
   assert(Math.abs(after-top)<=1,'Le main se déplace au chargement des scripts '+JSON.stringify(trace));
+  if(mapTop!==null)assert(Math.abs((await q.locator('.atlas-map-shell').evaluate(e=>e.getBoundingClientRect().top))-mapTop)<=1,'La carte se déplace au chargement des commandes');
   await slow.close();
  }
- report.interactions.push('PASS menu prêt avant le main et position stable avec JS externes retardés de 1,2 seconde, quatre gabarits');
+ report.interactions.push('PASS menu prêt avant le main et position stable avec JS externes retardés de 1,2 seconde, cinq gabarits');
+
+
+ const broken=await browser.newContext({viewport:{width:390,height:900}});
+ await broken.route('**/questions-expert.js',r=>r.abort());
+ const failure=await broken.newPage(),expectedErrors=[];
+ failure.on('pageerror',e=>expectedErrors.push(e.message));
+ await failure.goto(base+'quiz.html',{waitUntil:'domcontentloaded'});
+ assert(await failure.locator('#quiz-load-status').isVisible());
+ assert((await failure.locator('#quiz-load-message').innerText()).includes('pas pu être chargées'));
+ assert(await failure.locator('#start-button').isDisabled());
+ assert(expectedErrors.every(e=>e.includes('Chargement incomplet')));
+ await broken.close();
+ report.interactions.push('PASS banque volontairement indisponible : notice réelle visible et démarrage désactivé');
 
  const nojs=await browser.newContext({javaScriptEnabled:false,viewport:{width:320,height:900}});
  for(const name of pages){

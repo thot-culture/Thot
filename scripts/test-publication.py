@@ -99,6 +99,14 @@ class PublicationTests(unittest.TestCase):
         self.assertNotEqual(conservation.protected(before), conservation.protected(before.replace("Un fait", "Un autre fait")))
         self.assertNotEqual(conservation.protected(before), conservation.protected(before.replace("<p>", '<p id="nouveau">')))
 
+    def test_only_documented_link_repair_is_accepted(self):
+        repair = json.loads((HERE.parent / "docs/audit-final/liens-repares.json").read_text(encoding="utf-8"))[0]
+        before = '<main><a href="' + repair["old"] + '">Source</a></main>'
+        after = before.replace(repair["old"], repair["new"])
+        self.assertEqual(conservation.protected(before, repair["path"]), conservation.protected(after, repair["path"]))
+        with self.assertRaises(ValueError):
+            conservation.protected(before.replace(repair["old"], "https://example.org/"), repair["path"])
+
 
 if __name__ == "__main__":
     unittest.main()

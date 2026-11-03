@@ -87,3 +87,36 @@ jobs:
             ${{ runner.temp }}/evidence
             ${{ runner.temp }}/generated.patch
           retention-days: 30
+
+  windows-browser:
+    runs-on: windows-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Dépendances navigateur Windows
+        run: |
+          npm install --prefix "$env:RUNNER_TEMP/thot-audit" playwright@1.62.0
+          & "$env:RUNNER_TEMP/thot-audit/node_modules/.bin/playwright.cmd" install chromium
+      - name: Recette HTTP native Windows
+        env:
+          NODE_PATH: ${{ runner.temp }}/thot-audit/node_modules
+          THOT_OUTPUT_DIR: ${{ runner.temp }}/evidence-windows
+        run: python scripts/run-browser-recipe.py
+      - name: Résumé Windows
+        if: always()
+        run: |
+          if (Test-Path "$env:RUNNER_TEMP/evidence-windows/recette-site.json") {
+            Get-Content "$env:RUNNER_TEMP/evidence-windows/recette-site.json"
+          }
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: audit-final-windows
+          path: ${{ runner.temp }}/evidence-windows
+          retention-days: 30

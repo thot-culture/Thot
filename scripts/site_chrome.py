@@ -40,7 +40,11 @@ def normalize(page, html):
     html = re.sub(r'\s*<script data-site-menu>[\s\S]*?</script>', '', html)
     html = re.sub(r'<script src="/Thot/assets/navigation\.js[^\"]*" defer></script>', '', html)
     menu_script = (ROOT/'assets/navigation.js').read_text(encoding='utf-8')
-    html = html.replace('</header>', '</header><script data-site-menu>'+menu_script+'</script>', 1)
+    html = re.sub(r'\\s*<script data-quiz-startup>[\\s\\S]*?</script>', '', html)
+    startup = ''
+    if page == 'quiz.html':
+        startup = '<script data-quiz-startup>'+(ROOT/'assets/quiz-startup.js').read_text(encoding='utf-8')+'</script>'
+    html = html.replace('</header>', '</header><script data-site-menu>'+menu_script+'</script>'+startup, 1)
     if not re.search(r'<link\b[^>]*rel="(?:shortcut )?icon"', html):
         html = html.replace('</head>', '<link rel="icon" type="image/svg+xml" href="/Thot/assets/favicon.svg"></head>')
     utility = '<nav data-site-utility aria-label="Informations du site">'+links([('contact.html','Contact et corrections'),('mentions-legales.html','Informations légales'),('confidentialite.html','Confidentialité')])+'</nav>'
