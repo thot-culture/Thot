@@ -183,6 +183,22 @@ try{
   report.interactions.push('PASS '+start+' : partie réelle complète, '+count+' réponses et score correct, sauvegarde native');
  }
  await c.close();
+
+ // Retarder les JS externes reproduit la cause du CLS : le menu doit déjà
+ // fonctionner lorsque le main apparaît, avant les contrôleurs des activités.
+ for(const name of ['index.html','quiz.html','articles/pieuvres-couleur.html','explorer/enquetes/mer-aral.html']){
+  const slow=await browser.newContext({viewport:{width:390,height:900}});
+  await slow.route('**/*.js*',async route=>{await sleep(1200);await route.continue()});
+  const q=await slow.newPage();await q.goto(base+name,{waitUntil:'commit'});await q.locator('main').waitFor({state:'attached'});
+  assert(await q.locator('header').getAttribute('data-menu-ready')!==null,'Menu initialisé trop tard '+name);
+  assert(await q.locator('#primary-navigation').isHidden());
+  const top=await q.locator('main').evaluate(e=>e.getBoundingClientRect().top);
+  await q.waitForLoadState('domcontentloaded');
+  assert(Math.abs((await q.locator('main').evaluate(e=>e.getBoundingClientRect().top))-top)<=1,'Le main se déplace au chargement des scripts '+name);
+  await slow.close();
+ }
+ report.interactions.push('PASS menu prêt avant le main et position stable avec JS externes retardés de 1,2 seconde, quatre gabarits');
+
  const nojs=await browser.newContext({javaScriptEnabled:false,viewport:{width:320,height:900}});
  for(const name of pages){
   const q=await nojs.newPage();await q.goto(base+name,{waitUntil:'domcontentloaded'});
