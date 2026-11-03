@@ -1,0 +1,82 @@
+name: Audit final — navigateur et mesures
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Dépendances de test
+        run: |
+          python -m pip install -r requirements-browser.txt
+          npm install --prefix "$RUNNER_TEMP/thot-audit" playwright@1.62.0 axe-core@4.10.3 lighthouse@12.8.2
+          "$RUNNER_TEMP/thot-audit/node_modules/.bin/playwright" install --with-deps chromium
+      - name: Captures de référence PR #22
+        env:
+          THOT_OUTPUT_DIR: ${{ runner.temp }}/evidence/before
+        run: python scripts/audit-final-before.py
+      - name: Sorties attendues des générateurs (artefact, sans commit ni déploiement)
+        run: |
+          python scripts/update-article-editorial.py --write
+          python scripts/sync-publication.py --write
+          python scripts/update-reading-times.py
+          python scripts/site_chrome.py
+          git diff --output="$RUNNER_TEMP/generated.patch"
+          python -c 'import subprocess,json; names=subprocess.check_output(["git","diff","--name-only"],text=True).splitlines(); print("GENERATED_FILES_JSON "+json.dumps({p:open(p,encoding="utf-8").read() for p in names},ensure_ascii=True))'
+      - name: Générateurs et contrôles actuels
+        run: |
+          python scripts/sync-publication.py --check
+          python scripts/test-publication.py
+          python scripts/check-conservation.py --revision c7b62ad61c5ddabc63c61560175a55c85ec80200
+          python scripts/test-portabilite.py
+          node scripts/check-site.mjs
+          node scripts/check-home.mjs
+          python scripts/test-article-editorial.py
+          python scripts/build-explorer-reconstruction.py --check
+          python scripts/site_chrome.py --check
+          node --input-type=module -e 'import {readdirSync} from "node:fs"; import {execFileSync} from "node:child_process"; for(const n of readdirSync("scripts").filter(n=>/^test-.*\.mjs$/.test(n)))execFileSync(process.execPath,["scripts/"+n],{stdio:"inherit"})'
+      - name: Affichage, clavier, WCAG et parties complètes
+        env:
+          NODE_PATH: ${{ runner.temp }}/thot-audit/node_modules
+          THOT_OUTPUT_DIR: ${{ runner.temp }}/evidence/after
+        run: node scripts/audit-final-browser.cjs
+      - name: Navigation Atlas, onze pièces Aral et stockage persistant
+        env:
+          NODE_PATH: ${{ runner.temp }}/thot-audit/node_modules
+          THOT_OUTPUT_DIR: ${{ runner.temp }}/evidence/functional
+        run: |
+          python scripts/preview.py > "$RUNNER_TEMP/preview.log" 2>&1 &
+          node scripts/test-site-browser.cjs
+      - name: Performance mobile de laboratoire
+        env:
+          NODE_PATH: ${{ runner.temp }}/thot-audit/node_modules
+          THOT_OUTPUT_DIR: ${{ runner.temp }}/evidence/performance
+        run: node scripts/audit-final-performance.cjs
+      - name: Résumé des résultats et planches de contrôle
+        if: always()
+        env:
+          THOT_EVIDENCE: ${{ runner.temp }}/evidence
+        run: python scripts/audit-final-summary.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: audit-final-preuves
+          path: |
+            ${{ runner.temp }}/evidence
+            ${{ runner.temp }}/generated.patch
+          retention-days: 30

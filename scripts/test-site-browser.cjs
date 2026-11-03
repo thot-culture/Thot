@@ -1,18 +1,18 @@
 /* Recette HTTP réelle : navigation, responsive, clavier, Atlas et stockage Aral. */
 const fs=require('fs'),path=require('path'),assert=require('assert/strict');
 const {chromium}=require(process.env.THOT_PLAYWRIGHT||'playwright');
-const root=path.resolve(__dirname,'..'),out=process.env.THOT_OUTPUT_DIR||path.resolve(root,'../../outputs/verification');
+const root=path.resolve(__dirname,'..'),out=process.env.THOT_OUTPUT_DIR||path.resolve(root,'work/verification');
 fs.mkdirSync(out,{recursive:true});
 const base=process.env.THOT_BASE_URL||'http://127.0.0.1:8765/Thot/';
 const executablePath=process.env.THOT_BROWSER_EXECUTABLE;
 const pages=['index.html','bibliotheque.html','explorer.html','notre-methode.html','quiz.html','quiz-autrices.html','mentions-legales.html','confidentialite.html','contact.html',...fs.readdirSync(path.join(root,'articles')).filter(x=>x.endsWith('.html')).map(x=>'articles/'+x),'explorer/atlas/rome-expansion.html','explorer/enquetes/mer-aral.html','404.html'];
-const report=process.argv.includes('--storage-only')?JSON.parse(fs.readFileSync(path.join(out,'recette-site.json'),'utf8')):{base,date:'2026-10-27',pages:[],errors:[],limits:['Affichage et tactile simulés dans Chrome Windows ; aucun téléphone physique, Safari, Firefox ou lecteur d’écran réel.']};
+const report=process.argv.includes('--storage-only')?JSON.parse(fs.readFileSync(path.join(out,'recette-site.json'),'utf8')):{base,date:'2026-10-27',pages:[],errors:[],limits:['Affichage et tactile simulés dans Chromium ; OS indiqué par les journaux de CI ; aucun téléphone physique, Safari, Firefox ou lecteur d’écran réel.']};
 const url=p=>new URL(p,base).href;
-(async()=>{let browser;
+(async()=>{let browser,ctx,profile;
 try{
  if(!process.argv.includes('--storage-only')){
  browser=await chromium.launch({headless:true,...(executablePath?{executablePath}:{})});report.browser=browser.version();
- for(const width of [320,390,768,1440]){
+ for(const width of [320,390,768,1024,1440]){
   const context=await browser.newContext({viewport:{width,height:900},hasTouch:width<768,reducedMotion:'reduce'}),p=await context.newPage();
   for(const name of pages){
    const errors=[];p.removeAllListeners('pageerror');p.on('pageerror',e=>errors.push(e.message));
@@ -57,8 +57,8 @@ try{
  }
  report.errors=[];
  // Sauvegarde native, fermeture et réouverture de processus avec profil isolé.
- const profile=path.resolve(root,'../../work/test-profile-'+Date.now());
- let ctx=await chromium.launchPersistentContext(profile,{headless:true,viewport:{width:390,height:900},...(executablePath?{executablePath}:{})});let q=ctx.pages()[0];
+ profile=fs.mkdtempSync(path.join(require('node:os').tmpdir(),'thot-profile-'));
+ ctx=await chromium.launchPersistentContext(profile,{headless:true,viewport:{width:390,height:900},...(executablePath?{executablePath}:{})});let q=ctx.pages()[0];
  await q.goto(url('quiz.html'));await q.locator('#start-button').click();for(let i=0;i<5;i++){await q.locator('#answer-list button').first().click();if(await q.locator('#validate-button').isVisible())await q.locator('#validate-button').click();await q.locator('#next-button').click()}
  assert(await q.locator('#screen-result').isVisible());const quiz=await q.evaluate(()=>localStorage.getItem('thot_v2_stats'));assert(quiz);
  await q.goto(url('explorer/enquetes/mer-aral.html'));await q.waitForFunction(()=>!!window.THOT_ARAL);await q.locator('#aral-start').click();
@@ -74,6 +74,6 @@ try{
  report.storage={native:true,reload:'PASS',browserRestart:'PASS',aralReset:'PASS',quizPreserved:'PASS',documents:11};await ctx.close();
  // Sans JS : les liens de menu restent accessibles.
  browser=await chromium.launch({headless:true,...(executablePath?{executablePath}:{})});const nojs=await browser.newContext({javaScriptEnabled:false,viewport:{width:320,height:900}});const n=await nojs.newPage();for(const name of ['index.html','articles/autorite.html','explorer.html','contact.html']){await n.goto(url(name));assert(await n.locator('[data-site-navigation]').isVisible(),name);assert(await n.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),name)}report.noJavascript='PASS at 320 px';await nojs.close();
-}catch(e){report.errors.push(e.stack);process.exitCode=1;console.error(e.stack)}finally{if(browser)await browser.close();fs.writeFileSync(path.join(out,'recette-site.json'),JSON.stringify(report,null,2));console.log('Rapport',path.join(out,'recette-site.json'))}
+}catch(e){report.errors.push(e.stack);process.exitCode=1;console.error(e.stack)}finally{if(ctx)await ctx.close();if(profile)fs.rmSync(profile,{recursive:true,force:true});if(browser)await browser.close();fs.writeFileSync(path.join(out,'recette-site.json'),JSON.stringify(report,null,2));console.log('Rapport',path.join(out,'recette-site.json'))}
 })();
 

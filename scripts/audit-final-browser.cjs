@@ -1,0 +1,110 @@
+/* Audit HTTP reproductible, cinq largeurs, WCAG AA et preuves visuelles.
+   Dépendances de test seulement : playwright et axe-core, installées par la CI. */
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const {spawn}=require('node:child_process');
+const {chromium}=require(process.env.THOT_PLAYWRIGHT||'playwright');
+const root=path.resolve(process.env.THOT_AUDIT_ROOT||path.join(__dirname,'..'));
+const out=path.resolve(process.env.THOT_OUTPUT_DIR||path.join(root,'work/audit-final'));
+const axePath=process.env.THOT_AXE_PATH||require.resolve('axe-core/axe.min.js');
+const base='http://127.0.0.1:8865/Thot/';
+const pages=['index.html','bibliotheque.html','explorer.html','notre-methode.html','quiz.html','quiz-autrices.html',
+'mentions-legales.html','confidentialite.html','contact.html','404.html',
+...fs.readdirSync(path.join(root,'articles')).filter(n=>n.endsWith('.html')).map(n=>'articles/'+n),
+'explorer/atlas/rome-expansion.html','explorer/enquetes/mer-aral.html'];
+fs.mkdirSync(out,{recursive:true});
+const report={pages:[],interactions:[],limitations:['Linux Chromium, tactile et mobile simulés ; aucun téléphone ou lecteur d’écran réel.',
+'Les erreurs de serveurs externes sont consignées séparément et ne prouvent pas une erreur du code local.']};
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const server=spawn(process.env.PYTHON||'python',['scripts/preview.py','--port','8865'],{cwd:root,stdio:'ignore'});
+let browser;
+(async()=>{
+try{
+ for(let n=0;;n++){try{const r=await fetch(base);assert.equal(r.status,200);break}catch(e){if(n>100)throw e;await sleep(100)}}
+ browser=await chromium.launch({headless:true,...(process.env.THOT_BROWSER_EXECUTABLE?{executablePath:process.env.THOT_BROWSER_EXECUTABLE}:{})});
+ report.browser=browser.version();report.platform=process.platform;
+ for(const width of [320,390,768,1024,1440]){
+  for(const name of pages){
+   const context=await browser.newContext({viewport:{width,height:900},hasTouch:width<768,reducedMotion:'reduce'});
+   const p=await context.newPage();p.setDefaultTimeout(12000);
+   const item={name,width,errors:[],localHttpErrors:[],externalHttpErrors:[],requestFailures:[]};
+   p.on('pageerror',e=>item.errors.push(e.message));
+   p.on('response',r=>{if(r.status()>=400)(r.url().startsWith(base)?item.localHttpErrors:item.externalHttpErrors).push({url:r.url(),status:r.status()})});
+   p.on('requestfailed',r=>item.requestFailures.push({url:r.url(),error:r.failure()}));
+   try{
+    const r=await p.goto(base+name,{waitUntil:'domcontentloaded'});assert.equal(r.status(),200);
+    await p.evaluate(()=>{document.querySelectorAll('img').forEach(i=>i.loading='eager')});
+    await p.evaluate(()=>Promise.race([Promise.allSettled([...document.images].map(i=>i.decode())),new Promise(r=>setTimeout(r,5000))]));
+    item.overflow=await p.evaluate(()=>document.documentElement.scrollWidth-innerWidth);
+    assert(item.overflow<=1,'Débordement horizontal '+name+' '+width);
+    item.brokenImages=await p.locator('img').evaluateAll(es=>es.filter(i=>i.complete&&i.naturalWidth===0).map(i=>i.src));
+    const nav=p.locator('#primary-navigation'),menu=p.locator('#mobile-menu-button');
+    if(width<711){
+     await menu.focus();await p.keyboard.press('Enter');assert.equal(await menu.getAttribute('aria-expanded'),'true');
+     assert(await nav.isVisible());await nav.locator('a').last().focus();await p.keyboard.press('Escape');
+     assert.equal(await menu.getAttribute('aria-expanded'),'false');assert.equal(await p.evaluate(()=>document.activeElement.id),'mobile-menu-button');
+     await menu.tap();assert(await nav.isVisible());await menu.tap();
+     item.menu='PASS clavier, Échap, focus et toucher simulé';
+    }else{assert(await nav.isVisible());item.menu='PASS navigation visible'}
+    await p.addScriptTag({path:axePath});
+    item.axe=await p.evaluate(async()=>{const r=await axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});
+     return {violations:r.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.map(n=>({target:n.target,summary:n.failureSummary}))})),
+      incomplete:r.incomplete.map(v=>({id:v.id,nodes:v.nodes.length})),passes:r.passes.length}});
+    if([390,1440].includes(width)){
+     const id=name.replaceAll('/','-')+'-'+width;
+     await p.evaluate(()=>scrollTo(0,0));await p.screenshot({path:path.join(out,id+'-top.png')});
+     await p.evaluate(()=>scrollTo(0,document.documentElement.scrollHeight/2));await p.screenshot({path:path.join(out,id+'-middle.png')});
+     await p.evaluate(()=>scrollTo(0,document.documentElement.scrollHeight));await p.screenshot({path:path.join(out,id+'-footer.png')});
+     if(name==='articles/roubaix-1917.html')await p.locator('.thot-document-overline').screenshot({path:path.join(out,'roubaix-contrast-'+width+'.png')});
+     if(name==='index.html')await p.locator('.latest-story').screenshot({path:path.join(out,'home-feature-'+width+'.png')});
+    }
+    assert.deepEqual(item.errors,[]);assert.deepEqual(item.localHttpErrors,[]);
+    assert.deepEqual(item.axe.violations,[],'Violations axe '+name+' '+width);
+    item.result='PASS';
+   }catch(e){item.result='FAIL';item.error=e.stack}
+   report.pages.push(item);console.log('AUDIT',width,name,item.result,'axe',item.axe?.violations.length);
+   fs.writeFileSync(path.join(out,'audit-browser.json'),JSON.stringify(report,null,2));await context.close();
+  }
+ }
+ // Recherche, filtres, URL et navigation réelle ; aucune injection de résultat.
+ const c=await browser.newContext({viewport:{width:390,height:900},hasTouch:true});const p=await c.newPage();
+ p.on('pageerror',e=>{throw e});
+ await p.goto(base);await p.locator('#home-article-search').fill('Roubaix');await p.locator('.home-search button').click();
+ assert(p.url().includes('/Thot/bibliotheque.html?q=Roubaix'));
+ assert.equal(await p.locator('.article-card:visible').count(),1);
+ await p.locator('#clear-search').click();assert.equal(await p.locator('.article-card:visible').count(),fs.readdirSync(path.join(root,'articles')).filter(n=>n.endsWith('.html')).length);
+ await p.locator('[data-filter=arts]').click();assert.equal(await p.locator('.article-card:visible').count(),1);
+ await p.locator('#article-search').fill('inexistant-zzzz');assert.equal(await p.locator('.article-card:visible').count(),0);
+ await p.locator('#reset-filters').click();assert.equal(await p.locator('#article-search').inputValue(),'');
+ await p.locator('#article-search').fill('CHARLOTTE BRONTE');assert.equal(await p.locator('.article-card:visible').count(),1);
+ report.interactions.push('PASS recherche accueil, URL /Thot/, accents, filtres combinés, vide et réinitialisation');
+ for(const start of ['#start-button','#daily-start-button']){
+  await p.goto(base+'quiz.html');await p.locator(start).click();
+  let count=0;
+  while(await p.locator('#screen-result').isHidden()){
+   assert(count++<30);
+   const expected=await p.evaluate(()=>correctIndexes(round[index]));
+   for(const i of expected)await p.locator('#answer-list button[data-idx="'+i+'"]').click();
+   if(await p.locator('#validate-button').isVisible())await p.locator('#validate-button').click();
+   assert(await p.locator('#feedback').isVisible());await p.locator('#next-button').click();
+  }
+  assert.equal(await p.evaluate(()=>score),count);assert(await p.evaluate(()=>!!localStorage.getItem('thot_v2_stats')));
+  report.interactions.push('PASS '+start+' : partie réelle complète, '+count+' réponses et score correct, sauvegarde native');
+ }
+ await c.close();
+ const nojs=await browser.newContext({javaScriptEnabled:false,viewport:{width:320,height:900}});
+ for(const name of pages){
+  const q=await nojs.newPage();await q.goto(base+name,{waitUntil:'domcontentloaded'});
+  assert(await q.locator('#primary-navigation').isVisible());
+  assert(await q.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await q.close();
+ }
+ await nojs.close();report.interactions.push('PASS navigation et reflow sans JavaScript, 18 pages à 320 px');
+ const unknown=await fetch(base+'page-inconnue-audit.html');assert.equal(unknown.status,404);
+ report.interactions.push('PASS HTTP 404 pour URL inconnue');
+ if(report.pages.some(p=>p.result==='FAIL'))process.exitCode=1;
+}catch(e){report.error=e.stack;process.exitCode=1;console.error(e.stack)}
+finally{
+ if(browser)await browser.close();server.kill();
+ fs.writeFileSync(path.join(out,'audit-browser.json'),JSON.stringify(report,null,2));
+ console.log('AUDIT_SUMMARY',JSON.stringify({browser:report.browser,pages:report.pages.length,failed:report.pages.filter(p=>p.result==='FAIL').map(p=>({name:p.name,width:p.width,error:p.error})),interactions:report.interactions,error:report.error}));
+}
+})();
