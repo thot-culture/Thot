@@ -28,6 +28,8 @@ python scripts/test-portabilite.py
 
 Les pages Explorer sont générées : modifier leurs sources dans `scripts/` et `assets/explorer-v2/`, puis les reconstruire. Les menus et liens d’information sont statiques, y compris sans JavaScript ; `site_chrome.py` les harmonise après toute génération de page.
 
+L’identité commune (marque, navigation, pieds de page, cartes et actions éditoriales) est définie dans `assets/visual-system.css`, chargée en dernier sur les 18 pages. Après une modification, lancer `python scripts/site_chrome.py` pour actualiser l’empreinte de la feuille de style. Les styles propres aux cartes géographiques et aux états des jeux restent dans leurs modules. Voir [le bilan de cohérence visuelle](docs/HARMONISATION-VISUELLE-20261103.md).
+
 Les scripts `test-*.mjs` et `test-*.py` couvrent les activités, les corpus et les navigateurs. Les recettes historiques fixent parfois l’intégrité à un ancien commit : distinguer ces contrôles de conservation des tests de fonctionnement. Les tests navigateur nécessitent les dépendances de `requirements-browser.txt` et les navigateurs Playwright.
 
 ## Publication et sauvegarde
