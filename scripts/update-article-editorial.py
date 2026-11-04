@@ -273,7 +273,7 @@ def main():
             planned.append((path, after))
     if args.write:
         for path, after in planned:
-            path.write_text(after, encoding="utf-8")
+            path.write_text(after, encoding="utf-8", newline="\n")
         print(f"PASS : {len(planned)} article(s) généré(s), aucune date calculée automatiquement.")
         return 0
     if planned:

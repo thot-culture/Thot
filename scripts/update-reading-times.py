@@ -45,6 +45,6 @@ if __name__=='__main__':
  for p,text in outputs().items():
   if args.check:
    if not p.exists() or p.read_text(encoding="utf-8")!=text:bad.append(str(p.relative_to(ROOT)))
-  else:p.write_text(text, encoding="utf-8")
+  else:p.write_text(text, encoding="utf-8", newline="\n")
  if bad:sys.exit('Durées à régénérer : '+', '.join(bad))
  print('PASS : durées communes et rendus statiques cohérents' if args.check else 'Durées générées, contenu scientifique inchangé.')
