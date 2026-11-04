@@ -92,7 +92,7 @@ Ces commandes réutilisent les outils existants : pas de CMS ni de second regist
 
 Les six notices existantes ont été complétées avec leurs métadonnées réelles, sans changer leurs titres ou leurs dates. Pour un nouvel article copié d'un modèle, retirer le JSON-LD de l'ancien sujet avant génération. Les cartes déjà présentes ne sont pas réécrites automatiquement : lors d'une révision de leur titre/image/crédit, contrôler aussi leur cohérence dans la bibliothèque. L'accueil reste une sélection éditoriale facultative.
 
-Les automatismes complets supposent l'intégration des propositions : #22 puis #23, puis la PR SEO selon leurs dépendances. Au 4 novembre, la production reste sur `main` antérieur à ces PR. Cette mission ne les fusionne pas et ne publie rien.
+Les automatismes complets supposent l'intégration dans l'ordre suivant : **#24 dans la branche de #23, puis #23 dans celle de #22, puis #22 dans `main`**, avec contrôle des nouveaux SHA entre chaque étape. Au 4 novembre, la production reste sur `main` antérieur à ces PR. Le [bilan de stabilisation](BILAN-STABILISATION-THOT.md) précise les validations, réserves et opérations soumises à autorisation ; cette préparation ne fusionne ni ne publie rien.
 
 ## 6. Tableau de suivi sans statistiques inventées
 

@@ -1,0 +1,767 @@
+{
+  "base": "http://127.0.0.1:8765/Thot/",
+  "date": "2026-11-04",
+  "pages": [
+    {
+      "name": "index.html",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "bibliotheque.html",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "explorer.html",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "notre-methode.html",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "quiz.html",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "quiz-autrices.html",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "mentions-legales.html",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "confidentialite.html",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "contact.html",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/autorite.html",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/autrices-pseudonymes.html",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/evolution-strategies-militaires.html",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/pieuvres-couleur.html",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/puissance-etats-unis.html",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/roubaix-1917.html",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "explorer/atlas/rome-expansion.html",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "explorer/enquetes/mer-aral.html",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "404.html",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "index.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "bibliotheque.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "explorer.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "notre-methode.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "quiz.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "quiz-autrices.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "mentions-legales.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "confidentialite.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "contact.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/autorite.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/autrices-pseudonymes.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/evolution-strategies-militaires.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/pieuvres-couleur.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/puissance-etats-unis.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/roubaix-1917.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "explorer/atlas/rome-expansion.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "explorer/enquetes/mer-aral.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "404.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "index.html",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "bibliotheque.html",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "explorer.html",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "notre-methode.html",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "quiz.html",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "quiz-autrices.html",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "mentions-legales.html",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "confidentialite.html",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "contact.html",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/autorite.html",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/autrices-pseudonymes.html",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/evolution-strategies-militaires.html",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/pieuvres-couleur.html",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/puissance-etats-unis.html",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/roubaix-1917.html",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "explorer/atlas/rome-expansion.html",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "explorer/enquetes/mer-aral.html",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "404.html",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "index.html",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "bibliotheque.html",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "explorer.html",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "notre-methode.html",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "quiz.html",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "quiz-autrices.html",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "mentions-legales.html",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "confidentialite.html",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "contact.html",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/autorite.html",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/autrices-pseudonymes.html",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/evolution-strategies-militaires.html",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/pieuvres-couleur.html",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/puissance-etats-unis.html",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/roubaix-1917.html",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "explorer/atlas/rome-expansion.html",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "explorer/enquetes/mer-aral.html",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "404.html",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "index.html",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "bibliotheque.html",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "explorer.html",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "notre-methode.html",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "quiz.html",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "quiz-autrices.html",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "mentions-legales.html",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "confidentialite.html",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "contact.html",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/autorite.html",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/autrices-pseudonymes.html",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/evolution-strategies-militaires.html",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/pieuvres-couleur.html",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/puissance-etats-unis.html",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "articles/roubaix-1917.html",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "explorer/atlas/rome-expansion.html",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "explorer/enquetes/mer-aral.html",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    },
+    {
+      "name": "404.html",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "keyboard": "PASS",
+      "menu": "PASS"
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "Affichage et tactile simulés dans Chromium ; OS indiqué par les journaux de CI ; aucun téléphone physique, Safari, Firefox ou lecteur d’écran réel."
+  ],
+  "browser": "155.0.8059.79",
+  "atlasFrames320": {
+    "inputEvents": 100,
+    "mapRenders": 1
+  },
+  "atlasFrames390": {
+    "inputEvents": 100,
+    "mapRenders": 1
+  },
+  "atlasFrames768": {
+    "inputEvents": 100,
+    "mapRenders": 1
+  },
+  "atlasFrames1024": {
+    "inputEvents": 100,
+    "mapRenders": 1
+  },
+  "atlasFrames1440": {
+    "inputEvents": 100,
+    "mapRenders": 1
+  },
+  "internalHttp": {
+    "urls": 270,
+    "anchors": 157,
+    "result": "PASS"
+  },
+  "storage": {
+    "native": true,
+    "reload": "PASS",
+    "browserRestart": "PASS",
+    "aralReset": "PASS",
+    "quizPreserved": "PASS",
+    "documents": 11,
+    "relationIdsStable": "PASS",
+    "malformedIdsRepaired": "PASS"
+  },
+  "noJavascript": "PASS at 320 px"
+}

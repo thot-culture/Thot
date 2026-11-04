@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """Comparer les contenus principaux protégés à une révision Git explicite.
-Les interfaces communes restent hors du main ; seules les durées générées sont
-normalisées. Texte, liens, médias, activités et JSON-LD restent comparés.
+Les interfaces communes restent hors du main. Durées, unique lien réparé et
+six niveaux H4→H3 documentés sont normalisés ; le texte intégral reste comparé.
 """
 import portable_io
 import argparse
@@ -10,11 +10,14 @@ import json
 from pathlib import Path
 import re
 import subprocess
+import runpy
 
 ROOT = Path(__file__).resolve().parents[1]
+amended_structure = runpy.run_path(str(ROOT / 'scripts/editorial-amendments.py'))['amended_structure']
 
 
 def protected(html, path=None):
+    html = amended_structure(html, path)
     for repair in json.loads((ROOT / 'docs/audit-final/liens-repares.json').read_text(encoding='utf-8')):
         if repair['path'] != path:
             continue

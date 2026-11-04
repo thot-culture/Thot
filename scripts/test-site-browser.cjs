@@ -67,11 +67,22 @@ try{
  await q.locator('[data-select-card=d09]').click();await q.locator('#aral-connect-selected').click();await q.locator('#aral-link-to').selectOption('d06');await q.locator('#aral-link-note').fill('Un constat doit être interprété avec ses limites.');await q.locator('#aral-link-save').click();
  await q.locator('#aral-prepare-conclusion').click();await q.locator('[name=aral-hypothesis][value=irrigation]').check();await q.locator('#aral-conclusion').fill('Les prélèvements diminuent les apports, avec des situations différentes au Nord et au Sud.');await q.locator('#aral-submit').click();
  await q.waitForFunction(()=>JSON.parse(localStorage.getItem(THOT_ARAL.storageKey)||'{}').lastFeedback);const saved=await q.evaluate(()=>localStorage.getItem(THOT_ARAL.storageKey));
- await q.reload();await q.waitForFunction(()=>!!window.THOT_ARAL);assert.equal(await q.evaluate(()=>localStorage.getItem(THOT_ARAL.storageKey)),saved);
+ const beforeReload=await q.evaluate(()=>THOT_ARAL.getState());
+ await q.reload();await q.waitForFunction(()=>!!window.THOT_ARAL);
+ assert.deepEqual(await q.evaluate(()=>THOT_ARAL.getState()),beforeReload,'État complet stable après hydratation, identifiants des relations compris');
+ await q.waitForFunction(()=>JSON.stringify(THOT_ARAL.getState())===localStorage.getItem(THOT_ARAL.storageKey));
+ assert.equal(await q.evaluate(()=>localStorage.getItem(THOT_ARAL.storageKey)),saved);
  await ctx.close();ctx=await chromium.launchPersistentContext(profile,{headless:true,viewport:{width:390,height:900},...(executablePath?{executablePath}:{})});q=ctx.pages()[0];await q.goto(url('explorer/enquetes/mer-aral.html'));await q.waitForFunction(()=>!!window.THOT_ARAL);
  assert.equal(await q.evaluate(()=>localStorage.getItem(THOT_ARAL.storageKey)),saved);assert.equal(await q.evaluate(()=>localStorage.getItem('thot_v2_stats')),quiz);
  await q.locator('#aral-reset').click();await q.locator('#aral-reset-confirm').click();await q.reload();await q.waitForFunction(()=>!!window.THOT_ARAL);assert.equal(await q.evaluate(()=>localStorage.getItem(THOT_ARAL.storageKey)),null);assert.equal(await q.evaluate(()=>localStorage.getItem('thot_v2_stats')),quiz);
- report.storage={native:true,reload:'PASS',browserRestart:'PASS',aralReset:'PASS',quizPreserved:'PASS',documents:11};await ctx.close();
+ // Une sauvegarde malformée ne doit pas créer deux relations de même identifiant.
+ const malformed=JSON.parse(JSON.stringify(beforeReload));malformed.links.push({...malformed.links[0],note:'Relation dupliquée pour la recette'});malformed.links.push({...malformed.links[0],id:'<identifiant invalide>',note:'Identifiant invalide pour la recette'});
+ // Injecter au début du nouveau document : pagehide sauvegarde d'abord l'ancien état.
+ await q.addInitScript(({key,data})=>localStorage.setItem(key,JSON.stringify(data)),{key:await q.evaluate(()=>THOT_ARAL.storageKey),data:malformed});
+ await q.reload();await q.waitForFunction(()=>!!window.THOT_ARAL);
+ const repaired=await q.evaluate(()=>THOT_ARAL.getState());assert.equal(repaired.links.length,3);assert.equal(new Set(repaired.links.map(link=>link.id)).size,3);assert(repaired.links.every(link=>/^l[a-z0-9]+$/.test(link.id)));assert.equal(repaired.links[0].note,beforeReload.links[0].note);
+ await q.locator('#aral-reset').click();await q.locator('#aral-reset-confirm').click();assert.equal(await q.evaluate(()=>localStorage.getItem('thot_v2_stats')),quiz);
+ report.storage={native:true,reload:'PASS',browserRestart:'PASS',aralReset:'PASS',quizPreserved:'PASS',documents:11,relationIdsStable:'PASS',malformedIdsRepaired:'PASS'};await ctx.close();
  // Sans JS : les liens de menu restent accessibles.
  browser=await chromium.launch({headless:true,...(executablePath?{executablePath}:{})});const nojs=await browser.newContext({javaScriptEnabled:false,viewport:{width:320,height:900}});const n=await nojs.newPage();for(const name of ['index.html','articles/autorite.html','explorer.html','contact.html']){await n.goto(url(name));assert(await n.locator('[data-site-navigation]').isVisible(),name);assert(await n.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),name)}report.noJavascript='PASS at 320 px';await nojs.close();
 }catch(e){report.errors.push(e.stack);process.exitCode=1;console.error(e.stack)}finally{if(ctx)await ctx.close();if(profile)fs.rmSync(profile,{recursive:true,force:true});if(browser)await browser.close();fs.writeFileSync(path.join(out,'recette-site.json'),JSON.stringify(report,null,2));console.log('Rapport',path.join(out,'recette-site.json'))}

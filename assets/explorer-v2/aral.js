@@ -38,7 +38,14 @@
       const role = raw.roles && raw.roles[doc.id];
       if (point && Object.hasOwn(roleLabels, role)) value.roles[doc.id] = role;
     }
-    value.links = (Array.isArray(raw.links) ? raw.links : []).filter(item => item && item.from !== item.to && value.cards[item.from] && value.cards[item.to] && Object.hasOwn(kinds, item.kind)).slice(0, 60).map((item, index) => ({id: 'l' + index, from: item.from, to: item.to, kind: item.kind, note: short(item.note, 240), review:['unresolved','scoped','open'].includes(item.review)?item.review:'unresolved'}));
+    const linkIds = new Set();
+    value.links = (Array.isArray(raw.links) ? raw.links : []).filter(item => item && item.from !== item.to && value.cards[item.from] && value.cards[item.to] && Object.hasOwn(kinds, item.kind)).slice(0, 60).map((item, index) => {
+      // Conserver les identifiants valides pour une sauvegarde stable au rechargement.
+      let id = typeof item.id === 'string' && /^l[a-z0-9]{1,48}$/.test(item.id) ? item.id : 'l' + index;
+      for (let suffix = 0; linkIds.has(id); suffix++) id = 'l' + index + 'x' + suffix;
+      linkIds.add(id);
+      return {id, from: item.from, to: item.to, kind: item.kind, note: short(item.note, 240), review:['unresolved','scoped','open'].includes(item.review)?item.review:'unresolved'};
+    });
     const hypotheses = new Set([...(data.hypotheses || []).map(item => item.id), 'irrigation', 'climate', 'disappearance', 'uncertain', 'custom']);
     value.hypothesis = hypotheses.has(raw.hypothesis) ? raw.hypothesis : '';
     value.customHypothesis = short(raw.customHypothesis, 300);

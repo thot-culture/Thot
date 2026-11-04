@@ -38,6 +38,8 @@ Le [guide de publication des articles](GUIDE-PUBLICATION-ARTICLES.md) décrit le
 
 Préparation du référencement : [audit SEO](docs/AUDIT-SEO-THOT.md), [configuration de Google Search Console](docs/GOOGLE-SEARCH-CONSOLE.md), [stratégie éditoriale et suivi](docs/STRATEGIE-SEO-THOT.md). La propriété prévue est `https://thot-culture.github.io/Thot/` ; aucune connexion Google ni garantie d'indexation n'est implicite.
 
+Le [bilan de stabilisation](docs/BILAN-STABILISATION-THOT.md) décrit la version réunissant #22, #23 et #24, les tests des deux publications successives, les réserves et l'ordre des fusions à autoriser. Aucun déploiement n'est effectué par ces validations.
+
 ```sh
 python scripts/sync-publication.py --check
 python scripts/test-publication.py

@@ -12,7 +12,7 @@ let chrome;
  try{
   for(let n=0;;n++){try{if((await fetch('http://127.0.0.1:8867/Thot/')).status===200)break}catch(e){if(n>100)throw e}await new Promise(r=>setTimeout(r,100))}
   const {default:lighthouse}=await import(pathToFileURL(require.resolve('lighthouse')).href);
-  chrome=await chromeLauncher.launch({chromePath:chromium.executablePath(),chromeFlags:['--headless','--no-sandbox','--disable-dev-shm-usage']});
+  chrome=await chromeLauncher.launch({chromePath:process.env.THOT_BROWSER_EXECUTABLE||chromium.executablePath(),chromeFlags:['--headless','--no-sandbox','--disable-dev-shm-usage']});
   const summary=[];
   for(const page of ['index.html','articles/autorite.html','articles/pieuvres-couleur.html','explorer/atlas/rome-expansion.html','explorer/enquetes/mer-aral.html','quiz.html']){
    const r=await lighthouse('http://127.0.0.1:8867/Thot/'+page,{port:chrome.port,logLevel:'error',output:'json',onlyCategories:['performance','accessibility','best-practices','seo']});

@@ -1,0 +1,818 @@
+{
+  "checked_utc": "2026-11-04T11:46:28.617574+00:00",
+  "base_url": "https://thot-culture.github.io/Thot/",
+  "revisions": {
+    "main": "86ee7cbb27172262eca3648afe51cb7d2a81eab8",
+    "PR22": "c7b62ad61c5ddabc63c61560175a55c85ec80200",
+    "PR23": "2cae9b575b70f58c14c75ff1a9ca11cc213ca101"
+  },
+  "pages": [
+    {
+      "path": "404.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/404.html",
+      "sha256": "d5f6fc91eca4b8b21fa593f333b7dc2bbad5446ccd9094412129a8c366db0a34",
+      "exact_matches": [
+        "main"
+      ],
+      "canonical": [],
+      "robots": [
+        "noindex"
+      ],
+      "googlebot": null
+    },
+    {
+      "path": "articles/autorite.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/articles/autorite.html",
+      "sha256": "708ca21e00ca43504a217922d1f5250326435bed71620a9e0fc3e5ad46467b03",
+      "exact_matches": [
+        "main"
+      ],
+      "canonical": [
+        "https://thot-culture.github.io/Thot/articles/autorite.html"
+      ],
+      "robots": null,
+      "googlebot": null
+    },
+    {
+      "path": "articles/autrices-pseudonymes.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/articles/autrices-pseudonymes.html",
+      "sha256": "3fa8af3cf4a114d696b7c0ec26cf346b0d1b8025538e325575daac7865198951",
+      "exact_matches": [
+        "main"
+      ],
+      "canonical": [
+        "https://thot-culture.github.io/Thot/articles/autrices-pseudonymes.html"
+      ],
+      "robots": null,
+      "googlebot": null
+    },
+    {
+      "path": "articles/evolution-strategies-militaires.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/articles/evolution-strategies-militaires.html",
+      "sha256": "516793ac5648a446a18f497c2ba4498d07aa9d90f908bd1486977c5f150e547f",
+      "exact_matches": [
+        "main"
+      ],
+      "canonical": [
+        "https://thot-culture.github.io/Thot/articles/evolution-strategies-militaires.html"
+      ],
+      "robots": null,
+      "googlebot": null
+    },
+    {
+      "path": "articles/pieuvres-couleur.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/articles/pieuvres-couleur.html",
+      "sha256": "23f895078ba207c69c3035b8f0ad5048f2da387982d1e5b7c1f74d12dac45d0d",
+      "exact_matches": [
+        "main"
+      ],
+      "canonical": [
+        "https://thot-culture.github.io/Thot/articles/pieuvres-couleur.html"
+      ],
+      "robots": null,
+      "googlebot": null
+    },
+    {
+      "path": "articles/puissance-etats-unis.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/articles/puissance-etats-unis.html",
+      "sha256": "d2fb71df135137b66de9c3aaf6065d1588b001b2dbf93d297cda22882a8b69da",
+      "exact_matches": [
+        "main"
+      ],
+      "canonical": [
+        "https://thot-culture.github.io/Thot/articles/puissance-etats-unis.html"
+      ],
+      "robots": null,
+      "googlebot": null
+    },
+    {
+      "path": "articles/roubaix-1917.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/articles/roubaix-1917.html",
+      "sha256": "c08770abe484c6f4f6cc93984c2748e7dceddf26987a9bc7c2638d52e24100e2",
+      "exact_matches": [
+        "main"
+      ],
+      "canonical": [
+        "https://thot-culture.github.io/Thot/articles/roubaix-1917.html"
+      ],
+      "robots": null,
+      "googlebot": null
+    },
+    {
+      "path": "bibliotheque.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/bibliotheque.html",
+      "sha256": "8cc8b28fb63436a7605ebcd5b14ea785edf88db0d11cae77ee776b7be7e156e4",
+      "exact_matches": [
+        "main"
+      ],
+      "canonical": [
+        "https://thot-culture.github.io/Thot/bibliotheque.html"
+      ],
+      "robots": null,
+      "googlebot": null
+    },
+    {
+      "path": "confidentialite.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/confidentialite.html",
+      "sha256": "e5bc2135736512210c77a3ffb154e45167579d0d4bb836afe09e93f2e962d7a1",
+      "exact_matches": [
+        "main"
+      ],
+      "canonical": [
+        "https://thot-culture.github.io/Thot/confidentialite.html"
+      ],
+      "robots": null,
+      "googlebot": null
+    },
+    {
+      "path": "contact.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/contact.html",
+      "sha256": "040bfff73710bd85286dac37553ef80fed26e6f883d7150221c4b31691593b70",
+      "exact_matches": [
+        "main"
+      ],
+      "canonical": [
+        "https://thot-culture.github.io/Thot/contact.html"
+      ],
+      "robots": null,
+      "googlebot": null
+    },
+    {
+      "path": "explorer.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/explorer.html",
+      "sha256": "1a269cd5e805c2aa7a9892bc44318bf5ee7807694218e23bcc6c3a14ba95a2b6",
+      "exact_matches": [
+        "main"
+      ],
+      "canonical": [
+        "https://thot-culture.github.io/Thot/explorer.html"
+      ],
+      "robots": null,
+      "googlebot": null
+    },
+    {
+      "path": "explorer/atlas/rome-expansion.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/explorer/atlas/rome-expansion.html",
+      "sha256": "6f2028fb79ac81fe9df5492ea7dce9f84e4b2b80cfcbf40db98b33f45e6daa52",
+      "exact_matches": [
+        "main"
+      ],
+      "canonical": [
+        "https://thot-culture.github.io/Thot/explorer/atlas/rome-expansion.html"
+      ],
+      "robots": null,
+      "googlebot": null
+    },
+    {
+      "path": "explorer/enquetes/mer-aral.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/explorer/enquetes/mer-aral.html",
+      "sha256": "fc549bd9985961c422c0dbd24b5f5ab9dc6bda9e0416b709daf87a1240011761",
+      "exact_matches": [
+        "main"
+      ],
+      "canonical": [
+        "https://thot-culture.github.io/Thot/explorer/enquetes/mer-aral.html"
+      ],
+      "robots": null,
+      "googlebot": null
+    },
+    {
+      "path": "index.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/",
+      "sha256": "03fd3ab48c1e3b12fa77214d04168a9442a7ea95d3d4e3ef5d3858481cff4d57",
+      "exact_matches": [
+        "main"
+      ],
+      "canonical": [
+        "https://thot-culture.github.io/Thot/"
+      ],
+      "robots": null,
+      "googlebot": null
+    },
+    {
+      "path": "mentions-legales.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/mentions-legales.html",
+      "sha256": "36c62484ea42dc5d03771119f3b557254f1030e41b63c7712562d8df6785d30b",
+      "exact_matches": [
+        "main"
+      ],
+      "canonical": [
+        "https://thot-culture.github.io/Thot/mentions-legales.html"
+      ],
+      "robots": null,
+      "googlebot": null
+    },
+    {
+      "path": "notre-methode.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/notre-methode.html",
+      "sha256": "e8589c0ec918536f6a42605b58152ce904a02e8fd1dcaf6f1c9c5875548e3f94",
+      "exact_matches": [
+        "main"
+      ],
+      "canonical": [
+        "https://thot-culture.github.io/Thot/notre-methode.html"
+      ],
+      "robots": null,
+      "googlebot": null
+    },
+    {
+      "path": "quiz-autrices.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/quiz-autrices.html",
+      "sha256": "fb4cdf66a88bde5a30682ea9738c6dc471619bbc8dd93f449c253d93dbfd58c8",
+      "exact_matches": [
+        "main"
+      ],
+      "canonical": [
+        "https://thot-culture.github.io/Thot/quiz-autrices.html"
+      ],
+      "robots": null,
+      "googlebot": null
+    },
+    {
+      "path": "quiz.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/quiz.html",
+      "sha256": "400ce26c5a42e1aef9ce57bb5bd17bae3aaaff54db3bd7e3506a644350e6cea5",
+      "exact_matches": [
+        "main"
+      ],
+      "canonical": [
+        "https://thot-culture.github.io/Thot/quiz.html"
+      ],
+      "robots": null,
+      "googlebot": null
+    }
+  ],
+  "resources": [
+    {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2108/6797399/1000w_q95.jpg",
+      "status": 200,
+      "bytes": 166346
+    },
+    {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2311/8124895/1000w_q95.jpg",
+      "status": 200,
+      "bytes": 169969
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/article-editorial.css?v=science-partage-1",
+      "status": 200,
+      "bytes": 3724
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/article-media.js?v=audit-1",
+      "status": 200,
+      "bytes": 3352
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/article-share.js?v=science-partage-1",
+      "status": 200,
+      "bytes": 3160
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/article.css",
+      "status": 200,
+      "bytes": 7246
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/article.css?v=lecture-1",
+      "status": 200,
+      "bytes": 7246
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/autorite-activity.js?v=audit-1",
+      "status": 200,
+      "bytes": 2205
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/autorite-decode.js?v=decode-1",
+      "status": 200,
+      "bytes": 5561
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/autorite.css?v=decode-1",
+      "status": 200,
+      "bytes": 5738
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/autrices-quiz.css?v=audit-1",
+      "status": 200,
+      "bytes": 4139
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/autrices-visuels.css?v=audit-1",
+      "status": 200,
+      "bytes": 1082
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/bibliotheque.css?v=finitions-strategies-20261027",
+      "status": 200,
+      "bytes": 7488
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/bibliotheque.js?v=lecture-1&release=fluidite-20261025",
+      "status": 200,
+      "bytes": 5714
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/decouverte.css?v=1",
+      "status": 200,
+      "bytes": 7655
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/decouverte.js?v=1",
+      "status": 200,
+      "bytes": 1299
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/experience.css",
+      "status": 200,
+      "bytes": 5602
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/experience.css?v=1",
+      "status": 200,
+      "bytes": 5602
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/aral.css?v=783bc199a5ea",
+      "status": 200,
+      "bytes": 28423
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/aral.js?v=21789cbcf651",
+      "status": 200,
+      "bytes": 48556
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/atlas.css?v=5b8c8244725a",
+      "status": 200,
+      "bytes": 27209
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/atlas.js?v=6b51841696cc",
+      "status": 200,
+      "bytes": 30984
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/common.css?v=4e1c1c265f3e",
+      "status": 200,
+      "bytes": 8860
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/aral-2000.jpg",
+      "status": 200,
+      "bytes": 204342
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/aral-2014.jpg",
+      "status": 200,
+      "bytes": 202191
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/aral-dam-2006.webp",
+      "status": 200,
+      "bytes": 94568
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/aral-dust-2006.webp",
+      "status": 200,
+      "bytes": 95516
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/aral-north-1964.webp",
+      "status": 200,
+      "bytes": 104454
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/augustus.webp",
+      "status": 200,
+      "bytes": 155362
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/caesar.webp",
+      "status": 200,
+      "bytes": 37492
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/hannibal.webp",
+      "status": 200,
+      "bytes": 23020
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/met-248033.webp",
+      "status": 200,
+      "bytes": 105960
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/met-248037.webp",
+      "status": 200,
+      "bytes": 117310
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/met-248042.webp",
+      "status": 200,
+      "bytes": 45876
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/met-547802.webp",
+      "status": 200,
+      "bytes": 112280
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/moynaq-cover.webp",
+      "status": 200,
+      "bytes": 72422
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/moynaq-original.jpg",
+      "status": 200,
+      "bytes": 265581
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/trajan.webp",
+      "status": 200,
+      "bytes": 63006
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer/illustrations.css?v=thot20",
+      "status": 200,
+      "bytes": 2450
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer/illustrations.js?v=thot20",
+      "status": 200,
+      "bytes": 1393
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/favicon.svg",
+      "status": 200,
+      "bytes": 514
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/glossaire-interactif.css?v=audit-1",
+      "status": 200,
+      "bytes": 1199
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/glossaire-interactif.js?v=audit-1",
+      "status": 200,
+      "bytes": 1778
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/home.css?v=lecture-1",
+      "status": 200,
+      "bytes": 2490
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/images/autorite-triptyque.webp",
+      "status": 200,
+      "bytes": 193156
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/images/autrices-nadar.webp",
+      "status": 200,
+      "bytes": 165322
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/images/puissance-afghanistan.webp",
+      "status": 200,
+      "bytes": 133610
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/images/roubaix-gambetta.webp",
+      "status": 200,
+      "bytes": 150880
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/images/roubaix-laines-1917-apercu.jpg",
+      "status": 200,
+      "bytes": 153001
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/navigation.css?v=f223850ad41a",
+      "status": 200,
+      "bytes": 2154
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/navigation.js?v=299c87f73542",
+      "status": 200,
+      "bytes": 1453
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/notre-methode.css",
+      "status": 200,
+      "bytes": 3874
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/og-thot.png",
+      "status": 200,
+      "bytes": 32248
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/pieuvres.css?v=chromato-2",
+      "status": 200,
+      "bytes": 3572
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/puissance-chronologie.css?v=a11y-1",
+      "status": 200,
+      "bytes": 4320
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/puissance-chronologie.js",
+      "status": 200,
+      "bytes": 1239
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/puissance-comparateur.css?v=comparaison-2",
+      "status": 200,
+      "bytes": 5108
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/puissance-comparateur.js?v=comparaison-2&release=fluidite-20261025",
+      "status": 200,
+      "bytes": 6225
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/puissance-mobile.css",
+      "status": 200,
+      "bytes": 3274
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/puissance-sommaire.js?v=lecture-1",
+      "status": 200,
+      "bytes": 1381
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/questions-expert.js",
+      "status": 200,
+      "bytes": 31677
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/questions-facile.js",
+      "status": 200,
+      "bytes": 22442
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/questions-intermediaire.js",
+      "status": 200,
+      "bytes": 24474
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/quiz-autrices.js?v=lecture-1&release=fluidite-20261025",
+      "status": 200,
+      "bytes": 4758
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/quiz-reference-data.js?v=audit-20261026",
+      "status": 200,
+      "bytes": 14280
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/quiz-references.js?v=audit-20261026",
+      "status": 200,
+      "bytes": 1581
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/quiz.css",
+      "status": 200,
+      "bytes": 2249
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/reading-times.js",
+      "status": 200,
+      "bytes": 712
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/roubaix-document.css?v=document-1",
+      "status": 200,
+      "bytes": 3264
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/roubaix-document.js?v=document-1",
+      "status": 200,
+      "bytes": 7097
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/roubaix-frise.css?v=a11y-1",
+      "status": 200,
+      "bytes": 2967
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/roubaix-frise.js?v=audit-1",
+      "status": 200,
+      "bytes": 4931
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/roubaix-photos.css",
+      "status": 200,
+      "bytes": 5906
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/site-home.js",
+      "status": 200,
+      "bytes": 2765
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/site.css",
+      "status": 200,
+      "bytes": 36723
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/site.css?v=quiz-accessibility-1",
+      "status": 200,
+      "bytes": 36723
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/site.js?v=quiz-audit-2026-10-26",
+      "status": 200,
+      "bytes": 92985
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/social-cards/autorite.png",
+      "status": 200,
+      "bytes": 112438
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/social-cards/autrices-pseudonymes.png",
+      "status": 200,
+      "bytes": 90417
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/social-cards/pieuvres-couleur.png",
+      "status": 200,
+      "bytes": 111255
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/social-cards/puissance-etats-unis.png",
+      "status": 200,
+      "bytes": 109361
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/social-cards/roubaix-1917.png",
+      "status": 200,
+      "bytes": 98860
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/strategies-media/hannibal.webp",
+      "status": 200,
+      "bytes": 23020
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/strategies-media/homs.webp",
+      "status": 200,
+      "bytes": 63144
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/strategies-media/minard.webp",
+      "status": 200,
+      "bytes": 36350
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/strategies-media/social.png",
+      "status": 200,
+      "bytes": 56487
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/strategies-media/tank.webp",
+      "status": 200,
+      "bytes": 30488
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/strategies-militaires.css",
+      "status": 200,
+      "bytes": 5937
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/strategies-militaires.js",
+      "status": 200,
+      "bytes": 745
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/visuels-pedagogiques.css?v=a11y-1",
+      "status": 200,
+      "bytes": 2181
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/visuels-pedagogiques.js",
+      "status": 200,
+      "bytes": 1254
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg",
+      "status": 200,
+      "bytes": 251922
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/The_Bront%C3%AB_Sisters_by_Patrick_Branwell_Bront%C3%AB_restored.jpg",
+      "status": 200,
+      "bytes": 2187505
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+      "status": 200,
+      "bytes": 170000
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Camouflage_octopus.jpg/960px-Camouflage_octopus.jpg",
+      "status": 200,
+      "bytes": 251103
+    }
+  ],
+  "extras": [
+    {
+      "url": "https://thot-culture.github.io/Thot/sitemap.xml",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/sitemap.xml",
+      "headers": {
+        "Content-Type": "application/xml",
+        "Content-Length": "1647",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 1647,
+      "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n  <url><loc>https://thot-culture.github.io/Thot/</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/bibliotheque.html</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/notre-methode.html</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/quiz.html</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/quiz-autrices.html</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/articles/roubaix-1917.html</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/articles/puissance-etats-unis.html</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/articles/autrices-pseudonymes.html</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/articles/autorite.html</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/articles/pieuvres-couleur.html</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/explorer.html</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/explorer/enquetes/mer-aral.html</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/explorer/atlas/rome-expansion.html</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/articles/evolution-strategies-militaires.html</loc><lastmod>2026-10-27</lastmod></url>\n  <url><loc>https://thot-culture.github.io/Thot/mentions-legales.html</loc><lastmod>2026-10-27</lastmod></url>\n  <url><loc>https://thot-culture.github.io/Thot/confidentialite.html</loc><lastmod>2026-10-27</lastmod></url>\n  <url><loc>https://thot-culture.github.io/Thot/contact.html</loc><lastmod>2026-10-27</lastmod></url>\n</urlset>\n"
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/robots.txt",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/robots.txt",
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8",
+        "Content-Length": "85",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 85,
+      "text": "User-agent: *\nAllow: /Thot/\nSitemap: https://thot-culture.github.io/Thot/sitemap.xml\n"
+    },
+    {
+      "url": "https://thot-culture.github.io/robots.txt",
+      "status": 404,
+      "final_url": "https://thot-culture.github.io/robots.txt",
+      "headers": {},
+      "redirects": [],
+      "bytes": 9115
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/seo-page-inexistante-20261104.html",
+      "status": 404,
+      "final_url": "https://thot-culture.github.io/Thot/seo-page-inexistante-20261104.html",
+      "headers": {},
+      "redirects": [],
+      "bytes": 2112
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/index.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/index.html",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "19048",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 19048
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "19048",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [
+        {
+          "status": 301,
+          "from": "https://thot-culture.github.io/Thot",
+          "to": "https://thot-culture.github.io/Thot/"
+        }
+      ],
+      "bytes": 19048
+    }
+  ]
+}

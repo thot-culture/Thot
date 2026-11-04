@@ -1,0 +1,77 @@
+{
+  "main_blocks": [
+    {
+      "path": "quiz-autrices.html",
+      "main_identical": true
+    },
+    {
+      "path": "index.html",
+      "main_identical": true
+    },
+    {
+      "path": "confidentialite.html",
+      "main_identical": true
+    },
+    {
+      "path": "bibliotheque.html",
+      "main_identical": true
+    },
+    {
+      "path": "explorer.html",
+      "main_identical": true
+    },
+    {
+      "path": "mentions-legales.html",
+      "main_identical": true
+    },
+    {
+      "path": "notre-methode.html",
+      "main_identical": true
+    },
+    {
+      "path": "quiz.html",
+      "main_identical": true
+    },
+    {
+      "path": "404.html",
+      "main_identical": true
+    },
+    {
+      "path": "contact.html",
+      "main_identical": true
+    },
+    {
+      "path": "articles/evolution-strategies-militaires.html",
+      "main_identical": false
+    },
+    {
+      "path": "articles/puissance-etats-unis.html",
+      "main_identical": true
+    },
+    {
+      "path": "articles/roubaix-1917.html",
+      "main_identical": true
+    },
+    {
+      "path": "articles/autorite.html",
+      "main_identical": true
+    },
+    {
+      "path": "articles/autrices-pseudonymes.html",
+      "main_identical": true
+    },
+    {
+      "path": "articles/pieuvres-couleur.html",
+      "main_identical": true
+    },
+    {
+      "path": "explorer/atlas/rome-expansion.html",
+      "main_identical": true
+    },
+    {
+      "path": "explorer/enquetes/mer-aral.html",
+      "main_identical": true
+    }
+  ],
+  "visual_system_pr22_identical": true
+}

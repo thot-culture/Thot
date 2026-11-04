@@ -115,6 +115,17 @@ class PublicationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             conservation.protected(before.replace(repair["old"], "https://example.org/"), repair["path"])
 
+    def test_only_six_documented_heading_levels_can_change(self):
+        changes = json.loads((HERE.parent / 'docs/stabilisation/modifications-structurelles.json').read_text(encoding='utf-8'))['changes']
+        self.assertEqual(len(changes), 6)
+        path = changes[0]['path']
+        before = '<main><p>Un fait sourcé.</p>' + ''.join(c['old'] for c in changes) + '</main>'
+        after = '<main><p>Un fait sourcé.</p>' + ''.join(c['new'] for c in changes) + '</main>'
+        self.assertEqual(conservation.protected(before, path), conservation.protected(after, path))
+        self.assertNotEqual(conservation.protected(before, path), conservation.protected(after.replace('Un fait', 'Un autre fait'), path))
+        with self.assertRaises(ValueError):
+            conservation.protected(after.replace(changes[0]['new'], '<h3>Un titre inventé</h3>'), path)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -9,6 +9,20 @@ import portable_io  # Encodage CLI stable, sans dépendance système.
 from pathlib import Path
 import json,re
 ROOT=Path(__file__).resolve().parents[1]
+
+def amended_structure(html, path):
+ """Autoriser uniquement les six changements H4→H3 décrits, jamais leur texte."""
+ manifest=json.loads((ROOT/'docs/stabilisation/modifications-structurelles.json').read_text(encoding='utf-8'))
+ for item in manifest['changes']:
+  if item['path']!=str(path):continue
+  old,new=item['old'],item['new']
+  if not re.fullmatch(r'<h4>[^<]+</h4>',old) or new!=old.replace('<h4>','<h3>').replace('</h4>','</h3>'):
+   raise ValueError('Transformation autre que le niveau de titre : '+str(path))
+  if html.count(old)+html.count(new)!=1:
+   raise ValueError('Titre absent ou ambigu : '+str(path)+' / '+old)
+  html=html.replace(old,new,1)
+ return html
+
 def strip_source_types(html):
  return re.sub(r'<span\b[^>]*class="source-type"[^>]*>[\s\S]*?</span>\s*','',html)
 def amended_reference(html,path):

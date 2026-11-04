@@ -2,6 +2,8 @@
 
 Compléments : [Search Console](docs/GOOGLE-SEARCH-CONSOLE.md), [stratégie et maillage](docs/STRATEGIE-SEO-THOT.md), [audit SEO](docs/AUDIT-SEO-THOT.md). Les automatismes décrits nécessitent l'intégration des PR de stabilisation et de préparation SEO ; ils ne sont pas encore disponibles sur `main` au 4 novembre 2026.
 
+Intégration préparée : **#24 → branche #23 → branche #22 → `main`**, après autorisation explicite et vérification des nouveaux checks à chaque étape. Voir le [bilan de stabilisation](docs/BILAN-STABILISATION-THOT.md).
+
 Publier deux articles par semaine sur THOT en conservant les URL, la présentation et les sources. Ce guide décrit le site statique actuel ; aucun CMS n'est nécessaire.
 
 ## 1. Préparer un article et sa branche
@@ -90,6 +92,20 @@ Les cinq anciens articles sans `layout: authored` utilisent une autre forme de n
 
 Placer les médias dans un dossier identifiable de `assets/`. Préférer WebP pour les photos affichées ; garder un original documentaire séparé si nécessaire, chargé seulement à l'agrandissement. Donner width/height, un alt décrivant l'information utile, une légende, l'auteur, la date, la licence et un lien vers la notice. Une illustration décorative peut avoir `alt=""`. Une image générée doit être annoncée comme telle.
 
+Réutiliser les classes communes pour une image documentaire responsive (remplacer chemin, description et crédit) :
+
+```html
+<figure class="thot-illustration">
+  <div class="thot-illustration-photo">
+    <img src="../assets/mon-image.webp" width="1200" height="630"
+         alt="Description de l’information utile" loading="lazy" decoding="async">
+  </div>
+  <figcaption class="thot-illustration-caption">Légende, auteur, date, source et licence.</figcaption>
+</figure>
+```
+
+Ne pas utiliser `loading="lazy"` si cette image constitue le visuel principal du premier écran. Les dimensions doivent être celles du fichier réel.
+
 Éviter de dépendre du chargement d'une photographie externe de plusieurs mégaoctets. L'image principale visible immédiatement ne doit pas être lazy ; les images suivantes : `loading="lazy" decoding="async"`. Viser quelques centaines de Ko par image affichée, sans rendre un document illisible.
 
 Chaque référence citée dans le texte doit viser un identifiant réel, par exemple `href="#ref1"` et `<li id="ref1">`. La liste des refN du HTML doit correspondre exactement à la notice. Distinguer document consulté, notice de catalogue et interprétation ; vérifier les URL dans un navigateur. Un DOI valide ou un HTTP 200 ne prouve pas que la source confirme le passage.
@@ -132,6 +148,7 @@ python scripts/update-reading-times.py --check
 python scripts/build-explorer-reconstruction.py --check
 python scripts/site_chrome.py --check
 python scripts/test-publication.py
+python scripts/test-publication-integration.py
 python scripts/check-seo.py
 python scripts/test-seo.py
 python scripts/test-portabilite.py

@@ -1,5 +1,7 @@
 # Audit SEO THOT — 4 novembre 2026
 
+Complément de clôture : le [bilan de stabilisation](BILAN-STABILISATION-THOT.md) contrôle la version combinée, corrige le saut H2/H4 et précise l'ordre des fusions. Les relevés de ce rapport restent ceux des SHA et heures indiqués.
+
 ## 1. Conclusion et périmètre
 
 **OUI, AVEC RÉSERVES : la version publique est techniquement explorable et indexable.** Aucun blocage SEO général n'a été constaté. Les 17 pages canoniques indexables répondent 200, sans `noindex` ni en-tête `X-Robots-Tag` d'exclusion observé ; le sitemap contient ces 17 URL. Cela **ne prouve pas leur indexation dans Google**, ne garantit aucun classement et n'explique pas à lui seul une éventuelle faible audience. Aucun accès Search Console, donnée de recherche ou mesure INP terrain n'a été utilisé.
