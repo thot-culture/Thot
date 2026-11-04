@@ -1,5 +1,5 @@
 {
-  "checked_utc": "2026-11-04T11:59:28.501002+00:00",
+  "checked_utc": "2026-11-04T12:05:29.087796+00:00",
   "results": [
     {
       "command": [
@@ -78,7 +78,7 @@
       ],
       "exit_code": 0,
       "stdout": "",
-      "stderr": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.010s\n\nOK"
+      "stderr": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.014s\n\nOK"
     },
     {
       "command": [
@@ -98,7 +98,7 @@
       ],
       "exit_code": 0,
       "stdout": "",
-      "stderr": "test_bibliography_is_qualified_and_preserved (__main__.EditorialTests.test_bibliography_is_qualified_and_preserved) ... ok\ntest_editorial_dates_are_explicit_and_consistent (__main__.EditorialTests.test_editorial_dates_are_explicit_and_consistent) ... ok\ntest_inventory_and_publication_urls (__main__.EditorialTests.test_inventory_and_publication_urls) ... ok\ntest_no_unrelated_html_changed_between_revisions (__main__.EditorialTests.test_no_unrelated_html_changed_between_revisions) ... skipped 'Contrôle optionnel des révisions activé avec --head'\ntest_original_assets_ids_and_inline_scripts_are_preserved (__main__.EditorialTests.test_original_assets_ids_and_inline_scripts_are_preserved) ... ok\ntest_science_is_visible_concise_and_sourced (__main__.EditorialTests.test_science_is_visible_concise_and_sourced) ... ok\ntest_share_progressive_markup_and_assets (__main__.EditorialTests.test_share_progressive_markup_and_assets) ... ok\ntest_social_metadata_and_png_files (__main__.EditorialTests.test_social_metadata_and_png_files) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.077s\n\nOK (skipped=1)"
+      "stderr": "test_bibliography_is_qualified_and_preserved (__main__.EditorialTests.test_bibliography_is_qualified_and_preserved) ... ok\ntest_editorial_dates_are_explicit_and_consistent (__main__.EditorialTests.test_editorial_dates_are_explicit_and_consistent) ... ok\ntest_inventory_and_publication_urls (__main__.EditorialTests.test_inventory_and_publication_urls) ... ok\ntest_no_unrelated_html_changed_between_revisions (__main__.EditorialTests.test_no_unrelated_html_changed_between_revisions) ... skipped 'Contrôle optionnel des révisions activé avec --head'\ntest_original_assets_ids_and_inline_scripts_are_preserved (__main__.EditorialTests.test_original_assets_ids_and_inline_scripts_are_preserved) ... ok\ntest_science_is_visible_concise_and_sourced (__main__.EditorialTests.test_science_is_visible_concise_and_sourced) ... ok\ntest_share_progressive_markup_and_assets (__main__.EditorialTests.test_share_progressive_markup_and_assets) ... ok\ntest_social_metadata_and_png_files (__main__.EditorialTests.test_social_metadata_and_png_files) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.091s\n\nOK (skipped=1)"
     },
     {
       "command": [

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """Navigation et identité visuelle communes, utilisées aussi par le générateur Explorer."""
+import portable_io
 import re
 import json
 import hashlib

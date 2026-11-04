@@ -35,6 +35,7 @@ Fichiers modifiés initialement : 23 dans #22, 53 dans #23, 37 dans #24. Les rec
 | Deux publications successives | Les tests précédents séparaient métadonnées et carte ; la chaîne complète doit être éprouvée avec tous les anciens articles | Nouvelle recette dans une copie temporaire, génération réelle, contrôles statiques et navigateur, puis suppression de la copie |
 | Consignes d'intégration | Une phrase de stratégie suggérait encore #22 puis #23 puis SEO | Guide et stratégie alignés sur #24→#23→#22→main ; aucun merge exécuté |
 | Exécution Lighthouse | Le script utilisait uniquement le navigateur téléchargé par Playwright | Respect de `THOT_BROWSER_EXECUTABLE`, comme les autres recettes ; aucun changement pour les lecteurs |
+| Sortie CLI Windows | `site_chrome.py` n'importait pas le réglage d'encodage commun ; la nouvelle recette capturée échouait sur les accents Windows-1252 | Import du réglage UTF-8 existant ; décodage explicite testé avec `PYTHONIOENCODING=cp1252`, sans désactiver la recette |
 
 Les pages Explorer ont été reconstruites depuis leurs sources après modification du contrôleur Aral ; le chemin de cache JavaScript est actualisé. La feuille militaire reçoit une version de cache explicite. Aucun fichier géographique, tracé de carte, média documentaire, source bibliographique, date historique ou banque de questions n'est changé.
 
@@ -86,6 +87,8 @@ Dans la copie uniquement : six→sept→huit articles et 17→18→19 URL de sit
 ### Erreurs conservées et corrigées
 
 L'[échec initial de persistance](stabilisation/persistance-erreur-initiale.txt) est conservé ; l'assertion n'a pas été supprimée. Les fixtures de recette ont aussi été corrigées : image responsive avec les classes communes, et injection d'une sauvegarde altérée au début du nouveau document pour éviter son écrasement normal par `pagehide`. La règle mobile des H3 a été prise en compte avant validation visuelle. Ces essais intermédiaires ne sont pas présentés comme des réussites.
+
+Le premier passage distant de ce complément a aussi signalé l'encodage CLI Windows dans la nouvelle recette de publication ([run 41825540433](https://github.com/thot-culture/Thot/actions/runs/41825540433)). La source CLI est corrigée et le contrôle d'encodage renforcé ; ce run initial reste enregistré comme échec, distinct des validations après correction.
 
 ## 6. Performances mesurées
 

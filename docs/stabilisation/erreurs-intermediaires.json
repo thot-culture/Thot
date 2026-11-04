@@ -2,5 +2,6 @@
   "aral": "ID réattribués l0/l1 à chaque hydratation ; comparaison native intermittente. Source corrigée, assertion conservée et renforcée.",
   "fixture_image": "Le premier HTML temporaire utilisait un img 1200 px sans la classe responsive existante ; fixture corrigée avec thot-illustration-photo.",
   "fixture_storage": "Une injection avant reload était écrasée normalement par pagehide ; injection déplacée dans addInitScript du nouveau document.",
-  "styles_h3": "La première adaptation recevait 24 px de la règle mobile générale, contre 18 px avant. Sélecteur de fiches rendu plus précis, styles et dimensions comparés à nouveau."
+  "styles_h3": "La première adaptation recevait 24 px de la règle mobile générale, contre 18 px avant. Sélecteur de fiches rendu plus précis, styles et dimensions comparés à nouveau.",
+  "windows_cli": "Premier run portable Windows 41825540433 : UnicodeDecodeError en capturant site_chrome.py (sortie Windows-1252). Import du réglage UTF-8 commun et test de sortie capturée sous cp1252 ajoutés."
 }

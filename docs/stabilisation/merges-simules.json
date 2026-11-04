@@ -1,0 +1,28 @@
+{
+  "candidate_commit": "647431e3351b5ef5496b202e5055d1c72a6f7e33",
+  "candidate_tree": "20c69cd8686cd3ad65854df2fff429a782f874f8",
+  "method": "merge-tree --write-tree ; aucun commit de fusion ni mise à jour de branche distante",
+  "simulations": [
+    {
+      "pull_request": 24,
+      "target": "origin/work/audit-final-thot-20261103",
+      "status": "PASS",
+      "tree": "20c69cd8686cd3ad65854df2fff429a782f874f8",
+      "candidate_tree_identical": true
+    },
+    {
+      "pull_request": 23,
+      "target": "origin/work/harmonie-visuelle-20261103",
+      "status": "PASS",
+      "tree": "20c69cd8686cd3ad65854df2fff429a782f874f8",
+      "candidate_tree_identical": true
+    },
+    {
+      "pull_request": 22,
+      "target": "origin/main",
+      "status": "PASS",
+      "tree": "20c69cd8686cd3ad65854df2fff429a782f874f8",
+      "candidate_tree_identical": true
+    }
+  ]
+}
