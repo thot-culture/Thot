@@ -1,0 +1,9 @@
+2026-11-04T12:08:15.6234587Z Traceback (most recent call last):
+2026-11-04T12:08:15.6235348Z   File "D:\a\Thot\Thot\scripts\test-publication-integration.py", line 199, in <module>
+2026-11-04T12:08:15.6236345Z     raise SystemExit(main())
+2026-11-04T12:08:15.6237114Z                      ^^^^^^
+2026-11-04T12:08:15.6238025Z   File "D:\a\Thot\Thot\scripts\test-publication-integration.py", line 180, in main
+2026-11-04T12:08:15.6239659Z     assert all((root / name).read_bytes() == body for name, body in originals.items())
+2026-11-04T12:08:15.6240597Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-04T12:08:15.6241140Z AssertionError
+2026-11-04T12:08:15.7210322Z ##[error]Process completed with exit code 1.

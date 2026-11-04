@@ -52,3 +52,15 @@
 .rome-atlas .atlas-map-heading>div{min-width:0}.rome-atlas #atlas-current-date{overflow-wrap:anywhere}
 @media(max-width:560px){.rome-atlas .atlas-compare-controls,.rome-atlas .atlas-compare-badges{grid-template-columns:1fr}.atlas-compare-controls>span{display:none}.rome-atlas .atlas-zoom-controls{display:grid;grid-template-columns:48px 48px minmax(0,1fr)}.rome-atlas .atlas-zoom-controls output{grid-column:1/-1}.rome-atlas .atlas-zoom-controls button{padding-inline:8px}.rome-atlas .atlas-map-stage{height:340px}}
 #atlas-event-layer text{font-family:"Segoe UI",Arial,sans-serif;font-weight:600;fill:#17243a;stroke:#fffdf7;stroke-width:3px;paint-order:stroke;pointer-events:none}
+
+/* Réserver les commandes pendant l'initialisation, sans les rendre actives
+   ni visibles avant leurs contrôleurs. Le repli sans JS reste inchangé. */
+@media screen and (scripting: enabled) {
+  .rome-atlas :is(.atlas-topbar,.atlas-compare-switch,.atlas-zoom-controls,.atlas-pan-controls)[hidden] {
+    display: flex !important;
+    visibility: hidden;
+  }
+}
+@media screen and (scripting: enabled) and (max-width: 560px) {
+  .rome-atlas .atlas-zoom-controls[hidden] { display: grid !important; }
+}

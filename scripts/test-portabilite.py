@@ -31,6 +31,9 @@ def check():
         commands=[['generate-social-cards.py','--check'],['generate-social-cards.py','--check','--font-directory',str(fonts)],['update-article-editorial.py','--check'],['update-reading-times.py','--check'],['build-quiz-references.py','--check']]
         for args in commands:
             subprocess.run([sys.executable,str(ROOT/'scripts'/args[0]),*args[1:]],cwd=folder,env=env,check=True)
+        # Une sortie CLI capturée doit rester UTF-8 même sous une console legacy.
+        chrome=subprocess.run([sys.executable,str(ROOT/'scripts/site_chrome.py'),'--check'],cwd=folder,env=env,check=True,capture_output=True)
+        assert 'métadonnées harmonisés' in chrome.stdout.decode('utf-8')
     print('PASS : polices identiques, cartes PNG reproductibles, UTF-8, chemin avec espaces et génération indépendante du dossier courant. Plateforme : '+sys.platform)
 
 if __name__=='__main__':check()

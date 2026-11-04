@@ -70,6 +70,7 @@ function makePage(storage = new Map(), options = {}) {
   });
   for (const name of ['facile', 'intermediaire', 'expert']) if (name !== options.missingBank) vm.runInContext(source(`assets/questions-${name}.js`), context);
   let startupError;
+  if (engineIndex < 0) vm.runInContext(source('assets/navigation.js'), context);
   try { vm.runInContext(engine, context); } catch (error) { if (!options.missingBank) throw error; startupError = error; }
   const run = expression => vm.runInContext(expression, context);
   const json = expression => JSON.parse(run(`JSON.stringify(${expression})`));

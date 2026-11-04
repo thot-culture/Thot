@@ -25,7 +25,7 @@
 .article-strategies button[aria-pressed=true]{background:#17243a;color:#fff;border-color:#17243a}
 .article-strategies button:focus-visible,.article-strategies summary:focus-visible{outline:3px solid #927038;outline-offset:4px}
 .article-strategies .sm-date{font:700 15px/1.5 'Segoe UI',sans-serif;color:#715026;margin-top:20px}
-.article-strategies .sm-panels h4{font:700 18px/1.4 Georgia,serif;margin:20px 0}
+.article-strategies .sm-module .sm-panels h3{font:700 18px/1.4 Georgia,serif;margin:20px 0}
 .article-strategies .sm-panels p{font-size:15px}
 .article-strategies .sm-panels svg{width:100%;height:auto;background:#f4f0e6;border-radius:10px;display:block}
 .article-strategies svg text{font:16px 'Segoe UI',sans-serif;fill:#17243a}

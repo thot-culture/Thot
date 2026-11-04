@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 """Navigation et identité visuelle communes, utilisées aussi par le générateur Explorer."""
+import portable_io
 import re
 import json
 import hashlib
+from html import escape
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://thot-culture.github.io/Thot/'
@@ -35,9 +37,18 @@ def normalize(page, html):
     html = re.sub(r'<nav\b([^>]*aria-label="Navigation principale"[^>]*)>.*?</nav>', menu, html, count=1, flags=re.S)
     if 'id="mobile-menu-button"' not in html:
         html = html.replace('<nav id="primary-navigation"', '<button id="mobile-menu-button" class="mobile-menu-button" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Ouvrir le menu"><span aria-hidden="true">☰</span> Menu</button><nav id="primary-navigation"', 1)
-    if page not in ('index.html', 'quiz.html'):
-        html = re.sub(r'<script src="/Thot/assets/navigation\.js[^\"]*" defer></script>', '', html)
-        html = html.replace('</body>', '<script src="'+version('navigation.js')+'" defer></script></body>')
+    # Installer le menu avant le premier rendu du main évite son déplacement
+    # lorsque les autres scripts différés ou les images prennent du temps.
+    html = re.sub(r'\s*<script data-site-menu>[\s\S]*?</script>', '', html)
+    html = re.sub(r'<script src="/Thot/assets/navigation\.js[^\"]*" defer></script>', '', html)
+    menu_script = (ROOT/'assets/navigation.js').read_text(encoding='utf-8')
+    html = re.sub(r'\s*<script data-quiz-startup>[\s\S]*?</script>', '', html)
+    startup = ''
+    if page == 'quiz.html':
+        startup = '<script data-quiz-startup>'+(ROOT/'assets/quiz-startup.js').read_text(encoding='utf-8')+'</script>'
+    html = html.replace('</header>', '</header><script data-site-menu>'+menu_script+'</script>'+startup, 1)
+    if not re.search(r'<link\b[^>]*rel="(?:shortcut )?icon"', html):
+        html = html.replace('</head>', '<link rel="icon" type="image/svg+xml" href="/Thot/assets/favicon.svg"></head>')
     utility = '<nav data-site-utility aria-label="Informations du site">'+links([('contact.html','Contact et corrections'),('mentions-legales.html','Informations légales'),('confidentialite.html','Confidentialité')])+'</nav>'
     html = re.sub(r'<nav data-site-utility.*?</nav>', '', html, flags=re.S)
     if '</footer>' in html:
@@ -46,12 +57,23 @@ def normalize(page, html):
     else: html = html.replace('</body>', '<footer class="site-info-footer">'+utility+'</footer></body>')
     html = re.sub(r'(<nav id="site-parcours"[^>]*>).*?(</nav>)', lambda m:m[1]+links(LINKS[:4]+[LINKS[5]])+m[2], html, flags=re.S)
     if page != '404.html':
+        # Descriptions des images sociales existantes, y compris pages générées.
+        social_alts = {
+            'assets/og-thot.png': 'THOT — Le magazine des esprits curieux. Histoire, géographie, sciences humaines.',
+            'assets/explorer-v2/media/moynaq-original.jpg': 'Deux bateaux échoués sur un sol sec à Moynaq, photographiés en mars 2011.',
+            'assets/explorer-v2/media/met-248042.webp': 'Sesterce de Trajan, photographie du Metropolitan Museum of Art.',
+        }
+        image = re.search(r'<meta property="og:image" content="([^"]+)"', html)
         title = re.search(r'<title>(.*?)</title>', html, re.S)[1]
         if 'application/ld+json' not in html:
             schema = {'@context':'https://schema.org','@type':'WebSite' if page=='index.html' else 'WebPage','name':title,'url':BASE+('' if page=='index.html' else page),'inLanguage':'fr'}
             html = html.replace('</head>', '<script type="application/ld+json">'+json.dumps(schema,ensure_ascii=False)+'</script></head>')
         for prop, content in [('og:site_name','THOT'), ('og:locale','fr_FR')]:
             if 'property="'+prop+'"' not in html: html = html.replace('</head>', '<meta property="'+prop+'" content="'+content+'"></head>')
+        if image and 'property="og:image:alt"' not in html:
+            alt = social_alts.get(image[1].removeprefix(BASE))
+            if alt:
+                html = html.replace('</head>', '<meta property="og:image:alt" content="'+escape(alt, quote=True)+'"></head>', 1)
     html = re.sub(r'<link rel="stylesheet" href="/Thot/assets/navigation\.css[^\"]*">', '', html)
     html = html.replace('</head>', '<link rel="stylesheet" href="'+version('navigation.css')+'"></head>')
     html = re.sub(r'<link rel="stylesheet" href="/Thot/assets/visual-system\.css[^\"]*">', '', html)

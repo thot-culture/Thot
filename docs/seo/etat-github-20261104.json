@@ -1,0 +1,41 @@
+{
+  "checked_date": "2026-11-04",
+  "pull_requests": [
+    {
+      "number": 22,
+      "url": "https://github.com/thot-culture/Thot/pull/22",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": {
+        "ref": "work/harmonie-visuelle-20261103",
+        "sha": "c7b62ad61c5ddabc63c61560175a55c85ec80200"
+      },
+      "base": {
+        "ref": "main",
+        "sha": "86ee7cbb27172262eca3648afe51cb7d2a81eab8"
+      }
+    },
+    {
+      "number": 23,
+      "url": "https://github.com/thot-culture/Thot/pull/23",
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "head": {
+        "ref": "work/audit-final-thot-20261103",
+        "sha": "2cae9b575b70f58c14c75ff1a9ca11cc213ca101"
+      },
+      "base": {
+        "ref": "work/harmonie-visuelle-20261103",
+        "sha": "c7b62ad61c5ddabc63c61560175a55c85ec80200"
+      }
+    }
+  ],
+  "latest_main_pages_deployment": {
+    "id": 40740217773,
+    "sha": "86ee7cbb27172262eca3648afe51cb7d2a81eab8",
+    "conclusion": "success",
+    "url": "https://github.com/thot-culture/Thot/actions/runs/40740217773"
+  }
+}

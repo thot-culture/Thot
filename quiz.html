@@ -39,7 +39,61 @@
       <button id="mobile-menu-button" class="mobile-menu-button" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Ouvrir le menu"><span class="mobile-menu-lines" aria-hidden="true">☰</span><span>Menu</span></button>
       <nav id="primary-navigation" data-site-navigation class="nav-end" aria-label="Navigation principale"><a href="/Thot/index.html">Accueil</a><a href="/Thot/bibliotheque.html">Bibliothèque</a><a href="/Thot/explorer.html">Explorer</a><a href="/Thot/quiz.html#quiz-classique">Quiz</a><a href="/Thot/quiz.html#daily-title">Défi du jour</a><a href="/Thot/notre-methode.html">Notre méthode</a><a href="/Thot/index.html#concept">À propos</a></nav>
     </div>
-  </header>
+  </header><script data-site-menu>/* Menu commun installé avant le contenu ; liens visibles sans JavaScript. */
+(() => {
+  'use strict';
+  const menu = document.getElementById('mobile-menu-button');
+  const nav = document.getElementById('primary-navigation');
+  if (menu && nav) {
+    const header = menu.closest('header') || menu.closest('.top');
+    const mobile = window.matchMedia('(max-width: 710px)');
+    const close = (restoreFocus = false) => {
+      nav.classList.remove('is-open');
+      menu.setAttribute('aria-expanded', 'false');
+      menu.setAttribute('aria-label', 'Ouvrir le menu');
+      if (restoreFocus) menu.focus();
+    };
+    menu.addEventListener('click', () => {
+      const open = menu.getAttribute('aria-expanded') !== 'true';
+      nav.classList.toggle('is-open', open);
+      menu.setAttribute('aria-expanded', String(open));
+      menu.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    });
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => close()));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') close(true);
+    });
+    document.addEventListener('click', event => {
+      if (header && !header.contains(event.target)) close();
+    });
+    if (header) {
+      header.addEventListener('focusout', event => {
+        if (event.relatedTarget && !header.contains(event.relatedTarget)) close();
+      });
+    }
+    const syncViewport = () => close(mobile.matches && nav.contains(document.activeElement));
+    if (typeof mobile.addEventListener === 'function') mobile.addEventListener('change', syncViewport);
+    else if (typeof mobile.addListener === 'function') mobile.addListener(syncViewport);
+    close();
+    // Replier la navigation uniquement après l’installation de ses interactions.
+    if (header) header.setAttribute('data-menu-ready', '');
+  }
+
+})();
+</script><script data-quiz-startup>/* Préserver la position de lecture pendant le chargement du quiz.
+   Sans JavaScript, le message HTML et ses liens restent visibles. */
+(() => {
+  'use strict';
+  const root = document.documentElement;
+  root.setAttribute('data-quiz-loading', '');
+  // Un téléchargement bloqué doit conserver un accès au rechargement/articles.
+  const timeout = setTimeout(() => root.removeAttribute('data-quiz-loading'), 10000);
+  document.addEventListener('DOMContentLoaded', () => {
+    clearTimeout(timeout);
+    root.removeAttribute('data-quiz-loading');
+  }, { once: true });
+})();
+</script>
   <main id="contenu" tabindex="-1">
     <div class="wrap quiz-notice" id="quiz-load-status" role="status"><span id="quiz-load-message">Le quiz n’est pas encore prêt.</span> <a href="quiz.html">Recharger la page</a> ou <a href="bibliotheque.html">lire les articles</a>.</div>
     <noscript><p class="wrap quiz-notice">Active JavaScript pour jouer au quiz. Les articles restent accessibles depuis la navigation.</p></noscript>

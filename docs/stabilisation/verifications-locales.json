@@ -1,0 +1,299 @@
+{
+  "checked_utc": "2026-11-04T12:27:30.202476+00:00",
+  "results": [
+    {
+      "command": [
+        "python",
+        "scripts/update-article-editorial.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS : 6 articles conformes aux données éditoriales statiques.",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "scripts/sync-publication.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "scripts/update-reading-times.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS : durées communes et rendus statiques cohérents",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "scripts/build-explorer-reconstruction.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS : trois pages Explorer à jour.",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "scripts/site_chrome.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS : navigation, liens utiles et métadonnées harmonisés.",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "scripts/check-seo.py",
+        "--output",
+        "work/stabilisation/inventaire-seo.json"
+      ],
+      "exit_code": 0,
+      "stdout": "SEO : 18 pages, 0 erreur(s), 0 avertissement(s).",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "scripts/test-seo.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "............\n----------------------------------------------------------------------\nRan 12 tests in 0.226s\n\nOK"
+    },
+    {
+      "command": [
+        "python",
+        "scripts/test-publication.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.013s\n\nOK"
+    },
+    {
+      "command": [
+        "python",
+        "scripts/test-publication-integration.py",
+        "--output",
+        "work/stabilisation/publication-statique.json"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS : deux publications successives ; métadonnées, bibliothèque, sitemap, durées et conservation ; copie temporaire supprimée.",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "scripts/test-article-editorial.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_bibliography_is_qualified_and_preserved (__main__.EditorialTests.test_bibliography_is_qualified_and_preserved) ... ok\ntest_editorial_dates_are_explicit_and_consistent (__main__.EditorialTests.test_editorial_dates_are_explicit_and_consistent) ... ok\ntest_inventory_and_publication_urls (__main__.EditorialTests.test_inventory_and_publication_urls) ... ok\ntest_no_unrelated_html_changed_between_revisions (__main__.EditorialTests.test_no_unrelated_html_changed_between_revisions) ... skipped 'Contrôle optionnel des révisions activé avec --head'\ntest_original_assets_ids_and_inline_scripts_are_preserved (__main__.EditorialTests.test_original_assets_ids_and_inline_scripts_are_preserved) ... ok\ntest_science_is_visible_concise_and_sourced (__main__.EditorialTests.test_science_is_visible_concise_and_sourced) ... ok\ntest_share_progressive_markup_and_assets (__main__.EditorialTests.test_share_progressive_markup_and_assets) ... ok\ntest_social_metadata_and_png_files (__main__.EditorialTests.test_social_metadata_and_png_files) ... ok\n\n----------------------------------------------------------------------\nRan 8 tests in 0.087s\n\nOK (skipped=1)"
+    },
+    {
+      "command": [
+        "python",
+        "scripts/test-portabilite.py"
+      ],
+      "exit_code": 0,
+      "stdout": "Vérifié : assets/social-cards/autorite.png — 1200 × 630 — 112,438 octets\nVérifié : assets/social-cards/autrices-pseudonymes.png — 1200 × 630 — 90,417 octets\nVérifié : assets/social-cards/pieuvres-couleur.png — 1200 × 630 — 111,255 octets\nVérifié : assets/social-cards/puissance-etats-unis.png — 1200 × 630 — 109,361 octets\nVérifié : assets/social-cards/roubaix-1917.png — 1200 × 630 — 98,860 octets\nVérifié : assets/social-cards/autorite.png — 1200 × 630 — 112,438 octets\nVérifié : assets/social-cards/autrices-pseudonymes.png — 1200 × 630 — 90,417 octets\nVérifié : assets/social-cards/pieuvres-couleur.png — 1200 × 630 — 111,255 octets\nVérifié : assets/social-cards/puissance-etats-unis.png — 1200 × 630 — 109,361 octets\nVérifié : assets/social-cards/roubaix-1917.png — 1200 × 630 — 98,860 octets\nPASS : 6 articles conformes aux données éditoriales statiques.\nPASS : durées communes et rendus statiques cohérents\nPASS : références vérifiées cohérentes avec le registre.\nPASS : polices identiques, cartes PNG reproductibles, UTF-8, chemin avec espaces et génération indépendante du dossier courant. Plateforme : linux",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "scripts/check-conservation.py",
+        "--revision",
+        "origin/main"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS : contenus principaux, JSON-LD, catalogue et questions conservés depuis 86ee7cbb27172262eca3648afe51cb7d2a81eab8",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "scripts/check-conservation.py",
+        "--revision",
+        "069e2ef41267807fac8ed2466550fac9fafb1d48"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS : contenus principaux, JSON-LD, catalogue et questions conservés depuis 069e2ef41267807fac8ed2466550fac9fafb1d48",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "scripts/check-site.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": "✓ 18 pages, 879 liens et ressources internes, 53 scripts, 17 JSON-LD et 300 questions vérifiés.\nContrôles statiques uniquement : rendu, lecteurs d’écran, HTTP externe et performances réelles non vérifiés.",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "scripts/check-home.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS : accueil, 48 liens/ressources internes, 3 scripts, 5 articles dans le tirage surprise.\nNON VÉRIFIÉ : réponse réseau des 2 images externes, rendu visuel et mesures de performance.",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "scripts/test-article-activities.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS : petite pause — 2 réponses, sélection exclusive, textes historiques et lien source conservés ; chromatophore — initialisation avant activation, 16 fibres SVG, géométrie et ARIA aux niveaux 0/18/33/34/71/72/100.\nDOM simulé : rendu ordinateur/mobile et fonctionnement dans un navigateur non vérifiés.",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "scripts/test-article-components.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS : glossaire, initialisation progressive, cible absente, ouverture/fermeture, deux termes, enfant cliqué, clic extérieur et Échap/focus.\nPASS : médias, catalogue local, URL relatives au script et absolues, couverture/lazy, noms accessibles distincts, crédits/licences conservés, erreur image, erreurs réseau/HTTP/JSON, clé absente et notice incomplète.\nDOM et réseau simulés : le rendu visuel et les réponses HTTP externes restent à vérifier.",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "scripts/test-article-navigation.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS : sommaire desktop/mobile, transfert de focus avant fermeture, navigation native, ancres invalides, clics modifiés, breakpoint et listeners moderne/legacy.\nPASS : les cinq articles ont un sommaire details ouvert sans JavaScript, un summary accessible, le module partagé différé et un contenu principal focalisable ; ancres, IDs, ordre et libellés des liens conservés.\nLimite : DOM et viewport simulés ; défilement réel, rendu, interactions tactiles et lecteurs d’écran non vérifiés.",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "scripts/test-article-share.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS : sans JS, lien permanent utile et actions masquées\nPASS : initialisation progressive, statut lecteur d’écran et aucun focus volé\nPASS : canonique indépendante de location.href, query et fragment retirés\nPASS : canonique absente, vide, relative, HTTP, externe, hors THOT, mal formée ou avec identifiants : actions masquées\nPASS : copie annoncée seulement après résolution, puis boutons réactivés sans déplacement du focus\nPASS : double clic et actions concurrentes ignorés pendant une copie\nPASS : clipboard absent : champ readonly nommé, URL sélectionnée et consigne manuelle honnête\nPASS : refus clipboard : aucun faux succès, repli réutilisé sans champ supplémentaire\nPASS : exception synchrone clipboard récupérée, puis nouvelle copie réussie\nPASS : partage natif disponible : titre exact et canonique, sans prétendre confirmer la publication\nPASS : partage natif en cours : un appel et aucune copie concurrente\nPASS : annulation native silencieuse et sans rejet non géré\nPASS : échec natif annoncé, copie toujours disponible et réussie ensuite\nPASS : exception synchrone native récupérée sans bloquer les boutons\nPASS : blocs absents ou incomplets sans erreur, bloc valide indépendant\n15 cas validés. DOM et API simulés : menus système, clipboard réel, clavier natif et lecteurs d’écran non vérifiés dans un navigateur.",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "scripts/test-article-timelines.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS : comparateur, 3 choix réels, repli sans JS, panneaux exclusifs, statut, Entrée/Espace simulés, focus et textes/sources préservés.\nPASS : chronologie, 6 choix réels, repli sans JS, panneaux exclusifs, statut, Entrée/Espace simulés, focus et textes/sources préservés.\nPASS : Roubaix, huit événements originaux, sources, activation progressive, clics, Entrée/Espace simulés, quatre flèches, Home/End, rebouclage et focus.\nPASS : composants absents/incomplets, replis et contrôles inactifs conservés.\nDOM et clavier natif simulés : rendu mobile/ordinateur, lecteurs d’écran et événements réels du navigateur non vérifiés.",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "scripts/test-autorite-decode.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS : 12 réponses distinctes, 3 étapes, réponses révisables, progression/focus, reset à chaque étape, garde-fous d’initialisation et isolation de l’ancien jeu.\nPASS : bloc #decode-pouvoir conservé depuis 37f17ee ; reste de l’article couvert par check-editorial.py.\nDOM simulé : rendu mobile/ordinateur, clavier réel et lecteurs d’écran non vérifiés.",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "scripts/test-autorite.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS : 3 situations × 3 réactions, textes originaux, exclusivité aria-pressed, indépendance des cas, clics répétés et commandes invalides inactives.\nDOM simulé : rendu mobile/ordinateur et lecteurs d’écran non vérifiés.",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "scripts/test-bibliotheque.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS : recherche multi-mots/accents/tirets/apostrophes, 7 filtres, combinaison, remise à zéro, focus, retour arrière et repli image.\nPASS : restauration q/sujet, rechargement/retour arrière, délai 250 ms, actions immédiates, flush change/pagehide, doublons, filtres invalides, conservation paramètres/hash/préfixe/history.state et APIs refusées/incomplètes.\nPASS : les 6 articles restent dans le catalogue surprise ; stockage refusé et clics natifs préservés.\nPASS : 43 liens/ressources internes, 3 scripts, IDs, ARIA, métadonnées, 6 images décrites et dimensionnées ; catalogue statique accessible sans JS.\nNON VÉRIFIÉ : rendu ordinateur/mobile, CSS calculé, lecteur d’écran, HTTP des liens et de l’image externe (1), performances réelles.",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "scripts/test-home.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS : menu, clavier, focus, clic extérieur, changements de viewport simulés, ancien matchMedia, images en échec.\nPASS : tirage des 5 articles, sous-chemin /Thot/, non-répétition, stockage refusé et clics avec modificateurs.",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "scripts/test-quiz-autrices.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS : 5 associations, mauvaise réponse puis nouvel essai, sélection conservée, temporisations, réinitialisation, focus, fin et réduction des animations.\nPASS : intégration, cinq associations, explication Eliot préservée et reset dans quiz-autrices.html.\nPASS : parcours clavier pseudonyme→première autrice disponible, erreur, réussite, reset et fin ; focus souris/tactile conservé dans quiz-autrices.html.\nPASS : intégration, cinq associations, explication Eliot préservée et reset dans articles/autrices-pseudonymes.html.\nPASS : parcours clavier pseudonyme→première autrice disponible, erreur, réussite, reset et fin ; focus souris/tactile conservé dans articles/autrices-pseudonymes.html.\nDOM simulé : le rendu navigateur et le lecteur d’écran restent à vérifier.",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "node",
+        "scripts/test-quiz.mjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS : 300 questions, 18 parcours, 3 formats, indice, corrections, sauvegarde, migration, onglets, UTC/minuit, badges, focus/menu et chargement incomplet.\nDOM et horloge simulés : le rendu dans un navigateur reste à vérifier.",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "scripts/test-pieuvres-reperes.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS : script existant identique, repère de repos fixe, limites explicites et deux états statiques.",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "scripts/test-puissance-comparaison.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS : trois fiches conservées avec les seuls amendements documentés, périmètre historique explicite, sources et date cohérentes.",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "scripts/test-roubaix-document.py"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS : original intact, licence, aperçu allégé, commentaire conservé, transcription et huit repères statiques.",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "scripts/test-strategies-static.py",
+        "--content-only"
+      ],
+      "exit_code": 0,
+      "stdout": "Contrôle de conservation du périmètre historique ignoré explicitement ; PASS : six chapitres, quatre activités, ancres, médias, quatre empreintes SHA-256, métadonnées publiques, bibliothèque et sitemap ; autres pages préservées.",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

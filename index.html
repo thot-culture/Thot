@@ -42,7 +42,48 @@
       <button id="mobile-menu-button" class="mobile-menu-button" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Ouvrir le menu"><span class="mobile-menu-lines" aria-hidden="true">☰</span><span>Menu</span></button>
       <nav id="primary-navigation" data-site-navigation class="nav-end" aria-label="Navigation principale"><a href="/Thot/index.html" aria-current="page">Accueil</a><a href="/Thot/bibliotheque.html">Bibliothèque</a><a href="/Thot/explorer.html">Explorer</a><a href="/Thot/quiz.html#quiz-classique">Quiz</a><a href="/Thot/quiz.html#daily-title">Défi du jour</a><a href="/Thot/notre-methode.html">Notre méthode</a><a href="/Thot/index.html#concept">À propos</a></nav>
     </div>
-  </header>
+  </header><script data-site-menu>/* Menu commun installé avant le contenu ; liens visibles sans JavaScript. */
+(() => {
+  'use strict';
+  const menu = document.getElementById('mobile-menu-button');
+  const nav = document.getElementById('primary-navigation');
+  if (menu && nav) {
+    const header = menu.closest('header') || menu.closest('.top');
+    const mobile = window.matchMedia('(max-width: 710px)');
+    const close = (restoreFocus = false) => {
+      nav.classList.remove('is-open');
+      menu.setAttribute('aria-expanded', 'false');
+      menu.setAttribute('aria-label', 'Ouvrir le menu');
+      if (restoreFocus) menu.focus();
+    };
+    menu.addEventListener('click', () => {
+      const open = menu.getAttribute('aria-expanded') !== 'true';
+      nav.classList.toggle('is-open', open);
+      menu.setAttribute('aria-expanded', String(open));
+      menu.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    });
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => close()));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') close(true);
+    });
+    document.addEventListener('click', event => {
+      if (header && !header.contains(event.target)) close();
+    });
+    if (header) {
+      header.addEventListener('focusout', event => {
+        if (event.relatedTarget && !header.contains(event.relatedTarget)) close();
+      });
+    }
+    const syncViewport = () => close(mobile.matches && nav.contains(document.activeElement));
+    if (typeof mobile.addEventListener === 'function') mobile.addEventListener('change', syncViewport);
+    else if (typeof mobile.addListener === 'function') mobile.addListener(syncViewport);
+    close();
+    // Replier la navigation uniquement après l’installation de ses interactions.
+    if (header) header.setAttribute('data-menu-ready', '');
+  }
+
+})();
+</script>
 
   <main id="contenu" tabindex="-1">
     <section id="accueil" class="hero" aria-labelledby="main-title">
@@ -54,7 +95,7 @@
           <div class="hero-actions">
             <a class="primary" href="bibliotheque.html">Lire les articles <span aria-hidden="true">↗</span></a>
             <a class="secondary" href="quiz.html#quiz-classique">Jouer au quiz</a>
-            <a class="surprise-link" href="bibliotheque.html" data-surprise aria-label="Ouvrir un article au hasard parmi toute la bibliothèque"><span aria-hidden="true">✦</span> Surprends-moi</a>
+            <a class="surprise-link" href="bibliotheque.html" data-surprise aria-label="Surprends-moi : ouvrir un article au hasard parmi la sélection à la une"><span aria-hidden="true">✦</span> Surprends-moi</a>
           </div>
           <div class="hero-sub"><span>Articles documentés</span><span>300 questions pour jouer</span><span>Accès gratuit</span></div>
         </div>
@@ -86,12 +127,12 @@
       </div>
 
       <article class="latest-story" aria-labelledby="latest-title">
-      <div class="latest-story__visual"><a href="articles/autorite.html" data-discovery-path aria-label="Lire le nouvel article : Pourquoi ne réagit-on pas tous pareil face à l’autorité ?"><div class="discovery-photo discovery-photo--latest">
+      <div class="latest-story__visual"><a href="articles/autorite.html" data-discovery-path aria-label="Lire l’article à la une : Pourquoi ne réagit-on pas tous pareil face à l’autorité ?"><div class="discovery-photo discovery-photo--latest">
         <img src="assets/images/autorite-triptyque.webp" alt="Illustration en trois scènes : un parent et un adolescent discutent, une manifestation, une responsable scolaire échange avec des élèves." width="1200" height="800" loading="lazy" decoding="async">
         <span class="discovery-stamp" aria-hidden="true">PSY</span>
       </div></a><p class="discovery-credit">Illustration originale THOT, générée avec OpenAI ImageGen · 23 octobre 2026</p></div>
       <div class="latest-story__copy">
-        <p class="latest-story__label"><span aria-hidden="true">✦</span> À la une · Dernière publication</p>
+        <p class="latest-story__label"><span aria-hidden="true">✦</span> À la une</p>
         <div class="discovery-meta"><span>Psychologie sociale · Sciences humaines</span><span class="reading-pill">7 min de lecture</span></div>
         <h3 id="latest-title"><a href="articles/autorite.html">Pourquoi ne réagit-on pas tous pareil face à l’autorité ?</a></h3>
         <p>Parents, État, direction scolaire : ce qui nous fait obéir, discuter ou résister dépend-il de notre caractère — ou de la situation ?</p>
@@ -147,7 +188,7 @@
         <span class="discovery-stamp" aria-hidden="true">1917</span>
       </div>
         <div class="discovery-card__copy">
-          <div class="discovery-meta"><span>Histoire · Première Guerre mondiale</span><span class="reading-pill">9 min de lecture</span></div>
+          <div class="discovery-meta"><span>Histoire · Première Guerre mondiale</span><span class="reading-pill">8 min de lecture</span></div>
           <h3 id="card-roubaix-1917">Roubaix en 1917 : vivre sous l’occupation allemande</h3>
           <p>Réquisitions, ravitaillement, contrôles : découvrir le quotidien d’une ville occupée à travers les documents d’époque.</p><p class="discovery-affordance">Document à explorer · affiche de 1917</p>
           <div class="discovery-card__bottom"><span>20 oct. 2026</span><span>Lire l’article <span aria-hidden="true">↗</span></span></div>
