@@ -96,7 +96,7 @@ Les automatismes complets supposent l'intégration des propositions : #22 puis #
 
 ## 6. Tableau de suivi sans statistiques inventées
 
-Le fichier [SUIVI-SEO-HEBDOMADAIRE.csv](seo/SUIVI-SEO-HEBDOMADAIRE.csv) est utilisable dans un tableur. Sa première ligne de données ne contient que les **17 pages publiques indexables et six articles effectivement contrôlés**. Les colonnes Google et le nombre d'articles publiés pendant une semaine complète restent vides.
+Le fichier [SUIVI-SEO-HEBDOMADAIRE.csv](seo/SUIVI-SEO-HEBDOMADAIRE.csv) est utilisable dans un tableur : l'importer en UTF-8 avec la virgule comme séparateur. Sa première ligne de données ne contient que les **17 pages publiques indexables et six articles effectivement contrôlés**. Les colonnes Google et le nombre d'articles publiés pendant une semaine complète restent vides.
 
 | Colonne | Source et lecture |
 |---|---|

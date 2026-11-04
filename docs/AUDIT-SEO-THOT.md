@@ -17,7 +17,7 @@ Livrables associés : [configuration Search Console](GOOGLE-SEARCH-CONSOLE.md), 
 | `main` | Branche principale, dernière publication Pages réussie examinée | `86ee7cbb27172262eca3648afe51cb7d2a81eab8` |
 | [PR #22](https://github.com/thot-culture/Thot/pull/22) | Ouverte, en brouillon, non fusionnée ; base `main` | `c7b62ad61c5ddabc63c61560175a55c85ec80200` |
 | [PR #23](https://github.com/thot-culture/Thot/pull/23) | Ouverte, en brouillon, non fusionnée ; base branche #22 | `2cae9b575b70f58c14c75ff1a9ca11cc213ca101` |
-| Travail SEO | Branche `work/seo-indexation-20261104`, créée depuis #23 | Base explicite : SHA de #23 ci-dessus |
+| [PR #24 — SEO](https://github.com/thot-culture/Thot/pull/24) | Brouillon, branche `work/seo-indexation-20261104`, créée depuis #23 | Base explicite : SHA de #23 ci-dessus |
 
 Le [déploiement Pages 40740217773](https://github.com/thot-culture/Thot/actions/runs/40740217773) est réussi sur le SHA de `main`. **Les corps des 18 réponses HTML publiques sont identiques octet par octet à ce `main`**, et non aux branches #22/#23. La comparaison n'est donc pas une supposition fondée sur le seul état des PR. Les correctifs de stabilisation décrits dans l'audit final ne sont pas encore tous présents sur le site public.
 
@@ -143,6 +143,8 @@ Travail récurrent : un article HTML, sa notice JSON et ses médias ; quatre com
 
 ## 10. Tests réellement exécutés
 
+Les sorties et codes de retour des [25 commandes locales](seo/verifications-locales.json) sont conservés, ainsi que le [bilan GitHub Actions](seo/verifications-github.json). Les captures [Atlas à 390 px](seo/navigateur/explorer-atlas-rome-expansion.html-390.png) et [accueil à 1440 px](seo/navigateur/index.html-1440.png) ont aussi été examinées.
+
 | Vérification | Résultat |
 |---|---|
 | API GitHub : #22, #23 et derniers runs main | Brouillons ouverts/non fusionnés ; Pages sur `86ee7cb…` |
@@ -160,10 +162,12 @@ Travail récurrent : un article HTML, sa notice JSON et ses médias ; quatre com
 | `audit-final-links.py` | 214 requêtes réellement faites ; résultats mixtes détaillés section 6, pas « tous les liens valides » |
 | Lighthouse Atlas public / local | Public inexploitable ; local 74/100, métriques et limites section 7 |
 | `git diff --check` | Contrôlé avant commit ; aucune erreur de whitespace |
+| GitHub Actions : génération Linux/Windows | [Run 41809243086](https://github.com/thot-culture/Thot/actions/runs/41809243086) réussi, sur `e484a9891468528523a4dc09fc6cf1a9ebc0aca0` |
+| GitHub Actions : navigateurs Linux/Windows et audit complet | [Run 41809243135](https://github.com/thot-culture/Thot/actions/runs/41809243135) réussi, même SHA ; affichage/accessibilité, recette native, performances, liens et artefacts exécutés |
 
 Des erreurs intermédiaires ont été corrigées et les contrôles concernés relancés : encodage déclaré manquant dans les nouveaux scripts, fixture de test incomplète, ordre d'insertion de métadonnée dans le générateur Explorer. Aucun test n'a été désactivé pour les résoudre. Les anciens tests historiques en échec décrits par l'audit final ne sont pas présentés comme nouvellement réussis ni supprimés.
 
-Les résultats GitHub Actions propres à la PR SEO devront être consultés sur son SHA ; ne pas confondre les anciens runs #23 avec cette nouvelle validation. Le bilan final de la mission indique les runs réellement terminés.
+Ces deux runs appartiennent à la PR SEO #24 et à son commit de code, distincts des anciens runs #23. Le complément documentaire qui consigne leurs résultats ne modifie pas ce code. Consulter également les vérifications du dernier SHA dans la PR avant toute intégration ; aucune fusion ni publication ne découle automatiquement de ces réussites.
 
 ## 11. Reproduire et limites
 

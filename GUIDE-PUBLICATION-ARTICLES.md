@@ -6,7 +6,7 @@ Publier deux articles par semaine sur THOT en conservant les URL, la présentati
 
 ## 1. Préparer un article et sa branche
 
-Partir de la branche intégrée la plus récente. Tant que la PR #22 et la PR d'audit ne sont pas fusionnées, partir de la branche d'audit et cibler cette même base pour une proposition dépendante. Ne pas publier une branche d'audit par erreur.
+Partir de la branche intégrée la plus récente. Tant que les PR #22, #23 et [#24 (SEO)](https://github.com/thot-culture/Thot/pull/24) ne sont pas intégrées, les automatismes de ce guide se trouvent sur `work/seo-indexation-20261104` : utiliser cette base pour une PR dépendante, ou attendre leur intégration pour partir de `main`. Ne pas publier une branche de travail par erreur.
 
 ```sh
 git status --short
@@ -15,7 +15,7 @@ git switch -c article/mon-sujet origin/main
 python -m pip install -r requirements-tools.txt
 ```
 
-Les commandes supposent que la stabilisation est intégrée à main ; sinon remplacer la référence de départ. Ne jamais écraser des modifications locales ou forcer un push. Python 3.12 et Node 22 sont les versions de la CI.
+Les commandes supposent que la stabilisation et la préparation SEO sont intégrées à main ; avant cela, remplacer `origin/main` par `origin/work/seo-indexation-20261104`. Ne jamais écraser des modifications locales ou forcer un push. Python 3.12 et Node 22 sont les versions de la CI.
 
 Choisir un slug durable, en minuscules, chiffres et tirets, par exemple `histoire-imprimerie`. L'URL publique sera `https://thot-culture.github.io/Thot/articles/histoire-imprimerie.html`. Une fois publiée, conserver cette URL.
 
