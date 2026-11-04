@@ -1,0 +1,2657 @@
+[
+  {
+    "page": "index.html",
+    "fetchTime": "2026-11-04T12:16:00.348Z",
+    "lighthouseVersion": "12.8.2",
+    "environment": {
+      "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+      "benchmarkIndex": 2623.5,
+      "credits": {
+        "axe-core": "4.10.3"
+      }
+    },
+    "scores": {
+      "performance": 0.99,
+      "accessibility": 1,
+      "best-practices": 0.79,
+      "seo": 1
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 1503.2150000000001,
+        "unit": "millisecond"
+      },
+      "largest-contentful-paint": {
+        "value": 1803.2150000000001,
+        "unit": "millisecond"
+      },
+      "cumulative-layout-shift": {
+        "value": 0,
+        "unit": "unitless"
+      },
+      "total-blocking-time": {
+        "value": 0,
+        "unit": "millisecond"
+      },
+      "speed-index": {
+        "value": 1503.2150000000001,
+        "unit": "millisecond"
+      }
+    },
+    "warnings": [],
+    "failedAudits": [
+      {
+        "id": "third-party-cookies",
+        "title": "Uses third-party cookies",
+        "description": "Third-party cookies may be blocked in some contexts. [Learn more about preparing for third-party cookie restrictions](https://privacysandbox.google.com/cookies/prepare/overview).",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "name",
+              "valueType": "text",
+              "label": "Name"
+            },
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL"
+            }
+          ],
+          "items": [
+            {
+              "name": "WMF-Uniq",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg"
+            }
+          ]
+        }
+      },
+      {
+        "id": "label-content-name-mismatch",
+        "title": "Elements with visible text labels do not have matching accessible names.",
+        "description": "Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. [Learn more about accessible names](https://dequeuniversity.com/rules/axe/4.10/label-content-name-mismatch).",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "node",
+              "valueType": "node",
+              "subItemsHeading": {
+                "key": "relatedNode",
+                "valueType": "node"
+              },
+              "label": "Failing Elements"
+            }
+          ],
+          "items": [
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-0-A",
+                "path": "1,HTML,1,BODY,3,MAIN,0,SECTION,0,DIV,0,DIV,3,DIV,2,A",
+                "selector": "div.wrap > div > div.hero-actions > a.surprise-link",
+                "boundingRect": {
+                  "top": 408,
+                  "bottom": 452,
+                  "left": 16,
+                  "right": 396,
+                  "width": 380,
+                  "height": 44
+                },
+                "snippet": "<a class=\"surprise-link\" href=\"bibliotheque.html\" data-surprise=\"\" aria-label=\"Ouvrir un article au hasard parmi les articles de cette page\">",
+                "nodeLabel": "✦\nSurprends-moi",
+                "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-1-A",
+                "path": "1,HTML,1,BODY,3,MAIN,2,SECTION,1,ARTICLE,0,DIV,0,A",
+                "selector": "section#articles > article.latest-story > div.latest-story__visual > a",
+                "boundingRect": {
+                  "top": 1177,
+                  "bottom": 1414,
+                  "left": 17,
+                  "right": 395,
+                  "width": 378,
+                  "height": 236
+                },
+                "snippet": "<a href=\"articles/autorite.html\" data-discovery-path=\"\" aria-label=\"Lire l’article à la une : Pourquoi ne réagit-on pas tous pareil face à l’a…\">",
+                "nodeLabel": "PSY",
+                "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-2-A",
+                "path": "1,HTML,1,BODY,3,MAIN,2,SECTION,4,DIV,0,ARTICLE,0,A",
+                "selector": "section#articles > div.editorial-stories > article.discovery-card > a.discovery-card__link",
+                "boundingRect": {
+                  "top": 1784,
+                  "bottom": 2369,
+                  "left": 17,
+                  "right": 395,
+                  "width": 378,
+                  "height": 586
+                },
+                "snippet": "<a class=\"discovery-card__link\" href=\"articles/pieuvres-couleur.html\" data-discovery-path=\"\" aria-labelledby=\"card-pieuvres-couleur\">",
+                "nodeLabel": "SCI\nSciences · Biologie marine\n7 min de lecture\nComment les pieuvres changent-e…",
+                "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-3-A",
+                "path": "1,HTML,1,BODY,3,MAIN,2,SECTION,4,DIV,1,ARTICLE,0,A",
+                "selector": "section#articles > div.editorial-stories > article.discovery-card > a.discovery-card__link",
+                "boundingRect": {
+                  "top": 2452,
+                  "bottom": 3037,
+                  "left": 17,
+                  "right": 395,
+                  "width": 378,
+                  "height": 586
+                },
+                "snippet": "<a class=\"discovery-card__link\" href=\"articles/puissance-etats-unis.html\" data-discovery-path=\"\" aria-labelledby=\"card-puissance-etats-unis\">",
+                "nodeLabel": "GÉO\nGéographie · Géopolitique\n6 min de lecture\nPourquoi les États-Unis ne peuve…",
+                "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-4-A",
+                "path": "1,HTML,1,BODY,3,MAIN,2,SECTION,4,DIV,2,ARTICLE,0,A",
+                "selector": "section#articles > div.editorial-stories > article.discovery-card > a.discovery-card__link",
+                "boundingRect": {
+                  "top": 3120,
+                  "bottom": 3705,
+                  "left": 17,
+                  "right": 395,
+                  "width": 378,
+                  "height": 586
+                },
+                "snippet": "<a class=\"discovery-card__link\" href=\"articles/roubaix-1917.html\" data-discovery-path=\"\" aria-labelledby=\"card-roubaix-1917\">",
+                "nodeLabel": "1917\nHistoire · Première Guerre mondiale\n8 min de lecture\nRoubaix en 1917 : viv…",
+                "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              }
+            },
+            {
+              "node": {
+                "type": "node",
+                "lhId": "1-5-A",
+                "path": "1,HTML,1,BODY,3,MAIN,2,SECTION,4,DIV,3,ARTICLE,0,A",
+                "selector": "section#articles > div.editorial-stories > article.discovery-card > a.discovery-card__link",
+                "boundingRect": {
+                  "top": 3768,
+                  "bottom": 4340,
+                  "left": 17,
+                  "right": 395,
+                  "width": 378,
+                  "height": 571
+                },
+                "snippet": "<a class=\"discovery-card__link\" href=\"articles/autrices-pseudonymes.html\" data-discovery-path=\"\" aria-labelledby=\"card-autrices-pseudonymes\">",
+                "nodeLabel": "PLUME\nLittérature · Histoire des autrices\n7 min de lecture\nPourquoi des autrice…",
+                "explanation": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+              }
+            }
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "impact": "serious",
+            "tags": [
+              "cat.semantics",
+              "wcag21a",
+              "wcag253",
+              "EN-301-549",
+              "EN-9.2.5.3",
+              "experimental"
+            ]
+          }
+        }
+      },
+      {
+        "id": "inspector-issues",
+        "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+        "description": "Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "issueType",
+              "valueType": "text",
+              "subItemsHeading": {
+                "key": "url",
+                "valueType": "url"
+              },
+              "label": "Issue type"
+            }
+          ],
+          "items": [
+            {
+              "issueType": "Cookie",
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg"
+                  },
+                  {
+                    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "cache-insight",
+        "title": "Use efficient cache lifetimes",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more](https://web.dev/uses-long-cache-ttl/).",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "Request"
+            },
+            {
+              "key": "cacheLifetimeMs",
+              "valueType": "ms",
+              "label": "Cache TTL",
+              "displayUnit": "duration"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Transfer Size",
+              "displayUnit": "kb",
+              "granularity": 1
+            }
+          ],
+          "items": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 254011,
+              "wastedBytes": 254011
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/images/autorite-triptyque.webp",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 193347,
+              "wastedBytes": 193347
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 172079,
+              "wastedBytes": 172079
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/images/roubaix-gambetta.webp",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 151071,
+              "wastedBytes": 151071
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/images/puissance-afghanistan.webp",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 133801,
+              "wastedBytes": 133801
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/site.css",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 36911,
+              "wastedBytes": 36911
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/visual-system.css?v=764ddbb7f568",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 8458,
+              "wastedBytes": 8458
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/decouverte.css?v=1",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 7842,
+              "wastedBytes": 7842
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/experience.css?v=1",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 5789,
+              "wastedBytes": 5789
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/home.css?v=lecture-1",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 2677,
+              "wastedBytes": 2677
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/navigation.css?v=f223850ad41a",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 2341,
+              "wastedBytes": 2341
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/decouverte.js?v=1",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 1493,
+              "wastedBytes": 1493
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/site-home.js",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 1185,
+              "wastedBytes": 1185
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/reading-times.js",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 905,
+              "wastedBytes": 905
+            }
+          ],
+          "sortedBy": [
+            "wastedBytes"
+          ],
+          "skipSumming": [
+            "cacheLifetimeMs"
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "wastedBytes": 971910
+          }
+        }
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/lighthouse/performance/critical-request-chains) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load.",
+        "details": {
+          "type": "list",
+          "items": [
+            {
+              "type": "list-section",
+              "value": {
+                "type": "network-tree",
+                "chains": {
+                  "13B1B7610F895D09C298C439C58812F6": {
+                    "url": "http://127.0.0.1:8867/Thot/index.html",
+                    "navStartToEndTime": 19,
+                    "transferSize": 21277,
+                    "isLongest": true,
+                    "children": {
+                      "7313.8": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/site-home.js",
+                        "navStartToEndTime": 35,
+                        "transferSize": 1185,
+                        "isLongest": true,
+                        "children": {}
+                      },
+                      "7313.7": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/visual-system.css?v=764ddbb7f568",
+                        "navStartToEndTime": 34,
+                        "transferSize": 8458,
+                        "children": {}
+                      },
+                      "7313.6": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/navigation.css?v=f223850ad41a",
+                        "navStartToEndTime": 33,
+                        "transferSize": 2341,
+                        "children": {}
+                      },
+                      "7313.2": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/site.css",
+                        "navStartToEndTime": 32,
+                        "transferSize": 36911,
+                        "children": {}
+                      },
+                      "7313.5": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/experience.css?v=1",
+                        "navStartToEndTime": 31,
+                        "transferSize": 5789,
+                        "children": {}
+                      },
+                      "7313.3": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/decouverte.css?v=1",
+                        "navStartToEndTime": 30,
+                        "transferSize": 7842,
+                        "children": {}
+                      },
+                      "7313.4": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/home.css?v=lecture-1",
+                        "navStartToEndTime": 30,
+                        "transferSize": 2677,
+                        "children": {}
+                      }
+                    }
+                  }
+                },
+                "longestChain": {
+                  "duration": 35
+                }
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnected origins",
+              "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+              "value": {
+                "type": "text",
+                "value": "no origins were preconnected"
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnect candidates",
+              "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+              "value": {
+                "type": "text",
+                "value": "No additional origins are good candidates for preconnecting"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render blocking requests",
+        "description": "Requests are blocking the page's initial render, which may delay LCP. [Deferring or inlining](https://web.dev/learn/performance/understanding-the-critical-path#render-blocking_resources) can move these network requests out of the critical path.",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Transfer Size"
+            },
+            {
+              "key": "wastedMs",
+              "valueType": "timespanMs",
+              "label": "Duration"
+            }
+          ],
+          "items": [
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/site-home.js",
+              "totalBytes": 1185,
+              "wastedMs": 152
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/visual-system.css?v=764ddbb7f568",
+              "totalBytes": 8458,
+              "wastedMs": 452
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/site.css",
+              "totalBytes": 36911,
+              "wastedMs": 752
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/navigation.css?v=f223850ad41a",
+              "totalBytes": 2341,
+              "wastedMs": 302
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/experience.css?v=1",
+              "totalBytes": 5789,
+              "wastedMs": 452
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/decouverte.css?v=1",
+              "totalBytes": 7842,
+              "wastedMs": 452
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/home.css?v=lecture-1",
+              "totalBytes": 2677,
+              "wastedMs": 302
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "page": "articles/autorite.html",
+    "fetchTime": "2026-11-04T12:16:07.727Z",
+    "lighthouseVersion": "12.8.2",
+    "environment": {
+      "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+      "benchmarkIndex": 2632.5,
+      "credits": {
+        "axe-core": "4.10.3"
+      }
+    },
+    "scores": {
+      "performance": 0.96,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 1354.1896,
+        "unit": "millisecond"
+      },
+      "largest-contentful-paint": {
+        "value": 2706.2844,
+        "unit": "millisecond"
+      },
+      "cumulative-layout-shift": {
+        "value": 0,
+        "unit": "unitless"
+      },
+      "total-blocking-time": {
+        "value": 0,
+        "unit": "millisecond"
+      },
+      "speed-index": {
+        "value": 1354.1896,
+        "unit": "millisecond"
+      }
+    },
+    "warnings": [],
+    "failedAudits": [
+      {
+        "id": "largest-contentful-paint-element",
+        "title": "Largest Contentful Paint element",
+        "description": "This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "details": {
+          "type": "list",
+          "items": [
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "node",
+                  "valueType": "node",
+                  "label": "Element"
+                }
+              ],
+              "items": [
+                {
+                  "node": {
+                    "type": "node",
+                    "lhId": "page-0-H1",
+                    "path": "1,HTML,1,BODY,3,MAIN,0,HEADER,0,DIV,1,H1",
+                    "selector": "main > header.entete > div.largeur > h1",
+                    "boundingRect": {
+                      "top": 181,
+                      "bottom": 263,
+                      "left": 16,
+                      "right": 396,
+                      "width": 380,
+                      "height": 82
+                    },
+                    "snippet": "<h1>",
+                    "nodeLabel": "Pourquoi ne réagit-on pas tous pareil face à l’autorité ?"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "phase",
+                  "valueType": "text",
+                  "label": "Phase"
+                },
+                {
+                  "key": "percent",
+                  "valueType": "text",
+                  "label": "% of LCP"
+                },
+                {
+                  "key": "timing",
+                  "valueType": "ms",
+                  "label": "Timing"
+                }
+              ],
+              "items": [
+                {
+                  "phase": "TTFB",
+                  "timing": 452.0948,
+                  "percent": "17%"
+                },
+                {
+                  "phase": "Load Delay",
+                  "timing": 0,
+                  "percent": "0%"
+                },
+                {
+                  "phase": "Load Time",
+                  "timing": 0,
+                  "percent": "0%"
+                },
+                {
+                  "phase": "Render Delay",
+                  "timing": 2254.1896,
+                  "percent": "83%"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "cache-insight",
+        "title": "Use efficient cache lifetimes",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more](https://web.dev/uses-long-cache-ttl/).",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "Request"
+            },
+            {
+              "key": "cacheLifetimeMs",
+              "valueType": "ms",
+              "label": "Cache TTL",
+              "displayUnit": "duration"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Transfer Size",
+              "displayUnit": "kb",
+              "granularity": 1
+            }
+          ],
+          "items": [
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/images/autorite-triptyque.webp",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 193347,
+              "wastedBytes": 193347
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/visual-system.css?v=764ddbb7f568",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 8458,
+              "wastedBytes": 8458
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/article.css?v=lecture-1",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 7433,
+              "wastedBytes": 7433
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/autorite.css?v=decode-1",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 5925,
+              "wastedBytes": 5925
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/experience.css?v=1",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 5789,
+              "wastedBytes": 5789
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/autorite-decode.js?v=decode-1",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 5755,
+              "wastedBytes": 5755
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/article-editorial.css?v=science-partage-1",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 3911,
+              "wastedBytes": 3911
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/article-share.js?v=science-partage-1",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 3354,
+              "wastedBytes": 3354
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/autorite-activity.js?v=audit-1",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 2399,
+              "wastedBytes": 2399
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/navigation.css?v=f223850ad41a",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 2341,
+              "wastedBytes": 2341
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/puissance-sommaire.js?v=lecture-1",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 1575,
+              "wastedBytes": 1575
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/reading-times.js",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 905,
+              "wastedBytes": 905
+            }
+          ],
+          "sortedBy": [
+            "wastedBytes"
+          ],
+          "skipSumming": [
+            "cacheLifetimeMs"
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "wastedBytes": 241192
+          }
+        }
+      },
+      {
+        "id": "image-delivery-insight",
+        "title": "Improve image delivery",
+        "description": "Reducing the download time of images can improve the perceived load time of the page and LCP. [Learn more about optimizing image size](https://developer.chrome.com/docs/lighthouse/performance/uses-optimized-images/)",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL",
+              "subItemsHeading": {
+                "key": "reason",
+                "valueType": "text"
+              }
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Resource Size"
+            },
+            {
+              "key": "wastedBytes",
+              "valueType": "bytes",
+              "label": "Est Savings",
+              "subItemsHeading": {
+                "key": "wastedBytes",
+                "valueType": "bytes"
+              }
+            }
+          ],
+          "items": [
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/images/autorite-triptyque.webp",
+              "totalBytes": 193156,
+              "wastedBytes": 177280,
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "reason": "Increasing the image compression factor could improve this image's download size.",
+                    "wastedBytes": 33156
+                  },
+                  {
+                    "reason": "This image file is larger than it needs to be (1200x800) for its displayed dimensions (378x252). Use responsive images to reduce the image download size.",
+                    "wastedBytes": 173990
+                  }
+                ]
+              }
+            }
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "wastedBytes": 177280
+          }
+        }
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/lighthouse/performance/critical-request-chains) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load.",
+        "details": {
+          "type": "list",
+          "items": [
+            {
+              "type": "list-section",
+              "value": {
+                "type": "network-tree",
+                "chains": {
+                  "53DCA4220B7A6692EC5D7F4157B30F78": {
+                    "url": "http://127.0.0.1:8867/Thot/articles/autorite.html",
+                    "navStartToEndTime": 16,
+                    "transferSize": 45110,
+                    "isLongest": true,
+                    "children": {
+                      "7379.7": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/visual-system.css?v=764ddbb7f568",
+                        "navStartToEndTime": 30,
+                        "transferSize": 8458,
+                        "isLongest": true,
+                        "children": {}
+                      },
+                      "7379.6": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/navigation.css?v=f223850ad41a",
+                        "navStartToEndTime": 27,
+                        "transferSize": 2341,
+                        "children": {}
+                      },
+                      "7379.4": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/article-editorial.css?v=science-partage-1",
+                        "navStartToEndTime": 25,
+                        "transferSize": 3911,
+                        "children": {}
+                      },
+                      "7379.5": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/experience.css?v=1",
+                        "navStartToEndTime": 24,
+                        "transferSize": 5789,
+                        "children": {}
+                      },
+                      "7379.2": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/article.css?v=lecture-1",
+                        "navStartToEndTime": 24,
+                        "transferSize": 7433,
+                        "children": {}
+                      },
+                      "7379.3": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/autorite.css?v=decode-1",
+                        "navStartToEndTime": 23,
+                        "transferSize": 5925,
+                        "children": {}
+                      }
+                    }
+                  }
+                },
+                "longestChain": {
+                  "duration": 30
+                }
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnected origins",
+              "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+              "value": {
+                "type": "text",
+                "value": "no origins were preconnected"
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnect candidates",
+              "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+              "value": {
+                "type": "text",
+                "value": "No additional origins are good candidates for preconnecting"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render blocking requests",
+        "description": "Requests are blocking the page's initial render, which may delay LCP. [Deferring or inlining](https://web.dev/learn/performance/understanding-the-critical-path#render-blocking_resources) can move these network requests out of the critical path.",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Transfer Size"
+            },
+            {
+              "key": "wastedMs",
+              "valueType": "timespanMs",
+              "label": "Duration"
+            }
+          ],
+          "items": [
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/visual-system.css?v=764ddbb7f568",
+              "totalBytes": 8458,
+              "wastedMs": 452
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/navigation.css?v=f223850ad41a",
+              "totalBytes": 2341,
+              "wastedMs": 302
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/article-editorial.css?v=science-partage-1",
+              "totalBytes": 3911,
+              "wastedMs": 302
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/article.css?v=lecture-1",
+              "totalBytes": 7433,
+              "wastedMs": 302
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/experience.css?v=1",
+              "totalBytes": 5789,
+              "wastedMs": 452
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/autorite.css?v=decode-1",
+              "totalBytes": 5925,
+              "wastedMs": 452
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "page": "articles/pieuvres-couleur.html",
+    "fetchTime": "2026-11-04T12:16:15.538Z",
+    "lighthouseVersion": "12.8.2",
+    "environment": {
+      "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+      "benchmarkIndex": 2601,
+      "credits": {
+        "axe-core": "4.10.3"
+      }
+    },
+    "scores": {
+      "performance": 0.93,
+      "accessibility": 1,
+      "best-practices": 0.79,
+      "seo": 1
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 1509.3863999999999,
+        "unit": "millisecond"
+      },
+      "largest-contentful-paint": {
+        "value": 3168.3089999999997,
+        "unit": "millisecond"
+      },
+      "cumulative-layout-shift": {
+        "value": 0.03114895973743926,
+        "unit": "unitless"
+      },
+      "total-blocking-time": {
+        "value": 0,
+        "unit": "millisecond"
+      },
+      "speed-index": {
+        "value": 1509.3863999999999,
+        "unit": "millisecond"
+      }
+    },
+    "warnings": [],
+    "failedAudits": [
+      {
+        "id": "third-party-cookies",
+        "title": "Uses third-party cookies",
+        "description": "Third-party cookies may be blocked in some contexts. [Learn more about preparing for third-party cookie restrictions](https://privacysandbox.google.com/cookies/prepare/overview).",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "name",
+              "valueType": "text",
+              "label": "Name"
+            },
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL"
+            }
+          ],
+          "items": [
+            {
+              "name": "WMF-Uniq",
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Camouflage_octopus.jpg/960px-Camouflage_octopus.jpg"
+            }
+          ]
+        }
+      },
+      {
+        "id": "largest-contentful-paint-element",
+        "title": "Largest Contentful Paint element",
+        "description": "This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "details": {
+          "type": "list",
+          "items": [
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "node",
+                  "valueType": "node",
+                  "label": "Element"
+                }
+              ],
+              "items": [
+                {
+                  "node": {
+                    "type": "node",
+                    "lhId": "page-0-P",
+                    "path": "1,HTML,1,BODY,3,MAIN,0,HEADER,0,DIV,2,P",
+                    "selector": "main > header.entete > div.largeur > p.accroche",
+                    "boundingRect": {
+                      "top": 279,
+                      "bottom": 361,
+                      "left": 16,
+                      "right": 396,
+                      "width": 380,
+                      "height": 82
+                    },
+                    "snippet": "<p class=\"accroche\">",
+                    "nodeLabel": "Des cellules pigmentées, des muscles minuscules et des signaux nerveux : le méc…"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "phase",
+                  "valueType": "text",
+                  "label": "Phase"
+                },
+                {
+                  "key": "percent",
+                  "valueType": "text",
+                  "label": "% of LCP"
+                },
+                {
+                  "key": "timing",
+                  "valueType": "ms",
+                  "label": "Timing"
+                }
+              ],
+              "items": [
+                {
+                  "phase": "TTFB",
+                  "timing": 453.1288,
+                  "percent": "14%"
+                },
+                {
+                  "phase": "Load Delay",
+                  "timing": 0,
+                  "percent": "0%"
+                },
+                {
+                  "phase": "Load Time",
+                  "timing": 0,
+                  "percent": "0%"
+                },
+                {
+                  "phase": "Render Delay",
+                  "timing": 2715.1802,
+                  "percent": "86%"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "inspector-issues",
+        "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+        "description": "Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "issueType",
+              "valueType": "text",
+              "subItemsHeading": {
+                "key": "url",
+                "valueType": "url"
+              },
+              "label": "Issue type"
+            }
+          ],
+          "items": [
+            {
+              "issueType": "Cookie",
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Camouflage_octopus.jpg/960px-Camouflage_octopus.jpg"
+                  },
+                  {
+                    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "cache-insight",
+        "title": "Use efficient cache lifetimes",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more](https://web.dev/uses-long-cache-ttl/).",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "Request"
+            },
+            {
+              "key": "cacheLifetimeMs",
+              "valueType": "ms",
+              "label": "Cache TTL",
+              "displayUnit": "duration"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Transfer Size",
+              "displayUnit": "kb",
+              "granularity": 1
+            }
+          ],
+          "items": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Camouflage_octopus.jpg/960px-Camouflage_octopus.jpg",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 253183,
+              "wastedBytes": 253183
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 171899,
+              "wastedBytes": 171899
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/visual-system.css?v=764ddbb7f568",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 8458,
+              "wastedBytes": 8458
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/decouverte.css?v=1",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 7842,
+              "wastedBytes": 7842
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/article.css?v=lecture-1",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 7433,
+              "wastedBytes": 7433
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/experience.css?v=1",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 5789,
+              "wastedBytes": 5789
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/article-editorial.css?v=science-partage-1",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 3911,
+              "wastedBytes": 3911
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/pieuvres.css?v=chromato-2",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 3759,
+              "wastedBytes": 3759
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/article-share.js?v=science-partage-1",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 3354,
+              "wastedBytes": 3354
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/explorer/illustrations.css?v=thot20",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 2637,
+              "wastedBytes": 2637
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/navigation.css?v=f223850ad41a",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 2341,
+              "wastedBytes": 2341
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/explorer/illustrations.js?v=thot20",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 1587,
+              "wastedBytes": 1587
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/puissance-sommaire.js?v=lecture-1",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 1575,
+              "wastedBytes": 1575
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/reading-times.js",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 905,
+              "wastedBytes": 905
+            }
+          ],
+          "sortedBy": [
+            "wastedBytes"
+          ],
+          "skipSumming": [
+            "cacheLifetimeMs"
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "wastedBytes": 474673
+          }
+        }
+      },
+      {
+        "id": "image-delivery-insight",
+        "title": "Improve image delivery",
+        "description": "Reducing the download time of images can improve the perceived load time of the page and LCP. [Learn more about optimizing image size](https://developer.chrome.com/docs/lighthouse/performance/uses-optimized-images/)",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL",
+              "subItemsHeading": {
+                "key": "reason",
+                "valueType": "text"
+              }
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Resource Size"
+            },
+            {
+              "key": "wastedBytes",
+              "valueType": "bytes",
+              "label": "Est Savings",
+              "subItemsHeading": {
+                "key": "wastedBytes",
+                "valueType": "bytes"
+              }
+            }
+          ],
+          "items": [
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Camouflage_octopus.jpg/960px-Camouflage_octopus.jpg",
+              "totalBytes": 251103,
+              "wastedBytes": 235227,
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "reason": "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.",
+                    "wastedBytes": 148703
+                  },
+                  {
+                    "reason": "This image file is larger than it needs to be (960x640) for its displayed dimensions (378x252). Use responsive images to reduce the image download size.",
+                    "wastedBytes": 212172
+                  }
+                ]
+              }
+            },
+            {
+              "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+              "totalBytes": 170000,
+              "wastedBytes": 152314,
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "reason": "Using a modern image format (WebP, AVIF) or increasing the image compression could improve this image's download size.",
+                    "wastedBytes": 55920
+                  },
+                  {
+                    "reason": "This image file is larger than it needs to be (960x713) for its displayed dimensions (378x281). Use responsive images to reduce the image download size.",
+                    "wastedBytes": 143644
+                  }
+                ]
+              }
+            }
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "wastedBytes": 387541
+          }
+        }
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/lighthouse/performance/critical-request-chains) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load.",
+        "details": {
+          "type": "list",
+          "items": [
+            {
+              "type": "list-section",
+              "value": {
+                "type": "network-tree",
+                "chains": {
+                  "C5005F4AB646F5E2C319B7A082EBD898": {
+                    "url": "http://127.0.0.1:8867/Thot/articles/pieuvres-couleur.html",
+                    "navStartToEndTime": 15,
+                    "transferSize": 48460,
+                    "isLongest": true,
+                    "children": {
+                      "7396.9": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/visual-system.css?v=764ddbb7f568",
+                        "navStartToEndTime": 30,
+                        "transferSize": 8458,
+                        "isLongest": true,
+                        "children": {}
+                      },
+                      "7396.8": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/navigation.css?v=f223850ad41a",
+                        "navStartToEndTime": 29,
+                        "transferSize": 2341,
+                        "children": {}
+                      },
+                      "7396.7": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/explorer/illustrations.css?v=thot20",
+                        "navStartToEndTime": 28,
+                        "transferSize": 2637,
+                        "children": {}
+                      },
+                      "7396.5": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/article-editorial.css?v=science-partage-1",
+                        "navStartToEndTime": 27,
+                        "transferSize": 3911,
+                        "children": {}
+                      },
+                      "7396.6": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/experience.css?v=1",
+                        "navStartToEndTime": 26,
+                        "transferSize": 5789,
+                        "children": {}
+                      },
+                      "7396.4": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/pieuvres.css?v=chromato-2",
+                        "navStartToEndTime": 25,
+                        "transferSize": 3759,
+                        "children": {}
+                      },
+                      "7396.2": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/article.css?v=lecture-1",
+                        "navStartToEndTime": 24,
+                        "transferSize": 7433,
+                        "children": {}
+                      },
+                      "7396.3": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/decouverte.css?v=1",
+                        "navStartToEndTime": 23,
+                        "transferSize": 7842,
+                        "children": {}
+                      }
+                    }
+                  }
+                },
+                "longestChain": {
+                  "duration": 30
+                }
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnected origins",
+              "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+              "value": {
+                "type": "text",
+                "value": "no origins were preconnected"
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnect candidates",
+              "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+              "value": {
+                "type": "text",
+                "value": "No additional origins are good candidates for preconnecting"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render blocking requests",
+        "description": "Requests are blocking the page's initial render, which may delay LCP. [Deferring or inlining](https://web.dev/learn/performance/understanding-the-critical-path#render-blocking_resources) can move these network requests out of the critical path.",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Transfer Size"
+            },
+            {
+              "key": "wastedMs",
+              "valueType": "timespanMs",
+              "label": "Duration"
+            }
+          ],
+          "items": [
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/visual-system.css?v=764ddbb7f568",
+              "totalBytes": 8458,
+              "wastedMs": 303
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/navigation.css?v=f223850ad41a",
+              "totalBytes": 2341,
+              "wastedMs": 153
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/explorer/illustrations.css?v=thot20",
+              "totalBytes": 2637,
+              "wastedMs": 303
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/article-editorial.css?v=science-partage-1",
+              "totalBytes": 3911,
+              "wastedMs": 303
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/experience.css?v=1",
+              "totalBytes": 5789,
+              "wastedMs": 453
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/pieuvres.css?v=chromato-2",
+              "totalBytes": 3759,
+              "wastedMs": 303
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/article.css?v=lecture-1",
+              "totalBytes": 7433,
+              "wastedMs": 303
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/decouverte.css?v=1",
+              "totalBytes": 7842,
+              "wastedMs": 453
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "page": "explorer/atlas/rome-expansion.html",
+    "fetchTime": "2026-11-04T12:16:23.311Z",
+    "lighthouseVersion": "12.8.2",
+    "environment": {
+      "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+      "benchmarkIndex": 2658,
+      "credits": {
+        "axe-core": "4.10.3"
+      }
+    },
+    "scores": {
+      "performance": 0.74,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 4205.7081,
+        "unit": "millisecond"
+      },
+      "largest-contentful-paint": {
+        "value": 4482.7081,
+        "unit": "millisecond"
+      },
+      "cumulative-layout-shift": {
+        "value": 0,
+        "unit": "unitless"
+      },
+      "total-blocking-time": {
+        "value": 0,
+        "unit": "millisecond"
+      },
+      "speed-index": {
+        "value": 4205.7081,
+        "unit": "millisecond"
+      }
+    },
+    "warnings": [],
+    "failedAudits": [
+      {
+        "id": "largest-contentful-paint-element",
+        "title": "Largest Contentful Paint element",
+        "description": "This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "details": {
+          "type": "list",
+          "items": [
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "node",
+                  "valueType": "node",
+                  "label": "Element"
+                }
+              ],
+              "items": [
+                {
+                  "node": {
+                    "type": "node",
+                    "lhId": "page-0-P",
+                    "path": "1,HTML,1,BODY,3,MAIN,1,DIV,0,HEADER,0,DIV,2,P",
+                    "selector": "div#rome-atlas > header.atlas-hero > div > p.atlas-opening",
+                    "boundingRect": {
+                      "top": 254,
+                      "bottom": 302,
+                      "left": 16,
+                      "right": 396,
+                      "width": 380,
+                      "height": 48
+                    },
+                    "snippet": "<p class=\"atlas-opening\">",
+                    "nodeLabel": "Comment une cité italienne est-elle devenue le centre d’un immense empire ?"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "phase",
+                  "valueType": "text",
+                  "label": "Phase"
+                },
+                {
+                  "key": "percent",
+                  "valueType": "text",
+                  "label": "% of LCP"
+                },
+                {
+                  "key": "timing",
+                  "valueType": "ms",
+                  "label": "Timing"
+                }
+              ],
+              "items": [
+                {
+                  "phase": "TTFB",
+                  "timing": 452.85405,
+                  "percent": "10%"
+                },
+                {
+                  "phase": "Load Delay",
+                  "timing": 0,
+                  "percent": "0%"
+                },
+                {
+                  "phase": "Load Time",
+                  "timing": 0,
+                  "percent": "0%"
+                },
+                {
+                  "phase": "Render Delay",
+                  "timing": 4029.85405,
+                  "percent": "90%"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "cache-insight",
+        "title": "Use efficient cache lifetimes",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more](https://web.dev/uses-long-cache-ttl/).",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "Request"
+            },
+            {
+              "key": "cacheLifetimeMs",
+              "valueType": "ms",
+              "label": "Cache TTL",
+              "displayUnit": "duration"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Transfer Size",
+              "displayUnit": "kb",
+              "granularity": 1
+            }
+          ],
+          "items": [
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/explorer-v2/media/augustus.webp",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 155553,
+              "wastedBytes": 155553
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/explorer-v2/media/trajan.webp",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 63196,
+              "wastedBytes": 63196
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/explorer-v2/media/caesar.webp",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 37682,
+              "wastedBytes": 37682
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/explorer-v2/atlas.js?v=6b51841696cc",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 31179,
+              "wastedBytes": 31179
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/explorer-v2/atlas.css?v=bf3352b8a341",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 27899,
+              "wastedBytes": 27899
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/explorer-v2/media/hannibal.webp",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 23210,
+              "wastedBytes": 23210
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/explorer-v2/common.css?v=4e1c1c265f3e",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 9047,
+              "wastedBytes": 9047
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/visual-system.css?v=764ddbb7f568",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 8458,
+              "wastedBytes": 8458
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/navigation.css?v=f223850ad41a",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 2341,
+              "wastedBytes": 2341
+            }
+          ],
+          "sortedBy": [
+            "wastedBytes"
+          ],
+          "skipSumming": [
+            "cacheLifetimeMs"
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "wastedBytes": 358565
+          }
+        }
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/lighthouse/performance/critical-request-chains) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load.",
+        "details": {
+          "type": "list",
+          "items": [
+            {
+              "type": "list-section",
+              "value": {
+                "type": "network-tree",
+                "chains": {
+                  "0E9F8D6344CA388C5898E8DE14EC93CB": {
+                    "url": "http://127.0.0.1:8867/Thot/explorer/atlas/rome-expansion.html",
+                    "navStartToEndTime": 54,
+                    "transferSize": 608754,
+                    "isLongest": true,
+                    "children": {
+                      "7410.6": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/visual-system.css?v=764ddbb7f568",
+                        "navStartToEndTime": 60,
+                        "transferSize": 8458,
+                        "isLongest": true,
+                        "children": {}
+                      },
+                      "7410.2": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/explorer-v2/common.css?v=4e1c1c265f3e",
+                        "navStartToEndTime": 59,
+                        "transferSize": 9047,
+                        "children": {}
+                      },
+                      "7410.5": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/navigation.css?v=f223850ad41a",
+                        "navStartToEndTime": 58,
+                        "transferSize": 2341,
+                        "children": {}
+                      },
+                      "7410.3": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/explorer-v2/atlas.css?v=bf3352b8a341",
+                        "navStartToEndTime": 57,
+                        "transferSize": 27899,
+                        "children": {}
+                      }
+                    }
+                  }
+                },
+                "longestChain": {
+                  "duration": 60
+                }
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnected origins",
+              "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+              "value": {
+                "type": "text",
+                "value": "no origins were preconnected"
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnect candidates",
+              "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+              "value": {
+                "type": "text",
+                "value": "No additional origins are good candidates for preconnecting"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render blocking requests",
+        "description": "Requests are blocking the page's initial render, which may delay LCP. [Deferring or inlining](https://web.dev/learn/performance/understanding-the-critical-path#render-blocking_resources) can move these network requests out of the critical path.",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Transfer Size"
+            },
+            {
+              "key": "wastedMs",
+              "valueType": "timespanMs",
+              "label": "Duration"
+            }
+          ],
+          "items": [
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/explorer-v2/common.css?v=4e1c1c265f3e",
+              "totalBytes": 9047,
+              "wastedMs": 303
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/visual-system.css?v=764ddbb7f568",
+              "totalBytes": 8458,
+              "wastedMs": 453
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/navigation.css?v=f223850ad41a",
+              "totalBytes": 2341,
+              "wastedMs": 303
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/explorer-v2/atlas.css?v=bf3352b8a341",
+              "totalBytes": 27899,
+              "wastedMs": 603
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "page": "explorer/enquetes/mer-aral.html",
+    "fetchTime": "2026-11-04T12:16:30.712Z",
+    "lighthouseVersion": "12.8.2",
+    "environment": {
+      "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+      "benchmarkIndex": 2625.5,
+      "credits": {
+        "axe-core": "4.10.3"
+      }
+    },
+    "scores": {
+      "performance": 0.91,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 1654.6787,
+        "unit": "millisecond"
+      },
+      "largest-contentful-paint": {
+        "value": 3454.6786999999995,
+        "unit": "millisecond"
+      },
+      "cumulative-layout-shift": {
+        "value": 0,
+        "unit": "unitless"
+      },
+      "total-blocking-time": {
+        "value": 0,
+        "unit": "millisecond"
+      },
+      "speed-index": {
+        "value": 1654.6787,
+        "unit": "millisecond"
+      }
+    },
+    "warnings": [],
+    "failedAudits": [
+      {
+        "id": "largest-contentful-paint-element",
+        "title": "Largest Contentful Paint element",
+        "description": "This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "details": {
+          "type": "list",
+          "items": [
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "node",
+                  "valueType": "node",
+                  "label": "Element"
+                }
+              ],
+              "items": [
+                {
+                  "node": {
+                    "type": "node",
+                    "lhId": "page-0-IMG",
+                    "path": "1,HTML,1,BODY,3,MAIN,1,DIV,0,SECTION,0,DIV,0,IMG",
+                    "selector": "div.aral-experience > section.aral-opening > div.aral-opening-image > img",
+                    "boundingRect": {
+                      "top": 132,
+                      "bottom": 432,
+                      "left": 16,
+                      "right": 396,
+                      "width": 380,
+                      "height": 300
+                    },
+                    "snippet": "<img src=\"/Thot/assets/explorer-v2/media/moynaq-original.jpg\" alt=\"Deux bateaux échoués sur un sol sec à Moynaq, photographiés en mars 2011.\" width=\"1901\" height=\"1268\" fetchpriority=\"high\">",
+                    "nodeLabel": "Deux bateaux échoués sur un sol sec à Moynaq, photographiés en mars 2011."
+                  }
+                }
+              ]
+            },
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "phase",
+                  "valueType": "text",
+                  "label": "Phase"
+                },
+                {
+                  "key": "percent",
+                  "valueType": "text",
+                  "label": "% of LCP"
+                },
+                {
+                  "key": "timing",
+                  "valueType": "ms",
+                  "label": "Timing"
+                }
+              ],
+              "items": [
+                {
+                  "phase": "TTFB",
+                  "timing": 452.33935,
+                  "percent": "13%"
+                },
+                {
+                  "phase": "Load Delay",
+                  "timing": 262.5693772611641,
+                  "percent": "8%"
+                },
+                {
+                  "phase": "Load Time",
+                  "timing": 436.6508394052146,
+                  "percent": "13%"
+                },
+                {
+                  "phase": "Render Delay",
+                  "timing": 2303.119133333621,
+                  "percent": "67%"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "cache-insight",
+        "title": "Use efficient cache lifetimes",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more](https://web.dev/uses-long-cache-ttl/).",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "Request"
+            },
+            {
+              "key": "cacheLifetimeMs",
+              "valueType": "ms",
+              "label": "Cache TTL",
+              "displayUnit": "duration"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Transfer Size",
+              "displayUnit": "kb",
+              "granularity": 1
+            }
+          ],
+          "items": [
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/explorer-v2/media/moynaq-original.jpg",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 265772,
+              "wastedBytes": 265772
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/explorer-v2/aral.js?v=266029532fe5",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 49092,
+              "wastedBytes": 49092
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/explorer-v2/aral.css?v=783bc199a5ea",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 28611,
+              "wastedBytes": 28611
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/explorer-v2/common.css?v=4e1c1c265f3e",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 9047,
+              "wastedBytes": 9047
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/visual-system.css?v=764ddbb7f568",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 8458,
+              "wastedBytes": 8458
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/navigation.css?v=f223850ad41a",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 2341,
+              "wastedBytes": 2341
+            }
+          ],
+          "sortedBy": [
+            "wastedBytes"
+          ],
+          "skipSumming": [
+            "cacheLifetimeMs"
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "wastedBytes": 363321
+          }
+        }
+      },
+      {
+        "id": "image-delivery-insight",
+        "title": "Improve image delivery",
+        "description": "Reducing the download time of images can improve the perceived load time of the page and LCP. [Learn more about optimizing image size](https://developer.chrome.com/docs/lighthouse/performance/uses-optimized-images/)",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL",
+              "subItemsHeading": {
+                "key": "reason",
+                "valueType": "text"
+              }
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Resource Size"
+            },
+            {
+              "key": "wastedBytes",
+              "valueType": "bytes",
+              "label": "Est Savings",
+              "subItemsHeading": {
+                "key": "wastedBytes",
+                "valueType": "bytes"
+              }
+            }
+          ],
+          "items": [
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/explorer-v2/media/moynaq-original.jpg",
+              "totalBytes": 265581,
+              "wastedBytes": 247977,
+              "subItems": {
+                "type": "subitems",
+                "items": [
+                  {
+                    "reason": "This image file is larger than it needs to be (1605x1268) for its displayed dimensions (450x300). Use responsive images to reduce the image download size.",
+                    "wastedBytes": 247977
+                  }
+                ]
+              }
+            }
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "wastedBytes": 247977
+          }
+        }
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/lighthouse/performance/critical-request-chains) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load.",
+        "details": {
+          "type": "list",
+          "items": [
+            {
+              "type": "list-section",
+              "value": {
+                "type": "network-tree",
+                "chains": {
+                  "4A3C0497A4A594AE59DBCEC686CF6625": {
+                    "url": "http://127.0.0.1:8867/Thot/explorer/enquetes/mer-aral.html",
+                    "navStartToEndTime": 15,
+                    "transferSize": 93341,
+                    "isLongest": true,
+                    "children": {
+                      "7442.6": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/visual-system.css?v=764ddbb7f568",
+                        "navStartToEndTime": 26,
+                        "transferSize": 8458,
+                        "isLongest": true,
+                        "children": {}
+                      },
+                      "7442.5": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/navigation.css?v=f223850ad41a",
+                        "navStartToEndTime": 24,
+                        "transferSize": 2341,
+                        "children": {}
+                      },
+                      "7442.2": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/explorer-v2/common.css?v=4e1c1c265f3e",
+                        "navStartToEndTime": 23,
+                        "transferSize": 9047,
+                        "children": {}
+                      },
+                      "7442.3": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/explorer-v2/aral.css?v=783bc199a5ea",
+                        "navStartToEndTime": 22,
+                        "transferSize": 28611,
+                        "children": {}
+                      }
+                    }
+                  }
+                },
+                "longestChain": {
+                  "duration": 26
+                }
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnected origins",
+              "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+              "value": {
+                "type": "text",
+                "value": "no origins were preconnected"
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnect candidates",
+              "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+              "value": {
+                "type": "text",
+                "value": "No additional origins are good candidates for preconnecting"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render blocking requests",
+        "description": "Requests are blocking the page's initial render, which may delay LCP. [Deferring or inlining](https://web.dev/learn/performance/understanding-the-critical-path#render-blocking_resources) can move these network requests out of the critical path.",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Transfer Size"
+            },
+            {
+              "key": "wastedMs",
+              "valueType": "timespanMs",
+              "label": "Duration"
+            }
+          ],
+          "items": [
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/visual-system.css?v=764ddbb7f568",
+              "totalBytes": 8458,
+              "wastedMs": 452
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/navigation.css?v=f223850ad41a",
+              "totalBytes": 2341,
+              "wastedMs": 302
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/explorer-v2/common.css?v=4e1c1c265f3e",
+              "totalBytes": 9047,
+              "wastedMs": 302
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/explorer-v2/aral.css?v=783bc199a5ea",
+              "totalBytes": 28611,
+              "wastedMs": 602
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "page": "quiz.html",
+    "fetchTime": "2026-11-04T12:16:37.558Z",
+    "lighthouseVersion": "12.8.2",
+    "environment": {
+      "networkUserAgent": "Mozilla/5.0 (Linux; Android 11; moto g power (2022)) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Mobile Safari/537.36",
+      "hostUserAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.0.0 Safari/537.36",
+      "benchmarkIndex": 2623,
+      "credits": {
+        "axe-core": "4.10.3"
+      }
+    },
+    "scores": {
+      "performance": 0.96,
+      "accessibility": 1,
+      "best-practices": 1,
+      "seo": 1
+    },
+    "metrics": {
+      "first-contentful-paint": {
+        "value": 1658.2044,
+        "unit": "millisecond"
+      },
+      "largest-contentful-paint": {
+        "value": 2620.4087999999997,
+        "unit": "millisecond"
+      },
+      "cumulative-layout-shift": {
+        "value": 0,
+        "unit": "unitless"
+      },
+      "total-blocking-time": {
+        "value": 4,
+        "unit": "millisecond"
+      },
+      "speed-index": {
+        "value": 1658.2044,
+        "unit": "millisecond"
+      }
+    },
+    "warnings": [],
+    "failedAudits": [
+      {
+        "id": "largest-contentful-paint-element",
+        "title": "Largest Contentful Paint element",
+        "description": "This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "details": {
+          "type": "list",
+          "items": [
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "node",
+                  "valueType": "node",
+                  "label": "Element"
+                }
+              ],
+              "items": [
+                {
+                  "node": {
+                    "type": "node",
+                    "lhId": "page-0-H3",
+                    "path": "1,HTML,1,BODY,4,MAIN,3,SECTION,0,DIV,2,DIV,1,DIV,0,DIV,4,H3",
+                    "selector": "div#quiz-classique > div.game-body > div#screen-intro > h3",
+                    "boundingRect": {
+                      "top": 769,
+                      "bottom": 836,
+                      "left": 39,
+                      "right": 373,
+                      "width": 334,
+                      "height": 67
+                    },
+                    "snippet": "<h3>",
+                    "nodeLabel": "Prêt à faire chauffer tes neurones ?"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "phase",
+                  "valueType": "text",
+                  "label": "Phase"
+                },
+                {
+                  "key": "percent",
+                  "valueType": "text",
+                  "label": "% of LCP"
+                },
+                {
+                  "key": "timing",
+                  "valueType": "ms",
+                  "label": "Timing"
+                }
+              ],
+              "items": [
+                {
+                  "phase": "TTFB",
+                  "timing": 454.1022,
+                  "percent": "17%"
+                },
+                {
+                  "phase": "Load Delay",
+                  "timing": 0,
+                  "percent": "0%"
+                },
+                {
+                  "phase": "Load Time",
+                  "timing": 0,
+                  "percent": "0%"
+                },
+                {
+                  "phase": "Render Delay",
+                  "timing": 2166.3066,
+                  "percent": "83%"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "cache-insight",
+        "title": "Use efficient cache lifetimes",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more](https://web.dev/uses-long-cache-ttl/).",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "Request"
+            },
+            {
+              "key": "cacheLifetimeMs",
+              "valueType": "ms",
+              "label": "Cache TTL",
+              "displayUnit": "duration"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Transfer Size",
+              "displayUnit": "kb",
+              "granularity": 1
+            }
+          ],
+          "items": [
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/site.js?v=quiz-audit-2026-10-26",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 91513,
+              "wastedBytes": 91513
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/site.css?v=quiz-accessibility-1",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 36911,
+              "wastedBytes": 36911
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/questions-expert.js",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 31872,
+              "wastedBytes": 31872
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/questions-intermediaire.js",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 24669,
+              "wastedBytes": 24669
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/questions-facile.js",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 22637,
+              "wastedBytes": 22637
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/quiz-reference-data.js?v=audit-20261026",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 14475,
+              "wastedBytes": 14475
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/visual-system.css?v=764ddbb7f568",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 8458,
+              "wastedBytes": 8458
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/experience.css?v=1",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 5789,
+              "wastedBytes": 5789
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/quiz.css",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 2747,
+              "wastedBytes": 2747
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/navigation.css?v=f223850ad41a",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 2341,
+              "wastedBytes": 2341
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/quiz-references.js?v=audit-20261026",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 1775,
+              "wastedBytes": 1775
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/reading-times.js",
+              "cacheLifetimeMs": 0,
+              "totalBytes": 905,
+              "wastedBytes": 905
+            }
+          ],
+          "sortedBy": [
+            "wastedBytes"
+          ],
+          "skipSumming": [
+            "cacheLifetimeMs"
+          ],
+          "debugData": {
+            "type": "debugdata",
+            "wastedBytes": 244092
+          }
+        }
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/lighthouse/performance/critical-request-chains) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load.",
+        "details": {
+          "type": "list",
+          "items": [
+            {
+              "type": "list-section",
+              "value": {
+                "type": "network-tree",
+                "chains": {
+                  "B21FE402BC35AFF52BA99E40AB3E850B": {
+                    "url": "http://127.0.0.1:8867/Thot/quiz.html",
+                    "navStartToEndTime": 14,
+                    "transferSize": 21946,
+                    "isLongest": true,
+                    "children": {
+                      "7473.12": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/site.js?v=quiz-audit-2026-10-26",
+                        "navStartToEndTime": 47,
+                        "transferSize": 91513,
+                        "isLongest": true,
+                        "children": {}
+                      },
+                      "7473.8": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/questions-intermediaire.js",
+                        "navStartToEndTime": 46,
+                        "transferSize": 24669,
+                        "children": {}
+                      },
+                      "7473.10": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/quiz-reference-data.js?v=audit-20261026",
+                        "navStartToEndTime": 46,
+                        "transferSize": 14475,
+                        "children": {}
+                      },
+                      "7473.9": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/questions-expert.js",
+                        "navStartToEndTime": 46,
+                        "transferSize": 31872,
+                        "children": {}
+                      },
+                      "7473.11": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/quiz-references.js?v=audit-20261026",
+                        "navStartToEndTime": 46,
+                        "transferSize": 1775,
+                        "children": {}
+                      },
+                      "7473.7": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/questions-facile.js",
+                        "navStartToEndTime": 44,
+                        "transferSize": 22637,
+                        "children": {}
+                      },
+                      "7473.5": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/navigation.css?v=f223850ad41a",
+                        "navStartToEndTime": 25,
+                        "transferSize": 2341,
+                        "children": {}
+                      },
+                      "7473.4": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/experience.css?v=1",
+                        "navStartToEndTime": 25,
+                        "transferSize": 5789,
+                        "children": {}
+                      },
+                      "7473.6": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/visual-system.css?v=764ddbb7f568",
+                        "navStartToEndTime": 21,
+                        "transferSize": 8458,
+                        "children": {}
+                      },
+                      "7473.2": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/site.css?v=quiz-accessibility-1",
+                        "navStartToEndTime": 20,
+                        "transferSize": 36911,
+                        "children": {}
+                      },
+                      "7473.3": {
+                        "url": "http://127.0.0.1:8867/Thot/assets/quiz.css",
+                        "navStartToEndTime": 18,
+                        "transferSize": 2747,
+                        "children": {}
+                      }
+                    }
+                  }
+                },
+                "longestChain": {
+                  "duration": 47
+                }
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnected origins",
+              "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+              "value": {
+                "type": "text",
+                "value": "no origins were preconnected"
+              }
+            },
+            {
+              "type": "list-section",
+              "title": "Preconnect candidates",
+              "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+              "value": {
+                "type": "text",
+                "value": "No additional origins are good candidates for preconnecting"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render blocking requests",
+        "description": "Requests are blocking the page's initial render, which may delay LCP. [Deferring or inlining](https://web.dev/learn/performance/understanding-the-critical-path#render-blocking_resources) can move these network requests out of the critical path.",
+        "details": {
+          "type": "table",
+          "headings": [
+            {
+              "key": "url",
+              "valueType": "url",
+              "label": "URL"
+            },
+            {
+              "key": "totalBytes",
+              "valueType": "bytes",
+              "label": "Transfer Size"
+            },
+            {
+              "key": "wastedMs",
+              "valueType": "timespanMs",
+              "label": "Duration"
+            }
+          ],
+          "items": [
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/questions-intermediaire.js",
+              "totalBytes": 24669
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/site.js?v=quiz-audit-2026-10-26",
+              "totalBytes": 91513
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/quiz-reference-data.js?v=audit-20261026",
+              "totalBytes": 14475
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/questions-expert.js",
+              "totalBytes": 31872
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/quiz-references.js?v=audit-20261026",
+              "totalBytes": 1775
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/questions-facile.js",
+              "totalBytes": 22637,
+              "wastedMs": 754
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/navigation.css?v=f223850ad41a",
+              "totalBytes": 2341,
+              "wastedMs": 304
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/experience.css?v=1",
+              "totalBytes": 5789,
+              "wastedMs": 454
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/visual-system.css?v=764ddbb7f568",
+              "totalBytes": 8458,
+              "wastedMs": 454
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/site.css?v=quiz-accessibility-1",
+              "totalBytes": 36911,
+              "wastedMs": 904
+            },
+            {
+              "url": "http://127.0.0.1:8867/Thot/assets/quiz.css",
+              "totalBytes": 2747,
+              "wastedMs": 304
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

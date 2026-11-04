@@ -94,7 +94,17 @@
         }
       },
       "editorial_updated": "2026-10-26",
-      "editorial_scope": "Distinction entre l’expérience de Burger en 2006 et sa publication en 2009 ; autres parties non réévaluées."
+      "editorial_scope": "Distinction entre l’expérience de Burger en 2006 et sa publication en 2009 ; autres parties non réévaluées.",
+      "seo": {
+        "title": "Pourquoi ne réagit-on pas tous pareil face à l’autorité ? | THOT",
+        "description": "Parents, État, direction scolaire : pourquoi obéit-on, négocie-t-on ou résiste-t-on ? Ce que la psychologie explique — et ses limites."
+      },
+      "headline": "Pourquoi ne réagit-on pas tous pareil face à l’autorité ?",
+      "author": {
+        "@type": "Organization",
+        "name": "La rédaction THOT",
+        "url": "https://thot-culture.github.io/Thot/"
+      }
     },
     {
       "slug": "autrices-pseudonymes",
@@ -197,7 +207,17 @@
         }
       },
       "editorial_updated": "2026-10-25",
-      "editorial_scope": "Précision sur la publication fin 1817 et la date imprimée 1818 des romans posthumes de Jane Austen."
+      "editorial_scope": "Précision sur la publication fin 1817 et la date imprimée 1818 des romans posthumes de Jane Austen.",
+      "seo": {
+        "title": "Pourquoi des autrices ont-elles publié sous un nom d’homme ? | THOT",
+        "description": "Trois trajectoires d’autrices, des sources primaires et institutionnelles, et ce qu’elles permettent réellement de dire sur leurs noms de plume."
+      },
+      "headline": "Pourquoi des autrices ont-elles publié sous un nom d’homme ?",
+      "author": {
+        "@type": "Organization",
+        "name": "La rédaction THOT",
+        "url": "https://thot-culture.github.io/Thot/notre-methode.html"
+      }
     },
     {
       "slug": "pieuvres-couleur",
@@ -263,7 +283,17 @@
         }
       ],
       "editorial_updated": "2026-10-25",
-      "editorial_scope": "Ajout de repères fonctionnels sur pigments, réflecteurs et lumière, avec limites selon les espèces ; autres parties non réévaluées."
+      "editorial_scope": "Ajout de repères fonctionnels sur pigments, réflecteurs et lumière, avec limites selon les espèces ; autres parties non réévaluées.",
+      "seo": {
+        "title": "Comment les pieuvres changent-elles de couleur ? | THOT",
+        "description": "Chromatophores, muscles et signaux nerveux : découvrez simplement comment les pieuvres changent de couleur et dessinent leurs motifs."
+      },
+      "headline": "Comment les pieuvres changent-elles de couleur ?",
+      "author": {
+        "@type": "Organization",
+        "name": "La rédaction THOT",
+        "url": "https://thot-culture.github.io/Thot/notre-methode.html"
+      }
     },
     {
       "slug": "puissance-etats-unis",
@@ -368,7 +398,17 @@
         }
       },
       "editorial_updated": "2026-10-26",
-      "editorial_scope": "Correction de Bagram (2 juillet 2021), clarification des acteurs du comparateur et accès alternatifs aux rapports SIGAR et à la déclaration de coalition ; définitions de Krasner conservées, actualité iranienne non réévaluée."
+      "editorial_scope": "Correction de Bagram (2 juillet 2021), clarification des acteurs du comparateur et accès alternatifs aux rapports SIGAR et à la déclaration de coalition ; définitions de Krasner conservées, actualité iranienne non réévaluée.",
+      "seo": {
+        "title": "Pourquoi les États-Unis ne peuvent-ils pas tout imposer ? | THOT",
+        "description": "Afghanistan, Iran, Daech : comprendre pourquoi les moyens militaires et économiques des États-Unis ne garantissent pas le résultat politique attendu."
+      },
+      "headline": "Pourquoi les États-Unis ne peuvent-ils pas tout imposer ?",
+      "author": {
+        "@type": "Organization",
+        "name": "La rédaction THOT",
+        "url": "https://thot-culture.github.io/Thot/notre-methode.html"
+      }
     },
     {
       "slug": "roubaix-1917",
@@ -443,7 +483,17 @@
         }
       },
       "editorial_updated": "2026-10-26",
-      "editorial_scope": "Rétablissement du corpus de 972 affiches et précision des limites d’accès aux notices ; autres parties non réévaluées."
+      "editorial_scope": "Rétablissement du corpus de 972 affiches et précision des limites d’accès aux notices ; autres parties non réévaluées.",
+      "seo": {
+        "title": "Roubaix en 1917 : vivre sous l'occupation allemande | THOT",
+        "description": "Roubaix en 1917 : découvrez l’occupation allemande à travers des affiches d’époque, des photographies historiques et une frise interactive de 1914 à 1918."
+      },
+      "headline": "Roubaix en 1917 : vivre sous l'occupation allemande",
+      "author": {
+        "@type": "Organization",
+        "name": "La rédaction THOT",
+        "url": "https://thot-culture.github.io/Thot/notre-methode.html"
+      }
     },
     {
       "slug": "evolution-strategies-militaires",
@@ -548,7 +598,16 @@
         }
       },
       "source_manifest": "docs/strategies-sources.json",
-      "media_manifest": "docs/strategies-images.json"
+      "media_manifest": "docs/strategies-images.json",
+      "seo": {
+        "title": "Pourquoi les nouvelles armes ne suffisent-elles pas à gagner une guerre ? | THOT",
+        "description": "De Cannes aux drones en Ukraine : six étapes pour comprendre pourquoi les armes ne suffisent pas, avec quatre activités et des sources historiques."
+      },
+      "headline": "Pourquoi les nouvelles armes ne suffisent-elles pas à gagner une guerre ?",
+      "author": {
+        "@type": "Organization",
+        "name": "La rédaction THOT"
+      }
     }
   ]
 }

@@ -66,7 +66,7 @@ assert.deepEqual(discoveryURLs, articleURLs, 'Le tirage surprise doit inclure ch
 assert.equal(articleURLs.size, 5);
 assert.equal(tags.find(t => t.id === 'contenu').tabindex, '-1');
 for (const tag of tags.filter(t => t.rel === 'stylesheet')) {
-  const path = tag.href.split('?')[0];
+  const path = new URL(tag.href, base).pathname.slice(base.pathname.length);
   const css = await readFile(resolve(root, path), 'utf8');
   for (const match of css.matchAll(/url\(\s*["']?([^\s"')]+)["']?\s*\)/g)) {
     if (!/^(?:data:|https?:|#)/i.test(match[1])) await access(resolve(root, dirname(path), match[1]));

@@ -1,0 +1,35 @@
+{
+  "reason": "Six titres de fiches directement sous un H2 : H4 devient H3. Texte, ordre et règle CSS conservés.",
+  "changes": [
+    {
+      "path": "articles/evolution-strategies-militaires.html",
+      "old": "<h4>Coordonner les forces</h4>",
+      "new": "<h3>Coordonner les forces</h3>"
+    },
+    {
+      "path": "articles/evolution-strategies-militaires.html",
+      "old": "<h4>Mobilité de la cavalerie</h4>",
+      "new": "<h3>Mobilité de la cavalerie</h3>"
+    },
+    {
+      "path": "articles/evolution-strategies-militaires.html",
+      "old": "<h4>Développement de l’artillerie</h4>",
+      "new": "<h3>Développement de l’artillerie</h3>"
+    },
+    {
+      "path": "articles/evolution-strategies-militaires.html",
+      "old": "<h4>Chemin de fer et télégraphe</h4>",
+      "new": "<h3>Chemin de fer et télégraphe</h3>"
+    },
+    {
+      "path": "articles/evolution-strategies-militaires.html",
+      "old": "<h4>Chars et moyens de détection</h4>",
+      "new": "<h3>Chars et moyens de détection</h3>"
+    },
+    {
+      "path": "articles/evolution-strategies-militaires.html",
+      "old": "<h4>Emploi massif des drones</h4>",
+      "new": "<h3>Emploi massif des drones</h3>"
+    }
+  ]
+}

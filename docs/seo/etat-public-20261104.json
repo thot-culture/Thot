@@ -1,0 +1,5348 @@
+{
+  "checked_utc": "2026-11-04T09:27:45.481189+00:00",
+  "base_url": "https://thot-culture.github.io/Thot/",
+  "revisions": {
+    "main": "86ee7cbb27172262eca3648afe51cb7d2a81eab8",
+    "PR22": "c7b62ad61c5ddabc63c61560175a55c85ec80200",
+    "PR23": "2cae9b575b70f58c14c75ff1a9ca11cc213ca101"
+  },
+  "pages": [
+    {
+      "url": "https://thot-culture.github.io/Thot/404.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/404.html",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "2112",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "path": "404.html",
+      "sha256": "d5f6fc91eca4b8b21fa593f333b7dc2bbad5446ccd9094412129a8c366db0a34",
+      "exact_matches": [
+        "main"
+      ],
+      "title": [
+        "Page introuvable — THOT"
+      ],
+      "description": "Page introuvable : retrouvez les articles documentés et les quiz THOT.",
+      "canonical": [],
+      "robots": [
+        "noindex"
+      ],
+      "googlebot": null,
+      "og": {},
+      "headings": [
+        [
+          "h1",
+          "Cette page est introuvable."
+        ]
+      ],
+      "schemas": [],
+      "images": [],
+      "links": [
+        "#contenu",
+        "/Thot/index.html",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/quiz.html#daily-title",
+        "/Thot/notre-methode.html",
+        "/Thot/index.html#concept",
+        "/Thot/bibliotheque.html",
+        "/Thot/index.html",
+        "/Thot/contact.html",
+        "/Thot/mentions-legales.html",
+        "/Thot/confidentialite.html"
+      ],
+      "verification_present": false
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/articles/autorite.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/articles/autorite.html",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "42517",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "path": "articles/autorite.html",
+      "sha256": "708ca21e00ca43504a217922d1f5250326435bed71620a9e0fc3e5ad46467b03",
+      "exact_matches": [
+        "main"
+      ],
+      "title": [
+        "Pourquoi ne réagit-on pas tous pareil face à l’autorité ? | THOT"
+      ],
+      "description": "Parents, État, direction scolaire : pourquoi obéit-on, négocie-t-on ou résiste-t-on ? Ce que la psychologie explique — et ses limites.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/articles/autorite.html"
+      ],
+      "robots": null,
+      "googlebot": null,
+      "og": {
+        "og:type": [
+          "article"
+        ],
+        "og:locale": [
+          "fr_FR"
+        ],
+        "og:site_name": [
+          "THOT"
+        ],
+        "og:title": [
+          "Face à l’autorité, pourquoi réagit-on différemment ?"
+        ],
+        "og:description": [
+          "Parents, État, direction scolaire : repérer les mécanismes de l’autorité, leurs interprétations et les limites des études."
+        ],
+        "og:url": [
+          "https://thot-culture.github.io/Thot/articles/autorite.html"
+        ],
+        "og:image": [
+          "https://thot-culture.github.io/Thot/assets/social-cards/autorite.png"
+        ],
+        "og:image:alt": [
+          "THOT — Face à l’autorité, pourquoi réagit-on différemment ? Trois trajectoires géométriques sous un même cercle."
+        ],
+        "og:image:type": [
+          "image/png"
+        ],
+        "og:image:width": [
+          "1200"
+        ],
+        "og:image:height": [
+          "630"
+        ]
+      },
+      "headings": [
+        [
+          "h1",
+          "Pourquoi ne réagit-on pas tous pareil face à l’autorité ?"
+        ],
+        [
+          "h2",
+          "Décode le pouvoir"
+        ],
+        [
+          "h3",
+          "1 · Les parents"
+        ],
+        [
+          "h3",
+          "2 · L’État"
+        ],
+        [
+          "h3",
+          "3 · La direction d’établissement"
+        ],
+        [
+          "h2",
+          "Obéir ne veut pas toujours dire être d’accord"
+        ],
+        [
+          "h2",
+          "1. Les parents : protéger et laisser gagner en autonomie"
+        ],
+        [
+          "h2",
+          "2. L’État : respecter une règle, la subir ou la contester"
+        ],
+        [
+          "h2",
+          "3. La direction scolaire : une autorité de fonction, avec des limites"
+        ],
+        [
+          "h2",
+          "Obéir, discuter ou refuser ?"
+        ],
+        [
+          "h3",
+          "À la maison"
+        ],
+        [
+          "h3",
+          "Dans l’espace public"
+        ],
+        [
+          "h3",
+          "Au lycée"
+        ],
+        [
+          "h2",
+          "Pourquoi les réactions s’opposent-elles ?"
+        ],
+        [
+          "h2",
+          "Ce qu’il faut retenir"
+        ],
+        [
+          "h2",
+          "Ce qu’on sait, ce qui reste à discuter"
+        ],
+        [
+          "h3",
+          "Ce qu’on sait"
+        ],
+        [
+          "h3",
+          "Ce qui fait débat"
+        ],
+        [
+          "h2",
+          "Sources et références"
+        ]
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://thot-culture.github.io/Thot/articles/autorite.html"
+          },
+          "headline": "Pourquoi ne réagit-on pas tous pareil face à l’autorité ?",
+          "description": "Parents, État, direction scolaire : pourquoi obéit-on, négocie-t-on ou résiste-t-on ? Ce que la psychologie explique — et ses limites.",
+          "image": "https://thot-culture.github.io/Thot/assets/social-cards/autorite.png",
+          "author": {
+            "@type": "Organization",
+            "name": "La rédaction THOT",
+            "url": "https://thot-culture.github.io/Thot/"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "THOT",
+            "url": "https://thot-culture.github.io/Thot/"
+          },
+          "datePublished": "2026-10-23",
+          "dateModified": "2026-10-26",
+          "articleSection": "Psychologie sociale · Sciences humaines",
+          "inLanguage": "fr-FR",
+          "keywords": [
+            "autorité",
+            "obéissance",
+            "désobéissance",
+            "parents",
+            "État",
+            "établissement scolaire",
+            "psychologie sociale"
+          ]
+        }
+      ],
+      "images": [
+        {
+          "src": "../assets/images/autorite-triptyque.webp",
+          "alt": "Illustration en trois scènes : un parent et un adolescent discutent à la maison ; des parents et des jeunes participent à une manifestation ; une responsable d’établissement échange avec des élèves.",
+          "width": "1200",
+          "height": "800",
+          "fetchpriority": "high"
+        }
+      ],
+      "links": [
+        "#texte-article",
+        "../index.html",
+        "../bibliotheque.html",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/quiz.html#daily-title",
+        "/Thot/notre-methode.html",
+        "/Thot/index.html#concept",
+        "https://thot-culture.github.io/Thot/articles/autorite.html",
+        "#ref1",
+        "#ref2",
+        "#ref3",
+        "#ref4",
+        "#ref5",
+        "#ref6",
+        "#ref7",
+        "#ref8",
+        "#ref9",
+        "#ref10",
+        "#ref11",
+        "#ref11",
+        "#ref12",
+        "#ref13",
+        "#ref2",
+        "#ref10",
+        "#ref11",
+        "https://www.service-public.gouv.fr/particuliers/vosdroits/F3132",
+        "https://doi.org/10.1016/j.adolescence.2006.03.003",
+        "https://doi.org/10.1111/1540-5893.3703002",
+        "https://www.fcpe.asso.fr/actualite/les-revendications-de-la-jeunesse-doivent-etre-entendues",
+        "https://www.lemonde.fr/societe/article/2026/10/16/mouvement-lyceen-un-mois-de-mobilisation-et-le-pari-de-la-convergence-des-luttes_6795111_3224.html",
+        "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006071191/LEGISCTA000018377430/2026-06-20",
+        "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039016548/2026-07-02",
+        "https://www.education.gouv.fr/sites/default/files/document/Le%20chef%20d%26%23039%3B%C3%A9tablissement-238434.pdf",
+        "https://www.lemonde.fr/en/france/article/2026/10/12/french-high-school-protests-exhausted-principals-struggle-to-deal-with-violent-clashes-at-their-schools_6758508_7.html",
+        "https://doi.org/10.1037/h0040525",
+        "https://doi.org/10.1146/annurev-lawsocsci-110316-113710",
+        "https://doi.org/10.1037/a0010932",
+        "https://www.apa.org/monitor/2009/03/milgram.html",
+        "#decode-pouvoir",
+        "#reactions",
+        "#parents",
+        "#etat",
+        "#direction",
+        "#jeu",
+        "#facteurs",
+        "#retenir-title",
+        "#sources-title",
+        "../notre-methode.html",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/notre-methode.html",
+        "/Thot/contact.html",
+        "/Thot/mentions-legales.html",
+        "/Thot/confidentialite.html"
+      ],
+      "verification_present": false
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/articles/autrices-pseudonymes.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/articles/autrices-pseudonymes.html",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "41872",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "path": "articles/autrices-pseudonymes.html",
+      "sha256": "3fa8af3cf4a114d696b7c0ec26cf346b0d1b8025538e325575daac7865198951",
+      "exact_matches": [
+        "main"
+      ],
+      "title": [
+        "Pourquoi des autrices ont-elles publié sous un nom d’homme ? | THOT"
+      ],
+      "description": "Trois trajectoires d’autrices, des sources primaires et institutionnelles, et ce qu’elles permettent réellement de dire sur leurs noms de plume.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/articles/autrices-pseudonymes.html"
+      ],
+      "robots": null,
+      "googlebot": null,
+      "og": {
+        "og:type": [
+          "article"
+        ],
+        "og:locale": [
+          "fr_FR"
+        ],
+        "og:site_name": [
+          "THOT"
+        ],
+        "og:title": [
+          "Autrices, pourquoi un nom d’homme ?"
+        ],
+        "og:description": [
+          "Brontë, George Eliot, George Sand : des signatures documentées, des raisons à distinguer et des sources à lire avec prudence."
+        ],
+        "og:url": [
+          "https://thot-culture.github.io/Thot/articles/autrices-pseudonymes.html"
+        ],
+        "og:image": [
+          "https://thot-culture.github.io/Thot/assets/social-cards/autrices-pseudonymes.png"
+        ],
+        "og:image:type": [
+          "image/png"
+        ],
+        "og:image:width": [
+          "1200"
+        ],
+        "og:image:height": [
+          "630"
+        ],
+        "og:image:alt": [
+          "THOT — Autrices, pourquoi un nom d’homme ? Deux lettres A sur des feuillets géométriques superposés."
+        ]
+      },
+      "headings": [
+        [
+          "h1",
+          "Pourquoi des autrices ont-elles publié sous un nom d’homme ?"
+        ],
+        [
+          "h2",
+          "Les sœurs Brontë : éviter les préjugés, sans prendre un nom franchement masculin"
+        ],
+        [
+          "h3",
+          "Quelques romans repères des sœurs Brontë [8]"
+        ],
+        [
+          "h3",
+          "Petit voyage dans le temps 🌷"
+        ],
+        [
+          "h2",
+          "George Eliot : la signature et la vie privée"
+        ],
+        [
+          "h3",
+          "Quelques romans repères de George Eliot [9]"
+        ],
+        [
+          "h2",
+          "George Sand : ce que la notice établit — et ce qu’elle ne dit pas"
+        ],
+        [
+          "h3",
+          "Quelques romans repères de George Sand [10]"
+        ],
+        [
+          "h2",
+          "Un nom d’homme n’était pas la seule stratégie"
+        ],
+        [
+          "h2",
+          "Petit jeu : relie chaque nom à son autrice"
+        ],
+        [
+          "h3",
+          "Noms de plume"
+        ],
+        [
+          "h3",
+          "Autrices"
+        ],
+        [
+          "h3",
+          "Les réponses : cinq noms, des histoires différentes"
+        ],
+        [
+          "h2",
+          "Ce qu’il faut retenir"
+        ],
+        [
+          "h2",
+          "Encore curieux ?"
+        ],
+        [
+          "h2",
+          "Ce qu’on sait, ce qui reste à discuter"
+        ],
+        [
+          "h3",
+          "Ce qu’on sait"
+        ],
+        [
+          "h3",
+          "Ce qui reste incertain"
+        ],
+        [
+          "h2",
+          "Sources et références"
+        ]
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://thot-culture.github.io/Thot/articles/autrices-pseudonymes.html"
+          },
+          "headline": "Pourquoi des autrices ont-elles publié sous un nom d’homme ?",
+          "description": "Trois trajectoires d’autrices, des sources primaires et institutionnelles, et ce qu’elles permettent réellement de dire sur leurs noms de plume.",
+          "image": [
+            "https://thot-culture.github.io/Thot/assets/social-cards/autrices-pseudonymes.png"
+          ],
+          "author": {
+            "@type": "Organization",
+            "name": "La rédaction THOT",
+            "url": "https://thot-culture.github.io/Thot/notre-methode.html"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "THOT",
+            "url": "https://thot-culture.github.io/Thot/"
+          },
+          "datePublished": "2026-10-22",
+          "dateModified": "2026-10-25",
+          "inLanguage": "fr-FR",
+          "articleSection": "Littérature · Histoire des autrices",
+          "about": [
+            {
+              "@type": "Thing",
+              "name": "pseudonymes d’autrices"
+            },
+            {
+              "@type": "Thing",
+              "name": "sœurs Brontë"
+            },
+            {
+              "@type": "Thing",
+              "name": "George Eliot"
+            },
+            {
+              "@type": "Thing",
+              "name": "George Sand"
+            }
+          ],
+          "keywords": "pseudonymes d’autrices, sœurs Brontë, George Eliot, George Sand"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/a/ab/The_Bront%C3%AB_Sisters_by_Patrick_Branwell_Bront%C3%AB_restored.jpg",
+          "alt": "Portrait d’Anne, Emily et Charlotte Brontë, peint par leur frère Branwell vers 1834 et restauré numériquement.",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg",
+          "alt": "Portrait de l’autrice George Eliot par le peintre Samuel Laurence, vers 1860.",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "../assets/images/autrices-nadar.webp",
+          "width": "1176",
+          "height": "900",
+          "alt": "Planche de plusieurs portraits photographiques de George Sand réalisés par Félix Nadar en 1864.",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "../assets/images/roubaix-gambetta.webp",
+          "alt": "Carte postale du boulevard Gambetta à Roubaix, avec tramway et passants, avant 1919.",
+          "width": "1200",
+          "height": "773",
+          "loading": "lazy",
+          "decoding": "async"
+        }
+      ],
+      "links": [
+        "#texte-article",
+        "../index.html",
+        "../bibliotheque.html",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/quiz.html#daily-title",
+        "/Thot/notre-methode.html",
+        "/Thot/index.html#concept",
+        "https://thot-culture.github.io/Thot/articles/autrices-pseudonymes.html",
+        "#ref1",
+        "#ref5",
+        "https://commons.wikimedia.org/wiki/File:The_Bront%C3%AB_Sisters_by_Patrick_Branwell_Bront%C3%AB_restored.jpg",
+        "#ref1",
+        "#ref7",
+        "#ref2",
+        "#ref2",
+        "#ref8",
+        "#ref1",
+        "https://commons.wikimedia.org/wiki/File:George_Eliot_by_Samuel_Laurence.jpg",
+        "#ref3",
+        "#ref15",
+        "#ref9",
+        "https://commons.wikimedia.org/wiki/File:George_Sand_-_portraits.jpg",
+        "#ref4",
+        "#ref13",
+        "#ref14",
+        "#ref10",
+        "#ref5",
+        "#ref11",
+        "#ref12",
+        "#ref5",
+        "#ref6",
+        "#ref16",
+        "autrices-pseudonymes.html",
+        "../quiz-autrices.html",
+        "#ref1",
+        "#ref7",
+        "#ref3",
+        "#ref4",
+        "#ref1",
+        "#ref7",
+        "#ref3",
+        "#ref4",
+        "../quiz-autrices.html",
+        "roubaix-1917.html",
+        "https://commons.wikimedia.org/wiki/File:ELD_-_ROUBAIX_-_Boulevard_Gambetta.JPG",
+        "#ref1",
+        "#ref5",
+        "#ref1",
+        "https://www.gutenberg.org/files/771/old/brnte10h.htm",
+        "https://www.bronte.org.uk/the-lives-of-the-brontes",
+        "https://writersinspire-new.it.ox.ac.uk/content/george-eliot-0",
+        "https://catalogue.bnf.fr/ark:/12148/cb119236010.public",
+        "https://janeaustens.house/online-exhibition/the-making-of-pride-and-prejudice/the-making-of-pride-and-prejudice-4/",
+        "https://www.bl.uk/stories/blogs/posts/jane-austen-names-and-notability",
+        "https://janeaustens.house/object/first-edition-northanger-abbey-and-persuasion/",
+        "https://assets.cambridge.org/052182/4192/excerpt/0521824192_excerpt.htm",
+        "https://publis-shs.univ-rouen.fr/ceredi/1993.html",
+        "https://www.themorgan.org/printed-books/79355",
+        "https://www.bronte.org.uk/the-lives-of-the-brontes/the-bronte-novels",
+        "https://www.warwickshire.gov.uk/heritage-culture-1/george-eliot-letters-collection/4",
+        "https://catalogue.bnf.fr/ark:/12148/cb31293229q",
+        "https://janeaustens.house/jane-austen/novels/sense-and-sensibility/",
+        "https://janeaustens.house/object/the-morning-chronicle-with-announcement-of-sense-and-sensibility/",
+        "https://www.bl.uk/stories/blogs/posts/jane-austen-names-and-notability",
+        "https://classes.bnf.fr/page/grand/145.htm",
+        "https://georgesand.institutdefrance.fr/biographie/",
+        "https://plato.stanford.edu/entries/george-eliot/",
+        "https://doi.org/10.1017/CBO9780511793233.006",
+        "../bibliotheque.html",
+        "#brontes",
+        "#eliot",
+        "#sand",
+        "#pas-une-regle",
+        "#jeu",
+        "#retenir-title",
+        "#sources-title",
+        "../notre-methode.html",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/notre-methode.html",
+        "/Thot/contact.html",
+        "/Thot/mentions-legales.html",
+        "/Thot/confidentialite.html"
+      ],
+      "verification_present": false
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/articles/evolution-strategies-militaires.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/articles/evolution-strategies-militaires.html",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "50722",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "path": "articles/evolution-strategies-militaires.html",
+      "sha256": "516793ac5648a446a18f497c2ba4498d07aa9d90f908bd1486977c5f150e547f",
+      "exact_matches": [
+        "main"
+      ],
+      "title": [
+        "Pourquoi les nouvelles armes ne suffisent-elles pas à gagner une guerre ? | THOT"
+      ],
+      "description": "De Cannes aux drones en Ukraine : six étapes pour comprendre pourquoi les armes ne suffisent pas, avec quatre activités et des sources historiques.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/articles/evolution-strategies-militaires.html"
+      ],
+      "robots": null,
+      "googlebot": null,
+      "og": {
+        "og:type": [
+          "article"
+        ],
+        "og:locale": [
+          "fr_FR"
+        ],
+        "og:site_name": [
+          "THOT"
+        ],
+        "og:title": [
+          "Pourquoi les nouvelles armes ne suffisent-elles pas à gagner une guerre ?"
+        ],
+        "og:description": [
+          "De la légion romaine aux drones, comment les technologies, les tactiques et la logistique ont transformé la manière de combattre."
+        ],
+        "og:url": [
+          "https://thot-culture.github.io/Thot/articles/evolution-strategies-militaires.html"
+        ],
+        "og:image": [
+          "https://thot-culture.github.io/Thot/assets/strategies-media/social.png"
+        ],
+        "og:image:width": [
+          "1200"
+        ],
+        "og:image:height": [
+          "630"
+        ],
+        "og:image:alt": [
+          "THOT — Armes, tactiques et logistique : comprendre les transformations militaires."
+        ]
+      },
+      "headings": [
+        [
+          "h1",
+          "Pourquoi les nouvelles armes ne suffisent-elles pas à gagner une guerre ?"
+        ],
+        [
+          "h2",
+          "Six périodes, une même question"
+        ],
+        [
+          "h4",
+          "Coordonner les forces"
+        ],
+        [
+          "h4",
+          "Mobilité de la cavalerie"
+        ],
+        [
+          "h4",
+          "Développement de l’artillerie"
+        ],
+        [
+          "h4",
+          "Chemin de fer et télégraphe"
+        ],
+        [
+          "h4",
+          "Chars et moyens de détection"
+        ],
+        [
+          "h4",
+          "Emploi massif des drones"
+        ],
+        [
+          "h2",
+          "01 / ANTIQUITÉComment organiser une armée efficace ?"
+        ],
+        [
+          "h2",
+          "02 / MOYEN ÂGELa mobilité peut-elle devenir une force décisive ?"
+        ],
+        [
+          "h2",
+          "03 / ÉPOQUE MODERNEPourquoi les canons transforment-ils les fortifications ?"
+        ],
+        [
+          "h3",
+          "Du mur vertical au système bastionné"
+        ],
+        [
+          "h4",
+          "Enceinte médiévale"
+        ],
+        [
+          "h4",
+          "Fortification bastionnée"
+        ],
+        [
+          "h2",
+          "04 / XVIIIe–XIXe SIÈCLESComment déplacer et nourrir des armées immenses ?"
+        ],
+        [
+          "h3",
+          "Acheminer davantage, puis franchir le dernier trajet"
+        ],
+        [
+          "h4",
+          "Des transports complémentaires"
+        ],
+        [
+          "h4",
+          "Un réseau, puis le dernier trajet"
+        ],
+        [
+          "h2",
+          "05 / XXe SIÈCLEComment s’adapter à la guerre industrielle ?"
+        ],
+        [
+          "h3",
+          "Un char dans l’image : que sait-on vraiment ?"
+        ],
+        [
+          "h2",
+          "06 / XXIe SIÈCLELes drones ont-ils révolutionné la guerre ?"
+        ],
+        [
+          "h2",
+          "Ce qui change, ce qui demeure"
+        ],
+        [
+          "h2",
+          "Bibliographie et références"
+        ],
+        [
+          "h3",
+          "Antiquité"
+        ],
+        [
+          "h3",
+          "Moyen Âge"
+        ],
+        [
+          "h3",
+          "Poudre et fortifications"
+        ],
+        [
+          "h3",
+          "Napoléon et XIXe siècle"
+        ],
+        [
+          "h3",
+          "XXe siècle"
+        ],
+        [
+          "h3",
+          "Ukraine · analyses datées"
+        ],
+        [
+          "h3",
+          "Ukraine · repères historiques"
+        ],
+        [
+          "h3",
+          "Ukraine · industrie et ressources"
+        ],
+        [
+          "h3",
+          "XXe siècle · premiers chars"
+        ],
+        [
+          "h3",
+          "XXe siècle · détection"
+        ],
+        [
+          "h3",
+          "Ukraine · conséquences civiles"
+        ],
+        [
+          "h2",
+          "Crédits photographiques et documentaires"
+        ],
+        [
+          "h2",
+          "Au sommaire"
+        ]
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Pourquoi les nouvelles armes ne suffisent-elles pas à gagner une guerre ?",
+          "description": "De la légion romaine aux drones, comment les technologies, les tactiques et la logistique ont transformé la manière de combattre.",
+          "inLanguage": "fr-FR",
+          "articleSection": "Histoire",
+          "author": {
+            "@type": "Organization",
+            "name": "La rédaction THOT"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "THOT"
+          },
+          "mainEntityOfPage": "https://thot-culture.github.io/Thot/articles/evolution-strategies-militaires.html",
+          "image": "https://thot-culture.github.io/Thot/assets/strategies-media/social.png",
+          "dateModified": "2026-10-27",
+          "datePublished": "2026-10-27"
+        }
+      ],
+      "images": [
+        {
+          "class": "sm-hero-image",
+          "src": "../assets/strategies-media/tank.webp",
+          "alt": "",
+          "width": "960",
+          "height": "764",
+          "fetchpriority": "high",
+          "decoding": "async"
+        },
+        {
+          "src": "../assets/strategies-media/hannibal.webp",
+          "alt": "Sculpture d’Hannibal en armure, représentation imaginée au début du XVIIIe siècle.",
+          "width": "464",
+          "height": "572",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "../assets/strategies-media/homs.webp",
+          "alt": "Miniature médiévale montrant deux groupes de cavaliers armés face à face.",
+          "loading": "lazy",
+          "decoding": "async",
+          "width": "960",
+          "height": "557"
+        },
+        {
+          "src": "../assets/strategies-media/minard.webp",
+          "alt": "Carte de Minard : un large ruban clair vers Moscou et un ruban sombre de retour, qui se rétrécissent le long du trajet.",
+          "loading": "lazy",
+          "decoding": "async",
+          "width": "960",
+          "height": "458"
+        },
+        {
+          "src": "../assets/strategies-media/tank.webp",
+          "alt": "Char britannique vu de face, avec ses larges chenilles de part et d’autre de la caisse, sur un terrain découvert.",
+          "loading": "lazy",
+          "decoding": "async",
+          "width": "960",
+          "height": "764"
+        }
+      ],
+      "links": [
+        "#texte-article",
+        "../index.html",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/quiz.html#daily-title",
+        "/Thot/notre-methode.html",
+        "/Thot/index.html#concept",
+        "https://commons.wikimedia.org/wiki/File:The_Battle_of_Cambrai,_November-december_1917_Q6284.jpg",
+        "#credits",
+        "#ref1",
+        "#ref1",
+        "https://commons.wikimedia.org/wiki/File:Hannibal_Slodtz_Louvre_MR2093_(cropped2).png",
+        "https://creativecommons.org/licenses/by-sa/3.0/",
+        "#ref2",
+        "#ref3",
+        "#ref4",
+        "#ref5",
+        "https://commons.wikimedia.org/wiki/File:1281BattleOfHoms.JPG",
+        "#ref4",
+        "#ref5",
+        "#ref6",
+        "#ref7",
+        "#ref6",
+        "#ref7",
+        "#ref8",
+        "#ref9",
+        "https://commons.wikimedia.org/wiki/File:Minard.png",
+        "#ref10",
+        "#ref21",
+        "https://commons.wikimedia.org/wiki/File:The_Battle_of_Cambrai,_November-december_1917_Q6284.jpg",
+        "#ref11",
+        "#ref12",
+        "#ref22",
+        "#ref13",
+        "#ref14",
+        "#ref19",
+        "#ref15",
+        "#ref16",
+        "#ref16",
+        "#ref17",
+        "#ref20",
+        "#ref15",
+        "#ref18",
+        "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3*.html",
+        "https://www.cambridge.org/core/books/between-rome-and-carthage/AF20772D2B328FD83D113B6383A5E2F6",
+        "https://www.cambridge.org/core/books/abs/cambridge-history-of-the-mongol-empire/military-machine/97F57DAD8A288A4151EADA7751F61988",
+        "https://www.metmuseum.org/essays/the-legacy-of-genghis-khan",
+        "https://afe.easia.columbia.edu/songdynasty-module/tech-gunpowder.html",
+        "https://historicengland.org.uk/images-books/publications/iha-artillery-defences/heag197-artillery-defences/",
+        "https://www.english-heritage.org.uk/visit/places/pendennis-castle/history-and-stories/history/significance/",
+        "https://www.napoleon.org/histoire-des-2-empires/articles/1812-lannee-de-tous-les-defis",
+        "https://www.napoleon.org/histoire-des-2-empires/articles/1812-la-campagne-de-russie-preface-de-mp-rey-au-tome-12-de-la-correspondance-generale-de-napoleon-bonaparte",
+        "https://www.nam.ac.uk/explore/abyssinia",
+        "https://www.nam.ac.uk/explore/1918-victory",
+        "https://www.awm.gov.au/visit/exhibitions/1918/battles/amiens",
+        "https://americanhistory.si.edu/explore/exhibitions/price-of-freedom/online/world-war-ii/battle-atlantic",
+        "https://history.state.gov/milestones/1961-1968/tet",
+        "https://ihedn.fr/dossier-special/ukraine-dossier-special/ukraine-russie-quand-la-guerre-des-drones-redefinit-le-champ-de-bataille/",
+        "https://www.csis.org/analysis/lessons-ukraine-conflict-modern-warfare-age-autonomy-information-and-resilience",
+        "https://www.defense.gouv.fr/actualites/decryptage-dronisation-du-champ-bataille",
+        "https://assemblyforpeace.unu.edu/cases/ukraine-2014-2022/",
+        "https://www.iiss.org/publications/the-military-balance/2025/editors-introduction/",
+        "https://www.nam.ac.uk/explore/battle-somme",
+        "https://www.history.navy.mil/browse-by-topic/exploration-and-innovation/radar-sonar.html",
+        "https://www.hrw.org/world-report/2026/country-chapters/ukraine",
+        "https://creativecommons.org/licenses/by-sa/3.0/",
+        "https://commons.wikimedia.org/wiki/File:1281BattleOfHoms.JPG",
+        "https://commons.wikimedia.org/wiki/File:Minard.png",
+        "https://commons.wikimedia.org/wiki/File:The_Battle_of_Cambrai,_November-december_1917_Q6284.jpg",
+        "../bibliotheque.html",
+        "#antiquite",
+        "#moyen-age",
+        "#artillerie",
+        "#logistique",
+        "#industrielle",
+        "#drones",
+        "#conclusion",
+        "#sources",
+        "#credits",
+        "../notre-methode.html",
+        "/Thot/contact.html",
+        "/Thot/mentions-legales.html",
+        "/Thot/confidentialite.html"
+      ],
+      "verification_present": false
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/articles/pieuvres-couleur.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/articles/pieuvres-couleur.html",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "45867",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "path": "articles/pieuvres-couleur.html",
+      "sha256": "23f895078ba207c69c3035b8f0ad5048f2da387982d1e5b7c1f74d12dac45d0d",
+      "exact_matches": [
+        "main"
+      ],
+      "title": [
+        "Comment les pieuvres changent-elles de couleur ? | THOT"
+      ],
+      "description": "Chromatophores, muscles et signaux nerveux : découvrez simplement comment les pieuvres changent de couleur et dessinent leurs motifs.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/articles/pieuvres-couleur.html"
+      ],
+      "robots": null,
+      "googlebot": null,
+      "og": {
+        "og:type": [
+          "article"
+        ],
+        "og:locale": [
+          "fr_FR"
+        ],
+        "og:site_name": [
+          "THOT"
+        ],
+        "og:title": [
+          "Comment les pieuvres changent de couleur"
+        ],
+        "og:description": [
+          "Pigments, muscles et signaux nerveux : comprendre les changements de couleur des pieuvres et ce que les expériences permettent de conclure."
+        ],
+        "og:url": [
+          "https://thot-culture.github.io/Thot/articles/pieuvres-couleur.html"
+        ],
+        "og:image": [
+          "https://thot-culture.github.io/Thot/assets/social-cards/pieuvres-couleur.png"
+        ],
+        "og:image:alt": [
+          "THOT — Comment les pieuvres changent de couleur. Un motif circulaire évoque les cellules colorées de leur peau."
+        ],
+        "og:image:type": [
+          "image/png"
+        ],
+        "og:image:width": [
+          "1200"
+        ],
+        "og:image:height": [
+          "630"
+        ]
+      },
+      "headings": [
+        [
+          "h1",
+          "Comment les pieuvres changent-elles de couleur ?"
+        ],
+        [
+          "h2",
+          "Sous la peau, de minuscules sacs de couleur"
+        ],
+        [
+          "h2",
+          "Qui commande ces changements ?"
+        ],
+        [
+          "h3",
+          "Des ordres nerveux, pas un changement de peinture"
+        ],
+        [
+          "h2",
+          "Se cacher, brouiller les contours, signaler"
+        ],
+        [
+          "h3",
+          "Trois grandes familles de motifs"
+        ],
+        [
+          "h3",
+          "La peau ne change pas seule"
+        ],
+        [
+          "h2",
+          "La peau joue aussi avec la lumière"
+        ],
+        [
+          "h3",
+          "Une couleur, plusieurs composants"
+        ],
+        [
+          "h3",
+          "Ce que l’image ne permet pas de conclure"
+        ],
+        [
+          "h2",
+          "Pigments, reflets et lumière"
+        ],
+        [
+          "h3",
+          "Chromatophore"
+        ],
+        [
+          "h3",
+          "Sac pigmentaire"
+        ],
+        [
+          "h3",
+          "Muscles radiaires"
+        ],
+        [
+          "h3",
+          "Iridophores"
+        ],
+        [
+          "h3",
+          "Leucophores"
+        ],
+        [
+          "h3",
+          "Lumière"
+        ],
+        [
+          "h3",
+          "Contrôle nerveux"
+        ],
+        [
+          "h2",
+          "Ce qu’il faut retenir"
+        ],
+        [
+          "h2",
+          "Ce qu’on sait, ce qui reste à discuter"
+        ],
+        [
+          "h3",
+          "Ce qu’on sait"
+        ],
+        [
+          "h3",
+          "Ce qui reste à comprendre"
+        ],
+        [
+          "h2",
+          "Sources et références"
+        ]
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://thot-culture.github.io/Thot/articles/pieuvres-couleur.html"
+          },
+          "headline": "Comment les pieuvres changent-elles de couleur ?",
+          "description": "Chromatophores, muscles et signaux nerveux : découvrez simplement comment les pieuvres changent de couleur et dessinent leurs motifs.",
+          "image": [
+            "https://thot-culture.github.io/Thot/assets/social-cards/pieuvres-couleur.png"
+          ],
+          "author": {
+            "@type": "Organization",
+            "name": "La rédaction THOT",
+            "url": "https://thot-culture.github.io/Thot/notre-methode.html"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "THOT",
+            "url": "https://thot-culture.github.io/Thot/"
+          },
+          "datePublished": "2026-10-22",
+          "dateModified": "2026-10-25",
+          "inLanguage": "fr-FR",
+          "articleSection": "Sciences · Biologie marine",
+          "about": [
+            {
+              "@type": "Thing",
+              "name": "pieuvres"
+            },
+            {
+              "@type": "Thing",
+              "name": "chromatophores"
+            },
+            {
+              "@type": "Thing",
+              "name": "camouflage animal"
+            },
+            {
+              "@type": "Thing",
+              "name": "biologie marine"
+            }
+          ],
+          "keywords": "pieuvres, chromatophores, camouflage animal, biologie marine"
+        }
+      ],
+      "images": [
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Camouflage_octopus.jpg/960px-Camouflage_octopus.jpg",
+          "alt": "Une pieuvre camouflée au centre d’un récif corallien.",
+          "width": "960",
+          "height": "640",
+          "fetchpriority": "high"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+          "alt": "Poulpe commun, Octopus vulgaris, photographié dans son milieu naturel.",
+          "width": "960",
+          "height": "713",
+          "loading": "lazy",
+          "decoding": "async"
+        }
+      ],
+      "links": [
+        "#texte-article",
+        "../index.html",
+        "../bibliotheque.html",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/quiz.html#daily-title",
+        "/Thot/notre-methode.html",
+        "/Thot/index.html#concept",
+        "https://thot-culture.github.io/Thot/articles/pieuvres-couleur.html",
+        "#ref1",
+        "#ref2",
+        "https://commons.wikimedia.org/wiki/File:Camouflage_octopus.jpg",
+        "https://creativecommons.org/licenses/by/4.0/",
+        "https://commons.wikimedia.org/wiki/File:Camouflage_octopus.jpg",
+        "#ref1",
+        "#ref2",
+        "#ref1",
+        "#ref1",
+        "#ref3",
+        "#ref1",
+        "#ref4",
+        "#ref1",
+        "#ref3",
+        "#ref2",
+        "#ref3",
+        "#ref3",
+        "#ref3",
+        "#ref3",
+        "#ref5",
+        "#ref3",
+        "https://commons.wikimedia.org/wiki/File:Poulpe_commun_(Octopus_vulgaris)_(Ifremer_00679-79134_-_31993).jpg",
+        "https://creativecommons.org/licenses/by/4.0/",
+        "https://commons.wikimedia.org/wiki/File:Poulpe_commun_(Octopus_vulgaris)_(Ifremer_00679-79134_-_31993).jpg",
+        "#ref1",
+        "#ref3",
+        "#ref1",
+        "#ref4",
+        "#ref4",
+        "#ref4",
+        "https://doi.org/10.1098/rsif.2008.0366.focus",
+        "#chromato-modele",
+        "https://doi.org/10.1017/S1464793101005772",
+        "https://doi.org/10.1017/S1464793101005772",
+        "https://doi.org/10.1017/S1464793101005772",
+        "https://doi.org/10.1098/rsif.2008.0366.focus",
+        "https://doi.org/10.1098/rsif.2008.0366.focus",
+        "https://doi.org/10.1098/rsif.2008.0366.focus",
+        "https://doi.org/10.1017/S1464793101005772",
+        "#ref1",
+        "#ref3",
+        "#ref2",
+        "#ref3",
+        "#ref1",
+        "#ref2",
+        "#ref2",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC4448664/",
+        "https://doi.org/10.1017/S1464793101005772",
+        "https://doi.org/10.1242/jeb.110908",
+        "https://doi.org/10.1098/rstb.2008.0270",
+        "https://doi.org/10.1098/rsif.2008.0366.focus",
+        "https://doi.org/10.1002/jmor.20221",
+        "../bibliotheque.html",
+        "#chromato-interactif-titre",
+        "#cellules",
+        "#commande",
+        "#motifs",
+        "#nuance",
+        "#retenir-title",
+        "#sources-title",
+        "../notre-methode.html",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/notre-methode.html",
+        "/Thot/contact.html",
+        "/Thot/mentions-legales.html",
+        "/Thot/confidentialite.html"
+      ],
+      "verification_present": false
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/articles/puissance-etats-unis.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/articles/puissance-etats-unis.html",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "53964",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "path": "articles/puissance-etats-unis.html",
+      "sha256": "d2fb71df135137b66de9c3aaf6065d1588b001b2dbf93d297cda22882a8b69da",
+      "exact_matches": [
+        "main"
+      ],
+      "title": [
+        "Pourquoi les États-Unis ne peuvent-ils pas tout imposer ? | THOT"
+      ],
+      "description": "Afghanistan, Iran, Daech : comprendre pourquoi les moyens militaires et économiques des États-Unis ne garantissent pas le résultat politique attendu.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/articles/puissance-etats-unis.html"
+      ],
+      "robots": null,
+      "googlebot": null,
+      "og": {
+        "og:type": [
+          "article"
+        ],
+        "og:locale": [
+          "fr_FR"
+        ],
+        "og:site_name": [
+          "THOT"
+        ],
+        "og:title": [
+          "Les limites de la puissance américaine"
+        ],
+        "og:description": [
+          "Avoir des moyens suffit-il à obtenir des résultats ? Des cas concrets et une discussion historique pour comprendre les limites de la puissance."
+        ],
+        "og:url": [
+          "https://thot-culture.github.io/Thot/articles/puissance-etats-unis.html"
+        ],
+        "og:image": [
+          "https://thot-culture.github.io/Thot/assets/social-cards/puissance-etats-unis.png"
+        ],
+        "og:image:type": [
+          "image/png"
+        ],
+        "og:image:width": [
+          "1200"
+        ],
+        "og:image:height": [
+          "630"
+        ],
+        "og:image:alt": [
+          "THOT — Les limites de la puissance américaine. Un globe géométrique relié à plusieurs points."
+        ]
+      },
+      "headings": [
+        [
+          "h1",
+          "Pourquoi les États-Unis ne peuvent-ils pas tout imposer ?"
+        ],
+        [
+          "h2",
+          "Des ressources au résultat : où se joue la différence ?"
+        ],
+        [
+          "h2",
+          "Trois situations, trois limites à la puissance"
+        ],
+        [
+          "h3",
+          "Afghanistan"
+        ],
+        [
+          "h3",
+          "Iran"
+        ],
+        [
+          "h3",
+          "Daech"
+        ],
+        [
+          "h2",
+          "La puissance : posséder des moyens ou obtenir des résultats ?"
+        ],
+        [
+          "h3",
+          "Contraindre, attirer, combiner"
+        ],
+        [
+          "h2",
+          "La souveraineté westphalienne : pourquoi le plus puissant ne commande-t-il pas aux autres ?"
+        ],
+        [
+          "h3",
+          "Quatre dimensions de la souveraineté"
+        ],
+        [
+          "h3",
+          "Un modèle utile, mais à nuancer"
+        ],
+        [
+          "h2",
+          "L'Afghanistan : gagner des batailles sans gagner la paix"
+        ],
+        [
+          "h3",
+          "De l’intervention au retour des talibans"
+        ],
+        [
+          "h4",
+          "Un nouvel ordre politique se met en place"
+        ],
+        [
+          "h4",
+          "La reconstruction s’étend sur deux décennies"
+        ],
+        [
+          "h4",
+          "Le retrait est annoncé"
+        ],
+        [
+          "h4",
+          "Les forces américaines quittent Bagram"
+        ],
+        [
+          "h4",
+          "Les capitales provinciales tombent"
+        ],
+        [
+          "h4",
+          "Le gouvernement s’effondre, l’évacuation se termine"
+        ],
+        [
+          "h4",
+          "Quelques images pour situer ces étapes"
+        ],
+        [
+          "h3",
+          "Pourquoi le gouvernement s’est-il effondré ?"
+        ],
+        [
+          "h3",
+          "Gagner des combats, bâtir un État"
+        ],
+        [
+          "h2",
+          "L'Iran : pourquoi la pression américaine ne suffit-elle pas toujours ?"
+        ],
+        [
+          "h3",
+          "La pression produit-elle les concessions attendues ?"
+        ],
+        [
+          "h2",
+          "Daech : pourquoi une victoire militaire ne fait-elle pas disparaître une organisation ?"
+        ],
+        [
+          "h3",
+          "La fin du « califat » territorial"
+        ],
+        [
+          "h3",
+          "Trois résultats à distinguer"
+        ],
+        [
+          "h2",
+          "Ce qu'il faut retenir"
+        ],
+        [
+          "h2",
+          "Encore curieux ?"
+        ],
+        [
+          "h2",
+          "Ce qu’on sait, ce qui reste à discuter"
+        ],
+        [
+          "h3",
+          "Ce qu’on sait"
+        ],
+        [
+          "h3",
+          "Ce qui fait débat"
+        ],
+        [
+          "h2",
+          "Sources et références"
+        ]
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://thot-culture.github.io/Thot/articles/puissance-etats-unis.html"
+          },
+          "headline": "Pourquoi les États-Unis ne peuvent-ils pas tout imposer ?",
+          "description": "Afghanistan, Iran, Daech : comprendre pourquoi les moyens militaires et économiques des États-Unis ne garantissent pas le résultat politique attendu.",
+          "image": [
+            "https://thot-culture.github.io/Thot/assets/social-cards/puissance-etats-unis.png"
+          ],
+          "author": {
+            "@type": "Organization",
+            "name": "La rédaction THOT",
+            "url": "https://thot-culture.github.io/Thot/notre-methode.html"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "THOT",
+            "url": "https://thot-culture.github.io/Thot/"
+          },
+          "datePublished": "2026-10-21",
+          "dateModified": "2026-10-26",
+          "inLanguage": "fr-FR",
+          "articleSection": "Géographie · Géopolitique",
+          "about": [
+            {
+              "@type": "Thing",
+              "name": "puissance des États-Unis"
+            },
+            {
+              "@type": "Thing",
+              "name": "géopolitique"
+            },
+            {
+              "@type": "Thing",
+              "name": "Afghanistan"
+            },
+            {
+              "@type": "Thing",
+              "name": "relations internationales"
+            }
+          ],
+          "keywords": "puissance des États-Unis, géopolitique, Afghanistan, relations internationales"
+        }
+      ],
+      "images": [
+        {
+          "src": "../assets/images/puissance-afghanistan.webp",
+          "style": "display:block;width:100%;max-width:100%;height:auto;aspect-ratio:3 / 2;object-fit:cover",
+          "alt": "Des soldats de l’armée nationale afghane s’exercent avec un bulldozer au camp Shorabak en mars 2014.",
+          "width": "1000",
+          "height": "667",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2311/8124895/1000w_q95.jpg",
+          "style": "display:block;width:100%;max-width:100%;height:auto;aspect-ratio:3 / 2;object-fit:cover",
+          "alt": "Des soldats abaissent le dernier drapeau américain sur la base aérienne de Bagram en 2021.",
+          "width": "1000",
+          "height": "667",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2108/6797399/1000w_q95.jpg",
+          "style": "display:block;width:100%;max-width:100%;height:auto;aspect-ratio:3 / 2;object-fit:cover",
+          "alt": "Un avion de transport C-17 émirati embarque des personnes évacuées à l’aéroport de Kaboul le 21 août 2021.",
+          "width": "1000",
+          "height": "667",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "../assets/images/roubaix-gambetta.webp",
+          "alt": "Carte postale du boulevard Gambetta à Roubaix, avec tramway et passants, avant 1919.",
+          "width": "1200",
+          "height": "773",
+          "loading": "lazy",
+          "decoding": "async"
+        }
+      ],
+      "links": [
+        "#texte-article",
+        "../index.html",
+        "../index.html",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/quiz.html#daily-title",
+        "/Thot/notre-methode.html",
+        "/Thot/index.html#concept",
+        "https://thot-culture.github.io/Thot/articles/puissance-etats-unis.html",
+        "#ref9",
+        "#ref10",
+        "#ref9",
+        "#ref17",
+        "#ref12",
+        "#ref13",
+        "#ref18",
+        "#ref14",
+        "#ref16",
+        "#ref1",
+        "#ref2",
+        "#ref3",
+        "#ref4",
+        "#ref5",
+        "#ref6",
+        "#ref8",
+        "#ref7",
+        "#ref9",
+        "#ref9",
+        "#ref10",
+        "#ref10",
+        "#ref10",
+        "#ref10",
+        "https://www.dvidshub.net/image/1211203/afghan-national-army-soldiers-lead",
+        "https://www.dvidshub.net/image/8124895/final-american-flag-being-lowered-bagram-airfield",
+        "https://www.dvidshub.net/image/6797399/afghanistan-evacuation",
+        "https://www.dvidshub.net/about/copyright",
+        "#ref9",
+        "#ref9",
+        "#ref10",
+        "#ref10",
+        "#ref10",
+        "#ref10",
+        "#ref9",
+        "#ref9",
+        "#ref11",
+        "#ref12",
+        "#ref13",
+        "#ref14",
+        "#ref15",
+        "#ref16",
+        "roubaix-1917.html",
+        "https://commons.wikimedia.org/wiki/File:ELD_-_ROUBAIX_-_Boulevard_Gambetta.JPG",
+        "#ref7",
+        "#ref8",
+        "https://geoconfluences.ens-lyon.fr/glossaire/puissance",
+        "https://geoconfluences.ens-lyon.fr/glossaire/pouvoir",
+        "https://catalogue.bnf.fr/ark:/12148/cb392207667",
+        "https://www.wcfia.harvard.edu/publications/future-power",
+        "https://geoconfluences.ens-lyon.fr/glossaire/westphalien-westphalienne-post-westphalien",
+        "https://www.cambridge.org/core/journals/review-of-international-studies/article/abs/rethinking-the-sovereign-state-model/C77F748A59F937165E6495C7A4ECEC3F",
+        "https://library.fes.de/libalt/journals/swetsfulltext/16956999.pdf",
+        "https://www.un.org/fr/about-us/un-charter/chapter-1",
+        "https://www.un.org/fr/about-us/un-charter/chapter-7",
+        "https://www.cambridge.org/core/journals/international-organization/article/abs/sovereignty-international-relations-and-the-westphalian-myth/33B6B7773432BE494F31518952ABE881",
+        "https://www.govinfo.gov/content/pkg/GOVPUB-S-PURL-gpo220710/pdf/GOVPUB-S-PURL-gpo220710.pdf",
+        "https://www.sigar.mil/pdf/quarterlyreports/2021-10-30qr.pdf",
+        "https://www.ecoi.net/en/file/local/2063773/2021-10-30qr.pdf",
+        "https://www.govinfo.gov/content/pkg/GOVPUB-S-PURL-gpo220547/pdf/GOVPUB-S-PURL-gpo220547.pdf",
+        "https://www.eia.gov/todayinenergy/detail.php?id=65504",
+        "https://www.reuters.com/world/middle-east/irans-central-bank-governor-dismisses-claims-economic-collapse-amid-us-blockade-2026-10-14/",
+        "https://www.reuters.com/world/asia-pacific/irans-pezeshkian-discusses-mediation-efforts-meeting-with-pakistans-army-chief-2026-10-20/",
+        "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/1760415/statement-from-gen-joseph-votel-on-liberating-the-last-territory-held-by-daesh/",
+        "https://press.un.org/en/2019/sc13931.doc.htm",
+        "https://docs.un.org/S/2026/638",
+        "https://www.un.org/securitycouncil/ctc/news/joint-briefing-security-council-twenty-third-report-secretary-general-threat-posed-isil-da%E2%80%99esh",
+        "https://www.eia.gov/todayinenergy/detail.php?id=49116",
+        "https://2017-2021.state.gov/joint-statement-by-the-political-directors-of-the-global-coalition-to-defeat-isis/",
+        "https://www.diplomatie.gouv.fr/IMG/pdf/paris_roadmap_-_final_version_fr_2__cle09b5d2.pdf",
+        "../bibliotheque.html",
+        "#comparateur-puissance-titre",
+        "#puissance",
+        "#souverainete",
+        "#afghanistan",
+        "#iran",
+        "#daech",
+        "#retenir-titre",
+        "#sources",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/notre-methode.html",
+        "/Thot/contact.html",
+        "/Thot/mentions-legales.html",
+        "/Thot/confidentialite.html"
+      ],
+      "verification_present": false
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/articles/roubaix-1917.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/articles/roubaix-1917.html",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "53223",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "path": "articles/roubaix-1917.html",
+      "sha256": "c08770abe484c6f4f6cc93984c2748e7dceddf26987a9bc7c2638d52e24100e2",
+      "exact_matches": [
+        "main"
+      ],
+      "title": [
+        "Roubaix en 1917 : vivre sous l'occupation allemande | THOT"
+      ],
+      "description": "Roubaix en 1917 : découvrez l’occupation allemande à travers des affiches d’époque, des photographies historiques et une frise interactive de 1914 à 1918.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/articles/roubaix-1917.html"
+      ],
+      "robots": null,
+      "googlebot": null,
+      "og": {
+        "og:type": [
+          "article"
+        ],
+        "og:locale": [
+          "fr_FR"
+        ],
+        "og:site_name": [
+          "THOT"
+        ],
+        "og:title": [
+          "Roubaix, 1917 · Vivre sous l’occupation"
+        ],
+        "og:description": [
+          "Affiches, consignes et vie quotidienne : explorer Roubaix sous occupation en distinguant les documents historiques et leurs limites."
+        ],
+        "og:url": [
+          "https://thot-culture.github.io/Thot/articles/roubaix-1917.html"
+        ],
+        "og:image": [
+          "https://thot-culture.github.io/Thot/assets/social-cards/roubaix-1917.png"
+        ],
+        "og:image:type": [
+          "image/png"
+        ],
+        "og:image:width": [
+          "1200"
+        ],
+        "og:image:height": [
+          "630"
+        ],
+        "og:image:alt": [
+          "THOT — Roubaix, 1917 : vivre sous l’occupation. La date 1917 se détache sur une trame urbaine abstraite."
+        ]
+      },
+      "headings": [
+        [
+          "h1",
+          "Roubaix en 1917 : vivre sous l'occupation allemande"
+        ],
+        [
+          "h2",
+          "Une ville industrielle sous occupation"
+        ],
+        [
+          "h2",
+          "1914–1918 : explorer l'occupation de Roubaix"
+        ],
+        [
+          "h3",
+          "1914–1918 : huit étapes à explorer"
+        ],
+        [
+          "h4",
+          "Roubaix passe sous occupation allemande"
+        ],
+        [
+          "h2",
+          "La guerre racontée par ses images"
+        ],
+        [
+          "h2",
+          "Contrôler les habitants : l'exemple de juillet 1917"
+        ],
+        [
+          "h2",
+          "Travailler pour qui, et dans quelles conditions ?"
+        ],
+        [
+          "h2",
+          "Quand la guerre entre jusque dans les maisons"
+        ],
+        [
+          "h3",
+          "Lire l’avis sur la laine en trois repères"
+        ],
+        [
+          "h2",
+          "Se nourrir : des règles et des inquiétudes"
+        ],
+        [
+          "h2",
+          "Partir de Roubaix : un avis de décembre"
+        ],
+        [
+          "h2",
+          "Ce que les documents nous racontent — et leurs limites"
+        ],
+        [
+          "h2",
+          "Ce qu'il faut retenir"
+        ],
+        [
+          "h2",
+          "Encore curieux ?"
+        ],
+        [
+          "h2",
+          "Ce qu’on sait, ce qui reste à discuter"
+        ],
+        [
+          "h3",
+          "Ce qu’on sait"
+        ],
+        [
+          "h3",
+          "Ce que les documents ne disent pas"
+        ],
+        [
+          "h2",
+          "Sources et références"
+        ]
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://thot-culture.github.io/Thot/articles/roubaix-1917.html"
+          },
+          "headline": "Roubaix en 1917 : vivre sous l'occupation allemande",
+          "description": "Roubaix en 1917 : découvrez l’occupation allemande à travers des affiches d’époque, des photographies historiques et une frise interactive de 1914 à 1918.",
+          "image": [
+            "https://thot-culture.github.io/Thot/assets/social-cards/roubaix-1917.png"
+          ],
+          "author": {
+            "@type": "Organization",
+            "name": "La rédaction THOT",
+            "url": "https://thot-culture.github.io/Thot/notre-methode.html"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "THOT",
+            "url": "https://thot-culture.github.io/Thot/"
+          },
+          "datePublished": "2026-10-20",
+          "dateModified": "2026-10-26",
+          "inLanguage": "fr-FR",
+          "articleSection": "Histoire · Première Guerre mondiale",
+          "about": [
+            {
+              "@type": "Thing",
+              "name": "Roubaix pendant la Première Guerre mondiale"
+            },
+            {
+              "@type": "Thing",
+              "name": "occupation allemande"
+            },
+            {
+              "@type": "Thing",
+              "name": "histoire locale"
+            },
+            {
+              "@type": "Thing",
+              "name": "Première Guerre mondiale"
+            }
+          ],
+          "keywords": "Roubaix pendant la Première Guerre mondiale, occupation allemande, histoire locale, Première Guerre mondiale"
+        }
+      ],
+      "images": [
+        {
+          "class": "document-image",
+          "id": "laine-image",
+          "src": "../assets/images/roubaix-laines-1917-apercu.jpg",
+          "data-full-src": "../assets/images/roubaix-laines-1917-original.jpg",
+          "alt": "Avis de la ville de Roubaix du 30 octobre 1917 : prélèvement de laine dans les matelas et coussins. Transcription disponible après l’image.",
+          "width": "1238",
+          "height": "1685",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "../assets/images/puissance-afghanistan.webp",
+          "alt": "Des soldats afghans s’exercent avec un bulldozer au camp Shorabak, en 2014.",
+          "width": "1000",
+          "height": "667",
+          "loading": "lazy",
+          "decoding": "async"
+        }
+      ],
+      "links": [
+        "#texte-article",
+        "../index.html",
+        "../index.html",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/quiz.html#daily-title",
+        "/Thot/notre-methode.html",
+        "/Thot/index.html#concept",
+        "https://thot-culture.github.io/Thot/articles/roubaix-1917.html",
+        "#ref1",
+        "#ref1",
+        "#ref1",
+        "#ref1",
+        "#ref1",
+        "#ref3",
+        "#ref4",
+        "#ref2",
+        "#ref2",
+        "#ref8",
+        "#ref7",
+        "#ref1",
+        "#ref2",
+        "#ref3",
+        "#ref4",
+        "#ref3",
+        "https://commons.wikimedia.org/wiki/File:%22Ville_de_Roubaix_-_Avis_%C3%A0_la_Population_-_pr%C3%A9l%C3%A8vement_de_laines_%26_M%C3%A9langes_de_laines_provenant_de_Matelas_et_Coussins%22_(Einsch%C3%A4rfung_fr%C3%BCherer_Anordnu_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_1451.jpg",
+        "https://creativecommons.org/licenses/by/4.0/",
+        "../assets/images/roubaix-laines-1917-original.jpg",
+        "https://commons.wikimedia.org/wiki/File:%22Ville_de_Roubaix_-_Avis_%C3%A0_la_Population_-_pr%C3%A9l%C3%A8vement_de_laines_%26_M%C3%A9langes_de_laines_provenant_de_Matelas_et_Coussins%22_(Einsch%C3%A4rfung_fr%C3%BCherer_Anordnu_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_1451.jpg",
+        "#ref5",
+        "#ref6",
+        "#ref7",
+        "#ref1",
+        "#ref8",
+        "#ref9",
+        "puissance-etats-unis.html",
+        "https://www.dvidshub.net/image/1211203/afghan-national-army-soldiers-lead",
+        "#ref6",
+        "#ref6",
+        "#ref9",
+        "https://www.armarium-hautsdefrance.fr/document/85546",
+        "https://bn-r.cd-script.fr/fr/notice.php?from=&id=AFF_001_D_0150&searchurl=%2Ffr%2Frecherche-resultat.php%3Ffl%3D%26from%3D%26q%3DGrand%2Bplace%26sort%3Dtri_annee%2520asc%2Ctri_titre%2520asc%26start%3D990%26version%3D2.2&startpic=0",
+        "https://bn-r.cd-script.fr/fr/notice.php?from=periode&id=AFF_001_D_0632&searchurl=%2Ffr%2Frecherche-resultat.php%3Ffl%3D%26from%3Dperiode%26q%3Dchrono%253A%25221914-1918%2522%26sort%3Dtri_annee%2520asc%2Ctri_titre%2520asc%26start%3D1020%26version%3D2.2",
+        "https://francearchives.gouv.fr/fr/subject/130828729?aug=True&es_digitized=False&es_publisher=1042446007&es_publisher=33940&indexentry=130828729&restrict_to_single_etype=False&sort=sortdate",
+        "https://armarium-hautsdefrance.fr/document/85546",
+        "https://bn-r.cd-script.fr/fr/notice.php?from=theme&id=AFF_001_D_0759&image=RBX_AMR_AFF_001_D_0759_1&searchurl=%2Ffr%2Frecherche-resultat.php%3Ffl%3D%26from%3Dtheme%26q%3Dtheme%253A%2522Guerres%2522%26sort%3Dtri_annee%2520asc%2Ctri_titre%2520asc%26start%3D920%26version%3D2.2&startpic=0",
+        "https://bn-r.cd-script.fr/fr/notice.php?id=AFF_001_D_0705",
+        "https://ccfr.bnf.fr/portailccfr/ark%3A/16871/004ROUS010013",
+        "https://www.armarium-hautsdefrance.fr/document/85546",
+        "../index.html",
+        "#lecture-affiche-laine",
+        "#contexte",
+        "#explorer-roubaix",
+        "#controle",
+        "#travail",
+        "#ravitaillement",
+        "#departs",
+        "#historiens",
+        "#retenir-titre",
+        "#sources",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/notre-methode.html",
+        "/Thot/contact.html",
+        "/Thot/mentions-legales.html",
+        "/Thot/confidentialite.html"
+      ],
+      "verification_present": false
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/bibliotheque.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/bibliotheque.html",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "17619",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "path": "bibliotheque.html",
+      "sha256": "8cc8b28fb63436a7605ebcd5b14ea785edf88db0d11cae77ee776b7be7e156e4",
+      "exact_matches": [
+        "main"
+      ],
+      "title": [
+        "Bibliothèque — Tous les articles | THOT"
+      ],
+      "description": "Découvrez les articles THOT : histoire, géographie, géopolitique, sciences et culture générale. Recherchez et explorez notre bibliothèque documentée.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/bibliotheque.html"
+      ],
+      "robots": null,
+      "googlebot": null,
+      "og": {
+        "og:type": [
+          "website"
+        ],
+        "og:site_name": [
+          "THOT"
+        ],
+        "og:title": [
+          "La bibliothèque THOT"
+        ],
+        "og:description": [
+          "Des articles documentés en histoire, littérature et géopolitique pour découvrir, comprendre et approfondir."
+        ],
+        "og:url": [
+          "https://thot-culture.github.io/Thot/bibliotheque.html"
+        ],
+        "og:locale": [
+          "fr_FR"
+        ],
+        "og:image": [
+          "https://thot-culture.github.io/Thot/assets/og-thot.png"
+        ],
+        "og:image:type": [
+          "image/png"
+        ],
+        "og:image:width": [
+          "1200"
+        ],
+        "og:image:height": [
+          "630"
+        ],
+        "og:image:alt": [
+          "THOT, le magazine des esprits curieux : histoire, géographie et sciences humaines."
+        ]
+      },
+      "headings": [
+        [
+          "h1",
+          "La bibliothèque des esprits curieux."
+        ],
+        [
+          "h2",
+          "Tous les articles"
+        ],
+        [
+          "h3",
+          "Pourquoi les nouvelles armes ne suffisent-elles pas à gagner une guerre ?"
+        ],
+        [
+          "h3",
+          "Pourquoi ne réagit-on pas tous pareil face à l’autorité ?"
+        ],
+        [
+          "h3",
+          "Comment les pieuvres changent-elles de couleur ?"
+        ],
+        [
+          "h3",
+          "Pourquoi des autrices ont-elles publié sous un nom d’homme ?"
+        ],
+        [
+          "h3",
+          "Pourquoi les États-Unis ne peuvent-ils pas tout imposer ?"
+        ],
+        [
+          "h3",
+          "Roubaix en 1917 : vivre sous l’occupation allemande"
+        ],
+        [
+          "h3",
+          "Aucun article ne correspond à votre recherche."
+        ]
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Bibliothèque — Tous les articles | THOT",
+          "url": "https://thot-culture.github.io/Thot/bibliotheque.html",
+          "inLanguage": "fr"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/strategies-media/social.png",
+          "alt": "THOT — Armes, tactiques et logistique",
+          "width": "1200",
+          "height": "630",
+          "loading": "lazy"
+        },
+        {
+          "src": "assets/images/autorite-triptyque.webp",
+          "alt": "Illustration de trois situations : discussion familiale, manifestation et échange au lycée.",
+          "width": "1200",
+          "height": "800",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+          "alt": "Poulpe commun photographié dans son milieu naturel.",
+          "width": "960",
+          "height": "713",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "assets/images/autrices-nadar.webp",
+          "alt": "Planche de portraits photographiques de George Sand par Nadar, en 1864.",
+          "width": "1176",
+          "height": "900",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "assets/images/puissance-afghanistan.webp",
+          "alt": "Des soldats afghans s’exercent avec un bulldozer au camp Shorabak, en 2014.",
+          "width": "1000",
+          "height": "667",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "assets/images/roubaix-gambetta.webp",
+          "alt": "Carte postale du boulevard Gambetta à Roubaix, avec tramway et passants, avant 1919.",
+          "width": "1200",
+          "height": "773",
+          "loading": "lazy",
+          "decoding": "async"
+        }
+      ],
+      "links": [
+        "#contenu",
+        "index.html",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/quiz.html#daily-title",
+        "/Thot/notre-methode.html",
+        "/Thot/index.html#concept",
+        "articles/autrices-pseudonymes.html",
+        "articles/evolution-strategies-militaires.html",
+        "articles/autorite.html",
+        "articles/pieuvres-couleur.html",
+        "https://commons.wikimedia.org/wiki/File:Poulpe_commun_(Octopus_vulgaris)_(Ifremer_00679-79134_-_31993).jpg",
+        "articles/autrices-pseudonymes.html",
+        "https://commons.wikimedia.org/wiki/File:George_Sand_-_portraits.jpg",
+        "articles/puissance-etats-unis.html",
+        "https://www.dvidshub.net/image/1211203/afghan-national-army-soldiers-lead",
+        "articles/roubaix-1917.html",
+        "https://commons.wikimedia.org/wiki/File:ELD_-_ROUBAIX_-_Boulevard_Gambetta.JPG",
+        "quiz.html#quiz-classique",
+        "index.html",
+        "notre-methode.html",
+        "index.html",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/notre-methode.html",
+        "/Thot/contact.html",
+        "/Thot/mentions-legales.html",
+        "/Thot/confidentialite.html"
+      ],
+      "verification_present": false
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/confidentialite.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/confidentialite.html",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "5264",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "path": "confidentialite.html",
+      "sha256": "e5bc2135736512210c77a3ffb154e45167579d0d4bb836afe09e93f2e962d7a1",
+      "exact_matches": [
+        "main"
+      ],
+      "title": [
+        "Confidentialité et stockage local | THOT"
+      ],
+      "description": "Comment THOT utilise le stockage du navigateur et ce qui est transmis à GitHub lors de la consultation du site.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/confidentialite.html"
+      ],
+      "robots": null,
+      "googlebot": null,
+      "og": {
+        "og:type": [
+          "website"
+        ],
+        "og:title": [
+          "Confidentialité et stockage local | THOT"
+        ],
+        "og:description": [
+          "Comment THOT utilise le stockage du navigateur et ce qui est transmis à GitHub lors de la consultation du site."
+        ],
+        "og:url": [
+          "https://thot-culture.github.io/Thot/confidentialite.html"
+        ],
+        "og:image": [
+          "https://thot-culture.github.io/Thot/assets/og-thot.png"
+        ],
+        "og:site_name": [
+          "THOT"
+        ],
+        "og:locale": [
+          "fr_FR"
+        ]
+      },
+      "headings": [
+        [
+          "h1",
+          "Confidentialité et stockage local"
+        ],
+        [
+          "h2",
+          "Votre progression dans ce navigateur"
+        ],
+        [
+          "h2",
+          "Hébergement et liens externes"
+        ],
+        [
+          "h2",
+          "Signalements et demandes"
+        ]
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Confidentialité et stockage local | THOT",
+          "url": "https://thot-culture.github.io/Thot/confidentialite.html",
+          "inLanguage": "fr"
+        }
+      ],
+      "images": [],
+      "links": [
+        "#contenu",
+        "index.html",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/quiz.html#daily-title",
+        "/Thot/notre-methode.html",
+        "/Thot/index.html#concept",
+        "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection",
+        "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+        "contact.html",
+        "index.html",
+        "/Thot/contact.html",
+        "/Thot/mentions-legales.html",
+        "/Thot/confidentialite.html"
+      ],
+      "verification_present": false
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/contact.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/contact.html",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "4320",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "path": "contact.html",
+      "sha256": "040bfff73710bd85286dac37553ef80fed26e6f883d7150221c4b31691593b70",
+      "exact_matches": [
+        "main"
+      ],
+      "title": [
+        "Contact et corrections | THOT"
+      ],
+      "description": "Signaler une erreur, un lien cassé ou proposer une correction éditoriale à THOT via son dépôt GitHub.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/contact.html"
+      ],
+      "robots": null,
+      "googlebot": null,
+      "og": {
+        "og:type": [
+          "website"
+        ],
+        "og:title": [
+          "Contact et corrections | THOT"
+        ],
+        "og:description": [
+          "Signaler une erreur, un lien cassé ou proposer une correction éditoriale à THOT via son dépôt GitHub."
+        ],
+        "og:url": [
+          "https://thot-culture.github.io/Thot/contact.html"
+        ],
+        "og:image": [
+          "https://thot-culture.github.io/Thot/assets/og-thot.png"
+        ],
+        "og:site_name": [
+          "THOT"
+        ],
+        "og:locale": [
+          "fr_FR"
+        ]
+      },
+      "headings": [
+        [
+          "h1",
+          "Contact et corrections"
+        ],
+        [
+          "h2",
+          "Signaler une erreur ou proposer une correction"
+        ],
+        [
+          "h2",
+          "Contact éditorial privé"
+        ]
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Contact et corrections | THOT",
+          "url": "https://thot-culture.github.io/Thot/contact.html",
+          "inLanguage": "fr"
+        }
+      ],
+      "images": [],
+      "links": [
+        "#contenu",
+        "index.html",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/quiz.html#daily-title",
+        "/Thot/notre-methode.html",
+        "/Thot/index.html#concept",
+        "https://github.com/thot-culture/Thot/issues/new?template=correction.yml",
+        "https://github.com/thot-culture/Thot/issues",
+        "notre-methode.html",
+        "confidentialite.html",
+        "index.html",
+        "/Thot/contact.html",
+        "/Thot/mentions-legales.html",
+        "/Thot/confidentialite.html"
+      ],
+      "verification_present": false
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/explorer.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/explorer.html",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "45785",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "path": "explorer.html",
+      "sha256": "1a269cd5e805c2aa7a9892bc44318bf5ee7807694218e23bcc6c3a14ba95a2b6",
+      "exact_matches": [
+        "main"
+      ],
+      "title": [
+        "Explorer — THOT"
+      ],
+      "description": "Enquêter sur la mer d’Aral et explorer l’expansion de Rome dans deux expériences documentées et interactives.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/explorer.html"
+      ],
+      "robots": null,
+      "googlebot": null,
+      "og": {
+        "og:type": [
+          "website"
+        ],
+        "og:title": [
+          "Explorer — THOT"
+        ],
+        "og:description": [
+          "Enquêter sur la mer d’Aral et explorer l’expansion de Rome dans deux expériences documentées et interactives."
+        ],
+        "og:url": [
+          "https://thot-culture.github.io/Thot/explorer.html"
+        ],
+        "og:image": [
+          "https://thot-culture.github.io/Thot/assets/explorer-v2/media/moynaq-original.jpg"
+        ],
+        "og:site_name": [
+          "THOT"
+        ],
+        "og:locale": [
+          "fr_FR"
+        ]
+      },
+      "headings": [
+        [
+          "h1",
+          "EXPLORER"
+        ],
+        [
+          "h2",
+          "Le mystèrede la mer d’Aral."
+        ],
+        [
+          "h2",
+          "Rome,à travers le temps."
+        ],
+        [
+          "h2",
+          "Manipuler pour comprendre."
+        ],
+        [
+          "h2",
+          "Remonter aux sources."
+        ],
+        [
+          "h2",
+          "Garder sa liberté."
+        ]
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Explorer — THOT",
+          "url": "https://thot-culture.github.io/Thot/explorer.html",
+          "inLanguage": "fr"
+        }
+      ],
+      "images": [
+        {
+          "src": "/Thot/assets/explorer-v2/media/moynaq-cover.webp",
+          "alt": "Deux bateaux sur un sol sec à Moynaq, en mars 2011.",
+          "width": "1901",
+          "height": "1268",
+          "fetchpriority": "high"
+        }
+      ],
+      "links": [
+        "#contenu",
+        "/Thot/index.html",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/quiz.html#daily-title",
+        "/Thot/notre-methode.html",
+        "/Thot/index.html#concept",
+        "https://commons.wikimedia.org/wiki/File:Moynaq_Aral-Sea_Ships.jpg",
+        "https://creativecommons.org/licenses/by-sa/3.0/",
+        "/Thot/explorer/enquetes/mer-aral.html",
+        "/Thot/explorer/atlas/rome-expansion.html",
+        "/Thot/explorer/atlas/rome-expansion.html#sources",
+        "/Thot/explorer.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/notre-methode.html",
+        "/Thot/contact.html",
+        "/Thot/mentions-legales.html",
+        "/Thot/confidentialite.html"
+      ],
+      "verification_present": false
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/explorer/atlas/rome-expansion.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/explorer/atlas/rome-expansion.html",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "605959",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "path": "explorer/atlas/rome-expansion.html",
+      "sha256": "6f2028fb79ac81fe9df5492ea7dce9f84e4b2b80cfcbf40db98b33f45e6daa52",
+      "exact_matches": [
+        "main"
+      ],
+      "title": [
+        "L’expansion de Rome — THOT"
+      ],
+      "description": "Un atlas historique documenté : huit états cartographiques, six chapitres, un comparateur temporel et des objets à examiner.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/explorer/atlas/rome-expansion.html"
+      ],
+      "robots": null,
+      "googlebot": null,
+      "og": {
+        "og:type": [
+          "website"
+        ],
+        "og:title": [
+          "L’expansion de Rome — THOT"
+        ],
+        "og:description": [
+          "Un atlas historique documenté : huit états cartographiques, six chapitres, un comparateur temporel et des objets à examiner."
+        ],
+        "og:url": [
+          "https://thot-culture.github.io/Thot/explorer/atlas/rome-expansion.html"
+        ],
+        "og:image": [
+          "https://thot-culture.github.io/Thot/assets/explorer-v2/media/met-248042.webp"
+        ],
+        "og:site_name": [
+          "THOT"
+        ],
+        "og:locale": [
+          "fr_FR"
+        ]
+      },
+      "headings": [
+        [
+          "h1",
+          "L’expansion de RomeUne cité. Un monde en mouvement."
+        ],
+        [
+          "h2",
+          "Six chapitres, plusieurs regards"
+        ],
+        [
+          "h3",
+          ""
+        ],
+        [
+          "h2",
+          "Vers 117 apr. J.-C."
+        ],
+        [
+          "h3",
+          ""
+        ],
+        [
+          "h3",
+          ""
+        ],
+        [
+          "h3",
+          "1. Rome et la conquête de l’Italie"
+        ],
+        [
+          "h3",
+          "2. Rome face à Carthage : les guerres puniques"
+        ],
+        [
+          "h3",
+          "3. La domination s’étend en Méditerranée"
+        ],
+        [
+          "h3",
+          "4. César, les conquêtes et les crises de la République"
+        ],
+        [
+          "h3",
+          "5. Auguste et la naissance du régime impérial"
+        ],
+        [
+          "h3",
+          "6. Des premiers empereurs à Trajan"
+        ],
+        [
+          "h3",
+          "Dates, provenance et limites des cartes"
+        ],
+        [
+          "h3",
+          "Lieux et événements : un index documentaire, toutes périodes"
+        ],
+        [
+          "h4",
+          "Roma · Rome"
+        ],
+        [
+          "h4",
+          "Carthago · Carthage"
+        ],
+        [
+          "h4",
+          "Athenae · Athènes"
+        ],
+        [
+          "h4",
+          "Alexandria · Alexandrie"
+        ],
+        [
+          "h4",
+          "Lugdunum · Lyon"
+        ],
+        [
+          "h4",
+          "Massalia · Marseille"
+        ],
+        [
+          "h4",
+          "Tarraco · Tarragone"
+        ],
+        [
+          "h4",
+          "Actium · sanctuaire et mémorial"
+        ],
+        [
+          "h4",
+          "Cannae · Cannes"
+        ],
+        [
+          "h4",
+          "Ephesos · Éphèse"
+        ],
+        [
+          "h4",
+          "Antiochia · Antioche"
+        ],
+        [
+          "h4",
+          "Cannes : une défaite romaine"
+        ],
+        [
+          "h4",
+          "La destruction de Carthage"
+        ],
+        [
+          "h4",
+          "Actium : victoire et mémoire"
+        ],
+        [
+          "h4",
+          "Le titre d’Auguste"
+        ],
+        [
+          "h2",
+          "Des objets et des visages,pour regarder derrière les frontières."
+        ],
+        [
+          "h3",
+          "Quatre personnages, des rôles différents"
+        ],
+        [
+          "h3",
+          "Hannibal"
+        ],
+        [
+          "h3",
+          "Jules César"
+        ],
+        [
+          "h3",
+          "Auguste"
+        ],
+        [
+          "h3",
+          "Trajan"
+        ],
+        [
+          "h3",
+          "La bibliothèque documentaire"
+        ],
+        [
+          "h3",
+          "Denier de Jules César"
+        ],
+        [
+          "h3",
+          "Denier d’Octavien, futur Auguste"
+        ],
+        [
+          "h3",
+          "Sesterce de Trajan"
+        ],
+        [
+          "h3",
+          "Le temple de Dendur"
+        ],
+        [
+          "h2",
+          "Notice documentaire"
+        ],
+        [
+          "h2",
+          "Une carte est un modèle documenté"
+        ],
+        [
+          "h3",
+          "Crédits des documents et portraits"
+        ],
+        [
+          "h3",
+          "Données géographiques et licences distinctes"
+        ]
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "L’expansion de Rome — THOT",
+          "url": "https://thot-culture.github.io/Thot/explorer/atlas/rome-expansion.html",
+          "inLanguage": "fr"
+        }
+      ],
+      "images": [
+        {
+          "src": "/Thot/assets/explorer-v2/media/hannibal.webp",
+          "alt": "Sculpture moderne d’Hannibal par Sébastien Slodtz, 1704.",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "/Thot/assets/explorer-v2/media/caesar.webp",
+          "alt": "Portrait antique dit de Tusculum, identifié comme Jules César.",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "/Thot/assets/explorer-v2/media/augustus.webp",
+          "alt": "Statue antique d’Auguste de Prima Porta, photographiée au Vatican.",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "/Thot/assets/explorer-v2/media/trajan.webp",
+          "alt": "Tête antique de Trajan, Glyptothèque de Munich, inventaire 336.",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "/Thot/assets/explorer-v2/media/met-248033.webp",
+          "alt": "Denier de Jules César, photographie du Metropolitan Museum of Art.",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "/Thot/assets/explorer-v2/media/met-248037.webp",
+          "alt": "Denier d’Octavien, futur Auguste, photographie du Metropolitan Museum of Art.",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "/Thot/assets/explorer-v2/media/met-248042.webp",
+          "alt": "Sesterce de Trajan, photographie du Metropolitan Museum of Art.",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "/Thot/assets/explorer-v2/media/met-547802.webp",
+          "alt": "Temple de Dendur et sa porte de grès, exposés dans une salle vitrée du Metropolitan Museum of Art.",
+          "loading": "lazy",
+          "decoding": "async"
+        }
+      ],
+      "links": [
+        "#contenu",
+        "/Thot/index.html",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/quiz.html#daily-title",
+        "/Thot/notre-methode.html",
+        "/Thot/index.html#concept",
+        "/Thot/explorer.html",
+        "https://github.com/AWMC/geodata/tree/7ecf8bccea2efe1e1e9df2daf6001942de73fb87",
+        "https://www.metmuseum.org/essays/the-roman-republic",
+        "https://www.metmuseum.org/pt/toah/ht/04/afw.html",
+        "https://www.metmuseum.org/essays/the-roman-republic",
+        "https://www.metmuseum.org/essays/the-roman-republic",
+        "https://www.metmuseum.org/essays/the-roman-empire-27-b-c-393-a-d",
+        "https://www.metmuseum.org/essays/the-roman-empire-27-b-c-393-a-d",
+        "https://github.com/aourednik/historical-basemaps/tree/da7a4b735ecef70aebdc9c73e409d8a2500d50f3",
+        "https://github.com/aourednik/historical-basemaps/tree/da7a4b735ecef70aebdc9c73e409d8a2500d50f3",
+        "https://github.com/aourednik/historical-basemaps/tree/da7a4b735ecef70aebdc9c73e409d8a2500d50f3",
+        "https://github.com/aourednik/historical-basemaps/tree/da7a4b735ecef70aebdc9c73e409d8a2500d50f3",
+        "https://github.com/AWMC/geodata/tree/7ecf8bccea2efe1e1e9df2daf6001942de73fb87",
+        "https://github.com/aourednik/historical-basemaps/tree/da7a4b735ecef70aebdc9c73e409d8a2500d50f3",
+        "https://github.com/aourednik/historical-basemaps/tree/da7a4b735ecef70aebdc9c73e409d8a2500d50f3",
+        "https://github.com/AWMC/geodata/tree/7ecf8bccea2efe1e1e9df2daf6001942de73fb87",
+        "https://pleiades.stoa.org/places/423025",
+        "https://pleiades.stoa.org/places/314921",
+        "https://pleiades.stoa.org/places/579885",
+        "https://pleiades.stoa.org/places/727070",
+        "https://pleiades.stoa.org/places/167717",
+        "https://pleiades.stoa.org/places/148127",
+        "https://pleiades.stoa.org/places/246349",
+        "https://pleiades.stoa.org/places/530771",
+        "https://pleiades.stoa.org/places/442523",
+        "https://pleiades.stoa.org/places/599612",
+        "https://pleiades.stoa.org/places/658381",
+        "https://pleiades.stoa.org/places/442523",
+        "https://www.metmuseum.org/pt/toah/ht/04/afw.html",
+        "https://pleiades.stoa.org/places/530771",
+        "https://www.metmuseum.org/essays/the-roman-republic",
+        "https://commons.wikimedia.org/wiki/File:Hannibal_Slodtz_Louvre_MR2093_(cropped2).png",
+        "https://commons.wikimedia.org/wiki/File:Retrato_de_Julio_C%C3%A9sar_(26724093101).jpg",
+        "https://commons.wikimedia.org/wiki/File:Augustus_of_Prima_Porta.jpg",
+        "https://commons.wikimedia.org/wiki/File:Traianus_Glyptothek_Munich_336.jpg",
+        "https://www.metmuseum.org/art/collection/search/248033",
+        "https://www.metmuseum.org/art/collection/search/248037",
+        "https://www.metmuseum.org/art/collection/search/248042",
+        "https://www.metmuseum.org/art/collection/search/547802",
+        "https://www.metmuseum.org/essays/the-roman-republic",
+        "https://www.metmuseum.org/essays/the-roman-empire-27-b-c-393-a-d",
+        "https://www.metmuseum.org/pt/toah/ht/04/afw.html",
+        "https://github.com/aourednik/historical-basemaps/tree/da7a4b735ecef70aebdc9c73e409d8a2500d50f3",
+        "https://github.com/AWMC/geodata/tree/7ecf8bccea2efe1e1e9df2daf6001942de73fb87",
+        "https://pleiades.stoa.org/places/423025",
+        "https://pleiades.stoa.org/places/314921",
+        "https://pleiades.stoa.org/places/579885",
+        "https://pleiades.stoa.org/places/727070",
+        "https://pleiades.stoa.org/places/167717",
+        "https://pleiades.stoa.org/places/148127",
+        "https://pleiades.stoa.org/places/246349",
+        "https://pleiades.stoa.org/places/530771",
+        "https://pleiades.stoa.org/places/442523",
+        "https://pleiades.stoa.org/places/599612",
+        "https://pleiades.stoa.org/places/658381",
+        "https://commons.wikimedia.org/wiki/File:Hannibal_Slodtz_Louvre_MR2093_(cropped2).png",
+        "https://commons.wikimedia.org/wiki/File:Retrato_de_Julio_C%C3%A9sar_(26724093101).jpg",
+        "https://commons.wikimedia.org/wiki/File:Augustus_of_Prima_Porta.jpg",
+        "https://commons.wikimedia.org/wiki/File:Traianus_Glyptothek_Munich_336.jpg",
+        "https://www.metmuseum.org/art/collection/search/248033",
+        "https://www.metmuseum.org/art/collection/search/248037",
+        "https://www.metmuseum.org/art/collection/search/248042",
+        "https://www.metmuseum.org/art/collection/search/547802",
+        "https://creativecommons.org/licenses/by-sa/3.0/",
+        "https://creativecommons.org/licenses/by/2.0/",
+        "https://creativecommons.org/licenses/by-sa/4.0/",
+        "https://creativecommons.org/publicdomain/mark/1.0/",
+        "https://creativecommons.org/publicdomain/zero/1.0/",
+        "https://creativecommons.org/publicdomain/zero/1.0/",
+        "https://creativecommons.org/publicdomain/zero/1.0/",
+        "https://creativecommons.org/publicdomain/zero/1.0/",
+        "/Thot/assets/explorer-v2/sources/historical-basemaps-source.zip",
+        "/Thot/assets/explorer-v2/sources/awmc-source.zip",
+        "/Thot/assets/explorer-v2/data/historical-basemaps-derived.geojson",
+        "/Thot/assets/explorer-v2/data/awmc-derived.geojson",
+        "/Thot/assets/explorer-v2/sources/natural-earth-source.zip",
+        "/Thot/assets/explorer-v2/sources/pleiades-places.json",
+        "/Thot/assets/explorer-v2/sources/geography-sources.json",
+        "/Thot/assets/explorer-v2/sources/rome-sources.json",
+        "/Thot/explorer.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/notre-methode.html",
+        "/Thot/contact.html",
+        "/Thot/mentions-legales.html",
+        "/Thot/confidentialite.html"
+      ],
+      "verification_present": false
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/explorer/enquetes/mer-aral.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/explorer/enquetes/mer-aral.html",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "90533",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "path": "explorer/enquetes/mer-aral.html",
+      "sha256": "fc549bd9985961c422c0dbd24b5f5ab9dc6bda9e0416b709daf87a1240011761",
+      "exact_matches": [
+        "main"
+      ],
+      "title": [
+        "Le mystère de la mer d’Aral — THOT"
+      ],
+      "description": "Une enquête documentaire sur le recul de la mer d’Aral : onze pièces documentées, un tableau de preuves et une conclusion à construire.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/explorer/enquetes/mer-aral.html"
+      ],
+      "robots": null,
+      "googlebot": null,
+      "og": {
+        "og:type": [
+          "website"
+        ],
+        "og:title": [
+          "Le mystère de la mer d’Aral — THOT"
+        ],
+        "og:description": [
+          "Une enquête documentaire sur le recul de la mer d’Aral : onze pièces documentées, un tableau de preuves et une conclusion à construire."
+        ],
+        "og:url": [
+          "https://thot-culture.github.io/Thot/explorer/enquetes/mer-aral.html"
+        ],
+        "og:image": [
+          "https://thot-culture.github.io/Thot/assets/explorer-v2/media/moynaq-original.jpg"
+        ],
+        "og:site_name": [
+          "THOT"
+        ],
+        "og:locale": [
+          "fr_FR"
+        ]
+      },
+      "headings": [
+        [
+          "h1",
+          "Pourquoi ces bateaux sont-ils au milieu du désert ?"
+        ],
+        [
+          "h2",
+          "Ton bureau d’investigation"
+        ],
+        [
+          "h3",
+          "Un repère, à ton rythme"
+        ],
+        [
+          "h3",
+          "Les pièces"
+        ],
+        [
+          "h3",
+          "Les bateaux de Moynaq"
+        ],
+        [
+          "h4",
+          "Ce qu’elle montre"
+        ],
+        [
+          "h4",
+          "Ses limites"
+        ],
+        [
+          "h3",
+          "La mer vue de l’espace · 2000"
+        ],
+        [
+          "h4",
+          "Ce qu’elle montre"
+        ],
+        [
+          "h4",
+          "Ses limites"
+        ],
+        [
+          "h3",
+          "La mer vue de l’espace · 2014"
+        ],
+        [
+          "h4",
+          "Ce qu’elle montre"
+        ],
+        [
+          "h4",
+          "Ses limites"
+        ],
+        [
+          "h3",
+          "Deux fleuves, un lac sans débouché"
+        ],
+        [
+          "h4",
+          "Ce qu’elle montre"
+        ],
+        [
+          "h4",
+          "Ses limites"
+        ],
+        [
+          "h3",
+          "La superficie à cinq dates"
+        ],
+        [
+          "h4",
+          "Ce qu’elle montre"
+        ],
+        [
+          "h4",
+          "Ses limites"
+        ],
+        [
+          "h3",
+          "L’eau prélevée pour irriguer"
+        ],
+        [
+          "h4",
+          "Ce qu’elle montre"
+        ],
+        [
+          "h4",
+          "Ses limites"
+        ],
+        [
+          "h3",
+          "Des cultures qui demandent de l’eau"
+        ],
+        [
+          "h4",
+          "Ce qu’elle montre"
+        ],
+        [
+          "h4",
+          "Ses limites"
+        ],
+        [
+          "h3",
+          "Des années sèches qui aggravent le recul"
+        ],
+        [
+          "h4",
+          "Ce qu’elle montre"
+        ],
+        [
+          "h4",
+          "Ses limites"
+        ],
+        [
+          "h3",
+          "Quand le fond devient une source de poussières"
+        ],
+        [
+          "h4",
+          "Ce qu’elle montre"
+        ],
+        [
+          "h4",
+          "Ses limites"
+        ],
+        [
+          "h3",
+          "Au Nord, une restauration partielle"
+        ],
+        [
+          "h4",
+          "Ce qu’elle montre"
+        ],
+        [
+          "h4",
+          "Ses limites"
+        ],
+        [
+          "h3",
+          "Le Nord avant la séparation · 1964"
+        ],
+        [
+          "h4",
+          "Ce qu’elle montre"
+        ],
+        [
+          "h4",
+          "Ses limites"
+        ],
+        [
+          "h3",
+          "Relier les indices"
+        ],
+        [
+          "h4",
+          "Créer une relation"
+        ],
+        [
+          "h3",
+          "Construire ton explication"
+        ],
+        [
+          "h4",
+          "Les preuves que tu retiens"
+        ],
+        [
+          "h2",
+          "Une conclusion qui s’appuie sur ses preuves"
+        ],
+        [
+          "h2",
+          ""
+        ],
+        [
+          "h2",
+          "Ouvrir un nouveau dossier ?"
+        ],
+        [
+          "h2",
+          "Revenir aux documents"
+        ],
+        [
+          "h3",
+          "Crédits et réutilisation"
+        ]
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Le mystère de la mer d’Aral — THOT",
+          "url": "https://thot-culture.github.io/Thot/explorer/enquetes/mer-aral.html",
+          "inLanguage": "fr"
+        }
+      ],
+      "images": [
+        {
+          "src": "/Thot/assets/explorer-v2/media/moynaq-original.jpg",
+          "alt": "Deux bateaux échoués sur un sol sec à Moynaq, photographiés en mars 2011.",
+          "width": "1901",
+          "height": "1268",
+          "fetchpriority": "high"
+        },
+        {
+          "src": "/Thot/assets/explorer-v2/media/moynaq-original.jpg",
+          "alt": "",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "/Thot/assets/explorer-v2/media/moynaq-original.jpg",
+          "alt": "Deux bateaux échoués sur un sol sec à Moynaq, photographiés en mars 2011.",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "/Thot/assets/explorer-v2/media/aral-2000.jpg",
+          "alt": "",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "/Thot/assets/explorer-v2/media/aral-2000.jpg",
+          "alt": "Image satellite de la mer d’Aral datée du 25 août 2000 ; rivage de 1960 repéré en jaune.",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "/Thot/assets/explorer-v2/media/aral-2014.jpg",
+          "alt": "",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "/Thot/assets/explorer-v2/media/aral-2014.jpg",
+          "alt": "Image satellite de la mer d’Aral datée du 19 août 2014 ; rivage de 1960 repéré en jaune.",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "/Thot/assets/explorer-v2/media/aral-dust-2006.webp",
+          "alt": "",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "/Thot/assets/explorer-v2/media/aral-dust-2006.webp",
+          "alt": "Voile clair de poussières sur la partie orientale de la mer d’Aral, image Aqua MODIS du 13 juin 2006.",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "/Thot/assets/explorer-v2/media/aral-dam-2006.webp",
+          "alt": "",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "/Thot/assets/explorer-v2/media/aral-dam-2006.webp",
+          "alt": "Vue Landsat en fausses couleurs de la digue de Kok-Aral et des eaux retenues au Nord en 2006.",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "/Thot/assets/explorer-v2/media/aral-north-1964.webp",
+          "alt": "",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "/Thot/assets/explorer-v2/media/aral-north-1964.webp",
+          "alt": "Archive satellite en noir et blanc de la mer d’Aral du Nord et de sa liaison au Sud, le 22 août 1964.",
+          "loading": "lazy",
+          "decoding": "async"
+        }
+      ],
+      "links": [
+        "#contenu",
+        "/Thot/index.html",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/quiz.html#daily-title",
+        "/Thot/notre-methode.html",
+        "/Thot/index.html#concept",
+        "/Thot/explorer.html",
+        "#aral-documents",
+        "https://creativecommons.org/licenses/by-sa/3.0/",
+        "https://commons.wikimedia.org/wiki/File:Moynaq_Aral-Sea_Ships.jpg",
+        "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "https://science.nasa.gov/earth/earth-observatory/world-of-change/aral-sea/",
+        "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "https://science.nasa.gov/earth/earth-observatory/world-of-change/aral-sea/",
+        "https://github.com/nvkelso/natural-earth-vector/blob/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_rivers_lake_centerlines.geojson",
+        "https://www.cs.cornell.edu/courses/cs6702/2011sp/readings/AralSea2011.pdf",
+        "https://github.com/nvkelso/natural-earth-vector/blob/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_rivers_lake_centerlines.geojson",
+        "https://www.cs.cornell.edu/courses/cs6702/2011sp/readings/AralSea2011.pdf",
+        "https://cawater-info.net/bk/water_land_resources_use/english/docs/table6.pdf",
+        "https://www.cs.cornell.edu/courses/cs6702/2011sp/readings/AralSea2011.pdf",
+        "https://cawater-info.net/bk/water_land_resources_use/english/docs/table6.pdf",
+        "https://science.nasa.gov/earth/earth-observatory/world-of-change/aral-sea/",
+        "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "https://www.undp.org/uzbekistan/press-releases/undp-and-uzbekistan-join-forces-combat-dust-storms-southern-aral-sea-region",
+        "https://science.nasa.gov/earth/earth-observatory/dust-storm-over-the-aral-sea-6654/",
+        "/Thot/assets/explorer-v2/media/aral-dust-2006.jpg",
+        "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+        "https://documents1.worldbank.org/curated/en/888771468089960580/pdf/462360BRI0Box31e0no0FS231Kazakhstan.pdf",
+        "https://eros.usgs.gov/earthshots/kok-aral-dam",
+        "https://science.nasa.gov/earth/earth-observatory/world-of-change/aral-sea/",
+        "/Thot/assets/explorer-v2/media/aral-dam-2006.png",
+        "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+        "https://eros.usgs.gov/earthshots/north-aral-sea",
+        "/Thot/assets/explorer-v2/media/aral-north-1964.png",
+        "https://commons.wikimedia.org/wiki/File:Moynaq_Aral-Sea_Ships.jpg",
+        "https://science.nasa.gov/earth/earth-observatory/world-of-change/aral-sea/",
+        "https://www.cs.cornell.edu/courses/cs6702/2011sp/readings/AralSea2011.pdf",
+        "https://github.com/nvkelso/natural-earth-vector/blob/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_rivers_lake_centerlines.geojson",
+        "https://cawater-info.net/bk/water_land_resources_use/english/docs/table6.pdf",
+        "https://www.undp.org/uzbekistan/press-releases/undp-and-uzbekistan-join-forces-combat-dust-storms-southern-aral-sea-region",
+        "https://science.nasa.gov/earth/earth-observatory/dust-storm-over-the-aral-sea-6654/",
+        "https://documents1.worldbank.org/curated/en/888771468089960580/pdf/462360BRI0Box31e0no0FS231Kazakhstan.pdf",
+        "https://eros.usgs.gov/earthshots/kok-aral-dam",
+        "https://eros.usgs.gov/earthshots/north-aral-sea",
+        "https://creativecommons.org/licenses/by-sa/3.0/",
+        "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+        "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+        "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+        "/Thot/assets/explorer-v2/data/aral.json",
+        "/Thot/assets/explorer-v2/sources/aral-sources.json",
+        "/Thot/explorer.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/notre-methode.html",
+        "/Thot/contact.html",
+        "/Thot/mentions-legales.html",
+        "/Thot/confidentialite.html"
+      ],
+      "verification_present": false
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "19048",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "path": "index.html",
+      "sha256": "03fd3ab48c1e3b12fa77214d04168a9442a7ea95d3d4e3ef5d3858481cff4d57",
+      "exact_matches": [
+        "main"
+      ],
+      "title": [
+        "THOT — Articles documentés et quiz de culture générale"
+      ],
+      "description": "Articles documentés d’histoire, de géographie et de culture générale, avec des quiz gratuits pour apprendre en jouant.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/"
+      ],
+      "robots": null,
+      "googlebot": null,
+      "og": {
+        "og:type": [
+          "website"
+        ],
+        "og:title": [
+          "THOT — Articles documentés et quiz de culture générale"
+        ],
+        "og:description": [
+          "Articles documentés d’histoire, de géographie et de culture générale, avec des quiz gratuits pour apprendre en jouant."
+        ],
+        "og:url": [
+          "https://thot-culture.github.io/Thot/"
+        ],
+        "og:locale": [
+          "fr_FR"
+        ],
+        "og:site_name": [
+          "THOT"
+        ],
+        "og:image": [
+          "https://thot-culture.github.io/Thot/assets/og-thot.png"
+        ],
+        "og:image:type": [
+          "image/png"
+        ],
+        "og:image:width": [
+          "1200"
+        ],
+        "og:image:height": [
+          "630"
+        ],
+        "og:image:alt": [
+          "THOT, le magazine des esprits curieux : histoire, géographie et sciences humaines."
+        ]
+      },
+      "headings": [
+        [
+          "h1",
+          "La curiosité est un super-pouvoir."
+        ],
+        [
+          "h2",
+          "Une question. Une découverte."
+        ],
+        [
+          "h3",
+          "Pourquoi ne réagit-on pas tous pareil face à l’autorité ?"
+        ],
+        [
+          "h3",
+          "Encore à découvrir"
+        ],
+        [
+          "h3",
+          "Comment les pieuvres changent-elles de couleur ?"
+        ],
+        [
+          "h3",
+          "Pourquoi les États-Unis ne peuvent-ils pas tout imposer ?"
+        ],
+        [
+          "h3",
+          "Roubaix en 1917 : vivre sous l’occupation allemande"
+        ],
+        [
+          "h3",
+          "Pourquoi des autrices ont-elles publié sous un nom d’homme ?"
+        ],
+        [
+          "h2",
+          "Apprendre en jouant."
+        ],
+        [
+          "h3",
+          "Choisir mon quiz"
+        ],
+        [
+          "h3",
+          "Relever le défi du jour"
+        ],
+        [
+          "h3",
+          "Une lecture captivante"
+        ],
+        [
+          "h3",
+          "Des sources visibles"
+        ],
+        [
+          "h3",
+          "Deux façons d'apprendre"
+        ]
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "THOT — Articles documentés et quiz de culture générale",
+          "url": "https://thot-culture.github.io/Thot/",
+          "inLanguage": "fr"
+        }
+      ],
+      "images": [
+        {
+          "src": "assets/images/autorite-triptyque.webp",
+          "alt": "Illustration en trois scènes : un parent et un adolescent discutent, une manifestation, une responsable scolaire échange avec des élèves.",
+          "width": "1200",
+          "height": "800",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+          "alt": "Poulpe commun photographié dans son milieu naturel.",
+          "width": "960",
+          "height": "713",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "assets/images/puissance-afghanistan.webp",
+          "alt": "Des soldats afghans s’exercent avec un bulldozer au camp Shorabak, en 2014.",
+          "width": "1000",
+          "height": "667",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "assets/images/roubaix-gambetta.webp",
+          "alt": "Carte postale du boulevard Gambetta à Roubaix, avec tramway et passants, avant 1919.",
+          "width": "1200",
+          "height": "773",
+          "loading": "lazy",
+          "decoding": "async"
+        },
+        {
+          "src": "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg",
+          "alt": "Portrait de l’autrice George Eliot par le peintre Samuel Laurence, vers 1860.",
+          "loading": "lazy",
+          "decoding": "async"
+        }
+      ],
+      "links": [
+        "#contenu",
+        "#accueil",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/quiz.html#daily-title",
+        "/Thot/notre-methode.html",
+        "/Thot/index.html#concept",
+        "bibliotheque.html",
+        "quiz.html#quiz-classique",
+        "bibliotheque.html",
+        "articles/autorite.html",
+        "articles/autorite.html",
+        "articles/autorite.html",
+        "bibliotheque.html",
+        "articles/pieuvres-couleur.html",
+        "https://commons.wikimedia.org/wiki/File:Poulpe_commun_(Octopus_vulgaris)_(Ifremer_00679-79134_-_31993).jpg",
+        "articles/puissance-etats-unis.html",
+        "https://www.dvidshub.net/image/1211203/afghan-national-army-soldiers-lead",
+        "articles/roubaix-1917.html",
+        "https://commons.wikimedia.org/wiki/File:ELD_-_ROUBAIX_-_Boulevard_Gambetta.JPG",
+        "articles/autrices-pseudonymes.html",
+        "https://commons.wikimedia.org/wiki/File:George_Eliot_by_Samuel_Laurence.jpg",
+        "bibliotheque.html",
+        "quiz.html#quiz-classique",
+        "quiz.html#daily-title",
+        "notre-methode.html",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/notre-methode.html",
+        "/Thot/contact.html",
+        "/Thot/mentions-legales.html",
+        "/Thot/confidentialite.html"
+      ],
+      "verification_present": true
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/mentions-legales.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/mentions-legales.html",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "5320",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "path": "mentions-legales.html",
+      "sha256": "36c62484ea42dc5d03771119f3b557254f1030e41b63c7712562d8df6785d30b",
+      "exact_matches": [
+        "main"
+      ],
+      "title": [
+        "Informations légales — éléments à compléter | THOT"
+      ],
+      "description": "Informations sur THOT, son hébergement et les éléments juridiques restant à valider.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/mentions-legales.html"
+      ],
+      "robots": null,
+      "googlebot": null,
+      "og": {
+        "og:type": [
+          "website"
+        ],
+        "og:title": [
+          "Informations légales — éléments à compléter | THOT"
+        ],
+        "og:description": [
+          "Informations sur THOT, son hébergement et les éléments juridiques restant à valider."
+        ],
+        "og:url": [
+          "https://thot-culture.github.io/Thot/mentions-legales.html"
+        ],
+        "og:image": [
+          "https://thot-culture.github.io/Thot/assets/og-thot.png"
+        ],
+        "og:site_name": [
+          "THOT"
+        ],
+        "og:locale": [
+          "fr_FR"
+        ]
+      },
+      "headings": [
+        [
+          "h1",
+          "Informations légales — éléments à compléter"
+        ],
+        [
+          "h2",
+          "État de cette page"
+        ],
+        [
+          "h2",
+          "Hébergement"
+        ],
+        [
+          "h2",
+          "Anonymat et informations à valider"
+        ],
+        [
+          "h2",
+          "Sources et droits"
+        ]
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Informations légales — éléments à compléter | THOT",
+          "url": "https://thot-culture.github.io/Thot/mentions-legales.html",
+          "inLanguage": "fr"
+        }
+      ],
+      "images": [],
+      "links": [
+        "#contenu",
+        "index.html",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/quiz.html#daily-title",
+        "/Thot/notre-methode.html",
+        "/Thot/index.html#concept",
+        "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages",
+        "https://support.github.com/",
+        "https://www.vie-publique.fr/questions-reponses/293520-peut-etre-anonyme-sur-internet-et-les-reseaux-sociaux",
+        "https://www.cnil.fr/fr/cnil-direct/question/les-mentions-legales-sur-un-site-web-est-ce-obligatoire",
+        "notre-methode.html",
+        "contact.html",
+        "index.html",
+        "/Thot/contact.html",
+        "/Thot/mentions-legales.html",
+        "/Thot/confidentialite.html"
+      ],
+      "verification_present": false
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/notre-methode.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/notre-methode.html",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "6593",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "path": "notre-methode.html",
+      "sha256": "e8589c0ec918536f6a42605b58152ce904a02e8fd1dcaf6f1c9c5875548e3f94",
+      "exact_matches": [
+        "main"
+      ],
+      "title": [
+        "Notre méthode éditoriale | THOT"
+      ],
+      "description": "Comment THOT choisit ses sources, distingue les faits des interprétations et vérifie les images.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/notre-methode.html"
+      ],
+      "robots": null,
+      "googlebot": null,
+      "og": {
+        "og:type": [
+          "website"
+        ],
+        "og:site_name": [
+          "THOT"
+        ],
+        "og:locale": [
+          "fr_FR"
+        ],
+        "og:title": [
+          "Notre méthode éditoriale | THOT"
+        ],
+        "og:description": [
+          "Comment THOT choisit ses sources, distingue les faits des interprétations et vérifie les images."
+        ],
+        "og:url": [
+          "https://thot-culture.github.io/Thot/notre-methode.html"
+        ],
+        "og:image": [
+          "https://thot-culture.github.io/Thot/assets/og-thot.png"
+        ],
+        "og:image:type": [
+          "image/png"
+        ],
+        "og:image:width": [
+          "1200"
+        ],
+        "og:image:height": [
+          "630"
+        ],
+        "og:image:alt": [
+          "THOT, le magazine des esprits curieux : histoire, géographie et sciences humaines."
+        ]
+      },
+      "headings": [
+        [
+          "h1",
+          "Notre méthode"
+        ],
+        [
+          "h2",
+          "Des sources traçables"
+        ],
+        [
+          "h2",
+          "Faits et interprétations"
+        ],
+        [
+          "h2",
+          "Des images vérifiées"
+        ]
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Notre méthode éditoriale | THOT",
+          "url": "https://thot-culture.github.io/Thot/notre-methode.html",
+          "inLanguage": "fr"
+        }
+      ],
+      "images": [],
+      "links": [
+        "#contenu",
+        "index.html",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/quiz.html#daily-title",
+        "/Thot/notre-methode.html",
+        "/Thot/index.html#concept",
+        "index.html",
+        "bibliotheque.html",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/notre-methode.html",
+        "/Thot/contact.html",
+        "/Thot/mentions-legales.html",
+        "/Thot/confidentialite.html"
+      ],
+      "verification_present": false
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/quiz-autrices.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/quiz-autrices.html",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "9753",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "path": "quiz-autrices.html",
+      "sha256": "fb4cdf66a88bde5a30682ea9738c6dc471619bbc8dd93f449c253d93dbfd58c8",
+      "exact_matches": [
+        "main"
+      ],
+      "title": [
+        "Jeu : qui se cache derrière ces pseudonymes ? | THOT"
+      ],
+      "description": "Relie Currer, Ellis et Acton Bell, George Eliot et George Sand aux autrices qui les ont signées. Jeu court avec explications et sources.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/quiz-autrices.html"
+      ],
+      "robots": null,
+      "googlebot": null,
+      "og": {
+        "og:type": [
+          "website"
+        ],
+        "og:locale": [
+          "fr_FR"
+        ],
+        "og:site_name": [
+          "THOT"
+        ],
+        "og:title": [
+          "Qui se cache derrière ces pseudonymes ? | THOT"
+        ],
+        "og:description": [
+          "Relie cinq noms de plume à leurs autrices. Chaque réponse renvoie aux sources de l’article."
+        ],
+        "og:url": [
+          "https://thot-culture.github.io/Thot/quiz-autrices.html"
+        ],
+        "og:image": [
+          "https://thot-culture.github.io/Thot/assets/og-thot.png"
+        ],
+        "og:image:type": [
+          "image/png"
+        ],
+        "og:image:width": [
+          "1200"
+        ],
+        "og:image:height": [
+          "630"
+        ],
+        "og:image:alt": [
+          "THOT, le magazine des esprits curieux : histoire, géographie et sciences humaines."
+        ]
+      },
+      "headings": [
+        [
+          "h1",
+          "Qui se cache derrière ces pseudonymes ?"
+        ],
+        [
+          "h2",
+          "Relie chaque nom à son autrice"
+        ],
+        [
+          "h3",
+          "Noms de plume"
+        ],
+        [
+          "h3",
+          "Autrices"
+        ],
+        [
+          "h3",
+          "Les réponses : cinq noms, des histoires différentes"
+        ]
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Jeu : qui se cache derrière ces pseudonymes ? | THOT",
+          "url": "https://thot-culture.github.io/Thot/quiz-autrices.html",
+          "inLanguage": "fr"
+        }
+      ],
+      "images": [],
+      "links": [
+        "#quiz-title",
+        "index.html",
+        "articles/autrices-pseudonymes.html",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/quiz.html#daily-title",
+        "/Thot/notre-methode.html",
+        "/Thot/index.html#concept",
+        "articles/autrices-pseudonymes.html",
+        "quiz-autrices.html",
+        "articles/autrices-pseudonymes.html",
+        "articles/autrices-pseudonymes.html#ref1",
+        "articles/autrices-pseudonymes.html#ref7",
+        "articles/autrices-pseudonymes.html#ref3",
+        "articles/autrices-pseudonymes.html#ref4",
+        "articles/autrices-pseudonymes.html",
+        "articles/autrices-pseudonymes.html",
+        "notre-methode.html",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/notre-methode.html",
+        "/Thot/contact.html",
+        "/Thot/mentions-legales.html",
+        "/Thot/confidentialite.html"
+      ],
+      "verification_present": false
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/quiz.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/quiz.html",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "19087",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "path": "quiz.html",
+      "sha256": "400ce26c5a42e1aef9ce57bb5bd17bae3aaaff54db3bd7e3506a644350e6cea5",
+      "exact_matches": [
+        "main"
+      ],
+      "title": [
+        "Le quiz THOT — Culture générale"
+      ],
+      "description": "Joue au quiz de culture générale THOT : cinq univers, trois niveaux, des corrections expliquées et un défi quotidien.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/quiz.html"
+      ],
+      "robots": null,
+      "googlebot": null,
+      "og": {
+        "og:type": [
+          "website"
+        ],
+        "og:title": [
+          "Le quiz THOT — Culture générale"
+        ],
+        "og:description": [
+          "Cinq univers, trois niveaux, des corrections expliquées et un défi quotidien."
+        ],
+        "og:url": [
+          "https://thot-culture.github.io/Thot/quiz.html"
+        ],
+        "og:locale": [
+          "fr_FR"
+        ],
+        "og:site_name": [
+          "THOT"
+        ],
+        "og:image": [
+          "https://thot-culture.github.io/Thot/assets/og-thot.png"
+        ],
+        "og:image:type": [
+          "image/png"
+        ],
+        "og:image:width": [
+          "1200"
+        ],
+        "og:image:height": [
+          "630"
+        ],
+        "og:image:alt": [
+          "THOT, le magazine des esprits curieux : histoire, géographie et sciences humaines."
+        ]
+      },
+      "headings": [
+        [
+          "h1",
+          "À toi de jouer."
+        ],
+        [
+          "h2",
+          "Le défi THOT."
+        ],
+        [
+          "h3",
+          "Prêt à faire chauffer tes neurones ?"
+        ],
+        [
+          "h3",
+          ""
+        ],
+        [
+          "h3",
+          "Bien joué !"
+        ],
+        [
+          "h4",
+          "Ce que tu viens d'apprendre"
+        ],
+        [
+          "h3",
+          "Le défi du jour ✦"
+        ],
+        [
+          "h2",
+          "Testez votre curiosité."
+        ]
+      ],
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": "Le quiz THOT — Culture générale",
+          "url": "https://thot-culture.github.io/Thot/quiz.html",
+          "inLanguage": "fr"
+        }
+      ],
+      "images": [],
+      "links": [
+        "#contenu",
+        "index.html#accueil",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/quiz.html#daily-title",
+        "/Thot/notre-methode.html",
+        "/Thot/index.html#concept",
+        "quiz.html",
+        "bibliotheque.html",
+        "#quiz-classique",
+        "#daily-title",
+        "/Thot/index.html",
+        "/Thot/bibliotheque.html",
+        "/Thot/explorer.html",
+        "/Thot/quiz.html#quiz-classique",
+        "/Thot/notre-methode.html",
+        "/Thot/contact.html",
+        "/Thot/mentions-legales.html",
+        "/Thot/confidentialite.html"
+      ],
+      "verification_present": false
+    }
+  ],
+  "resources": [
+    {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2108/6797399/1000w_q95.jpg",
+      "status": 200,
+      "final_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2108/6797399/1000w_q95.jpg",
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Content-Length": "166346",
+        "Last-Modified": "Tue, 24 Aug 2021 15:47:23 GMT"
+      },
+      "redirects": [],
+      "bytes": 166346
+    },
+    {
+      "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2311/8124895/1000w_q95.jpg",
+      "status": 200,
+      "final_url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2311/8124895/1000w_q95.jpg",
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Content-Length": "169969",
+        "Last-Modified": "Wed, 15 Nov 2023 18:53:11 GMT"
+      },
+      "redirects": [],
+      "bytes": 169969
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/article-editorial.css?v=science-partage-1",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/article-editorial.css?v=science-partage-1",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "3724",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 3724
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/article-media.js?v=audit-1",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/article-media.js?v=audit-1",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "3352",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 3352
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/article-share.js?v=science-partage-1",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/article-share.js?v=science-partage-1",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "3160",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 3160
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/article.css",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/article.css",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "7246",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 7246
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/article.css?v=lecture-1",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/article.css?v=lecture-1",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "7246",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 7246
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/autorite-activity.js?v=audit-1",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/autorite-activity.js?v=audit-1",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "2205",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 2205
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/autorite-decode.js?v=decode-1",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/autorite-decode.js?v=decode-1",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "5561",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 5561
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/autorite.css?v=decode-1",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/autorite.css?v=decode-1",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "5738",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 5738
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/autrices-quiz.css?v=audit-1",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/autrices-quiz.css?v=audit-1",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "4139",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 4139
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/autrices-visuels.css?v=audit-1",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/autrices-visuels.css?v=audit-1",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "1082",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 1082
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/bibliotheque.css?v=finitions-strategies-20261027",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/bibliotheque.css?v=finitions-strategies-20261027",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "7488",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 7488
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/bibliotheque.js?v=lecture-1&release=fluidite-20261025",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/bibliotheque.js?v=lecture-1&release=fluidite-20261025",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "5714",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 5714
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/decouverte.css?v=1",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/decouverte.css?v=1",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "7655",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 7655
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/decouverte.js?v=1",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/decouverte.js?v=1",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "1299",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 1299
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/experience.css",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/experience.css",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "5602",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 5602
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/experience.css?v=1",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/experience.css?v=1",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "5602",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 5602
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/aral.css?v=783bc199a5ea",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/explorer-v2/aral.css?v=783bc199a5ea",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "28423",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 28423
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/aral.js?v=21789cbcf651",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/explorer-v2/aral.js?v=21789cbcf651",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "48556",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 48556
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/atlas.css?v=5b8c8244725a",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/explorer-v2/atlas.css?v=5b8c8244725a",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "27209",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 27209
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/atlas.js?v=6b51841696cc",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/explorer-v2/atlas.js?v=6b51841696cc",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "30984",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 30984
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/common.css?v=4e1c1c265f3e",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/explorer-v2/common.css?v=4e1c1c265f3e",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "8860",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 8860
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/aral-2000.jpg",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/aral-2000.jpg",
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Content-Length": "204342",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 204342
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/aral-2014.jpg",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/aral-2014.jpg",
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Content-Length": "202191",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 202191
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/aral-dam-2006.webp",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/aral-dam-2006.webp",
+      "headers": {
+        "Content-Type": "image/webp",
+        "Content-Length": "94568",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 94568
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/aral-dust-2006.webp",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/aral-dust-2006.webp",
+      "headers": {
+        "Content-Type": "image/webp",
+        "Content-Length": "95516",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 95516
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/aral-north-1964.webp",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/aral-north-1964.webp",
+      "headers": {
+        "Content-Type": "image/webp",
+        "Content-Length": "104454",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 104454
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/augustus.webp",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/augustus.webp",
+      "headers": {
+        "Content-Type": "image/webp",
+        "Content-Length": "155362",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 155362
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/caesar.webp",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/caesar.webp",
+      "headers": {
+        "Content-Type": "image/webp",
+        "Content-Length": "37492",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 37492
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/hannibal.webp",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/hannibal.webp",
+      "headers": {
+        "Content-Type": "image/webp",
+        "Content-Length": "23020",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 23020
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/met-248033.webp",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/met-248033.webp",
+      "headers": {
+        "Content-Type": "image/webp",
+        "Content-Length": "105960",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 105960
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/met-248037.webp",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/met-248037.webp",
+      "headers": {
+        "Content-Type": "image/webp",
+        "Content-Length": "117310",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 117310
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/met-248042.webp",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/met-248042.webp",
+      "headers": {
+        "Content-Type": "image/webp",
+        "Content-Length": "45876",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 45876
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/met-547802.webp",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/met-547802.webp",
+      "headers": {
+        "Content-Type": "image/webp",
+        "Content-Length": "112280",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 112280
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/moynaq-cover.webp",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/moynaq-cover.webp",
+      "headers": {
+        "Content-Type": "image/webp",
+        "Content-Length": "72422",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 72422
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/moynaq-original.jpg",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/moynaq-original.jpg",
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Content-Length": "265581",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 265581
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/trajan.webp",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/explorer-v2/media/trajan.webp",
+      "headers": {
+        "Content-Type": "image/webp",
+        "Content-Length": "63006",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 63006
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer/illustrations.css?v=thot20",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/explorer/illustrations.css?v=thot20",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "2450",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 2450
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/explorer/illustrations.js?v=thot20",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/explorer/illustrations.js?v=thot20",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "1393",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 1393
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/favicon.svg",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/favicon.svg",
+      "headers": {
+        "Content-Type": "image/svg+xml",
+        "Content-Length": "514",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 514
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/glossaire-interactif.css?v=audit-1",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/glossaire-interactif.css?v=audit-1",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "1199",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 1199
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/glossaire-interactif.js?v=audit-1",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/glossaire-interactif.js?v=audit-1",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "1778",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 1778
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/home.css?v=lecture-1",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/home.css?v=lecture-1",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "2490",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 2490
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/images/autorite-triptyque.webp",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/images/autorite-triptyque.webp",
+      "headers": {
+        "Content-Type": "image/webp",
+        "Content-Length": "193156",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 193156
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/images/autrices-nadar.webp",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/images/autrices-nadar.webp",
+      "headers": {
+        "Content-Type": "image/webp",
+        "Content-Length": "165322",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 165322
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/images/puissance-afghanistan.webp",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/images/puissance-afghanistan.webp",
+      "headers": {
+        "Content-Type": "image/webp",
+        "Content-Length": "133610",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 133610
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/images/roubaix-gambetta.webp",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/images/roubaix-gambetta.webp",
+      "headers": {
+        "Content-Type": "image/webp",
+        "Content-Length": "150880",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 150880
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/images/roubaix-laines-1917-apercu.jpg",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/images/roubaix-laines-1917-apercu.jpg",
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Content-Length": "153001",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 153001
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/navigation.css?v=f223850ad41a",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/navigation.css?v=f223850ad41a",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "2154",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 2154
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/navigation.js?v=299c87f73542",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/navigation.js?v=299c87f73542",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "1453",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 1453
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/notre-methode.css",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/notre-methode.css",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "3874",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 3874
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/og-thot.png",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/og-thot.png",
+      "headers": {
+        "Content-Type": "image/png",
+        "Content-Length": "32248",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 32248
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/pieuvres.css?v=chromato-2",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/pieuvres.css?v=chromato-2",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "3572",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 3572
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/puissance-chronologie.css?v=a11y-1",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/puissance-chronologie.css?v=a11y-1",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "4320",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 4320
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/puissance-chronologie.js",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/puissance-chronologie.js",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "1239",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 1239
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/puissance-comparateur.css?v=comparaison-2",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/puissance-comparateur.css?v=comparaison-2",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "5108",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 5108
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/puissance-comparateur.js?v=comparaison-2&release=fluidite-20261025",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/puissance-comparateur.js?v=comparaison-2&release=fluidite-20261025",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "6225",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 6225
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/puissance-mobile.css",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/puissance-mobile.css",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "3274",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 3274
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/puissance-sommaire.js?v=lecture-1",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/puissance-sommaire.js?v=lecture-1",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "1381",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 1381
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/questions-expert.js",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/questions-expert.js",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "31677",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 31677
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/questions-facile.js",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/questions-facile.js",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "22442",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 22442
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/questions-intermediaire.js",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/questions-intermediaire.js",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "24474",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 24474
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/quiz-autrices.js?v=lecture-1&release=fluidite-20261025",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/quiz-autrices.js?v=lecture-1&release=fluidite-20261025",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "4758",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 4758
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/quiz-reference-data.js?v=audit-20261026",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/quiz-reference-data.js?v=audit-20261026",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "14280",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 14280
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/quiz-references.js?v=audit-20261026",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/quiz-references.js?v=audit-20261026",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "1581",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 1581
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/quiz.css",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/quiz.css",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "2249",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 2249
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/reading-times.js",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/reading-times.js",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "712",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 712
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/roubaix-document.css?v=document-1",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/roubaix-document.css?v=document-1",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "3264",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 3264
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/roubaix-document.js?v=document-1",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/roubaix-document.js?v=document-1",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "7097",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 7097
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/roubaix-frise.css?v=a11y-1",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/roubaix-frise.css?v=a11y-1",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "2967",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 2967
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/roubaix-frise.js?v=audit-1",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/roubaix-frise.js?v=audit-1",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "4931",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 4931
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/roubaix-photos.css",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/roubaix-photos.css",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "5906",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 5906
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/site-home.js",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/site-home.js",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "2765",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 2765
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/site.css",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/site.css",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "36723",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 36723
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/site.css?v=quiz-accessibility-1",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/site.css?v=quiz-accessibility-1",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "36723",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 36723
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/site.js?v=quiz-audit-2026-10-26",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/site.js?v=quiz-audit-2026-10-26",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "92985",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 92985
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/social-cards/autorite.png",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/social-cards/autorite.png",
+      "headers": {
+        "Content-Type": "image/png",
+        "Content-Length": "112438",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 112438
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/social-cards/autrices-pseudonymes.png",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/social-cards/autrices-pseudonymes.png",
+      "headers": {
+        "Content-Type": "image/png",
+        "Content-Length": "90417",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 90417
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/social-cards/pieuvres-couleur.png",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/social-cards/pieuvres-couleur.png",
+      "headers": {
+        "Content-Type": "image/png",
+        "Content-Length": "111255",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 111255
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/social-cards/puissance-etats-unis.png",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/social-cards/puissance-etats-unis.png",
+      "headers": {
+        "Content-Type": "image/png",
+        "Content-Length": "109361",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 109361
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/social-cards/roubaix-1917.png",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/social-cards/roubaix-1917.png",
+      "headers": {
+        "Content-Type": "image/png",
+        "Content-Length": "98860",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 98860
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/strategies-media/hannibal.webp",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/strategies-media/hannibal.webp",
+      "headers": {
+        "Content-Type": "image/webp",
+        "Content-Length": "23020",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 23020
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/strategies-media/homs.webp",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/strategies-media/homs.webp",
+      "headers": {
+        "Content-Type": "image/webp",
+        "Content-Length": "63144",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 63144
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/strategies-media/minard.webp",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/strategies-media/minard.webp",
+      "headers": {
+        "Content-Type": "image/webp",
+        "Content-Length": "36350",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 36350
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/strategies-media/social.png",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/strategies-media/social.png",
+      "headers": {
+        "Content-Type": "image/png",
+        "Content-Length": "56487",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 56487
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/strategies-media/tank.webp",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/strategies-media/tank.webp",
+      "headers": {
+        "Content-Type": "image/webp",
+        "Content-Length": "30488",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 30488
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/strategies-militaires.css",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/strategies-militaires.css",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "5937",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 5937
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/strategies-militaires.js",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/strategies-militaires.js",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "745",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 745
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/visuels-pedagogiques.css?v=a11y-1",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/visuels-pedagogiques.css?v=a11y-1",
+      "headers": {
+        "Content-Type": "text/css; charset=utf-8",
+        "Content-Length": "2181",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 2181
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/assets/visuels-pedagogiques.js",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/assets/visuels-pedagogiques.js",
+      "headers": {
+        "Content-Type": "application/javascript; charset=utf-8",
+        "Content-Length": "1254",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 1254
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg",
+      "status": 200,
+      "final_url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg",
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Content-Length": "251922",
+        "Last-Modified": "Wed, 08 Oct 2014 00:47:23 GMT"
+      },
+      "redirects": [],
+      "bytes": 251922
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/The_Bront%C3%AB_Sisters_by_Patrick_Branwell_Bront%C3%AB_restored.jpg",
+      "status": 200,
+      "final_url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/The_Bront%C3%AB_Sisters_by_Patrick_Branwell_Bront%C3%AB_restored.jpg",
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Content-Length": "2187505",
+        "Last-Modified": "Sat, 11 Oct 2014 01:20:04 GMT"
+      },
+      "redirects": [],
+      "bytes": 2187505
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+      "status": 200,
+      "final_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Content-Length": "170000",
+        "Last-Modified": "Wed, 23 Sep 2026 00:12:23 GMT"
+      },
+      "redirects": [],
+      "bytes": 170000
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Camouflage_octopus.jpg/960px-Camouflage_octopus.jpg",
+      "status": 200,
+      "final_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Camouflage_octopus.jpg/960px-Camouflage_octopus.jpg",
+      "headers": {
+        "Content-Type": "image/jpeg",
+        "Content-Length": "251103",
+        "Last-Modified": "Sun, 21 Jun 2026 00:02:11 GMT"
+      },
+      "redirects": [],
+      "bytes": 251103
+    }
+  ],
+  "extras": [
+    {
+      "url": "https://thot-culture.github.io/Thot/sitemap.xml",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/sitemap.xml",
+      "headers": {
+        "Content-Type": "application/xml",
+        "Content-Length": "1647",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:28 GMT"
+      },
+      "redirects": [],
+      "bytes": 1647,
+      "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n  <url><loc>https://thot-culture.github.io/Thot/</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/bibliotheque.html</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/notre-methode.html</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/quiz.html</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/quiz-autrices.html</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/articles/roubaix-1917.html</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/articles/puissance-etats-unis.html</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/articles/autrices-pseudonymes.html</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/articles/autorite.html</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/articles/pieuvres-couleur.html</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/explorer.html</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/explorer/enquetes/mer-aral.html</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/explorer/atlas/rome-expansion.html</loc></url>\n  <url><loc>https://thot-culture.github.io/Thot/articles/evolution-strategies-militaires.html</loc><lastmod>2026-10-27</lastmod></url>\n  <url><loc>https://thot-culture.github.io/Thot/mentions-legales.html</loc><lastmod>2026-10-27</lastmod></url>\n  <url><loc>https://thot-culture.github.io/Thot/confidentialite.html</loc><lastmod>2026-10-27</lastmod></url>\n  <url><loc>https://thot-culture.github.io/Thot/contact.html</loc><lastmod>2026-10-27</lastmod></url>\n</urlset>\n"
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/robots.txt",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/robots.txt",
+      "headers": {
+        "Content-Type": "text/plain; charset=utf-8",
+        "Content-Length": "85",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 85,
+      "text": "User-agent: *\nAllow: /Thot/\nSitemap: https://thot-culture.github.io/Thot/sitemap.xml\n"
+    },
+    {
+      "url": "https://thot-culture.github.io/robots.txt",
+      "status": 404,
+      "final_url": "https://thot-culture.github.io/robots.txt",
+      "headers": {},
+      "redirects": [],
+      "bytes": 9115
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/seo-page-inexistante-20261104.html",
+      "status": 404,
+      "final_url": "https://thot-culture.github.io/Thot/seo-page-inexistante-20261104.html",
+      "headers": {},
+      "redirects": [],
+      "bytes": 2112
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot/index.html",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/index.html",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "19048",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [],
+      "bytes": 19048
+    },
+    {
+      "url": "https://thot-culture.github.io/Thot",
+      "status": 200,
+      "final_url": "https://thot-culture.github.io/Thot/",
+      "headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "19048",
+        "Cache-Control": "max-age=600",
+        "Last-Modified": "Wed, 28 Oct 2026 17:55:29 GMT"
+      },
+      "redirects": [
+        {
+          "status": 301,
+          "from": "https://thot-culture.github.io/Thot",
+          "to": "https://thot-culture.github.io/Thot/"
+        }
+      ],
+      "bytes": 19048
+    }
+  ],
+  "external_urls": [
+    "https://2017-2021.state.gov/joint-statement-by-the-political-directors-of-the-global-coalition-to-defeat-isis/",
+    "https://afe.easia.columbia.edu/songdynasty-module/tech-gunpowder.html",
+    "https://americanhistory.si.edu/explore/exhibitions/price-of-freedom/online/world-war-ii/battle-atlantic",
+    "https://armarium-hautsdefrance.fr/document/85546",
+    "https://assemblyforpeace.unu.edu/cases/ukraine-2014-2022/",
+    "https://assets.cambridge.org/052182/4192/excerpt/0521824192_excerpt.htm",
+    "https://bn-r.cd-script.fr/fr/notice.php?from=&id=AFF_001_D_0150&searchurl=%2Ffr%2Frecherche-resultat.php%3Ffl%3D%26from%3D%26q%3DGrand%2Bplace%26sort%3Dtri_annee%2520asc%2Ctri_titre%2520asc%26start%3D990%26version%3D2.2&startpic=0",
+    "https://bn-r.cd-script.fr/fr/notice.php?from=periode&id=AFF_001_D_0632&searchurl=%2Ffr%2Frecherche-resultat.php%3Ffl%3D%26from%3Dperiode%26q%3Dchrono%253A%25221914-1918%2522%26sort%3Dtri_annee%2520asc%2Ctri_titre%2520asc%26start%3D1020%26version%3D2.2",
+    "https://bn-r.cd-script.fr/fr/notice.php?from=theme&id=AFF_001_D_0759&image=RBX_AMR_AFF_001_D_0759_1&searchurl=%2Ffr%2Frecherche-resultat.php%3Ffl%3D%26from%3Dtheme%26q%3Dtheme%253A%2522Guerres%2522%26sort%3Dtri_annee%2520asc%2Ctri_titre%2520asc%26start%3D920%26version%3D2.2&startpic=0",
+    "https://bn-r.cd-script.fr/fr/notice.php?id=AFF_001_D_0705",
+    "https://catalogue.bnf.fr/ark:/12148/cb119236010.public",
+    "https://catalogue.bnf.fr/ark:/12148/cb31293229q",
+    "https://catalogue.bnf.fr/ark:/12148/cb392207667",
+    "https://cawater-info.net/bk/water_land_resources_use/english/docs/table6.pdf",
+    "https://ccfr.bnf.fr/portailccfr/ark%3A/16871/004ROUS010013",
+    "https://classes.bnf.fr/page/grand/145.htm",
+    "https://commons.wikimedia.org/wiki/File:%22Ville_de_Roubaix_-_Avis_%C3%A0_la_Population_-_pr%C3%A9l%C3%A8vement_de_laines_%26_M%C3%A9langes_de_laines_provenant_de_Matelas_et_Coussins%22_(Einsch%C3%A4rfung_fr%C3%BCherer_Anordnu_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_1451.jpg",
+    "https://commons.wikimedia.org/wiki/File:1281BattleOfHoms.JPG",
+    "https://commons.wikimedia.org/wiki/File:Augustus_of_Prima_Porta.jpg",
+    "https://commons.wikimedia.org/wiki/File:Camouflage_octopus.jpg",
+    "https://commons.wikimedia.org/wiki/File:ELD_-_ROUBAIX_-_Boulevard_Gambetta.JPG",
+    "https://commons.wikimedia.org/wiki/File:George_Eliot_by_Samuel_Laurence.jpg",
+    "https://commons.wikimedia.org/wiki/File:George_Sand_-_portraits.jpg",
+    "https://commons.wikimedia.org/wiki/File:Hannibal_Slodtz_Louvre_MR2093_(cropped2).png",
+    "https://commons.wikimedia.org/wiki/File:Minard.png",
+    "https://commons.wikimedia.org/wiki/File:Moynaq_Aral-Sea_Ships.jpg",
+    "https://commons.wikimedia.org/wiki/File:Poulpe_commun_(Octopus_vulgaris)_(Ifremer_00679-79134_-_31993).jpg",
+    "https://commons.wikimedia.org/wiki/File:Retrato_de_Julio_C%C3%A9sar_(26724093101).jpg",
+    "https://commons.wikimedia.org/wiki/File:The_Battle_of_Cambrai,_November-december_1917_Q6284.jpg",
+    "https://commons.wikimedia.org/wiki/File:The_Bront%C3%AB_Sisters_by_Patrick_Branwell_Bront%C3%AB_restored.jpg",
+    "https://commons.wikimedia.org/wiki/File:Traianus_Glyptothek_Munich_336.jpg",
+    "https://creativecommons.org/licenses/by-sa/3.0/",
+    "https://creativecommons.org/licenses/by-sa/4.0/",
+    "https://creativecommons.org/licenses/by/2.0/",
+    "https://creativecommons.org/licenses/by/4.0/",
+    "https://creativecommons.org/publicdomain/mark/1.0/",
+    "https://creativecommons.org/publicdomain/zero/1.0/",
+    "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages",
+    "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection",
+    "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+    "https://docs.un.org/S/2026/638",
+    "https://documents1.worldbank.org/curated/en/888771468089960580/pdf/462360BRI0Box31e0no0FS231Kazakhstan.pdf",
+    "https://doi.org/10.1002/jmor.20221",
+    "https://doi.org/10.1016/j.adolescence.2006.03.003",
+    "https://doi.org/10.1017/CBO9780511793233.006",
+    "https://doi.org/10.1017/S1464793101005772",
+    "https://doi.org/10.1037/a0010932",
+    "https://doi.org/10.1037/h0040525",
+    "https://doi.org/10.1098/rsif.2008.0366.focus",
+    "https://doi.org/10.1098/rstb.2008.0270",
+    "https://doi.org/10.1111/1540-5893.3703002",
+    "https://doi.org/10.1146/annurev-lawsocsci-110316-113710",
+    "https://doi.org/10.1242/jeb.110908",
+    "https://eros.usgs.gov/earthshots/kok-aral-dam",
+    "https://eros.usgs.gov/earthshots/north-aral-sea",
+    "https://francearchives.gouv.fr/fr/subject/130828729?aug=True&es_digitized=False&es_publisher=1042446007&es_publisher=33940&indexentry=130828729&restrict_to_single_etype=False&sort=sortdate",
+    "https://geoconfluences.ens-lyon.fr/glossaire/pouvoir",
+    "https://geoconfluences.ens-lyon.fr/glossaire/puissance",
+    "https://geoconfluences.ens-lyon.fr/glossaire/westphalien-westphalienne-post-westphalien",
+    "https://georgesand.institutdefrance.fr/biographie/",
+    "https://github.com/AWMC/geodata/tree/7ecf8bccea2efe1e1e9df2daf6001942de73fb87",
+    "https://github.com/aourednik/historical-basemaps/tree/da7a4b735ecef70aebdc9c73e409d8a2500d50f3",
+    "https://github.com/nvkelso/natural-earth-vector/blob/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_rivers_lake_centerlines.geojson",
+    "https://github.com/thot-culture/Thot/issues",
+    "https://github.com/thot-culture/Thot/issues/new?template=correction.yml",
+    "https://historicengland.org.uk/images-books/publications/iha-artillery-defences/heag197-artillery-defences/",
+    "https://history.state.gov/milestones/1961-1968/tet",
+    "https://ihedn.fr/dossier-special/ukraine-dossier-special/ukraine-russie-quand-la-guerre-des-drones-redefinit-le-champ-de-bataille/",
+    "https://janeaustens.house/jane-austen/novels/sense-and-sensibility/",
+    "https://janeaustens.house/object/first-edition-northanger-abbey-and-persuasion/",
+    "https://janeaustens.house/object/the-morning-chronicle-with-announcement-of-sense-and-sensibility/",
+    "https://janeaustens.house/online-exhibition/the-making-of-pride-and-prejudice/the-making-of-pride-and-prejudice-4/",
+    "https://library.fes.de/libalt/journals/swetsfulltext/16956999.pdf",
+    "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3*.html",
+    "https://plato.stanford.edu/entries/george-eliot/",
+    "https://pleiades.stoa.org/places/148127",
+    "https://pleiades.stoa.org/places/167717",
+    "https://pleiades.stoa.org/places/246349",
+    "https://pleiades.stoa.org/places/314921",
+    "https://pleiades.stoa.org/places/423025",
+    "https://pleiades.stoa.org/places/442523",
+    "https://pleiades.stoa.org/places/530771",
+    "https://pleiades.stoa.org/places/579885",
+    "https://pleiades.stoa.org/places/599612",
+    "https://pleiades.stoa.org/places/658381",
+    "https://pleiades.stoa.org/places/727070",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC4448664/",
+    "https://press.un.org/en/2019/sc13931.doc.htm",
+    "https://publis-shs.univ-rouen.fr/ceredi/1993.html",
+    "https://science.nasa.gov/earth/earth-observatory/dust-storm-over-the-aral-sea-6654/",
+    "https://science.nasa.gov/earth/earth-observatory/world-of-change/aral-sea/",
+    "https://support.github.com/",
+    "https://writersinspire-new.it.ox.ac.uk/content/george-eliot-0",
+    "https://www.apa.org/monitor/2009/03/milgram.html",
+    "https://www.armarium-hautsdefrance.fr/document/85546",
+    "https://www.awm.gov.au/visit/exhibitions/1918/battles/amiens",
+    "https://www.bl.uk/stories/blogs/posts/jane-austen-names-and-notability",
+    "https://www.bronte.org.uk/the-lives-of-the-brontes",
+    "https://www.bronte.org.uk/the-lives-of-the-brontes/the-bronte-novels",
+    "https://www.cambridge.org/core/books/abs/cambridge-history-of-the-mongol-empire/military-machine/97F57DAD8A288A4151EADA7751F61988",
+    "https://www.cambridge.org/core/books/between-rome-and-carthage/AF20772D2B328FD83D113B6383A5E2F6",
+    "https://www.cambridge.org/core/journals/international-organization/article/abs/sovereignty-international-relations-and-the-westphalian-myth/33B6B7773432BE494F31518952ABE881",
+    "https://www.cambridge.org/core/journals/review-of-international-studies/article/abs/rethinking-the-sovereign-state-model/C77F748A59F937165E6495C7A4ECEC3F",
+    "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/1760415/statement-from-gen-joseph-votel-on-liberating-the-last-territory-held-by-daesh/",
+    "https://www.cnil.fr/fr/cnil-direct/question/les-mentions-legales-sur-un-site-web-est-ce-obligatoire",
+    "https://www.cs.cornell.edu/courses/cs6702/2011sp/readings/AralSea2011.pdf",
+    "https://www.csis.org/analysis/lessons-ukraine-conflict-modern-warfare-age-autonomy-information-and-resilience",
+    "https://www.defense.gouv.fr/actualites/decryptage-dronisation-du-champ-bataille",
+    "https://www.diplomatie.gouv.fr/IMG/pdf/paris_roadmap_-_final_version_fr_2__cle09b5d2.pdf",
+    "https://www.dvidshub.net/about/copyright",
+    "https://www.dvidshub.net/image/1211203/afghan-national-army-soldiers-lead",
+    "https://www.dvidshub.net/image/6797399/afghanistan-evacuation",
+    "https://www.dvidshub.net/image/8124895/final-american-flag-being-lowered-bagram-airfield",
+    "https://www.ecoi.net/en/file/local/2063773/2021-10-30qr.pdf",
+    "https://www.education.gouv.fr/sites/default/files/document/Le%20chef%20d%26%23039%3B%C3%A9tablissement-238434.pdf",
+    "https://www.eia.gov/todayinenergy/detail.php?id=49116",
+    "https://www.eia.gov/todayinenergy/detail.php?id=65504",
+    "https://www.english-heritage.org.uk/visit/places/pendennis-castle/history-and-stories/history/significance/",
+    "https://www.fcpe.asso.fr/actualite/les-revendications-de-la-jeunesse-doivent-etre-entendues",
+    "https://www.govinfo.gov/content/pkg/GOVPUB-S-PURL-gpo220547/pdf/GOVPUB-S-PURL-gpo220547.pdf",
+    "https://www.govinfo.gov/content/pkg/GOVPUB-S-PURL-gpo220710/pdf/GOVPUB-S-PURL-gpo220710.pdf",
+    "https://www.gutenberg.org/files/771/old/brnte10h.htm",
+    "https://www.history.navy.mil/browse-by-topic/exploration-and-innovation/radar-sonar.html",
+    "https://www.hrw.org/world-report/2026/country-chapters/ukraine",
+    "https://www.iiss.org/publications/the-military-balance/2025/editors-introduction/",
+    "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039016548/2026-07-02",
+    "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006071191/LEGISCTA000018377430/2026-06-20",
+    "https://www.lemonde.fr/en/france/article/2026/10/12/french-high-school-protests-exhausted-principals-struggle-to-deal-with-violent-clashes-at-their-schools_6758508_7.html",
+    "https://www.lemonde.fr/societe/article/2026/10/16/mouvement-lyceen-un-mois-de-mobilisation-et-le-pari-de-la-convergence-des-luttes_6795111_3224.html",
+    "https://www.metmuseum.org/art/collection/search/248033",
+    "https://www.metmuseum.org/art/collection/search/248037",
+    "https://www.metmuseum.org/art/collection/search/248042",
+    "https://www.metmuseum.org/art/collection/search/547802",
+    "https://www.metmuseum.org/essays/the-legacy-of-genghis-khan",
+    "https://www.metmuseum.org/essays/the-roman-empire-27-b-c-393-a-d",
+    "https://www.metmuseum.org/essays/the-roman-republic",
+    "https://www.metmuseum.org/pt/toah/ht/04/afw.html",
+    "https://www.nam.ac.uk/explore/1918-victory",
+    "https://www.nam.ac.uk/explore/abyssinia",
+    "https://www.nam.ac.uk/explore/battle-somme",
+    "https://www.napoleon.org/histoire-des-2-empires/articles/1812-la-campagne-de-russie-preface-de-mp-rey-au-tome-12-de-la-correspondance-generale-de-napoleon-bonaparte",
+    "https://www.napoleon.org/histoire-des-2-empires/articles/1812-lannee-de-tous-les-defis",
+    "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "https://www.reuters.com/world/asia-pacific/irans-pezeshkian-discusses-mediation-efforts-meeting-with-pakistans-army-chief-2026-10-20/",
+    "https://www.reuters.com/world/middle-east/irans-central-bank-governor-dismisses-claims-economic-collapse-amid-us-blockade-2026-10-14/",
+    "https://www.service-public.gouv.fr/particuliers/vosdroits/F3132",
+    "https://www.sigar.mil/pdf/quarterlyreports/2021-10-30qr.pdf",
+    "https://www.themorgan.org/printed-books/79355",
+    "https://www.un.org/fr/about-us/un-charter/chapter-1",
+    "https://www.un.org/fr/about-us/un-charter/chapter-7",
+    "https://www.un.org/securitycouncil/ctc/news/joint-briefing-security-council-twenty-third-report-secretary-general-threat-posed-isil-da%E2%80%99esh",
+    "https://www.undp.org/uzbekistan/press-releases/undp-and-uzbekistan-join-forces-combat-dust-storms-southern-aral-sea-region",
+    "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+    "https://www.vie-publique.fr/questions-reponses/293520-peut-etre-anonyme-sur-internet-et-les-reseaux-sociaux",
+    "https://www.warwickshire.gov.uk/heritage-culture-1/george-eliot-letters-collection/4",
+    "https://www.wcfia.harvard.edu/publications/future-power"
+  ]
+}

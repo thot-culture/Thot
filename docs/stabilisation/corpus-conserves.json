@@ -1,0 +1,14 @@
+{
+  "questions": 300,
+  "questions_equal_main": true,
+  "geography_sources_media_equal_main": true,
+  "paths": [
+    "assets/explorer-v2/data",
+    "assets/explorer-v2/sources",
+    "assets/explorer-v2/media",
+    "assets/strategies-media",
+    "assets/images",
+    "assets/illustrations.json"
+  ],
+  "reference": "86ee7cbb27172262eca3648afe51cb7d2a81eab8"
+}

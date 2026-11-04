@@ -1,0 +1,23 @@
+{
+  "checked_date": "2026-11-04",
+  "pull_request": 24,
+  "code_commit": "e484a9891468528523a4dc09fc6cf1a9ebc0aca0",
+  "runs": [
+    {
+      "id": 41809243086,
+      "name": "Vérification portable",
+      "status": "completed",
+      "conclusion": "success",
+      "sha": "e484a9891468528523a4dc09fc6cf1a9ebc0aca0",
+      "url": "https://github.com/thot-culture/Thot/actions/runs/41809243086"
+    },
+    {
+      "id": 41809243135,
+      "name": "Audit final — navigateur et mesures",
+      "status": "completed",
+      "conclusion": "success",
+      "sha": "e484a9891468528523a4dc09fc6cf1a9ebc0aca0",
+      "url": "https://github.com/thot-culture/Thot/actions/runs/41809243135"
+    }
+  ]
+}

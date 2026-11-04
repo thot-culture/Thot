@@ -28,9 +28,29 @@ python scripts/test-portabilite.py
 
 Les pages Explorer sont générées : modifier leurs sources dans `scripts/` et `assets/explorer-v2/`, puis les reconstruire. Les menus et liens d’information sont statiques, y compris sans JavaScript ; `site_chrome.py` les harmonise après toute génération de page.
 
+L’identité commune (marque, navigation, pieds de page, cartes et actions éditoriales) est définie dans `assets/visual-system.css`, chargée en dernier sur les 18 pages. Après une modification, lancer `python scripts/site_chrome.py` pour actualiser l’empreinte de la feuille de style. Les styles propres aux cartes géographiques et aux états des jeux restent dans leurs modules. Voir [le bilan de cohérence visuelle](docs/HARMONISATION-VISUELLE-20261103.md).
+
 Les scripts `test-*.mjs` et `test-*.py` couvrent les activités, les corpus et les navigateurs. Les recettes historiques fixent parfois l’intégrité à un ancien commit : distinguer ces contrôles de conservation des tests de fonctionnement. Les tests navigateur nécessitent les dépendances de `requirements-browser.txt` et les navigateurs Playwright.
 
 ## Publication et sauvegarde
+
+Le [guide de publication des articles](GUIDE-PUBLICATION-ARTICLES.md) décrit le travail courant (HTML, notice et médias), la synchronisation de la bibliothèque et du sitemap et les contrôles avant PR. Le [rapport d’audit final](docs/AUDIT-FINAL-THOT.md) distingue les défauts corrigés, les mesures réelles et les réserves.
+
+Préparation du référencement : [audit SEO](docs/AUDIT-SEO-THOT.md), [configuration de Google Search Console](docs/GOOGLE-SEARCH-CONSOLE.md), [stratégie éditoriale et suivi](docs/STRATEGIE-SEO-THOT.md). La propriété prévue est `https://thot-culture.github.io/Thot/` ; aucune connexion Google ni garantie d'indexation n'est implicite.
+
+Le [bilan de stabilisation](docs/BILAN-STABILISATION-THOT.md) décrit la version réunissant #22, #23 et #24, les tests des deux publications successives, les réserves et l'ordre des fusions à autoriser. Aucun déploiement n'est effectué par ces validations.
+
+```sh
+python scripts/sync-publication.py --check
+python scripts/test-publication.py
+python scripts/check-seo.py
+python scripts/test-seo.py
+# Comparer les anciens contenus au commit choisi avant les modifications :
+python scripts/check-conservation.py --revision SHA_DU_SOCLE
+```
+
+Les contrôles actuels sont exécutés par `verification-portable.yml` (Linux/Windows) et `audit-final.yml` (navigateurs, sauvegarde, accessibilité et mesures). Les recettes historiques en échec restent documentées ; elles n’ont pas été désactivées.
+
 
 GitHub Pages publie la racine de `main`. Avant publication, conserver le commit précédent dans une branche `backup/`, tester sous le préfixe `/Thot/`, puis vérifier le déploiement et les pages publiques. Ne pas forcer le push ni réécrire l’historique.
 

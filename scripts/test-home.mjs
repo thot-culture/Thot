@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 import vm from 'node:vm';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const homeCode = await readFile(resolve(root, 'assets/site-home.js'), 'utf8');
+const homeCode = (await readFile(resolve(root, 'assets/navigation.js'), 'utf8')) + '\n' + (await readFile(resolve(root, 'assets/site-home.js'), 'utf8'));
 const discoveryCode = await readFile(resolve(root, 'assets/decouverte.js'), 'utf8');
 class Element {
   constructor() {

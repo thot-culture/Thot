@@ -34,7 +34,7 @@ def outputs():
   # Cartes et recommandations : le lien de l’article identifie la durée, jamais sa position.
   pattern=r'<(?:article|section)\b[^>]*class="[^"]*(?:discovery-card|latest-story|related-reading)[^"]*"[\s\S]*?</(?:article|section)>'
   def card(m):
-   block=m[0];target=re.search(r'href="(?:\.\./)?(?:articles/)?([a-z-]+)\.html"',block)
+   block=m[0];target=re.search(r'href="(?:\.\./)?(?:articles/)?([a-z0-9-]+)\.html"',block)
    if target and target[1] in records:block=re.sub(r'\d+ min de lecture',str(records[target[1]]['minutes'])+' min de lecture',block)
    return block
   s=re.sub(pattern,card,s)
@@ -45,6 +45,6 @@ if __name__=='__main__':
  for p,text in outputs().items():
   if args.check:
    if not p.exists() or p.read_text(encoding="utf-8")!=text:bad.append(str(p.relative_to(ROOT)))
-  else:p.write_text(text, encoding="utf-8")
+  else:p.write_text(text, encoding="utf-8", newline="\n")
  if bad:sys.exit('Durées à régénérer : '+', '.join(bad))
  print('PASS : durées communes et rendus statiques cohérents' if args.check else 'Durées générées, contenu scientifique inchangé.')

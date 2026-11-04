@@ -1,0 +1,263 @@
+{
+  "checked_date_paris": "2026-11-04",
+  "main": "86ee7cbb27172262eca3648afe51cb7d2a81eab8",
+  "pull_requests": [
+    {
+      "number": 22,
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "mergeable": true,
+      "head": {
+        "ref": "work/harmonie-visuelle-20261103",
+        "sha": "c7b62ad61c5ddabc63c61560175a55c85ec80200"
+      },
+      "base": {
+        "ref": "main",
+        "sha": "86ee7cbb27172262eca3648afe51cb7d2a81eab8"
+      },
+      "files": [
+        "404.html",
+        "README.md",
+        "articles/autorite.html",
+        "articles/autrices-pseudonymes.html",
+        "articles/evolution-strategies-militaires.html",
+        "articles/pieuvres-couleur.html",
+        "articles/puissance-etats-unis.html",
+        "articles/roubaix-1917.html",
+        "assets/visual-system.css",
+        "bibliotheque.html",
+        "confidentialite.html",
+        "contact.html",
+        "docs/HARMONISATION-VISUELLE-20261103.md",
+        "explorer.html",
+        "explorer/atlas/rome-expansion.html",
+        "explorer/enquetes/mer-aral.html",
+        "index.html",
+        "mentions-legales.html",
+        "notre-methode.html",
+        "quiz-autrices.html",
+        "quiz.html",
+        "scripts/check-home.mjs",
+        "scripts/site_chrome.py"
+      ],
+      "checks": [
+        {
+          "id": 41597686406,
+          "name": "Vérification portable",
+          "status": "completed",
+          "conclusion": "success",
+          "sha": "c7b62ad61c5ddabc63c61560175a55c85ec80200"
+        }
+      ]
+    },
+    {
+      "number": 23,
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "mergeable": true,
+      "head": {
+        "ref": "work/audit-final-thot-20261103",
+        "sha": "2cae9b575b70f58c14c75ff1a9ca11cc213ca101"
+      },
+      "base": {
+        "ref": "work/harmonie-visuelle-20261103",
+        "sha": "c7b62ad61c5ddabc63c61560175a55c85ec80200"
+      },
+      "files": [
+        ".github/workflows/audit-final.yml",
+        ".github/workflows/verification-portable.yml",
+        ".gitignore",
+        "404.html",
+        "GUIDE-PUBLICATION-ARTICLES.md",
+        "README.md",
+        "articles/autorite.html",
+        "articles/autrices-pseudonymes.html",
+        "articles/evolution-strategies-militaires.html",
+        "articles/pieuvres-couleur.html",
+        "articles/puissance-etats-unis.html",
+        "articles/roubaix-1917.html",
+        "assets/explorer-v2/atlas.css",
+        "assets/navigation.js",
+        "assets/quiz-startup.js",
+        "assets/quiz.css",
+        "assets/roubaix-photos.css",
+        "assets/site-home.js",
+        "assets/site.js",
+        "bibliotheque.html",
+        "confidentialite.html",
+        "contact.html",
+        "docs/AUDIT-FINAL-THOT.md",
+        "docs/audit-final/liens-http.json",
+        "docs/audit-final/liens-repares.json",
+        "docs/audit-final/mesures-initiales.json",
+        "docs/audit-final/performances-finales.json",
+        "docs/audit-final/verifications-finales.json",
+        "explorer.html",
+        "explorer/atlas/rome-expansion.html",
+        "explorer/enquetes/mer-aral.html",
+        "index.html",
+        "mentions-legales.html",
+        "notre-methode.html",
+        "quiz-autrices.html",
+        "quiz.html",
+        "scripts/audit-final-before.py",
+        "scripts/audit-final-browser.cjs",
+        "scripts/audit-final-links.py",
+        "scripts/audit-final-performance.cjs",
+        "scripts/audit-final-summary.py",
+        "scripts/check-conservation.py",
+        "scripts/editorial-amendments.py",
+        "scripts/run-browser-recipe.py",
+        "scripts/site_chrome.py",
+        "scripts/sync-publication.py",
+        "scripts/test-article-editorial.py",
+        "scripts/test-home.mjs",
+        "scripts/test-publication.py",
+        "scripts/test-quiz.mjs",
+        "scripts/test-site-browser.cjs",
+        "scripts/update-reading-times.py",
+        "sitemap.xml"
+      ],
+      "checks": [
+        {
+          "id": 41622951910,
+          "name": "Audit final — navigateur et mesures",
+          "status": "completed",
+          "conclusion": "success",
+          "sha": "2cae9b575b70f58c14c75ff1a9ca11cc213ca101"
+        },
+        {
+          "id": 41622951757,
+          "name": "Vérification portable",
+          "status": "completed",
+          "conclusion": "success",
+          "sha": "2cae9b575b70f58c14c75ff1a9ca11cc213ca101"
+        }
+      ]
+    },
+    {
+      "number": 24,
+      "state": "open",
+      "draft": true,
+      "merged": false,
+      "mergeable": true,
+      "head": {
+        "ref": "work/seo-indexation-20261104",
+        "sha": "069e2ef41267807fac8ed2466550fac9fafb1d48"
+      },
+      "base": {
+        "ref": "work/audit-final-thot-20261103",
+        "sha": "2cae9b575b70f58c14c75ff1a9ca11cc213ca101"
+      },
+      "files": [
+        ".github/workflows/audit-final.yml",
+        ".github/workflows/verification-portable.yml",
+        "GUIDE-PUBLICATION-ARTICLES.md",
+        "README.md",
+        "articles/evolution-strategies-militaires.html",
+        "assets/article-editorial.json",
+        "confidentialite.html",
+        "contact.html",
+        "docs/AUDIT-SEO-THOT.md",
+        "docs/GOOGLE-SEARCH-CONSOLE.md",
+        "docs/STRATEGIE-SEO-THOT.md",
+        "docs/seo/SUIVI-SEO-HEBDOMADAIRE.csv",
+        "docs/seo/atlas-local-lighthouse.json",
+        "docs/seo/atlas-public-lighthouse.json",
+        "docs/seo/atlas-transfert-public.json",
+        "docs/seo/etat-github-20261104.json",
+        "docs/seo/etat-public-20261104.json",
+        "docs/seo/inventaire-branche.json",
+        "docs/seo/lien-production-oxford.json",
+        "docs/seo/liens/http-links.json",
+        "docs/seo/navigateur/explorer-atlas-rome-expansion.html-390.png",
+        "docs/seo/navigateur/index.html-1440.png",
+        "docs/seo/navigateur/recette-site.json",
+        "docs/seo/verifications-github.json",
+        "docs/seo/verifications-locales.json",
+        "explorer.html",
+        "explorer/atlas/rome-expansion.html",
+        "explorer/enquetes/mer-aral.html",
+        "mentions-legales.html",
+        "scripts/audit-seo-public.py",
+        "scripts/check-seo.py",
+        "scripts/site_chrome.py",
+        "scripts/sync-publication.py",
+        "scripts/test-publication.py",
+        "scripts/test-seo.py",
+        "scripts/update-article-editorial.py",
+        "sitemap.xml"
+      ],
+      "checks": [
+        {
+          "id": 41809828581,
+          "name": "Audit final — navigateur et mesures",
+          "status": "completed",
+          "conclusion": "success",
+          "sha": "069e2ef41267807fac8ed2466550fac9fafb1d48"
+        },
+        {
+          "id": 41809828525,
+          "name": "Vérification portable",
+          "status": "completed",
+          "conclusion": "success",
+          "sha": "069e2ef41267807fac8ed2466550fac9fafb1d48"
+        }
+      ]
+    }
+  ],
+  "overlap": {
+    "22/23": [
+      "404.html",
+      "README.md",
+      "articles/autorite.html",
+      "articles/autrices-pseudonymes.html",
+      "articles/evolution-strategies-militaires.html",
+      "articles/pieuvres-couleur.html",
+      "articles/puissance-etats-unis.html",
+      "articles/roubaix-1917.html",
+      "bibliotheque.html",
+      "confidentialite.html",
+      "contact.html",
+      "explorer.html",
+      "explorer/atlas/rome-expansion.html",
+      "explorer/enquetes/mer-aral.html",
+      "index.html",
+      "mentions-legales.html",
+      "notre-methode.html",
+      "quiz-autrices.html",
+      "quiz.html",
+      "scripts/site_chrome.py"
+    ],
+    "22/24": [
+      "README.md",
+      "articles/evolution-strategies-militaires.html",
+      "confidentialite.html",
+      "contact.html",
+      "explorer.html",
+      "explorer/atlas/rome-expansion.html",
+      "explorer/enquetes/mer-aral.html",
+      "mentions-legales.html",
+      "scripts/site_chrome.py"
+    ],
+    "23/24": [
+      ".github/workflows/audit-final.yml",
+      ".github/workflows/verification-portable.yml",
+      "GUIDE-PUBLICATION-ARTICLES.md",
+      "README.md",
+      "articles/evolution-strategies-militaires.html",
+      "confidentialite.html",
+      "contact.html",
+      "explorer.html",
+      "explorer/atlas/rome-expansion.html",
+      "explorer/enquetes/mer-aral.html",
+      "mentions-legales.html",
+      "scripts/site_chrome.py",
+      "scripts/sync-publication.py",
+      "scripts/test-publication.py",
+      "sitemap.xml"
+    ]
+  }
+}

@@ -1,0 +1,2817 @@
+{
+  "date": "2026-11-03",
+  "measured_commit": "433d84b8aa12b17df8e24589e3bf14bc7f9319f4",
+  "audit_run": "https://github.com/thot-culture/Thot/actions/runs/41620956858",
+  "portable_run": "https://github.com/thot-culture/Thot/actions/runs/41620956895",
+  "method": "HTTP local /Thot/, Chromium réel sous Linux et Windows, cinq largeurs. Toucher simulé ; pas de lecteur d’écran ni appareil physique.",
+  "main_pr22_comparison": {
+    "equal": 18,
+    "diffs": []
+  },
+  "linux": {
+    "browser": "151.0.7922.34",
+    "pages": [
+      {
+        "page": "index.html",
+        "width": 320,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 21
+            }
+          ],
+          "passes": 24
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "bibliotheque.html",
+        "width": 320,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 16
+            }
+          ],
+          "passes": 25
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "explorer.html",
+        "width": 320,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 18
+            }
+          ],
+          "passes": 24
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "notre-methode.html",
+        "width": 320,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 1
+            }
+          ],
+          "passes": 18
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "quiz.html",
+        "width": 320,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 12
+            }
+          ],
+          "passes": 22
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "quiz-autrices.html",
+        "width": 320,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [
+          "jeu autrices complet, erreur, clavier, explications, réinitialisation"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 4
+            }
+          ],
+          "passes": 22
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "mentions-legales.html",
+        "width": 320,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 1
+            }
+          ],
+          "passes": 19
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "confidentialite.html",
+        "width": 320,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 1
+            }
+          ],
+          "passes": 19
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "contact.html",
+        "width": 320,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 1
+            }
+          ],
+          "passes": 18
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "404.html",
+        "width": 320,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 1
+            }
+          ],
+          "passes": 19
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/autorite.html",
+        "width": 320,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [
+          "trois situations, toutes réponses, trois scènes Décode et réinitialisation"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 11
+            }
+          ],
+          "passes": 27
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/autrices-pseudonymes.html",
+        "width": 320,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [
+          "jeu autrices complet, erreur, clavier, explications, réinitialisation"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 11
+            }
+          ],
+          "passes": 26
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/evolution-strategies-militaires.html",
+        "width": 320,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [
+          "tous les états des trois modules, trois notices documentaires au clavier"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 17
+            }
+          ],
+          "passes": 28
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/pieuvres-couleur.html",
+        "width": 320,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [
+          "curseur clavier, sept structures, couches activables"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 11
+            }
+          ],
+          "passes": 31
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/puissance-etats-unis.html",
+        "width": 320,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [
+          "trois cas, chronologie au clavier, tableau comparatif",
+          "glossaire, Échap, restitution du focus"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 30
+            }
+          ],
+          "passes": 29
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/roubaix-1917.html",
+        "width": 320,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [
+          "huit dates et clavier, original chargé, repères du document, remise à zéro",
+          "glossaire, Échap, restitution du focus"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 21
+            }
+          ],
+          "passes": 28
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "explorer/atlas/rome-expansion.html",
+        "width": 320,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [
+          "quatre personnages, quatre parcours complets, quatre documents, agrandissement, dialogues Échap et focus"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 23
+            }
+          ],
+          "passes": 28
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "explorer/enquetes/mer-aral.html",
+        "width": 320,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [
+          "onze pièces, dialogues Échap et focus, tableau/carte, relation, argument et bilan, révision, remise à zéro"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 1
+            }
+          ],
+          "passes": 20
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "index.html",
+        "width": 390,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 21
+            }
+          ],
+          "passes": 24
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "bibliotheque.html",
+        "width": 390,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 16
+            }
+          ],
+          "passes": 25
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "explorer.html",
+        "width": 390,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 18
+            }
+          ],
+          "passes": 24
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "notre-methode.html",
+        "width": 390,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 1
+            }
+          ],
+          "passes": 18
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "quiz.html",
+        "width": 390,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 12
+            }
+          ],
+          "passes": 22
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "quiz-autrices.html",
+        "width": 390,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [
+          "jeu autrices complet, erreur, clavier, explications, réinitialisation"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 4
+            }
+          ],
+          "passes": 22
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "mentions-legales.html",
+        "width": 390,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 1
+            }
+          ],
+          "passes": 19
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "confidentialite.html",
+        "width": 390,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 1
+            }
+          ],
+          "passes": 19
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "contact.html",
+        "width": 390,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 1
+            }
+          ],
+          "passes": 18
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "404.html",
+        "width": 390,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 1
+            }
+          ],
+          "passes": 19
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/autorite.html",
+        "width": 390,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [
+          "trois situations, toutes réponses, trois scènes Décode et réinitialisation"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 11
+            }
+          ],
+          "passes": 27
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/autrices-pseudonymes.html",
+        "width": 390,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [
+          "jeu autrices complet, erreur, clavier, explications, réinitialisation"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 11
+            }
+          ],
+          "passes": 26
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/evolution-strategies-militaires.html",
+        "width": 390,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [
+          "tous les états des trois modules, trois notices documentaires au clavier"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 17
+            }
+          ],
+          "passes": 28
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/pieuvres-couleur.html",
+        "width": 390,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [
+          "curseur clavier, sept structures, couches activables"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 11
+            }
+          ],
+          "passes": 31
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/puissance-etats-unis.html",
+        "width": 390,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [
+          "trois cas, chronologie au clavier, tableau comparatif",
+          "glossaire, Échap, restitution du focus"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 30
+            }
+          ],
+          "passes": 29
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/roubaix-1917.html",
+        "width": 390,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [
+          "huit dates et clavier, original chargé, repères du document, remise à zéro",
+          "glossaire, Échap, restitution du focus"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 21
+            }
+          ],
+          "passes": 27
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "explorer/atlas/rome-expansion.html",
+        "width": 390,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [
+          "quatre personnages, quatre parcours complets, quatre documents, agrandissement, dialogues Échap et focus"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 23
+            }
+          ],
+          "passes": 28
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "explorer/enquetes/mer-aral.html",
+        "width": 390,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS clavier, Échap, focus et toucher simulé",
+        "activities": [
+          "onze pièces, dialogues Échap et focus, tableau/carte, relation, argument et bilan, révision, remise à zéro"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 1
+            }
+          ],
+          "passes": 20
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "index.html",
+        "width": 768,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 22
+            }
+          ],
+          "passes": 25
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "bibliotheque.html",
+        "width": 768,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 15
+            }
+          ],
+          "passes": 25
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "explorer.html",
+        "width": 768,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 17
+            }
+          ],
+          "passes": 23
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "notre-methode.html",
+        "width": 768,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [],
+          "passes": 16
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "quiz.html",
+        "width": 768,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 11
+            }
+          ],
+          "passes": 22
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "quiz-autrices.html",
+        "width": 768,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "jeu autrices complet, erreur, clavier, explications, réinitialisation"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 3
+            }
+          ],
+          "passes": 22
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "mentions-legales.html",
+        "width": 768,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [],
+          "passes": 17
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "confidentialite.html",
+        "width": 768,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [],
+          "passes": 17
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "contact.html",
+        "width": 768,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [],
+          "passes": 16
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "404.html",
+        "width": 768,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [],
+          "passes": 17
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/autorite.html",
+        "width": 768,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "trois situations, toutes réponses, trois scènes Décode et réinitialisation"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 10
+            }
+          ],
+          "passes": 27
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/autrices-pseudonymes.html",
+        "width": 768,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "jeu autrices complet, erreur, clavier, explications, réinitialisation"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 10
+            }
+          ],
+          "passes": 26
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/evolution-strategies-militaires.html",
+        "width": 768,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "tous les états des trois modules, trois notices documentaires au clavier"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 16
+            }
+          ],
+          "passes": 28
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/pieuvres-couleur.html",
+        "width": 768,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "curseur clavier, sept structures, couches activables"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 10
+            }
+          ],
+          "passes": 31
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/puissance-etats-unis.html",
+        "width": 768,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "trois cas, chronologie au clavier, tableau comparatif",
+          "glossaire, Échap, restitution du focus"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 30
+            }
+          ],
+          "passes": 29
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/roubaix-1917.html",
+        "width": 768,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "huit dates et clavier, original chargé, repères du document, remise à zéro",
+          "glossaire, Échap, restitution du focus"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 20
+            }
+          ],
+          "passes": 28
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "explorer/atlas/rome-expansion.html",
+        "width": 768,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "quatre personnages, quatre parcours complets, quatre documents, agrandissement, dialogues Échap et focus"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 25
+            }
+          ],
+          "passes": 28
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "explorer/enquetes/mer-aral.html",
+        "width": 768,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "onze pièces, dialogues Échap et focus, tableau/carte, relation, argument et bilan, révision, remise à zéro"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [],
+          "passes": 20
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "index.html",
+        "width": 1024,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 22
+            }
+          ],
+          "passes": 25
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "bibliotheque.html",
+        "width": 1024,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 15
+            }
+          ],
+          "passes": 25
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "explorer.html",
+        "width": 1024,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 16
+            }
+          ],
+          "passes": 23
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "notre-methode.html",
+        "width": 1024,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [],
+          "passes": 16
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "quiz.html",
+        "width": 1024,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 11
+            }
+          ],
+          "passes": 22
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "quiz-autrices.html",
+        "width": 1024,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "jeu autrices complet, erreur, clavier, explications, réinitialisation"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 3
+            }
+          ],
+          "passes": 22
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "mentions-legales.html",
+        "width": 1024,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [],
+          "passes": 17
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "confidentialite.html",
+        "width": 1024,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [],
+          "passes": 17
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "contact.html",
+        "width": 1024,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [],
+          "passes": 16
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "404.html",
+        "width": 1024,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [],
+          "passes": 17
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/autorite.html",
+        "width": 1024,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "trois situations, toutes réponses, trois scènes Décode et réinitialisation"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 11
+            }
+          ],
+          "passes": 27
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/autrices-pseudonymes.html",
+        "width": 1024,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "jeu autrices complet, erreur, clavier, explications, réinitialisation"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 10
+            }
+          ],
+          "passes": 26
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/evolution-strategies-militaires.html",
+        "width": 1024,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "tous les états des trois modules, trois notices documentaires au clavier"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 16
+            }
+          ],
+          "passes": 28
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/pieuvres-couleur.html",
+        "width": 1024,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "curseur clavier, sept structures, couches activables"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 11
+            }
+          ],
+          "passes": 31
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/puissance-etats-unis.html",
+        "width": 1024,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "trois cas, chronologie au clavier, tableau comparatif",
+          "glossaire, Échap, restitution du focus"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 31
+            }
+          ],
+          "passes": 29
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/roubaix-1917.html",
+        "width": 1024,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "huit dates et clavier, original chargé, repères du document, remise à zéro",
+          "glossaire, Échap, restitution du focus"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 22
+            }
+          ],
+          "passes": 28
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "explorer/atlas/rome-expansion.html",
+        "width": 1024,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "quatre personnages, quatre parcours complets, quatre documents, agrandissement, dialogues Échap et focus"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 26
+            }
+          ],
+          "passes": 28
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "explorer/enquetes/mer-aral.html",
+        "width": 1024,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "onze pièces, dialogues Échap et focus, tableau/carte, relation, argument et bilan, révision, remise à zéro"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [],
+          "passes": 20
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "index.html",
+        "width": 1440,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 22
+            }
+          ],
+          "passes": 25
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "bibliotheque.html",
+        "width": 1440,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 15
+            }
+          ],
+          "passes": 25
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "explorer.html",
+        "width": 1440,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 16
+            }
+          ],
+          "passes": 23
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "notre-methode.html",
+        "width": 1440,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [],
+          "passes": 16
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "quiz.html",
+        "width": 1440,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 11
+            }
+          ],
+          "passes": 22
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "quiz-autrices.html",
+        "width": 1440,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "jeu autrices complet, erreur, clavier, explications, réinitialisation"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 3
+            }
+          ],
+          "passes": 22
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "mentions-legales.html",
+        "width": 1440,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [],
+          "passes": 17
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "confidentialite.html",
+        "width": 1440,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [],
+          "passes": 17
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "contact.html",
+        "width": 1440,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [],
+          "passes": 16
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "404.html",
+        "width": 1440,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [],
+        "axe": {
+          "violations": [],
+          "incomplete": [],
+          "passes": 17
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/autorite.html",
+        "width": 1440,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "trois situations, toutes réponses, trois scènes Décode et réinitialisation"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 11
+            }
+          ],
+          "passes": 27
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/autrices-pseudonymes.html",
+        "width": 1440,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "jeu autrices complet, erreur, clavier, explications, réinitialisation"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 10
+            }
+          ],
+          "passes": 26
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/evolution-strategies-militaires.html",
+        "width": 1440,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "tous les états des trois modules, trois notices documentaires au clavier"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 16
+            }
+          ],
+          "passes": 28
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/pieuvres-couleur.html",
+        "width": 1440,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "curseur clavier, sept structures, couches activables"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 11
+            }
+          ],
+          "passes": 31
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/puissance-etats-unis.html",
+        "width": 1440,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "trois cas, chronologie au clavier, tableau comparatif",
+          "glossaire, Échap, restitution du focus"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 30
+            }
+          ],
+          "passes": 29
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "articles/roubaix-1917.html",
+        "width": 1440,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "huit dates et clavier, original chargé, repères du document, remise à zéro",
+          "glossaire, Échap, restitution du focus"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 22
+            }
+          ],
+          "passes": 28
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "explorer/atlas/rome-expansion.html",
+        "width": 1440,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "quatre personnages, quatre parcours complets, quatre documents, agrandissement, dialogues Échap et focus"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 26
+            }
+          ],
+          "passes": 28
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      },
+      {
+        "page": "explorer/enquetes/mer-aral.html",
+        "width": 1440,
+        "result": "PASS",
+        "overflow": 0,
+        "menu": "PASS navigation visible",
+        "activities": [
+          "onze pièces, dialogues Échap et focus, tableau/carte, relation, argument et bilan, révision, remise à zéro"
+        ],
+        "axe": {
+          "violations": [],
+          "incomplete": [],
+          "passes": 20
+        },
+        "errors": [],
+        "localHttpErrors": [],
+        "externalHttpErrors": [],
+        "brokenImages": []
+      }
+    ],
+    "interactions": [
+      "PASS recherche accueil, URL /Thot/, accents, filtres combinés, vide et réinitialisation",
+      "PASS #start-button : partie réelle complète, 5 réponses et score correct, sauvegarde native",
+      "PASS #daily-start-button : partie réelle complète, 5 réponses et score correct, sauvegarde native",
+      "PASS menu prêt avant le main et position stable avec JS externes retardés de 1,2 seconde, cinq gabarits",
+      "PASS banque volontairement indisponible : notice réelle visible et démarrage désactivé",
+      "PASS navigation et reflow sans JavaScript, 18 pages à 320 px",
+      "PASS HTTP 404 pour URL inconnue"
+    ],
+    "slowLoading": [
+      {
+        "name": "index.html",
+        "before": 77,
+        "after": 77,
+        "header": 77,
+        "scrollY": 0
+      },
+      {
+        "name": "quiz.html",
+        "before": 77,
+        "after": 77,
+        "header": 77,
+        "scrollY": 0
+      },
+      {
+        "name": "articles/pieuvres-couleur.html",
+        "before": 121,
+        "after": 121,
+        "header": 121,
+        "scrollY": 0
+      },
+      {
+        "name": "explorer/enquetes/mer-aral.html",
+        "before": 77,
+        "after": 77,
+        "header": 77,
+        "scrollY": 0
+      },
+      {
+        "name": "explorer/atlas/rome-expansion.html",
+        "before": 77,
+        "after": 77,
+        "header": 77,
+        "scrollY": 0
+      }
+    ],
+    "storage": {
+      "native": true,
+      "reload": "PASS",
+      "browserRestart": "PASS",
+      "aralReset": "PASS",
+      "quizPreserved": "PASS",
+      "documents": 11
+    },
+    "internalHttp": {
+      "urls": 270,
+      "anchors": 157,
+      "result": "PASS"
+    }
+  },
+  "windows": {
+    "browser": "151.0.7922.34",
+    "pages": [
+      {
+        "name": "index.html",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "bibliotheque.html",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "explorer.html",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "notre-methode.html",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "quiz.html",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "quiz-autrices.html",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "mentions-legales.html",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "confidentialite.html",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "contact.html",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/autorite.html",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/autrices-pseudonymes.html",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/evolution-strategies-militaires.html",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/pieuvres-couleur.html",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/puissance-etats-unis.html",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/roubaix-1917.html",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "explorer/atlas/rome-expansion.html",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "explorer/enquetes/mer-aral.html",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "404.html",
+        "width": 320,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "index.html",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "bibliotheque.html",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "explorer.html",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "notre-methode.html",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "quiz.html",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "quiz-autrices.html",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "mentions-legales.html",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "confidentialite.html",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "contact.html",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/autorite.html",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/autrices-pseudonymes.html",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/evolution-strategies-militaires.html",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/pieuvres-couleur.html",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/puissance-etats-unis.html",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/roubaix-1917.html",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "explorer/atlas/rome-expansion.html",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "explorer/enquetes/mer-aral.html",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "404.html",
+        "width": 390,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "index.html",
+        "width": 768,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "bibliotheque.html",
+        "width": 768,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "explorer.html",
+        "width": 768,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "notre-methode.html",
+        "width": 768,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "quiz.html",
+        "width": 768,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "quiz-autrices.html",
+        "width": 768,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "mentions-legales.html",
+        "width": 768,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "confidentialite.html",
+        "width": 768,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "contact.html",
+        "width": 768,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/autorite.html",
+        "width": 768,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/autrices-pseudonymes.html",
+        "width": 768,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/evolution-strategies-militaires.html",
+        "width": 768,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/pieuvres-couleur.html",
+        "width": 768,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/puissance-etats-unis.html",
+        "width": 768,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/roubaix-1917.html",
+        "width": 768,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "explorer/atlas/rome-expansion.html",
+        "width": 768,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "explorer/enquetes/mer-aral.html",
+        "width": 768,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "404.html",
+        "width": 768,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "index.html",
+        "width": 1024,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "bibliotheque.html",
+        "width": 1024,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "explorer.html",
+        "width": 1024,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "notre-methode.html",
+        "width": 1024,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "quiz.html",
+        "width": 1024,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "quiz-autrices.html",
+        "width": 1024,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "mentions-legales.html",
+        "width": 1024,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "confidentialite.html",
+        "width": 1024,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "contact.html",
+        "width": 1024,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/autorite.html",
+        "width": 1024,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/autrices-pseudonymes.html",
+        "width": 1024,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/evolution-strategies-militaires.html",
+        "width": 1024,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/pieuvres-couleur.html",
+        "width": 1024,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/puissance-etats-unis.html",
+        "width": 1024,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/roubaix-1917.html",
+        "width": 1024,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "explorer/atlas/rome-expansion.html",
+        "width": 1024,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "explorer/enquetes/mer-aral.html",
+        "width": 1024,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "404.html",
+        "width": 1024,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "index.html",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "bibliotheque.html",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "explorer.html",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "notre-methode.html",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "quiz.html",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "quiz-autrices.html",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "mentions-legales.html",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "confidentialite.html",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "contact.html",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/autorite.html",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/autrices-pseudonymes.html",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/evolution-strategies-militaires.html",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/pieuvres-couleur.html",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/puissance-etats-unis.html",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "articles/roubaix-1917.html",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "explorer/atlas/rome-expansion.html",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "explorer/enquetes/mer-aral.html",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      },
+      {
+        "name": "404.html",
+        "width": 1440,
+        "status": 200,
+        "overflow": false,
+        "keyboard": "PASS",
+        "menu": "PASS"
+      }
+    ],
+    "errors": [],
+    "storage": {
+      "native": true,
+      "reload": "PASS",
+      "browserRestart": "PASS",
+      "aralReset": "PASS",
+      "quizPreserved": "PASS",
+      "documents": 11
+    },
+    "internalHttp": {
+      "urls": 270,
+      "anchors": 157,
+      "result": "PASS"
+    },
+    "noJavascript": "PASS at 320 px"
+  },
+  "historical_failures": {
+    "compared_on_both": "main 86ee7cb et PR22 c7b62ad",
+    "scripts": [
+      "scripts/check-editorial.py",
+      "scripts/test-stabilisation.py",
+      "scripts/test-strategies-static.py",
+      "scripts/test-explorer-reconstruction.py",
+      "scripts/test-explorer-finitions.py",
+      "scripts/test-explorer-recette-finale.py"
+    ],
+    "status": "Échecs préexistants documentés ; scripts non désactivés."
+  }
+}

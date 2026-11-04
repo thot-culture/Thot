@@ -1,0 +1,22 @@
+2026-11-04T12:00:56.0107799Z Exception in thread Thread-7 (_readerthread):
+2026-11-04T12:00:56.0109003Z Traceback (most recent call last):
+2026-11-04T12:00:56.0110227Z   File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\threading.py", line 1075, in _bootstrap_inner
+2026-11-04T12:00:56.0210220Z     self.run()
+2026-11-04T12:00:56.0211307Z   File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\threading.py", line 1012, in run
+2026-11-04T12:00:56.0215387Z     self._target(*self._args, **self._kwargs)
+2026-11-04T12:00:56.0216030Z   File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\subprocess.py", line 1599, in _readerthread
+2026-11-04T12:00:56.0320938Z     buffer.append(fh.read())
+2026-11-04T12:00:56.0321867Z                   ^^^^^^^^^
+2026-11-04T12:00:56.0322455Z   File "<frozen codecs>", line 322, in decode
+2026-11-04T12:00:56.0323477Z UnicodeDecodeError: 'utf-8' codec can't decode byte 0xe9 in position 36: invalid continuation byte
+2026-11-04T12:00:56.1384847Z Traceback (most recent call last):
+2026-11-04T12:00:56.1385471Z   File "D:\a\Thot\Thot\scripts\test-publication-integration.py", line 199, in <module>
+2026-11-04T12:00:56.1387125Z     raise SystemExit(main())
+2026-11-04T12:00:56.1388054Z                      ^^^^^^
+2026-11-04T12:00:56.1388851Z   File "D:\a\Thot\Thot\scripts\test-publication-integration.py", line 161, in main
+2026-11-04T12:00:56.1389999Z     run(root, *command)
+2026-11-04T12:00:56.1390805Z   File "D:\a\Thot\Thot\scripts\test-publication-integration.py", line 32, in run
+2026-11-04T12:00:56.1392459Z     return result.stdout.strip()
+2026-11-04T12:00:56.1393143Z            ^^^^^^^^^^^^^^^^^^^
+2026-11-04T12:00:56.1396073Z AttributeError: 'NoneType' object has no attribute 'strip'
+2026-11-04T12:00:56.2624905Z ##[error]Process completed with exit code 1.

@@ -1,0 +1,3435 @@
+[
+  {
+    "url": "https://2017-2021.state.gov/joint-statement-by-the-political-directors-of-the-global-coalition-to-defeat-isis/",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://2017-2021.state.gov/joint-statement-by-the-political-directors-of-the-global-coalition-to-defeat-isis/",
+    "content_type": "text/html",
+    "content_length": "188865",
+    "seconds": 0.39
+  },
+  {
+    "url": "https://afe.easia.columbia.edu/songdynasty-module/tech-gunpowder.html",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://afe.easia.columbia.edu/songdynasty-module/tech-gunpowder.html",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": "20547",
+    "seconds": 0.58
+  },
+  {
+    "url": "https://americanhistory.si.edu/explore/exhibitions/price-of-freedom/online/world-war-ii/battle-atlantic",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://americanhistory.si.edu/explore/exhibitions/price-of-freedom/online/world-war-ii/battle-atlantic",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.54
+  },
+  {
+    "url": "https://armarium-hautsdefrance.fr/document/85546",
+    "owners": [
+      {
+        "owner": "articles/roubaix-1917.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://armarium-hautsdefrance.fr/document/85546",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 1.15
+  },
+  {
+    "url": "https://assemblyforpeace.unu.edu/cases/ukraine-2014-2022/",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://assemblyforpeace.unu.edu/cases/ukraine-2014-2022/",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.96
+  },
+  {
+    "url": "https://assets.cambridge.org/052182/4192/excerpt/0521824192_excerpt.htm",
+    "owners": [
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://assets.cambridge.org/052182/4192/excerpt/0521824192_excerpt.htm",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": "104249",
+    "seconds": 1.3
+  },
+  {
+    "url": "https://bn-r.cd-script.fr/fr/notice.php?from=&id=AFF_001_D_0150&searchurl=%2Ffr%2Frecherche-resultat.php%3Ffl%3D%26from%3D%26q%3DGrand%2Bplace%26sort%3Dtri_annee%2520asc%2Ctri_titre%2520asc%26start%3D990%26version%3D2.2&startpic=0",
+    "owners": [
+      {
+        "owner": "articles/roubaix-1917.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://modele-pro.bibenligne.fr/maintenance/",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": "1766",
+    "seconds": 2.32
+  },
+  {
+    "url": "https://bn-r.cd-script.fr/fr/notice.php?from=periode&id=AFF_001_D_0632&searchurl=%2Ffr%2Frecherche-resultat.php%3Ffl%3D%26from%3Dperiode%26q%3Dchrono%253A%25221914-1918%2522%26sort%3Dtri_annee%2520asc%2Ctri_titre%2520asc%26start%3D1020%26version%3D2.2",
+    "owners": [
+      {
+        "owner": "articles/roubaix-1917.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://modele-pro.bibenligne.fr/maintenance/",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": "1766",
+    "seconds": 2.46
+  },
+  {
+    "url": "https://bn-r.cd-script.fr/fr/notice.php?from=theme&id=AFF_001_D_0759&image=RBX_AMR_AFF_001_D_0759_1&searchurl=%2Ffr%2Frecherche-resultat.php%3Ffl%3D%26from%3Dtheme%26q%3Dtheme%253A%2522Guerres%2522%26sort%3Dtri_annee%2520asc%2Ctri_titre%2520asc%26start%3D920%26version%3D2.2&startpic=0",
+    "owners": [
+      {
+        "owner": "articles/roubaix-1917.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://modele-pro.bibenligne.fr/maintenance/",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": "1766",
+    "seconds": 5.31
+  },
+  {
+    "url": "https://bn-r.cd-script.fr/fr/notice.php?id=AFF_001_D_0705",
+    "owners": [
+      {
+        "owner": "articles/roubaix-1917.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://modele-pro.bibenligne.fr/maintenance/",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": "1766",
+    "seconds": 1.9
+  },
+  {
+    "url": "https://catalogue.bnf.fr/ark:/12148/cb119236010.public",
+    "owners": [
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://catalogue.bnf.fr/ark:/12148/cb119236010.public",
+    "content_type": "text/html;charset=utf-8",
+    "content_length": null,
+    "seconds": 0.98
+  },
+  {
+    "url": "https://catalogue.bnf.fr/ark:/12148/cb31293229q",
+    "owners": [
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://catalogue.bnf.fr/ark:/12148/cb31293229q",
+    "content_type": "text/html;charset=utf-8",
+    "content_length": null,
+    "seconds": 2.31
+  },
+  {
+    "url": "https://catalogue.bnf.fr/ark:/12148/cb392207667",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://catalogue.bnf.fr/ark:/12148/cb392207667",
+    "content_type": "text/html;charset=utf-8",
+    "content_length": null,
+    "seconds": 1.25
+  },
+  {
+    "url": "https://cawater-info.net/bk/water_land_resources_use/english/docs/table6.pdf",
+    "owners": [
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://cawater-info.net/bk/water_land_resources_use/english/docs/table6.pdf",
+    "content_type": "application/pdf",
+    "content_length": "17758",
+    "seconds": 1.62
+  },
+  {
+    "url": "https://ccfr.bnf.fr/portailccfr/ark%3A/16871/004ROUS010013",
+    "owners": [
+      {
+        "owner": "articles/roubaix-1917.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://ccfr.bnf.fr/portailccfr/ark%3A/16871/004ROUS010013",
+    "content_type": "text/html;charset=UTF-8",
+    "content_length": null,
+    "seconds": 1.46
+  },
+  {
+    "url": "https://classes.bnf.fr/page/grand/145.htm",
+    "owners": [
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://classes.bnf.fr/page/grand/145.htm",
+    "content_type": "text/html",
+    "content_length": "3921",
+    "seconds": 1.03
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:%22Bekanntmachung.%22_Einschr%C3%A4nkung_des_freien_Verkehrs_der_Einwohner_im_Gebiet_Lille_-_Roubaix_-_Tourcoing_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_707.jpg",
+    "owners": [
+      {
+        "owner": "illustrations.json:roubaix-circulation-1917",
+        "kind": "sourceUrl"
+      }
+    ],
+    "status": 200,
+    "final": "https://commons.wikimedia.org/wiki/File:%22Bekanntmachung.%22_Einschr%C3%A4nkung_des_freien_Verkehrs_der_Einwohner_im_Gebiet_Lille_-_Roubaix_-_Tourcoing_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_707.jpg",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.41
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:%22Revues_d%27Appel%22_(Erfassung_aller_Einwohner_von_Roubaix_und_Angabe_der_Meldetermine)_(No._289)_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_1376.jpg",
+    "owners": [
+      {
+        "owner": "illustrations.json:roubaix-revues-1917",
+        "kind": "sourceUrl"
+      }
+    ],
+    "status": 200,
+    "final": "https://commons.wikimedia.org/wiki/File:%22Revues_d%27Appel%22_(Erfassung_aller_Einwohner_von_Roubaix_und_Angabe_der_Meldetermine)_(No._289)_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_1376.jpg",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.39
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:%22Ville_de_Roubaix_-_Avis_%C3%A0_la_Population_-_pr%C3%A9l%C3%A8vement_de_laines_%26_M%C3%A9langes_de_laines_provenant_de_Matelas_et_Coussins%22_(Einsch%C3%A4rfung_fr%C3%BCherer_Anordnu_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_1451.jpg",
+    "owners": [
+      {
+        "owner": "articles/roubaix-1917.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/roubaix-1917.html",
+        "kind": "a"
+      },
+      {
+        "owner": "illustrations.json:roubaix-laines-1917",
+        "kind": "sourceUrl"
+      }
+    ],
+    "status": 200,
+    "final": "https://commons.wikimedia.org/wiki/File:%22Ville_de_Roubaix_-_Avis_%C3%A0_la_Population_-_pr%C3%A9l%C3%A8vement_de_laines_%26_M%C3%A9langes_de_laines_provenant_de_Matelas_et_Coussins%22_(Einsch%C3%A4rfung_fr%C3%BCherer_Anordnu_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_1451.jpg",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.14
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:1281BattleOfHoms.JPG",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://commons.wikimedia.org/wiki/File:1281BattleOfHoms.JPG",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.17
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:Augustus_of_Prima_Porta.jpg",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://commons.wikimedia.org/wiki/File:Augustus_of_Prima_Porta.jpg",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": "119214",
+    "seconds": 0.13
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:Camouflage_octopus.jpg",
+    "owners": [
+      {
+        "owner": "articles/pieuvres-couleur.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/pieuvres-couleur.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://commons.wikimedia.org/wiki/File:Camouflage_octopus.jpg",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.16
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:ELD_-_ROUBAIX_-_Boulevard_Gambetta.JPG",
+    "owners": [
+      {
+        "owner": "index.html",
+        "kind": "a"
+      },
+      {
+        "owner": "bibliotheque.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "a"
+      },
+      {
+        "owner": "illustrations.json:roubaix-ville-avant-1919",
+        "kind": "sourceUrl"
+      }
+    ],
+    "status": 200,
+    "final": "https://commons.wikimedia.org/wiki/File:ELD_-_ROUBAIX_-_Boulevard_Gambetta.JPG",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.14
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:George_Eliot_by_Samuel_Laurence.jpg",
+    "owners": [
+      {
+        "owner": "index.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://commons.wikimedia.org/wiki/File:George_Eliot_by_Samuel_Laurence.jpg",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.12
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:George_Sand_-_portraits.jpg",
+    "owners": [
+      {
+        "owner": "bibliotheque.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://commons.wikimedia.org/wiki/File:George_Sand_-_portraits.jpg",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.12
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:Hannibal_Slodtz_Louvre_MR2093_(cropped2).png",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://commons.wikimedia.org/wiki/File:Hannibal_Slodtz_Louvre_MR2093_(cropped2).png",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.13
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:Minard.png",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://commons.wikimedia.org/wiki/File:Minard.png",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.12
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:Moynaq_Aral-Sea_Ships.jpg",
+    "owners": [
+      {
+        "owner": "explorer.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://commons.wikimedia.org/wiki/File:Moynaq_Aral-Sea_Ships.jpg",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.19
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:Poulpe_commun_(Octopus_vulgaris)_(Ifremer_00679-79134_-_31993).jpg",
+    "owners": [
+      {
+        "owner": "index.html",
+        "kind": "a"
+      },
+      {
+        "owner": "bibliotheque.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/pieuvres-couleur.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/pieuvres-couleur.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://commons.wikimedia.org/wiki/File:Poulpe_commun_(Octopus_vulgaris)_(Ifremer_00679-79134_-_31993).jpg",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.2
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:Rassemblement_Roubaix_12.5.1915_Landesarchiv_Baden-W%C3%BCrttemberg.jpg",
+    "owners": [
+      {
+        "owner": "illustrations.json:roubaix-interdiction-1915",
+        "kind": "sourceUrl"
+      }
+    ],
+    "status": 200,
+    "final": "https://commons.wikimedia.org/wiki/File:Rassemblement_Roubaix_12.5.1915_Landesarchiv_Baden-W%C3%BCrttemberg.jpg",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.1
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:Retrato_de_Julio_C%C3%A9sar_(26724093101).jpg",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://commons.wikimedia.org/wiki/File:Retrato_de_Julio_C%C3%A9sar_(26724093101).jpg",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.22
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:The_Battle_of_Cambrai,_November-december_1917_Q6284.jpg",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://commons.wikimedia.org/wiki/File:The_Battle_of_Cambrai,_November-december_1917_Q6284.jpg",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.19
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:The_Bront%C3%AB_Sisters_by_Patrick_Branwell_Bront%C3%AB_restored.jpg",
+    "owners": [
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://commons.wikimedia.org/wiki/File:The_Bront%C3%AB_Sisters_by_Patrick_Branwell_Bront%C3%AB_restored.jpg",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.52
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:Traianus_Glyptothek_Munich_336.jpg",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://commons.wikimedia.org/wiki/File:Traianus_Glyptothek_Munich_336.jpg",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.13
+  },
+  {
+    "url": "https://commons.wikimedia.org/wiki/File:Usine_Motte_1910.jpg",
+    "owners": [
+      {
+        "owner": "illustrations.json:roubaix-usine-motte-1910",
+        "kind": "sourceUrl"
+      }
+    ],
+    "status": 200,
+    "final": "https://commons.wikimedia.org/wiki/File:Usine_Motte_1910.jpg",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.1
+  },
+  {
+    "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "owners": [
+      {
+        "owner": "explorer.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "content_type": "text/html",
+    "content_length": null,
+    "seconds": 0.38
+  },
+  {
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "content_type": "text/html",
+    "content_length": null,
+    "seconds": 0.36
+  },
+  {
+    "url": "https://creativecommons.org/licenses/by/2.0/",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://creativecommons.org/licenses/by/2.0/",
+    "content_type": "text/html",
+    "content_length": null,
+    "seconds": 0.34
+  },
+  {
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "owners": [
+      {
+        "owner": "articles/roubaix-1917.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/pieuvres-couleur.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/pieuvres-couleur.html",
+        "kind": "a"
+      },
+      {
+        "owner": "illustrations.json:roubaix-revues-1917",
+        "kind": "licenceUrl"
+      },
+      {
+        "owner": "illustrations.json:roubaix-laines-1917",
+        "kind": "licenceUrl"
+      },
+      {
+        "owner": "illustrations.json:roubaix-circulation-1917",
+        "kind": "licenceUrl"
+      }
+    ],
+    "status": 200,
+    "final": "https://creativecommons.org/licenses/by/4.0/",
+    "content_type": "text/html",
+    "content_length": null,
+    "seconds": 0.35
+  },
+  {
+    "url": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "illustrations.json:roubaix-ville-avant-1919",
+        "kind": "licenceUrl"
+      },
+      {
+        "owner": "illustrations.json:roubaix-interdiction-1915",
+        "kind": "licenceUrl"
+      },
+      {
+        "owner": "illustrations.json:roubaix-usine-motte-1910",
+        "kind": "licenceUrl"
+      }
+    ],
+    "status": 200,
+    "final": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "content_type": "text/html",
+    "content_length": null,
+    "seconds": 0.33
+  },
+  {
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "content_type": "text/html",
+    "content_length": null,
+    "seconds": 0.37
+  },
+  {
+    "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2108/6797399/1000w_q95.jpg",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "img"
+      }
+    ],
+    "status": 200,
+    "final": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2108/6797399/1000w_q95.jpg",
+    "content_type": "image/jpeg",
+    "content_length": "166346",
+    "seconds": 0.38
+  },
+  {
+    "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2311/8124895/1000w_q95.jpg",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "img"
+      }
+    ],
+    "status": 200,
+    "final": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2311/8124895/1000w_q95.jpg",
+    "content_type": "image/jpeg",
+    "content_length": "169969",
+    "seconds": 0.4
+  },
+  {
+    "url": "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages",
+    "owners": [
+      {
+        "owner": "confidentialite.html",
+        "kind": "a"
+      },
+      {
+        "owner": "mentions-legales.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "94264",
+    "seconds": 0.26
+  },
+  {
+    "url": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+    "owners": [
+      {
+        "owner": "confidentialite.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "305043",
+    "seconds": 0.22
+  },
+  {
+    "url": "https://docs.un.org/S/2026/638",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 403,
+    "final": "https://docs.un.org/S/2026/638",
+    "error": "HTTP Error 403: Forbidden",
+    "seconds": 0.98
+  },
+  {
+    "url": "https://documents1.worldbank.org/curated/en/888771468089960580/pdf/462360BRI0Box31e0no0FS231Kazakhstan.pdf",
+    "owners": [
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://documents1.worldbank.org/curated/en/888771468089960580/pdf/462360BRI0Box31e0no0FS231Kazakhstan.pdf",
+    "content_type": "application/pdf;charset=utf-8",
+    "content_length": null,
+    "seconds": 0.42
+  },
+  {
+    "url": "https://doi.org/10.1002/jmor.20221",
+    "owners": [
+      {
+        "owner": "articles/pieuvres-couleur.html",
+        "kind": "a"
+      }
+    ],
+    "status": 403,
+    "final": "https://onlinelibrary.wiley.com/doi/10.1002/jmor.20221",
+    "error": "HTTP Error 403: Forbidden",
+    "seconds": 0.84
+  },
+  {
+    "url": "https://doi.org/10.1016/j.adolescence.2006.03.003",
+    "owners": [
+      {
+        "owner": "articles/autorite.html",
+        "kind": "a"
+      }
+    ],
+    "status": 403,
+    "final": "https://onlinelibrary.wiley.com/doi/10.1016/j.adolescence.2006.03.003",
+    "error": "HTTP Error 403: Forbidden",
+    "seconds": 0.66
+  },
+  {
+    "url": "https://doi.org/10.1017/CBO9780511793233.006",
+    "owners": [
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.cambridge.org/core/books/abs/cambridge-introduction-to-george-eliot/afterlife/677EADBF2600FBB2881F120F656E4A6E",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 2.26
+  },
+  {
+    "url": "https://doi.org/10.1017/S1464793101005772",
+    "owners": [
+      {
+        "owner": "articles/pieuvres-couleur.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/pieuvres-couleur.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/pieuvres-couleur.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/pieuvres-couleur.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/pieuvres-couleur.html",
+        "kind": "a"
+      }
+    ],
+    "status": 403,
+    "final": "https://onlinelibrary.wiley.com/doi/10.1017/S1464793101005772",
+    "error": "HTTP Error 403: Forbidden",
+    "seconds": 0.61
+  },
+  {
+    "url": "https://doi.org/10.1037/a0010932",
+    "owners": [
+      {
+        "owner": "articles/autorite.html",
+        "kind": "a"
+      }
+    ],
+    "status": 403,
+    "final": "https://doi.apa.org/doi/10.1037/a0010932",
+    "error": "HTTP Error 403: Forbidden",
+    "seconds": 0.76
+  },
+  {
+    "url": "https://doi.org/10.1037/h0040525",
+    "owners": [
+      {
+        "owner": "articles/autorite.html",
+        "kind": "a"
+      }
+    ],
+    "status": 403,
+    "final": "https://doi.apa.org/doi/10.1037/h0040525",
+    "error": "HTTP Error 403: Forbidden",
+    "seconds": 0.78
+  },
+  {
+    "url": "https://doi.org/10.1098/rsif.2008.0366.focus",
+    "owners": [
+      {
+        "owner": "articles/pieuvres-couleur.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/pieuvres-couleur.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/pieuvres-couleur.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/pieuvres-couleur.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/pieuvres-couleur.html",
+        "kind": "a"
+      }
+    ],
+    "status": 403,
+    "final": "https://royalsocietypublishing.org/doi/10.1098/rsif.2008.0366.focus",
+    "error": "HTTP Error 403: Forbidden",
+    "seconds": 0.69
+  },
+  {
+    "url": "https://doi.org/10.1098/rstb.2008.0270",
+    "owners": [
+      {
+        "owner": "articles/pieuvres-couleur.html",
+        "kind": "a"
+      }
+    ],
+    "status": 403,
+    "final": "https://royalsocietypublishing.org/rstb/article/364/1516/429-437/45504",
+    "error": "HTTP Error 403: Forbidden",
+    "seconds": 0.61
+  },
+  {
+    "url": "https://doi.org/10.1111/1540-5893.3703002",
+    "owners": [
+      {
+        "owner": "articles/autorite.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.cambridge.org/core/journals/law-and-society-review/article/role-of-procedural-justice-and-legitimacy-in-shaping-public-support-for-policing/3EB985ACD855B32B3C10EDAAD0B0EA57",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 1.35
+  },
+  {
+    "url": "https://doi.org/10.1146/annurev-lawsocsci-110316-113710",
+    "owners": [
+      {
+        "owner": "articles/autorite.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.annualreviews.org/content/journals/10.1146/annurev-lawsocsci-110316-113710",
+    "content_type": "text/html;charset=UTF-8",
+    "content_length": null,
+    "seconds": 1.66
+  },
+  {
+    "url": "https://doi.org/10.1242/jeb.110908",
+    "owners": [
+      {
+        "owner": "articles/pieuvres-couleur.html",
+        "kind": "a"
+      }
+    ],
+    "status": 403,
+    "final": "https://journals.biologists.com/jeb/article/218/10/1513/759/Eye-independent-light-activated-chromatophore",
+    "error": "HTTP Error 403: Forbidden",
+    "seconds": 0.65
+  },
+  {
+    "url": "https://eros.usgs.gov/earthshots/kok-aral-dam",
+    "owners": [
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://eros.usgs.gov/earthshots/kok-aral-dam",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "40560",
+    "seconds": 1.99
+  },
+  {
+    "url": "https://eros.usgs.gov/earthshots/north-aral-sea",
+    "owners": [
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://eros.usgs.gov/earthshots/north-aral-sea",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "41134",
+    "seconds": 2.06
+  },
+  {
+    "url": "https://francearchives.gouv.fr/fr/subject/130828729?aug=True&es_digitized=False&es_publisher=1042446007&es_publisher=33940&indexentry=130828729&restrict_to_single_etype=False&sort=sortdate",
+    "owners": [
+      {
+        "owner": "articles/roubaix-1917.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://francearchives.gouv.fr/fr/subject/130828729?aug=True&es_digitized=False&es_publisher=1042446007&es_publisher=33940&indexentry=130828729&restrict_to_single_etype=False&sort=sortdate",
+    "content_type": "text/html",
+    "content_length": "379",
+    "seconds": 0.7
+  },
+  {
+    "url": "https://geoconfluences.ens-lyon.fr/glossaire/pouvoir",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://geoconfluences.ens-lyon.fr/glossaire/pouvoir",
+    "content_type": "text/html;charset=utf-8",
+    "content_length": "78422",
+    "seconds": 2.68
+  },
+  {
+    "url": "https://geoconfluences.ens-lyon.fr/glossaire/puissance",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://geoconfluences.ens-lyon.fr/glossaire/puissance",
+    "content_type": "text/html;charset=utf-8",
+    "content_length": "115897",
+    "seconds": 2.29
+  },
+  {
+    "url": "https://geoconfluences.ens-lyon.fr/glossaire/westphalien-westphalienne-post-westphalien",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://geoconfluences.ens-lyon.fr/glossaire/westphalien-westphalienne-post-westphalien",
+    "content_type": "text/html;charset=utf-8",
+    "content_length": "56319",
+    "seconds": 2.9
+  },
+  {
+    "url": "https://georgesand.institutdefrance.fr/biographie/",
+    "owners": [
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://georgesand.institutdefrance.fr/biographie/",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 1.05
+  },
+  {
+    "url": "https://github.com/AWMC/geodata/tree/7ecf8bccea2efe1e1e9df2daf6001942de73fb87",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://github.com/AWMC/geodata/tree/7ecf8bccea2efe1e1e9df2daf6001942de73fb87",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 0.72
+  },
+  {
+    "url": "https://github.com/aourednik/historical-basemaps/tree/da7a4b735ecef70aebdc9c73e409d8a2500d50f3",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://github.com/aourednik/historical-basemaps/tree/da7a4b735ecef70aebdc9c73e409d8a2500d50f3",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 0.75
+  },
+  {
+    "url": "https://github.com/nvkelso/natural-earth-vector/blob/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_rivers_lake_centerlines.geojson",
+    "owners": [
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://github.com/nvkelso/natural-earth-vector/blob/ca96624a56bd078437bca8184e78163e5039ad19/geojson/ne_50m_rivers_lake_centerlines.geojson",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 0.98
+  },
+  {
+    "url": "https://github.com/thot-culture/Thot/issues",
+    "owners": [
+      {
+        "owner": "contact.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://github.com/thot-culture/Thot/issues",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 0.61
+  },
+  {
+    "url": "https://github.com/thot-culture/Thot/issues/new?template=correction.yml",
+    "owners": [
+      {
+        "owner": "contact.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fthot-culture%2FThot%2Fissues%2Fnew%3Ftemplate%3Dcorrection.yml",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 0.74
+  },
+  {
+    "url": "https://historicengland.org.uk/images-books/publications/iha-artillery-defences/heag197-artillery-defences/",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://historicengland.org.uk/images-books/publications/iha-artillery-defences/heag197-artillery-defences/",
+    "content_type": "application/pdf",
+    "content_length": "900452",
+    "seconds": 1.03
+  },
+  {
+    "url": "https://history.state.gov/milestones/1961-1968/tet",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://history.state.gov/milestones/1961-1968/tet",
+    "content_type": "text/html;charset=utf-8",
+    "content_length": null,
+    "seconds": 0.41
+  },
+  {
+    "url": "https://ihedn.fr/dossier-special/ukraine-dossier-special/ukraine-russie-quand-la-guerre-des-drones-redefinit-le-champ-de-bataille/",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://ihedn.fr/dossier-special/ukraine-dossier-special/ukraine-russie-quand-la-guerre-des-drones-redefinit-le-champ-de-bataille/",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 2.54
+  },
+  {
+    "url": "https://incois.gov.in/site/services/about_maldives.jsp",
+    "owners": [
+      {
+        "owner": "q-7da01638c29e3b7b",
+        "kind": "quiz-reference"
+      }
+    ],
+    "status": 200,
+    "final": "https://incois.gov.in/site/services/about_maldives.jsp",
+    "content_type": "text/html;charset=UTF-8",
+    "content_length": null,
+    "seconds": 6.86
+  },
+  {
+    "url": "https://janeaustens.house/jane-austen/novels/sense-and-sensibility/",
+    "owners": [
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://janeaustens.house/jane-austen/novels/sense-and-sensibility/",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 1.31
+  },
+  {
+    "url": "https://janeaustens.house/object/first-edition-northanger-abbey-and-persuasion/",
+    "owners": [
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://janeaustens.house/object/first-edition-northanger-abbey-and-persuasion/",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 1.12
+  },
+  {
+    "url": "https://janeaustens.house/object/the-morning-chronicle-with-announcement-of-sense-and-sensibility/",
+    "owners": [
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://janeaustens.house/object/the-morning-chronicle-with-announcement-of-sense-and-sensibility/",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 1.27
+  },
+  {
+    "url": "https://janeaustens.house/online-exhibition/the-making-of-pride-and-prejudice/the-making-of-pride-and-prejudice-4/",
+    "owners": [
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://janeaustens.house/online-exhibition/the-making-of-pride-and-prejudice/the-making-of-pride-and-prejudice-4/",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 1.09
+  },
+  {
+    "url": "https://library.fes.de/libalt/journals/swetsfulltext/16956999.pdf",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://library.fes.de/libalt/journals/swetsfulltext/16956999.pdf",
+    "content_type": "application/pdf",
+    "content_length": "143556",
+    "seconds": 1.04
+  },
+  {
+    "url": "https://list.iupac.org/reports/periodic_table/index.html",
+    "owners": [
+      {
+        "owner": "q-2785b115da863109",
+        "kind": "quiz-reference"
+      }
+    ],
+    "status": 403,
+    "final": "https://list.iupac.org/reports/periodic_table/index.html",
+    "error": "HTTP Error 403: Forbidden",
+    "seconds": 0.51
+  },
+  {
+    "url": "https://oceanservice.noaa.gov/education/tutorial_tides/tides02_cause.html",
+    "owners": [
+      {
+        "owner": "q-90d4ce06ef8e0669",
+        "kind": "quiz-reference"
+      }
+    ],
+    "status": 200,
+    "final": "https://oceanservice.noaa.gov/education/tutorial_tides/tides02_cause.html",
+    "content_type": "text/html",
+    "content_length": "34249",
+    "seconds": 0.45
+  },
+  {
+    "url": "https://oceanservice.noaa.gov/facts/biggestocean.html",
+    "owners": [
+      {
+        "owner": "q-fe8003520cf53ed0",
+        "kind": "quiz-reference"
+      }
+    ],
+    "status": 200,
+    "final": "https://oceanservice.noaa.gov/facts/biggestocean.html",
+    "content_type": "text/html",
+    "content_length": "28546",
+    "seconds": 0.71
+  },
+  {
+    "url": "https://oceanservice.noaa.gov/facts/oceandepth.html",
+    "owners": [
+      {
+        "owner": "q-176388d8879a57e0",
+        "kind": "quiz-reference"
+      }
+    ],
+    "status": 200,
+    "final": "https://oceanservice.noaa.gov/facts/oceandepth.html",
+    "content_type": "text/html",
+    "content_length": "27195",
+    "seconds": 0.46
+  },
+  {
+    "url": "https://pap.au.int/en/member-states/ethiopia",
+    "owners": [
+      {
+        "owner": "q-72bd136ef16fa920",
+        "kind": "quiz-reference"
+      }
+    ],
+    "status": 200,
+    "final": "https://pap.au.int/en/member-states/ethiopia",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.52
+  },
+  {
+    "url": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3*.html",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Polybius/3*.html",
+    "content_type": "text/html",
+    "content_length": "303808",
+    "seconds": 0.64
+  },
+  {
+    "url": "https://periodic-table.rsc.org/element/79/gold",
+    "owners": [
+      {
+        "owner": "q-feacb9e6d622a708",
+        "kind": "quiz-reference"
+      }
+    ],
+    "status": 200,
+    "final": "https://periodic-table.rsc.org/element/79/gold",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "155359",
+    "seconds": 1.07
+  },
+  {
+    "url": "https://physics.nist.gov/cuu/Constants/Value/c.html",
+    "owners": [
+      {
+        "owner": "q-e8a41f6560c2bd4d",
+        "kind": "quiz-reference"
+      }
+    ],
+    "status": 200,
+    "final": "https://physics.nist.gov/cuu/Constants/Value/c.html",
+    "content_type": "text/html",
+    "content_length": null,
+    "seconds": 0.53
+  },
+  {
+    "url": "https://pid.cz/en/ferries/",
+    "owners": [
+      {
+        "owner": "q-a1e2adf769edeb42",
+        "kind": "quiz-reference"
+      }
+    ],
+    "status": 200,
+    "final": "https://pid.cz/en/ferries/",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 1.94
+  },
+  {
+    "url": "https://plato.stanford.edu/entries/george-eliot/",
+    "owners": [
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://plato.stanford.edu/entries/george-eliot/",
+    "content_type": "text/html",
+    "content_length": null,
+    "seconds": 0.32
+  },
+  {
+    "url": "https://pleiades.stoa.org/places/148127",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://pleiades.stoa.org/places/148127",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 0.59
+  },
+  {
+    "url": "https://pleiades.stoa.org/places/167717",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://pleiades.stoa.org/places/167717",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 0.66
+  },
+  {
+    "url": "https://pleiades.stoa.org/places/246349",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://pleiades.stoa.org/places/246349",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 0.8
+  },
+  {
+    "url": "https://pleiades.stoa.org/places/314921",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://pleiades.stoa.org/places/314921",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 0.47
+  },
+  {
+    "url": "https://pleiades.stoa.org/places/423025",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://pleiades.stoa.org/places/423025",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 0.4
+  },
+  {
+    "url": "https://pleiades.stoa.org/places/442523",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://pleiades.stoa.org/places/442523",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 0.32
+  },
+  {
+    "url": "https://pleiades.stoa.org/places/530771",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://pleiades.stoa.org/places/530771",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 0.18
+  },
+  {
+    "url": "https://pleiades.stoa.org/places/579885",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://pleiades.stoa.org/places/579885",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 0.15
+  },
+  {
+    "url": "https://pleiades.stoa.org/places/599612",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://pleiades.stoa.org/places/599612",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 0.13
+  },
+  {
+    "url": "https://pleiades.stoa.org/places/658381",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://pleiades.stoa.org/places/658381",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 0.08
+  },
+  {
+    "url": "https://pleiades.stoa.org/places/727070",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://pleiades.stoa.org/places/727070",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 0.18
+  },
+  {
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4448664/",
+    "owners": [
+      {
+        "owner": "articles/pieuvres-couleur.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4448664/",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "180863",
+    "seconds": 0.51
+  },
+  {
+    "url": "https://press.un.org/en/2019/sc13931.doc.htm",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://press.un.org/en/2019/sc13931.doc.htm",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "3038",
+    "seconds": 0.47
+  },
+  {
+    "url": "https://publis-shs.univ-rouen.fr/ceredi/1993.html",
+    "owners": [
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://publis-shs.univ-rouen.fr/ceredi/1993.html",
+    "content_type": "text/html",
+    "content_length": "76147",
+    "seconds": 1.64
+  },
+  {
+    "url": "https://science.nasa.gov/earth/earth-observatory/dust-storm-over-the-aral-sea-6654/",
+    "owners": [
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://science.nasa.gov/earth/earth-observatory/dust-storm-over-the-aral-sea-6654/",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 2.39
+  },
+  {
+    "url": "https://science.nasa.gov/earth/earth-observatory/the-strait-of-dover-6840/",
+    "owners": [
+      {
+        "owner": "q-1b1e0a5cac07aaf6",
+        "kind": "quiz-reference"
+      }
+    ],
+    "status": 200,
+    "final": "https://science.nasa.gov/earth/earth-observatory/the-strait-of-dover-6840/",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 2.18
+  },
+  {
+    "url": "https://science.nasa.gov/earth/earth-observatory/world-of-change/aral-sea/",
+    "owners": [
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://science.nasa.gov/earth/earth-observatory/world-of-change/aral-sea/",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.85
+  },
+  {
+    "url": "https://science.nasa.gov/earth/facts/",
+    "owners": [
+      {
+        "owner": "q-175b793d510687f7",
+        "kind": "quiz-reference"
+      }
+    ],
+    "status": 200,
+    "final": "https://science.nasa.gov/earth/facts/",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.1
+  },
+  {
+    "url": "https://science.nasa.gov/mars/facts/",
+    "owners": [
+      {
+        "owner": "q-7051d825ccaceb8b",
+        "kind": "quiz-reference"
+      }
+    ],
+    "status": 200,
+    "final": "https://science.nasa.gov/mars/facts/",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.07
+  },
+  {
+    "url": "https://science.nasa.gov/mercury/",
+    "owners": [
+      {
+        "owner": "q-08cce2bb4d568a12",
+        "kind": "quiz-reference"
+      }
+    ],
+    "status": 200,
+    "final": "https://science.nasa.gov/mercury/",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.09
+  },
+  {
+    "url": "https://science.nasa.gov/missions/landsat/hispaniolas-changing-forests/",
+    "owners": [
+      {
+        "owner": "q-95bc6a691f7dab70",
+        "kind": "quiz-reference"
+      }
+    ],
+    "status": 200,
+    "final": "https://science.nasa.gov/missions/landsat/hispaniolas-changing-forests/",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.7
+  },
+  {
+    "url": "https://science.nasa.gov/solar-system/planets/",
+    "owners": [
+      {
+        "owner": "q-a365a1c87f428d5d",
+        "kind": "quiz-reference"
+      }
+    ],
+    "status": 200,
+    "final": "https://science.nasa.gov/solar-system/planets/",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.06
+  },
+  {
+    "url": "https://support.github.com/",
+    "owners": [
+      {
+        "owner": "mentions-legales.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://help.github.com/",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "45907",
+    "seconds": 0.49
+  },
+  {
+    "url": "https://thot-culture.github.io/Thot/",
+    "owners": [
+      {
+        "owner": "index.html",
+        "kind": "public-page"
+      }
+    ],
+    "status": 200,
+    "final": "https://thot-culture.github.io/Thot/",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "19048",
+    "seconds": 0.34
+  },
+  {
+    "url": "https://thot-culture.github.io/Thot/articles/autorite.html",
+    "owners": [
+      {
+        "owner": "articles/autorite.html",
+        "kind": "public-page"
+      }
+    ],
+    "status": 200,
+    "final": "https://thot-culture.github.io/Thot/articles/autorite.html",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "42517",
+    "seconds": 0.28
+  },
+  {
+    "url": "https://thot-culture.github.io/Thot/articles/autrices-pseudonymes.html",
+    "owners": [
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "public-page"
+      }
+    ],
+    "status": 200,
+    "final": "https://thot-culture.github.io/Thot/articles/autrices-pseudonymes.html",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "41872",
+    "seconds": 0.29
+  },
+  {
+    "url": "https://thot-culture.github.io/Thot/articles/evolution-strategies-militaires.html",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "public-page"
+      }
+    ],
+    "status": 200,
+    "final": "https://thot-culture.github.io/Thot/articles/evolution-strategies-militaires.html",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "50722",
+    "seconds": 0.21
+  },
+  {
+    "url": "https://thot-culture.github.io/Thot/articles/pieuvres-couleur.html",
+    "owners": [
+      {
+        "owner": "articles/pieuvres-couleur.html",
+        "kind": "public-page"
+      }
+    ],
+    "status": 200,
+    "final": "https://thot-culture.github.io/Thot/articles/pieuvres-couleur.html",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "45867",
+    "seconds": 0.22
+  },
+  {
+    "url": "https://thot-culture.github.io/Thot/articles/puissance-etats-unis.html",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "public-page"
+      }
+    ],
+    "status": 200,
+    "final": "https://thot-culture.github.io/Thot/articles/puissance-etats-unis.html",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "53964",
+    "seconds": 0.19
+  },
+  {
+    "url": "https://thot-culture.github.io/Thot/articles/roubaix-1917.html",
+    "owners": [
+      {
+        "owner": "articles/roubaix-1917.html",
+        "kind": "public-page"
+      }
+    ],
+    "status": 200,
+    "final": "https://thot-culture.github.io/Thot/articles/roubaix-1917.html",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "53223",
+    "seconds": 0.26
+  },
+  {
+    "url": "https://thot-culture.github.io/Thot/bibliotheque.html",
+    "owners": [
+      {
+        "owner": "bibliotheque.html",
+        "kind": "public-page"
+      }
+    ],
+    "status": 200,
+    "final": "https://thot-culture.github.io/Thot/bibliotheque.html",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "17619",
+    "seconds": 0.25
+  },
+  {
+    "url": "https://thot-culture.github.io/Thot/confidentialite.html",
+    "owners": [
+      {
+        "owner": "confidentialite.html",
+        "kind": "public-page"
+      }
+    ],
+    "status": 200,
+    "final": "https://thot-culture.github.io/Thot/confidentialite.html",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "5264",
+    "seconds": 0.32
+  },
+  {
+    "url": "https://thot-culture.github.io/Thot/contact.html",
+    "owners": [
+      {
+        "owner": "contact.html",
+        "kind": "public-page"
+      }
+    ],
+    "status": 200,
+    "final": "https://thot-culture.github.io/Thot/contact.html",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "4320",
+    "seconds": 0.25
+  },
+  {
+    "url": "https://thot-culture.github.io/Thot/explorer.html",
+    "owners": [
+      {
+        "owner": "explorer.html",
+        "kind": "public-page"
+      }
+    ],
+    "status": 200,
+    "final": "https://thot-culture.github.io/Thot/explorer.html",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "45785",
+    "seconds": 0.22
+  },
+  {
+    "url": "https://thot-culture.github.io/Thot/explorer/atlas/rome-expansion.html",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "public-page"
+      }
+    ],
+    "status": 200,
+    "final": "https://thot-culture.github.io/Thot/explorer/atlas/rome-expansion.html",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "605959",
+    "seconds": 0.34
+  },
+  {
+    "url": "https://thot-culture.github.io/Thot/explorer/enquetes/mer-aral.html",
+    "owners": [
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "public-page"
+      }
+    ],
+    "status": 200,
+    "final": "https://thot-culture.github.io/Thot/explorer/enquetes/mer-aral.html",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "90533",
+    "seconds": 0.28
+  },
+  {
+    "url": "https://thot-culture.github.io/Thot/mentions-legales.html",
+    "owners": [
+      {
+        "owner": "mentions-legales.html",
+        "kind": "public-page"
+      }
+    ],
+    "status": 200,
+    "final": "https://thot-culture.github.io/Thot/mentions-legales.html",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "5320",
+    "seconds": 0.14
+  },
+  {
+    "url": "https://thot-culture.github.io/Thot/notre-methode.html",
+    "owners": [
+      {
+        "owner": "notre-methode.html",
+        "kind": "public-page"
+      }
+    ],
+    "status": 200,
+    "final": "https://thot-culture.github.io/Thot/notre-methode.html",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "6593",
+    "seconds": 0.1
+  },
+  {
+    "url": "https://thot-culture.github.io/Thot/page-inconnue-audit.html",
+    "owners": [
+      {
+        "owner": "page-inconnue-audit.html",
+        "kind": "public-infrastructure"
+      }
+    ],
+    "status": 404,
+    "final": "https://thot-culture.github.io/Thot/page-inconnue-audit.html",
+    "error": "HTTP Error 404: Not Found",
+    "seconds": 0.21
+  },
+  {
+    "url": "https://thot-culture.github.io/Thot/quiz-autrices.html",
+    "owners": [
+      {
+        "owner": "quiz-autrices.html",
+        "kind": "public-page"
+      }
+    ],
+    "status": 200,
+    "final": "https://thot-culture.github.io/Thot/quiz-autrices.html",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "9753",
+    "seconds": 0.22
+  },
+  {
+    "url": "https://thot-culture.github.io/Thot/quiz.html",
+    "owners": [
+      {
+        "owner": "quiz.html",
+        "kind": "public-page"
+      }
+    ],
+    "status": 200,
+    "final": "https://thot-culture.github.io/Thot/quiz.html",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "19087",
+    "seconds": 0.09
+  },
+  {
+    "url": "https://thot-culture.github.io/Thot/robots.txt",
+    "owners": [
+      {
+        "owner": "robots.txt",
+        "kind": "public-infrastructure"
+      }
+    ],
+    "status": 200,
+    "final": "https://thot-culture.github.io/Thot/robots.txt",
+    "content_type": "text/plain; charset=utf-8",
+    "content_length": "85",
+    "seconds": 0.22
+  },
+  {
+    "url": "https://thot-culture.github.io/Thot/sitemap.xml",
+    "owners": [
+      {
+        "owner": "sitemap.xml",
+        "kind": "public-infrastructure"
+      }
+    ],
+    "status": 200,
+    "final": "https://thot-culture.github.io/Thot/sitemap.xml",
+    "content_type": "application/xml",
+    "content_length": "1647",
+    "seconds": 0.23
+  },
+  {
+    "url": "https://thot-culture.github.io/robots.txt",
+    "owners": [
+      {
+        "owner": "host root",
+        "kind": "robots-host-root"
+      }
+    ],
+    "status": 404,
+    "final": "https://thot-culture.github.io/robots.txt",
+    "error": "HTTP Error 404: Not Found",
+    "seconds": 0.05
+  },
+  {
+    "url": "https://um.dk/en/foreign-policy/the-arctic/greenland-and-the-faroe-islands",
+    "owners": [
+      {
+        "owner": "q-f6b42124ed6f8c76",
+        "kind": "quiz-reference"
+      }
+    ],
+    "status": 200,
+    "final": "https://um.dk/en/foreign-policy/the-arctic/greenland-and-the-faroe-islands",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 0.75
+  },
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Rassemblement_Roubaix_12.5.1915_Landesarchiv_Baden-W%C3%BCrttemberg.jpg",
+    "owners": [
+      {
+        "owner": "illustrations.json:roubaix-interdiction-1915",
+        "kind": "url"
+      }
+    ],
+    "status": 200,
+    "final": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Rassemblement_Roubaix_12.5.1915_Landesarchiv_Baden-W%C3%BCrttemberg.jpg",
+    "content_type": "image/jpeg",
+    "content_length": "112001",
+    "seconds": 0.54
+  },
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/%22Bekanntmachung.%22_Einschr%C3%A4nkung_des_freien_Verkehrs_der_Einwohner_im_Gebiet_Lille_-_Roubaix_-_Tourcoing_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_707.jpg",
+    "owners": [
+      {
+        "owner": "illustrations.json:roubaix-circulation-1917",
+        "kind": "url"
+      }
+    ],
+    "status": 200,
+    "final": "https://upload.wikimedia.org/wikipedia/commons/4/4a/%22Bekanntmachung.%22_Einschr%C3%A4nkung_des_freien_Verkehrs_der_Einwohner_im_Gebiet_Lille_-_Roubaix_-_Tourcoing_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_707.jpg",
+    "content_type": "image/jpeg",
+    "content_length": "2192517",
+    "seconds": 0.36
+  },
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/%22Revues_d%27Appel%22_(Erfassung_aller_Einwohner_von_Roubaix_und_Angabe_der_Meldetermine)_(No._289)_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_1376.jpg",
+    "owners": [
+      {
+        "owner": "illustrations.json:roubaix-revues-1917",
+        "kind": "url"
+      }
+    ],
+    "status": 200,
+    "final": "https://upload.wikimedia.org/wikipedia/commons/5/55/%22Revues_d%27Appel%22_(Erfassung_aller_Einwohner_von_Roubaix_und_Angabe_der_Meldetermine)_(No._289)_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_1376.jpg",
+    "content_type": "image/jpeg",
+    "content_length": "3400605",
+    "seconds": 0.36
+  },
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/97/%22Ville_de_Roubaix_-_Avis_%C3%A0_la_Population_-_pr%C3%A9l%C3%A8vement_de_laines_%26_M%C3%A9langes_de_laines_provenant_de_Matelas_et_Coussins%22_(Einsch%C3%A4rfung_fr%C3%BCherer_Anordnu_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_1451.jpg",
+    "owners": [
+      {
+        "owner": "illustrations.json:roubaix-laines-1917",
+        "kind": "url"
+      }
+    ],
+    "status": 200,
+    "final": "https://upload.wikimedia.org/wikipedia/commons/9/97/%22Ville_de_Roubaix_-_Avis_%C3%A0_la_Population_-_pr%C3%A9l%C3%A8vement_de_laines_%26_M%C3%A9langes_de_laines_provenant_de_Matelas_et_Coussins%22_(Einsch%C3%A4rfung_fr%C3%BCherer_Anordnu_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_1451.jpg",
+    "content_type": "image/jpeg",
+    "content_length": "2325252",
+    "seconds": 0.43
+  },
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg",
+    "owners": [
+      {
+        "owner": "index.html",
+        "kind": "img"
+      },
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "img"
+      }
+    ],
+    "status": 200,
+    "final": "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg",
+    "content_type": "image/jpeg",
+    "content_length": "251922",
+    "seconds": 0.25
+  },
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/The_Bront%C3%AB_Sisters_by_Patrick_Branwell_Bront%C3%AB_restored.jpg",
+    "owners": [
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "img"
+      }
+    ],
+    "status": 200,
+    "final": "https://upload.wikimedia.org/wikipedia/commons/a/ab/The_Bront%C3%AB_Sisters_by_Patrick_Branwell_Bront%C3%AB_restored.jpg",
+    "content_type": "image/jpeg",
+    "content_length": "2187505",
+    "seconds": 0.19
+  },
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Usine_Motte_1910.jpg",
+    "owners": [
+      {
+        "owner": "illustrations.json:roubaix-usine-motte-1910",
+        "kind": "url"
+      }
+    ],
+    "status": 200,
+    "final": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Usine_Motte_1910.jpg",
+    "content_type": "image/jpeg",
+    "content_length": "272806",
+    "seconds": 0.15
+  },
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+    "owners": [
+      {
+        "owner": "index.html",
+        "kind": "img"
+      },
+      {
+        "owner": "bibliotheque.html",
+        "kind": "img"
+      },
+      {
+        "owner": "articles/pieuvres-couleur.html",
+        "kind": "img"
+      }
+    ],
+    "status": 200,
+    "final": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+    "content_type": "image/jpeg",
+    "content_length": "170000",
+    "seconds": 0.16
+  },
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Camouflage_octopus.jpg/960px-Camouflage_octopus.jpg",
+    "owners": [
+      {
+        "owner": "articles/pieuvres-couleur.html",
+        "kind": "img"
+      }
+    ],
+    "status": 200,
+    "final": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Camouflage_octopus.jpg/960px-Camouflage_octopus.jpg",
+    "content_type": "image/jpeg",
+    "content_length": "251103",
+    "seconds": 0.13
+  },
+  {
+    "url": "https://whc.unesco.org/en/list/596/",
+    "owners": [
+      {
+        "owner": "q-0d6ac0d68f5b8d95",
+        "kind": "quiz-reference"
+      }
+    ],
+    "status": 200,
+    "final": "https://whc.unesco.org/en/list/596/",
+    "content_type": "text/html;charset=UTF-8",
+    "content_length": null,
+    "seconds": 1.17
+  },
+  {
+    "url": "https://writersinspire.org/content/george-eliot-0",
+    "owners": [
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://writersinspire.org/content/george-eliot-0",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 1.44
+  },
+  {
+    "url": "https://www.apa.org/monitor/2009/03/milgram.html",
+    "owners": [
+      {
+        "owner": "articles/autorite.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.apa.org/monitor/2009/03/milgram.html",
+    "content_type": "text/html",
+    "content_length": "212",
+    "seconds": 0.25
+  },
+  {
+    "url": "https://www.armarium-hautsdefrance.fr/document/85546",
+    "owners": [
+      {
+        "owner": "articles/roubaix-1917.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/roubaix-1917.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.armarium-hautsdefrance.fr/document/85546",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 0.85
+  },
+  {
+    "url": "https://www.awm.gov.au/visit/exhibitions/1918/battles/amiens",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.awm.gov.au/visit/exhibitions/1918/battles/amiens",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": "73703",
+    "seconds": 1.34
+  },
+  {
+    "url": "https://www.bipm.org/en/si-base-units/ampere",
+    "owners": [
+      {
+        "owner": "q-c0413f2b989c865c",
+        "kind": "quiz-reference"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.bipm.org/en/si-base-units/ampere",
+    "content_type": "text/html;charset=UTF-8",
+    "content_length": null,
+    "seconds": 1.25
+  },
+  {
+    "url": "https://www.bl.uk/stories/blogs/posts/jane-austen-names-and-notability",
+    "owners": [
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.bl.uk/stories/blogs/posts/jane-austen-names-and-notability",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 1.36
+  },
+  {
+    "url": "https://www.bronte.org.uk/the-lives-of-the-brontes",
+    "owners": [
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.bronte.org.uk/the-lives-of-the-brontes",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.82
+  },
+  {
+    "url": "https://www.bronte.org.uk/the-lives-of-the-brontes/the-bronte-novels",
+    "owners": [
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.bronte.org.uk/the-lives-of-the-brontes/the-bronte-novels",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.51
+  },
+  {
+    "url": "https://www.cambridge.org/core/books/abs/cambridge-history-of-the-mongol-empire/military-machine/97F57DAD8A288A4151EADA7751F61988",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.cambridge.org/core/books/abs/cambridge-history-of-the-mongol-empire/military-machine/97F57DAD8A288A4151EADA7751F61988",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 3.13
+  },
+  {
+    "url": "https://www.cambridge.org/core/books/between-rome-and-carthage/AF20772D2B328FD83D113B6383A5E2F6",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.cambridge.org/core/books/between-rome-and-carthage/AF20772D2B328FD83D113B6383A5E2F6",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 1.89
+  },
+  {
+    "url": "https://www.cambridge.org/core/journals/international-organization/article/abs/sovereignty-international-relations-and-the-westphalian-myth/33B6B7773432BE494F31518952ABE881",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.cambridge.org/core/journals/international-organization/article/abs/sovereignty-international-relations-and-the-westphalian-myth/33B6B7773432BE494F31518952ABE881",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 0.71
+  },
+  {
+    "url": "https://www.cambridge.org/core/journals/review-of-international-studies/article/abs/rethinking-the-sovereign-state-model/C77F748A59F937165E6495C7A4ECEC3F",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.cambridge.org/core/journals/review-of-international-studies/article/abs/rethinking-the-sovereign-state-model/C77F748A59F937165E6495C7A4ECEC3F",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 0.33
+  },
+  {
+    "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/1760415/statement-from-gen-joseph-votel-on-liberating-the-last-territory-held-by-daesh/",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 403,
+    "final": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/1760415/statement-from-gen-joseph-votel-on-liberating-the-last-territory-held-by-daesh/",
+    "error": "HTTP Error 403: Forbidden",
+    "seconds": 1.36
+  },
+  {
+    "url": "https://www.cnil.fr/fr/cnil-direct/question/les-mentions-legales-sur-un-site-web-est-ce-obligatoire",
+    "owners": [
+      {
+        "owner": "mentions-legales.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.cnil.fr/fr/cnil-direct/question/les-mentions-legales-sur-un-site-web-est-ce-obligatoire",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.87
+  },
+  {
+    "url": "https://www.cs.cornell.edu/courses/cs6702/2011sp/readings/AralSea2011.pdf",
+    "owners": [
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.cs.cornell.edu/courses/cs6702/2011sp/readings/AralSea2011.pdf",
+    "content_type": "application/pdf",
+    "content_length": "2804241",
+    "seconds": 0.91
+  },
+  {
+    "url": "https://www.csis.org/analysis/lessons-ukraine-conflict-modern-warfare-age-autonomy-information-and-resilience",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.csis.org/analysis/lessons-ukraine-conflict-modern-warfare-age-autonomy-information-and-resilience",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.42
+  },
+  {
+    "url": "https://www.defense.gouv.fr/actualites/decryptage-dronisation-du-champ-bataille",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.defense.gouv.fr/actualites/decryptage-dronisation-du-champ-bataille",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 2.99
+  },
+  {
+    "url": "https://www.diplomatie.gouv.fr/IMG/pdf/paris_roadmap_-_final_version_fr_2__cle09b5d2.pdf",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 503,
+    "final": "http://www.diplomatie.gouv.fr/fr",
+    "error": "HTTP Error 503: Service Unavailable",
+    "seconds": 1.34
+  },
+  {
+    "url": "https://www.doa.gov.jo/EN/ListDetails/World_Heritage_Sites_in_Jordan/1158/2",
+    "owners": [
+      {
+        "owner": "q-42761b03bc1c71ff",
+        "kind": "quiz-reference"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.doa.gov.jo/EN/ListDetails/World_Heritage_Sites_in_Jordan/1158/2",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "141677",
+    "seconds": 1.87
+  },
+  {
+    "url": "https://www.dvidshub.net/about/copyright",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.dvidshub.net/about/copyright",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.4
+  },
+  {
+    "url": "https://www.dvidshub.net/image/1211203/afghan-national-army-soldiers-lead",
+    "owners": [
+      {
+        "owner": "index.html",
+        "kind": "a"
+      },
+      {
+        "owner": "bibliotheque.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      },
+      {
+        "owner": "articles/roubaix-1917.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.dvidshub.net/image/1211203/afghan-national-army-soldiers-lead",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.42
+  },
+  {
+    "url": "https://www.dvidshub.net/image/6797399/afghanistan-evacuation",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.dvidshub.net/image/6797399/afghanistan-evacuation",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.53
+  },
+  {
+    "url": "https://www.dvidshub.net/image/8124895/final-american-flag-being-lowered-bagram-airfield",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.dvidshub.net/image/8124895/final-american-flag-being-lowered-bagram-airfield",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.52
+  },
+  {
+    "url": "https://www.ecoi.net/en/file/local/2063773/2021-10-30qr.pdf",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.ecoi.net/en/file/local/2063773/2021-10-30qr.pdf",
+    "content_type": "application/pdf",
+    "content_length": "6008700",
+    "seconds": 1.68
+  },
+  {
+    "url": "https://www.education.gouv.fr/sites/default/files/document/Le%20chef%20d%26%23039%3B%C3%A9tablissement-238434.pdf",
+    "owners": [
+      {
+        "owner": "articles/autorite.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.education.gouv.fr/sites/default/files/document/Le%20chef%20d%26%23039%3B%C3%A9tablissement-238434.pdf",
+    "content_type": "application/pdf",
+    "content_length": "223518",
+    "seconds": 3.64
+  },
+  {
+    "url": "https://www.eia.gov/todayinenergy/detail.php?id=49116",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.eia.gov/todayinenergy/detail.php?id=49116",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.46
+  },
+  {
+    "url": "https://www.eia.gov/todayinenergy/detail.php?id=65504",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.eia.gov/todayinenergy/detail.php?id=65504",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.42
+  },
+  {
+    "url": "https://www.english-heritage.org.uk/visit/places/pendennis-castle/history-and-stories/history/significance/",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.english-heritage.org.uk/visit/places/pendennis-castle/history-and-stories/history/significance/",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 0.53
+  },
+  {
+    "url": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Earth_from_Space_Scandinavian_Peninsula",
+    "owners": [
+      {
+        "owner": "q-da0a166dcb3b5192",
+        "kind": "quiz-reference"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Earth_from_Space_Scandinavian_Peninsula",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "15285",
+    "seconds": 1.79
+  },
+  {
+    "url": "https://www.fcpe.asso.fr/actualite/les-revendications-de-la-jeunesse-doivent-etre-entendues",
+    "owners": [
+      {
+        "owner": "articles/autorite.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.fcpe.asso.fr/actualite/les-revendications-de-la-jeunesse-doivent-etre-entendues",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "54302",
+    "seconds": 1.37
+  },
+  {
+    "url": "https://www.fisheries.noaa.gov/species/blue-whale",
+    "owners": [
+      {
+        "owner": "q-4e3abfb007bb45ef",
+        "kind": "quiz-reference"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.fisheries.noaa.gov/species/blue-whale",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 0.4
+  },
+  {
+    "url": "https://www.gov.uk/government/history/past-prime-ministers/winston-churchill?m=0",
+    "owners": [
+      {
+        "owner": "q-d245c95bfb3a02e3",
+        "kind": "quiz-reference"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.gov.uk/government/history/past-prime-ministers/winston-churchill?m=0",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "63112",
+    "seconds": 1.21
+  },
+  {
+    "url": "https://www.govinfo.gov/content/pkg/GOVPUB-S-PURL-gpo220547/pdf/GOVPUB-S-PURL-gpo220547.pdf",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.govinfo.gov/content/pkg/GOVPUB-S-PURL-gpo220547/pdf/GOVPUB-S-PURL-gpo220547.pdf",
+    "content_type": "application/pdf",
+    "content_length": "4348998",
+    "seconds": 0.33
+  },
+  {
+    "url": "https://www.govinfo.gov/content/pkg/GOVPUB-S-PURL-gpo220710/pdf/GOVPUB-S-PURL-gpo220710.pdf",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.govinfo.gov/content/pkg/GOVPUB-S-PURL-gpo220710/pdf/GOVPUB-S-PURL-gpo220710.pdf",
+    "content_type": "application/pdf",
+    "content_length": "3387575",
+    "seconds": 5.47
+  },
+  {
+    "url": "https://www.gutenberg.org/files/771/old/brnte10h.htm",
+    "owners": [
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.gutenberg.org/files/771/old/brnte10h.htm",
+    "content_type": "text/html",
+    "content_length": "42356",
+    "seconds": 0.78
+  },
+  {
+    "url": "https://www.history.navy.mil/browse-by-topic/exploration-and-innovation/radar-sonar.html",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 503,
+    "final": "https://www.history.navy.mil/browse-by-topic/exploration-and-innovation/radar-sonar.html",
+    "error": "HTTP Error 503: Service Unavailable",
+    "seconds": 1.22
+  },
+  {
+    "url": "https://www.hrw.org/world-report/2026/country-chapters/ukraine",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.hrw.org/world-report/2026/country-chapters/ukraine",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "163286",
+    "seconds": 0.49
+  },
+  {
+    "url": "https://www.iiss.org/publications/the-military-balance/2025/editors-introduction/",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.iiss.org/publications/the-military-balance/2025/editors-introduction/",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 0.8
+  },
+  {
+    "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039016548/2026-07-02",
+    "owners": [
+      {
+        "owner": "articles/autorite.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039016548/2026-07-02",
+    "content_type": "text/html;charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.99
+  },
+  {
+    "url": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006071191/LEGISCTA000018377430/2026-06-20",
+    "owners": [
+      {
+        "owner": "articles/autorite.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006071191/LEGISCTA000018377430/2026-06-20",
+    "content_type": "text/html;charset=UTF-8",
+    "content_length": null,
+    "seconds": 1.15
+  },
+  {
+    "url": "https://www.lemonde.fr/en/france/article/2026/10/12/french-high-school-protests-exhausted-principals-struggle-to-deal-with-violent-clashes-at-their-schools_6758508_7.html",
+    "owners": [
+      {
+        "owner": "articles/autorite.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.lemonde.fr/en/france/article/2026/10/12/french-high-school-protests-exhausted-principals-struggle-to-deal-with-violent-clashes-at-their-schools_6758508_7.html",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "3038",
+    "seconds": 0.62
+  },
+  {
+    "url": "https://www.lemonde.fr/societe/article/2026/10/16/mouvement-lyceen-un-mois-de-mobilisation-et-le-pari-de-la-convergence-des-luttes_6795111_3224.html",
+    "owners": [
+      {
+        "owner": "articles/autorite.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.lemonde.fr/societe/article/2026/10/16/mouvement-lyceen-un-mois-de-mobilisation-et-le-pari-de-la-convergence-des-luttes_6795111_3224.html",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "3038",
+    "seconds": 0.67
+  },
+  {
+    "url": "https://www.metmuseum.org/art/collection/search/248033",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.metmuseum.org/art/collection/search/248033",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "157471",
+    "seconds": 0.51
+  },
+  {
+    "url": "https://www.metmuseum.org/art/collection/search/248037",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.metmuseum.org/art/collection/search/248037",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "145830",
+    "seconds": 0.59
+  },
+  {
+    "url": "https://www.metmuseum.org/art/collection/search/248042",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.metmuseum.org/art/collection/search/248042",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "167625",
+    "seconds": 0.35
+  },
+  {
+    "url": "https://www.metmuseum.org/art/collection/search/547802",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.metmuseum.org/art/collection/search/547802",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "362515",
+    "seconds": 0.43
+  },
+  {
+    "url": "https://www.metmuseum.org/essays/the-legacy-of-genghis-khan",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.metmuseum.org/essays/the-legacy-of-genghis-khan",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "136017",
+    "seconds": 0.47
+  },
+  {
+    "url": "https://www.metmuseum.org/essays/the-roman-empire-27-b-c-393-a-d",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.metmuseum.org/essays/the-roman-empire-27-b-c-393-a-d",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "220914",
+    "seconds": 0.27
+  },
+  {
+    "url": "https://www.metmuseum.org/essays/the-roman-republic",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.metmuseum.org/essays/the-roman-republic",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "141521",
+    "seconds": 0.37
+  },
+  {
+    "url": "https://www.metmuseum.org/pt/toah/ht/04/afw.html",
+    "owners": [
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/atlas/rome-expansion.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.metmuseum.org/pt/toah/ht/04/afw.html",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "28212",
+    "seconds": 0.22
+  },
+  {
+    "url": "https://www.nam.ac.uk/explore/1918-victory",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.nam.ac.uk/explore/1918-victory",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "103176",
+    "seconds": 0.68
+  },
+  {
+    "url": "https://www.nam.ac.uk/explore/abyssinia",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.nam.ac.uk/explore/abyssinia",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "82531",
+    "seconds": 0.6
+  },
+  {
+    "url": "https://www.nam.ac.uk/explore/battle-somme",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.nam.ac.uk/explore/battle-somme",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": "92689",
+    "seconds": 0.39
+  },
+  {
+    "url": "https://www.napoleon.org/histoire-des-2-empires/articles/1812-la-campagne-de-russie-preface-de-mp-rey-au-tome-12-de-la-correspondance-generale-de-napoleon-bonaparte",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.napoleon.org/histoire-des-2-empires/articles/1812-la-campagne-de-russie-preface-de-mp-rey-au-tome-12-de-la-correspondance-generale-de-napoleon-bonaparte",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.94
+  },
+  {
+    "url": "https://www.napoleon.org/histoire-des-2-empires/articles/1812-lannee-de-tous-les-defis",
+    "owners": [
+      {
+        "owner": "articles/evolution-strategies-militaires.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.napoleon.org/histoire-des-2-empires/articles/1812-lannee-de-tous-les-defis",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.94
+  },
+  {
+    "url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "owners": [
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.37
+  },
+  {
+    "url": "https://www.nist.gov/pml/special-publication-330/sp-330-section-2",
+    "owners": [
+      {
+        "owner": "q-91c8e758ae39661d",
+        "kind": "quiz-reference"
+      },
+      {
+        "owner": "q-c0502fb86cfb1932",
+        "kind": "quiz-reference"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.nist.gov/pml/special-publication-330/sp-330-section-2",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.29
+  },
+  {
+    "url": "https://www.reuters.com/world/asia-pacific/irans-pezeshkian-discusses-mediation-efforts-meeting-with-pakistans-army-chief-2026-10-20/",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 401,
+    "final": "https://www.reuters.com/world/asia-pacific/irans-pezeshkian-discusses-mediation-efforts-meeting-with-pakistans-army-chief-2026-10-20/",
+    "error": "HTTP Error 401: Unauthorized",
+    "seconds": 0.64
+  },
+  {
+    "url": "https://www.reuters.com/world/middle-east/irans-central-bank-governor-dismisses-claims-economic-collapse-amid-us-blockade-2026-10-14/",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 401,
+    "final": "https://www.reuters.com/world/middle-east/irans-central-bank-governor-dismisses-claims-economic-collapse-amid-us-blockade-2026-10-14/",
+    "error": "HTTP Error 401: Unauthorized",
+    "seconds": 0.35
+  },
+  {
+    "url": "https://www.service-public.gouv.fr/particuliers/vosdroits/F3132",
+    "owners": [
+      {
+        "owner": "articles/autorite.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.service-public.gouv.fr/particuliers/vosdroits/F3132",
+    "content_type": "text/html;charset=UTF-8",
+    "content_length": null,
+    "seconds": 1.77
+  },
+  {
+    "url": "https://www.sigar.mil/pdf/quarterlyreports/2021-10-30qr.pdf",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": null,
+    "error": "URLError: <urlopen error Tunnel connection failed: 403 Forbidden>",
+    "seconds": 0.87
+  },
+  {
+    "url": "https://www.themorgan.org/printed-books/79355",
+    "owners": [
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "a"
+      }
+    ],
+    "status": 403,
+    "final": "https://www.themorgan.org/printed-books/79355",
+    "error": "HTTP Error 403: Forbidden",
+    "seconds": 0.4
+  },
+  {
+    "url": "https://www.un.org/fr/about-us/un-charter/chapter-1",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 403,
+    "final": "https://www.un.org/fr/about-us/un-charter/chapter-1",
+    "error": "HTTP Error 403: Forbidden",
+    "seconds": 0.49
+  },
+  {
+    "url": "https://www.un.org/fr/about-us/un-charter/chapter-7",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 403,
+    "final": "https://www.un.org/fr/about-us/un-charter/chapter-7",
+    "error": "HTTP Error 403: Forbidden",
+    "seconds": 0.44
+  },
+  {
+    "url": "https://www.un.org/securitycouncil/ctc/news/joint-briefing-security-council-twenty-third-report-secretary-general-threat-posed-isil-da%E2%80%99esh",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 403,
+    "final": "https://www.un.org/securitycouncil/ctc/news/joint-briefing-security-council-twenty-third-report-secretary-general-threat-posed-isil-da%E2%80%99esh",
+    "error": "HTTP Error 403: Forbidden",
+    "seconds": 0.38
+  },
+  {
+    "url": "https://www.undp.org/uzbekistan/press-releases/undp-and-uzbekistan-join-forces-combat-dust-storms-southern-aral-sea-region",
+    "owners": [
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.undp.org/uzbekistan/press-releases/undp-and-uzbekistan-join-forces-combat-dust-storms-southern-aral-sea-region",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 5.44
+  },
+  {
+    "url": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+    "owners": [
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      },
+      {
+        "owner": "explorer/enquetes/mer-aral.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.usgs.gov/information-policies-and-instructions/copyrights-and-credits",
+    "content_type": "text/html; charset=utf-8",
+    "content_length": null,
+    "seconds": 3.25
+  },
+  {
+    "url": "https://www.vie-publique.fr/questions-reponses/293520-peut-etre-anonyme-sur-internet-et-les-reseaux-sociaux",
+    "owners": [
+      {
+        "owner": "mentions-legales.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.vie-publique.fr/questions-reponses/293520-peut-etre-anonyme-sur-internet-et-les-reseaux-sociaux",
+    "content_type": "text/html",
+    "content_length": "301",
+    "seconds": 1.24
+  },
+  {
+    "url": "https://www.warwickshire.gov.uk/heritage-culture-1/george-eliot-letters-collection/4",
+    "owners": [
+      {
+        "owner": "articles/autrices-pseudonymes.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.warwickshire.gov.uk/heritage-culture-1/george-eliot-letters-collection/4",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 1.14
+  },
+  {
+    "url": "https://www.wcfia.harvard.edu/publications/future-power",
+    "owners": [
+      {
+        "owner": "articles/puissance-etats-unis.html",
+        "kind": "a"
+      }
+    ],
+    "status": 200,
+    "final": "https://www.wcfia.harvard.edu/publications/future-power",
+    "content_type": "text/html; charset=UTF-8",
+    "content_length": null,
+    "seconds": 0.96
+  }
+]

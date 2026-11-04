@@ -31,13 +31,54 @@
   <link rel="stylesheet" href="assets/bibliotheque.css?v=finitions-strategies-20261027">
   <link rel="stylesheet" href="assets/decouverte.css?v=1">
   <link rel="stylesheet" href="assets/experience.css?v=1">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Bibliothèque — Tous les articles | THOT", "url": "https://thot-culture.github.io/Thot/bibliotheque.html", "inLanguage": "fr"}</script><link rel="stylesheet" href="/Thot/assets/navigation.css?v=f223850ad41a"></head>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Bibliothèque — Tous les articles | THOT", "url": "https://thot-culture.github.io/Thot/bibliotheque.html", "inLanguage": "fr"}</script><link rel="stylesheet" href="/Thot/assets/navigation.css?v=f223850ad41a"><link rel="stylesheet" href="/Thot/assets/visual-system.css?v=764ddbb7f568"></head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
-  <header class="top"><div class="wrap nav">
-    <a class="brand" href="index.html" aria-label="THOT, accueil"><span class="brand-symbol" aria-hidden="true">✦</span> THOT</a>
+  <header class="top" data-site-header><div class="wrap nav">
+    <a class="brand" href="index.html" aria-label="THOT, accueil" data-site-brand><svg class="site-brand-icon" viewBox="0 0 48 48" fill="none" aria-hidden="true"><circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5"/><path d="M13 33c9-6 10-12 9-21 5 3 7 8 7 13l12 2-11 4c-2 6-7 8-14 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="25" cy="17" r="1.35" fill="currentColor"/></svg><span class="site-brand-name">THOT</span></a>
     <button id="mobile-menu-button" class="mobile-menu-button" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="Ouvrir le menu"><span aria-hidden="true">☰</span> Menu</button><nav id="primary-navigation" data-site-navigation aria-label="Navigation principale"><a href="/Thot/index.html">Accueil</a><a href="/Thot/bibliotheque.html" aria-current="page">Bibliothèque</a><a href="/Thot/explorer.html">Explorer</a><a href="/Thot/quiz.html#quiz-classique">Quiz</a><a href="/Thot/quiz.html#daily-title">Défi du jour</a><a href="/Thot/notre-methode.html">Notre méthode</a><a href="/Thot/index.html#concept">À propos</a></nav>
-  </div></header>
+  </div></header><script data-site-menu>/* Menu commun installé avant le contenu ; liens visibles sans JavaScript. */
+(() => {
+  'use strict';
+  const menu = document.getElementById('mobile-menu-button');
+  const nav = document.getElementById('primary-navigation');
+  if (menu && nav) {
+    const header = menu.closest('header') || menu.closest('.top');
+    const mobile = window.matchMedia('(max-width: 710px)');
+    const close = (restoreFocus = false) => {
+      nav.classList.remove('is-open');
+      menu.setAttribute('aria-expanded', 'false');
+      menu.setAttribute('aria-label', 'Ouvrir le menu');
+      if (restoreFocus) menu.focus();
+    };
+    menu.addEventListener('click', () => {
+      const open = menu.getAttribute('aria-expanded') !== 'true';
+      nav.classList.toggle('is-open', open);
+      menu.setAttribute('aria-expanded', String(open));
+      menu.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    });
+    nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => close()));
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') close(true);
+    });
+    document.addEventListener('click', event => {
+      if (header && !header.contains(event.target)) close();
+    });
+    if (header) {
+      header.addEventListener('focusout', event => {
+        if (event.relatedTarget && !header.contains(event.relatedTarget)) close();
+      });
+    }
+    const syncViewport = () => close(mobile.matches && nav.contains(document.activeElement));
+    if (typeof mobile.addEventListener === 'function') mobile.addEventListener('change', syncViewport);
+    else if (typeof mobile.addListener === 'function') mobile.addListener(syncViewport);
+    close();
+    // Replier la navigation uniquement après l’installation de ses interactions.
+    if (header) header.setAttribute('data-menu-ready', '');
+  }
+
+})();
+</script>
   <main id="contenu" tabindex="-1">
     <section class="hero"><div class="wrap">
       <p class="eyebrow">THOT / LES ARTICLES</p>
@@ -62,7 +103,7 @@
         </div>
       </div>
       <noscript><p class="search-help">La recherche et les filtres nécessitent JavaScript. Tous les articles restent accessibles ci-dessous.</p></noscript>
-      <div class="library-discovery"><p>Une envie de découverte, sans idée précise ?</p><a class="discovery-primary" href="articles/autrices-pseudonymes.html" data-surprise aria-label="Ouvrir un article au hasard parmi toute la bibliothèque"><span aria-hidden="true">✦</span> Surprends-moi</a></div>
+      <div class="library-discovery"><p>Une envie de découverte, sans idée précise ?</p><a class="discovery-primary" href="articles/autrices-pseudonymes.html" data-surprise aria-label="Surprends-moi : ouvrir un article au hasard parmi toute la bibliothèque"><span aria-hidden="true">✦</span> Surprends-moi</a></div>
       <p class="results-status" id="results-status" role="status" aria-live="polite" aria-atomic="true">6 articles disponibles</p>
       <div id="article-results" class="article-grid">
 <article class="article-card discovery-card" data-category="histoire" data-keywords="guerre armées tactiques stratégie logistique Hannibal Mongols artillerie Napoléon drones Ukraine"><a class="discovery-card__link" href="articles/evolution-strategies-militaires.html" data-discovery-path aria-labelledby="card-strategies"><div class="discovery-photo discovery-photo--integrale"><img src="assets/strategies-media/social.png" alt="THOT — Armes, tactiques et logistique" width="1200" height="630" loading="lazy"></div><div class="discovery-card__copy"><div class="discovery-meta"><span>Histoire</span><span class="reading-pill">13 min de lecture</span></div><h3 id="card-strategies">Pourquoi les nouvelles armes ne suffisent-elles pas à gagner une guerre ?</h3><p>De la légion romaine aux drones, comment les technologies, les tactiques et la logistique ont transformé la manière de combattre.</p><p class="discovery-affordance">Frise, deux comparateurs et analyse d’un document.</p><div class="discovery-card__bottom"><span><time datetime="2026-10-27">27 oct. 2026</time></span><span>Lire l’article <span aria-hidden="true">↗</span></span></div></div></a><p class="discovery-credit">Composition pédagogique originale THOT, 2026.</p></article>
@@ -135,7 +176,7 @@
         <span class="discovery-stamp" aria-hidden="true">1917</span>
       </div>
         <div class="discovery-card__copy">
-          <div class="discovery-meta"><span>Histoire · Première Guerre mondiale</span><span class="reading-pill">9 min de lecture</span></div>
+          <div class="discovery-meta"><span>Histoire · Première Guerre mondiale</span><span class="reading-pill">8 min de lecture</span></div>
           <h3 id="card-roubaix-1917">Roubaix en 1917 : vivre sous l’occupation allemande</h3>
           <p>Réquisitions, ravitaillement, contrôles : découvrir le quotidien d’une ville occupée à travers les documents d’époque.</p><p class="discovery-affordance">Document à explorer · affiche de 1917</p>
           <div class="discovery-card__bottom"><span>20 oct. 2026</span><span>Lire l’article <span aria-hidden="true">↗</span></span></div>
@@ -148,9 +189,9 @@
       <div class="catalogue-foot"><p>Les textes THOT associent des sources identifiables, des explications accessibles et, selon les sujets, de petits jeux facultatifs. Un espace quiz permet aussi de se tester.</p><a href="quiz.html#quiz-classique">Découvrir les quiz THOT ↗</a></div>
     </section>
   </main>
-  <footer><div class="wrap foot"><a href="index.html">THOT</a><span>La curiosité n'a pas de limites.</span><a href="notre-methode.html">Notre méthode</a><a href="index.html">Retour à l'accueil ↗</a></div><nav id="site-parcours" class="site-parcours" aria-label="Accès aux parcours THOT"><a href="/Thot/index.html">Accueil</a><a href="/Thot/bibliotheque.html" aria-current="page">Bibliothèque</a><a href="/Thot/explorer.html">Explorer</a><a href="/Thot/quiz.html#quiz-classique">Quiz</a><a href="/Thot/notre-methode.html">Notre méthode</a></nav><nav data-site-utility aria-label="Informations du site"><a href="/Thot/contact.html">Contact et corrections</a><a href="/Thot/mentions-legales.html">Informations légales</a><a href="/Thot/confidentialite.html">Confidentialité</a></nav></footer>
+  <footer data-site-footer><div class="wrap foot"><a href="index.html">THOT</a><span>La curiosité n'a pas de limites.</span><a href="notre-methode.html">Notre méthode</a><a href="index.html">Retour à l'accueil ↗</a></div><nav id="site-parcours" class="site-parcours" aria-label="Accès aux parcours THOT"><a href="/Thot/index.html">Accueil</a><a href="/Thot/bibliotheque.html" aria-current="page">Bibliothèque</a><a href="/Thot/explorer.html">Explorer</a><a href="/Thot/quiz.html#quiz-classique">Quiz</a><a href="/Thot/notre-methode.html">Notre méthode</a></nav><nav data-site-utility aria-label="Informations du site"><a href="/Thot/contact.html">Contact et corrections</a><a href="/Thot/mentions-legales.html">Informations légales</a><a href="/Thot/confidentialite.html">Confidentialité</a></nav></footer>
   <script src="assets/bibliotheque.js?v=lecture-1&amp;release=fluidite-20261025" defer></script>
   <script src="assets/decouverte.js?v=1" defer></script>
   <script src="assets/reading-times.js" defer></script>
-<script src="/Thot/assets/navigation.js?v=299c87f73542" defer></script></body>
+</body>
 </html>

@@ -1,0 +1,343 @@
+{
+  "commit": "1a0802b341826fc4b3023d5d7270f5f2bea29af2",
+  "run": "https://github.com/thot-culture/Thot/actions/runs/41615783824",
+  "method": "Lighthouse 12.8.2, Chromium 151, mobile simulé, HTTP local non compressé. Une mesure par page ; aucun INP terrain.",
+  "results": [
+    {
+      "page": "index.html",
+      "fetchTime": "2026-11-03T10:04:13.070Z",
+      "lighthouseVersion": "12.8.2",
+      "scores": {
+        "performance": 0.99,
+        "accessibility": 1,
+        "best-practices": 0.79,
+        "seo": 1
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 1653.0838,
+          "unit": "millisecond"
+        },
+        "largest-contentful-paint": {
+          "value": 1728.0838,
+          "unit": "millisecond"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "unit": "unitless"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "speed-index": {
+          "value": 1653.0838,
+          "unit": "millisecond"
+        }
+      },
+      "warnings": []
+    },
+    {
+      "page": "articles/autorite.html",
+      "fetchTime": "2026-11-03T10:04:20.004Z",
+      "lighthouseVersion": "12.8.2",
+      "scores": {
+        "performance": 0.96,
+        "accessibility": 1,
+        "best-practices": 1,
+        "seo": 1
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 1211.4179,
+          "unit": "millisecond"
+        },
+        "largest-contentful-paint": {
+          "value": 2717.1268499999996,
+          "unit": "millisecond"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "unit": "unitless"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "speed-index": {
+          "value": 1211.4179,
+          "unit": "millisecond"
+        }
+      },
+      "warnings": []
+    },
+    {
+      "page": "articles/pieuvres-couleur.html",
+      "fetchTime": "2026-11-03T10:04:27.393Z",
+      "lighthouseVersion": "12.8.2",
+      "scores": {
+        "performance": 0.7,
+        "accessibility": 1,
+        "best-practices": 0.79,
+        "seo": 1
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 1506.48495,
+          "unit": "millisecond"
+        },
+        "largest-contentful-paint": {
+          "value": 3171.5525000000007,
+          "unit": "millisecond"
+        },
+        "cumulative-layout-shift": {
+          "value": 0.6822656637786857,
+          "unit": "unitless"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "speed-index": {
+          "value": 1506.48495,
+          "unit": "millisecond"
+        }
+      },
+      "warnings": [],
+      "layoutShifts": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "extra"
+            },
+            "label": "Element"
+          },
+          {
+            "key": "score",
+            "valueType": "numeric",
+            "subItemsHeading": {
+              "key": "cause",
+              "valueType": "text"
+            },
+            "granularity": 0.001,
+            "label": "Layout shift score"
+          }
+        ],
+        "items": [
+          {
+            "node": {
+              "type": "node",
+              "lhId": "page-1-MAIN",
+              "path": "1,HTML,1,BODY,2,MAIN",
+              "selector": "body.article-sciences > main",
+              "boundingRect": {
+                "top": 121,
+                "bottom": 13555,
+                "left": 0,
+                "right": 412,
+                "width": 412,
+                "height": 13434
+              },
+              "snippet": "<main>",
+              "nodeLabel": "SCIENCES · BIOLOGIE MARINE\nComment les pieuvres changent-elles de couleur ?\n\nDe…"
+            },
+            "score": 0.6822656637786857
+          }
+        ]
+      }
+    },
+    {
+      "page": "explorer/atlas/rome-expansion.html",
+      "fetchTime": "2026-11-03T10:04:34.689Z",
+      "lighthouseVersion": "12.8.2",
+      "scores": {
+        "performance": 0.72,
+        "accessibility": 1,
+        "best-practices": 0.96,
+        "seo": 1
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 4456.1884,
+          "unit": "millisecond"
+        },
+        "largest-contentful-paint": {
+          "value": 4734.735500000001,
+          "unit": "millisecond"
+        },
+        "cumulative-layout-shift": {
+          "value": 0,
+          "unit": "unitless"
+        },
+        "total-blocking-time": {
+          "value": 2,
+          "unit": "millisecond"
+        },
+        "speed-index": {
+          "value": 4456.1884,
+          "unit": "millisecond"
+        }
+      },
+      "warnings": []
+    },
+    {
+      "page": "explorer/enquetes/mer-aral.html",
+      "fetchTime": "2026-11-03T10:04:41.716Z",
+      "lighthouseVersion": "12.8.2",
+      "scores": {
+        "performance": 0.73,
+        "accessibility": 1,
+        "best-practices": 1,
+        "seo": 1
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 1652.6599,
+          "unit": "millisecond"
+        },
+        "largest-contentful-paint": {
+          "value": 3452.6599,
+          "unit": "millisecond"
+        },
+        "cumulative-layout-shift": {
+          "value": 0.3656598196740432,
+          "unit": "unitless"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "speed-index": {
+          "value": 1652.6599,
+          "unit": "millisecond"
+        }
+      },
+      "warnings": [],
+      "layoutShifts": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "extra"
+            },
+            "label": "Element"
+          },
+          {
+            "key": "score",
+            "valueType": "numeric",
+            "subItemsHeading": {
+              "key": "cause",
+              "valueType": "text"
+            },
+            "granularity": 0.001,
+            "label": "Layout shift score"
+          }
+        ],
+        "items": [
+          {
+            "node": {
+              "type": "node",
+              "lhId": "page-1-MAIN",
+              "path": "1,HTML,1,BODY,2,MAIN",
+              "selector": "body > main#contenu",
+              "boundingRect": {
+                "top": 77,
+                "bottom": 1160,
+                "left": 0,
+                "right": 412,
+                "width": 412,
+                "height": 1083
+              },
+              "snippet": "<main class=\"xp-main\" id=\"contenu\" tabindex=\"-1\">",
+              "nodeLabel": "Explorer\n/\nEnquêter · Mer d’Aral\n\nPhotographie Sebastian Kluger · Wikimedia Com…"
+            },
+            "score": 0.3656598196740432
+          }
+        ]
+      }
+    },
+    {
+      "page": "quiz.html",
+      "fetchTime": "2026-11-03T10:04:48.260Z",
+      "lighthouseVersion": "12.8.2",
+      "scores": {
+        "performance": 0.73,
+        "accessibility": 1,
+        "best-practices": 1,
+        "seo": 1
+      },
+      "metrics": {
+        "first-contentful-paint": {
+          "value": 2610.4778,
+          "unit": "millisecond"
+        },
+        "largest-contentful-paint": {
+          "value": 2610.4778,
+          "unit": "millisecond"
+        },
+        "cumulative-layout-shift": {
+          "value": 0.4643370319298303,
+          "unit": "unitless"
+        },
+        "total-blocking-time": {
+          "value": 0,
+          "unit": "millisecond"
+        },
+        "speed-index": {
+          "value": 2610.4778,
+          "unit": "millisecond"
+        }
+      },
+      "warnings": [],
+      "layoutShifts": {
+        "type": "table",
+        "headings": [
+          {
+            "key": "node",
+            "valueType": "node",
+            "subItemsHeading": {
+              "key": "extra"
+            },
+            "label": "Element"
+          },
+          {
+            "key": "score",
+            "valueType": "numeric",
+            "subItemsHeading": {
+              "key": "cause",
+              "valueType": "text"
+            },
+            "granularity": 0.001,
+            "label": "Layout shift score"
+          }
+        ],
+        "items": [
+          {
+            "node": {
+              "type": "node",
+              "lhId": "page-1-MAIN",
+              "path": "1,HTML,1,BODY,2,MAIN",
+              "selector": "body.quiz-page > main#contenu",
+              "boundingRect": {
+                "top": 77,
+                "bottom": 2682,
+                "left": 0,
+                "right": 412,
+                "width": 412,
+                "height": 2605
+              },
+              "snippet": "<main id=\"contenu\" tabindex=\"-1\">",
+              "nodeLabel": "L’ESPACE QUIZ THOT\n\nÀ toi de jouer.\n\nChoisis un univers et un niveau. Chaque pa…"
+            },
+            "score": 0.4643370319298303
+          }
+        ]
+      }
+    }
+  ]
+}

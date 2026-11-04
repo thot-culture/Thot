@@ -369,9 +369,17 @@ class EditorialTests(unittest.TestCase):
                 self.assertEqual(len(ids), len(set(ids)), "Identifiant HTML dupliqué")
                 old_ids = {node.attrs["id"] for node in old.elements if node.attrs.get("id")}
                 self.assertFalse(old_ids - set(ids), "Identifiant d’activité ou ancre supprimé")
+                # Le menu commun est un nouvel ajout généré, hors du contenu
+                # d'article ; sa source doit être exacte, unique et précéder main.
+                menus = [node for node in doc.select("script") if "data-site-menu" in node.attrs]
+                self.assertEqual(len(menus), 1, "Un seul contrôleur commun attendu")
+                self.assertEqual(menus[0].text(), (ROOT / "assets/navigation.js").read_text(encoding="utf-8"))
+                main = self.one(doc.select("main"), "Contenu principal absent")
+                self.assertLess(doc.elements.index(menus[0]), doc.elements.index(main))
                 def inline(document):
                     return [node.text() for node in document.select("script")
-                            if "src" not in node.attrs and node.attrs.get("type") != "application/ld+json"]
+                            if "src" not in node.attrs and node.attrs.get("type") != "application/ld+json"
+                            and "data-site-menu" not in node.attrs]
                 self.assertEqual(inline(old), inline(doc), "Script inline d’origine modifié")
 
     def test_no_unrelated_html_changed_between_revisions(self):

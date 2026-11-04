@@ -1,0 +1,19 @@
+PASS pages et Atlas 320
+PASS pages et Atlas 390
+PASS pages et Atlas 768
+PASS pages et Atlas 1024
+PASS pages et Atlas 1440
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '{"version":1,"started":true,"seen":["d01","d02","d03","d04","d05","d06","d07","d08","d09","d10","d11"],"cards":{"d01":{"x":56,"y":50},"d02":{"x":446,"y":50},"d03":{"x":836,"y":50},"d04":{"x":56,"y":360},"d05":{"x":446,"y":360},"d06":{"x":836,"y":360},"d07":{"x":56,"y":670},"d08":{"x":446,"y":670},"d09":{"x":836,"y":670},"d10":{"x":56,"y":980},"d11":{"x":446,"y":980}},"links":[{"id":"l0","from":"d09","to":"d06","kind":"confirm","note":"Un constat doit être interprété avec ses limites.","review":"unresolved"}],"roles":{"d01":"none","d02":"none","d03":"none","d04":"none","d05":"none","d06":"none","d07":"none","d08":"none","d09":"none","d10":"none","d11":"none"},"hypothesis":"irrigation","customHypothesis":"","conclusion":"Les prélèvements diminuent les apports, avec des situations différentes au Nord et au Sud.","hintIndex":0,"zoom":100,"activeCard":"d09","boardMode":"list","view":"argument","lastFeedback":true}'
+- '{"version":1,"started":true,"seen":["d01","d02","d03","d04","d05","d06","d07","d08","d09","d10","d11"],"cards":{"d01":{"x":56,"y":50},"d02":{"x":446,"y":50},"d03":{"x":836,"y":50},"d04":{"x":56,"y":360},"d05":{"x":446,"y":360},"d06":{"x":836,"y":360},"d07":{"x":56,"y":670},"d08":{"x":446,"y":670},"d09":{"x":836,"y":670},"d10":{"x":56,"y":980},"d11":{"x":446,"y":980}},"links":[{"id":"lmw21lm400g6","from":"d09","to":"d06","kind":"confirm","note":"Un constat doit être interprété avec ses limites.","review":"unresolved"}],"roles":{"d01":"none","d02":"none","d03":"none","d04":"none","d05":"none","d06":"none","d07":"none","d08":"none","d09":"none","d10":"none","d11":"none"},"hypothesis":"irrigation","customHypothesis":"","conclusion":"Les prélèvements diminuent les apports, avec des situations différentes au Nord et au Sud.","hintIndex":0,"zoom":100,"activeCard":"d09","boardMode":"list","view":"argument","lastFeedback":true}'
+
+    at /workspace/Thot-final/scripts/test-site-browser.cjs:72:9
+Rapport /workspace/Thot-final/work/stabilisation/functional/recette-site.json
+Traceback (most recent call last):
+  File "/workspace/Thot-final/scripts/run-browser-recipe.py", line 22, in <module>
+    subprocess.run(["node", "scripts/test-site-browser.cjs"], cwd=ROOT, check=True)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['node', 'scripts/test-site-browser.cjs']' returned non-zero exit status 1.
