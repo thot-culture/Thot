@@ -19,6 +19,8 @@
 | [#23 — stabilisation](https://github.com/thot-culture/Thot/pull/23) | `2cae9b575b70f58c14c75ff1a9ca11cc213ca101` | Vers la branche de #22, ouverte, brouillon, sans conflit |
 | [#24 — SEO](https://github.com/thot-culture/Thot/pull/24) | `069e2ef41267807fac8ed2466550fac9fafb1d48` | Vers la branche de #23, ouverte, brouillon, sans conflit |
 
+Les trois PR ont été passées de brouillon à **prêtes pour la revue**, avec leurs destinations conservées et sans fusion. Les descriptions de #22/#23/#24 sont actualisées ; en particulier, #23 ne présente plus ses anciennes recettes comme encore inachevées.
+
 Les derniers workflows des trois SHA étaient réussis au départ : ce constat a été récupéré, **puis complété par de nouveaux tests de la version combinée**. Les six documents demandés ont été lus et confrontés aux sources et aux sorties des générateurs. Leurs mesures historiques restent attachées à leurs dates et SHA ; elles ne valent pas validation automatique de ce complément.
 
 La branche locale `work/finalisation-thot-20261104` part du SHA de #24. Son complément est destiné à **la même PR #24**, sans quatrième PR. #24 contient déjà tous les commits de #23 ; #23 contient ceux de #22 ; #22 descend de `main`. Aucun cherry-pick, squash, rebase ou force push n'est nécessaire.
@@ -37,6 +39,7 @@ Fichiers modifiés initialement : 23 dans #22, 53 dans #23, 37 dans #24. Les rec
 | Exécution Lighthouse | Le script utilisait uniquement le navigateur téléchargé par Playwright | Respect de `THOT_BROWSER_EXECUTABLE`, comme les autres recettes ; aucun changement pour les lecteurs |
 | Sortie CLI Windows | `site_chrome.py` n'importait pas le réglage d'encodage commun ; la nouvelle recette capturée échouait sur les accents Windows-1252 | Import du réglage UTF-8 existant ; décodage explicite testé avec `PYTHONIOENCODING=cp1252`, sans désactiver la recette |
 | Fins de ligne Windows | Le générateur de durées réécrivait les anciens articles en CRLF sous Windows, au lieu des LF du dépôt ; leur texte était identique mais pas leurs octets | Sorties HTML éditoriales/Explorer et durées explicitement en LF ; la comparaison octet par octet des anciennes pages reste active |
+| Nom accessible de la découverte | Lighthouse signale que « Surprends-moi » n'est pas repris dans le nom accessible des liens de découverte | Libellé visible conservé et repris dans l'aria-label, sur accueil et bibliothèque ; contrôle navigateur ajouté sans modifier le tirage |
 
 Les pages Explorer ont été reconstruites depuis leurs sources après modification du contrôleur Aral ; le chemin de cache JavaScript est actualisé. La feuille militaire reçoit une version de cache explicite. Aucun fichier géographique, tracé de carte, média documentaire, source bibliographique, date historique ou banque de questions n'est changé.
 
@@ -45,7 +48,7 @@ Les pages Explorer ont été reconstruites depuis leurs sources après modificat
 Les six articles restent présents : Autorité, Autrices et pseudonymes, Pieuvres, Puissance américaine, Roubaix 1917 et Évolution des stratégies militaires. Leurs références, images, légendes, nuances et activités ont été conservées.
 
 - `check-conservation.py` réussit contre `main` **et** contre le SHA initial de #24. Les seules normalisations sont celles documentées : durées, réparation Oxford déjà approuvée et six niveaux de titre.
-- [Comparaison complémentaire](stabilisation/conservation.json) : 17 blocs `main` sur 18 strictement identiques à #24 initiale ; le dix-huitième ne change que ces six balises. Les données structurées des articles et les 300 questions restent protégées.
+- [Comparaison complémentaire](stabilisation/conservation.json) : 15 blocs `main` sur 18 strictement identiques à #24 initiale ; les trois autres ne changent que les six niveaux de titre et les deux noms accessibles de découverte. Les données structurées des articles et les 300 questions restent protégées. [Comparaison des questions, médias et corpus géographiques à main](stabilisation/corpus-conserves.json).
 - La feuille `assets/visual-system.css` est identique à celle de #22. Le logo ibis, les couleurs, la navigation, les pieds de page et la typographie sont conservés.
 - [Planches à 390 px](stabilisation/planches-390.jpg) et [1440 px](stabilisation/planches-1440.jpg), couvrant les 18 pages. [Frise avant](stabilisation/frise-avant-390.png) / [après](stabilisation/frise-apres-390.png) ; [comparaison des styles aux deux largeurs](stabilisation/titres-comparaison.json).
 
@@ -66,6 +69,10 @@ La présence et l'accessibilité d'un contenu ne prouvent pas sa véracité scie
 | Deuxième recette native | **90 vues**, Atlas et contrôles mobiles ; **270 URL et 157 ancres** ; sauvegarde Aral, ID stables, récupération d'ID altérés, redémarrage et reset sans perdre le quiz ; [rapport](stabilisation/recette-native.json) |
 | Parcours complets | Recherche depuis l'accueil, accents, filtres combinés, état vide/reset ; quiz et défi jusqu'aux résultats ; activités des six articles ; cartes/parcours/documents Atlas ; onze pièces Aral, relation, conclusion et révision |
 | Chargement lent et sans JS | Cinq gabarits avec scripts externes retardés de 1,2 s : position du main stable. Banque quiz indisponible : notice réelle et démarrage désactivé. Sans JS : navigation et reflow sur les 18 pages à 320 px |
+
+Les validations distantes après les corrections Windows sont réussies au SHA **`986a3ac9f4cac1349fb371c9883a6ebc32a68213`** : [génération Linux/Windows 41827276320](https://github.com/thot-culture/Thot/actions/runs/41827276320) et [audit navigateur Linux/Windows 41827276369](https://github.com/thot-culture/Thot/actions/runs/41827276369). Les quatre jobs sont terminés avec succès ; [relevé des statuts](stabilisation/validations-github.json), [90 vues et axe en CI](stabilisation/navigateur-ci.json), [90 vues et stockage natif en CI](stabilisation/recette-native-ci.json). Aucune image n'est signalée cassée dans ce passage CI, sans erreur de certificat du proxy local.
+
+Le complément de noms accessibles de découverte est vérifié dans [quatre états navigateur avec la règle axe ciblée](stabilisation/noms-accessibles.json). Les vérifications du dernier SHA sont à consulter dans [#24 / checks](https://github.com/thot-culture/Thot/pull/24/checks) ; elles sont contrôlées avant livraison et devront encore être contrôlées sur les nouveaux SHA après chaque fusion autorisée.
 
 Navigateur local : Chromium **155.0.8059.79**, Playwright 1.64.1, Linux. Les gestes tactiles sont simulés. Les scripts CI conservent leurs versions épinglées et leurs vrais runners Linux/Windows. Aucune affirmation de test Safari/macOS, Firefox, téléphone physique, lecteur d'écran ou conformité WCAG complète.
 
@@ -95,20 +102,22 @@ Le passage suivant ([41826569878](https://github.com/thot-culture/Thot/actions/r
 
 ## 6. Performances mesurées
 
-Nouveau passage froid par gabarit : **Lighthouse 13.6.0, Chromium 155, mobile/réseau simulés, CPU ×4, HTTP local non compressé sous `/Thot/`**. [Résultats bruts](stabilisation/performances.json). Aucun runtimeError Lighthouse dans ces six passages.
+Mesure de clôture sur un runner GitHub Actions, commit `986a3ac…`, run 41827276369 : **Lighthouse 12.8.2, Chromium 151.0.7922.34, téléphone/réseau simulés, HTTP local non compressé sous `/Thot/`**. Un passage froid par gabarit, pas des performances réelles des visiteurs. [Résultats CI](stabilisation/performances-ci.json), sans runtimeError Lighthouse.
 
 | Gabarit | Performance /100 | LCP (s) | CLS | TBT (ms) |
 |---|---:|---:|---:|---:|
-| Accueil | 99 | 1,80 | 0 | 0 |
-| Autorité | 96 | 2,71 | 0,040 | 0 |
-| Pieuvres | 99 | 1,81 | 0,031 | 0 |
-| Atlas Rome | 76 | 4,20 | 0 | 4,5 |
-| Enquête Aral | 91 | 3,45 | 0 | 0 |
-| Quiz | 96 | 2,63 | 0 | 14 |
+| Accueil | 99 | 1,80 | 0,000 | 0 |
+| Autorité | 96 | 2,71 | 0,000 | 0 |
+| Pieuvres | 93 | 3,17 | 0,031 | 0 |
+| Atlas Rome | 74 | 4,48 | 0,000 | 0 |
+| Enquête Aral | 91 | 3,45 | 0,000 | 0 |
+| Quiz | 96 | 2,62 | 0,000 | 4 |
 
-Les six gabarits obtiennent 100 en accessibilité automatisée et SEO Lighthouse ; ce n'est ni une certification WCAG ni une garantie de classement. Les photographies externes bloquées dans ce navigateur limitent particulièrement l'interprétation des scores accueil/Pieuvres. **Ne pas annoncer une amélioration de vitesse sur cette base.** Versions d'outils, réseau et conditions diffèrent du précédent 74/100 de l'Atlas ; 76 n'est pas une preuve d'optimisation.
+Accessibilité et SEO Lighthouse : 100 sur les six gabarits, sans certification WCAG ni garantie de classement. Les bonnes pratiques sont à 79 sur accueil/Pieuvres, avec notamment les cookies tiers Wikimedia ; aucun outil publicitaire ou de collecte n'est ajouté par THOT. Le diagnostic expérimental des noms de cartes complexes reste à relire avec des outils d'assistance réels ; il ne doit pas être transformé en conformité globale à partir des seuls scores.
 
-L'Atlas conserve sa géométrie et ses documents. Son LCP froid local reste à surveiller ; la production est déjà compressée, comme l'a vérifié l'audit SEO. Une mesure publique avec images chargées et des données terrain, lorsqu'elles existent, doit précéder un chantier géographique. Aucun INP, CrUX ou Core Web Vitals réel de visiteurs n'est revendiqué. TBT n'est pas INP.
+Un passage local distinct, **Lighthouse 13.6.0 / Chromium 155**, est aussi conservé dans [performances.json](stabilisation/performances.json) : 99/96/99/76/91/96. Le proxy local y empêche certaines photographies externes de charger ; ces nombres ne démontrent donc aucun gain sur l'accueil ou Pieuvres. Les versions et conditions diffèrent : ne pas mélanger les deux séries.
+
+L'Atlas reste à **74/100 et LCP 4,48 s** dans la mesure CI non compressée ; sa géométrie et ses documents sont inchangés. La production est déjà compressée, comme l'a vérifié l'audit SEO. Mesurer le site publié et les données terrain lorsqu'elles existent avant d'envisager un chantier géographique. Aucun INP, CrUX ou Core Web Vitals réel de visiteurs n'est revendiqué. TBT n'est pas INP.
 
 ## 7. Derniers problèmes, classés
 

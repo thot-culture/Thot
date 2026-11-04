@@ -1,0 +1,34 @@
+[
+  {
+    "page": "index.html",
+    "width": 390,
+    "violations": [],
+    "passes": [
+      "label-content-name-mismatch"
+    ]
+  },
+  {
+    "page": "bibliotheque.html",
+    "width": 390,
+    "violations": [],
+    "passes": [
+      "label-content-name-mismatch"
+    ]
+  },
+  {
+    "page": "index.html",
+    "width": 1440,
+    "violations": [],
+    "passes": [
+      "label-content-name-mismatch"
+    ]
+  },
+  {
+    "page": "bibliotheque.html",
+    "width": 1440,
+    "violations": [],
+    "passes": [
+      "label-content-name-mismatch"
+    ]
+  }
+]

@@ -6,7 +6,7 @@
     },
     {
       "path": "index.html",
-      "main_identical": true
+      "main_identical": false
     },
     {
       "path": "confidentialite.html",
@@ -14,7 +14,7 @@
     },
     {
       "path": "bibliotheque.html",
-      "main_identical": true
+      "main_identical": false
     },
     {
       "path": "explorer.html",
@@ -73,5 +73,9 @@
       "main_identical": true
     }
   ],
-  "visual_system_pr22_identical": true
+  "visual_system_pr22_identical": true,
+  "documented_differences": [
+    "Six niveaux H4→H3 dans la frise militaire",
+    "Deux aria-label reprenant Surprends-moi : accueil et bibliothèque"
+  ]
 }
