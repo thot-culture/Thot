@@ -32,6 +32,8 @@ jobs:
           node-version: '22'
       - run: python scripts/sync-publication.py --check
       - run: python scripts/test-publication.py
+      - run: python scripts/check-seo.py
+      - run: python scripts/test-seo.py
       - run: python scripts/test-article-editorial.py
       - run: node scripts/check-site.mjs
       - name: Suites de fonctionnement

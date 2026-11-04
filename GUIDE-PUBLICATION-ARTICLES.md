@@ -1,5 +1,7 @@
 # GUIDE-PUBLICATION-ARTICLES
 
+Compléments : [Search Console](docs/GOOGLE-SEARCH-CONSOLE.md), [stratégie et maillage](docs/STRATEGIE-SEO-THOT.md), [audit SEO](docs/AUDIT-SEO-THOT.md). Les automatismes décrits nécessitent l'intégration des PR de stabilisation et de préparation SEO ; ils ne sont pas encore disponibles sur `main` au 4 novembre 2026.
+
 Publier deux articles par semaine sur THOT en conservant les URL, la présentation et les sources. Ce guide décrit le site statique actuel ; aucun CMS n'est nécessaire.
 
 ## 1. Préparer un article et sa branche
@@ -23,15 +25,13 @@ Créer `articles/histoire-imprimerie.html`. Les six articles existants sont des 
 
 Conserver les feuilles communes et utiliser `../assets/article.css`. Faire générer la coque commune par `site_chrome.py` à l'étape 6. Ne pas copier manuellement les en-têtes générés dans plusieurs pages.
 
-Renseigner explicitement :
+Renseigner dans le HTML :
 
-- Un `<title>` propre à la page et une meta description utile.
 - Un H1 ; H2 pour les grandes sections, H3 pour leurs subdivisions.
 - La langue `fr`, le viewport, le lien d'évitement vers le main.
-- La canonique absolue confirmée et `og:url`, identiques à l'URL de l'article.
-- Open Graph : titre, description, type `article`, image 1200 × 630 et alt ; mêmes informations dans les métadonnées Twitter.
-- Un bloc JSON-LD `Article` : headline, description, URL/mainEntityOfPage, langue, auteur réellement choisi par l'éditeur, image et dates.
 - Dates de publication et de mise à jour visibles et lisibles. Ne pas inventer une date pour améliorer le SEO.
+
+Renseigner une seule fois dans la notice JSON (étape 3) le titre SEO, la description, le titre éditorial exact du H1, l'auteur, les dates et l'image sociale. `update-article-editorial.py --write` produit le title, la description, la canonique, Open Graph/Twitter et le bloc `Article` manquant. Il conserve les champs documentaires du JSON-LD existant et sa description si elle est déjà présente. Si le modèle copié contient un ancien bloc `Article`, le retirer avant génération pour éviter de conserver des propriétés propres au sujet précédent (`about`, `keywords`, `articleSection`, description…). Ne pas garder un ancien bloc WebPage décrivant l'article modèle.
 
 Les chemins `../assets/…` conviennent depuis `articles/`. La navigation commune utilise `/Thot/…`. Tester sous /Thot/, pas seulement par double-clic sur le fichier.
 
@@ -50,6 +50,15 @@ Exemple de structure, à compléter avec les vraies données :
   "published": "2026-11-10",
   "editorial_updated": "2026-11-10",
   "editorial_scope": "Première publication.",
+  "headline": "Comment l’imprimerie a-t-elle transformé la circulation des livres ?",
+  "seo": {
+    "title": "Imprimerie : comment les livres ont changé d’échelle | THOT",
+    "description": "Une explication documentée de la fabrication et de la circulation des livres imprimés, avec des sources et leurs limites."
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "La rédaction THOT"
+  },
   "social": {
     "title": "Un titre court et fidèle à l’article",
     "description": "Une description précise de la question traitée.",
@@ -71,7 +80,7 @@ Exemple de structure, à compléter avec les vraies données :
 }
 ```
 
-Les dates de cet exemple sont fictives : les remplacer avant publication. Catégories reconnues : `histoire`, `geographie`, `sciences`, `arts`, `sciences-humaines`. Les mots-clés facilitent la recherche interne, ils ne sont pas une balise SEO.
+Les dates, titres et médias de cet exemple sont des exemples à remplacer avant publication. `headline` doit être exactement le H1 (espaces normalisés) ; `seo.title` peut être plus court, sans déformer le sujet. `author` doit correspondre à la signature visible et réelle ; un auteur individuel peut utiliser `Person`. `social.image` est l'image représentative utilisée dans le partage et Schema.org ; le visuel affiché dans l'article garde ses propres dimensions, crédit et alt. Catégories reconnues : `histoire`, `geographie`, `sciences`, `arts`, `sciences-humaines`. Les mots-clés facilitent la recherche interne, ils ne sont pas une balise SEO.
 
 Le champ `catalogue` permet au synchroniseur de créer la carte de bibliothèque. Les cartes existantes conservent leurs textes et crédits. L'image sociale doit être locale, en 1200 × 630 ; sa création et ses droits restent un travail éditorial. Le générateur historique de cartes sociales ne crée pas automatiquement une composition pour chaque nouveau sujet.
 
@@ -90,6 +99,10 @@ Une animation est facultative. Conserver une explication statique complète, un 
 ## 5. Bibliothèque, accueil et sitemap
 
 Ne pas ajouter une carte manuellement dans plusieurs fichiers. Le synchroniseur ajoute les articles manquants à la bibliothèque, actualise le total statique et complète le sitemap. Il refuse les notices oubliées, les doublons et les suppressions implicites. Il ne réécrit pas les crédits des cartes existantes.
+
+Le sitemap reprend désormais `editorial_updated` pour le `lastmod` des articles. Déclarer la vraie date de publication et une modification seulement lors d'une révision significative ; jamais la date du lancement du script. Les autres pages gardent leurs dates explicites. L'absence de `lastmod` n'est pas un blocage d'indexation.
+
+Ajouter un à trois liens dans le texte ou les recommandations lorsque des correspondances réelles existent (voir la stratégie). La bibliothèque assure le premier lien entrant de tout nouvel article ; ajouter un lien depuis un ancien article est utile si son contexte s'y prête. Aucun lien forcé pour remplir un quota.
 
 L'accueil reste une sélection éditoriale, libellée « À la une ». Il n'est pas nécessaire de le modifier deux fois par semaine : tous les articles sont accessibles dans la bibliothèque. Son bouton surprise choisit parmi les articles de l'accueil ; celui de la bibliothèque choisit parmi toutes ses cartes.
 
@@ -119,6 +132,8 @@ python scripts/update-reading-times.py --check
 python scripts/build-explorer-reconstruction.py --check
 python scripts/site_chrome.py --check
 python scripts/test-publication.py
+python scripts/check-seo.py
+python scripts/test-seo.py
 python scripts/test-portabilite.py
 node scripts/check-site.mjs
 node scripts/check-home.mjs

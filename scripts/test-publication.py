@@ -63,9 +63,17 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("&lt;lisible&gt; &amp; sourcée", library)
         self.assertIn('id="article-total">1', library)
         self.assertIn(self.base + "articles/essai-1917.html", planned[self.root / "sitemap.xml"])
+        self.assertIn('<lastmod>2026-11-03</lastmod>', planned[self.root / 'sitemap.xml'])
         for path, value in planned.items():
             path.write_text(value, encoding="utf-8")
         self.assertEqual(sync.outputs(self.root), planned)
+
+    def test_sitemap_uses_explicit_editorial_date_without_touching_other_pages(self):
+        self.record['editorial_updated'] = '2026-11-04'
+        self.save()
+        planned = sync.outputs(self.root)
+        self.assertIn('<lastmod>2026-11-04</lastmod>', planned[self.root / 'sitemap.xml'])
+        self.assertNotIn('<loc>' + self.base + '</loc><lastmod>', planned[self.root / 'sitemap.xml'])
 
     def test_unregistered_article_is_rejected(self):
         self.page("articles/oublie.html")

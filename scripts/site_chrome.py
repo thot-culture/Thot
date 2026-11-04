@@ -3,6 +3,7 @@
 import re
 import json
 import hashlib
+from html import escape
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 BASE = 'https://thot-culture.github.io/Thot/'
@@ -55,12 +56,23 @@ def normalize(page, html):
     else: html = html.replace('</body>', '<footer class="site-info-footer">'+utility+'</footer></body>')
     html = re.sub(r'(<nav id="site-parcours"[^>]*>).*?(</nav>)', lambda m:m[1]+links(LINKS[:4]+[LINKS[5]])+m[2], html, flags=re.S)
     if page != '404.html':
+        # Descriptions des images sociales existantes, y compris pages générées.
+        social_alts = {
+            'assets/og-thot.png': 'THOT — Le magazine des esprits curieux. Histoire, géographie, sciences humaines.',
+            'assets/explorer-v2/media/moynaq-original.jpg': 'Deux bateaux échoués sur un sol sec à Moynaq, photographiés en mars 2011.',
+            'assets/explorer-v2/media/met-248042.webp': 'Sesterce de Trajan, photographie du Metropolitan Museum of Art.',
+        }
+        image = re.search(r'<meta property="og:image" content="([^"]+)"', html)
         title = re.search(r'<title>(.*?)</title>', html, re.S)[1]
         if 'application/ld+json' not in html:
             schema = {'@context':'https://schema.org','@type':'WebSite' if page=='index.html' else 'WebPage','name':title,'url':BASE+('' if page=='index.html' else page),'inLanguage':'fr'}
             html = html.replace('</head>', '<script type="application/ld+json">'+json.dumps(schema,ensure_ascii=False)+'</script></head>')
         for prop, content in [('og:site_name','THOT'), ('og:locale','fr_FR')]:
             if 'property="'+prop+'"' not in html: html = html.replace('</head>', '<meta property="'+prop+'" content="'+content+'"></head>')
+        if image and 'property="og:image:alt"' not in html:
+            alt = social_alts.get(image[1].removeprefix(BASE))
+            if alt:
+                html = html.replace('</head>', '<meta property="og:image:alt" content="'+escape(alt, quote=True)+'"></head>', 1)
     html = re.sub(r'<link rel="stylesheet" href="/Thot/assets/navigation\.css[^\"]*">', '', html)
     html = html.replace('</head>', '<link rel="stylesheet" href="'+version('navigation.css')+'"></head>')
     html = re.sub(r'<link rel="stylesheet" href="/Thot/assets/visual-system\.css[^\"]*">', '', html)

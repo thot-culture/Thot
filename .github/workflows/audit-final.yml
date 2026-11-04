@@ -48,6 +48,8 @@ jobs:
           node scripts/check-site.mjs
           node scripts/check-home.mjs
           python scripts/test-article-editorial.py
+          python scripts/check-seo.py
+          python scripts/test-seo.py
           python scripts/build-explorer-reconstruction.py --check
           python scripts/site_chrome.py --check
           node --input-type=module -e 'import {readdirSync} from "node:fs"; import {execFileSync} from "node:child_process"; for(const n of readdirSync("scripts").filter(n=>/^test-.*\.mjs$/.test(n)))execFileSync(process.execPath,["scripts/"+n],{stdio:"inherit"})'

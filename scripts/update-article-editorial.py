@@ -8,7 +8,7 @@ données éditoriales explicites : ce script ne les déduit jamais de Git ou de 
 import portable_io  # Encodage CLI stable, sans dépendance système.
 import argparse
 from datetime import date
-from html import escape
+from html import escape, unescape
 import json
 from pathlib import Path
 import re
@@ -38,6 +38,76 @@ def set_meta(html, key, value, attribute="property"):
     if re.search(pattern, html):
         return re.sub(pattern, lambda _: tag, html)
     return html.replace("</head>", f"  {tag}\n</head>", 1)
+
+
+def update_seo(html, record, config):
+    """Une seule notice pour les métadonnées ; le corps de l'article est conservé."""
+    for value in (record["seo"]["title"], record["seo"]["description"],
+                  record["headline"], record["author"].get("name"),
+                  record["social"]["alt"]):
+        if not isinstance(value, str) or not value.strip():
+            raise ValueError("Métadonnée éditoriale vide : " + record["slug"])
+    if record["author"].get("@type") not in ("Person", "Organization"):
+        raise ValueError("Auteur Person ou Organization attendu")
+    h1 = re.findall(r'<h1\b[^>]*>([\s\S]*?)</h1>', html)
+    clean = lambda text: " ".join(unescape(re.sub(r'<[^>]+>', '', text)).split())
+    if len(h1) != 1 or clean(h1[0]) != clean(record["headline"]):
+        raise ValueError("H1 et titre éditorial contradictoires : " + record["slug"])
+    head = re.search(r'<head\b[^>]*>[\s\S]*?</head>', html)
+    if not head:
+        raise ValueError("En-tête HTML absent : " + record["slug"])
+    prefix, suffix = html[:head.start()], html[head.end():]
+    html = head[0]
+    title = '<title>' + escape(record["seo"]["title"]) + '</title>'
+    if re.search(r'<title>[^<]*</title>', html):
+        html = re.sub(r'<title>[^<]*</title>', lambda m: m[0] if unescape(m[0][7:-8]) == record["seo"]["title"] else title, html, count=1)
+    else:
+        html = html.replace('</head>', title + '\n</head>', 1)
+    # Ne pas réécrire une balise déjà identique (formatage historique conservé).
+    existing = re.search(r'<meta\b[^>]*name="description"[^>]*content="([^"]*)"[^>]*>', html)
+    if not existing or unescape(existing[1]) != record["seo"]["description"]:
+        html = set_meta(html, "description", record["seo"]["description"], "name")
+    canonical = config["base_url"] + "articles/" + record["slug"] + ".html"
+    tag = '<link rel="canonical" href="' + escape(canonical, quote=True) + '">'
+    pattern = r'<link\b[^>]*rel="canonical"[^>]*>'
+    html = re.sub(pattern, lambda _: tag, html) if re.search(pattern, html) else html.replace('</head>', tag + '\n</head>', 1)
+    pattern = r'(<script\b[^>]*type="application/ld\+json"[^>]*>)([\s\S]*?)(</script>)'
+    found = []
+    def structured(match):
+        data = json.loads(match[2])
+        if data.get("@type") != "Article":
+            return match[0]
+        found.append(True)
+        before = dict(data)
+        data.update(headline=record["headline"], author=record["author"],
+                    datePublished=record["published"],
+                    dateModified=record.get("editorial_updated", config["editorial_updated"]))
+        image = config["base_url"] + record["social"]["image"]
+        data["image"] = [image] if isinstance(data.get("image"), list) else image
+        page = data.get("mainEntityOfPage")
+        if isinstance(page, dict):
+            data["mainEntityOfPage"] = dict(page, **{"@id": canonical})
+        else:
+            data["mainEntityOfPage"] = canonical
+        # Une description structurée existante et fidèle n'a pas à être réécrite.
+        data.setdefault("description", record["social"]["description"])
+        if data == before:
+            return match[0]
+        return match[1] + '\n' + json.dumps(data, ensure_ascii=False, indent=2).replace('<', '\\u003c') + '\n' + match[3]
+    html = re.sub(pattern, structured, html)
+    if len(found) > 1:
+        raise ValueError("Plusieurs blocs Article : " + record["slug"])
+    if not found:
+        data = {"@context": "https://schema.org", "@type": "Article",
+                "headline": record["headline"], "description": record["social"]["description"],
+                "author": record["author"], "publisher": {"@type": "Organization", "name": "THOT"},
+                "mainEntityOfPage": canonical, "inLanguage": "fr-FR",
+                "image": config["base_url"] + record["social"]["image"],
+                "datePublished": record["published"],
+                "dateModified": record.get("editorial_updated", config["editorial_updated"])}
+        block = '<script type="application/ld+json">\n' + json.dumps(data, ensure_ascii=False, indent=2).replace('<', '\\u003c') + '\n</script>'
+        html = html.replace('</head>', block + '\n</head>', 1)
+    return prefix + html + suffix
 
 
 def render_science(record):
@@ -72,6 +142,7 @@ def update(html, record, config):
     slug = record["slug"]
     if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", slug):
         raise ValueError("Identifiant d’article invalide")
+    html = update_seo(html, record, config)
     updated = record.get("editorial_updated", config["editorial_updated"])
     scope = record.get("editorial_scope", config["editorial_scope"])
     for document in record.get("open_documents", []):
@@ -96,6 +167,17 @@ def update(html, record, config):
             raise ValueError(f"Article encore en brouillon : {slug}")
         if data.get("image") != config["base_url"] + record["social"]["image"]:
             raise ValueError(f"Image sociale contradictoire : {slug}")
+        card = record["social"]
+        for key, value in {"og:type": "article", "og:title": card["title"],
+                           "og:description": card["description"], "og:url": canonical,
+                           "og:image": config["base_url"] + card["image"], "og:image:alt": card["alt"],
+                           "og:image:width": "1200", "og:image:height": "630",
+                           "twitter:card": "summary_large_image", "twitter:title": card["title"],
+                           "twitter:description": card["description"],
+                           "twitter:image": config["base_url"] + card["image"], "twitter:image:alt": card["alt"]}.items():
+            current = re.search(r'<meta\b[^>]*(?:property|name)="' + re.escape(key) + r'"[^>]*content="([^"]*)"', html)
+            if not current or unescape(current[1]) != value:
+                html = set_meta(html, key, value, "name" if key.startswith("twitter:") else "property")
         return html
     html = remove_generated(html)
     html = re.sub(r'<span\b[^>]*class="source-type"[^>]*>[^<]*</span>\s*', '', html)

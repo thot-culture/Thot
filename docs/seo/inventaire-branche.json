@@ -1,0 +1,501 @@
+{
+  "pages": [
+    {
+      "path": "404.html",
+      "indexable": false,
+      "title": [
+        "Page introuvable — THOT"
+      ],
+      "description": "Page introuvable : retrouvez les articles documentés et les quiz THOT.",
+      "canonical": [],
+      "h1": [
+        "Cette page est introuvable."
+      ],
+      "schema_types": []
+    },
+    {
+      "path": "articles/autorite.html",
+      "indexable": true,
+      "title": [
+        "Pourquoi ne réagit-on pas tous pareil face à l’autorité ? | THOT"
+      ],
+      "description": "Parents, État, direction scolaire : pourquoi obéit-on, négocie-t-on ou résiste-t-on ? Ce que la psychologie explique — et ses limites.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/articles/autorite.html"
+      ],
+      "h1": [
+        "Pourquoi ne réagit-on pas tous pareil face à l’autorité ?"
+      ],
+      "schema_types": [
+        "Article"
+      ]
+    },
+    {
+      "path": "articles/autrices-pseudonymes.html",
+      "indexable": true,
+      "title": [
+        "Pourquoi des autrices ont-elles publié sous un nom d’homme ? | THOT"
+      ],
+      "description": "Trois trajectoires d’autrices, des sources primaires et institutionnelles, et ce qu’elles permettent réellement de dire sur leurs noms de plume.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/articles/autrices-pseudonymes.html"
+      ],
+      "h1": [
+        "Pourquoi des autrices ont-elles publié sous un nom d’homme ?"
+      ],
+      "schema_types": [
+        "Article"
+      ]
+    },
+    {
+      "path": "articles/evolution-strategies-militaires.html",
+      "indexable": true,
+      "title": [
+        "Pourquoi les nouvelles armes ne suffisent-elles pas à gagner une guerre ? | THOT"
+      ],
+      "description": "De Cannes aux drones en Ukraine : six étapes pour comprendre pourquoi les armes ne suffisent pas, avec quatre activités et des sources historiques.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/articles/evolution-strategies-militaires.html"
+      ],
+      "h1": [
+        "Pourquoi les nouvelles armes ne suffisent-elles pas à gagner une guerre ?"
+      ],
+      "schema_types": [
+        "Article"
+      ]
+    },
+    {
+      "path": "articles/pieuvres-couleur.html",
+      "indexable": true,
+      "title": [
+        "Comment les pieuvres changent-elles de couleur ? | THOT"
+      ],
+      "description": "Chromatophores, muscles et signaux nerveux : découvrez simplement comment les pieuvres changent de couleur et dessinent leurs motifs.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/articles/pieuvres-couleur.html"
+      ],
+      "h1": [
+        "Comment les pieuvres changent-elles de couleur ?"
+      ],
+      "schema_types": [
+        "Article"
+      ]
+    },
+    {
+      "path": "articles/puissance-etats-unis.html",
+      "indexable": true,
+      "title": [
+        "Pourquoi les États-Unis ne peuvent-ils pas tout imposer ? | THOT"
+      ],
+      "description": "Afghanistan, Iran, Daech : comprendre pourquoi les moyens militaires et économiques des États-Unis ne garantissent pas le résultat politique attendu.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/articles/puissance-etats-unis.html"
+      ],
+      "h1": [
+        "Pourquoi les États-Unis ne peuvent-ils pas tout imposer ?"
+      ],
+      "schema_types": [
+        "Article"
+      ]
+    },
+    {
+      "path": "articles/roubaix-1917.html",
+      "indexable": true,
+      "title": [
+        "Roubaix en 1917 : vivre sous l'occupation allemande | THOT"
+      ],
+      "description": "Roubaix en 1917 : découvrez l’occupation allemande à travers des affiches d’époque, des photographies historiques et une frise interactive de 1914 à 1918.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/articles/roubaix-1917.html"
+      ],
+      "h1": [
+        "Roubaix en 1917 : vivre sous l'occupation allemande"
+      ],
+      "schema_types": [
+        "Article"
+      ]
+    },
+    {
+      "path": "bibliotheque.html",
+      "indexable": true,
+      "title": [
+        "Bibliothèque — Tous les articles | THOT"
+      ],
+      "description": "Découvrez les articles THOT : histoire, géographie, géopolitique, sciences et culture générale. Recherchez et explorez notre bibliothèque documentée.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/bibliotheque.html"
+      ],
+      "h1": [
+        "La bibliothèque des esprits curieux."
+      ],
+      "schema_types": [
+        "WebPage"
+      ]
+    },
+    {
+      "path": "confidentialite.html",
+      "indexable": true,
+      "title": [
+        "Confidentialité et stockage local | THOT"
+      ],
+      "description": "Comment THOT utilise le stockage du navigateur et ce qui est transmis à GitHub lors de la consultation du site.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/confidentialite.html"
+      ],
+      "h1": [
+        "Confidentialité et stockage local"
+      ],
+      "schema_types": [
+        "WebPage"
+      ]
+    },
+    {
+      "path": "contact.html",
+      "indexable": true,
+      "title": [
+        "Contact et corrections | THOT"
+      ],
+      "description": "Signaler une erreur, un lien cassé ou proposer une correction éditoriale à THOT via son dépôt GitHub.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/contact.html"
+      ],
+      "h1": [
+        "Contact et corrections"
+      ],
+      "schema_types": [
+        "WebPage"
+      ]
+    },
+    {
+      "path": "explorer/atlas/rome-expansion.html",
+      "indexable": true,
+      "title": [
+        "L’expansion de Rome — THOT"
+      ],
+      "description": "Un atlas historique documenté : huit états cartographiques, six chapitres, un comparateur temporel et des objets à examiner.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/explorer/atlas/rome-expansion.html"
+      ],
+      "h1": [
+        "L’expansion de RomeUne cité. Un monde en mouvement."
+      ],
+      "schema_types": [
+        "WebPage"
+      ]
+    },
+    {
+      "path": "explorer/enquetes/mer-aral.html",
+      "indexable": true,
+      "title": [
+        "Le mystère de la mer d’Aral — THOT"
+      ],
+      "description": "Une enquête documentaire sur le recul de la mer d’Aral : onze pièces documentées, un tableau de preuves et une conclusion à construire.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/explorer/enquetes/mer-aral.html"
+      ],
+      "h1": [
+        "Pourquoi ces bateaux sont-ils au milieu du désert ?"
+      ],
+      "schema_types": [
+        "WebPage"
+      ]
+    },
+    {
+      "path": "explorer.html",
+      "indexable": true,
+      "title": [
+        "Explorer — THOT"
+      ],
+      "description": "Enquêter sur la mer d’Aral et explorer l’expansion de Rome dans deux expériences documentées et interactives.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/explorer.html"
+      ],
+      "h1": [
+        "EXPLORER"
+      ],
+      "schema_types": [
+        "WebPage"
+      ]
+    },
+    {
+      "path": "index.html",
+      "indexable": true,
+      "title": [
+        "THOT — Articles documentés et quiz de culture générale"
+      ],
+      "description": "Articles documentés d’histoire, de géographie et de culture générale, avec des quiz gratuits pour apprendre en jouant.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/"
+      ],
+      "h1": [
+        "La curiosité est un super-pouvoir."
+      ],
+      "schema_types": [
+        "WebSite"
+      ]
+    },
+    {
+      "path": "mentions-legales.html",
+      "indexable": true,
+      "title": [
+        "Informations légales — éléments à compléter | THOT"
+      ],
+      "description": "Informations sur THOT, son hébergement et les éléments juridiques restant à valider.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/mentions-legales.html"
+      ],
+      "h1": [
+        "Informations légales — éléments à compléter"
+      ],
+      "schema_types": [
+        "WebPage"
+      ]
+    },
+    {
+      "path": "notre-methode.html",
+      "indexable": true,
+      "title": [
+        "Notre méthode éditoriale | THOT"
+      ],
+      "description": "Comment THOT choisit ses sources, distingue les faits des interprétations et vérifie les images.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/notre-methode.html"
+      ],
+      "h1": [
+        "Notre méthode"
+      ],
+      "schema_types": [
+        "WebPage"
+      ]
+    },
+    {
+      "path": "quiz-autrices.html",
+      "indexable": true,
+      "title": [
+        "Jeu : qui se cache derrière ces pseudonymes ? | THOT"
+      ],
+      "description": "Relie Currer, Ellis et Acton Bell, George Eliot et George Sand aux autrices qui les ont signées. Jeu court avec explications et sources.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/quiz-autrices.html"
+      ],
+      "h1": [
+        "Qui se cache derrière ces pseudonymes ?"
+      ],
+      "schema_types": [
+        "WebPage"
+      ]
+    },
+    {
+      "path": "quiz.html",
+      "indexable": true,
+      "title": [
+        "Le quiz THOT — Culture générale"
+      ],
+      "description": "Joue au quiz de culture générale THOT : cinq univers, trois niveaux, des corrections expliquées et un défi quotidien.",
+      "canonical": [
+        "https://thot-culture.github.io/Thot/quiz.html"
+      ],
+      "h1": [
+        "À toi de jouer."
+      ],
+      "schema_types": [
+        "WebPage"
+      ]
+    }
+  ],
+  "inbound": {
+    "404.html": [],
+    "articles/autorite.html": [
+      "bibliotheque.html",
+      "index.html"
+    ],
+    "articles/autrices-pseudonymes.html": [
+      "bibliotheque.html",
+      "index.html",
+      "quiz-autrices.html"
+    ],
+    "articles/evolution-strategies-militaires.html": [
+      "bibliotheque.html"
+    ],
+    "articles/pieuvres-couleur.html": [
+      "bibliotheque.html",
+      "index.html"
+    ],
+    "articles/puissance-etats-unis.html": [
+      "articles/roubaix-1917.html",
+      "bibliotheque.html",
+      "index.html"
+    ],
+    "articles/roubaix-1917.html": [
+      "articles/autrices-pseudonymes.html",
+      "articles/puissance-etats-unis.html",
+      "bibliotheque.html",
+      "index.html"
+    ],
+    "bibliotheque.html": [
+      "404.html",
+      "articles/autorite.html",
+      "articles/autrices-pseudonymes.html",
+      "articles/evolution-strategies-militaires.html",
+      "articles/pieuvres-couleur.html",
+      "articles/puissance-etats-unis.html",
+      "articles/roubaix-1917.html",
+      "confidentialite.html",
+      "contact.html",
+      "explorer.html",
+      "explorer/atlas/rome-expansion.html",
+      "explorer/enquetes/mer-aral.html",
+      "index.html",
+      "mentions-legales.html",
+      "notre-methode.html",
+      "quiz-autrices.html",
+      "quiz.html"
+    ],
+    "confidentialite.html": [
+      "404.html",
+      "articles/autorite.html",
+      "articles/autrices-pseudonymes.html",
+      "articles/evolution-strategies-militaires.html",
+      "articles/pieuvres-couleur.html",
+      "articles/puissance-etats-unis.html",
+      "articles/roubaix-1917.html",
+      "bibliotheque.html",
+      "contact.html",
+      "explorer.html",
+      "explorer/atlas/rome-expansion.html",
+      "explorer/enquetes/mer-aral.html",
+      "index.html",
+      "mentions-legales.html",
+      "notre-methode.html",
+      "quiz-autrices.html",
+      "quiz.html"
+    ],
+    "contact.html": [
+      "404.html",
+      "articles/autorite.html",
+      "articles/autrices-pseudonymes.html",
+      "articles/evolution-strategies-militaires.html",
+      "articles/pieuvres-couleur.html",
+      "articles/puissance-etats-unis.html",
+      "articles/roubaix-1917.html",
+      "bibliotheque.html",
+      "confidentialite.html",
+      "explorer.html",
+      "explorer/atlas/rome-expansion.html",
+      "explorer/enquetes/mer-aral.html",
+      "index.html",
+      "mentions-legales.html",
+      "notre-methode.html",
+      "quiz-autrices.html",
+      "quiz.html"
+    ],
+    "explorer/atlas/rome-expansion.html": [
+      "explorer.html"
+    ],
+    "explorer/enquetes/mer-aral.html": [
+      "explorer.html"
+    ],
+    "explorer.html": [
+      "404.html",
+      "articles/autorite.html",
+      "articles/autrices-pseudonymes.html",
+      "articles/evolution-strategies-militaires.html",
+      "articles/pieuvres-couleur.html",
+      "articles/puissance-etats-unis.html",
+      "articles/roubaix-1917.html",
+      "bibliotheque.html",
+      "confidentialite.html",
+      "contact.html",
+      "explorer/atlas/rome-expansion.html",
+      "explorer/enquetes/mer-aral.html",
+      "index.html",
+      "mentions-legales.html",
+      "notre-methode.html",
+      "quiz-autrices.html",
+      "quiz.html"
+    ],
+    "index.html": [
+      "404.html",
+      "articles/autorite.html",
+      "articles/autrices-pseudonymes.html",
+      "articles/evolution-strategies-militaires.html",
+      "articles/pieuvres-couleur.html",
+      "articles/puissance-etats-unis.html",
+      "articles/roubaix-1917.html",
+      "bibliotheque.html",
+      "confidentialite.html",
+      "contact.html",
+      "explorer.html",
+      "explorer/atlas/rome-expansion.html",
+      "explorer/enquetes/mer-aral.html",
+      "mentions-legales.html",
+      "notre-methode.html",
+      "quiz-autrices.html",
+      "quiz.html"
+    ],
+    "mentions-legales.html": [
+      "404.html",
+      "articles/autorite.html",
+      "articles/autrices-pseudonymes.html",
+      "articles/evolution-strategies-militaires.html",
+      "articles/pieuvres-couleur.html",
+      "articles/puissance-etats-unis.html",
+      "articles/roubaix-1917.html",
+      "bibliotheque.html",
+      "confidentialite.html",
+      "contact.html",
+      "explorer.html",
+      "explorer/atlas/rome-expansion.html",
+      "explorer/enquetes/mer-aral.html",
+      "index.html",
+      "notre-methode.html",
+      "quiz-autrices.html",
+      "quiz.html"
+    ],
+    "notre-methode.html": [
+      "404.html",
+      "articles/autorite.html",
+      "articles/autrices-pseudonymes.html",
+      "articles/evolution-strategies-militaires.html",
+      "articles/pieuvres-couleur.html",
+      "articles/puissance-etats-unis.html",
+      "articles/roubaix-1917.html",
+      "bibliotheque.html",
+      "confidentialite.html",
+      "contact.html",
+      "explorer.html",
+      "explorer/atlas/rome-expansion.html",
+      "explorer/enquetes/mer-aral.html",
+      "index.html",
+      "mentions-legales.html",
+      "quiz-autrices.html",
+      "quiz.html"
+    ],
+    "quiz-autrices.html": [
+      "articles/autrices-pseudonymes.html"
+    ],
+    "quiz.html": [
+      "404.html",
+      "articles/autorite.html",
+      "articles/autrices-pseudonymes.html",
+      "articles/evolution-strategies-militaires.html",
+      "articles/pieuvres-couleur.html",
+      "articles/puissance-etats-unis.html",
+      "articles/roubaix-1917.html",
+      "bibliotheque.html",
+      "confidentialite.html",
+      "contact.html",
+      "explorer.html",
+      "explorer/atlas/rome-expansion.html",
+      "explorer/enquetes/mer-aral.html",
+      "index.html",
+      "mentions-legales.html",
+      "notre-methode.html",
+      "quiz-autrices.html"
+    ]
+  },
+  "errors": [],
+  "warnings": [
+    "articles/evolution-strategies-militaires.html : saut de niveau h2 → h4"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "url": "https://thot-culture.github.io/Thot/explorer/atlas/rome-expansion.html",
+  "status": 200,
+  "content_encoding": "gzip",
+  "response_body_bytes": 144808,
+  "decoded_bytes": 605959,
+  "cache_control": "max-age=600",
+  "note": "GET via le proxy de cet environnement ; pas une mesure de LCP."
+}

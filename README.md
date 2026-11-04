@@ -36,9 +36,13 @@ Les scripts `test-*.mjs` et `test-*.py` couvrent les activités, les corpus et l
 
 Le [guide de publication des articles](GUIDE-PUBLICATION-ARTICLES.md) décrit le travail courant (HTML, notice et médias), la synchronisation de la bibliothèque et du sitemap et les contrôles avant PR. Le [rapport d’audit final](docs/AUDIT-FINAL-THOT.md) distingue les défauts corrigés, les mesures réelles et les réserves.
 
+Préparation du référencement : [audit SEO](docs/AUDIT-SEO-THOT.md), [configuration de Google Search Console](docs/GOOGLE-SEARCH-CONSOLE.md), [stratégie éditoriale et suivi](docs/STRATEGIE-SEO-THOT.md). La propriété prévue est `https://thot-culture.github.io/Thot/` ; aucune connexion Google ni garantie d'indexation n'est implicite.
+
 ```sh
 python scripts/sync-publication.py --check
 python scripts/test-publication.py
+python scripts/check-seo.py
+python scripts/test-seo.py
 # Comparer les anciens contenus au commit choisi avant les modifications :
 python scripts/check-conservation.py --revision SHA_DU_SOCLE
 ```
