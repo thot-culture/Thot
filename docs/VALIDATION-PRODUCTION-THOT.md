@@ -200,4 +200,3 @@ Le dossier de livraison `preuves-production` contient notamment les 90 captures 
 ## THOT EST-IL PRÊT POUR DEUX PUBLICATIONS HEBDOMADAIRES ?
 
 **OUI AVEC RÉSERVES.** Les 18 pages publiques, les cinq largeurs, les parcours essentiels, le SEO technique et deux publications fictives successives ont été vérifiés avec succès. Aucun chantier technique supplémentaire n'est nécessaire pour démarrer la cadence mardi/vendredi. Les réserves portent sur la disponibilité des services d'images externes, les informations d'éditeur encore incomplètes, l'indexation réelle non consultée et les limites de cette recette navigateur. Chaque prochain article doit conserver sa relecture factuelle, documentaire et iconographique avant publication.
-
