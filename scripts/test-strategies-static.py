@@ -3,6 +3,7 @@ import portable_io
 from pathlib import Path
 from html.parser import HTMLParser
 import hashlib,json,subprocess,re,sys
+import runpy
 ROOT=Path(__file__).resolve().parents[1]
 PAGE=ROOT/'articles/evolution-strategies-militaires.html'
 class Audit(HTMLParser):
@@ -30,7 +31,8 @@ for p in ['sitemap.xml','bibliotheque.html']:
 original=(ROOT/'docs/strategies-validated-article.html.txt').read_text(encoding='utf-8')
 body=lambda html: re.search(r'<article id="texte-article"[\s\S]*?</article>',html)[0]
 normalize=lambda value: re.sub(r' (width|height)="[0-9]+"','',value)
-assert normalize(body(text))==normalize(body(original)), 'Le texte ou les activités ont changé depuis la validation locale'
+amended_structure=runpy.run_path(str(ROOT/'scripts/editorial-amendments.py'))['amended_structure']
+assert normalize(body(amended_structure(text,'articles/evolution-strategies-militaires.html')))==normalize(body(amended_structure(original,'articles/evolution-strategies-militaires.html'))), 'Le texte ou les activités ont changé depuis la validation locale'
 registry=json.loads((ROOT/'assets/article-editorial.json').read_text(encoding='utf-8'))
 record=next(row for row in registry['articles'] if row['slug']=='evolution-strategies-militaires')
 assert record['published']=='2026-10-27' and len(record['sources'])==22

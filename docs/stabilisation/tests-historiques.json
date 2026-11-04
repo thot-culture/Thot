@@ -1,0 +1,86 @@
+[
+  {
+    "revision": "main",
+    "script": "check-editorial.py",
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "ÉCHEC : texte éditorial modifié dans quiz-autrices.html"
+  },
+  {
+    "revision": "main",
+    "script": "test-stabilisation.py",
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/workspace/Thot-main/scripts/test-stabilisation.py\", line 98, in <module>\n    static_checks()\n  File \"/workspace/Thot-main/scripts/test-stabilisation.py\", line 40, in static_checks\n    assert len(htmls) == 11\n           ^^^^^^^^^^^^^^^^\nAssertionError"
+  },
+  {
+    "revision": "main",
+    "script": "test-strategies-static.py",
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/workspace/Thot-main/scripts/test-strategies-static.py\", line 45, in <module>\n    assert set(changes.splitlines()) <= allowed, changes\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: .github/workflows/verification-portable.yml\n404.html\nREADME.md\narticles/autorite.html\narticles/autrices-pseudonymes.html\narticles/pieuvres-couleur.html\narticles/puissance-etats-unis.html\narticles/roubaix-1917.html\nassets/article-editorial.json\nassets/bibliotheque.css\nassets/explorer-v2/atlas.js\nassets/reading-times.js\nassets/reading-times.json\nbibliotheque.html\nexplorer.html\nexplorer/atlas/rome-expansion.html\nexplorer/enquetes/mer-aral.html\nindex.html\nnotre-methode.html\nquiz-autrices.html\nquiz.html\nscripts/build-explorer-reconstruction.py\nscripts/test-article-editorial.py\nscripts/test-bibliotheque.mjs\nscripts/update-article-editorial.py\nscripts/update-reading-times.py\nsitemap.xml"
+  },
+  {
+    "revision": "main",
+    "script": "test-explorer-reconstruction.py",
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/workspace/Thot-main/scripts/test-explorer-reconstruction.py\", line 214, in <module>\n    parser=argparse.ArgumentParser();parser.add_argument('--browser',action='store_true');parser.add_argument('--out',type=Path,default=ROOT.parent/'THOT-EXPLORER-RECONSTRUCTION-20261026/captures');args=parser.parse_args();static_checks()\n                                                                                                                                                                                                                               ^^^^^^^^^^^^^^^\n  File \"/workspace/Thot-main/scripts/test-explorer-reconstruction.py\", line 37, in static_checks\n    assert current==before,'Modification non autorisée du socle : '+name\n           ^^^^^^^^^^^^^^^\nAssertionError: Modification non autorisée du socle : .github/workflows/verification-portable.yml"
+  },
+  {
+    "revision": "main",
+    "script": "test-explorer-finitions.py",
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/workspace/Thot-main/scripts/test-explorer-finitions.py\", line 149, in <module>\n    parser=argparse.ArgumentParser();parser.add_argument('--out',type=Path,default=ROOT.parent/'THOT-EXPLORER-FINITIONS-20261026/captures');args=parser.parse_args();conservation();run(args.out)\n                                                                                                                                                                     ^^^^^^^^^^^^^^\n  File \"/workspace/Thot-main/scripts/test-explorer-finitions.py\", line 23, in conservation\n    assert (ROOT/name).read_bytes()==subprocess.check_output(['git','show',baseline+':'+name],cwd=ROOT),name\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: .github/workflows/verification-portable.yml"
+  },
+  {
+    "revision": "main",
+    "script": "test-explorer-recette-finale.py",
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/workspace/Thot-main/scripts/test-explorer-recette-finale.py\", line 151, in <module>\n    parser=argparse.ArgumentParser();parser.add_argument('--browser',choices=['chromium','webkit','firefox'],default='chromium');parser.add_argument('--mode',choices=['http','fixture'],default='fixture');parser.add_argument('--origin',default='http://127.0.0.1:31460');parser.add_argument('--out',type=Path,default=ROOT.parent/'THOT-EXPLORER-CORRECTIONS-20261027/captures');args=parser.parse_args();conservation();run(args)\n                                                                                                                                                                                                                                                                                                                                                                                                               ^^^^^^^^^^^^^^\n  File \"/workspace/Thot-main/scripts/test-explorer-recette-finale.py\", line 56, in conservation\n    if name not in allowed:assert (ROOT/name).read_bytes()==subprocess.check_output(['git','show',baseline+':'+name],cwd=ROOT),'Régression hors périmètre : '+name\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Régression hors périmètre : .github/workflows/verification-portable.yml"
+  },
+  {
+    "revision": "consolidee",
+    "script": "check-editorial.py",
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "ÉCHEC : texte éditorial modifié dans quiz-autrices.html"
+  },
+  {
+    "revision": "consolidee",
+    "script": "test-stabilisation.py",
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/workspace/Thot-final/scripts/test-stabilisation.py\", line 98, in <module>\n    static_checks()\n  File \"/workspace/Thot-final/scripts/test-stabilisation.py\", line 40, in static_checks\n    assert len(htmls) == 11\n           ^^^^^^^^^^^^^^^^\nAssertionError"
+  },
+  {
+    "revision": "consolidee",
+    "script": "test-strategies-static.py",
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/workspace/Thot-final/scripts/test-strategies-static.py\", line 47, in <module>\n    assert set(changes.splitlines()) <= allowed, changes\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: .github/workflows/verification-portable.yml\n.gitignore\n404.html\nREADME.md\narticles/autorite.html\narticles/autrices-pseudonymes.html\narticles/pieuvres-couleur.html\narticles/puissance-etats-unis.html\narticles/roubaix-1917.html\nassets/article-editorial.json\nassets/bibliotheque.css\nassets/explorer-v2/atlas.css\nassets/explorer-v2/atlas.js\nassets/quiz.css\nassets/reading-times.js\nassets/reading-times.json\nassets/roubaix-photos.css\nassets/site-home.js\nassets/site.js\nbibliotheque.html\nexplorer.html\nexplorer/atlas/rome-expansion.html\nexplorer/enquetes/mer-aral.html\nindex.html\nnotre-methode.html\nquiz-autrices.html\nquiz.html\nscripts/build-explorer-reconstruction.py\nscripts/check-home.mjs\nscripts/editorial-amendments.py\nscripts/test-article-editorial.py\nscripts/test-bibliotheque.mjs\nscripts/test-home.mjs\nscripts/test-quiz.mjs\nscripts/update-article-editorial.py\nscripts/update-reading-times.py\nsitemap.xml"
+  },
+  {
+    "revision": "consolidee",
+    "script": "test-explorer-reconstruction.py",
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/workspace/Thot-final/scripts/test-explorer-reconstruction.py\", line 214, in <module>\n    parser=argparse.ArgumentParser();parser.add_argument('--browser',action='store_true');parser.add_argument('--out',type=Path,default=ROOT.parent/'THOT-EXPLORER-RECONSTRUCTION-20261026/captures');args=parser.parse_args();static_checks()\n                                                                                                                                                                                                                               ^^^^^^^^^^^^^^^\n  File \"/workspace/Thot-final/scripts/test-explorer-reconstruction.py\", line 37, in static_checks\n    assert current==before,'Modification non autorisée du socle : '+name\n           ^^^^^^^^^^^^^^^\nAssertionError: Modification non autorisée du socle : .github/workflows/verification-portable.yml"
+  },
+  {
+    "revision": "consolidee",
+    "script": "test-explorer-finitions.py",
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/workspace/Thot-final/scripts/test-explorer-finitions.py\", line 149, in <module>\n    parser=argparse.ArgumentParser();parser.add_argument('--out',type=Path,default=ROOT.parent/'THOT-EXPLORER-FINITIONS-20261026/captures');args=parser.parse_args();conservation();run(args.out)\n                                                                                                                                                                     ^^^^^^^^^^^^^^\n  File \"/workspace/Thot-final/scripts/test-explorer-finitions.py\", line 23, in conservation\n    assert (ROOT/name).read_bytes()==subprocess.check_output(['git','show',baseline+':'+name],cwd=ROOT),name\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: .github/workflows/verification-portable.yml"
+  },
+  {
+    "revision": "consolidee",
+    "script": "test-explorer-recette-finale.py",
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"/workspace/Thot-final/scripts/test-explorer-recette-finale.py\", line 151, in <module>\n    parser=argparse.ArgumentParser();parser.add_argument('--browser',choices=['chromium','webkit','firefox'],default='chromium');parser.add_argument('--mode',choices=['http','fixture'],default='fixture');parser.add_argument('--origin',default='http://127.0.0.1:31460');parser.add_argument('--out',type=Path,default=ROOT.parent/'THOT-EXPLORER-CORRECTIONS-20261027/captures');args=parser.parse_args();conservation();run(args)\n                                                                                                                                                                                                                                                                                                                                                                                                               ^^^^^^^^^^^^^^\n  File \"/workspace/Thot-final/scripts/test-explorer-recette-finale.py\", line 56, in conservation\n    if name not in allowed:assert (ROOT/name).read_bytes()==subprocess.check_output(['git','show',baseline+':'+name],cwd=ROOT),'Régression hors périmètre : '+name\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Régression hors périmètre : .github/workflows/verification-portable.yml"
+  }
+]

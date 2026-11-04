@@ -178,6 +178,10 @@ try{
     assert(item.overflow<=1,'Débordement horizontal '+name+' '+width);
     item.brokenImages=await p.locator('img').evaluateAll(es=>es.filter(i=>i.complete&&i.naturalWidth===0).map(i=>i.src));
     const nav=p.locator('#primary-navigation'),menu=p.locator('#mobile-menu-button');
+    for(const surprise of await p.locator('[data-surprise]').all()){
+     const visible=await surprise.evaluate(e=>{const copy=e.cloneNode(true);copy.querySelectorAll('[aria-hidden=true]').forEach(n=>n.remove());return copy.textContent.trim()});
+     assert((await surprise.getAttribute('aria-label')).toLocaleLowerCase('fr').includes(visible.toLocaleLowerCase('fr')),'Le nom accessible doit reprendre le libellé visible de la découverte surprise');
+    }
     if(width<711){
      await menu.focus();await p.keyboard.press('Enter');assert.equal(await menu.getAttribute('aria-expanded'),'true');
      assert(await nav.isVisible());await nav.locator('a').last().focus();await p.keyboard.press('Escape');

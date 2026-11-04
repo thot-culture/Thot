@@ -1,0 +1,30 @@
+{
+  "checked_utc": "2026-11-04T12:27:21.459914+00:00",
+  "publications": [
+    {
+      "number": 1,
+      "articles": 7,
+      "sitemap_urls": 18,
+      "metadata_sources_images_dates": "PASS",
+      "old_articles_unchanged": true,
+      "reading": {
+        "words": 725,
+        "minutes": 4
+      },
+      "idempotence": "PASS"
+    },
+    {
+      "number": 2,
+      "articles": 8,
+      "sitemap_urls": 19,
+      "metadata_sources_images_dates": "PASS",
+      "old_articles_unchanged": true,
+      "reading": {
+        "words": 725,
+        "minutes": 4
+      },
+      "idempotence": "PASS"
+    }
+  ],
+  "temporary_copy_removed": true
+}

@@ -39,15 +39,19 @@ jobs:
           python scripts/site_chrome.py
           git diff --output="$RUNNER_TEMP/generated.patch"
           python -c 'import subprocess,json; names=subprocess.check_output(["git","diff","--name-only"],text=True).splitlines(); print("GENERATED_FILES_JSON "+json.dumps({p:open(p,encoding="utf-8").read() for p in names},ensure_ascii=True))'
+          git diff --exit-code
       - name: Générateurs et contrôles actuels
         run: |
           python scripts/sync-publication.py --check
           python scripts/test-publication.py
+          python scripts/test-publication-integration.py --browser --output "$RUNNER_TEMP/evidence/publication-integration.json"
           python scripts/check-conservation.py --revision c7b62ad61c5ddabc63c61560175a55c85ec80200
           python scripts/test-portabilite.py
           node scripts/check-site.mjs
           node scripts/check-home.mjs
           python scripts/test-article-editorial.py
+          python scripts/check-seo.py
+          python scripts/test-seo.py
           python scripts/build-explorer-reconstruction.py --check
           python scripts/site_chrome.py --check
           node --input-type=module -e 'import {readdirSync} from "node:fs"; import {execFileSync} from "node:child_process"; for(const n of readdirSync("scripts").filter(n=>/^test-.*\.mjs$/.test(n)))execFileSync(process.execPath,["scripts/"+n],{stdio:"inherit"})'

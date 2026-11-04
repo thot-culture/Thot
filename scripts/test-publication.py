@@ -63,9 +63,17 @@ class PublicationTests(unittest.TestCase):
         self.assertIn("&lt;lisible&gt; &amp; sourcée", library)
         self.assertIn('id="article-total">1', library)
         self.assertIn(self.base + "articles/essai-1917.html", planned[self.root / "sitemap.xml"])
+        self.assertIn('<lastmod>2026-11-03</lastmod>', planned[self.root / 'sitemap.xml'])
         for path, value in planned.items():
             path.write_text(value, encoding="utf-8")
         self.assertEqual(sync.outputs(self.root), planned)
+
+    def test_sitemap_uses_explicit_editorial_date_without_touching_other_pages(self):
+        self.record['editorial_updated'] = '2026-11-04'
+        self.save()
+        planned = sync.outputs(self.root)
+        self.assertIn('<lastmod>2026-11-04</lastmod>', planned[self.root / 'sitemap.xml'])
+        self.assertNotIn('<loc>' + self.base + '</loc><lastmod>', planned[self.root / 'sitemap.xml'])
 
     def test_unregistered_article_is_rejected(self):
         self.page("articles/oublie.html")
@@ -106,6 +114,17 @@ class PublicationTests(unittest.TestCase):
         self.assertEqual(conservation.protected(before, repair["path"]), conservation.protected(after, repair["path"]))
         with self.assertRaises(ValueError):
             conservation.protected(before.replace(repair["old"], "https://example.org/"), repair["path"])
+
+    def test_only_six_documented_heading_levels_can_change(self):
+        changes = json.loads((HERE.parent / 'docs/stabilisation/modifications-structurelles.json').read_text(encoding='utf-8'))['changes']
+        self.assertEqual(len(changes), 6)
+        path = changes[0]['path']
+        before = '<main><p>Un fait sourcé.</p>' + ''.join(c['old'] for c in changes) + '</main>'
+        after = '<main><p>Un fait sourcé.</p>' + ''.join(c['new'] for c in changes) + '</main>'
+        self.assertEqual(conservation.protected(before, path), conservation.protected(after, path))
+        self.assertNotEqual(conservation.protected(before, path), conservation.protected(after.replace('Un fait', 'Un autre fait'), path))
+        with self.assertRaises(ValueError):
+            conservation.protected(after.replace(changes[0]['new'], '<h3>Un titre inventé</h3>'), path)
 
 
 if __name__ == "__main__":

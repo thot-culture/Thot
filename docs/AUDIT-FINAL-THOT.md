@@ -1,5 +1,7 @@
 # Audit final THOT — 3 novembre 2026
 
+Ce rapport conserve les résultats et réserves de ses révisions de référence. Pour la version consolidée de #22/#23/#24, les corrections finales et l'ordre d'intégration actuel, lire le [bilan de stabilisation](BILAN-STABILISATION-THOT.md).
+
 ## 1. Résumé général et périmètre
 
 **Verdict : OUI, AVEC RÉSERVES pour la version corrigée de cette branche.** Les changements restent proposés dans la [PR #23 en brouillon](https://github.com/thot-culture/Thot/pull/23). Ils ne sont pas déployés : main et la PR #22 restent inchangés. Ce verdict ne décrit donc pas une mise en production des correctifs.

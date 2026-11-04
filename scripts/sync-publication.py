@@ -117,6 +117,17 @@ def outputs(root=ROOT):
         raise ValueError("Sitemap : une URL existante est absente ou non indexable ; examiner manuellement, aucune suppression automatique")
     for canonical in sorted(expected - set(listed)):
         sitemap = sitemap.replace("</urlset>", "  <url><loc>" + escape(canonical) + "</loc></url>\n</urlset>")
+    # Uniquement les dates éditoriales explicites, jamais l'heure du build.
+    article_dates = {urljoin(base, 'articles/' + row['slug'] + '.html'):
+                     row.get('editorial_updated', config['editorial_updated']) for row in records}
+    def dated(match):
+        node = ET.fromstring(match[0])
+        location = node.findtext('loc')
+        if location not in article_dates:
+            return match[0]
+        body = re.sub(r'<lastmod>[^<]*</lastmod>', '', match[0])
+        return body.replace('</url>', '<lastmod>' + article_dates[location] + '</lastmod></url>')
+    sitemap = re.sub(r'<url>[\s\S]*?</url>', dated, sitemap)
     return {library_path: library, sitemap_path: sitemap}
 
 

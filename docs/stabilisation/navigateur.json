@@ -1,0 +1,2686 @@
+{
+  "pages": [
+    {
+      "name": "index.html",
+      "width": 320,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg"
+      ],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 19
+          }
+        ],
+        "passes": 25
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "bibliotheque.html",
+      "width": 320,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg"
+      ],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 15
+          }
+        ],
+        "passes": 26
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "explorer.html",
+      "width": 320,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 18
+          }
+        ],
+        "passes": 24
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "notre-methode.html",
+      "width": 320,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 1
+          }
+        ],
+        "passes": 18
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "quiz.html",
+      "width": 320,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 12
+          }
+        ],
+        "passes": 22
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "quiz-autrices.html",
+      "width": 320,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 4
+          }
+        ],
+        "passes": 22
+      },
+      "activities": [
+        "jeu autrices complet, erreur, clavier, explications, réinitialisation"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "mentions-legales.html",
+      "width": 320,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 1
+          }
+        ],
+        "passes": 19
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "confidentialite.html",
+      "width": 320,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 1
+          }
+        ],
+        "passes": 19
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "contact.html",
+      "width": 320,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 1
+          }
+        ],
+        "passes": 18
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "404.html",
+      "width": 320,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 1
+          }
+        ],
+        "passes": 19
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/autorite.html",
+      "width": 320,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 11
+          }
+        ],
+        "passes": 27
+      },
+      "activities": [
+        "trois situations, toutes réponses, trois scènes Décode et réinitialisation"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/autrices-pseudonymes.html",
+      "width": 320,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/The_Bront%C3%AB_Sisters_by_Patrick_Branwell_Bront%C3%AB_restored.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/The_Bront%C3%AB_Sisters_by_Patrick_Branwell_Bront%C3%AB_restored.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://upload.wikimedia.org/wikipedia/commons/a/ab/The_Bront%C3%AB_Sisters_by_Patrick_Branwell_Bront%C3%AB_restored.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg"
+      ],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 11
+          }
+        ],
+        "passes": 26
+      },
+      "activities": [
+        "jeu autrices complet, erreur, clavier, explications, réinitialisation"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/evolution-strategies-militaires.html",
+      "width": 320,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 17
+          }
+        ],
+        "passes": 28
+      },
+      "activities": [
+        "tous les états des trois modules, trois notices documentaires au clavier"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/pieuvres-couleur.html",
+      "width": 320,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Camouflage_octopus.jpg/960px-Camouflage_octopus.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Camouflage_octopus.jpg/960px-Camouflage_octopus.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Camouflage_octopus.jpg/960px-Camouflage_octopus.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg"
+      ],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 11
+          }
+        ],
+        "passes": 31
+      },
+      "activities": [
+        "curseur clavier, sept structures, couches activables"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/puissance-etats-unis.html",
+      "width": 320,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2311/8124895/1000w_q95.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2108/6797399/1000w_q95.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2311/8124895/1000w_q95.jpg",
+        "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2108/6797399/1000w_q95.jpg"
+      ],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 30
+          }
+        ],
+        "passes": 28
+      },
+      "activities": [
+        "trois cas, chronologie au clavier, tableau comparatif",
+        "glossaire, Échap, restitution du focus"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/roubaix-1917.html",
+      "width": 320,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/%22Revues_d%27Appel%22_(Erfassung_aller_Einwohner_von_Roubaix_und_Angabe_der_Meldetermine)_(No._289)_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_1376.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Usine_Motte_1910.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/%22Bekanntmachung.%22_Einschr%C3%A4nkung_des_freien_Verkehrs_der_Einwohner_im_Gebiet_Lille_-_Roubaix_-_Tourcoing_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_707.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 21
+          }
+        ],
+        "passes": 26
+      },
+      "activities": [
+        "huit dates et clavier, original chargé, repères du document, remise à zéro",
+        "glossaire, Échap, restitution du focus"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "explorer/atlas/rome-expansion.html",
+      "width": 320,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 23
+          }
+        ],
+        "passes": 27
+      },
+      "activities": [
+        "quatre personnages, quatre parcours complets, quatre documents, agrandissement, dialogues Échap et focus"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "explorer/enquetes/mer-aral.html",
+      "width": 320,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 1
+          }
+        ],
+        "passes": 20
+      },
+      "activities": [
+        "onze pièces, dialogues Échap et focus, tableau/carte, relation, argument et bilan, révision, remise à zéro"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "index.html",
+      "width": 390,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg"
+      ],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 19
+          }
+        ],
+        "passes": 25
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "bibliotheque.html",
+      "width": 390,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg"
+      ],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 15
+          }
+        ],
+        "passes": 26
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "explorer.html",
+      "width": 390,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 18
+          }
+        ],
+        "passes": 24
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "notre-methode.html",
+      "width": 390,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 1
+          }
+        ],
+        "passes": 18
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "quiz.html",
+      "width": 390,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 12
+          }
+        ],
+        "passes": 22
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "quiz-autrices.html",
+      "width": 390,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 4
+          }
+        ],
+        "passes": 22
+      },
+      "activities": [
+        "jeu autrices complet, erreur, clavier, explications, réinitialisation"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "mentions-legales.html",
+      "width": 390,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 1
+          }
+        ],
+        "passes": 19
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "confidentialite.html",
+      "width": 390,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 1
+          }
+        ],
+        "passes": 19
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "contact.html",
+      "width": 390,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 1
+          }
+        ],
+        "passes": 18
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "404.html",
+      "width": 390,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 1
+          }
+        ],
+        "passes": 19
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/autorite.html",
+      "width": 390,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 11
+          }
+        ],
+        "passes": 27
+      },
+      "activities": [
+        "trois situations, toutes réponses, trois scènes Décode et réinitialisation"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/autrices-pseudonymes.html",
+      "width": 390,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/The_Bront%C3%AB_Sisters_by_Patrick_Branwell_Bront%C3%AB_restored.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/The_Bront%C3%AB_Sisters_by_Patrick_Branwell_Bront%C3%AB_restored.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://upload.wikimedia.org/wikipedia/commons/a/ab/The_Bront%C3%AB_Sisters_by_Patrick_Branwell_Bront%C3%AB_restored.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg"
+      ],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 11
+          }
+        ],
+        "passes": 26
+      },
+      "activities": [
+        "jeu autrices complet, erreur, clavier, explications, réinitialisation"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/evolution-strategies-militaires.html",
+      "width": 390,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 17
+          }
+        ],
+        "passes": 28
+      },
+      "activities": [
+        "tous les états des trois modules, trois notices documentaires au clavier"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/pieuvres-couleur.html",
+      "width": 390,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Camouflage_octopus.jpg/960px-Camouflage_octopus.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Camouflage_octopus.jpg/960px-Camouflage_octopus.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Camouflage_octopus.jpg/960px-Camouflage_octopus.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg"
+      ],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 11
+          }
+        ],
+        "passes": 31
+      },
+      "activities": [
+        "curseur clavier, sept structures, couches activables"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/puissance-etats-unis.html",
+      "width": 390,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2311/8124895/1000w_q95.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2108/6797399/1000w_q95.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2311/8124895/1000w_q95.jpg",
+        "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2108/6797399/1000w_q95.jpg"
+      ],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 30
+          }
+        ],
+        "passes": 28
+      },
+      "activities": [
+        "trois cas, chronologie au clavier, tableau comparatif",
+        "glossaire, Échap, restitution du focus"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/roubaix-1917.html",
+      "width": 390,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/%22Revues_d%27Appel%22_(Erfassung_aller_Einwohner_von_Roubaix_und_Angabe_der_Meldetermine)_(No._289)_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_1376.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Usine_Motte_1910.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/%22Bekanntmachung.%22_Einschr%C3%A4nkung_des_freien_Verkehrs_der_Einwohner_im_Gebiet_Lille_-_Roubaix_-_Tourcoing_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_707.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 21
+          }
+        ],
+        "passes": 26
+      },
+      "activities": [
+        "huit dates et clavier, original chargé, repères du document, remise à zéro",
+        "glossaire, Échap, restitution du focus"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "explorer/atlas/rome-expansion.html",
+      "width": 390,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 23
+          }
+        ],
+        "passes": 27
+      },
+      "activities": [
+        "quatre personnages, quatre parcours complets, quatre documents, agrandissement, dialogues Échap et focus"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "explorer/enquetes/mer-aral.html",
+      "width": 390,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS clavier, Échap, focus et toucher simulé",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 1
+          }
+        ],
+        "passes": 20
+      },
+      "activities": [
+        "onze pièces, dialogues Échap et focus, tableau/carte, relation, argument et bilan, révision, remise à zéro"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "index.html",
+      "width": 768,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg"
+      ],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 20
+          }
+        ],
+        "passes": 25
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "bibliotheque.html",
+      "width": 768,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg"
+      ],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 14
+          }
+        ],
+        "passes": 26
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "explorer.html",
+      "width": 768,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 17
+          }
+        ],
+        "passes": 23
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "notre-methode.html",
+      "width": 768,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 16
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "quiz.html",
+      "width": 768,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 11
+          }
+        ],
+        "passes": 22
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "quiz-autrices.html",
+      "width": 768,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 3
+          }
+        ],
+        "passes": 22
+      },
+      "activities": [
+        "jeu autrices complet, erreur, clavier, explications, réinitialisation"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "mentions-legales.html",
+      "width": 768,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 17
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "confidentialite.html",
+      "width": 768,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 17
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "contact.html",
+      "width": 768,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 16
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "404.html",
+      "width": 768,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 17
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/autorite.html",
+      "width": 768,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 10
+          }
+        ],
+        "passes": 27
+      },
+      "activities": [
+        "trois situations, toutes réponses, trois scènes Décode et réinitialisation"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/autrices-pseudonymes.html",
+      "width": 768,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/The_Bront%C3%AB_Sisters_by_Patrick_Branwell_Bront%C3%AB_restored.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://upload.wikimedia.org/wikipedia/commons/a/ab/The_Bront%C3%AB_Sisters_by_Patrick_Branwell_Bront%C3%AB_restored.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg"
+      ],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 10
+          }
+        ],
+        "passes": 26
+      },
+      "activities": [
+        "jeu autrices complet, erreur, clavier, explications, réinitialisation"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/evolution-strategies-militaires.html",
+      "width": 768,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 16
+          }
+        ],
+        "passes": 28
+      },
+      "activities": [
+        "tous les états des trois modules, trois notices documentaires au clavier"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/pieuvres-couleur.html",
+      "width": 768,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Camouflage_octopus.jpg/960px-Camouflage_octopus.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Camouflage_octopus.jpg/960px-Camouflage_octopus.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Camouflage_octopus.jpg/960px-Camouflage_octopus.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg"
+      ],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 10
+          }
+        ],
+        "passes": 31
+      },
+      "activities": [
+        "curseur clavier, sept structures, couches activables"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/puissance-etats-unis.html",
+      "width": 768,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2311/8124895/1000w_q95.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2108/6797399/1000w_q95.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2311/8124895/1000w_q95.jpg",
+        "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2108/6797399/1000w_q95.jpg"
+      ],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 30
+          }
+        ],
+        "passes": 28
+      },
+      "activities": [
+        "trois cas, chronologie au clavier, tableau comparatif",
+        "glossaire, Échap, restitution du focus"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/roubaix-1917.html",
+      "width": 768,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/%22Revues_d%27Appel%22_(Erfassung_aller_Einwohner_von_Roubaix_und_Angabe_der_Meldetermine)_(No._289)_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_1376.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Usine_Motte_1910.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/%22Bekanntmachung.%22_Einschr%C3%A4nkung_des_freien_Verkehrs_der_Einwohner_im_Gebiet_Lille_-_Roubaix_-_Tourcoing_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_707.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 20
+          }
+        ],
+        "passes": 26
+      },
+      "activities": [
+        "huit dates et clavier, original chargé, repères du document, remise à zéro",
+        "glossaire, Échap, restitution du focus"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "explorer/atlas/rome-expansion.html",
+      "width": 768,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 25
+          }
+        ],
+        "passes": 27
+      },
+      "activities": [
+        "quatre personnages, quatre parcours complets, quatre documents, agrandissement, dialogues Échap et focus"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "explorer/enquetes/mer-aral.html",
+      "width": 768,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 20
+      },
+      "activities": [
+        "onze pièces, dialogues Échap et focus, tableau/carte, relation, argument et bilan, révision, remise à zéro"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "index.html",
+      "width": 1024,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg"
+      ],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 20
+          }
+        ],
+        "passes": 25
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "bibliotheque.html",
+      "width": 1024,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg"
+      ],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 14
+          }
+        ],
+        "passes": 26
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "explorer.html",
+      "width": 1024,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 16
+          }
+        ],
+        "passes": 23
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "notre-methode.html",
+      "width": 1024,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 16
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "quiz.html",
+      "width": 1024,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 11
+          }
+        ],
+        "passes": 22
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "quiz-autrices.html",
+      "width": 1024,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 3
+          }
+        ],
+        "passes": 22
+      },
+      "activities": [
+        "jeu autrices complet, erreur, clavier, explications, réinitialisation"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "mentions-legales.html",
+      "width": 1024,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 17
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "confidentialite.html",
+      "width": 1024,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 17
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "contact.html",
+      "width": 1024,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 16
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "404.html",
+      "width": 1024,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 17
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/autorite.html",
+      "width": 1024,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 11
+          }
+        ],
+        "passes": 27
+      },
+      "activities": [
+        "trois situations, toutes réponses, trois scènes Décode et réinitialisation"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/autrices-pseudonymes.html",
+      "width": 1024,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/The_Bront%C3%AB_Sisters_by_Patrick_Branwell_Bront%C3%AB_restored.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/The_Bront%C3%AB_Sisters_by_Patrick_Branwell_Bront%C3%AB_restored.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://upload.wikimedia.org/wikipedia/commons/a/ab/The_Bront%C3%AB_Sisters_by_Patrick_Branwell_Bront%C3%AB_restored.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg"
+      ],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 10
+          }
+        ],
+        "passes": 26
+      },
+      "activities": [
+        "jeu autrices complet, erreur, clavier, explications, réinitialisation"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/evolution-strategies-militaires.html",
+      "width": 1024,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 16
+          }
+        ],
+        "passes": 28
+      },
+      "activities": [
+        "tous les états des trois modules, trois notices documentaires au clavier"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/pieuvres-couleur.html",
+      "width": 1024,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Camouflage_octopus.jpg/960px-Camouflage_octopus.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Camouflage_octopus.jpg/960px-Camouflage_octopus.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Camouflage_octopus.jpg/960px-Camouflage_octopus.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg"
+      ],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 11
+          }
+        ],
+        "passes": 31
+      },
+      "activities": [
+        "curseur clavier, sept structures, couches activables"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/puissance-etats-unis.html",
+      "width": 1024,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2311/8124895/1000w_q95.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2108/6797399/1000w_q95.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2311/8124895/1000w_q95.jpg",
+        "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2108/6797399/1000w_q95.jpg"
+      ],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 31
+          }
+        ],
+        "passes": 28
+      },
+      "activities": [
+        "trois cas, chronologie au clavier, tableau comparatif",
+        "glossaire, Échap, restitution du focus"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/roubaix-1917.html",
+      "width": 1024,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/%22Revues_d%27Appel%22_(Erfassung_aller_Einwohner_von_Roubaix_und_Angabe_der_Meldetermine)_(No._289)_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_1376.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Usine_Motte_1910.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/%22Bekanntmachung.%22_Einschr%C3%A4nkung_des_freien_Verkehrs_der_Einwohner_im_Gebiet_Lille_-_Roubaix_-_Tourcoing_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_707.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 22
+          }
+        ],
+        "passes": 26
+      },
+      "activities": [
+        "huit dates et clavier, original chargé, repères du document, remise à zéro",
+        "glossaire, Échap, restitution du focus"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "explorer/atlas/rome-expansion.html",
+      "width": 1024,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 26
+          }
+        ],
+        "passes": 27
+      },
+      "activities": [
+        "quatre personnages, quatre parcours complets, quatre documents, agrandissement, dialogues Échap et focus"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "explorer/enquetes/mer-aral.html",
+      "width": 1024,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 20
+      },
+      "activities": [
+        "onze pièces, dialogues Échap et focus, tableau/carte, relation, argument et bilan, révision, remise à zéro"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "index.html",
+      "width": 1440,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg"
+      ],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 20
+          }
+        ],
+        "passes": 25
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "bibliotheque.html",
+      "width": 1440,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg"
+      ],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 14
+          }
+        ],
+        "passes": 26
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "explorer.html",
+      "width": 1440,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 16
+          }
+        ],
+        "passes": 23
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "notre-methode.html",
+      "width": 1440,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 16
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "quiz.html",
+      "width": 1440,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 11
+          }
+        ],
+        "passes": 22
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "quiz-autrices.html",
+      "width": 1440,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 3
+          }
+        ],
+        "passes": 22
+      },
+      "activities": [
+        "jeu autrices complet, erreur, clavier, explications, réinitialisation"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "mentions-legales.html",
+      "width": 1440,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 17
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "confidentialite.html",
+      "width": 1440,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 17
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "contact.html",
+      "width": 1440,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 16
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "404.html",
+      "width": 1440,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 17
+      },
+      "activities": [],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/autorite.html",
+      "width": 1440,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 11
+          }
+        ],
+        "passes": 27
+      },
+      "activities": [
+        "trois situations, toutes réponses, trois scènes Décode et réinitialisation"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/autrices-pseudonymes.html",
+      "width": 1440,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/The_Bront%C3%AB_Sisters_by_Patrick_Branwell_Bront%C3%AB_restored.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://upload.wikimedia.org/wikipedia/commons/a/ab/The_Bront%C3%AB_Sisters_by_Patrick_Branwell_Bront%C3%AB_restored.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/9/9c/George_Eliot_by_Samuel_Laurence.jpg"
+      ],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 10
+          }
+        ],
+        "passes": 26
+      },
+      "activities": [
+        "jeu autrices complet, erreur, clavier, explications, réinitialisation"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/evolution-strategies-militaires.html",
+      "width": 1440,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 16
+          }
+        ],
+        "passes": 28
+      },
+      "activities": [
+        "tous les états des trois modules, trois notices documentaires au clavier"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/pieuvres-couleur.html",
+      "width": 1440,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Camouflage_octopus.jpg/960px-Camouflage_octopus.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Camouflage_octopus.jpg/960px-Camouflage_octopus.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg/960px-Poulpe_commun_%28Octopus_vulgaris%29_%28Ifremer_00679-79134_-_31993%29.jpg"
+      ],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 11
+          }
+        ],
+        "passes": 31
+      },
+      "activities": [
+        "curseur clavier, sept structures, couches activables"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/puissance-etats-unis.html",
+      "width": 1440,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2311/8124895/1000w_q95.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2108/6797399/1000w_q95.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [
+        "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2311/8124895/1000w_q95.jpg",
+        "https://d1ldvf68ux039x.cloudfront.net/thumbs/photos/2108/6797399/1000w_q95.jpg"
+      ],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 30
+          }
+        ],
+        "passes": 28
+      },
+      "activities": [
+        "trois cas, chronologie au clavier, tableau comparatif",
+        "glossaire, Échap, restitution du focus"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "articles/roubaix-1917.html",
+      "width": 1440,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/%22Revues_d%27Appel%22_(Erfassung_aller_Einwohner_von_Roubaix_und_Angabe_der_Meldetermine)_(No._289)_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_1376.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Usine_Motte_1910.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/%22Bekanntmachung.%22_Einschr%C3%A4nkung_des_freien_Verkehrs_der_Einwohner_im_Gebiet_Lille_-_Roubaix_-_Tourcoing_-_LABW_-_Hauptstaatsarchiv_Stuttgart_J_151_Nr_707.jpg",
+          "error": {
+            "errorText": "net::ERR_CERT_AUTHORITY_INVALID"
+          }
+        }
+      ],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 22
+          }
+        ],
+        "passes": 26
+      },
+      "activities": [
+        "huit dates et clavier, original chargé, repères du document, remise à zéro",
+        "glossaire, Échap, restitution du focus"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "explorer/atlas/rome-expansion.html",
+      "width": 1440,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [
+          {
+            "id": "color-contrast",
+            "nodes": 26
+          }
+        ],
+        "passes": 27
+      },
+      "activities": [
+        "quatre personnages, quatre parcours complets, quatre documents, agrandissement, dialogues Échap et focus"
+      ],
+      "result": "PASS"
+    },
+    {
+      "name": "explorer/enquetes/mer-aral.html",
+      "width": 1440,
+      "errors": [],
+      "localHttpErrors": [],
+      "externalHttpErrors": [],
+      "requestFailures": [],
+      "overflow": 0,
+      "brokenImages": [],
+      "menu": "PASS navigation visible",
+      "axe": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 20
+      },
+      "activities": [
+        "onze pièces, dialogues Échap et focus, tableau/carte, relation, argument et bilan, révision, remise à zéro"
+      ],
+      "result": "PASS"
+    }
+  ],
+  "interactions": [
+    "PASS recherche accueil, URL /Thot/, accents, filtres combinés, vide et réinitialisation",
+    "PASS #start-button : partie réelle complète, 5 réponses et score correct, sauvegarde native",
+    "PASS #daily-start-button : partie réelle complète, 5 réponses et score correct, sauvegarde native",
+    "PASS menu prêt avant le main et position stable avec JS externes retardés de 1,2 seconde, cinq gabarits",
+    "PASS banque volontairement indisponible : notice réelle visible et démarrage désactivé",
+    "PASS navigation et reflow sans JavaScript, 18 pages à 320 px",
+    "PASS HTTP 404 pour URL inconnue"
+  ],
+  "limitations": [
+    "Linux Chromium, tactile et mobile simulés ; aucun téléphone ou lecteur d’écran réel.",
+    "Les erreurs de serveurs externes sont consignées séparément et ne prouvent pas une erreur du code local."
+  ],
+  "browser": "155.0.8059.79",
+  "platform": "linux",
+  "slowLoading": [
+    {
+      "name": "index.html",
+      "before": 77,
+      "after": 77,
+      "header": 77,
+      "scrollY": 0
+    },
+    {
+      "name": "quiz.html",
+      "before": 77,
+      "after": 77,
+      "header": 77,
+      "scrollY": 0
+    },
+    {
+      "name": "articles/pieuvres-couleur.html",
+      "before": 121,
+      "after": 121,
+      "header": 121,
+      "scrollY": 0
+    },
+    {
+      "name": "explorer/enquetes/mer-aral.html",
+      "before": 77,
+      "after": 77,
+      "header": 77,
+      "scrollY": 0
+    },
+    {
+      "name": "explorer/atlas/rome-expansion.html",
+      "before": 77,
+      "after": 77,
+      "header": 77,
+      "scrollY": 0
+    }
+  ]
+}
