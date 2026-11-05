@@ -51,7 +51,11 @@ try{
  // Liens et ressources internes réellement servis, ancres comprises.
  const c=await browser.newContext(),p=await c.newPage(),links=new Set();
  for(const name of pages){await p.goto(url(name));for(const link of await p.locator('a[href],link[rel=stylesheet],script[src],img[src]').evaluateAll(es=>es.map(e=>e.href||e.src).filter(u=>u&&u.startsWith(location.origin))))links.add(link)}
- let anchors=0;for(const link of links){const u=new URL(link);const response=await c.request.get(link);assert.equal(response.status(),200,link);if(u.hash&&u.pathname.endsWith('.html')){const body=await response.text(),id=decodeURIComponent(u.hash.slice(1));assert(body.includes('id="'+id+'"')||body.includes("id='"+id+"'"),'Ancre absente '+link);anchors++}}
+ let anchors=0;for(const link of links){const u=new URL(link);const response=await c.request.get(link);assert.equal(response.status(),200,link);
+ const name=decodeURIComponent(u.pathname.slice(new URL(base).pathname.length))||'index.html';
+ const local=path.resolve(root,name);assert(local.startsWith(root+path.sep),'Ressource hors projet '+link);
+ assert.deepEqual(await response.body(),fs.readFileSync(local),'Réponse différente de la copie de travail '+link);
+ if(u.hash&&u.pathname.endsWith('.html')){const body=await response.text(),id=decodeURIComponent(u.hash.slice(1));assert(body.includes('id="'+id+'"')||body.includes("id='"+id+"'"),'Ancre absente '+link);anchors++}}
  report.internalHttp={urls:links.size,anchors,result:'PASS'};
  await c.close();await browser.close();browser=null;
  }
@@ -59,7 +63,12 @@ try{
  // Sauvegarde native, fermeture et réouverture de processus avec profil isolé.
  profile=fs.mkdtempSync(path.join(require('node:os').tmpdir(),'thot-profile-'));
  ctx=await chromium.launchPersistentContext(profile,{headless:true,viewport:{width:390,height:900},...(executablePath?{executablePath}:{})});let q=ctx.pages()[0];
- await q.goto(url('quiz.html'));await q.locator('#start-button').click();for(let i=0;i<5;i++){await q.locator('#answer-list button').first().click();if(await q.locator('#validate-button').isVisible())await q.locator('#validate-button').click();await q.locator('#next-button').click()}
+ const storageErrors=[];q.on('pageerror',error=>storageErrors.push(error.message));
+ q.on('response',response=>{if(response.url().startsWith(base)&&response.status()>=400)storageErrors.push('HTTP '+response.status()+' '+response.url())});
+ await q.goto(url('quiz.html'));
+ report.storageStartup={errors:storageErrors,state:await q.evaluate(()=>({url:location.href,ready:document.readyState,disabled:document.getElementById('start-button').disabled,message:document.getElementById('quiz-load-message').textContent,scripts:[...document.scripts].filter(s=>s.src).map(s=>s.src)}))};
+ assert(await q.locator('#start-button').isEnabled(),'Initialisation du profil natif : '+JSON.stringify(report.storageStartup));
+ await q.locator('#start-button').click();for(let i=0;i<5;i++){await q.locator('#answer-list button').first().click();if(await q.locator('#validate-button').isVisible())await q.locator('#validate-button').click();await q.locator('#next-button').click()}
  assert(await q.locator('#screen-result').isVisible());const quiz=await q.evaluate(()=>localStorage.getItem('thot_v2_stats'));assert(quiz);
  await q.goto(url('explorer/enquetes/mer-aral.html'));await q.waitForFunction(()=>!!window.THOT_ARAL);await q.locator('#aral-start').click();
  for(let i=1;i<=11;i++){if(i>1)await q.locator('#aral-more-documents').click();await q.locator('[data-open-doc=d'+String(i).padStart(2,'0')+']').click();await q.locator('#aral-doc-add').click()}
@@ -82,6 +91,7 @@ try{
  await q.reload();await q.waitForFunction(()=>!!window.THOT_ARAL);
  const repaired=await q.evaluate(()=>THOT_ARAL.getState());assert.equal(repaired.links.length,3);assert.equal(new Set(repaired.links.map(link=>link.id)).size,3);assert(repaired.links.every(link=>/^l[a-z0-9]+$/.test(link.id)));assert.equal(repaired.links[0].note,beforeReload.links[0].note);
  await q.locator('#aral-reset').click();await q.locator('#aral-reset-confirm').click();assert.equal(await q.evaluate(()=>localStorage.getItem('thot_v2_stats')),quiz);
+ assert.deepEqual(storageErrors,[],'Erreurs JavaScript ou HTTP pendant la sauvegarde native');
  report.storage={native:true,reload:'PASS',browserRestart:'PASS',aralReset:'PASS',quizPreserved:'PASS',documents:11,relationIdsStable:'PASS',malformedIdsRepaired:'PASS'};await ctx.close();
  // Sans JS : les liens de menu restent accessibles.
  browser=await chromium.launch({headless:true,...(executablePath?{executablePath}:{})});const nojs=await browser.newContext({javaScriptEnabled:false,viewport:{width:320,height:900}});const n=await nojs.newPage();for(const name of ['index.html','articles/autorite.html','explorer.html','contact.html']){await n.goto(url(name));assert(await n.locator('[data-site-navigation]').isVisible(),name);assert(await n.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),name)}report.noJavascript='PASS at 320 px';await nojs.close();

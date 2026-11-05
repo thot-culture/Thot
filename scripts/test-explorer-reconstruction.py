@@ -13,7 +13,6 @@ import argparse
 import base64
 import hashlib
 import json
-import mimetypes
 import re
 import subprocess
 import sys
@@ -22,7 +21,7 @@ ROOT=Path(__file__).resolve().parents[1];ASSET=ROOT/'assets/explorer-v2';BASE='0
 PAGES=['explorer.html','explorer/enquetes/mer-aral.html','explorer/atlas/rome-expansion.html'];WIDTHS=(320,390,768,1440)
 
 def read(path):return json.loads(path.read_text(encoding='utf-8'))
-def static_checks():
+def historical_conservation():
     # Tout fichier préexistant est conservé octet pour octet, sauf trois
     # intégrations explicites et l'actualisation ciblée du test de retrait.
     tracked=subprocess.check_output(['git','ls-tree','-r','--name-only',BASE],cwd=ROOT,text=True,encoding='utf-8').splitlines()
@@ -35,13 +34,20 @@ def static_checks():
         if name=='sitemap.xml':
             for page in PAGES:current=current.replace(('  <url><loc>https://thot-culture.github.io/Thot/'+page+'</loc></url>\n').encode('utf-8'),b'')
         assert current==before,'Modification non autorisée du socle : '+name
+    print('PASS : conservation du périmètre historique depuis '+BASE)
+
+def static_checks():
+    # Les workflows et la coque commune ont évolué depuis BASE. La conservation
+    # globale de cette livraison reste disponible via --historical ; ici les
+    # corpus, empreintes, licences et sorties générées restent obligatoires.
+    assert all((ROOT/name).is_file() for name in PAGES)
     aral=read(ASSET/'data/aral.json');rome=read(ASSET/'data/rome-content.json');geo=read(ASSET/'data/rome-geography.json')
     assert len(aral['documents'])==11 and len(rome['chapters'])==6 and len(rome['people'])==4 and len(rome['documents'])==4
     assert [e['year'] for e in geo['epochs']]==[-400,-300,-200,-100,-60,-1,100,117]
     assert len({d['id'] for d in aral['documents']})==11
     for doc in aral['documents']:
         for k in ('id','title','nature','date','author','source','description','shows','limits','credit','license','tags'):assert doc[k],(doc['id'],k)
-    assert hashlib.sha1((ASSET/'media/moynaq-original.jpg').read_bytes()).hexdigest()=='e1d1f651519c503a9688df5badd35b3249526d3e'
+    assert hashlib.sha1((ASSET/'media/moynaq-original.jpg').read_bytes()).hexdigest()=='e1d1f651519c503a9688df5badd35b3249526d3e', 'Média Moynaq modifié'
     for m in read(ASSET/'sources/rome-media.json'):
         assert hashlib.sha256((ROOT/m['display_path']).read_bytes()).hexdigest()==m['display_sha256']
         assert m['display_bytes']<200000
@@ -50,10 +56,10 @@ def static_checks():
     for name in ('historical-basemaps-source.zip','awmc-source.zip'):
         with zipfile.ZipFile(ASSET/'sources'/name) as z:assert z.testzip() is None and any('LICENSE' in n for n in z.namelist())
     assert read(ASSET/'data/historical-basemaps-derived.geojson')['license']=='GPL-3.0'
-    assert read(ASSET/'data/awmc-derived.geojson')['license']=='ODbL-1.0'
+    assert read(ASSET/'data/awmc-derived.geojson')['license']=='ODbL-1.0', 'Licence AWMC divergente'
     assert all(set(c['steps'])<={e['id'] for e in geo['epochs']} for c in rome['chapters'])
     subprocess.run([sys.executable,'scripts/build-explorer-reconstruction.py','--check'],cwd=ROOT,check=True)
-    print('PASS : conservation exacte du socle, trois pages neuves, données, images et licences contrôlées.')
+    print('PASS : trois pages Explorer, corpus, images, licences et génération contrôlés.')
 
 _CACHE={}
 def fixture(name):
@@ -63,7 +69,9 @@ def fixture(name):
     html=re.sub(r'<script\b[^>]*src="[^"]+"[^>]*>\s*</script>','',html)
     for f in (ASSET/'media').iterdir():
         if f.suffix in ('.jpg','.webp','.png'):
-            html=html.replace('/Thot/'+f.relative_to(ROOT).as_posix(),'data:'+mimetypes.guess_type(f)[0]+';base64,'+base64.b64encode(f.read_bytes()).decode())
+            # Windows ne déclare pas toujours WebP dans sa table MIME système.
+            mime={'.jpg':'image/jpeg','.webp':'image/webp','.png':'image/png'}[f.suffix]
+            html=html.replace('/Thot/'+f.relative_to(ROOT).as_posix(),'data:'+mime+';base64,'+base64.b64encode(f.read_bytes()).decode())
     _CACHE[name]=html;return html
 
 def browser_checks(out):
@@ -163,6 +171,9 @@ def browser_checks(out):
             assert page.locator('#atlas-primary').get_attribute('clip-path')=='url(#atlas-right-clip)'
             for pct in (0,50,100):
                 page.locator('#atlas-reveal').evaluate('(e,v)=>{e.value=v;e.dispatchEvent(new Event("input",{bubbles:true}))}',pct)
+                # Les événements input sont désormais regroupés par frame ;
+                # attendre la géométrie réelle, puis conserver les mêmes valeurs.
+                page.wait_for_function('pct=>Number(document.getElementById("atlas-clip-rect").getAttribute("width"))===1200*pct/100 && Math.abs(Number(document.getElementById("atlas-right-rect").getAttribute("width"))-1200*(100-pct)/100)<.001',arg=pct)
                 assert float(page.locator('#atlas-clip-rect').get_attribute('width'))==1200*pct/100
                 assert abs(float(page.locator('#atlas-right-rect').get_attribute('width'))-1200*(100-pct)/100)<.001
             page.locator('#atlas-reveal').evaluate('(e)=>{e.value=50;e.dispatchEvent(new Event("input",{bubbles:true}))}');capture(page,'rome-comparateur-'+str(width),'.atlas-map-column')
@@ -211,5 +222,7 @@ def browser_checks(out):
     (out/'resultats.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8');print('PASS : parcours complets aux quatre largeurs, clavier, réduction des animations, sans JS, image absente, refus de stockage et reprise simulée. Captures :',out)
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('--browser',action='store_true');parser.add_argument('--out',type=Path,default=ROOT.parent/'THOT-EXPLORER-RECONSTRUCTION-20261026/captures');args=parser.parse_args();static_checks()
+    parser=argparse.ArgumentParser();parser.add_argument('--browser',action='store_true');parser.add_argument('--historical',action='store_true',help='Comparer aussi le périmètre figé de la livraison du 26 octobre, incompatible avec main actuel.');parser.add_argument('--out',type=Path,default=ROOT.parent/'THOT-EXPLORER-RECONSTRUCTION-20261026/captures');args=parser.parse_args()
+    if args.historical:historical_conservation()
+    static_checks()
     if args.browser:browser_checks(args.out)

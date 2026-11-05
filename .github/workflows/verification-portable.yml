@@ -26,18 +26,8 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install -r requirements-tools.txt
-      - run: python scripts/test-portabilite.py
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: python scripts/sync-publication.py --check
-      - run: python scripts/test-publication.py
-      - run: python scripts/test-publication-integration.py
-      - run: python scripts/check-seo.py
-      - run: python scripts/test-seo.py
-      - run: python scripts/test-article-editorial.py
-      - run: node scripts/check-site.mjs
-      - name: Suites de fonctionnement
-        run: node --input-type=module -e 'import {readdirSync} from "node:fs"; import {execFileSync} from "node:child_process"; for(const n of readdirSync("scripts").filter(n=>/^test-.*\.mjs$/.test(n)))execFileSync(process.execPath,["scripts/"+n],{stdio:"inherit"})'
-      - run: python scripts/build-explorer-reconstruction.py --check
-      - run: python scripts/site_chrome.py --check
+      - name: Validation complète sans navigateur
+        run: node scripts/validate.mjs

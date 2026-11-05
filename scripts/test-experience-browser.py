@@ -58,9 +58,11 @@ with sync_playwright() as pw:
   c.close()
  # Recherche, aucun résultat et retour au catalogue dans le navigateur réel.
  c=context(b);p=c.new_page();p.set_content(markup('bibliotheque.html').replace('<head>','<head><base href="'+BASE+'bibliotheque.html">'))
+ expected_cards=len(json.loads((ROOT/'assets/article-editorial.json').read_text(encoding='utf-8'))['articles'])
+ assert p.locator('.article-card:visible').count()==expected_cards
  p.locator('#article-search').fill('Roubaix');assert p.locator('.article-card:visible').count()==1
  p.locator('#article-search').fill('xxxxxxxxxxxx');assert p.locator('#empty-state').is_visible()
- p.locator('#reset-filters').click();assert p.locator('.article-card:visible').count()==5
+ p.locator('#reset-filters').click();assert p.locator('.article-card:visible').count()==expected_cards
  c.close()
  # Stockage indisponible (origine opaque de la fixture) : partie complète et bilan.
  c=context(b,storage=True);p=c.new_page();p.set_content(markup('quiz.html').replace('<head>','<head><base href="'+BASE+'quiz.html">'))
@@ -85,4 +87,4 @@ with sync_playwright() as pw:
  c.close();b.close()
 report={'ok':True,'views':results,'search_and_reset':True,'quiz_full_path':True,'daily_persistence':'Suites DOM existantes, pas de stockage navigateur persistant dans cette fixture','storage_unavailable':True,'without_js':True,'method':'Chromium réel sur fixtures inline ; navigation réseau bloquée, images externes exclues. URL et persistance couvertes séparément par les suites DOM.'}
 (OUT/'browser.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n', encoding="utf-8")
-print('PASS : 44 vues, 11 pages, clavier, 3 interactions, recherche, parcours quiz, stockage refusé, sans JS.')
+print(f'PASS : {len(results)} vues, {len(PAGES)} pages, clavier, 3 interactions, recherche, parcours quiz, stockage refusé, sans JS.')

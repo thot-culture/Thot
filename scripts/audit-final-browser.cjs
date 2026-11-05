@@ -2,6 +2,7 @@
    Dépendances de test seulement : playwright et axe-core, installées par la CI. */
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {spawn}=require('node:child_process');
+const {waitForPreview}=require('./local-preview.cjs');
 const {chromium}=require(process.env.THOT_PLAYWRIGHT||'playwright');
 const root=path.resolve(process.env.THOT_AUDIT_ROOT||path.join(__dirname,'..'));
 const out=path.resolve(process.env.THOT_OUTPUT_DIR||path.join(root,'work/audit-final'));
@@ -159,7 +160,7 @@ const server=spawn(process.env.PYTHON||'python',['scripts/preview.py','--port','
 let browser;
 (async()=>{
 try{
- for(let n=0;;n++){try{const r=await fetch(base);assert.equal(r.status,200);break}catch(e){if(n>100)throw e;await sleep(100)}}
+ await waitForPreview(server,base,{root});
  browser=await chromium.launch({headless:true,...(process.env.THOT_BROWSER_EXECUTABLE?{executablePath:process.env.THOT_BROWSER_EXECUTABLE}:{})});
  report.browser=browser.version();report.platform=process.platform;
  for(const width of [320,390,768,1024,1440]){
@@ -273,10 +274,15 @@ try{
  report.interactions.push('PASS banque volontairement indisponible : notice réelle visible et démarrage désactivé');
 
  const nojs=await browser.newContext({javaScriptEnabled:false,viewport:{width:320,height:900}});
+ report.noJavascript=[];
  for(const name of pages){
-  const q=await nojs.newPage();await q.goto(base+name,{waitUntil:'domcontentloaded'});
+  // Sans scripts bloquants, DOMContentLoaded n'attend pas les feuilles CSS.
+  // Mesurer une page non stylée produisait de faux débordements intermittents.
+  const q=await nojs.newPage();await q.goto(base+name,{waitUntil:'load'});
   assert(await q.locator('#primary-navigation').isVisible());
-  assert(await q.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));await q.close();
+  const overflow=await q.evaluate(()=>document.documentElement.scrollWidth-innerWidth);
+  report.noJavascript.push({name,width:320,overflow});
+  assert(overflow<=1,'Débordement sans JavaScript '+name+' : '+overflow);await q.close();
  }
  await nojs.close();report.interactions.push('PASS navigation et reflow sans JavaScript, 18 pages à 320 px');
  const unknown=await fetch(base+'page-inconnue-audit.html');assert.equal(unknown.status,404);

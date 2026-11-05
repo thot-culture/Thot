@@ -14,17 +14,25 @@ class Preview(SimpleHTTPRequestHandler):
         super().__init__(*args, directory=str(ROOT), **kwargs)
 
     def do_GET(self):
+        if self.publication_path():
+            super().do_GET()
+
+    def do_HEAD(self):
+        if self.publication_path():
+            super().do_HEAD()
+
+    def publication_path(self):
         path = urlsplit(self.path).path
         if path in ('/', '/Thot'):
             self.send_response(302)
             self.send_header('Location', '/Thot/')
             self.end_headers()
-            return
+            return False
         if not path.startswith('/Thot/'):
             self.send_error(404)
-            return
+            return False
         self.path = self.path[len('/Thot'):]
-        super().do_GET()
+        return True
 
     def send_error(self, code, message=None, explain=None):
         if code != 404:

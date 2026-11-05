@@ -9,6 +9,8 @@ Dans l’article Autorité, le module « Décode le pouvoir » reste exclu : son
 est conservé par une empreinte dédiée dans scripts/test-autorite-decode.mjs.
 Les données JSON-LD sont comparées comme objets ; seuls image et dateModified
 peuvent évoluer dans les cinq articles, jamais datePublished.
+La coque hors main est contrôlée par les générateurs et suites de navigation.
+Le WebPage JSON-LD ajouté au jeu est exigé avec son schéma exact.
 """
 import portable_io  # Encodage CLI stable, sans dépendance système.
 import argparse
@@ -18,6 +20,7 @@ from pathlib import Path
 import re
 import subprocess
 import runpy
+from html import unescape
 
 
 class Editorial(HTMLParser):
@@ -31,16 +34,19 @@ class Editorial(HTMLParser):
         self.ignore_source_types = ignore_source_types
         self.ignored_span_ids = set(ignored_span_ids)
         self.body = False
+        self.main_count = 0
         self.stack = []
         self.words = []
         self.links = []
         self.images = []
         self.feed(html)
+        require(self.main_count == 1, 'un seul contenu principal attendu')
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
-        if tag == "body":
+        if tag == "main":
             self.body = True
+            self.main_count += 1
         if not self.body:
             return
         reference = tag == "li" and re.fullmatch(r"ref[1-9]\d*", attrs.get("id", ""))
@@ -63,7 +69,7 @@ class Editorial(HTMLParser):
             if self.stack[index][0] == tag:
                 self.stack = self.stack[:index]
                 break
-        if tag == "body":
+        if tag == "main":
             self.body = False
 
     def handle_data(self, data):
@@ -78,6 +84,7 @@ root = Path(__file__).resolve().parent.parent
 
 
 def original(path):
+    path = path.as_posix() if isinstance(path, Path) else path
     return subprocess.check_output(
         ["git", "show", f"{args.revision}:{path}"], cwd=root)
 
@@ -114,7 +121,12 @@ article_pages = {Path("articles") / name for name in (
     "puissance-etats-unis.html", "roubaix-1917.html")}
 new_article_ids = {"article-editorial-dates", "article-share",
                    "reperes-scientifiques", "sources-guide"}
-pages = [Path("quiz-autrices.html"), *[p.relative_to(root) for p in sorted((root / "articles").glob("*.html"))]]
+# Comparer toutes les pages qui existaient dans la référence, même si une page
+# a disparu localement. Les nouveaux articles ont leur contrôle de publication.
+reference_names = subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', args.revision],
+                                        cwd=root, text=True, encoding='utf-8').splitlines()
+pages = [Path('quiz-autrices.html'), *[Path(name) for name in reference_names
+         if name.startswith('articles/') and name.endswith('.html')]]
 for path in pages:
     before_html = original(path).decode()
     after_html = (root / path).read_text(encoding="utf-8")
@@ -141,15 +153,24 @@ for path in pages:
     ignored_ids.update({"site-parcours", "site-lecture-nav", "activites-autorite-aide", "comparateur-entree-directe",
                         "toc-interaction-" + path.stem})
     before_html, after_html = duration_ui(before_html), duration_ui(after_html)
-    before_html = runpy.run_path(str(root / "scripts/editorial-amendments.py"))["amended_reference"](before_html, path)
-    before = Editorial(before_html)
+    before_html = runpy.run_path(str(root / "scripts/editorial-amendments.py"))["amended_reference"](before_html, path.as_posix())
     ignored_span_ids = {"editorial-previous-label"} if path == Path("articles/roubaix-1917.html") else set()
+    # Même périmètre avant/après. La coque hors main est vérifiée séparément par
+    # site_chrome.py et les suites de navigation, sans exclure le texte d'article.
+    before = Editorial(before_html, ignored_ids, ignore_source_types=path in article_pages,
+                       ignored_span_ids=ignored_span_ids)
     after = Editorial(after_html, ignored_ids, ignore_source_types=path in article_pages,
                       ignored_span_ids=ignored_span_ids)
     require(before.words == after.words, f"texte éditorial modifié dans {path}")
     require(before.links == after.links, f"lien éditorial modifié dans {path}")
     require(before.images == after.images, f"texte alternatif modifié dans {path}")
     mutable_fields = ("image", "dateModified") if path in article_pages else ()
+    if path == Path('quiz-autrices.html') and not structured_data(before_html):
+        # Ajout exact du générateur SEO commun, absent de la référence initiale.
+        title = unescape(re.search(r'<title>(.*?)</title>', before_html, re.S)[1])
+        schema = {'@context':'https://schema.org', '@type':'WebPage', 'name':title,
+                  'url':'https://thot-culture.github.io/Thot/quiz-autrices.html', 'inLanguage':'fr'}
+        before_html += '<script type="application/ld+json">'+json.dumps(schema)+'</script>'
     require(structured_data(before_html, mutable_fields) == structured_data(after_html, mutable_fields),
             f"données structurées modifiées dans {path}")
     print(f"PASS conservation : {path}, {len(after.words)} mots, {len(after.links)} liens éditoriaux")

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Retrait public, corpus du quiz et amendements autorisés, sans réseau."""
+"""Retrait des anciennes pages, inventaire courant et conservation du quiz."""
 import portable_io
 from pathlib import Path
 import argparse
@@ -10,6 +10,7 @@ import json
 import re
 import subprocess
 import sys
+import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = '8157d53dbbe6fd9852b84079f87d28da8469d8c5'
@@ -36,19 +37,17 @@ def static_checks():
     assert all(not (ROOT/name).exists() for name in retirement['removed_pages'] if name != 'explorer.html')
     assert all((ROOT/name).is_file() for name in reconstruction['pages'])
     assert all((ROOT/name).is_file() for name in retirement['shared_files_kept'])
-    htmls = [p for p in [*ROOT.glob('*.html'), *(ROOT/'articles').glob('*.html')] if p.name != 'explorer.html']
-    assert len(htmls) == 11
+    # L'ancien retrait ne définit plus le menu ou l'inventaire : Explorer est
+    # reconstruit, six articles et trois pages d'information sont publiés.
+    htmls = [*ROOT.glob('*.html'), *(ROOT/'articles').glob('*.html'), *(ROOT/'explorer').rglob('*.html')]
+    public = 'https://thot-culture.github.io/Thot/'
+    expected = {public if p.name == 'index.html' else public+p.relative_to(ROOT).as_posix()
+                for p in htmls if p.name != '404.html'}
+    listed = [node.text for node in ET.fromstring((ROOT/'sitemap.xml').read_text(encoding='utf-8'))
+              .findall('{http://www.sitemaps.org/schemas/sitemap/0.9}url/{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
+    assert len(listed) == len(set(listed)) and set(listed) == expected, 'Inventaire du sitemap divergent'
     for p in htmls:
-        s = p.read_text(encoding='utf-8')
-        if p.name in reconstruction['navigation_only']:
-            s = s.replace('<a href="explorer.html">Explorer</a>', '')
-        assert not re.search(r'<a\b[^>]*href="[^"]*(?:explorer(?:\.html|/)|enquetes/)', s), p
-    sitemap=(ROOT/'sitemap.xml').read_text(encoding='utf-8')
-    for name in reconstruction['pages']:
-        entry = '  <url><loc>https://thot-culture.github.io/Thot/'+name+'</loc></url>\n'
-        assert entry in sitemap
-        sitemap = sitemap.replace(entry, '')
-    assert sitemap.count('<url>') == 10 and 'explorer' not in sitemap and 'enquetes/' not in sitemap
+        assert 'href="/Thot/explorer.html"' in p.read_text(encoding='utf-8'), p
     assert 'temporairement retirées' in (ROOT/'404.html').read_text(encoding='utf-8')
     old, current = bank(BASE), bank()
     assert len(current) == len(old) == 300
@@ -69,17 +68,18 @@ def static_checks():
     records = {r['question']: r for r in review['records']}
     for q in current:
         r = records[q['q']]
-        assert r['answer_snapshot'] == {k:q[k] for k in ('a', 'correct', 'why')}
+        assert r['answer_snapshot'] == {k:q[k] for k in ('a', 'correct', 'why')}, 'Notice du quiz divergente : '+q['q']
         if r['status'] == 'verified':
-            assert r['verified_on'] == '2026-10-26' and r['justification'] and r['sources']
+            assert r['verified_on'] == review['reviewed_batch'] and r['justification'] and r['sources']
             assert all(s['url'].startswith('https://') and s['title'] for s in r['sources'])
         else:
             assert r['status'] in ('not_reviewed', 'needs_review') and r['verified_on'] is None
     assert sum(r['status']=='verified' for r in records.values()) == review['verified_count'] == 24
     assert sum(r['status']=='needs_review' for r in records.values()) == 1
-    source=(ROOT/'assets/site.js').read_text(encoding='utf-8')
-    before=subprocess.check_output(['git','show',BASE+':assets/site.js'],cwd=ROOT,text=True,encoding='utf-8')
-    assert source.replace('\n      window.THOT_QUIZ_REFERENCES?.render(feedback,item);','') == before
+    # Le moteur a reçu des corrections de démarrage : son identité binaire ne
+    # décrit plus un invariant. Les vraies sélections, scores et sauvegardes
+    # sont exercés par la suite DOM, sans relâcher la comparaison de la banque.
+    subprocess.run(['node', 'scripts/test-quiz.mjs'], cwd=ROOT, check=True)
     for name in ('assets/roubaix-frise.js','assets/autorite-decode.js','assets/quiz-autrices.js','assets/images/roubaix-laines-1917-original.jpg'):
         assert (ROOT/name).read_bytes()==subprocess.check_output(['git','show',BASE+':'+name],cwd=ROOT)
     fontdir=ROOT/'tools/fonts/dejavu'
@@ -90,9 +90,11 @@ def static_checks():
         for n in ast.walk(ast.parse(s)):
             if isinstance(n,ast.Call) and isinstance(n.func,ast.Attribute) and n.func.attr in ('read_text','write_text'):
                 assert any(k.arg=='encoding' for k in n.keywords), (p,n.lineno)
-    for cmd in [[sys.executable,'scripts/build-quiz-references.py','--check'],[sys.executable,'scripts/check-editorial.py']]:
+    for cmd in [[sys.executable,'scripts/build-quiz-references.py','--check'],
+                [sys.executable,'scripts/check-conservation.py','--revision','HEAD'],
+                ['node','scripts/check-site.mjs']]:
         subprocess.run(cmd,cwd=ROOT,check=True)
-    print('PASS : onze anciennes pages toujours retirées, trois nouvelles pages autorisées distinctes, dépendances conservées, 300 questions identiques sauf dix explications sourcées, 24 vérifiées, scores et sélection inchangés, UTF-8 et polices contrôlés.')
+    print('PASS : onze anciennes pages retirées, trois pages Explorer reconstruites, inventaire du sitemap exact, dépendances conservées, 300 questions identiques sauf dix explications sourcées, 24 vérifiées, scores et sélection testés, UTF-8 et polices contrôlés.')
 
 if __name__=='__main__':
     static_checks()

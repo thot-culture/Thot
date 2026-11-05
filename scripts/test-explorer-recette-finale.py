@@ -12,6 +12,7 @@ import argparse
 import importlib.util
 import json
 import subprocess
+from production_checks import check_production
 ROOT=Path(__file__).resolve().parents[1];ASSET=ROOT/'assets/explorer-v2'
 spec=importlib.util.spec_from_file_location('explorer_recipe',ROOT/'scripts/test-explorer-reconstruction.py');recipe=importlib.util.module_from_spec(spec);spec.loader.exec_module(recipe)
 WIDTHS=(320,390,768,1440)
@@ -50,15 +51,13 @@ def assert_map_labels(page):
 
 
 def conservation():
-    baseline='25371839f1f109688e7dd79da672f6d7769d5f0a'
-    allowed={'explorer.html','scripts/build-explorer-reconstruction.py','scripts/test-explorer-http.py','assets/explorer-v2/aral.css','assets/explorer-v2/aral.js','assets/explorer-v2/atlas.css','assets/explorer-v2/atlas.js','scripts/explorer_aral_view.py','scripts/explorer_atlas_view.py','explorer/enquetes/mer-aral.html','explorer/atlas/rome-expansion.html','scripts/test-explorer-stockage-http.py','scripts/test-explorer-reconstruction.py','scripts/test-explorer-finitions.py'}
-    for name in subprocess.check_output(['git','ls-tree','-r','--name-only',baseline],cwd=ROOT,text=True,encoding='utf-8').splitlines():
-        if name not in allowed:assert (ROOT/name).read_bytes()==subprocess.check_output(['git','show',baseline+':'+name],cwd=ROOT),'Régression hors périmètre : '+name
+    count=check_production()
+    recipe.static_checks()
     class UniqueAttributes(HTMLParser):
         def handle_starttag(self,tag,attrs):
             keys=[name for name,value in attrs];assert len(keys)==len(set(keys)),('Attribut dupliqué',tag,keys)
     for name in recipe.PAGES:UniqueAttributes().feed((ROOT/name).read_text(encoding='utf-8'))
-    print('PASS : tous les fichiers hors périmètre, corpus, sources, cartes et médias inchangés depuis 25371839 ; attributs HTML uniques.',flush=True)
+    print(f'PASS : {count} fichiers de production conservés depuis HEAD ; corpus, sources, cartes, médias et attributs HTML uniques.',flush=True)
 
 
 def capture(page,out,name,selector=None):
@@ -148,4 +147,5 @@ def run(args):
 
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('--browser',choices=['chromium','webkit','firefox'],default='chromium');parser.add_argument('--mode',choices=['http','fixture'],default='fixture');parser.add_argument('--origin',default='http://127.0.0.1:31460');parser.add_argument('--out',type=Path,default=ROOT.parent/'THOT-EXPLORER-CORRECTIONS-20261027/captures');args=parser.parse_args();conservation();run(args)
+    parser=argparse.ArgumentParser();parser.add_argument('--static-only',action='store_true',help='Corpus/conservation seulement ; aucun navigateur annoncé comme exécuté.');parser.add_argument('--browser',choices=['chromium','webkit','firefox'],default='chromium');parser.add_argument('--mode',choices=['http','fixture'],default='fixture');parser.add_argument('--origin',default='http://127.0.0.1:31460');parser.add_argument('--out',type=Path,default=ROOT.parent/'THOT-EXPLORER-CORRECTIONS-20261027/captures');args=parser.parse_args();conservation()
+    if not args.static_only:run(args)
