@@ -18,7 +18,7 @@ const commands = [
   ...['build-explorer-reconstruction.py', 'site_chrome.py', 'sync-publication.py',
     'build-quiz-references.py', 'update-article-editorial.py', 'update-reading-times.py',
     'generate-social-cards.py'].map(n => py(n, '--check')),
-  ...['test-stabilisation.py', 'test-explorer-reconstruction.py', 'test-current-checks.py',
+  ...['test-atlas-performance.py', 'test-stabilisation.py', 'test-explorer-reconstruction.py', 'test-current-checks.py',
     'test-publication.py', 'test-publication-integration.py', 'test-portabilite.py',
     'test-seo.py', 'check-seo.py', 'test-article-editorial.py', 'test-roubaix-document.py',
     'test-pieuvres-reperes.py', 'test-puissance-comparaison.py', 'check-editorial.py'].map(n => py(n)),
