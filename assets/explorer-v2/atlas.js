@@ -4,6 +4,18 @@
   const root = document.getElementById('rome-atlas');
   if (!root) return;
   let data; try { data = JSON.parse(document.getElementById('atlas-data').textContent); } catch { return; }
+  // Réhydrate les champs documentaires communs : le catalogue reste identique
+  // pour les interactions, avec moins de texte dupliqué dans le HTML initial.
+  if (Array.isArray(data.territory_templates)) {
+    const fields = ['text', 'source', 'document_ids', 'person_ids'];
+    for (const territory of Object.values(data.territories || {})) {
+      const shared = data.territory_templates[territory.shared];
+      if (!Array.isArray(shared) || shared.length !== fields.length) return;
+      fields.forEach((field, index) => { territory[field] = shared[index]; });
+      delete territory.shared;
+    }
+    delete data.territory_templates;
+  }
   if (!data.epochs?.length || !data.chapters?.length) return;
   const $ = id => document.getElementById(id);
   const svg = $('atlas-map');

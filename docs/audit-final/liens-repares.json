@@ -6,5 +6,53 @@
     "title": "George Eliot — Great Writers Inspire",
     "checked_on": "2026-11-03",
     "evidence": "Ancien hôte : échec DNS dans le contrôle GitHub Actions 41618290167. Même ressource et même contributeur Charlotte Barrett, page de remplacement ouverte et lue via le navigateur de recherche le 3 novembre 2026. Aucun fait ni texte d'article modifié."
+  },
+  {
+    "path": "articles/roubaix-1917.html",
+    "old": "<span class=\"notice-indisponible\">Notice municipale retrouvée dans l’index de recherche ; accès direct et lecture intégrale de l’affiche non confirmés le 26 octobre 2026. Référence conservée.</span> <a href=\"https://bn-r.cd-script.fr/fr/notice.php?from=&amp;id=AFF_001_D_0150&amp;searchurl=%2Ffr%2Frecherche-resultat.php%3Ffl%3D%26from%3D%26q%3DGrand%2Bplace%26sort%3Dtri_annee%2520asc%2Ctri_titre%2520asc%26start%3D990%26version%3D2.2&amp;startpic=0\" target=\"_blank\" rel=\"noopener noreferrer\">Notice municipale (accès direct non confirmé)</a>.",
+    "new": "<span class=\"notice-indisponible\">Notice repérée dans l’ancien catalogue numérique ; son ancien lien renvoie actuellement à une page de maintenance. L’accès au document n’a pas été vérifié : conserver la cote pour le demander aux Archives municipales.</span> <a href=\"https://www.ville-roubaix.fr/services-infos-pratiques/culture-et-patrimoine/patrimoine-et-histoire/les-archives-municipales-de-roubaix/\" target=\"_blank\" rel=\"noopener noreferrer\">Contacter les Archives municipales (cote AFF_001_D_0150)</a>.",
+    "title": "Référence archivistique Roubaix — ref3",
+    "checked_on": "2026-11-05",
+    "evidence": "L'ancien lien Bn-R redirige vers une page de maintenance malgré HTTP 200. Remplacement par le site officiel des Archives municipales, cote et identification du document conservées."
+  },
+  {
+    "path": "articles/roubaix-1917.html",
+    "old": "<span class=\"notice-indisponible\">Notice municipale retrouvée dans l’index de recherche ; accès direct et lecture intégrale de l’affiche non confirmés le 26 octobre 2026. Référence conservée.</span> <a href=\"https://bn-r.cd-script.fr/fr/notice.php?from=periode&amp;id=AFF_001_D_0632&amp;searchurl=%2Ffr%2Frecherche-resultat.php%3Ffl%3D%26from%3Dperiode%26q%3Dchrono%253A%25221914-1918%2522%26sort%3Dtri_annee%2520asc%2Ctri_titre%2520asc%26start%3D1020%26version%3D2.2\" target=\"_blank\" rel=\"noopener noreferrer\">Notice municipale (accès direct non confirmé)</a>.",
+    "new": "<span class=\"notice-indisponible\">Notice repérée dans l’ancien catalogue numérique ; son ancien lien renvoie actuellement à une page de maintenance. L’accès au document n’a pas été vérifié : conserver la cote pour le demander aux Archives municipales.</span> <a href=\"https://www.ville-roubaix.fr/services-infos-pratiques/culture-et-patrimoine/patrimoine-et-histoire/les-archives-municipales-de-roubaix/\" target=\"_blank\" rel=\"noopener noreferrer\">Contacter les Archives municipales (cote AFF_001_D_0632)</a>.",
+    "title": "Référence archivistique Roubaix — ref4",
+    "checked_on": "2026-11-05",
+    "evidence": "L'ancien lien Bn-R redirige vers une page de maintenance malgré HTTP 200. Remplacement par le site officiel des Archives municipales, cote et identification du document conservées."
+  },
+  {
+    "path": "articles/roubaix-1917.html",
+    "old": "<span class=\"notice-indisponible\">Notice municipale retrouvée dans l’index de recherche ; accès direct et lecture intégrale de l’affiche non confirmés le 26 octobre 2026. Référence conservée.</span> <a href=\"https://bn-r.cd-script.fr/fr/notice.php?from=theme&amp;id=AFF_001_D_0759&amp;image=RBX_AMR_AFF_001_D_0759_1&amp;searchurl=%2Ffr%2Frecherche-resultat.php%3Ffl%3D%26from%3Dtheme%26q%3Dtheme%253A%2522Guerres%2522%26sort%3Dtri_annee%2520asc%2Ctri_titre%2520asc%26start%3D920%26version%3D2.2&amp;startpic=0\" target=\"_blank\" rel=\"noopener noreferrer\">Notice municipale (accès direct non confirmé)</a>.",
+    "new": "<span class=\"notice-indisponible\">Notice repérée dans l’ancien catalogue numérique ; son ancien lien renvoie actuellement à une page de maintenance. L’accès au document n’a pas été vérifié : conserver la cote pour le demander aux Archives municipales.</span> <a href=\"https://www.ville-roubaix.fr/services-infos-pratiques/culture-et-patrimoine/patrimoine-et-histoire/les-archives-municipales-de-roubaix/\" target=\"_blank\" rel=\"noopener noreferrer\">Contacter les Archives municipales (cote AFF_001_D_0759)</a>.",
+    "title": "Référence archivistique Roubaix — ref7",
+    "checked_on": "2026-11-05",
+    "evidence": "L'ancien lien Bn-R redirige vers une page de maintenance malgré HTTP 200. Remplacement par le site officiel des Archives municipales, cote et identification du document conservées."
+  },
+  {
+    "path": "articles/roubaix-1917.html",
+    "old": "<span class=\"notice-indisponible\">Notice municipale retrouvée dans l’index de recherche ; accès direct et lecture intégrale de l’affiche non confirmés le 26 octobre 2026. Référence conservée.</span> <a href=\"https://bn-r.cd-script.fr/fr/notice.php?id=AFF_001_D_0705\" target=\"_blank\" rel=\"noopener noreferrer\">Notice municipale (accès direct non confirmé)</a>.",
+    "new": "<span class=\"notice-indisponible\">Notice repérée dans l’ancien catalogue numérique ; son ancien lien renvoie actuellement à une page de maintenance. L’accès au document n’a pas été vérifié : conserver la cote pour le demander aux Archives municipales.</span> <a href=\"https://www.ville-roubaix.fr/services-infos-pratiques/culture-et-patrimoine/patrimoine-et-histoire/les-archives-municipales-de-roubaix/\" target=\"_blank\" rel=\"noopener noreferrer\">Contacter les Archives municipales (cote AFF_001_D_0705)</a>.",
+    "title": "Référence archivistique Roubaix — ref8",
+    "checked_on": "2026-11-05",
+    "evidence": "L'ancien lien Bn-R redirige vers une page de maintenance malgré HTTP 200. Remplacement par le site officiel des Archives municipales, cote et identification du document conservées."
+  },
+  {
+    "path": "articles/roubaix-1917.html",
+    "old": "<p class=\"precision\">Quatre notices municipales ont été retrouvées dans l’index de recherche et sont reliées ci-dessus ; leur accès direct et la lecture intégrale des affiches n’ont pas été confirmés. La notice des revues d’appel reste à retrouver. Les titres, dates et cotes sont conservés. <a href=\"https://www.armarium-hautsdefrance.fr/document/85546\" target=\"_blank\" rel=\"noopener noreferrer\">Le lien L'Armarium</a> présente le fonds, pas les cinq notices individuelles.</p>",
+    "new": "<p class=\"precision\">Quatre notices municipales sont identifiées dans l’ancien index de la Bibliothèque numérique de Roubaix, mais les liens directs renvoient temporairement vers une page de maintenance. Les titres, dates et cotes sont conservés ; les liens ci-dessus donnent accès au service officiel des Archives municipales pour demander les documents. La notice des revues d’appel reste à retrouver. <a href=\"https://www.armarium-hautsdefrance.fr/document/85546\" target=\"_blank\" rel=\"noopener noreferrer\">Le lien L'Armarium</a> présente le fonds, pas les cinq notices individuelles.</p>",
+    "title": "Note d'accès aux archives de Roubaix",
+    "checked_on": "2026-11-05",
+    "evidence": "La note explicite l'état des anciens liens et conserve les informations archivistiques."
+  },
+  {
+    "path": "articles/puissance-etats-unis.html",
+    "old": "Accès alternatif institutionnel : <a href=\"https://www.diplomatie.gouv.fr/IMG/pdf/paris_roadmap_-_final_version_fr_2__cle09b5d2.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">version française de la même Feuille de route, ministère de l’Europe et des Affaires étrangères (PDF)</a>.",
+    "new": "Accès alternatif institutionnel : <a href=\"https://www.diplomatie.gouv.fr/IMG/pdf/microsoft_word_-_paris_roadmap_-_final_version_cle4afdcb.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">version originale anglaise de la Feuille de route de Paris (25 juin 2019), ministère de l’Europe et des Affaires étrangères (PDF)</a>. La traduction française précédemment citée renvoie désormais vers l’accueil du ministère.",
+    "title": "Feuille de route de Paris (2019) — version originale accessible",
+    "checked_on": "2026-11-05",
+    "evidence": "Le PDF français ne donne plus le document (redirection vers accueil diplomatie.gouv.fr), tandis que le PDF officiel original anglais a été ouvert et son contenu confirmé. Référence américaine et texte de l'article inchangés."
   }
 ]
