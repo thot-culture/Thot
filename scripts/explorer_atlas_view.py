@@ -65,7 +65,23 @@ def render(data, map_svg):
         return ''.join(result)
 
     extra_static='<section><h3>Lieux et événements : un index documentaire, toutes périodes</h3>'+''.join('<article><h4>'+_e(item.get('name',item.get('title')))+' </h4>'+_paragraphs(item.get('text',''))+_paragraphs(item.get('limits',''))+'<p class="atlas-source">'+_source(item.get('source'))+'</p></article>' for item in data.get('places',[])+data.get('events',[]))+'</section>'
-    payload=json.dumps(data,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')
+    # Les 372 territoires reprennent les mêmes métadonnées documentaires.
+    # Un dictionnaire de modèles réduit la taille initiale du HTML sans perdre
+    # les notices, les sources ni les associations entre documents et périodes.
+    fields = ('text', 'source', 'document_ids', 'person_ids')
+    templates, indexes, territories = [], {}, {}
+    for territory_id, territory in data['territories'].items():
+        shared = [territory.get(field) for field in fields]
+        signature = json.dumps(shared, ensure_ascii=False, separators=(',', ':'))
+        if signature not in indexes:
+            indexes[signature] = len(templates)
+            templates.append(shared)
+        territories[territory_id] = {
+            **{key: value for key, value in territory.items() if key not in fields},
+            'shared': indexes[signature],
+        }
+    compact_data = {**data, 'territories': territories, 'territory_templates': templates}
+    payload=json.dumps(compact_data,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')
     return '''<div class="rome-atlas" id="rome-atlas" data-mode="free" data-show-cities="true" data-show-territories="true" data-show-neighbors="false" data-show-borders="true" data-show-events="false">
 <header class="atlas-hero"><div><p class="atlas-kicker">ATLAS · UN VOYAGE DANS LES ÉPOQUES</p><h1>L’expansion de Rome<span>Une cité. Un monde en mouvement.</span></h1><p class="atlas-opening">Comment une cité italienne est-elle devenue le centre d’un immense empire ?</p></div><p class="atlas-hero-note">Observez les territoires, confrontez deux époques et découvrez plusieurs points de vue. Les frontières restent des approximations documentées.</p></header>
 <div class="atlas-topbar atlas-interactive" hidden><div class="atlas-mode" role="group" aria-label="Mode de découverte"><button type="button" data-atlas-mode="free" aria-pressed="true">Exploration libre</button><button type="button" data-atlas-mode="guided" aria-pressed="false">Le récit en six chapitres</button></div><button type="button" class="atlas-action" data-atlas-library>Documents et personnages <span aria-hidden="true">↓</span></button></div>
