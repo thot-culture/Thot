@@ -42,19 +42,13 @@ jobs:
           git diff --exit-code
       - name: Générateurs et contrôles actuels
         run: |
-          python scripts/sync-publication.py --check
-          python scripts/test-publication.py
+          node scripts/validate.mjs
           python scripts/test-publication-integration.py --browser --output "$RUNNER_TEMP/evidence/publication-integration.json"
-          python scripts/check-conservation.py --revision c7b62ad61c5ddabc63c61560175a55c85ec80200
-          python scripts/test-portabilite.py
-          node scripts/check-site.mjs
-          node scripts/check-home.mjs
-          python scripts/test-article-editorial.py
-          python scripts/check-seo.py
-          python scripts/test-seo.py
-          python scripts/build-explorer-reconstruction.py --check
-          python scripts/site_chrome.py --check
-          node --input-type=module -e 'import {readdirSync} from "node:fs"; import {execFileSync} from "node:child_process"; for(const n of readdirSync("scripts").filter(n=>/^test-.*\.mjs$/.test(n)))execFileSync(process.execPath,["scripts/"+n],{stdio:"inherit"})'
+      - name: Recettes Explorer complètes sur fixtures
+        run: |
+          python scripts/test-explorer-reconstruction.py --browser --out "$RUNNER_TEMP/evidence/explorer-reconstruction"
+          python scripts/test-explorer-finitions.py --out "$RUNNER_TEMP/evidence/explorer-finitions"
+          python scripts/test-explorer-recette-finale.py --out "$RUNNER_TEMP/evidence/explorer-finale"
       - name: Affichage, clavier, WCAG et parties complètes
         env:
           NODE_PATH: ${{ runner.temp }}/thot-audit/node_modules

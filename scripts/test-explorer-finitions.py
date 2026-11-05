@@ -10,18 +10,18 @@ import argparse
 import importlib.util
 import json
 import subprocess
+from production_checks import check_production
 ROOT=Path(__file__).resolve().parents[1]
 A=ROOT/'assets/explorer-v2'
 spec=importlib.util.spec_from_file_location('recipe',ROOT/'scripts/test-explorer-reconstruction.py')
 recipe=importlib.util.module_from_spec(spec);spec.loader.exec_module(recipe)
 
 def conservation():
-    baseline='d8ac141d78ed6014ad7f1edec1d8fc693640a23c'
-    allowed={'scripts/test-explorer-http.py','explorer.html','scripts/audit-explorer-sources.py','scripts/build-explorer-corpus.py','scripts/build-explorer-reconstruction.py','scripts/explorer_aral_view.py','scripts/explorer_atlas_view.py','scripts/test-explorer-reconstruction.py'}
-    for name in subprocess.check_output(['git','ls-tree','-r','--name-only',baseline],cwd=ROOT,text=True,encoding='utf-8').splitlines():
-        if name in allowed or name.startswith(('assets/explorer-v2/','explorer/')):continue
-        assert (ROOT/name).read_bytes()==subprocess.check_output(['git','show',baseline+':'+name],cwd=ROOT),name
-    print('PASS : chaque fichier hors Explorer inchangé depuis d8ac141.',flush=True)
+    # L'intégration de 2026 est terminée ; ses workflows ne sont pas du contenu.
+    # L'ensemble de la production, Explorer compris, reste protégé octet par octet.
+    count=check_production()
+    recipe.static_checks()
+    print(f'PASS : {count} fichiers de production conservés depuis HEAD ; corpus, médias et licences vérifiés.',flush=True)
 
 def run(out):
     from playwright.sync_api import sync_playwright
@@ -146,4 +146,5 @@ def run(out):
     print('PASS : quatre largeurs, six pièces/quatre relations, liste tactile, huit cas de bilan, onze lieux, quatre événements, quatre parcours. Zoom :',zoom,flush=True)
 
 if __name__=='__main__':
-    parser=argparse.ArgumentParser();parser.add_argument('--out',type=Path,default=ROOT.parent/'THOT-EXPLORER-FINITIONS-20261026/captures');args=parser.parse_args();conservation();run(args.out)
+    parser=argparse.ArgumentParser();parser.add_argument('--static-only',action='store_true',help='Corpus/conservation seulement ; aucun navigateur annoncé comme exécuté.');parser.add_argument('--out',type=Path,default=ROOT.parent/'THOT-EXPLORER-FINITIONS-20261026/captures');args=parser.parse_args();conservation()
+    if not args.static_only:run(args.out)

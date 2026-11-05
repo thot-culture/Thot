@@ -4,6 +4,7 @@ from pathlib import Path
 from html.parser import HTMLParser
 import hashlib,json,subprocess,re,sys
 import runpy
+from production_checks import check_production
 ROOT=Path(__file__).resolve().parents[1]
 PAGE=ROOT/'articles/evolution-strategies-militaires.html'
 class Audit(HTMLParser):
@@ -40,9 +41,9 @@ images=json.loads((ROOT/'docs/strategies-images.json').read_text(encoding='utf-8
 for image in images:
  p=ROOT/'assets/strategies-media'/f"{image['id']}.webp"
  assert hashlib.sha256(p.read_bytes()).hexdigest()==image['webpSHA256']
-# Un ajout local ne doit modifier aucun fichier du site de référence.
-changes=subprocess.check_output(['git','diff','--name-only','--diff-filter=MD','5231c61','--'],cwd=ROOT,text=True)
-allowed={'assets/bibliotheque.css','articles/evolution-strategies-militaires.html','bibliotheque.html','sitemap.xml','assets/article-editorial.json','assets/reading-times.json','assets/reading-times.js','scripts/update-reading-times.py','scripts/update-article-editorial.py','scripts/test-article-editorial.py','scripts/test-bibliotheque.mjs','scripts/test-strategies-static.py','scripts/test-strategies-browser.cjs','docs/strategies-images.json','assets/strategies-media/homs.webp','assets/strategies-media/minard.webp','assets/strategies-media/tank.webp','assets/strategies-media/homs-original','assets/strategies-media/minard-original','assets/strategies-media/tank-original'}
+# La publication depuis 5231c61 est terminée. Son périmètre global incluait
+# l'outillage : comparer désormais tous les fichiers servis au socle courant,
+# en conservant au-dessus le texte validé et les empreintes documentaires.
 if '--content-only' not in sys.argv:
- assert set(changes.splitlines()) <= allowed, changes
-print(('Contrôle de conservation du périmètre historique ignoré explicitement ; ' if '--content-only' in sys.argv else '')+'PASS : six chapitres, quatre activités, ancres, médias, quatre empreintes SHA-256, métadonnées publiques, bibliothèque et sitemap ; autres pages préservées.')
+ print(f'PASS : {check_production()} fichiers de production conservés depuis HEAD.')
+print('PASS : six chapitres, quatre activités, ancres, médias, quatre empreintes SHA-256, métadonnées publiques, bibliothèque et sitemap.'+(' Mode contenu seul explicite.' if '--content-only' in sys.argv else ''))

@@ -49,7 +49,12 @@ python scripts/test-seo.py
 python scripts/check-conservation.py --revision SHA_DU_SOCLE
 ```
 
-Les contrôles actuels sont exécutés par `verification-portable.yml` (Linux/Windows) et `audit-final.yml` (navigateurs, sauvegarde, accessibilité et mesures). Les recettes historiques en échec restent documentées ; elles n’ont pas été désactivées.
+Les contrôles actuels sont configurés dans `verification-portable.yml` (Linux/Windows) et `audit-final.yml` (navigateurs, sauvegarde, accessibilité et mesures). Les quatre recettes historiques de conservation ont été actualisées ; leur état antérieur reste documenté dans les rapports datés.
+
+Pour lancer les contrôles locaux courants en une commande : `node scripts/validate.mjs`.
+Les options `--python CHEMIN` et `--revision SHA` choisissent l'interpréteur et le socle
+de conservation (par défaut `python` et `HEAD`). Voir [les contrôles techniques](docs/TESTS-TECHNIQUES.md)
+pour les chemins de publication, les tests de mutation et les limites des recettes historiques.
 
 
 GitHub Pages publie la racine de `main`. Avant publication, conserver le commit précédent dans une branche `backup/`, tester sous le préfixe `/Thot/`, puis vérifier le déploiement et les pages publiques. Ne pas forcer le push ni réécrire l’historique.
