@@ -56,7 +56,11 @@ def markup(relative, javascript=True):
 
 def chromium(playwright):
     configured = os.environ.get('THOT_CHROMIUM_EXECUTABLE')
-    executable = configured or shutil.which('chromium') or shutil.which('chromium-browser')
+    # La CI installe le navigateur assorti à Playwright. Ne pas le remplacer
+    # par un Chromium système simplement présent dans le PATH du runner.
+    executable = configured
+    if not executable and not Path(playwright.chromium.executable_path).is_file():
+        executable = shutil.which('chromium') or shutil.which('chromium-browser')
     options = {'executable_path': executable} if executable else {}
     return playwright.chromium.launch(
         **options, headless=True,

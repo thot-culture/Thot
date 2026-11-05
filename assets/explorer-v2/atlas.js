@@ -4,6 +4,15 @@
   const root = document.getElementById('rome-atlas');
   if (!root) return;
   let data; try { data = JSON.parse(document.getElementById('atlas-data').textContent); } catch { return; }
+  // Développer une seule notice à l'ouverture de sa fiche, sans travail au démarrage.
+  function territoryById(id) {
+    const territory = data.territories?.[id];
+    if (!territory || !Array.isArray(data.territory_details)) return territory;
+    const {detail_index, ...entry} = territory;
+    const detail = data.territory_details[detail_index];
+    if (!Number.isInteger(detail_index) || detail_index < 0 || !detail) return;
+    return {...entry, ...detail};
+  }
   if (!data.epochs?.length || !data.chapters?.length) return;
   const $ = id => document.getElementById(id);
   const svg = $('atlas-map');
@@ -69,21 +78,38 @@
     const compass=root.querySelector('.atlas-map-compass');if(compass)markers.push(compass.getBoundingClientRect());
     const labels=[...svg.querySelectorAll('#atlas-city-layer text,#atlas-event-layer text')];
     const accepted=[];
+    const visibleLabels=[];
     labels.sort((a,b)=>Number((b.parentNode.dataset.place||b.parentNode.dataset.event)===activeMapItem)-Number((a.parentNode.dataset.place||a.parentNode.dataset.event)===activeMapItem));
     for(const text of labels){
-      text.style.visibility='hidden';text.setAttribute('aria-hidden','true');
+      if(!text.hasAttribute('aria-hidden'))text.setAttribute('aria-hidden','true');
       const group=text.parentNode,isEvent=Boolean(group.dataset.event);
-      if(group.hasAttribute('hidden')||(isEvent?root.dataset.showEvents!=='true':root.dataset.showCities==='false'))continue;
-      const point=isEvent?{x:0,y:0}:{x:group.querySelector('circle').cx.baseVal.value,y:group.querySelector('circle').cy.baseVal.value};
-      text.style.fontSize=(14/scale)+'px';
-      let metrics=labelMetrics.get(text);
-      if(!metrics||metrics.scale!==scale){
-        text.setAttribute('x','0');text.setAttribute('y','0');text.setAttribute('text-anchor','start');
-        const box=text.getBBox();metrics={scale,x:box.x,y:box.y,width:box.width,height:box.height};labelMetrics.set(text,metrics);
+      if(group.hasAttribute('hidden')||(isEvent?root.dataset.showEvents!=='true':root.dataset.showCities==='false')){
+        if(text.style.visibility!=='hidden')text.style.visibility='hidden';
+        continue;
       }
-      const matrix=group.getScreenCTM();
+      const point=isEvent?{x:0,y:0}:{x:group.querySelector('circle').cx.baseVal.value,y:group.querySelector('circle').cy.baseVal.value};
+      const cached=labelMetrics.get(text);
+      const metrics=cached?.scale===scale?cached:null;
+      if(!metrics){
+        text.style.fontSize=(14/scale)+'px';
+        text.setAttribute('x','0');text.setAttribute('y','0');text.setAttribute('text-anchor','start');
+      }
+      visibleLabels.push({text,group,point,metrics});
+    }
+    // Préparer tous les libellés, puis lire leurs mesures ensemble avant de les placer.
+    // Alterner getBBox/getScreenCTM et des écritures forçait un recalcul par libellé.
+    for(const label of visibleLabels){
+      if(!label.metrics){
+        const box=label.text.getBBox();
+        label.metrics={scale,x:box.x,y:box.y,width:box.width,height:box.height};
+        labelMetrics.set(label.text,label.metrics);
+      }
+      label.matrix=label.group.getScreenCTM();
+    }
+    for(const {text,point,metrics,matrix} of visibleLabels){
       // Measure once per size, then test candidate boxes mathematically while panning.
       const candidates=[[12,-10,'start'],[12,23,'start'],[-12,-10,'end'],[-12,23,'end'],[0,-15,'middle'],[0,28,'middle'],[15,5,'start'],[-15,5,'end']];
+      let visibility='hidden';
       for(const [dx,dy,anchor] of candidates){
         const x=point.x+dx/scale,y=point.y+dy/scale;
         const offset=anchor==='end'?metrics.width:anchor==='middle'?metrics.width/2:0;
@@ -91,8 +117,12 @@
         const box={left,top,right:left+metrics.width*matrix.a,bottom:top+metrics.height*matrix.d};
         if(box.left<bounds.left+gap||box.right>bounds.right-gap||box.top<bounds.top+gap||box.bottom>bounds.bottom-gap)continue;
         if(markers.some(marker=>overlap(box,marker))||accepted.some(other=>overlap(box,other)))continue;
-        text.setAttribute('x',String(x));text.setAttribute('y',String(y));text.setAttribute('text-anchor',anchor);text.style.visibility='visible';accepted.push(box);break;
+        if(text.getAttribute('x')!==String(x))text.setAttribute('x',String(x));
+        if(text.getAttribute('y')!==String(y))text.setAttribute('y',String(y));
+        if(text.getAttribute('text-anchor')!==anchor)text.setAttribute('text-anchor',anchor);
+        visibility='visible';accepted.push(box);break;
       }
+      if(text.style.visibility!==visibility)text.style.visibility=visibility;
     }
   }
   let pendingMapFrame = 0;
@@ -183,7 +213,7 @@
   }
   function closeCard(restore=true) { $('atlas-card').hidden=true; if (restore && cardOpener?.isConnected) cardOpener.focus(); }
   function openCard(kind,id,opener=document.activeElement) {
-    const item=kind==='place'?places.get(id):kind==='event'?events.get(id):kind==='region'?regions.get(id):data.territories[id]; if (!item) return;
+    const item=kind==='place'?places.get(id):kind==='event'?events.get(id):kind==='region'?regions.get(id):territoryById(id); if (!item) return;
     activeMapItem=id;mapView();cardOpener=opener;$('atlas-card-kind').textContent=kind==='place'?'LIEU DE REPÉRAGE · TOUTES PÉRIODES':kind==='event'?'ÉVÉNEMENT · '+item.date+' · CARTE : '+epochs.get(state.epoch).label:kind==='region'?'CADRAGE DE LECTURE · FRONTIÈRES INCHANGÉES':'TERRITOIRE · '+epochs.get(item.epoch_id).label;
     $('atlas-card-title').textContent=item.title || item.name;
     const box=$('atlas-card-content'); box.replaceChildren();paragraphs(box,item.text);paragraphs(box,item.limits);box.append(source(item.source));

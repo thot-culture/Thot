@@ -215,6 +215,7 @@ try{
  const c=await browser.newContext({viewport:{width:390,height:900},hasTouch:true});const p=await c.newPage();
  p.on('pageerror',e=>{throw e});
  await p.goto(base);await p.locator('#home-article-search').fill('Roubaix');await p.locator('.home-search button').click();
+ await p.waitForLoadState('load');
  assert(p.url().includes('/Thot/bibliotheque.html?q=Roubaix'));
  assert.equal(await p.locator('.article-card:visible').count(),1);
  await p.locator('#clear-search').click();assert.equal(await p.locator('.article-card:visible').count(),fs.readdirSync(path.join(root,'articles')).filter(n=>n.endsWith('.html')).length);

@@ -38,6 +38,21 @@ def _media(item):
     return str(value or '')
 
 
+def compact_data(data):
+    """Factorise seulement les notices identiques ; le corpus source reste intact."""
+    fields = ('text', 'source', 'document_ids', 'person_ids')
+    details, indexes, territories = [], {}, {}
+    for key, territory in data.get('territories', {}).items():
+        detail = {field: territory[field] for field in fields if field in territory}
+        signature = json.dumps(detail, ensure_ascii=False, sort_keys=True, separators=(',', ':'))
+        if signature not in indexes:
+            indexes[signature] = len(details)
+            details.append(detail)
+        territories[key] = {field: value for field, value in territory.items() if field not in fields}
+        territories[key]['detail_index'] = indexes[signature]
+    return {**data, 'territories': territories, 'territory_details': details}
+
+
 def render(data, map_svg):
     """Construit un fragment de main, sans dépendance réseau d’interaction."""
     epochs = data.get('epochs', [])
@@ -65,7 +80,7 @@ def render(data, map_svg):
         return ''.join(result)
 
     extra_static='<section><h3>Lieux et événements : un index documentaire, toutes périodes</h3>'+''.join('<article><h4>'+_e(item.get('name',item.get('title')))+' </h4>'+_paragraphs(item.get('text',''))+_paragraphs(item.get('limits',''))+'<p class="atlas-source">'+_source(item.get('source'))+'</p></article>' for item in data.get('places',[])+data.get('events',[]))+'</section>'
-    payload=json.dumps(data,ensure_ascii=False,separators=(',',':')).replace('</','<\\/')
+    payload=json.dumps(compact_data(data),ensure_ascii=False,separators=(',',':')).replace('</','<\\/')
     return '''<div class="rome-atlas" id="rome-atlas" data-mode="free" data-show-cities="true" data-show-territories="true" data-show-neighbors="false" data-show-borders="true" data-show-events="false">
 <header class="atlas-hero"><div><p class="atlas-kicker">ATLAS · UN VOYAGE DANS LES ÉPOQUES</p><h1>L’expansion de Rome<span>Une cité. Un monde en mouvement.</span></h1><p class="atlas-opening">Comment une cité italienne est-elle devenue le centre d’un immense empire ?</p></div><p class="atlas-hero-note">Observez les territoires, confrontez deux époques et découvrez plusieurs points de vue. Les frontières restent des approximations documentées.</p></header>
 <div class="atlas-topbar atlas-interactive" hidden><div class="atlas-mode" role="group" aria-label="Mode de découverte"><button type="button" data-atlas-mode="free" aria-pressed="true">Exploration libre</button><button type="button" data-atlas-mode="guided" aria-pressed="false">Le récit en six chapitres</button></div><button type="button" class="atlas-action" data-atlas-library>Documents et personnages <span aria-hidden="true">↓</span></button></div>
