@@ -12,14 +12,15 @@ class Reading(HTMLParser):
  def handle_starttag(self,tag,attrs):
   a=dict(attrs)
   if a.get('id')=='texte-article':self.active=True
-  blocked=bool(self.stack and self.stack[-1][1]) or tag in {'script','style','noscript','figure','svg'} or bool(set(a.get('class','').split()) & {'sm-module','sources','related-reading','science-reperes','quiz-pseudonymes','authorite-game','thot-visual-guide','comparateur-puissance','chronologie-afghanistan','roubaix-frise','cephalo-atlas'}) or a.get('id') in {'explorer-roubaix','transcription-laine','roubaix-reperes-texte','activites-autorite-aide'}
-  if tag not in {'img','br','hr','input','meta','link','source','wbr'}:self.stack.append((tag,blocked))
+  blocked=bool(self.stack and self.stack[-1][1]) or 'data-reading-exclude' in a or tag in {'script','style','noscript','figure','svg'} or bool(set(a.get('class','').split()) & {'sm-module','sources','related-reading','science-reperes','quiz-pseudonymes','authorite-game','thot-visual-guide','comparateur-puissance','chronologie-afghanistan','roubaix-frise','cephalo-atlas'}) or a.get('id') in {'explorer-roubaix','transcription-laine','roubaix-reperes-texte','activites-autorite-aide'}
+  included=bool(self.stack and self.stack[-1][2]) or 'data-reading-include' in a
+  if tag not in {'img','br','hr','input','meta','link','source','wbr'}:self.stack.append((tag,blocked,included))
  def handle_endtag(self,tag):
   for i in range(len(self.stack)-1,-1,-1):
    if self.stack[i][0]==tag:self.stack=self.stack[:i];break
   if tag=='article' and not any(entry[0]=='article' for entry in self.stack):self.active=False
  def handle_data(self,data):
-  if self.active and not (self.stack and self.stack[-1][1]):self.words.extend(re.findall(r"\b[\wÀ-ÿ]+(?:[’'-][\wÀ-ÿ]+)*\b",data))
+  if (self.active or bool(self.stack and self.stack[-1][2])) and not (self.stack and self.stack[-1][1]):self.words.extend(re.findall(r"\b[\wÀ-ÿ]+(?:[’'-][\wÀ-ÿ]+)*\b",data))
 def outputs():
  records={}
  for p in sorted((ROOT/'articles').glob('*.html')):

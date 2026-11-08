@@ -608,6 +608,96 @@
         "@type": "Organization",
         "name": "La rédaction THOT"
       }
+    },
+    {
+      "slug": "les-sophistes-verite-justice",
+      "layout": "authored",
+      "published": "2026-11-08",
+      "editorial_updated": "2026-11-08",
+      "editorial_scope": "Première publication du texte validé, avec deux pauses interactives facultatives.",
+      "headline": "Les sophistes : qui décide de ce qui est vrai et juste ?",
+      "author": {
+        "@type": "Organization",
+        "name": "La rédaction THOT"
+      },
+      "seo": {
+        "title": "Les sophistes : vérité, justice et pouvoir de la parole | THOT",
+        "description": "Découvrez comment les sophistes grecs ont interrogé la vérité, la justice, les lois et le pouvoir de la parole, à travers des exemples et deux jeux interactifs."
+      },
+      "social": {
+        "title": "Les sophistes : qui décide du vrai et du juste ?",
+        "description": "Découvrez comment les sophistes grecs ont interrogé la vérité, la justice, les lois et le pouvoir de la parole, à travers des exemples et deux jeux interactifs.",
+        "image": "assets/social-cards/les-sophistes-verite-justice.png",
+        "alt": "THOT — Les sophistes : qui décide du vrai et du juste ? Deux bulles géométriques évoquent la confrontation des discours."
+      },
+      "sources": {
+        "ref1": {
+          "kind": "primary",
+          "label": "Source antique"
+        },
+        "ref2": {
+          "kind": "primary",
+          "label": "Source antique"
+        },
+        "ref3": {
+          "kind": "primary",
+          "label": "Source antique"
+        },
+        "ref4": {
+          "kind": "primary",
+          "label": "Source antique"
+        },
+        "ref5": {
+          "kind": "primary",
+          "label": "Source antique"
+        },
+        "ref6": {
+          "kind": "primary",
+          "label": "Source antique"
+        },
+        "ref7": {
+          "kind": "primary",
+          "label": "Source antique"
+        },
+        "ref8": {
+          "kind": "secondary",
+          "label": "Étude moderne"
+        },
+        "ref9": {
+          "kind": "secondary",
+          "label": "Étude moderne"
+        },
+        "ref10": {
+          "kind": "secondary",
+          "label": "Étude moderne"
+        },
+        "ref11": {
+          "kind": "secondary",
+          "label": "Étude moderne"
+        },
+        "ref12": {
+          "kind": "secondary",
+          "label": "Ressource scientifique complémentaire"
+        },
+        "ref13": {
+          "kind": "secondary",
+          "label": "Ressource scientifique complémentaire"
+        },
+        "ref14": {
+          "kind": "secondary",
+          "label": "Ressource scientifique complémentaire"
+        },
+        "ref15": {
+          "kind": "secondary",
+          "label": "Ressource scientifique complémentaire"
+        }
+      },
+      "catalogue": {
+        "category": "sciences-humaines",
+        "label": "Antiquité · Philosophie",
+        "keywords": "sophistes antiquité philosophie vérité justice rhétorique protagoras gorgias antiphon hippias thrasymaque prodicos",
+        "credit": "Composition typographique et géométrique originale THOT, 2026 ; polices DejaVu. Aucun document antique reproduit."
+      }
     }
   ]
 }
