@@ -61,6 +61,11 @@ jobs:
         run: |
           python scripts/preview.py > "$RUNNER_TEMP/preview.log" 2>&1 &
           node scripts/test-site-browser.cjs
+      - name: Article sophistes, parcours et accessibilité
+        env:
+          NODE_PATH: ${{ runner.temp }}/thot-audit/node_modules
+          THOT_OUTPUT_DIR: ${{ runner.temp }}/evidence/sophistes
+        run: node scripts/test-sophistes-browser.cjs
       - name: Performance mobile de laboratoire
         if: always()
         env:

@@ -116,7 +116,15 @@ function fixture(initial = '', brokenImage = -1, options = {}) {
   return { document, window, nodes, filters, cards, query, filter, visible, history, historyCalls, historyAttempts, timers, advance, navigate };
 }
 
-const catalogueCategories = [...(baseline ? [] : ['histoire']), 'sciences-humaines', 'sciences', 'arts', 'geographie', 'histoire'];
+// Le registre publié détermine le catalogue attendu ; conserver les cinq
+// catégories de la fixture historique uniquement pour --baseline.
+const catalogue = JSON.parse(await readFile(resolve(root, 'assets/article-editorial.json'), 'utf8'));
+const catalogueCategories = baseline ? ['sciences-humaines', 'sciences', 'arts', 'geographie', 'histoire']
+  : [...html.matchAll(/<article\b[^>]*data-category="([^"]+)"/g)].map(match => match[1]);
+if (!baseline) {
+  assert.equal(catalogueCategories.length, catalogue.articles.length);
+  for (const record of catalogue.articles) assert.ok(html.includes(`href="articles/${record.slug}.html"`));
+}
 const totalCatalogue = catalogueCategories.length;
 const histoireCategories = catalogueCategories.filter(category => category === 'histoire');
 const f = fixture();
@@ -338,7 +346,7 @@ for (const storageFails of [false, true]) {
   assert.equal(destinations.length, 2, 'Les clics natifs sont préservés');
 }
 assert.equal(new Set(articleLinks.map(tag => tag.href)).size, totalCatalogue);
-console.log('PASS : les 6 articles restent dans le catalogue surprise ; stockage refusé et clics natifs préservés.');
+console.log(`PASS : les ${totalCatalogue} articles restent dans le catalogue surprise ; stockage refusé et clics natifs préservés.`);
 
 const ids = tags.filter(tag => tag.id).map(tag => tag.id);
 assert.equal(new Set(ids).size, ids.length);
@@ -382,5 +390,5 @@ for (const tag of tags) {
 assert.ok(Object.hasOwn(tags.find(tag => tag.id === 'library-search'), 'hidden'));
 assert.match(html, /<noscript>[\s\S]*Tous les articles restent accessibles/);
 assert.equal(tags.filter(tag => tag.role === 'status').length, 1, 'Un seul statut pour annoncer le résultat');
-console.log(`PASS : ${internal} liens/ressources internes, ${scripts} scripts, IDs, ARIA, métadonnées, 6 images décrites et dimensionnées ; catalogue statique accessible sans JS.`);
+console.log(`PASS : ${internal} liens/ressources internes, ${scripts} scripts, IDs, ARIA, métadonnées, ${totalCatalogue} images décrites et dimensionnées ; catalogue statique accessible sans JS.`);
 console.log(`NON VÉRIFIÉ : rendu ordinateur/mobile, CSS calculé, lecteur d’écran, HTTP des liens et de l’image externe (${externalImages}), performances réelles.`);

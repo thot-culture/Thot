@@ -67,6 +67,11 @@ class Card:
 # Add a new article here, then add its original composition in draw_artwork().
 # Titles are deliberately short; article H1s remain the editorial reference.
 CARDS = {
+    'les-sophistes-verite-justice': Card(
+        'ANTIQUITÉ · PHILOSOPHIE',
+        ('Les sophistes', 'Qui décide du vrai', 'et du juste ?'),
+        'THOT — Les sophistes : qui décide du vrai et du juste ? '
+        'Deux bulles géométriques évoquent la confrontation des discours.'),
     'autorite': Card(
         'PSYCHOLOGIE · SOCIÉTÉ',
         ('Face à l’autorité,', 'pourquoi réagit-on', 'différemment ?'),
@@ -149,7 +154,17 @@ def draw_artwork(c: Canvas, slug: str):
     c.tracked((927, 66), 'LES ARTICLES', size=13, spacing=2.1, fill=CREAM)
     c.line([(927, 103), (1161, 103)], width=1)
 
-    if slug == 'autorite':
+    if slug == 'les-sophistes-verite-justice':
+        # Two abstract voices: original composition, not an ancient document.
+        c.rectangle((930, 190, 1110, 310), outline=GOLD, width=3)
+        c.line([(960, 310), (960, 345), (1000, 310)], width=3)
+        c.rectangle((980, 355, 1158, 465), outline=CREAM, width=3)
+        c.line([(1120, 465), (1120, 495), (1080, 465)], fill=CREAM, width=3)
+        for y in (225, 255):
+            c.line([(952, y), (1088, y)], width=2)
+        for y in (390, 420):
+            c.line([(1002, y), (1136, y)], fill=CREAM, width=2)
+    elif slug == 'autorite':
         # One shared point, three possible responses.
         c.ellipse((1000, 166, 1088, 254), outline=GOLD, width=3)
         c.ellipse((1027, 193, 1061, 227), fill=CREAM)
