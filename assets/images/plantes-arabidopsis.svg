@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420">
+<rect width="640" height="420" fill="#eef2e6"/>
+<defs><g id="feuille">
+<path d="M0 0C-17-42-47-79-38-121c6-28 23-51 38-57 19 10 37 30 42 58C53-78 17-37 0 0Z" fill="#6d985d" stroke="#345e42" stroke-width="2"/>
+<path d="M0-9V-162M0-43l-22-24m22-1 28-30M0-92l-30-24m30-4 23-20" fill="none" stroke="#c8dca1" stroke-width="2" stroke-linecap="round"/>
+</g></defs>
+<ellipse cx="318" cy="332" rx="218" ry="37" fill="#dce7d2"/>
+<path d="M320 320q-5-78 36-187 13-32 11-76m-20 97q39-28 59-69m-50 48q-8-27-24-42" fill="none" stroke="#4a7451" stroke-width="5" stroke-linecap="round"/>
+<g fill="#fffdf4" stroke="#8f9d73" stroke-width="1.5">
+<path d="M367 58q-20 4-16-8 3-8 13-1-2-14 6-14 9 1 5 13 12-7 15 1 1 8-13 11 8 10 1 14-8 5-11-16Z"/>
+<path d="M406 87q-15 1-14-7 2-7 11-3-1-11 5-11 7 1 5 11 10-5 12 2 2 7-11 7 7 8 0 11-6 3-8-10Z"/>
+<path d="M332 92q-14 0-12-8 2-6 10-3-3-9 4-10 7 0 4 10 10-4 10 3 1 6-9 7 4 7-2 9-5 1-5-8Z"/>
+</g>
+<g fill="#bd9442"><circle cx="370" cy="53" r="3"/><circle cx="410" cy="82" r="2.5"/><circle cx="335" cy="86" r="2"/></g>
+<use href="#feuille" transform="translate(318 323) rotate(63) scale(1.23)"/>
+<use href="#feuille" transform="translate(318 323) rotate(-58) scale(1.24)"/>
+<use href="#feuille" transform="translate(318 323) rotate(-8) scale(1.28)"/>
+<use href="#feuille" transform="translate(318 323) rotate(-100) scale(.9)"/>
+<use href="#feuille" transform="translate(318 323) rotate(108) scale(1.05)"/>
+<use href="#feuille" transform="translate(318 323) rotate(-134) scale(.65)"/>
+<use href="#feuille" transform="translate(318 323) rotate(150) scale(.62)"/>
+<circle cx="318" cy="323" r="7" fill="#385c40"/>
+
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 285" width="640" height="285">
+<rect width="640" height="285" fill="#eef2e6"/>
+<defs><g id="petite-plante"><path d="M0 102Q-8 51 4 2m-4 56-36-24m38 31 35-31" fill="none" stroke="#3d684e" stroke-width="4"/>
+<g fill="#719a61" stroke="#3d684e" stroke-width="2"><path d="M0 56q-17-39-61-37 13 45 61 37Z"/><path d="M1 64q17-42 64-42-16 43-64 42Z"/><path d="M4 42q-25-24 0-44 23 19 0 44Z"/></g>
+<path d="M-46 104h92l-13 49h-66Z" fill="#ab6347" stroke="#714a36" stroke-width="2"/></g>
+<marker id="fleche" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0l10 5-10 5z" fill="#436753"/></marker></defs>
+<use href="#petite-plante" transform="translate(112 70)"/>
+<use href="#petite-plante" transform="translate(528 70)"/>
+<path d="M175 96c110-68 193-65 283 0" fill="none" stroke="#436753" stroke-width="3" stroke-dasharray="7 8" marker-end="url(#fleche)"/>
+<g fill="#99643f"><circle cx="189" cy="86" r="5"/><circle cx="237" cy="57" r="5"/><circle cx="297" cy="49" r="5"/><circle cx="367" cy="56" r="5"/><circle cx="421" cy="75" r="5"/></g>
+<text x="320" y="123" text-anchor="middle" fill="#233b34" font-family="system-ui, sans-serif" font-weight="650" font-size="22">Composés volatils</text><text x="112" y="257" text-anchor="middle" fill="#233b34" font-family="system-ui, sans-serif" font-weight="650" font-size="22">Plante blessée</text><text x="528" y="257" text-anchor="middle" fill="#233b34" font-family="system-ui, sans-serif" font-weight="650" font-size="22">Plante exposée</text>
+</svg>
