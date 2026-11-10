@@ -50,14 +50,35 @@ def catalogue_for(record, root):
         raise ValueError("Illustration illisible pour " + slug) from error
     if catalogue.get("credit_url") and urlsplit(catalogue["credit_url"]).scheme != "https":
         raise ValueError("Lien de crédit non HTTPS pour " + slug)
+    if image.get('position'):
+        position = re.fullmatch(r'(\d{1,3})% (\d{1,3})%', image['position'])
+        if not position or any(int(value) > 100 for value in position.groups()):
+            raise ValueError('Position de couverture invalide pour ' + slug)
+    for variant in image.get('variants', []):
+        variant_path = root / variant.get('src', '')
+        if (not variant.get('src', '').startswith('assets/') or not variant_path.is_file()
+                or not variant_path.resolve().is_relative_to((root / 'assets').resolve())):
+            raise ValueError('Variante locale manquante pour ' + slug)
+        with Image.open(variant_path) as visual:
+            if visual.size != (variant['width'], variant['height']):
+                raise ValueError('Dimensions de variante incohérentes pour ' + slug)
+            if abs(visual.width / visual.height - image['width'] / image['height']) > .005:
+                raise ValueError('Proportions de variante incohérentes pour ' + slug)
+            visual.verify()
     return catalogue
 
 
-def story_fields(record, root, reading_times, show_author):
+def story_fields(record, root, reading_times):
     catalogue = catalogue_for(record, root)
     slug = record["slug"]
     image = catalogue["image"]
-    photo = (f'<img src="{e(image["src"])}" alt="{e(image["alt"])}" width="{image["width"]}" '
+    responsive = ''
+    if image.get('variants'):
+        sources = [*image['variants'], image]
+        srcset = ', '.join(f'{variant["src"]} {variant["width"]}w' for variant in sources)
+        responsive = f' srcset="{e(srcset)}" sizes="(max-width: 760px) calc(100vw - 42px), (max-width: 1152px) calc((100vw - 63px) / 2), 555px"'
+    position = f' style="--cover-position:{e(image["position"])}"' if image.get('position') else ''
+    photo = (f'<img src="{e(image["src"])}"{responsive}{position} alt="{e(image["alt"])}" width="{image["width"]}" '
              f'height="{image["height"]}" loading="lazy" decoding="async">')
     if catalogue.get("stamp"):
         photo += f'\n          <span class="discovery-stamp" aria-hidden="true">{e(catalogue["stamp"])}</span>'
@@ -70,8 +91,6 @@ def story_fields(record, root, reading_times, show_author):
                       '<span class="discovery-sr-only"> — consulter la notice de l’image (nouvel onglet)</span></a>')
     day = date.fromisoformat(record["published"])
     published = f'<time datetime="{day}">{day.day} {MONTHS[day.month - 1]} {day.year}</time>'
-    if show_author:
-        published += ' · ' + e(record["author"]["name"])
     minutes = reading_times.get(slug, {}).get("minutes", 1)
     title = catalogue.get("title") or record.get("headline") or record["social"]["title"]
     return {
@@ -84,6 +103,7 @@ def story_fields(record, root, reading_times, show_author):
         "meta": (f'<div class="discovery-meta"><span>{e(catalogue["label"])}</span>'
                  f'<span class="reading-pill">{minutes} min de lecture</span></div>'),
         "published": published,
+        "author": e(record['author']['name']),
     }
 
 
@@ -123,7 +143,7 @@ def featured_card(story):
         {story['meta']}
         <h3 id="latest-title"><a href="{story['href']}">{story['title']}</a></h3>
         <p>{story['description']}</p>{invitation}
-        <div class="latest-story__actions"><a class="discovery-primary" href="{story['href']}">Découvrir l’article <span aria-hidden="true">↗</span></a><span>{story['published']}</span></div>
+        <div class="latest-story__actions"><a class="discovery-primary" href="{story['href']}">Découvrir l’article <span aria-hidden="true">↗</span></a><span>{story['published']} · {story['author']}</span></div>
       </div>
     </article>'''
 
@@ -172,7 +192,7 @@ def outputs(root=ROOT):
     selection = config.get("home_articles", [])
     if not selection or len(selection) != len(set(selection)) or set(selection) - articles:
         raise ValueError("Sélection de l’accueil vide, dupliquée ou inconnue")
-    stories = {slug: story_fields(record, root, reading_times, slug == selection[0])
+    stories = {slug: story_fields(record, root, reading_times)
                for slug, record in by_slug.items()}
     home_path = root / "index.html"
     home = render_region(home_path.read_text(encoding="utf-8"), "une", featured_card(stories[selection[0]]))

@@ -21,7 +21,9 @@ Le système affiche automatiquement l'image, son contexte, sa date, son crédit 
 
 ## Vignettes de l’accueil et de la bibliothèque
 
-Les cartes et les suggestions de lecture utilisent trois copies locales, redimensionnées et compressées en WebP. Les crédits visibles renvoient aux notices originales :
+Les cartes de l’accueil et de la bibliothèque sont générées depuis `assets/article-editorial.json` : image, dimensions, texte alternatif, cadrage éventuel, variantes et crédit. Le cadre standard commun est en 16:10, avec `object-fit:cover`, sans étirement. La une conserve son gabarit particulier. Voir [la recette P1 et les captures](docs/p1-cartes/RAPPORT.md).
+
+Quatre couvertures éditoriales originales ont été créées pour les autrices, le camouflage des pieuvres, la puissance américaine et les stratégies militaires. Elles portent un crédit explicite OpenAI ImageGen, sans ancien crédit documentaire. Leurs variantes WebP 640 et 1280 px sont choisies par `srcset`. Les photographies et documents authentiques déjà présents dans les articles restent inchangés, avec leurs notices et droits propres :
 
 | Fichier dans `assets/images/` | Document et provenance | Statut indiqué dans la notice |
 | --- | --- | --- |

@@ -116,7 +116,8 @@
           "src": "assets/images/autorite-triptyque.webp",
           "alt": "Illustration de trois situations : discussion familiale, manifestation et échange au lycée.",
           "width": 1200,
-          "height": 800
+          "height": 800,
+          "position": "50% 45%"
         },
         "credit": "Illustration originale THOT, générée avec OpenAI ImageGen · 23 octobre 2026"
       }
@@ -236,17 +237,23 @@
       "catalogue": {
         "category": "arts",
         "label": "Littérature · Histoire des autrices",
-        "keywords": "littérature autrices pseudonymes noms de plume Charlotte Emily Anne Brontë George Eliot Mary Anne Marian Evans George Sand Aurore Dupin",
+        "keywords": "littérature autrices pseudonymes noms de plume Charlotte Emily Anne Brontë George Eliot Mary Anne Marian Evans George Sand Aurore Dupin Nadar",
         "description": "Brontë, George Eliot, George Sand : trois parcours pour comprendre ce que peut cacher un nom de plume.",
-        "stamp": "PLUME",
-        "credit_url": "https://commons.wikimedia.org/wiki/File:George_Sand_-_portraits.jpg",
         "image": {
-          "src": "assets/images/autrices-nadar.webp",
-          "alt": "Planche de portraits photographiques de George Sand par Nadar, en 1864.",
-          "width": 1176,
-          "height": 900
+          "src": "assets/images/autrices-nom-de-plume.webp",
+          "width": 1280,
+          "height": 801,
+          "alt": "Évocation illustrée : une autrice écrit à la plume ; un livre signé George Sand côtoie un feuillet au nom d’Aurore Dupin.",
+          "variants": [
+            {
+              "src": "assets/images/autrices-nom-de-plume-640.webp",
+              "width": 640,
+              "height": 400
+            }
+          ]
         },
-        "credit": "Nadar, 1864 · BnF / Wikimedia Commons · Domaine public"
+        "credit": "Évocation illustrée · illustration originale THOT, générée avec OpenAI ImageGen, 2026.",
+        "rights": "Création produite pour THOT avec OpenAI ImageGen ; aucun document tiers incorporé."
       }
     },
     {
@@ -330,15 +337,21 @@
         "keywords": "sciences biologie marine pieuvre poulpe octopus couleur chromatophore peau pigment camouflage nerfs muscles",
         "description": "Chromatophores, muscles et signaux nerveux : comprendre le mécanisme derrière leurs changements de couleur.",
         "invitation": "Schéma à manipuler · muscles et pigments",
-        "stamp": "SCI",
-        "credit_url": "https://commons.wikimedia.org/wiki/File:Poulpe_commun_(Octopus_vulgaris)_(Ifremer_00679-79134_-_31993).jpg",
         "image": {
-          "src": "assets/images/poulpe-commun.webp",
-          "alt": "Poulpe commun photographié dans son milieu naturel.",
-          "width": 960,
-          "height": 713
+          "src": "assets/images/pieuvre-camouflage.webp",
+          "width": 1280,
+          "height": 801,
+          "alt": "Comparaison pédagogique illustrée : deux aspects de coloration d’une pieuvre, pâle sur le sable et marbrée sur les rochers ; ce n’est pas une séquence photographique.",
+          "variants": [
+            {
+              "src": "assets/images/pieuvre-camouflage-640.webp",
+              "width": 640,
+              "height": 400
+            }
+          ]
         },
-        "credit": "Xavier Caisey / Ifremer, 2019 · Wikimedia Commons · CC BY 4.0"
+        "credit": "Comparaison pédagogique imaginée · illustration originale THOT, générée avec OpenAI ImageGen, 2026.",
+        "rights": "Création produite pour THOT avec OpenAI ImageGen ; aucun document tiers incorporé."
       }
     },
     {
@@ -461,15 +474,21 @@
         "keywords": "géographie géopolitique puissance états-unis amerique souveraineté westphalienne afghanistan iran daech relations internationales",
         "description": "Afghanistan, Iran, Daech : pourquoi disposer de moyens considérables ne garantit-il pas le résultat attendu ?",
         "invitation": "Cas historiques à comparer · Afghanistan et Daech",
-        "stamp": "GÉO",
-        "credit_url": "https://www.dvidshub.net/image/1211203/afghan-national-army-soldiers-lead",
         "image": {
-          "src": "assets/images/puissance-afghanistan.webp",
-          "alt": "Des soldats afghans s’exercent avec un bulldozer au camp Shorabak, en 2014.",
-          "width": 1000,
-          "height": 667
+          "src": "assets/images/puissance-ressources-resultats.webp",
+          "width": 1280,
+          "height": 801,
+          "alt": "Illustration éditoriale : une carte des États-Unis et leurs ressources font face à des obstacles et à une table de négociation entre plusieurs acteurs.",
+          "variants": [
+            {
+              "src": "assets/images/puissance-ressources-resultats-640.webp",
+              "width": 640,
+              "height": 400
+            }
+          ]
         },
-        "credit": "Dustin D. March / U.S. Marine Corps, 2014 · DVIDS · Domaine public"
+        "credit": "Composition éditoriale · illustration originale THOT, générée avec OpenAI ImageGen, 2026.",
+        "rights": "Création produite pour THOT avec OpenAI ImageGen ; aucun document tiers incorporé."
       }
     },
     {
@@ -560,7 +579,6 @@
         "category": "histoire",
         "label": "Histoire · Première Guerre mondiale",
         "keywords": "roubaix 1917 histoire première guerre mondiale occupation allemande archives affiches réquisitions nord france",
-        "title": "Roubaix en 1917 : vivre sous l’occupation allemande",
         "description": "Réquisitions, ravitaillement, contrôles : découvrir le quotidien d’une ville occupée à travers les documents d’époque.",
         "invitation": "Document à explorer · affiche de 1917",
         "stamp": "1917",
@@ -692,15 +710,21 @@
         "label": "Histoire",
         "keywords": "guerre armées tactiques stratégie logistique Hannibal Mongols artillerie Napoléon drones Ukraine",
         "invitation": "Frise, deux comparateurs et analyse d’un document.",
-        "credit_url": "https://commons.wikimedia.org/wiki/File:1281BattleOfHoms.JPG",
-        "credit_link_label": "Source et droits",
         "image": {
-          "src": "assets/images/homs-carte.webp",
-          "alt": "Miniature médiévale montrant deux groupes de cavaliers armés face à face.",
-          "width": 840,
-          "height": 525
+          "src": "assets/images/strategies-epoques-logistique.webp",
+          "width": 1280,
+          "height": 801,
+          "alt": "Comparaison illustrée d’un bouclier antique, d’un canon et d’un drone ; une boussole, des caisses et un plan évoquent stratégie et logistique.",
+          "variants": [
+            {
+              "src": "assets/images/strategies-epoques-logistique-640.webp",
+              "width": 640,
+              "height": 400
+            }
+          ]
         },
-        "credit": "Homs (1281), miniature du XIVe siècle · BnF, NAF 886, f. 27v · Domaine public."
+        "credit": "Composition éditoriale · illustration originale THOT, générée avec OpenAI ImageGen, 2026.",
+        "rights": "Création produite pour THOT avec OpenAI ImageGen ; aucun document tiers incorporé."
       }
     },
     {
@@ -791,7 +815,6 @@
         "label": "Antiquité · Philosophie",
         "keywords": "sophistes antiquité philosophie vérité justice rhétorique protagoras gorgias antiphon hippias thrasymaque prodicos",
         "credit": "Scène imaginée · illustration originale THOT, générée avec OpenAI ImageGen.",
-        "title": "Les sophistes : qui décide du vrai et du juste ?",
         "image": {
           "src": "assets/images/sophistes-debat.webp",
           "alt": "Scène imaginée d’un débat entre orateurs dans une cité grecque antique.",
