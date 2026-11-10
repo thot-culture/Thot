@@ -1,0 +1,127 @@
+[
+  {
+    "slug": "autorite",
+    "image": {
+      "src": "assets/images/autorite-triptyque.webp",
+      "alt": "Illustration de trois situations : discussion familiale, manifestation et échange au lycée.",
+      "width": 1200,
+      "height": 800,
+      "position": "50% 45%"
+    },
+    "credit": "Illustration originale THOT, générée avec OpenAI ImageGen · 23 octobre 2026",
+    "rights": "Illustration originale THOT, générée avec OpenAI ImageGen · 23 octobre 2026",
+    "bytes": 193156
+  },
+  {
+    "slug": "autrices-pseudonymes",
+    "image": {
+      "src": "assets/images/autrices-nom-de-plume.webp",
+      "width": 1280,
+      "height": 801,
+      "alt": "Évocation illustrée : une autrice écrit à la plume ; un livre signé George Sand côtoie un feuillet au nom d’Aurore Dupin.",
+      "variants": [
+        {
+          "src": "assets/images/autrices-nom-de-plume-640.webp",
+          "width": 640,
+          "height": 400
+        }
+      ]
+    },
+    "credit": "Évocation illustrée · illustration originale THOT, générée avec OpenAI ImageGen, 2026.",
+    "rights": "Création produite pour THOT avec OpenAI ImageGen ; aucun document tiers incorporé.",
+    "bytes": 133406
+  },
+  {
+    "slug": "pieuvres-couleur",
+    "image": {
+      "src": "assets/images/pieuvre-camouflage.webp",
+      "width": 1280,
+      "height": 801,
+      "alt": "Comparaison pédagogique illustrée : deux aspects de coloration d’une pieuvre, pâle sur le sable et marbrée sur les rochers ; ce n’est pas une séquence photographique.",
+      "variants": [
+        {
+          "src": "assets/images/pieuvre-camouflage-640.webp",
+          "width": 640,
+          "height": 400
+        }
+      ]
+    },
+    "credit": "Comparaison pédagogique imaginée · illustration originale THOT, générée avec OpenAI ImageGen, 2026.",
+    "rights": "Création produite pour THOT avec OpenAI ImageGen ; aucun document tiers incorporé.",
+    "bytes": 155774
+  },
+  {
+    "slug": "puissance-etats-unis",
+    "image": {
+      "src": "assets/images/puissance-ressources-resultats.webp",
+      "width": 1280,
+      "height": 801,
+      "alt": "Illustration éditoriale : une carte des États-Unis et leurs ressources font face à des obstacles et à une table de négociation entre plusieurs acteurs.",
+      "variants": [
+        {
+          "src": "assets/images/puissance-ressources-resultats-640.webp",
+          "width": 640,
+          "height": 400
+        }
+      ]
+    },
+    "credit": "Composition éditoriale · illustration originale THOT, générée avec OpenAI ImageGen, 2026.",
+    "rights": "Création produite pour THOT avec OpenAI ImageGen ; aucun document tiers incorporé.",
+    "bytes": 50410
+  },
+  {
+    "slug": "roubaix-1917",
+    "image": {
+      "src": "assets/images/roubaix-gambetta-carte.webp",
+      "alt": "Carte postale du boulevard Gambetta à Roubaix, avec tramway et passants, avant 1919.",
+      "width": 1040,
+      "height": 650
+    },
+    "credit": "ELD, avant 1919 · Wikimedia Commons · Domaine public",
+    "rights": "https://commons.wikimedia.org/wiki/File:ELD_-_ROUBAIX_-_Boulevard_Gambetta.JPG",
+    "bytes": 92660
+  },
+  {
+    "slug": "evolution-strategies-militaires",
+    "image": {
+      "src": "assets/images/strategies-epoques-logistique.webp",
+      "width": 1280,
+      "height": 801,
+      "alt": "Comparaison illustrée d’un bouclier antique, d’un canon et d’un drone ; une boussole, des caisses et un plan évoquent stratégie et logistique.",
+      "variants": [
+        {
+          "src": "assets/images/strategies-epoques-logistique-640.webp",
+          "width": 640,
+          "height": 400
+        }
+      ]
+    },
+    "credit": "Composition éditoriale · illustration originale THOT, générée avec OpenAI ImageGen, 2026.",
+    "rights": "Création produite pour THOT avec OpenAI ImageGen ; aucun document tiers incorporé.",
+    "bytes": 145190
+  },
+  {
+    "slug": "les-sophistes-verite-justice",
+    "image": {
+      "src": "assets/images/sophistes-debat.webp",
+      "alt": "Scène imaginée d’un débat entre orateurs dans une cité grecque antique.",
+      "width": 1120,
+      "height": 700
+    },
+    "credit": "Scène imaginée · illustration originale THOT, générée avec OpenAI ImageGen.",
+    "rights": "Scène imaginée · illustration originale THOT, générée avec OpenAI ImageGen.",
+    "bytes": 153174
+  },
+  {
+    "slug": "plantes-douleur",
+    "image": {
+      "src": "assets/images/plantes-douleur.webp",
+      "alt": "Illustration botanique d’une plante verte, avec une petite entaille et des nervures légèrement lumineuses sur une feuille.",
+      "width": 1280,
+      "height": 800
+    },
+    "credit": "Illustration originale THOT, générée avec OpenAI ImageGen, 2026.",
+    "rights": "Illustration originale THOT, générée avec OpenAI ImageGen, 2026.",
+    "bytes": 167940
+  }
+]

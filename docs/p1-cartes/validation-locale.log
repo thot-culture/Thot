@@ -1,0 +1,252 @@
+
+> /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/check-home.mjs
+PASS : accueil, 56 liens/ressources internes, 3 scripts, 8 articles dans le tirage surprise.
+NON VÉRIFIÉ : réponse réseau des 0 images externes, rendu visuel et mesures de performance.
+
+> /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/check-site.mjs
+✓ 20 pages, 1041 liens et ressources internes, 57 scripts, 19 JSON-LD et 300 questions vérifiés.
+Contrôles statiques uniquement : rendu, lecteurs d’écran, HTTP externe et performances réelles non vérifiés.
+
+> /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/test-article-activities.mjs
+PASS : petite pause — 2 réponses, sélection exclusive, textes historiques et lien source conservés ; chromatophore — initialisation avant activation, 16 fibres SVG, géométrie et ARIA aux niveaux 0/18/33/34/71/72/100.
+DOM simulé : rendu ordinateur/mobile et fonctionnement dans un navigateur non vérifiés.
+
+> /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/test-article-components.mjs
+PASS : glossaire, initialisation progressive, cible absente, ouverture/fermeture, deux termes, enfant cliqué, clic extérieur et Échap/focus.
+PASS : médias, catalogue local, URL relatives au script et absolues, couverture/lazy, noms accessibles distincts, crédits/licences conservés, erreur image, erreurs réseau/HTTP/JSON, clé absente et notice incomplète.
+DOM et réseau simulés : le rendu visuel et les réponses HTTP externes restent à vérifier.
+
+> /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/test-article-navigation.mjs
+PASS : sommaire desktop/mobile, transfert de focus avant fermeture, navigation native, ancres invalides, clics modifiés, breakpoint et listeners moderne/legacy.
+PASS : les cinq articles ont un sommaire details ouvert sans JavaScript, un summary accessible, le module partagé différé et un contenu principal focalisable ; ancres, IDs, ordre et libellés des liens conservés.
+Limite : DOM et viewport simulés ; défilement réel, rendu, interactions tactiles et lecteurs d’écran non vérifiés.
+
+> /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/test-article-share.mjs
+PASS : sans JS, lien permanent utile et actions masquées
+PASS : initialisation progressive, statut lecteur d’écran et aucun focus volé
+PASS : canonique indépendante de location.href, query et fragment retirés
+PASS : canonique absente, vide, relative, HTTP, externe, hors THOT, mal formée ou avec identifiants : actions masquées
+PASS : copie annoncée seulement après résolution, puis boutons réactivés sans déplacement du focus
+PASS : double clic et actions concurrentes ignorés pendant une copie
+PASS : clipboard absent : champ readonly nommé, URL sélectionnée et consigne manuelle honnête
+PASS : refus clipboard : aucun faux succès, repli réutilisé sans champ supplémentaire
+PASS : exception synchrone clipboard récupérée, puis nouvelle copie réussie
+PASS : partage natif disponible : titre exact et canonique, sans prétendre confirmer la publication
+PASS : partage natif en cours : un appel et aucune copie concurrente
+PASS : annulation native silencieuse et sans rejet non géré
+PASS : échec natif annoncé, copie toujours disponible et réussie ensuite
+PASS : exception synchrone native récupérée sans bloquer les boutons
+PASS : blocs absents ou incomplets sans erreur, bloc valide indépendant
+15 cas validés. DOM et API simulés : menus système, clipboard réel, clavier natif et lecteurs d’écran non vérifiés dans un navigateur.
+
+> /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/test-article-timelines.mjs
+PASS : comparateur, 3 choix réels, repli sans JS, panneaux exclusifs, statut, Entrée/Espace simulés, focus et textes/sources préservés.
+PASS : chronologie, 6 choix réels, repli sans JS, panneaux exclusifs, statut, Entrée/Espace simulés, focus et textes/sources préservés.
+PASS : Roubaix, huit événements originaux, sources, activation progressive, clics, Entrée/Espace simulés, quatre flèches, Home/End, rebouclage et focus.
+PASS : composants absents/incomplets, replis et contrôles inactifs conservés.
+DOM et clavier natif simulés : rendu mobile/ordinateur, lecteurs d’écran et événements réels du navigateur non vérifiés.
+
+> /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/test-autorite-decode.mjs
+PASS : 12 réponses distinctes, 3 étapes, réponses révisables, progression/focus, reset à chaque étape, garde-fous d’initialisation et isolation de l’ancien jeu.
+PASS : bloc #decode-pouvoir conservé depuis 37f17ee ; reste de l’article couvert par check-editorial.py.
+DOM simulé : rendu mobile/ordinateur, clavier réel et lecteurs d’écran non vérifiés.
+
+> /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/test-autorite.mjs
+PASS : 3 situations × 3 réactions, textes originaux, exclusivité aria-pressed, indépendance des cas, clics répétés et commandes invalides inactives.
+DOM simulé : rendu mobile/ordinateur et lecteurs d’écran non vérifiés.
+
+> /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/test-bibliotheque.mjs
+PASS : recherche multi-mots/accents/tirets/apostrophes, 7 filtres, combinaison, remise à zéro, focus, retour arrière et repli image.
+PASS : restauration q/sujet, rechargement/retour arrière, délai 250 ms, actions immédiates, flush change/pagehide, doublons, filtres invalides, conservation paramètres/hash/préfixe/history.state et APIs refusées/incomplètes.
+PASS : les 8 articles restent dans le catalogue surprise ; stockage refusé et clics natifs préservés.
+PASS : 48 liens/ressources internes, 3 scripts, IDs, ARIA, métadonnées, 8 images décrites et dimensionnées ; catalogue statique accessible sans JS.
+NON VÉRIFIÉ : rendu ordinateur/mobile, CSS calculé, lecteur d’écran, HTTP des liens et de l’image externe (0), performances réelles.
+
+> /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/test-check-home.mjs
+PASS : 39 cas de résolution/confinement ; intégration du contrôleur ; chemins POSIX et Windows ; lien symbolique : vérifié.
+
+> /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/test-home.mjs
+PASS : menu, clavier, focus, clic extérieur, changements de viewport simulés, ancien matchMedia, images en échec.
+PASS : tirage des 5 articles, sous-chemin /Thot/, non-répétition, stockage refusé et clics avec modificateurs.
+
+> /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/test-local-preview.mjs
+PASS : disponibilité HTTP, processus arrêté et délai maximal contrôlés (unités simulées, aucun serveur HTTP validé).
+
+> /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/test-quiz-autrices.mjs
+PASS : 5 associations, mauvaise réponse puis nouvel essai, sélection conservée, temporisations, réinitialisation, focus, fin et réduction des animations.
+PASS : intégration, cinq associations, explication Eliot préservée et reset dans quiz-autrices.html.
+PASS : parcours clavier pseudonyme→première autrice disponible, erreur, réussite, reset et fin ; focus souris/tactile conservé dans quiz-autrices.html.
+PASS : intégration, cinq associations, explication Eliot préservée et reset dans articles/autrices-pseudonymes.html.
+PASS : parcours clavier pseudonyme→première autrice disponible, erreur, réussite, reset et fin ; focus souris/tactile conservé dans articles/autrices-pseudonymes.html.
+DOM simulé : le rendu navigateur et le lecteur d’écran restent à vérifier.
+
+> /opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/test-quiz.mjs
+PASS : 300 questions, 18 parcours, 3 formats, indice, corrections, sauvegarde, migration, onglets, UTC/minuit, badges, focus/menu et chargement incomplet.
+DOM et horloge simulés : le rendu dans un navigateur reste à vérifier.
+
+> python scripts/build-explorer-reconstruction.py --check
+PASS : trois pages Explorer à jour.
+
+> python scripts/site_chrome.py --check
+PASS : navigation, liens utiles et métadonnées harmonisés.
+
+> python scripts/sync-publication.py --check
+
+> python scripts/build-quiz-references.py --check
+PASS : références vérifiées cohérentes avec le registre.
+
+> python scripts/update-article-editorial.py --check
+PASS : 8 articles conformes aux données éditoriales statiques.
+
+> python scripts/update-reading-times.py --check
+PASS : durées communes et rendus statiques cohérents
+
+> python scripts/generate-social-cards.py --check
+Vérifié : assets/social-cards/les-sophistes-verite-justice.png — 1200 × 630 — 96,717 octets
+Vérifié : assets/social-cards/autorite.png — 1200 × 630 — 112,438 octets
+Vérifié : assets/social-cards/autrices-pseudonymes.png — 1200 × 630 — 90,417 octets
+Vérifié : assets/social-cards/pieuvres-couleur.png — 1200 × 630 — 111,255 octets
+Vérifié : assets/social-cards/puissance-etats-unis.png — 1200 × 630 — 109,361 octets
+Vérifié : assets/social-cards/roubaix-1917.png — 1200 × 630 — 98,860 octets
+
+> python scripts/test-atlas-performance.py
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.130s
+
+OK
+
+> python scripts/test-stabilisation.py
+PASS : 300 questions, 18 parcours, 3 formats, indice, corrections, sauvegarde, migration, onglets, UTC/minuit, badges, focus/menu et chargement incomplet.
+DOM et horloge simulés : le rendu dans un navigateur reste à vérifier.
+PASS : références vérifiées cohérentes avec le registre.
+PASS : contenus principaux, JSON-LD, catalogue et questions conservés depuis c0fd0ae304a345a4f70c7b87fea2488d7b87a401
+✓ 20 pages, 1041 liens et ressources internes, 57 scripts, 19 JSON-LD et 300 questions vérifiés.
+Contrôles statiques uniquement : rendu, lecteurs d’écran, HTTP externe et performances réelles non vérifiés.
+PASS : onze anciennes pages retirées, trois pages Explorer reconstruites, inventaire du sitemap exact, dépendances conservées, 300 questions identiques sauf dix explications sourcées, 24 vérifiées, scores et sélection testés, UTF-8 et polices contrôlés.
+
+> python scripts/test-explorer-reconstruction.py
+PASS : trois pages Explorer à jour.
+PASS : trois pages Explorer, corpus, images, licences et génération contrôlés.
+
+> python scripts/test-current-checks.py
+test_changed_document (__main__.CurrentChecks.test_changed_document) ... ok
+test_changed_license (__main__.CurrentChecks.test_changed_license) ... ok
+test_editorial_chrome_is_separate (__main__.CurrentChecks.test_editorial_chrome_is_separate) ... ok
+test_editorial_main_required (__main__.CurrentChecks.test_editorial_main_required) ... ok
+test_editorial_main_text (__main__.CurrentChecks.test_editorial_main_text) ... ok
+test_editorial_structured_data (__main__.CurrentChecks.test_editorial_structured_data) ... ok
+test_fixture_without_system_webp_mime (__main__.CurrentChecks.test_fixture_without_system_webp_mime) ... ok
+test_missing_sitemap_page (__main__.CurrentChecks.test_missing_sitemap_page) ... ok
+test_production_content (__main__.CurrentChecks.test_production_content) ... ok
+test_production_inventory (__main__.CurrentChecks.test_production_inventory) ... ok
+test_quiz_snapshot (__main__.CurrentChecks.test_quiz_snapshot) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.842s
+
+OK
+
+> python scripts/test-publication.py
+............
+----------------------------------------------------------------------
+Ran 12 tests in 0.048s
+
+OK
+
+> python scripts/test-publication-integration.py
+PASS : deux publications successives ; métadonnées, bibliothèque, sitemap, durées et conservation ; copie temporaire supprimée.
+
+> python scripts/test-portabilite.py
+Vérifié : assets/social-cards/les-sophistes-verite-justice.png — 1200 × 630 — 96,717 octets
+Vérifié : assets/social-cards/autorite.png — 1200 × 630 — 112,438 octets
+Vérifié : assets/social-cards/autrices-pseudonymes.png — 1200 × 630 — 90,417 octets
+Vérifié : assets/social-cards/pieuvres-couleur.png — 1200 × 630 — 111,255 octets
+Vérifié : assets/social-cards/puissance-etats-unis.png — 1200 × 630 — 109,361 octets
+Vérifié : assets/social-cards/roubaix-1917.png — 1200 × 630 — 98,860 octets
+Vérifié : assets/social-cards/les-sophistes-verite-justice.png — 1200 × 630 — 96,717 octets
+Vérifié : assets/social-cards/autorite.png — 1200 × 630 — 112,438 octets
+Vérifié : assets/social-cards/autrices-pseudonymes.png — 1200 × 630 — 90,417 octets
+Vérifié : assets/social-cards/pieuvres-couleur.png — 1200 × 630 — 111,255 octets
+Vérifié : assets/social-cards/puissance-etats-unis.png — 1200 × 630 — 109,361 octets
+Vérifié : assets/social-cards/roubaix-1917.png — 1200 × 630 — 98,860 octets
+PASS : 8 articles conformes aux données éditoriales statiques.
+PASS : durées communes et rendus statiques cohérents
+PASS : références vérifiées cohérentes avec le registre.
+PASS : polices identiques, cartes PNG reproductibles, UTF-8, chemin avec espaces et génération indépendante du dossier courant. Plateforme : linux
+
+> python scripts/test-seo.py
+............
+----------------------------------------------------------------------
+Ran 12 tests in 0.163s
+
+OK
+
+> python scripts/check-seo.py
+SEO : 20 pages, 0 erreur(s), 0 avertissement(s).
+
+> python scripts/test-article-editorial.py
+test_bibliography_is_qualified_and_preserved (__main__.EditorialTests.test_bibliography_is_qualified_and_preserved) ... ok
+test_editorial_dates_are_explicit_and_consistent (__main__.EditorialTests.test_editorial_dates_are_explicit_and_consistent) ... ok
+test_inventory_and_publication_urls (__main__.EditorialTests.test_inventory_and_publication_urls) ... ok
+test_original_assets_ids_and_inline_scripts_are_preserved (__main__.EditorialTests.test_original_assets_ids_and_inline_scripts_are_preserved) ... ok
+test_production_matches_requested_revision (__main__.EditorialTests.test_production_matches_requested_revision) ... skipped 'Contrôle optionnel des révisions activé avec --head'
+test_science_is_visible_concise_and_sourced (__main__.EditorialTests.test_science_is_visible_concise_and_sourced) ... ok
+test_share_progressive_markup_and_assets (__main__.EditorialTests.test_share_progressive_markup_and_assets) ... ok
+test_social_metadata_and_png_files (__main__.EditorialTests.test_social_metadata_and_png_files) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.067s
+
+OK (skipped=1)
+
+> python scripts/test-roubaix-document.py
+PASS : original intact, licence, aperçu allégé, commentaire conservé, transcription et huit repères statiques.
+
+> python scripts/test-pieuvres-reperes.py
+PASS : script existant identique, repère de repos fixe, limites explicites et deux états statiques.
+
+> python scripts/test-puissance-comparaison.py
+PASS : trois fiches conservées avec les seuls amendements documentés, périmètre historique explicite, sources et date cohérentes.
+
+> python scripts/check-editorial.py
+PASS conservation : quiz-autrices.html, 325 mots, 7 liens éditoriaux
+PASS conservation : articles/autorite.html, 2326 mots, 35 liens éditoriaux
+PASS conservation : articles/autrices-pseudonymes.html, 2560 mots, 63 liens éditoriaux
+PASS conservation : articles/pieuvres-couleur.html, 1972 mots, 45 liens éditoriaux
+PASS conservation : articles/puissance-etats-unis.html, 3012 mots, 75 liens éditoriaux
+PASS conservation : articles/roubaix-1917.html, 2586 mots, 36 liens éditoriaux
+PASS catalogue : légendes, crédits et notices conservés ; banques inchangées sauf dix explications documentées.
+
+> python scripts/test-strategies-static.py
+PASS : 177 fichiers de production conservés depuis HEAD.
+PASS : six chapitres, quatre activités, ancres, médias, quatre empreintes SHA-256, métadonnées publiques, bibliothèque et sitemap.
+
+> python scripts/test-sophistes.py
+test_approved_narrative (__main__.Sophistes.test_approved_narrative) ... ok
+test_games_and_sources_never_add_reading_words (__main__.Sophistes.test_games_and_sources_never_add_reading_words) ... ok
+test_order_and_sources (__main__.Sophistes.test_order_and_sources) ... ok
+test_reading_time (__main__.Sophistes.test_reading_time) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.011s
+
+OK
+
+> python scripts/test-explorer-finitions.py --static-only
+PASS : trois pages Explorer à jour.
+PASS : trois pages Explorer, corpus, images, licences et génération contrôlés.
+PASS : 177 fichiers de production conservés depuis HEAD ; corpus, médias et licences vérifiés.
+
+> python scripts/test-explorer-recette-finale.py --static-only
+PASS : trois pages Explorer à jour.
+PASS : trois pages Explorer, corpus, images, licences et génération contrôlés.
+PASS : 177 fichiers de production conservés depuis HEAD ; corpus, sources, cartes, médias et attributs HTML uniques.
+
+> python scripts/production_checks.py --revision HEAD
+PASS : 177 fichiers de production identiques à HEAD, inventaire compris.
+
+> python scripts/check-conservation.py --revision HEAD
+PASS : contenus principaux, JSON-LD, catalogue et questions conservés depuis c0fd0ae304a345a4f70c7b87fea2488d7b87a401
+
+42/42 commandes réussies ; 0 échec(s).

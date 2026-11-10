@@ -122,6 +122,35 @@ class PublicationTests(unittest.TestCase):
             sync.outputs(self.root)
         self.assertEqual(path.read_text(encoding="utf-8"), value)
 
+    def test_responsive_cover_keeps_dimensions_credit_and_crop(self):
+        image = self.record['catalogue']['image']
+        Image.new('RGB', (16, 10)).save(self.root / 'assets/small.webp')
+        image['variants'] = [{'src':'assets/small.webp','width':16,'height':10}]
+        image['position'] = '50% 45%'
+        self.save()
+        home = sync.outputs(self.root)[self.root / 'index.html']
+        self.assertIn('srcset="assets/small.webp 16w, assets/cover.webp 32w"', home)
+        self.assertIn('width="32" height="20"', home)
+        self.assertIn('--cover-position:50% 45%', home)
+        self.assertIn(self.record['catalogue']['credit'], home)
+
+    def test_invalid_variant_and_crop_are_rejected(self):
+        image = self.record['catalogue']['image']
+        image['variants'] = [{'src':'assets/absent.webp','width':16,'height':10}]
+        self.save()
+        with self.assertRaisesRegex(ValueError, 'Variante locale manquante'):
+            sync.outputs(self.root)
+        Image.new('RGB', (16, 16)).save(self.root / 'assets/absent.webp')
+        image['variants'][0]['height'] = 16
+        self.save()
+        with self.assertRaisesRegex(ValueError, 'Proportions de variante'):
+            sync.outputs(self.root)
+        del image['variants']
+        image['position'] = '50% 150%'
+        self.save()
+        with self.assertRaisesRegex(ValueError, 'Position de couverture'):
+            sync.outputs(self.root)
+
     def test_content_change_is_detected_but_generated_duration_is_normalized(self):
         before = '<main><p>Un fait sourcé.</p><span>9 min de lecture</span></main>'
         self.assertEqual(conservation.protected(before), conservation.protected(before.replace("9 min", "8 min")))
