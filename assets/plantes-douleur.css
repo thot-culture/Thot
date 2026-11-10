@@ -1,0 +1,157 @@
+.article-plantes .plantes-couverture {
+  margin: 28px 0 0;
+  max-width: 760px;
+}
+.article-plantes .plantes-couverture img,
+.article-plantes .plantes-figure img,
+.plantes-scene > img,
+.plantes-scene > svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.article-plantes .plantes-couverture img,
+.article-plantes .plantes-figure img {
+  border-radius: 14px;
+}
+.article-plantes .plantes-couverture figcaption {
+  margin-top: 8px;
+  color: #f0ece0;
+  font: 13px/1.5 "Segoe UI", sans-serif;
+}
+.article-plantes .plantes-figure { margin: 26px 0 34px; }
+.article-plantes .plantes-figure figcaption { margin-top: 10px; }
+.plantes-module {
+  --plant-green: #315747;
+  --plant-ink: #233b34;
+  margin: 28px 0 48px;
+  padding: clamp(14px, 4vw, 28px);
+  color: var(--plant-ink);
+  background: #f7f8f0;
+  border: 1px solid #cbd7c5;
+  border-radius: 18px;
+}
+.article-plantes .plantes-module h3 {
+  margin: 6px 0 12px;
+  color: var(--plant-ink);
+}
+.article-plantes .plantes-module p { margin: 0 0 14px; }
+.article-plantes .plantes-kicker {
+  display: block;
+  color: var(--plant-green);
+  font: 750 12px/1.4 "Segoe UI", sans-serif;
+  letter-spacing: .075em;
+  text-transform: uppercase;
+}
+.plantes-scene {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #c9d5c3;
+  border-radius: 12px;
+  background: #e9f0df;
+  margin-bottom: 12px;
+}
+.plantes-scene > svg.plantes-nervures {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.plantes-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0 16px;
+}
+.plantes-module button,
+.plantes-module .plantes-suite {
+  min-height: 44px;
+  color: var(--plant-green);
+  font: 700 14px/1.35 "Segoe UI", sans-serif;
+}
+.plantes-module button {
+  padding: 8px 13px;
+  background: #fff;
+  border: 1px solid #638471;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.plantes-module button:hover:not(:disabled) { background: #e5f0df; }
+.plantes-module button:disabled { color: #565f59; background: #efeee7; cursor: default; }
+.plantes-module button[aria-pressed="true"] { color: #fff; background: var(--plant-green); }
+.plantes-module button[aria-pressed="true"]:hover { background: #254637; }
+.plantes-module :focus-visible { outline: 3px solid #9b511e; outline-offset: 3px; }
+.plantes-module .plantes-suite { display: inline-flex; align-items: center; }
+.plantes-module [hidden] { display: none !important; }
+.plantes-module .plantes-point {
+  position: absolute;
+  width: 44px;
+  padding: 0;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.feuille-gauche { left: 34%; top: 62%; }
+.feuille-haute { left: 46%; top: 45%; }
+.feuille-droite { left: 67%; top: 60%; }
+.plantes-nervures .blessure,
+.plantes-nervures .signal,
+.plantes-nervures .defense { opacity: 0; }
+.plante-rosette:is([data-phase="1"], [data-phase="2"], [data-phase="3"])[data-selected="gauche"] .blessure-gauche,
+.plante-rosette:is([data-phase="1"], [data-phase="2"], [data-phase="3"])[data-selected="haute"] .blessure-haute,
+.plante-rosette:is([data-phase="1"], [data-phase="2"], [data-phase="3"])[data-selected="droite"] .blessure-droite { opacity: 1; }
+.plante-rosette:is([data-phase="2"], [data-phase="3"]) .signal { opacity: 1; }
+.plante-rosette[data-phase="2"] .signal { animation: plantes-signal .6s both; }
+.plante-rosette[data-phase="2"] .signal-2 { animation-delay: .28s; }
+.plante-rosette[data-phase="2"] .signal-3 { animation-delay: .52s; }
+.plante-rosette[data-phase="2"][data-selected="haute"] .signal-2,
+.plante-rosette[data-phase="2"][data-selected="droite"] .signal-3 { animation-delay: 0s; }
+.plante-rosette[data-phase="2"]:not([data-selected="gauche"]) .signal-1 { animation-delay: .32s; }
+.plante-rosette[data-phase="3"] .defense { opacity: 1; }
+.plante-rosette[data-selected="gauche"] .defense-1,
+.plante-rosette[data-selected="haute"] .defense-2,
+.plante-rosette[data-selected="droite"] .defense-3 { opacity: 0; }
+@keyframes plantes-signal { from { opacity: 0; } 65% { opacity: 1; } }
+.plantes-etat:empty { display: none; }
+.plantes-etat { min-height: 2.6em; }
+.plantes-microscope {
+  padding: 14px;
+  margin: 12px 0;
+  border-radius: 10px;
+  background: #254139;
+  color: #fff;
+}
+.plantes-microscope svg { display: block; max-width: 100%; height: auto; margin-bottom: 8px; }
+.plantes-microscope[data-before="true"] .microscope-lueur { opacity: .2; }
+.plantes-module .plantes-note,
+.plantes-module [data-gauge] { font: 14px/1.5 "Segoe UI", sans-serif; }
+.plantes-module [data-gauge] { display: grid; gap: 4px; }
+.plantes-sans-delai { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; }
+.plantes-module meter { width: min(100%, 250px); height: 20px; }
+.plantes-piege .lobe { transform-origin: 320px 193px; transition: transform .52s ease-in-out; }
+.plantes-piege[data-outcome="closed"] .lobe-gauche { transform: rotate(69deg) scaleX(.8); }
+.plantes-piege[data-outcome="closed"] .lobe-droite { transform: rotate(-69deg) scaleX(.8); }
+.plantes-mouche { transition: transform .6s ease, opacity .5s ease; }
+.plantes-piege[data-outcome="closed"] .plantes-mouche { transform: translateY(16px); opacity: 0; }
+.plantes-piege[data-outcome="escaped"] .plantes-mouche { transform: translate(175px, -110px); opacity: 0; }
+.plantes-piege[data-pulse="first"] .poils { animation: plantes-poil .45s ease; }
+.plantes-piege[data-pulse="second"] .poils { animation: plantes-poil .25s ease 2 alternate; }
+@keyframes plantes-poil { 50% { stroke: #fff3bd; transform: translateY(3px); } }
+.plantes-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 150px), 1fr));
+  gap: 8px;
+  font: 14px/1.5 "Segoe UI", sans-serif;
+}
+.plantes-categories div,
+.plantes-carte { border: 1px solid #cbd7c5; border-radius: 10px; padding: 12px; background: #fff; }
+.plantes-categories dt { font-weight: 750; }
+.plantes-categories dd { margin: 3px 0 0; }
+.plantes-carte [data-progress] { margin-bottom: 8px; }
+.plantes-carte[data-classified] { animation: plantes-classement .28s ease-out; border-left: 5px solid #315747; }
+@keyframes plantes-classement { 50% { transform: translateY(-4px); } }
+.article-plantes .plantes-sources-retour { font-size: .88em; }
+@media (prefers-reduced-motion: reduce) {
+  .plantes-module *,
+  .plantes-module *::before,
+  .plantes-module *::after { animation: none !important; transition: none !important; }
+}

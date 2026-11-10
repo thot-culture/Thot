@@ -799,10 +799,95 @@
           "height": 700
         }
       }
+    },
+    {
+      "slug": "plantes-douleur",
+      "layout": "authored",
+      "published": "2026-11-10",
+      "editorial_updated": "2026-11-10",
+      "editorial_scope": "Première publication, accompagnée de trois expériences pédagogiques facultatives.",
+      "headline": "Les plantes peuvent-elles ressentir la douleur ?",
+      "author": {
+        "@type": "Organization",
+        "name": "La rédaction THOT"
+      },
+      "seo": {
+        "title": "Les plantes peuvent-elles ressentir la douleur ? | THOT",
+        "description": "Les plantes réagissent aux blessures, transmettent des signaux et peuvent même émettre des ultrasons. Mais ces capacités signifient-elles qu'elles ressentent la douleur ? Une enquête au cœur de la biologie végétale."
+      },
+      "social": {
+        "title": "Les plantes peuvent-elles ressentir la douleur ?",
+        "description": "Les plantes réagissent aux blessures, transmettent des signaux et peuvent même émettre des ultrasons. Mais ces capacités signifient-elles qu'elles ressentent la douleur ? Une enquête au cœur de la biologie végétale.",
+        "image": "assets/social-cards/plantes-douleur.jpg",
+        "alt": "Illustration botanique d’une plante verte, avec une petite entaille et des nervures légèrement lumineuses sur une feuille."
+      },
+      "sources": {
+        "ref1": {
+          "kind": "primary",
+          "label": "Définition de référence"
+        },
+        "ref2": {
+          "kind": "primary",
+          "label": "Étude originale"
+        },
+        "ref3": {
+          "kind": "secondary",
+          "label": "Revue scientifique"
+        },
+        "ref4": {
+          "kind": "primary",
+          "label": "Étude originale"
+        },
+        "ref5": {
+          "kind": "primary",
+          "label": "Étude originale"
+        },
+        "ref6": {
+          "kind": "primary",
+          "label": "Étude originale"
+        },
+        "ref7": {
+          "kind": "primary",
+          "label": "Étude originale"
+        },
+        "ref8": {
+          "kind": "primary",
+          "label": "Étude originale"
+        },
+        "ref9": {
+          "kind": "primary",
+          "label": "Étude originale"
+        },
+        "ref10": {
+          "kind": "secondary",
+          "label": "Article de perspective"
+        },
+        "ref11": {
+          "kind": "secondary",
+          "label": "Analyse philosophique"
+        },
+        "ref12": {
+          "kind": "secondary",
+          "label": "Revue critique"
+        }
+      },
+      "catalogue": {
+        "category": "sciences",
+        "label": "Sciences naturelles",
+        "keywords": "biologie végétale plantes douleur blessure calcium dionée ultrasons conscience",
+        "credit": "Illustration originale THOT, générée avec OpenAI ImageGen, 2026.",
+        "image": {
+          "src": "assets/images/plantes-douleur.webp",
+          "alt": "Illustration botanique d’une plante verte, avec une petite entaille et des nervures légèrement lumineuses sur une feuille.",
+          "width": 1280,
+          "height": 800
+        }
+      }
     }
   ],
   "home_articles": [
     "autorite",
+    "plantes-douleur",
     "pieuvres-couleur",
     "puissance-etats-unis",
     "roubaix-1917",

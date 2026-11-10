@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 240" width="640" height="240">
+<rect width="640" height="240" fill="#eef2e6"/>
+<defs><g id="petite-plante"><path d="M0 102Q-8 51 4 2m-4 56-36-24m38 31 35-31" fill="none" stroke="#3d684e" stroke-width="4"/>
+<g fill="#719a61" stroke="#3d684e" stroke-width="2"><path d="M0 56q-17-39-61-37 13 45 61 37Z"/><path d="M1 64q17-42 64-42-16 43-64 42Z"/><path d="M4 42q-25-24 0-44 23 19 0 44Z"/></g>
+<path d="M-46 104h92l-13 49h-66Z" fill="#ab6347" stroke="#714a36" stroke-width="2"/></g>
+<marker id="fleche" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0l10 5-10 5z" fill="#436753"/></marker></defs>
+<g fill="#f8faf3" stroke="#799479" stroke-width="2"><rect x="24" y="33" width="168" height="65" rx="12"/>
+<rect x="236" y="33" width="168" height="65" rx="12"/><rect x="448" y="33" width="168" height="65" rx="12"/>
+<rect x="171" y="150" width="298" height="64" rx="12" stroke-dasharray="6 5"/></g>
+<path d="M195 65h34m178 0h34" fill="none" stroke="#436753" stroke-width="3" marker-end="url(#fleche)"/>
+<text x="108" y="72" text-anchor="middle" fill="#233b34" font-family="system-ui, sans-serif" font-weight="650" font-size="20">Détection</text><text x="320" y="72" text-anchor="middle" fill="#233b34" font-family="system-ui, sans-serif" font-weight="650" font-size="20">Signalisation</text><text x="532" y="72" text-anchor="middle" fill="#233b34" font-family="system-ui, sans-serif" font-weight="650" font-size="20">Défense</text><text x="320" y="178" text-anchor="middle" fill="#233b34" font-family="system-ui, sans-serif" font-weight="650" font-size="20">Expérience subjective</text><text x="320" y="200" text-anchor="middle" fill="#233b34" font-family="system-ui, sans-serif" font-weight="650" font-size="15">Non démontrée</text>
+</svg>
