@@ -62,6 +62,6 @@ La recette existante `test-site-browser.cjs` passe sur les vingt pages aux cinq 
 
 ## Publication et limites
 
-La publication passe par une branche de travail et une PR vers `main`, sans écraser l’historique ni toucher à la PR existante #28. GitHub Pages utilise la procédure existante : racine de `main`, build Pages automatique. Les résultats définitifs des 42 commandes locales, des GitHub Actions et de la recette sur le site déployé sont consignés dans le complément de livraison et les liens de PR.
+La publication passe par une branche de travail et une PR vers `main`, sans écraser l’historique ni toucher à la PR existante #28. GitHub Pages utilise la procédure existante : racine de `main`, build Pages automatique. Les **42/42 commandes** de `node scripts/validate.mjs` passent après le commit de production, sans modification des contrôles d’empreinte : [journal local complet](validation-locale.log). La nouvelle recette P1 rejoint aussi le workflow navigateur existant. Les résultats GitHub Actions et la recette sur le site déployé sont vérifiés à la livraison dans les liens de PR et de déploiement.
 
 Les contrôles mobiles utilisent Chromium avec viewport et densité simulés, pas un téléphone physique. Aucun lecteur d’écran réel ni Safari n’a été utilisé. Les créations sont des illustrations éditoriales, pas des preuves documentaires. Aucun problème bloquant n’a été relevé par la recette P1 locale.

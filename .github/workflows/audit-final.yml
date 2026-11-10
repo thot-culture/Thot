@@ -61,6 +61,8 @@ jobs:
         run: |
           python scripts/preview.py > "$RUNNER_TEMP/preview.log" 2>&1 &
           node scripts/test-site-browser.cjs
+      - name: Cartes P1, cinq largeurs et haute densité
+        run: python scripts/test-p1-cartes-browser.py --output "${{ runner.temp }}/evidence/p1-cartes"
       - name: Article sophistes, parcours et accessibilité
         env:
           NODE_PATH: ${{ runner.temp }}/thot-audit/node_modules
