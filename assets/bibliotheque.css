@@ -44,7 +44,29 @@ button{cursor:pointer}
 .results-status{font-size:13px;color:var(--muted);margin:27px 0 15px;font-weight:750}
 .article-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:21px;align-items:stretch}
 .article-card{background:var(--paper);border:1px solid var(--line);border-radius:19px;overflow:hidden;box-shadow:0 18px 34px rgba(23,36,58,.055);display:flex;flex-direction:column}
-.article-card .discovery-credit{font-size:12px}
+.article-card .discovery-photo{aspect-ratio:16/9}
+.article-card .discovery-photo img[src$="/homs-carte.webp"]{object-position:center top}
+.article-card .discovery-photo img[src$="/autrices-nadar.webp"]{object-position:center 32%}
+.article-card img[src$="/autrices-nadar.webp"]+.discovery-stamp{top:56%;bottom:auto;transform:translateY(-50%)}
+.article-card .discovery-card__copy{padding:18px 20px 14px}
+.article-card .discovery-card__copy h3{margin:10px 0 8px;text-wrap:balance}
+.article-card .discovery-card__copy>p{margin:0}
+.article-card .discovery-card__copy>.discovery-affordance{margin-top:8px}
+.article-card .discovery-card__bottom{margin-top:14px;padding-top:11px}
+.article-card .discovery-card__bottom time{white-space:nowrap}
+.article-grid>.article-card .discovery-credit{padding:7px 20px 8px}
+@media(min-width:761px){
+  @supports(grid-template-rows:subgrid){
+    /* Cadre, métadonnées, titre, résumé, activité, pied de carte et crédit. */
+    .article-grid>.article-card.discovery-card{grid-row:span 7}
+    .article-card .discovery-card__link,.article-card .discovery-card__copy{
+      display:grid;grid-template-rows:subgrid;row-gap:0
+    }
+    .article-card .discovery-card__link{grid-row:span 6}
+    .article-card .discovery-card__copy{grid-row:span 5}
+    .article-card .discovery-card__bottom{grid-row:5}
+  }
+}
 /* Les compositions typographiques restent entières dans le cadre commun des cartes. */
 .article-card .discovery-photo--integrale img{object-fit:contain}
 .article-card .discovery-photo.is-unavailable{display:grid;place-items:center;padding:24px 20px 60px}

@@ -2,8 +2,9 @@
 .home-page .hero-inner > div,
 .home-page .path-card > div { min-width: 0; }
 
-/* Les quatre articles restent répartis en deux rangées de deux cartes. */
-@media (min-width: 711px) {
+/* Les cartes suivent la même grille responsive que la bibliothèque. */
+.home-page .editorial-stories { grid-template-columns: 1fr; }
+@media (min-width: 761px) {
   .home-page .editorial-stories {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }

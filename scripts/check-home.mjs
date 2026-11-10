@@ -66,7 +66,7 @@ for (const tag of tags) {
 const articleURLs = new Set(tags.filter(t => t.tagName === 'a' && t.href?.startsWith('articles/')).map(t => t.href));
 const discoveryURLs = new Set(tags.filter(t => Object.hasOwn(t, 'data-discovery-path')).map(t => t.href));
 assert.deepEqual(discoveryURLs, articleURLs, 'Le tirage surprise doit inclure chaque article de l’accueil');
-assert.equal(articleURLs.size, 5);
+assert.ok(articleURLs.size > 0, 'L’accueil doit présenter au moins un article');
 assert.equal(tags.find(t => t.id === 'contenu').tabindex, '-1');
 for (const tag of tags.filter(t => t.rel === 'stylesheet')) {
   const resource = await siteResource(root, base, tag.href);
@@ -76,5 +76,5 @@ for (const tag of tags.filter(t => t.rel === 'stylesheet')) {
     if (!match[1].startsWith('#')) await siteResource(root, base, match[1], resource.url);
   }
 }
-console.log(`PASS : accueil, ${internal} liens/ressources internes, ${scripts} scripts, 5 articles dans le tirage surprise.`);
+console.log(`PASS : accueil, ${internal} liens/ressources internes, ${scripts} scripts, ${articleURLs.size} articles dans le tirage surprise.`);
 console.log(`NON VÉRIFIÉ : réponse réseau des ${externalImages.length} images externes, rendu visuel et mesures de performance.`);

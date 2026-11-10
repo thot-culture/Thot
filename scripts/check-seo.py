@@ -174,7 +174,7 @@ def audit(root=ROOT):
                     raise ValueError('Image hors du dépôt')
                 with Image.open(image_path) as media:
                     if media.size != (1200, 630):
-                        fail(name, 'image sociale attendue en 1200 × 630 pour la carte de bibliothèque')
+                        fail(name, 'image de partage attendue en 1200 × 630')
                     media.verify()
             except (OSError, ValueError):
                 fail(name, 'image sociale locale illisible')

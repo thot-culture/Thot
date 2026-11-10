@@ -104,6 +104,21 @@
         "@type": "Organization",
         "name": "La rédaction THOT",
         "url": "https://thot-culture.github.io/Thot/"
+      },
+      "catalogue": {
+        "category": "sciences-humaines",
+        "label": "Psychologie sociale · Sciences humaines",
+        "keywords": "psychologie sociale autorité obéissance désobéissance conformité contestation parents État lycée direction Milgram légitimité",
+        "description": "Parents, État, direction scolaire : ce qui nous fait obéir, discuter ou résister dépend-il de notre caractère — ou de la situation ?",
+        "invitation": "Trois contextes à comparer et un jeu de mise en situation, sans score ni profil.",
+        "stamp": "PSY",
+        "image": {
+          "src": "assets/images/autorite-triptyque.webp",
+          "alt": "Illustration de trois situations : discussion familiale, manifestation et échange au lycée.",
+          "width": 1200,
+          "height": 800
+        },
+        "credit": "Illustration originale THOT, générée avec OpenAI ImageGen · 23 octobre 2026"
       }
     },
     {
@@ -217,6 +232,21 @@
         "@type": "Organization",
         "name": "La rédaction THOT",
         "url": "https://thot-culture.github.io/Thot/notre-methode.html"
+      },
+      "catalogue": {
+        "category": "arts",
+        "label": "Littérature · Histoire des autrices",
+        "keywords": "littérature autrices pseudonymes noms de plume Charlotte Emily Anne Brontë George Eliot Mary Anne Marian Evans George Sand Aurore Dupin",
+        "description": "Brontë, George Eliot, George Sand : trois parcours pour comprendre ce que peut cacher un nom de plume.",
+        "stamp": "PLUME",
+        "credit_url": "https://commons.wikimedia.org/wiki/File:George_Sand_-_portraits.jpg",
+        "image": {
+          "src": "assets/images/autrices-nadar.webp",
+          "alt": "Planche de portraits photographiques de George Sand par Nadar, en 1864.",
+          "width": 1176,
+          "height": 900
+        },
+        "credit": "Nadar, 1864 · BnF / Wikimedia Commons · Domaine public"
       }
     },
     {
@@ -293,6 +323,22 @@
         "@type": "Organization",
         "name": "La rédaction THOT",
         "url": "https://thot-culture.github.io/Thot/notre-methode.html"
+      },
+      "catalogue": {
+        "category": "sciences",
+        "label": "Sciences · Biologie marine",
+        "keywords": "sciences biologie marine pieuvre poulpe octopus couleur chromatophore peau pigment camouflage nerfs muscles",
+        "description": "Chromatophores, muscles et signaux nerveux : comprendre le mécanisme derrière leurs changements de couleur.",
+        "invitation": "Schéma à manipuler · muscles et pigments",
+        "stamp": "SCI",
+        "credit_url": "https://commons.wikimedia.org/wiki/File:Poulpe_commun_(Octopus_vulgaris)_(Ifremer_00679-79134_-_31993).jpg",
+        "image": {
+          "src": "assets/images/poulpe-commun.webp",
+          "alt": "Poulpe commun photographié dans son milieu naturel.",
+          "width": 960,
+          "height": 713
+        },
+        "credit": "Xavier Caisey / Ifremer, 2019 · Wikimedia Commons · CC BY 4.0"
       }
     },
     {
@@ -408,6 +454,22 @@
         "@type": "Organization",
         "name": "La rédaction THOT",
         "url": "https://thot-culture.github.io/Thot/notre-methode.html"
+      },
+      "catalogue": {
+        "category": "geographie",
+        "label": "Géographie · Géopolitique",
+        "keywords": "géographie géopolitique puissance états-unis amerique souveraineté westphalienne afghanistan iran daech relations internationales",
+        "description": "Afghanistan, Iran, Daech : pourquoi disposer de moyens considérables ne garantit-il pas le résultat attendu ?",
+        "invitation": "Cas historiques à comparer · Afghanistan et Daech",
+        "stamp": "GÉO",
+        "credit_url": "https://www.dvidshub.net/image/1211203/afghan-national-army-soldiers-lead",
+        "image": {
+          "src": "assets/images/puissance-afghanistan.webp",
+          "alt": "Des soldats afghans s’exercent avec un bulldozer au camp Shorabak, en 2014.",
+          "width": 1000,
+          "height": 667
+        },
+        "credit": "Dustin D. March / U.S. Marine Corps, 2014 · DVIDS · Domaine public"
       }
     },
     {
@@ -493,6 +555,23 @@
         "@type": "Organization",
         "name": "La rédaction THOT",
         "url": "https://thot-culture.github.io/Thot/notre-methode.html"
+      },
+      "catalogue": {
+        "category": "histoire",
+        "label": "Histoire · Première Guerre mondiale",
+        "keywords": "roubaix 1917 histoire première guerre mondiale occupation allemande archives affiches réquisitions nord france",
+        "title": "Roubaix en 1917 : vivre sous l’occupation allemande",
+        "description": "Réquisitions, ravitaillement, contrôles : découvrir le quotidien d’une ville occupée à travers les documents d’époque.",
+        "invitation": "Document à explorer · affiche de 1917",
+        "stamp": "1917",
+        "credit_url": "https://commons.wikimedia.org/wiki/File:ELD_-_ROUBAIX_-_Boulevard_Gambetta.JPG",
+        "image": {
+          "src": "assets/images/roubaix-gambetta-carte.webp",
+          "alt": "Carte postale du boulevard Gambetta à Roubaix, avec tramway et passants, avant 1919.",
+          "width": 1040,
+          "height": 650
+        },
+        "credit": "ELD, avant 1919 · Wikimedia Commons · Domaine public"
       }
     },
     {
@@ -607,6 +686,21 @@
       "author": {
         "@type": "Organization",
         "name": "La rédaction THOT"
+      },
+      "catalogue": {
+        "category": "histoire",
+        "label": "Histoire",
+        "keywords": "guerre armées tactiques stratégie logistique Hannibal Mongols artillerie Napoléon drones Ukraine",
+        "invitation": "Frise, deux comparateurs et analyse d’un document.",
+        "credit_url": "https://commons.wikimedia.org/wiki/File:1281BattleOfHoms.JPG",
+        "credit_link_label": "Source et droits",
+        "image": {
+          "src": "assets/images/homs-carte.webp",
+          "alt": "Miniature médiévale montrant deux groupes de cavaliers armés face à face.",
+          "width": 840,
+          "height": 525
+        },
+        "credit": "Homs (1281), miniature du XIVe siècle · BnF, NAF 886, f. 27v · Domaine public."
       }
     },
     {
@@ -696,8 +790,24 @@
         "category": "sciences-humaines",
         "label": "Antiquité · Philosophie",
         "keywords": "sophistes antiquité philosophie vérité justice rhétorique protagoras gorgias antiphon hippias thrasymaque prodicos",
-        "credit": "Composition typographique et géométrique originale THOT, 2026 ; polices DejaVu. Aucun document antique reproduit."
+        "credit": "Scène imaginée · illustration originale THOT, générée avec OpenAI ImageGen.",
+        "title": "Les sophistes : qui décide du vrai et du juste ?",
+        "image": {
+          "src": "assets/images/sophistes-debat.webp",
+          "alt": "Scène imaginée d’un débat entre orateurs dans une cité grecque antique.",
+          "width": 1120,
+          "height": 700
+        }
       }
     }
+  ],
+  "home_articles": [
+    "autorite",
+    "pieuvres-couleur",
+    "puissance-etats-unis",
+    "roubaix-1917",
+    "autrices-pseudonymes",
+    "les-sophistes-verite-justice",
+    "evolution-strategies-militaires"
   ]
 }

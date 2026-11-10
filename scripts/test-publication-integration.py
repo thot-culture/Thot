@@ -50,6 +50,8 @@ def record(number):
             'social': {'title': title, 'description': 'Simulation technique de publication, sans contenu éditorial réel.',
                        'image': 'assets/' + slug + '.png', 'alt': 'Rectangle de test temporaire.'},
             'catalogue': {'category': 'histoire', 'label': 'Recette technique',
+                          'image': {'src': 'assets/' + slug + '.png', 'alt': 'Rectangle de test temporaire.',
+                                    'width': 1200, 'height': 630},
                           'keywords': 'recettetemporaire' + str(number), 'credit': 'Image de test créée localement, non publiée.'},
             'sources': {'ref1': {'kind': 'secondary', 'label': 'Documentation du site'}}}
 

@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Synchroniser bibliothèque et sitemap depuis les articles et leur registre.
-Vérification par défaut ; --write applique les ajouts sans supprimer de contenu.
-Les cartes existantes conservent leurs textes, illustrations, crédits et ordre.
+"""Synchroniser les cartes de l’accueil, la bibliothèque et le sitemap.
+Vérification par défaut ; --write applique les rendus du registre éditorial.
 """
 import portable_io
 import argparse
@@ -12,11 +11,129 @@ from html.parser import HTMLParser
 import json
 from pathlib import Path
 import re
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlsplit
 import xml.etree.ElementTree as ET
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 CATEGORIES = {"histoire", "geographie", "sciences", "arts", "sciences-humaines"}
+MONTHS = ("janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc.")
+
+
+def e(value):
+    return escape(str(value), quote=True)
+
+
+def catalogue_for(record, root):
+    slug = record["slug"]
+    catalogue = record.get("catalogue", {})
+    if catalogue.get("category") not in CATEGORIES:
+        raise ValueError("Ajouter catalogue.category pour " + slug)
+    for field in ("label", "keywords", "credit"):
+        if not isinstance(catalogue.get(field), str) or not catalogue[field].strip():
+            raise ValueError("Ajouter catalogue." + field + " pour " + slug)
+    image = catalogue.get("image", {})
+    src = image.get("src", "")
+    path = root / src
+    if (not src.startswith("assets/") or not path.is_file() or
+            not path.resolve().is_relative_to((root / "assets").resolve())):
+        raise ValueError("Illustration locale manquante pour " + slug)
+    if (not isinstance(image.get("alt"), str) or not image["alt"].strip() or
+            any(type(image.get(key)) is not int or image[key] <= 0 for key in ("width", "height"))):
+        raise ValueError("Décrire et dimensionner l’illustration de " + slug)
+    try:
+        with Image.open(path) as visual:
+            if visual.size != (image["width"], image["height"]):
+                raise ValueError("Dimensions de l’illustration incohérentes pour " + slug)
+            visual.verify()
+    except OSError as error:
+        raise ValueError("Illustration illisible pour " + slug) from error
+    if catalogue.get("credit_url") and urlsplit(catalogue["credit_url"]).scheme != "https":
+        raise ValueError("Lien de crédit non HTTPS pour " + slug)
+    return catalogue
+
+
+def story_fields(record, root, reading_times, show_author):
+    catalogue = catalogue_for(record, root)
+    slug = record["slug"]
+    image = catalogue["image"]
+    photo = (f'<img src="{e(image["src"])}" alt="{e(image["alt"])}" width="{image["width"]}" '
+             f'height="{image["height"]}" loading="lazy" decoding="async">')
+    if catalogue.get("stamp"):
+        photo += f'\n          <span class="discovery-stamp" aria-hidden="true">{e(catalogue["stamp"])}</span>'
+    credit = e(catalogue["credit"])
+    if url := catalogue.get("credit_url"):
+        if label := catalogue.get("credit_link_label"):
+            credit += f' <a href="{e(url)}">{e(label)}</a>.'
+        else:
+            credit = (f'<a href="{e(url)}" target="_blank" rel="noopener noreferrer">{credit}'
+                      '<span class="discovery-sr-only"> — consulter la notice de l’image (nouvel onglet)</span></a>')
+    day = date.fromisoformat(record["published"])
+    published = f'<time datetime="{day}">{day.day} {MONTHS[day.month - 1]} {day.year}</time>'
+    if show_author:
+        published += ' · ' + e(record["author"]["name"])
+    minutes = reading_times.get(slug, {}).get("minutes", 1)
+    title = catalogue.get("title") or record.get("headline") or record["social"]["title"]
+    return {
+        "href": f"articles/{slug}.html",
+        "title": e(re.sub(r" (?=[?!:])", "\u00a0", title)),
+        "description": e(catalogue.get("description") or record["social"]["description"]),
+        "invitation": e(catalogue.get("invitation", "")),
+        "photo": photo,
+        "credit": f'<p class="discovery-credit">{credit}</p>',
+        "meta": (f'<div class="discovery-meta"><span>{e(catalogue["label"])}</span>'
+                 f'<span class="reading-pill">{minutes} min de lecture</span></div>'),
+        "published": published,
+    }
+
+
+def standard_card(record, story, *, library=False):
+    slug = record["slug"]
+    catalogue = record["catalogue"]
+    classes = "article-card discovery-card" if library else "discovery-card"
+    search = (f' data-category="{e(catalogue["category"])}" data-keywords="{e(catalogue["keywords"])}"'
+              if library else "")
+    invitation = (f'\n          <p class="discovery-affordance">{story["invitation"]}</p>'
+                  if story["invitation"] else "")
+    return f'''        <article class="{classes}"{search}>
+      <a class="discovery-card__link" href="{story['href']}" data-discovery-path aria-labelledby="card-{slug}">
+        <div class="discovery-photo">
+          {story['photo']}
+        </div>
+        <div class="discovery-card__copy">
+          {story['meta']}
+          <h3 id="card-{slug}">{story['title']}</h3>
+          <p>{story['description']}</p>{invitation}
+          <div class="discovery-card__bottom"><span>{story['published']}</span><span>Lire l’article <span aria-hidden="true">↗</span></span></div>
+        </div>
+      </a>
+      {story['credit']}
+    </article>'''
+
+
+def featured_card(story):
+    invitation = (f'\n        <p class="latest-story__invitation">{story["invitation"]}</p>'
+                  if story["invitation"] else "")
+    return f'''      <article class="latest-story" aria-labelledby="latest-title">
+      <div class="latest-story__visual"><a href="{story['href']}" data-discovery-path aria-label="Lire l’article à la une : {story['title']}"><div class="discovery-photo discovery-photo--latest">
+          {story['photo']}
+      </div></a>{story['credit']}</div>
+      <div class="latest-story__copy">
+        <p class="latest-story__label"><span aria-hidden="true">✦</span> À la une</p>
+        {story['meta']}
+        <h3 id="latest-title"><a href="{story['href']}">{story['title']}</a></h3>
+        <p>{story['description']}</p>{invitation}
+        <div class="latest-story__actions"><a class="discovery-primary" href="{story['href']}">Découvrir l’article <span aria-hidden="true">↗</span></a><span>{story['published']}</span></div>
+      </div>
+    </article>'''
+
+
+def render_region(html, name, content):
+    start = f"<!-- catalogue:{name}:debut -->"
+    end = f"<!-- catalogue:{name}:fin -->"
+    if html.count(start) != 1 or html.count(end) != 1 or html.index(start) > html.index(end):
+        raise ValueError("Balises de génération incohérentes : " + name)
+    return html[:html.index(start) + len(start)] + "\n" + content + "\n      " + html[html.index(end):]
 
 
 class Head(HTMLParser):
@@ -50,50 +167,23 @@ def outputs(root=ROOT):
         if modified < published:
             raise ValueError("Mise à jour antérieure à la publication : " + record["slug"])
 
+    reading_times = json.loads((root / "assets/reading-times.json").read_text(encoding="utf-8"))["articles"]
+    by_slug = {record["slug"]: record for record in records}
+    selection = config.get("home_articles", [])
+    if not selection or len(selection) != len(set(selection)) or set(selection) - articles:
+        raise ValueError("Sélection de l’accueil vide, dupliquée ou inconnue")
+    stories = {slug: story_fields(record, root, reading_times, slug == selection[0])
+               for slug, record in by_slug.items()}
+    home_path = root / "index.html"
+    home = render_region(home_path.read_text(encoding="utf-8"), "une", featured_card(stories[selection[0]]))
+    home = render_region(home, "selection", "\n\n".join(standard_card(by_slug[slug], stories[slug])
+                                                        for slug in selection[1:]))
+
     library_path = root / "bibliotheque.html"
     library = library_path.read_text(encoding="utf-8")
-    cards = re.findall(r'<article\b[^>]*class="[^"]*\barticle-card\b[^"]*"[^>]*>[\s\S]*?</article>', library)
-    present = []
-    for card in cards:
-        links = re.findall(r'href="articles/([a-z0-9-]+)\.html"', card)
-        if len(set(links)) != 1:
-            raise ValueError("Une cible article unique est requise par carte")
-        present.append(links[0])
-    if len(present) != len(set(present)) or set(present) - articles:
-        raise ValueError("Carte dupliquée ou article absent")
-    additions = []
-    for record in sorted(records, key=lambda row: row["published"], reverse=True):
-        slug = record["slug"]
-        if slug in present:
-            continue
-        catalogue = record.get("catalogue", {})
-        if catalogue.get("category") not in CATEGORIES:
-            raise ValueError("Ajouter catalogue.category pour " + slug)
-        for field in ("label", "keywords", "credit"):
-            if not isinstance(catalogue.get(field), str) or not catalogue[field].strip():
-                raise ValueError("Ajouter catalogue." + field + " pour " + slug)
-        social = record["social"]
-        image = root / social["image"]
-        if not image.is_file() or not image.resolve().is_relative_to(root.resolve()):
-            raise ValueError("Image sociale locale absente ou hors du dépôt : " + slug)
-        # Aucune durée en dur : update-reading-times.py la renseigne ensuite.
-        e = lambda value: escape(str(value), quote=True)
-        additions.append(
-            '<article class="article-card discovery-card" data-category="' + e(catalogue["category"]) +
-            '" data-keywords="' + e(catalogue["keywords"]) + '"><a class="discovery-card__link" href="articles/' +
-            slug + '.html" data-discovery-path aria-labelledby="card-' + slug +
-            '"><div class="discovery-photo"><img src="' + e(social["image"]) + '" alt="' + e(social["alt"]) +
-            '" width="1200" height="630" loading="lazy" decoding="async"></div><div class="discovery-card__copy">' +
-            '<div class="discovery-meta"><span>' + e(catalogue["label"]) + '</span><span class="reading-pill">1 min de lecture</span></div>' +
-            '<h3 id="card-' + slug + '">' + e(social["title"]) + '</h3><p>' + e(social["description"]) +
-            '</p><div class="discovery-card__bottom"><span>' + e(record["published"]) +
-            '</span><span>Lire l’article ↗</span></div></div></a><p class="discovery-credit">' +
-            e(catalogue["credit"]) + '</p></article>')
-    marker = '<div id="article-results" class="article-grid">'
-    if library.count(marker) != 1:
-        raise ValueError("Conteneur de bibliothèque absent ou dupliqué")
-    if additions:
-        library = library.replace(marker, marker + "\n" + "\n".join(additions), 1)
+    order = sorted(records, key=lambda row: (row["published"], row["slug"]), reverse=True)
+    library = render_region(library, "bibliotheque", "\n\n".join(
+        standard_card(record, stories[record["slug"]], library=True) for record in order))
     library = re.sub(r'(<strong id="article-total">)\d+', lambda m: m[1] + str(len(articles)), library)
     library = re.sub(r'(<p class="results-status"[^>]*>)\d+ articles disponibles', lambda m: m[1] + str(len(articles)) + " articles disponibles", library)
 
@@ -128,7 +218,7 @@ def outputs(root=ROOT):
         body = re.sub(r'<lastmod>[^<]*</lastmod>', '', match[0])
         return body.replace('</url>', '<lastmod>' + article_dates[location] + '</lastmod></url>')
     sitemap = re.sub(r'<url>[\s\S]*?</url>', dated, sitemap)
-    return {library_path: library, sitemap_path: sitemap}
+    return {home_path: home, library_path: library, sitemap_path: sitemap}
 
 
 def main():
@@ -141,7 +231,7 @@ def main():
     if args.write:
         for path, value in planned:
             path.write_text(value, encoding="utf-8", newline="\n")
-        print("PASS : bibliothèque et sitemap synchronisés ; aucune suppression automatique.")
+        print("PASS : accueil, bibliothèque et sitemap synchronisés.")
         return 0
     for path, _ in planned:
         print("À synchroniser :", path.relative_to(ROOT))

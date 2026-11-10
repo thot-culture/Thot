@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from PIL import Image
 
 HERE = Path(__file__).resolve().parent
 
@@ -31,20 +32,27 @@ class PublicationTests(unittest.TestCase):
         (self.root / "assets").mkdir()
         self.base = "https://thot-culture.github.io/Thot/"
         self.record = {"slug": "essai-1917", "published": "2026-11-03",
+            "author": {"name": "La rédaction THOT"},
             "social": {"image": "assets/card.png", "alt": "Une image", "title": "Un titre",
                        "description": 'Une description <lisible> & sourcée'},
             "catalogue": {"category": "histoire", "label": "Histoire", "keywords": "essai",
-                          "credit": "Création THOT, droits vérifiés dans la notice"}}
+                          "credit": "Création THOT, droits vérifiés dans la notice",
+                          "image": {"src": "assets/cover.webp", "alt": "Une gravure", "width": 32, "height": 20}}}
         self.config = {"base_url": self.base, "editorial_updated": "2026-11-03",
-                       "articles": [self.record]}
+                       "articles": [self.record], "home_articles": [self.record["slug"]]}
         self.save()
-        (self.root / "assets/card.png").write_bytes(b"test")
+        Image.new("RGB", (32, 20)).save(self.root / "assets/cover.webp")
+        (self.root / "assets/reading-times.json").write_text('{"articles":{"essai-1917":{"minutes":3}}}', encoding="utf-8")
         self.page("articles/essai-1917.html")
         self.page("index.html")
+        with (self.root / "index.html").open("a", encoding="utf-8") as home:
+            home.write('<!-- catalogue:une:debut --><!-- catalogue:une:fin -->'
+                       '<!-- catalogue:selection:debut --><!-- catalogue:selection:fin -->')
         (self.root / "bibliotheque.html").write_text(
             '<link rel="canonical" href="' + self.base + 'bibliotheque.html">'
             '<strong id="article-total">0</strong><p class="results-status" id="results-status">0 articles disponibles</p>'
-            '<div id="article-results" class="article-grid"></div>', encoding="utf-8")
+            '<div id="article-results" class="article-grid">'
+            '<!-- catalogue:bibliotheque:debut --><!-- catalogue:bibliotheque:fin --></div>', encoding="utf-8")
         (self.root / "sitemap.xml").write_text(
             '<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"></urlset>',
             encoding="utf-8")
@@ -56,11 +64,15 @@ class PublicationTests(unittest.TestCase):
         url = self.base if name == "index.html" else self.base + name
         (self.root / name).write_text('<link rel="canonical" href="' + url + '"><main><h1>Texte</h1></main>', encoding="utf-8")
 
-    def test_add_and_repeat_without_changing_existing_cards(self):
+    def test_render_both_pages_and_repeat_without_changes(self):
         planned = sync.outputs(self.root)
         library = planned[self.root / "bibliotheque.html"]
-        self.assertIn('href="articles/essai-1917.html"', library)
-        self.assertIn("&lt;lisible&gt; &amp; sourcée", library)
+        home = planned[self.root / "index.html"]
+        for page in (library, home):
+            self.assertIn('href="articles/essai-1917.html"', page)
+            self.assertIn("&lt;lisible&gt; &amp; sourcée", page)
+            self.assertIn('src="assets/cover.webp" alt="Une gravure" width="32" height="20"', page)
+            self.assertIn('3 min de lecture', page)
         self.assertIn('id="article-total">1', library)
         self.assertIn(self.base + "articles/essai-1917.html", planned[self.root / "sitemap.xml"])
         self.assertIn('<lastmod>2026-11-03</lastmod>', planned[self.root / 'sitemap.xml'])
@@ -90,6 +102,15 @@ class PublicationTests(unittest.TestCase):
         del self.record["catalogue"]["credit"]
         self.save()
         with self.assertRaises(ValueError):
+            sync.outputs(self.root)
+
+    def test_missing_or_broken_illustration_is_rejected(self):
+        image = self.root / self.record["catalogue"]["image"]["src"]
+        image.unlink()
+        with self.assertRaisesRegex(ValueError, "manquante"):
+            sync.outputs(self.root)
+        image.write_bytes(b"corrompu")
+        with self.assertRaisesRegex(ValueError, "illisible"):
             sync.outputs(self.root)
 
     def test_stale_sitemap_is_never_deleted_silently(self):

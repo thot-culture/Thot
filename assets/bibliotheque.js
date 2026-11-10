@@ -25,7 +25,8 @@
       card.querySelector('.discovery-meta')?.textContent || '',
       card.querySelector('.discovery-card__copy > p')?.textContent || '',
       card.querySelector('.discovery-credit')?.textContent || '',
-      card.querySelector('.discovery-card__bottom > span')?.textContent || ''
+      card.querySelector('.discovery-card__bottom > span')?.textContent || '',
+      card.querySelector('time[datetime]')?.dateTime || ''
     ].join(' '))
   }));
   let category = 'tous';

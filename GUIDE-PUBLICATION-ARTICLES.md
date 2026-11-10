@@ -77,6 +77,12 @@ Exemple de structure, à compléter avec les vraies données :
     "category": "histoire",
     "label": "Histoire",
     "keywords": "imprimerie livre diffusion techniques",
+    "image": {
+      "src": "assets/images/histoire-imprimerie.webp",
+      "alt": "Une presse à bras dans un atelier d’imprimerie.",
+      "width": 960,
+      "height": 600
+    },
     "credit": "Crédit exact de l’image et licence ; notice documentée."
   }
 }
@@ -84,7 +90,7 @@ Exemple de structure, à compléter avec les vraies données :
 
 Les dates, titres et médias de cet exemple sont des exemples à remplacer avant publication. `headline` doit être exactement le H1 (espaces normalisés) ; `seo.title` peut être plus court, sans déformer le sujet. `author` doit correspondre à la signature visible et réelle ; un auteur individuel peut utiliser `Person`. `social.image` est l'image représentative utilisée dans le partage et Schema.org ; le visuel affiché dans l'article garde ses propres dimensions, crédit et alt. Catégories reconnues : `histoire`, `geographie`, `sciences`, `arts`, `sciences-humaines`. Les mots-clés facilitent la recherche interne, ils ne sont pas une balise SEO.
 
-Le champ `catalogue` permet au synchroniseur de créer la carte de bibliothèque. Les cartes existantes conservent leurs textes et crédits. L'image sociale doit être locale, en 1200 × 630 ; sa création et ses droits restent un travail éditorial. Le générateur historique de cartes sociales ne crée pas automatiquement une composition pour chaque nouveau sujet.
+Le champ `catalogue` fournit les données communes aux cartes de l’accueil et de la bibliothèque. `catalogue.image` est obligatoire. Choisir une image locale sans texte incrusté et renseigner son texte alternatif ainsi que ses dimensions réelles. `catalogue.credit_url` peut pointer vers la notice et la licence. Le titre de la carte reprend `headline` et le résumé reprend `social.description`, avec des variantes possibles dans `catalogue.title` et `catalogue.description`. L’image sociale reste locale, en 1200 × 630.
 
 Les cinq anciens articles sans `layout: authored` utilisent une autre forme de notice, avec `known`, `discussion`, qualification des sources et blocs générés. Ne pas convertir ces articles pour ajouter un nouveau texte.
 
@@ -114,13 +120,13 @@ Une animation est facultative. Conserver une explication statique complète, un 
 
 ## 5. Bibliothèque, accueil et sitemap
 
-Ne pas ajouter une carte manuellement dans plusieurs fichiers. Le synchroniseur ajoute les articles manquants à la bibliothèque, actualise le total statique et complète le sitemap. Il refuse les notices oubliées, les doublons et les suppressions implicites. Il ne réécrit pas les crédits des cartes existantes.
+Le synchroniseur génère les cartes entre les marqueurs `catalogue` dans les deux pages, actualise le total statique et complète le sitemap. Modifier les données des cartes dans `assets/article-editorial.json`. Le script refuse les notices oubliées, les doublons, les images locales manquantes ou illisibles et les dimensions incorrectes.
 
 Le sitemap reprend désormais `editorial_updated` pour le `lastmod` des articles. Déclarer la vraie date de publication et une modification seulement lors d'une révision significative ; jamais la date du lancement du script. Les autres pages gardent leurs dates explicites. L'absence de `lastmod` n'est pas un blocage d'indexation.
 
 Ajouter un à trois liens dans le texte ou les recommandations lorsque des correspondances réelles existent (voir la stratégie). La bibliothèque assure le premier lien entrant de tout nouvel article ; ajouter un lien depuis un ancien article est utile si son contexte s'y prête. Aucun lien forcé pour remplir un quota.
 
-L'accueil reste une sélection éditoriale, libellée « À la une ». Il n'est pas nécessaire de le modifier deux fois par semaine : tous les articles sont accessibles dans la bibliothèque. Son bouton surprise choisit parmi les articles de l'accueil ; celui de la bibliothèque choisit parmi toutes ses cartes.
+Le tableau `home_articles` donne l’ordre des cartes de l’accueil. Son premier élément désigne l’article à la une. Le bouton surprise de l’accueil choisit parmi cette sélection et celui de la bibliothèque parmi toutes ses cartes.
 
 Changer l'article à la une est un choix éditorial facultatif : image, titre, description, lien, date et durée doivent être cohérents. Ne pas utiliser « Dernière publication » pour une sélection non automatiquement triée.
 

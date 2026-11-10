@@ -41,6 +41,12 @@
 .discovery-card__copy>p{font:400 14px/1.75 "Segoe UI",Arial,sans-serif;color:#566171;margin:0 0 24px}
 .discovery-card__bottom{margin-top:auto;padding-top:15px;border-top:1px solid #E8E5DC;display:flex;align-items:center;justify-content:space-between;gap:10px;font:400 11px/1.5 "Segoe UI",Arial,sans-serif;color:#566171}
 .discovery-card__bottom>span:last-child{font-weight:750;color:#245D63}
+:is(.editorial-stories,.article-grid)>.discovery-card .discovery-credit{font-size:12px}
+@media(min-width:761px){
+  @supports(grid-template-rows:subgrid){
+    :is(.editorial-stories,.article-grid)>.discovery-card{display:grid;grid-row:span 2;grid-template-rows:subgrid;row-gap:0}
+  }
+}
 .library-discovery{margin:24px 0 20px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
 .library-discovery>p{font:400 14px/1.6 "Segoe UI",Arial,sans-serif;color:#566171;margin:0}
 .library-discovery .discovery-primary{padding:11px 17px;font-size:13px}
