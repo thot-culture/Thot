@@ -8,11 +8,24 @@ node scripts/validate.mjs
 node scripts/validate.mjs --python python --revision SHA_DU_SOCLE
 ```
 
-Le lanceur exécute 40 commandes sans installation ni réseau : contrôles des pages,
+Le lanceur exécute 43 commandes sans installation ni réseau : contrôles des pages,
 liens, scripts, quiz et activités, vérification des générateurs, publication de deux
 articles en copie temporaire, portabilité, SEO et conservation des contenus.
 Il fonctionne depuis un autre dossier et échoue si une commande échoue.
 Les suites navigateur et les anciennes recettes de livraison sont distinctes.
+
+`test-documentary-links.py` couvre les faux succès HTTP 200 (erreur Omeka,
+maintenance, contrôle de navigateur), les PDF redirigés vers l'accueil et les
+refus 401/403/429. Ces réponses exigent une relecture ; elles ne provoquent
+aucun remplacement automatique. Il vérifie aussi l'inventaire des URL HTTP,
+des sources JSON d'Explorer et des références du quiz chargées en JavaScript.
+
+`python scripts/audit-final-links.py --output DOSSIER` effectue séparément des
+GET en lecture seule et conserve titres, destinations et signaux de relecture.
+`--inventory-only` n'utilise pas le réseau. Le statut `http-response-only`
+ne certifie ni la correspondance bibliographique ni la disponibilité du texte
+intégral. Les résultats externes doivent être recoupés au navigateur et avec
+les identifiants des documents avant toute modification.
 
 ## Accueil et chemins de publication
 
