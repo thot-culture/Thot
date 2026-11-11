@@ -6,5 +6,141 @@
     "title": "George Eliot — Great Writers Inspire",
     "checked_on": "2026-11-03",
     "evidence": "Ancien hôte : échec DNS dans le contrôle GitHub Actions 41618290167. Même ressource et même contributeur Charlotte Barrett, page de remplacement ouverte et lue via le navigateur de recherche le 3 novembre 2026. Aucun fait ni texte d'article modifié."
+  },
+  {
+    "path": "articles/autorite.html",
+    "old": "https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006071191/LEGISCTA000018377430/2026-06-20",
+    "new": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000018380772/2026-06-20",
+    "title": "Code de l’éducation — accès direct à R421-8",
+    "checked_on": "2026-11-11",
+    "evidence": "Lien suivi depuis la sous-section officielle puis article ouvert au navigateur. Article R421-8, même version au 20 juin 2026 ; direction des EPLE et représentation de l’État confirmées. Le HTTP 403 du robot ne désigne pas une source supprimée."
+  },
+  {
+    "path": "articles/roubaix-1917.html",
+    "old": "<a href=\"https://francearchives.gouv.fr/fr/subject/130828729?aug=True&amp;es_digitized=False&amp;es_publisher=1042446007&amp;es_publisher=33940&amp;indexentry=130828729&amp;restrict_to_single_etype=False&amp;sort=sortdate\" target=\"_blank\" rel=\"noopener noreferrer\">Consulter les résultats FranceArchives contenant cette cote</a> (lien vers les résultats de recherche, et non vers une notice individuelle).",
+    "new": "<a href=\"https://francearchives.gouv.fr/fr/facomponent/52fe98c8d2dffdb4c46871326f07161aec51f7fc\" target=\"_blank\" rel=\"noopener noreferrer\">Consulter la notice FranceArchives — cote 4H140</a> (notice descriptive ; accès à la reproduction numérique non confirmé).",
+    "title": "Roubaix — notice individuelle 4H140",
+    "checked_on": "2026-11-11",
+    "evidence": "Notice trouvée en suivant le résultat officiel FranceArchives puis ouverte au navigateur avec JavaScript : titre, cote 4H140, dates 1917–1917, fonds 4 H et service de conservation vérifiés. La notice indique consultation sur microfilm ou sous forme numérisée, sans accès vérifié à cette reproduction. Hors des quatre notices traitées par la PR #28."
+  },
+  {
+    "path": "articles/roubaix-1917.html",
+    "old": "<a href=\"https://www.armarium-hautsdefrance.fr/document/85546\" target=\"_blank\" rel=\"noopener noreferrer\">Bibliothèque numérique de Roubaix, collection « La grande Guerre à Roubaix »</a>, présentation du corpus numérisé de <strong>972 affiches</strong> couvrant la période 1914-1918 (description de la collection reproduite sur cette notice de L'Armarium, cote AFF_001_D_0694).</li>",
+    "new": "<a href=\"https://www.armarium-hautsdefrance.fr/document/85546\" target=\"_blank\" rel=\"noopener noreferrer\">Bibliothèque numérique de Roubaix, collection « La grande Guerre à Roubaix »</a>, présentation du corpus numérisé de <strong>972 affiches</strong> couvrant la période 1914-1918 (description de la collection reproduite sur cette notice de L'Armarium, cote AFF_001_D_0694). <span class=\"notice-indisponible\">Cette notice de L’Armarium affiche une erreur lors du contrôle du 11 novembre 2026. La référence reste indexée ; l’accès à l’affiche n’est pas confirmé.</span></li>",
+    "title": "Roubaix — limite d’accès L’Armarium, ref1",
+    "checked_on": "2026-11-11",
+    "evidence": "Les deux variantes de /document/85546 renvoient HTTP 200 avec le titre « Omeka a rencontré une erreur » ; même résultat au navigateur. Le moteur de recherche conserve une description correspondant au titre et à la cote AFF_001_D_0694. Aucun nouveau lien individuel équivalent vérifié. Référence et URL historique conservées."
+  },
+  {
+    "path": "articles/roubaix-1917.html",
+    "old": "<a href=\"https://armarium-hautsdefrance.fr/document/85546\" target=\"_blank\" rel=\"noopener noreferrer\">L'Armarium, « Prescriptions concernant la récolte de 1917 pour la ville de Roubaix »</a>, 1917, cote AFF_001_D_0694.</li>",
+    "new": "<a href=\"https://armarium-hautsdefrance.fr/document/85546\" target=\"_blank\" rel=\"noopener noreferrer\">L'Armarium, « Prescriptions concernant la récolte de 1917 pour la ville de Roubaix »</a>, 1917, cote AFF_001_D_0694. <span class=\"notice-indisponible\">Cette notice de L’Armarium affiche une erreur lors du contrôle du 11 novembre 2026. La référence reste indexée ; l’accès à l’affiche n’est pas confirmé.</span> <a href=\"https://www.ville-roubaix.fr/services-infos-pratiques/culture-et-patrimoine/patrimoine-et-histoire/les-archives-municipales-de-roubaix/\" target=\"_blank\" rel=\"noopener noreferrer\">Demander la cote AFF_001_D_0694 aux Archives municipales</a> (page du service ; accès à l’affiche non confirmé).</li>",
+    "title": "Roubaix — limite d’accès L’Armarium, ref6",
+    "checked_on": "2026-11-11",
+    "evidence": "Les deux variantes de /document/85546 renvoient HTTP 200 avec le titre « Omeka a rencontré une erreur » ; même résultat au navigateur. Le moteur de recherche conserve une description correspondant au titre et à la cote AFF_001_D_0694. Aucun nouveau lien individuel équivalent vérifié. Référence et URL historique conservées. Page du service des Archives municipales ouverte au navigateur ; voie de demande de la cote AFF_001_D_0694 ajoutée sans prétendre donner accès à l’affiche."
+  },
+  {
+    "path": "articles/puissance-etats-unis.html",
+    "old": "Accès alternatif institutionnel : <a href=\"https://www.diplomatie.gouv.fr/IMG/pdf/paris_roadmap_-_final_version_fr_2__cle09b5d2.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">version française de la même Feuille de route, ministère de l’Europe et des Affaires étrangères (PDF)</a>. La page d’archives américaine refuse l’accès automatisé lors du contrôle ; la référence d’origine est conservée.",
+    "new": "Lien historique institutionnel : <a href=\"https://www.diplomatie.gouv.fr/IMG/pdf/paris_roadmap_-_final_version_fr_2__cle09b5d2.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">traduction française de la Feuille de route de Paris (25 juin 2019), ministère de l’Europe et des Affaires étrangères — PDF indisponible lors du contrôle</a>. Ce lien renvoie à l’accueil du ministère le 11 novembre 2026. La version anglaise proposée précédemment sur le même site renvoie également à l’accueil. La déclaration américaine d’origine reste citée ci-dessus ; sa consultation directe n’a pas abouti lors du contrôle, bien que son texte soit encore indexé.",
+    "title": "Feuille de route de Paris — absence d’accès alternatif vérifié",
+    "checked_on": "2026-11-11",
+    "evidence": "Les PDF français de main et anglais proposé par la PR #28 ont été ouverts au navigateur le 11 novembre 2026 : ils redirigent tous deux vers https://www.diplomatie.gouv.fr/fr (Accueil). La déclaration américaine est identifiée par le moteur de recherche au 25 juin 2019 mais la connexion directe est réinitialisée. Aucun remplacement ne serait honnêtement vérifié ; références et URL historique conservées, limite explicite. Ce changement corrige la promesse d’accès, sans reprendre la réparation devenue inopérante de la PR #28."
+  },
+  {
+    "path": "articles/pieuvres-couleur.html",
+    "old": "<a href=\"https://doi.org/10.1098/rstb.2008.0270\" target=\"_blank\" rel=\"noopener noreferrer\">Lire l’article</a>.</li>",
+    "new": "<a href=\"https://doi.org/10.1098/rstb.2008.0270\" target=\"_blank\" rel=\"noopener noreferrer\">Lire l’article</a>. <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC2674088/\" target=\"_blank\" rel=\"noopener noreferrer\">Texte intégral en accès libre sur PubMed Central</a>.</li>",
+    "title": "Pieuvres — accès libre, ref3",
+    "checked_on": "2026-11-11",
+    "evidence": "Page téléchargée HTTP 200, titre et DOI exacts dans les métadonnées ; identifiant corroboré par Europe PMC. DOI éditeur conservé malgré HTTP 403."
+  },
+  {
+    "path": "articles/pieuvres-couleur.html",
+    "old": "<a href=\"https://doi.org/10.1098/rsif.2008.0366.focus\" target=\"_blank\" rel=\"noopener noreferrer\">Lire l’article</a>.</li>",
+    "new": "<a href=\"https://doi.org/10.1098/rsif.2008.0366.focus\" target=\"_blank\" rel=\"noopener noreferrer\">Lire l’article</a>. <a href=\"https://pmc.ncbi.nlm.nih.gov/articles/PMC2706477/\" target=\"_blank\" rel=\"noopener noreferrer\">Texte intégral en accès libre sur PubMed Central</a>.</li>",
+    "title": "Pieuvres — accès libre, ref4",
+    "checked_on": "2026-11-11",
+    "evidence": "Page téléchargée et ouverte au navigateur : titre, quatre auteurs, DOI, pagination et année de fascicule 2009 vérifiés. DOI éditeur conservé malgré HTTP 403."
+  },
+  {
+    "path": "articles/pieuvres-couleur.html",
+    "old": "<a href=\"https://doi.org/10.1002/jmor.20221\" target=\"_blank\" rel=\"noopener noreferrer\">Lire l’étude</a>.</li>",
+    "new": "<a href=\"https://doi.org/10.1002/jmor.20221\" target=\"_blank\" rel=\"noopener noreferrer\">Lire l’étude</a>. <a href=\"https://sites.pitt.edu/~velankar/www/papers/JMorphAllen2014.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Texte intégral hébergé à l’université de Pittsburgh (PDF)</a>.</li>",
+    "title": "Pieuvres — accès libre, ref5",
+    "checked_on": "2026-11-11",
+    "evidence": "PDF de 20 pages téléchargé intégralement (4 289 295 octets). Première page : titre exact, Allen, Bell, Kuzirian, Velankar, Hanlon ; Journal of Morphology 275:371–390 (2014), DOI 10.1002/jmor.20221. SHA-256 2fca2dadaeddc5a9f9f9c265d7f2b246866672a960e654962599408c55a26b33. DOI éditeur conservé malgré HTTP 403."
+  },
+  {
+    "path": "articles/plantes-douleur.html",
+    "old": "<a href=\"https://doi.org/10.7554/eLife.104700.3\">Consulter la source</a><br>",
+    "new": "<a href=\"https://doi.org/10.7554/eLife.104700.3\">Consulter la source</a> · <a href=\"https://cdn.elifesciences.org/articles/104700/elife-104700-v1.pdf\">Texte intégral, version définitive du 5 janvier 2026 (PDF eLife)</a><br>",
+    "title": "Plantes — accès direct à la version définitive Seltzer et al.",
+    "checked_on": "2026-11-11",
+    "evidence": "DOI conservé : sa destination renvoie un Client Challenge. PDF éditeur téléchargé HTTP 200, 1 739 113 octets, 15 pages ; titre, auteurs et mention « Version of Record published 05 January 2026 » lus sur la première page, malgré le nom de fichier v1. SHA-256 3deff389df2972624163dcc8378ec136dd4880d09cc6293e761327f95bb57ff0 ; page figures de la revue corrobore le DOI .3."
+  },
+  {
+    "path": "articles/puissance-etats-unis.html",
+    "old": "<a href=\"https://www.sigar.mil/pdf/quarterlyreports/2021-10-30qr.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Consulter ↗</a>",
+    "new": "<a href=\"https://cybercemetery.unt.edu/sigar/20251209002052mp_/https://www.sigar.mil/Portals/147/Files/Reports/Quarterly-Reports/2021-10-30qr.pdf\" target=\"_blank\" rel=\"noopener noreferrer\">Consulter le PDF archivé par l’université du North Texas ↗</a>",
+    "title": "SIGAR — rapport du 30 octobre 2021, PDF archivé",
+    "checked_on": "2026-11-11",
+    "evidence": "Ancien domaine : échec DNS. Copie retrouvée en parcourant le site SIGAR archivé depuis la notice UNT ark:/67531/metadc2569807/, catégorie Quarterly Reports, page 2, notice Article/3994097. PDF final téléchargé HTTP 200, 6 008 700 octets, 195 pages ; titre et date 30 octobre 2021 lus dans le document. Copie ecoi.net téléchargée indépendamment : identité binaire, SHA-256 commun a1c977e911fe0dd6653c87dc65092e44ed741c7ab72ffcf344922be8d64fe672. Aucun texte d’analyse changé."
+  },
+  {
+    "path": "articles/puissance-etats-unis.html",
+    "old": "L’accès automatisé au site SIGAR d’origine est indisponible lors du contrôle du 26 octobre 2026 ; cela ne prouve pas une suppression.",
+    "new": "Le lien d’origine indisponible a été remplacé par la copie conservée dans le CyberCemetery de l’université du North Texas (capture de décembre 2025). Le PDF archivé et la copie ecoi.net ont été vérifiés le 11 novembre 2026.",
+    "title": "SIGAR — note d’accès actualisée",
+    "checked_on": "2026-11-11",
+    "evidence": "Ancien domaine : échec DNS. Copie retrouvée en parcourant le site SIGAR archivé depuis la notice UNT ark:/67531/metadc2569807/, catégorie Quarterly Reports, page 2, notice Article/3994097. PDF final téléchargé HTTP 200, 6 008 700 octets, 195 pages ; titre et date 30 octobre 2021 lus dans le document. Copie ecoi.net téléchargée indépendamment : identité binaire, SHA-256 commun a1c977e911fe0dd6653c87dc65092e44ed741c7ab72ffcf344922be8d64fe672. Aucun texte d’analyse changé."
+  },
+  {
+    "path": "articles/roubaix-1917.html",
+    "old": "<span class=\"notice-indisponible\">Accès automatisé à la notice non confirmé le 26 octobre 2026 ; cela ne permet pas de conclure à une suppression. Référence archivistique conservée.</span></li>",
+    "new": "<span class=\"notice-indisponible\">Accès automatisé à la notice non confirmé le 26 octobre 2026 ; cela ne permet pas de conclure à une suppression. Référence archivistique conservée.</span> <a href=\"https://www.ville-roubaix.fr/services-infos-pratiques/culture-et-patrimoine/patrimoine-et-histoire/les-archives-municipales-de-roubaix/\" target=\"_blank\" rel=\"noopener noreferrer\">Contacter les Archives municipales (cote AFF_001_D_0685)</a> (page du service ; aucun accès direct à l’affiche confirmé).</li>",
+    "title": "Roubaix — voie de demande pour la cote AFF_001_D_0685",
+    "checked_on": "2026-11-11",
+    "evidence": "Recherche de la cote sans notice individuelle retrouvée. Page du service des Archives municipales ouverte au navigateur, coordonnées et rubrique Archives en ligne vérifiées. Le lien du catalogue actuel impose une vérification humaine. Accès au service explicitement distingué de l’accès à l’affiche. Cette référence ref2 ne figure pas parmi les quatre liens corrigés dans la PR #28."
+  },
+  {
+    "path": "articles/roubaix-1917.html",
+    "old": "<span class=\"notice-indisponible\">Notice municipale retrouvée dans l’index de recherche ; accès direct et lecture intégrale de l’affiche non confirmés le 26 octobre 2026. Référence conservée.</span> <a href=\"https://bn-r.cd-script.fr/fr/notice.php?from=&amp;id=AFF_001_D_0150&amp;searchurl=%2Ffr%2Frecherche-resultat.php%3Ffl%3D%26from%3D%26q%3DGrand%2Bplace%26sort%3Dtri_annee%2520asc%2Ctri_titre%2520asc%26start%3D990%26version%3D2.2&amp;startpic=0\" target=\"_blank\" rel=\"noopener noreferrer\">Notice municipale (accès direct non confirmé)</a>.",
+    "new": "<span class=\"notice-indisponible\">Notice repérée dans l’ancien catalogue numérique ; l’ancien lien ne permet plus d’accéder à la notice lors du contrôle du 11 novembre 2026. La référence et la cote sont conservées pour demander le document aux Archives municipales. Le lien suivant donne accès au service, pas à l’affiche.</span> <a href=\"https://www.ville-roubaix.fr/services-infos-pratiques/culture-et-patrimoine/patrimoine-et-histoire/les-archives-municipales-de-roubaix/\" target=\"_blank\" rel=\"noopener noreferrer\">Contacter les Archives municipales (cote AFF_001_D_0150)</a>.",
+    "title": "Référence archivistique Roubaix — ref3",
+    "checked_on": "2026-11-11",
+    "evidence": "Solution documentaire reprise de la PR #28, tête ba48fe4559cd0c6f5d2116cd307896d47d256e47 : page officielle du service et cote conservées. Page ouverte au navigateur lors de la consolidation : titre Archives municipales, coordonnées et consignes de consultation confirmés. Ancien hôte Bn-R : certificat incompatible lors de l’audit du 11 novembre ; note actualisée sans affirmer une maintenance temporaire ni un accès à l’affiche. Aucun fichier de l’atlas ni PDF anglais de la coalition repris."
+  },
+  {
+    "path": "articles/roubaix-1917.html",
+    "old": "<span class=\"notice-indisponible\">Notice municipale retrouvée dans l’index de recherche ; accès direct et lecture intégrale de l’affiche non confirmés le 26 octobre 2026. Référence conservée.</span> <a href=\"https://bn-r.cd-script.fr/fr/notice.php?from=periode&amp;id=AFF_001_D_0632&amp;searchurl=%2Ffr%2Frecherche-resultat.php%3Ffl%3D%26from%3Dperiode%26q%3Dchrono%253A%25221914-1918%2522%26sort%3Dtri_annee%2520asc%2Ctri_titre%2520asc%26start%3D1020%26version%3D2.2\" target=\"_blank\" rel=\"noopener noreferrer\">Notice municipale (accès direct non confirmé)</a>.",
+    "new": "<span class=\"notice-indisponible\">Notice repérée dans l’ancien catalogue numérique ; l’ancien lien ne permet plus d’accéder à la notice lors du contrôle du 11 novembre 2026. La référence et la cote sont conservées pour demander le document aux Archives municipales. Le lien suivant donne accès au service, pas à l’affiche.</span> <a href=\"https://www.ville-roubaix.fr/services-infos-pratiques/culture-et-patrimoine/patrimoine-et-histoire/les-archives-municipales-de-roubaix/\" target=\"_blank\" rel=\"noopener noreferrer\">Contacter les Archives municipales (cote AFF_001_D_0632)</a>.",
+    "title": "Référence archivistique Roubaix — ref4",
+    "checked_on": "2026-11-11",
+    "evidence": "Solution documentaire reprise de la PR #28, tête ba48fe4559cd0c6f5d2116cd307896d47d256e47 : page officielle du service et cote conservées. Page ouverte au navigateur lors de la consolidation : titre Archives municipales, coordonnées et consignes de consultation confirmés. Ancien hôte Bn-R : certificat incompatible lors de l’audit du 11 novembre ; note actualisée sans affirmer une maintenance temporaire ni un accès à l’affiche. Aucun fichier de l’atlas ni PDF anglais de la coalition repris."
+  },
+  {
+    "path": "articles/roubaix-1917.html",
+    "old": "<span class=\"notice-indisponible\">Notice municipale retrouvée dans l’index de recherche ; accès direct et lecture intégrale de l’affiche non confirmés le 26 octobre 2026. Référence conservée.</span> <a href=\"https://bn-r.cd-script.fr/fr/notice.php?from=theme&amp;id=AFF_001_D_0759&amp;image=RBX_AMR_AFF_001_D_0759_1&amp;searchurl=%2Ffr%2Frecherche-resultat.php%3Ffl%3D%26from%3Dtheme%26q%3Dtheme%253A%2522Guerres%2522%26sort%3Dtri_annee%2520asc%2Ctri_titre%2520asc%26start%3D920%26version%3D2.2&amp;startpic=0\" target=\"_blank\" rel=\"noopener noreferrer\">Notice municipale (accès direct non confirmé)</a>.",
+    "new": "<span class=\"notice-indisponible\">Notice repérée dans l’ancien catalogue numérique ; l’ancien lien ne permet plus d’accéder à la notice lors du contrôle du 11 novembre 2026. La référence et la cote sont conservées pour demander le document aux Archives municipales. Le lien suivant donne accès au service, pas à l’affiche.</span> <a href=\"https://www.ville-roubaix.fr/services-infos-pratiques/culture-et-patrimoine/patrimoine-et-histoire/les-archives-municipales-de-roubaix/\" target=\"_blank\" rel=\"noopener noreferrer\">Contacter les Archives municipales (cote AFF_001_D_0759)</a>.",
+    "title": "Référence archivistique Roubaix — ref7",
+    "checked_on": "2026-11-11",
+    "evidence": "Solution documentaire reprise de la PR #28, tête ba48fe4559cd0c6f5d2116cd307896d47d256e47 : page officielle du service et cote conservées. Page ouverte au navigateur lors de la consolidation : titre Archives municipales, coordonnées et consignes de consultation confirmés. Ancien hôte Bn-R : certificat incompatible lors de l’audit du 11 novembre ; note actualisée sans affirmer une maintenance temporaire ni un accès à l’affiche. Aucun fichier de l’atlas ni PDF anglais de la coalition repris."
+  },
+  {
+    "path": "articles/roubaix-1917.html",
+    "old": "<span class=\"notice-indisponible\">Notice municipale retrouvée dans l’index de recherche ; accès direct et lecture intégrale de l’affiche non confirmés le 26 octobre 2026. Référence conservée.</span> <a href=\"https://bn-r.cd-script.fr/fr/notice.php?id=AFF_001_D_0705\" target=\"_blank\" rel=\"noopener noreferrer\">Notice municipale (accès direct non confirmé)</a>.",
+    "new": "<span class=\"notice-indisponible\">Notice repérée dans l’ancien catalogue numérique ; l’ancien lien ne permet plus d’accéder à la notice lors du contrôle du 11 novembre 2026. La référence et la cote sont conservées pour demander le document aux Archives municipales. Le lien suivant donne accès au service, pas à l’affiche.</span> <a href=\"https://www.ville-roubaix.fr/services-infos-pratiques/culture-et-patrimoine/patrimoine-et-histoire/les-archives-municipales-de-roubaix/\" target=\"_blank\" rel=\"noopener noreferrer\">Contacter les Archives municipales (cote AFF_001_D_0705)</a>.",
+    "title": "Référence archivistique Roubaix — ref8",
+    "checked_on": "2026-11-11",
+    "evidence": "Solution documentaire reprise de la PR #28, tête ba48fe4559cd0c6f5d2116cd307896d47d256e47 : page officielle du service et cote conservées. Page ouverte au navigateur lors de la consolidation : titre Archives municipales, coordonnées et consignes de consultation confirmés. Ancien hôte Bn-R : certificat incompatible lors de l’audit du 11 novembre ; note actualisée sans affirmer une maintenance temporaire ni un accès à l’affiche. Aucun fichier de l’atlas ni PDF anglais de la coalition repris."
+  },
+  {
+    "path": "articles/roubaix-1917.html",
+    "old": "<p class=\"precision\">Quatre notices municipales ont été retrouvées dans l’index de recherche et sont reliées ci-dessus ; leur accès direct et la lecture intégrale des affiches n’ont pas été confirmés. La notice des revues d’appel reste à retrouver. Les titres, dates et cotes sont conservés. <a href=\"https://www.armarium-hautsdefrance.fr/document/85546\" target=\"_blank\" rel=\"noopener noreferrer\">Le lien L'Armarium</a> présente le fonds, pas les cinq notices individuelles.</p>",
+    "new": "<p class=\"precision\">Quatre notices municipales sont identifiées dans l’ancien index de la Bibliothèque numérique de Roubaix, mais leur accès direct n’est pas confirmé. Les titres, dates et cotes sont conservés ; les liens ci-dessus donnent accès au service officiel des Archives municipales pour demander les documents, sans garantir leur consultation en ligne. La notice des revues d’appel reste à retrouver. <a href=\"https://www.armarium-hautsdefrance.fr/document/85546\" target=\"_blank\" rel=\"noopener noreferrer\">Le lien L'Armarium</a>, également en erreur lors du contrôle du 11 novembre 2026, décrit le fonds dans son index, pas les cinq notices individuelles.</p>",
+    "title": "Roubaix — note d’accès consolidée avec la PR #28",
+    "checked_on": "2026-11-11",
+    "evidence": "Note de la PR #28 adaptée aux observations de l’audit : distinction page du service / document, aucune promesse de maintenance temporaire ni d’accès direct ; état L’Armarium explicité. Titres, dates, cotes et contenu historique conservés."
   }
 ]
