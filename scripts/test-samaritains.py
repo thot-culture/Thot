@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """Fidélité éditoriale et intégration de l’article samaritain, sans réseau."""
 import portable_io
 import hashlib

@@ -40,7 +40,20 @@ Photographie réelle d’un site samaritain sur le mont Garizim, Daniel (dani36v
 
 ## Validation
 
-Le socle initial passe les 42 commandes de `node scripts/validate.mjs`. Les résultats finaux et les limites de la recette de cette branche sont consignés ci-dessous après exécution.
+Le socle initial passe les 42 commandes de `node scripts/validate.mjs`.
+
+Résultats locaux :
+
+- `node scripts/validate.mjs` : **43/43 commandes réussies**, incluant les cinq nouveaux tests éditoriaux, les suites JavaScript existantes, les générateurs, la publication en copie temporaire, les contrôles SEO, les ressources, la portabilité et les corpus.
+- `python scripts/check-conservation.py --revision 6ec1985043303aa689e66587e35cf69f2e1e56ac` : réussite ; les huit anciens articles, leurs JSON-LD et les corpus protégés restent conservés. Aucun ancien fichier d’article n’est modifié.
+- `node scripts/test-samaritains-browser.cjs` : réussite sur Chromium 156.0.8078.79, en HTTP local. Trois choix du jeu 1 ; 32 parcours du jeu 2, dont 0/5, 5/5 et tous les scores intermédiaires ; 160 corrections et bilans vérifiés ; validations vides et doubles événements ; verrouillages et reprises ; indépendance des jeux et initialisation répétée.
+- La même recette passe au clavier (Tab, flèches, Entrée, Espace), sans JavaScript, avec mouvements réduits, à 320/390/768/1024/1440 px et à 200 % de zoom. Six audits axe WCAG A/AA sans violation ; aucune exception JavaScript, ressource locale absente ou requête externe. Le résultat détaillé est dans [samaritains/navigateur.json](samaritains/navigateur.json).
+- `THOT_BROWSER_EXECUTABLE=/usr/bin/chromium python scripts/run-browser-recipe.py` : réussite ; 105 contrôles de pages/largeurs (21 pages × 5 largeurs), 374 URL et 236 ancres en HTTP, navigation Atlas, onze pièces Aral, stockage des anciennes activités et lecture sans JavaScript. Aucune erreur consignée.
+- `THOT_BROWSER_EXECUTABLE=/usr/bin/chromium THOT_AXE_PATH=… node scripts/audit-final-browser.cjs` : réussite ; 105 contrôles de pages/largeurs, aucun échec, aucune violation axe WCAG A/AA, aucune exception JavaScript ni erreur HTTP locale. Les sept parcours complémentaires de recherche, quiz, menus différés, repli et HTTP 404 réussissent également.
+- Comparaison supplémentaire au socle : les huit anciens fichiers d’article sont identiques octet par octet et leurs huit notices éditoriales sont inchangées.
+- `git diff --check` et les contrôles de syntaxe Node des deux nouveaux scripts : réussite.
+
+Captures de la recette : [haut de page sur ordinateur](samaritains/article-desktop.webp), [jeu 1 sur mobile](samaritains/jeu-1-mobile.webp), [jeu 2 sur mobile](samaritains/jeu-2-mobile.webp), [bilan sur mobile](samaritains/bilan-mobile.webp). La capture du haut de page est un extrait de la capture intégrale, sans retouche du contenu.
 
 Commandes de reproduction :
 
@@ -52,3 +65,24 @@ node scripts/test-samaritains-browser.cjs
 ```
 
 La recette navigateur utilise les dépendances de test déjà documentées par le dépôt (Playwright et axe-core), un serveur HTTP sous `/Thot/` et Chromium. `THOT_CHROMIUM_EXECUTABLE` ou `THOT_BROWSER_EXECUTABLE` permet de choisir le navigateur ; `THOT_AXE_PATH` permet de désigner axe dans un préfixe temporaire. Le bac à sable local interdit les sockets ; la recette HTTP doit y être lancée avec l’autorisation d’exécution correspondante. Cela ne concerne pas les visiteurs du site.
+
+Limites : aucun téléphone physique, lecteur d’écran réel, Safari ou Firefox n’a été testé. Les tests et simulations clavier/axe ne constituent pas une certification d’accessibilité. Les trois ouvertures de sources bloquées et le contenu réservé aux abonnés sont décrits dans le tableau ci-dessus ; leur disponibilité intégrale reste à vérifier dans un navigateur autorisé. Les résultats Windows de la CI distante doivent être consultés sur la PR, séparément de la validation locale Linux.
+
+## Fichiers livrés
+
+Créations :
+
+- `articles/bon-samaritain.html` : page intégrale, sommaire, jeux, sources et métadonnées.
+- `assets/samaritains.js`, `assets/samaritains.css` : interactions et compléments de styles.
+- `assets/images/samaritains-garizim.webp`, `assets/social-cards/bon-samaritain.jpg` : photographie et recadrage de partage.
+- `scripts/test-samaritains.py`, `scripts/test-samaritains-browser.cjs` : fidélité et recette interactive.
+- `docs/samaritains-texte-valide.txt`, `docs/samaritains-image.json`, `docs/SAMARITAINS-INTEGRATION.md` : texte source, droits et présent rapport.
+- `docs/samaritains/navigateur.json` et les quatre captures WebP liées ci-dessus : preuves de recette.
+- `docs/samaritains/validation.json` : synthèse des contrôles statiques et des deux recettes de non-régression existantes.
+
+Modifications :
+
+- `assets/article-editorial.json` : une notice ajoutée et référencement dans la sélection d’accueil ; notices précédentes inchangées.
+- `assets/reading-times.json`, `assets/reading-times.js` : durée du nouvel article générée.
+- `index.html`, `bibliotheque.html`, `sitemap.xml` : cartes, compte d’articles et URL générés.
+- `scripts/validate.mjs`, `.github/workflows/audit-final.yml` : raccordement des nouveaux tests aux vérifications existantes, sans déploiement.
