@@ -24,6 +24,7 @@ const commands = [
     'test-pieuvres-reperes.py', 'test-puissance-comparaison.py', 'check-editorial.py'].map(n => py(n)),
   py('test-strategies-static.py'),
   py('test-sophistes.py'),
+  py('test-samaritains.py'),
   py('test-explorer-finitions.py', '--static-only'),
   py('test-explorer-recette-finale.py', '--static-only'),
   py('production_checks.py', '--revision', values.revision),

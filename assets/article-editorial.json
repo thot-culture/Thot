@@ -906,10 +906,89 @@
           "height": 800
         }
       }
+    },
+    {
+      "slug": "bon-samaritain",
+      "layout": "authored",
+      "published": "2026-11-12",
+      "editorial_updated": "2026-11-12",
+      "editorial_scope": "Intégration du texte validé, avec deux pauses pédagogiques facultatives.",
+      "headline": "Le bon Samaritain : mais qui sont vraiment les Samaritains ?",
+      "author": {
+        "@type": "Organization",
+        "name": "La rédaction THOT"
+      },
+      "seo": {
+        "title": "Le bon Samaritain : qui sont les Samaritains ? | THOT",
+        "description": "De la parabole du Bon Samaritain au mont Garizim : découvrez les Samaritains, leur histoire, leurs textes et leurs traditions toujours vivantes."
+      },
+      "social": {
+        "title": "Le bon Samaritain : mais qui sont vraiment les Samaritains ?",
+        "description": "De la parabole du Bon Samaritain au mont Garizim : découvrez les Samaritains, leur histoire, leurs textes et leurs traditions toujours vivantes.",
+        "image": "assets/social-cards/bon-samaritain.jpg",
+        "alt": "Bâtiments et cour d’un site samaritain sur le mont Garizim, photographiés en 2007."
+      },
+      "sources": {
+        "ref1": {
+          "kind": "secondary",
+          "label": "Étude et synthèse historique"
+        },
+        "ref2": {
+          "kind": "secondary",
+          "label": "Étude et synthèse historique"
+        },
+        "ref3": {
+          "kind": "secondary",
+          "label": "Étude et synthèse historique"
+        },
+        "ref4": {
+          "kind": "secondary",
+          "label": "Étude et synthèse historique"
+        },
+        "ref5": {
+          "kind": "secondary",
+          "label": "Étude et synthèse historique"
+        },
+        "ref6": {
+          "kind": "secondary",
+          "label": "Étude et synthèse historique"
+        },
+        "ref7": {
+          "kind": "primary",
+          "label": "Source primaire"
+        },
+        "ref8": {
+          "kind": "secondary",
+          "label": "Reportage"
+        },
+        "ref9": {
+          "kind": "secondary",
+          "label": "Étude et synthèse historique"
+        },
+        "ref10": {
+          "kind": "secondary",
+          "label": "Étude et synthèse historique"
+        }
+      },
+      "catalogue": {
+        "category": "histoire",
+        "label": "Histoire des religions",
+        "keywords": "samaritains samaritanisme bon samaritain judaïsme judaisme religion israélites torah pentateuque garizim naplouse pâque",
+        "image": {
+          "src": "assets/images/samaritains-garizim.webp",
+          "alt": "Bâtiments et cour d’un site samaritain sur le mont Garizim, photographiés en 2007.",
+          "width": 1280,
+          "height": 960
+        },
+        "credit": "Mont Garizim, 29 octobre 2007 · Daniel (dani36v), CC BY 2.0. Image redimensionnée et recadrée à l’affichage.",
+        "credit_url": "https://commons.wikimedia.org/wiki/File:Mount_Gerizim_the_site_of_the_Samarities_(14719209955).jpg",
+        "credit_link_label": "Notice et licence"
+      }
     }
   ],
   "home_articles": [
     "autorite",
+    "bon-samaritain",
     "plantes-douleur",
     "pieuvres-couleur",
     "puissance-etats-unis",
