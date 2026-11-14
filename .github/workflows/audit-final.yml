@@ -73,6 +73,11 @@ jobs:
           NODE_PATH: ${{ runner.temp }}/thot-audit/node_modules
           THOT_OUTPUT_DIR: ${{ runner.temp }}/evidence/samaritains
         run: node scripts/test-samaritains-browser.cjs
+      - name: Carte du mont Garizim, clavier et replis
+        env:
+          NODE_PATH: ${{ runner.temp }}/thot-audit/node_modules
+          THOT_OUTPUT_DIR: ${{ runner.temp }}/evidence/samaritains-carte
+        run: node scripts/test-samaritains-map-browser.cjs
       - name: Performance mobile de laboratoire
         if: always()
         env:

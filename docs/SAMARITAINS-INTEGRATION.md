@@ -13,7 +13,7 @@ La page reprend `article.css`, `article-editorial.css`, le partage, les durées 
 
 Les jeux utilisent les cartes, choix et boutons de `sophistes.css` et adaptent le fonctionnement de `sophistes.js` dans un script local isolé, sans modifier les sophistes. Le premier suit immédiatement la partie I, le second la partie IV. Chaque jeu possède son état indépendant, ses radios natives dans un fieldset/legend et un lien pour continuer la lecture. La validation verrouille les choix et déplace le focus sur une correction nommée et décrite, sans annonce live redondante. Le résultat du second jeu est calculé à partir des cinq réponses conservées uniquement en mémoire ; les doubles événements sont neutralisés. Le bilan reproduit les questions, choix, réponses attendues et explications. Les reprises effacent tout l’état du jeu concerné.
 
-Aucun paquet n’est ajouté au site, aucune réponse n’est stockée ou transmise. Les nouveaux tests rejoignent le lanceur statique et le workflow d’audit navigateur existants ; la configuration de déploiement n’est pas modifiée.
+Les jeux n’ajoutent aucun paquet, aucune réponse n’est stockée ou transmise. Les nouveaux tests rejoignent le lanceur statique et le workflow d’audit navigateur existants ; la configuration de déploiement n’est pas modifiée. La carte ajoutée le 14 novembre utilise Leaflet local, comme détaillé ci-dessous.
 
 ## Références contrôlées
 
@@ -86,3 +86,47 @@ Modifications :
 - `assets/reading-times.json`, `assets/reading-times.js` : durée du nouvel article générée.
 - `index.html`, `bibliotheque.html`, `sitemap.xml` : cartes, compte d’articles et URL générés.
 - `scripts/validate.mjs`, `.github/workflows/audit-final.yml` : raccordement des nouveaux tests aux vérifications existantes, sans déploiement.
+
+## Complément du 14 novembre 2026 — carte du mont Garizim
+
+La PR en brouillon nº 35, préparée le 12 novembre, est réutilisée. Aucun doublon d’article ni nouvelle URL : `articles/bon-samaritain.html` reste la page de référence. Le script et le CSS des deux jeux, leur texte validé, la photographie documentaire et l’image sociale sont conservés sans modification par rapport à `83eeb1bf5869260953863645e9b3cbcb90cef253`. Les paragraphes du texte de la nouvelle mission sont identiques au texte validé déjà intégré et passent leur comparaison exacte. La publication initiale reste datée du 12 novembre ; l’ajout de la carte est signalé comme mise à jour du 14 novembre dans le HTML, le registre et le sitemap.
+
+### Carte et sources
+
+Le dépôt a été inspecté, notamment les articles, modules, dépendances, générateurs, tests et workflows. Aucun moteur cartographique général n’était présent ; les rendus d’Explorer sont spécifiques à ses corpus. **Leaflet 1.9.4** est livré localement dans `assets/vendor/leaflet/`, avec CSS, petites images de sa distribution et licence BSD 2-Clause. Aucune dépendance de construction n’est ajoutée. Le script est chargé lorsque la carte approche de l’écran.
+
+La carte s’insère immédiatement après « Selon leur tradition, cette montagne est le véritable centre sacré d’Israël. » Elle présente trois repères dans les environs du Garizim, avec marqueur principal distinct, zoom ±, glissement, sélection au clavier/toucher, fiches fermables et recentrage. Les trois descriptions complètes restent dans le HTML, même sans JavaScript ou si le fournisseur est indisponible. Le sommaire comporte une entrée vers la carte et un lien permet de la passer.
+
+Coordonnées contrôlées le 14 novembre par l’API OpenStreetMap et des requêtes ponctuelles Nominatim, sans géocodage lors de la lecture :
+
+| Repère | Latitude | Longitude | Source primaire cartographique |
+| --- | ---: | ---: | --- |
+| Mont Garizim, sommet | 32.2008881 | 35.2730961 | https://www.openstreetmap.org/node/3602728613 |
+| Naplouse, repère de localité | 32.2205316 | 35.2569374 | https://www.openstreetmap.org/way/265619988 |
+| Kiryat Luza, repère de village | 32.2041266 | 35.2686671 | https://www.openstreetmap.org/node/2317268628 |
+
+La [fiche UNESCO](https://whc.unesco.org/en/tentativelists/5706/) indique N32 12 44 E35 16 08 pour le site proposé dans son ensemble. Ce point est distingué du sommet et n’est pas utilisé pour inventer un emplacement de temple. La [présentation de l’Israel Nature and Parks Authority](https://en.parks.org.il/reserve-park/mount-gerizim/) a également été consultée pour le contexte du lieu. Le repère archéologique facultatif est omis ; aucune frontière antique ni reconstitution du sanctuaire n’est dessinée.
+
+Fond standard `https://tile.openstreetmap.org/{z}/{x}/{y}.png`, attribution visible et lien vers les [droits OSM](https://www.openstreetmap.org/copyright), données sous ODbL. La [politique du fournisseur](https://operations.osmfoundation.org/policies/tiles/) a été vérifiée : aucun préchargement de zone ni usage hors ligne, pas de suppression du Referer ni contournement du cache. Le navigateur demande les tuiles de la vue affichée. Cette connexion cartographique n’envoie aucun choix de jeu et n’ajoute aucun analytics. Le service externe reste sans garantie de disponibilité.
+
+Les dix références bibliographiques ont fait l’objet d’une nouvelle tentative de consultation le 14 novembre. Les résultats concordent avec le tableau du 12 novembre : notices/pages officielles accessibles, limites persistantes pour l’ouverture directe Oxford et les deux DOI Magness/Dayfani, notices universitaires de secours accessibles ; reportage du Monde soumis à abonnement. La recherche sur le domaine Oxford confirme la version du 28 janvier 2022 de Pummer. Aucun texte intégral inaccessible n’est déclaré consulté et aucun nouvel ouvrage n’est ajouté.
+
+### Fichiers de ce complément
+
+Créations : `assets/samaritains-map.js`, `assets/samaritains-map.css`, `assets/vendor/leaflet/` (JS, CSS, licence et cinq PNG), `docs/samaritains-coordonnees.json`, `scripts/test-samaritains-map.py`, `scripts/test-samaritains-map-browser.cjs`.
+
+Modifications : `articles/bon-samaritain.html`, `assets/article-editorial.json`, `sitemap.xml`, le présent rapport, `scripts/validate.mjs`, `.github/workflows/audit-final.yml` et `scripts/test-samaritains-browser.cjs`. Cette dernière recette conserve les 32 parcours des jeux et simule les tuiles pour rester déterministe ; elle accepte aussi un port d’aperçu configurable et décrit correctement la plateforme exécutée. Le script applicatif des jeux reste inchangé.
+
+### Validation réellement exécutée sur la version finale
+
+- **44/44 commandes** de `node scripts/validate.mjs --python <interpréteur disponible>` réussies, zéro échec : générateurs, référencement, publication, scripts Node, corpus, portabilité et inventaire de production. Les contrôles d’inventaire comparent au commit de travail ; la conservation des anciens contenus est comparée séparément au socle.
+- `python scripts/test-samaritains.py` : **5/5 tests**, chaque paragraphe et titre, dix sources, liens, jeux, métadonnées, image et lecture inchangés : 1 267 mots, 7 minutes hors modules.
+- `python scripts/test-samaritains-map.py` : **5/5 tests**, emplacement exact, trois coordonnées vérifiées, alternative textuelle, licence, absence de doublon/suivi, dates et ancres uniques.
+- `node scripts/test-samaritains-browser.cjs` : les trois réponses du premier jeu ; **32 parcours** du second, dont 0/5 et 5/5, **160 corrections**, récapitulatifs, doubles validations, reprises ; partie complète au clavier ; cinq largeurs de 320 à 1 440 px et zoom 200 % ; JavaScript désactivé ; recherche et filtre Histoire. **6 audits axe A/AA** sans violation détectée ; aucune exception JS ni ressource locale absente.
+- `node scripts/test-samaritains-map-browser.cjs` : trois repères visibles aux cinq largeurs, clic/clavier/toucher, ouverture/fermeture des fiches et restitution du focus, zoom ±, glissement, recentrage, attribution ; tuiles bloquées, script Leaflet absent, JavaScript désactivé, mouvements réduits. **3 audits axe A/AA** sans violation détectée ; aucune exception JS ni ressource locale absente.
+- `python scripts/run-browser-recipe.py` : recette HTTP réelle sous `/Thot/`, **21 pages à cinq largeurs**, navigation et Atlas, quiz, onze pièces Aral, sauvegarde/rechargement/redémarrage, réinitialisation et absence de JavaScript.
+- `node scripts/test-sophistes-browser.cjs` : huit parcours de Gorgias, neuf choix de dilemmes, cinq largeurs, clavier et cinq audits axe réussis dans cette session ; script et styles des sophistes inchangés.
+- `python scripts/check-conservation.py --revision 6ec1985043303aa689e66587e35cf69f2e1e56ac` : anciens contenus et corpus conservés. `git diff --check` : réussite.
+- Essai visuel supplémentaire sur le serveur local avec les **vraies tuiles OpenStreetMap** : 14 réponses HTTP 200, aucune requête en échec ni exception JS ; captures ordinateur et mobile examinées. Recherche « Garizim » : un seul résultat, l’article existant. Il s’agit d’un essai ponctuel, sans garantie pour la disponibilité future du fournisseur.
+
+Les recettes de carte et de jeux utilisent des tuiles simulées pour isoler les fonctionnalités ; l’essai réseau réel est distingué ci-dessus. La validation locale du 14 novembre a utilisé Chrome headless sur **Windows** et des interactions tactiles simulées. Aucun téléphone physique, lecteur d’écran humain, Safari ou Firefox n’a été testé. Les vérifications GitHub Actions restent distinctes des résultats locaux et sont consultables dans la PR. Aucune fusion ni publication n’est effectuée.

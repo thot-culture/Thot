@@ -1,0 +1,25 @@
+/* Carte progressive du mont Garizim ; identité THOT et jeux existants préservés. */
+.samaritains-module{margin:36px 0 42px;padding:26px;background:var(--blanc);border:1px solid #d9d5ca;border-radius:16px;min-width:0}
+article .samaritains-module h2{font-size:28px;margin:0 0 14px}
+.samaritains-module [hidden]{display:none!important}
+.samaritains-module .precision{font-size:13px}
+.samaritains-action{border:1px solid #17243a;border-radius:9px;background:#17243a;color:#fffefa;padding:12px 18px;min-height:46px;font:650 14px/1.5 "Segoe UI",Arial,sans-serif;cursor:pointer;max-width:100%}
+.samaritains-module :focus-visible{outline:3px solid #927038;outline-offset:4px}
+.gerizim-canvas{height:410px;width:100%;isolation:isolate;border:1px solid #b6b8b4;border-radius:10px;background:#e9eff0;margin:18px 0}
+.gerizim-canvas.leaflet-container{font-family:"Segoe UI",Arial,sans-serif;line-height:1.6}
+.gerizim-canvas .leaflet-popup-content{line-height:1.6}
+.gerizim-canvas .leaflet-popup-content p{font-size:14px;line-height:1.6;margin:8px 0}
+.gerizim-canvas .leaflet-popup-content h4{font-size:17px;margin:0 22px 8px 0}
+.gerizim-canvas .leaflet-popup-close-button{min-width:44px;min-height:44px;background:#fff;border-radius:8px}
+.gerizim-canvas .leaflet-control-zoom a{width:44px;height:44px;line-height:44px;color:#17243a}
+.gerizim-canvas .leaflet-control-attribution{font-size:11px;max-width:100%;white-space:normal}
+.gerizim-marker{display:grid;place-items:center;border:2px solid #fffefa;border-radius:50%;background:#245d63;color:#fffefa;box-shadow:0 2px 7px #17243a66;font-size:18px;line-height:1}
+.gerizim-marker-main{background:#17243a;color:#ead1a6;font-size:25px;border:3px solid #ead1a6;z-index:1000!important}
+.gerizim-places{margin:20px 0}
+.gerizim-places details{border-top:1px solid #d9d5ca;padding:10px 0}
+.gerizim-places summary{font-weight:700;cursor:pointer;min-height:44px;padding:8px 0}
+.gerizim-places p{font-size:14px}
+.samaritains-module a{overflow-wrap:anywhere}
+@media(prefers-reduced-motion:reduce){.gerizim-canvas *{animation:none!important;transition:none!important}}
+@media(max-width:560px){.samaritains-module{padding:18px}.gerizim-canvas{height:360px}}
+@media print{.gerizim-canvas,.samaritains-action{display:none}.gerizim-places details::details-content{content-visibility:visible;height:auto}}

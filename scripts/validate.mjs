@@ -25,6 +25,7 @@ const commands = [
   py('test-strategies-static.py'),
   py('test-sophistes.py'),
   py('test-samaritains.py'),
+  py('test-samaritains-map.py'),
   py('test-explorer-finitions.py', '--static-only'),
   py('test-explorer-recette-finale.py', '--static-only'),
   py('production_checks.py', '--revision', values.revision),

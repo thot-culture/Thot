@@ -8,7 +8,8 @@ const { chromium } = require('playwright');
 const { waitForPreview } = require('./local-preview.cjs');
 const root = path.resolve(__dirname, '..');
 const output = path.resolve(process.env.THOT_OUTPUT_DIR || path.join(root, 'work/samaritains-browser'));
-const base = process.env.THOT_BASE_URL || 'http://127.0.0.1:8876/Thot/';
+const port = process.env.THOT_PREVIEW_PORT || '8876';
+const base = process.env.THOT_BASE_URL || `http://127.0.0.1:${port}/Thot/`;
 const url = base + 'articles/bon-samaritain.html';
 const correct = [1, 2, 0, 2, 1];
 const labels = ['Judaïsme', 'Samaritanisme', 'Les deux traditions'];
@@ -48,6 +49,7 @@ async function noOverflow(page) {
 async function contextFor(browser, options = {}) {
   const context = await browser.newContext({ viewport: { width: 1440, height: 1000 }, serviceWorkers: 'block', ...options });
   await context.route('**/*', route => {
+    if (new URL(route.request().url()).hostname === 'tile.openstreetmap.org') return route.fulfill({ contentType: 'image/png', body: Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/l9sAAAAASUVORK5CYII=', 'base64') });
     if (new URL(route.request().url()).origin !== new URL(base).origin) {
       external.push(route.request().url());
       return route.abort();
@@ -64,7 +66,7 @@ async function contextFor(browser, options = {}) {
 (async () => {
   fs.mkdirSync(output, { recursive: true });
   const server = process.env.THOT_BASE_URL ? null : spawn(process.env.PYTHON || 'python',
-    ['scripts/preview.py', '--port', '8876'], { cwd: root, stdio: 'ignore' });
+    ['scripts/preview.py', '--port', port], { cwd: root, stdio: 'ignore', windowsHide: true });
   let browser;
   try {
     await waitForPreview(server || {}, base, { root });
@@ -254,10 +256,10 @@ async function contextFor(browser, options = {}) {
     results.push('Sans JavaScript : texte, sources, navigation et liens de saut ; mouvements réduits ; recherche et filtre Histoire ; aucun stockage.');
     assert.deepEqual(errors, []);
     assert.deepEqual(missing, []);
-    assert.deepEqual(external, [], 'Les jeux et l’article ne transmettent aucune réponse ni requête externe');
-    results.push(`${audits} audits axe WCAG A/AA sans violation ; aucune exception JS ni ressource absente ; aucune requête externe.`);
+    assert.deepEqual(external, [], 'Aucune requête externe hors des tuiles OSM simulées ; les jeux ne transmettent aucune réponse');
+    results.push(`${audits} audits axe WCAG A/AA sans violation ; aucune exception JS ni ressource absente ; seules les tuiles OSM sont simulées.`);
     const report = { status: 'PASS', browser: await browser.version(), transport: 'HTTP local /Thot/', results,
-      limitations: ['Chromium Linux ; téléphone et clavier simulés ; aucun lecteur d’écran réel ni Safari/Firefox.'] };
+      limitations: [`Chromium sur ${process.platform} ; téléphone et clavier simulés ; aucun lecteur d’écran réel ni Safari/Firefox.`] };
     fs.writeFileSync(path.join(output, 'results.json'), JSON.stringify(report, null, 2)+'\n');
     console.log(JSON.stringify(report, null, 2));
   } finally {
