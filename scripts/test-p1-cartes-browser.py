@@ -4,6 +4,7 @@
 import portable_io
 import argparse
 import json
+import os
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
@@ -17,6 +18,8 @@ out = ROOT / args.output
 out.mkdir(parents=True, exist_ok=True)
 config = json.loads((ROOT / 'assets/article-editorial.json').read_text(encoding='utf-8'))
 records = {a['slug']: a for a in config['articles']}
+home_slugs = config['home_articles'][1:]
+expected_slugs = {'accueil': home_slugs, 'bibliotheque': list(records)}
 reading = json.loads((ROOT/'assets/reading-times.json').read_text(encoding='utf-8'))['articles']
 report = {'base': args.base, 'before': args.before, 'pages': [], 'interactions': []}
 
@@ -34,7 +37,8 @@ MEASURE = """cards => cards.map(c => {
 })"""
 
 with sync_playwright() as p:
-    browser = p.chromium.launch()
+    executable = os.environ.get('THOT_BROWSER_EXECUTABLE')
+    browser = p.chromium.launch(**({'executable_path': executable} if executable else {}))
     report['browser'] = browser.version
     for width in (320, 390, 768, 1024, 1440):
         styles = []
@@ -54,7 +58,9 @@ with sync_playwright() as p:
                 for card in page.locator('.discovery-card').all():
                     slug = card.locator('a').first.get_attribute('href').split('/')[-1].removesuffix('.html')
                     card.screenshot(path=str(out / f'carte-{slug}-{width}.png'))
-            assert len(cards) == (7 if name == 'accueil' else 8)
+            actual_slugs = [c['href'].split('/')[-1].removesuffix('.html') for c in cards]
+            assert len(cards) == len(expected_slugs[name]), (name, width, 'nombre de cartes')
+            assert sorted(actual_slugs) == sorted(expected_slugs[name]), (name, width, 'articles du registre')
             assert not overflow, (name, width, 'débordement')
             assert not errors, errors
             for c in cards:
@@ -115,7 +121,7 @@ with sync_playwright() as p:
         report['interactions'].append({'query':query,'count':expected})
     page.locator('#article-search').fill('')
     page.wait_for_timeout(350)
-    assert page.locator('.article-card:visible').count()==8
+    assert page.locator('.article-card:visible').count()==len(records)
     # Chaque destination est ouverte, avec le vrai H1 et un statut HTTP valide.
     for slug,a in records.items():
         response=page.goto(args.base+'articles/'+slug+'.html')
@@ -124,13 +130,13 @@ with sync_playwright() as p:
     for width in (320,390,768,1024,1440):
         context=browser.new_context(java_script_enabled=False,viewport={'width':width,'height':900})
         plain=context.new_page()
-        for filename,count in [('index.html',7),('bibliotheque.html',8)]:
+        for filename,count in [('index.html',len(home_slugs)),('bibliotheque.html',len(records))]:
             plain.goto(args.base+filename)
             assert plain.locator('.discovery-card:visible').count()==count
             plain.locator('.discovery-photo img').evaluate_all('imgs=>Promise.all(imgs.map(i=>{i.loading="eager";return i.decode()}))')
             assert not plain.evaluate('document.documentElement.scrollWidth>innerWidth')
         context.close()
-    report['interactions'].append({'article_links':8,'without_javascript':'5 largeurs × 2 pages','hover_focus':'10 pages'})
+    report['interactions'].append({'article_links':len(records),'without_javascript':'5 largeurs × 2 pages','hover_focus':'10 pages'})
     if not args.before:
         for width in (390,1440):
             context=browser.new_context(device_scale_factor=2,viewport={'width':width,'height':900})
@@ -144,4 +150,4 @@ with sync_playwright() as p:
         report['interactions'].append({'high_density':'DPR 2, 390 et 1440 px, 4 couvertures × 2 pages'})
     browser.close()
 (out/'mesures.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-print(f'PASS : 10 rendus, 8 liens, filtres, recherche, survol/focus, 10 rendus sans JS ; {out}')
+print(f'PASS : 10 rendus, {len(records)} liens, filtres, recherche, survol/focus, 10 rendus sans JS ; {out}')

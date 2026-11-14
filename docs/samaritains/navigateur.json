@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "browser": "156.0.8078.79",
+  "transport": "HTTP local /Thot/",
+  "results": [
+    "Jeu 1 : A, B, C ; correction exacte ; verrouillage ; validation vide/doublée ; réinitialisation complète.",
+    "Jeu 2 : 32 parcours, dont 5/5, 0/5 et mixtes ; 160 corrections ; bilans des cinq réponses ; doubles clics ; rejouer.",
+    "Clavier : Tab, flèches, Entrée et Espace ; partie complète ; corrections et progression au focus ; liens pour passer les jeux.",
+    "320, 390, 768, 1024, 1440 px et zoom 200 % : lecture, questions, corrections et bilan sans débordement.",
+    "Sans JavaScript : texte, sources, navigation et liens de saut ; mouvements réduits ; recherche et filtre Histoire ; aucun stockage.",
+    "6 audits axe WCAG A/AA sans violation ; aucune exception JS ni ressource absente ; aucune requête externe."
+  ],
+  "limitations": [
+    "Chromium Linux ; téléphone et clavier simulés ; aucun lecteur d’écran réel ni Safari/Firefox."
+  ]
+}

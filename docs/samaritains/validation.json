@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-12",
+  "baseline": "6ec1985043303aa689e66587e35cf69f2e1e56ac",
+  "platform": "Linux",
+  "node": "v24.22.1",
+  "python": "3.12.14",
+  "chromium": "156.0.8078.79",
+  "static": {
+    "command": "node scripts/validate.mjs",
+    "passed": 43,
+    "failed": 0,
+    "log_sha256": "378b7b5fcfb9cff6b120d948cf813af46d5e30275b9cb7f14f74ae5c383018b5"
+  },
+  "conservation": {
+    "command": "python scripts/check-conservation.py --revision 6ec1985043303aa689e66587e35cf69f2e1e56ac",
+    "result": "PASS",
+    "old_articles_byte_identical": 8,
+    "old_editorial_records_unchanged": 8
+  },
+  "existing_http": {
+    "command": "python scripts/run-browser-recipe.py",
+    "page_width_checks": 105,
+    "errors": [],
+    "internal_http": {
+      "urls": 374,
+      "anchors": 236,
+      "result": "PASS"
+    },
+    "storage": {
+      "native": true,
+      "reload": "PASS",
+      "browserRestart": "PASS",
+      "aralReset": "PASS",
+      "quizPreserved": "PASS",
+      "documents": 11,
+      "relationIdsStable": "PASS",
+      "malformedIdsRepaired": "PASS"
+    },
+    "no_javascript": "PASS at 320 px"
+  },
+  "existing_browser_audit": {
+    "command": "node scripts/audit-final-browser.cjs",
+    "page_width_checks": 105,
+    "failed": [],
+    "axe_violations": 0,
+    "local_js_errors": 0,
+    "local_http_errors": 0,
+    "interactions": [
+      "PASS recherche accueil, URL /Thot/, accents, filtres combinés, vide et réinitialisation",
+      "PASS #start-button : partie réelle complète, 5 réponses et score correct, sauvegarde native",
+      "PASS #daily-start-button : partie réelle complète, 5 réponses et score correct, sauvegarde native",
+      "PASS menu prêt avant le main et position stable avec JS externes retardés de 1,2 seconde, cinq gabarits",
+      "PASS banque volontairement indisponible : notice réelle visible et démarrage désactivé",
+      "PASS navigation et reflow sans JavaScript, 18 pages à 320 px",
+      "PASS HTTP 404 pour URL inconnue"
+    ]
+  },
+  "new_games": "Voir navigateur.json : 3 choix, 32 parcours et six audits axe.",
+  "limitations": [
+    "Linux Chromium, tactile et mobile simulés ; aucun téléphone ou lecteur d’écran réel.",
+    "Les erreurs de serveurs externes sont consignées séparément et ne prouvent pas une erreur du code local.",
+    "Windows distant : consulter la CI de la PR.",
+    "Sources 1, 5 et 10 : ouverture directe bloquée ; identité confirmée par notices officielles."
+  ]
+}
