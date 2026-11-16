@@ -82,3 +82,39 @@ de lien symbolique annonce EPERM sur cet environnement Windows.
 
 Aucune fusion, activation d’auto-fusion ou publication du site n’est effectuée dans
 le cadre de cette préparation. La PR #28 reste ouverte et inchangée.
+
+## Réexamen documentaire du 16 novembre 2026
+
+Le réexamen part de `main` `6ec1985043303aa689e66587e35cf69f2e1e56ac`
+et de la tête de PR `2c810d283a00bc11a001fb53b8781b2ad1d775d7`.
+Les quatre jobs des runs [portable](https://github.com/thot-culture/Thot/actions/runs/43042842110)
+et [navigateur](https://github.com/thot-culture/Thot/actions/runs/43042842124)
+sont réussis sur cette tête ; l'ancien échec d'installation Linux est résolu.
+
+Les PDF SIGAR UNT et ecoi.net téléchargés de nouveau sont identiques : 195 pages,
+SHA-256 `a1c977e911fe0dd6653c87dc65092e44ed741c7ab72ffcf344922be8d64fe672`.
+Les deux textes PMC, le PDF Pittsburgh et la version définitive eLife correspondent
+aux titres et identifiants cités ; les empreintes des deux derniers PDF sont
+inchangées par rapport au manifeste. Chromium confirme R421-8 à la date du
+20 juin 2026, la notice FranceArchives 4H140 (1917) et les coordonnées du service
+de Roubaix. La notice ne constitue pas une reproduction de l'affiche et les six
+cotes restent conservées sans promesse de consultation directe.
+
+Les deux variantes L'Armarium affichent encore une erreur Omeka. Les PDF français
+et anglais de Paris redirigent vers l'accueil France Diplomatie. Le titre et la
+date du communiqué américain (25 juin 2019) restent indexés, mais son URL affiche
+une page `Technical Difficulties`, HTTP 200, avec `Exception: forbidden`.
+Cette réponse échappait au signal de relecture du nouvel auditeur : ajout du seul
+titre `technical difficulties` à la détection des erreurs HTML, avec un cas de
+non-régression. Aucun lien ni contenu de production supplémentaire n'est modifié.
+
+Les cinq tests documentaires passent, y compris sur la réponse américaine réelle.
+Les 43 commandes locales avec les versions déclarées, les quatre tests HTTP et
+la comparaison éditoriale optionnelle `--head HEAD` ont également réussi avant
+ce correctif ciblé. Les cinq articles entiers sont identiques à main après
+application des seuls dix-sept fragments documentaires du manifeste ; les autres
+fichiers de production sont inchangés. Le lanceur complet a ensuite été relancé
+après le correctif : 43/43 commandes réussies. La recette HTTP Chromium contrôle
+350 URL, 216 ancres, cinq largeurs, les commandes Atlas et la persistance native
+des jeux sans erreur. La CI doit également réussir sur le nouveau commit avant
+fusion. Les PR #28 et #35 restent hors intervention.

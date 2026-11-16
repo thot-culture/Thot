@@ -16,6 +16,8 @@ class DocumentaryLinks(unittest.TestCase):
     def test_false_http_success(self):
         cases = [('<title>Omeka a rencontré une erreur</title>', 'html-error-page-review-required'),
                  ('<title>Maintenance</title>', 'html-error-page-review-required'),
+                 ('<title>Technical Difficulties</title><p>Exception: forbidden</p>',
+                  'html-error-page-review-required'),
                  ('<title>Client Challenge</title>', 'browser-check-required'),
                  ('This website requires JS enabled and cookies', 'browser-check-required'),
                  ('<script>location.reload()</script>', 'empty-or-script-only-response')]

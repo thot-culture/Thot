@@ -99,7 +99,8 @@ def inspect_response(url, status, final, content_type, data, encoding='utf-8'):
                                    'captcha', 'un instant…')):
             result['signals'].append('browser-check-required')
         if any(s in title.lower() for s in ('omeka a rencontré une erreur', 'page not found',
-                                           'page introuvable', 'maintenance', '404 not found')):
+                                           'page introuvable', 'maintenance', '404 not found',
+                                           'technical difficulties')):
             result['signals'].append('html-error-page-review-required')
         if urlsplit(url).path.lower().endswith('.pdf'):
             result['signals'].append('expected-pdf-received-html')
