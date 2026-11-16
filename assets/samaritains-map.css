@@ -5,7 +5,9 @@ article .samaritains-module h2{font-size:28px;margin:0 0 14px}
 .samaritains-module .precision{font-size:13px}
 .samaritains-action{border:1px solid #17243a;border-radius:9px;background:#17243a;color:#fffefa;padding:12px 18px;min-height:46px;font:650 14px/1.5 "Segoe UI",Arial,sans-serif;cursor:pointer;max-width:100%}
 .samaritains-module :focus-visible{outline:3px solid #927038;outline-offset:4px}
-.gerizim-canvas{height:410px;width:100%;isolation:isolate;border:1px solid #b6b8b4;border-radius:10px;background:#e9eff0;margin:18px 0}
+.gerizim-canvas{box-sizing:border-box;height:410px;width:100%;isolation:isolate;border:1px solid #b6b8b4;border-radius:10px;background:#e9eff0;margin:18px 0}
+.gerizim-canvas:not(.leaflet-container){display:grid;place-items:center;padding:20px;text-align:center;font-size:14px}
+.samaritains-action:disabled{opacity:.65;cursor:default}
 .gerizim-canvas.leaflet-container{font-family:"Segoe UI",Arial,sans-serif;line-height:1.6}
 .gerizim-canvas .leaflet-popup-content{line-height:1.6}
 .gerizim-canvas .leaflet-popup-content p{font-size:14px;line-height:1.6;margin:8px 0}

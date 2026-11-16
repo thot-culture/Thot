@@ -14,14 +14,17 @@ let audits = 0;
 const tile = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/l9sAAAAASUVORK5CYII=', 'base64');
 
 async function fixture(browser, options={}) {
-  const {blocked=false, brokenLibrary=false, ...contextOptions}=options;
+  const {blocked=false, brokenLibrary=false, delayedLibrary=false, ...contextOptions}=options;
   const context=await browser.newContext({viewport:{width:1440,height:1000},serviceWorkers:'block',...contextOptions});
   const requests=[];
+  let releaseLibrary;
+  const libraryGate=new Promise(resolve=>{releaseLibrary=resolve;});
   await context.route('**/*', async route=>{
     const u=new URL(route.request().url()); requests.push(u.href);
     if(u.hostname==='tile.openstreetmap.org') return blocked ? route.abort() : route.fulfill({contentType:'image/png',body:tile});
     if(u.hostname!=='thot.local') return route.abort();
     if(brokenLibrary && u.pathname.endsWith('/leaflet.js')) return route.abort();
+    if(delayedLibrary && u.pathname.endsWith('/leaflet.js')) await libraryGate;
     const file=path.resolve(root,decodeURIComponent(u.pathname).replace(/^\/Thot\//,''));
     if(!file.startsWith(root+path.sep)||!fs.existsSync(file)||!fs.statSync(file).isFile()){
       missing.push(u.pathname); return route.fulfill({status:404,body:'Absent'});
@@ -31,7 +34,7 @@ async function fixture(browser, options={}) {
   });
   const page=await context.newPage(); page.on('pageerror',e=>errors.push(e.message));
   await page.goto(url);
-  return {context,page,requests};
+  return {context,page,requests,releaseLibrary};
 }
 async function audit(page){
   const axe=process.env.THOT_AXE_PATH || require.resolve('axe-core/axe.min.js');
@@ -52,6 +55,24 @@ async function positions(markers){
   const executable=process.env.THOT_CHROMIUM_EXECUTABLE || process.env.THOT_BROWSER_EXECUTABLE;
   const browser=await chromium.launch({headless:true,...(executable?{executablePath:executable}:{})});
   try{
+    // Le lecteur peut déjà lire les lieux pendant une arrivée lente de Leaflet.
+    // Leurs positions dans le document doivent rester stables à son arrivée.
+    for(const width of [390,1440]){
+      const f=await fixture(browser,{delayedLibrary:true,reducedMotion:'reduce',viewport:{width,height:900}});
+      await f.page.locator('#carte-garizim').scrollIntoViewIfNeeded();
+      await f.page.waitForFunction(()=>document.querySelector('[data-map-status]').textContent.startsWith('Chargement de la carte'));
+      const details=f.page.locator('[data-place]').first();
+      const top=()=>details.evaluate(node=>node.getBoundingClientRect().top+scrollY);
+      const before=await top();
+      assert(await f.page.locator('[data-map-canvas]').isVisible());
+      assert(await f.page.getByRole('button',{name:'Recentrer la carte'}).isDisabled());
+      f.releaseLibrary();
+      await f.page.waitForSelector('[data-map-ready="true"]');
+      assert(Math.abs(await top()-before)<=1,`Saut de la liste après Leaflet à ${width} px : ${await top()-before} px`);
+      assert(await f.page.getByRole('button',{name:'Recentrer la carte'}).isEnabled());
+      await f.context.close();
+    }
+    checks.push('Chargement lent de Leaflet : liste des lieux stable à 390 et 1440 px, recentrage désactivé avant disponibilité.');
     const {context,page,requests}=await fixture(browser);
     assert(!requests.some(r=>r.includes('/leaflet.js')),'Leaflet différé hors écran');
     const map=page.locator('[data-map-canvas]');
@@ -112,8 +133,14 @@ async function positions(markers){
       assert.equal(await f.page.locator('[data-place]').count(),3);
       if(options.blocked) await f.page.waitForFunction(()=>document.querySelector('[data-map-status]').textContent.includes('fond de carte est indisponible'));
       if(options.brokenLibrary) await f.page.waitForFunction(()=>document.querySelector('[data-map-status]').textContent.includes('ne peut pas se charger'));
+      if(options.brokenLibrary){
+        assert(await f.page.locator('[data-map-canvas]').isVisible());
+        assert((await f.page.locator('[data-map-canvas]').innerText()).includes('indisponible'));
+        assert(await f.page.getByRole('button',{name:'Recentrer la carte'}).isDisabled());
+      }
       if(options.javaScriptEnabled===false){
         assert(await f.page.locator('#sources').isVisible());
+        assert(await f.page.locator('[data-map-canvas]').isHidden());
       }
       if(options.hasTouch){
         await f.page.waitForSelector('[data-map-ready="true"]');

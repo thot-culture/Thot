@@ -8,11 +8,18 @@
   const reset = root.querySelector('[data-map-reset]');
   const places = [...root.querySelectorAll('[data-place]')];
   const scriptURL = new URL('vendor/leaflet/leaflet.js', document.currentScript.src);
+  // Réserver la hauteur avant l'arrivée de Leaflet, y compris sur réseau lent.
+  // Sans JavaScript, le canevas reste masqué et la liste HTML reste disponible.
+  canvas.hidden = false;
+  canvas.setAttribute('aria-busy', 'true');
+  canvas.textContent = 'La carte se chargera à l’approche de cette zone. Les trois lieux sont aussi décrits ci-dessous.';
+  reset.hidden = false;
+  reset.disabled = true;
   let started = false;
   function initialize() {
     const L = window.L;
     if (!L) throw new Error('Leaflet indisponible');
-    canvas.hidden = false;
+    canvas.replaceChildren();
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const map = L.map(canvas, { scrollWheelZoom: false, zoomControl: false, minZoom: 10, maxZoom: 18, inertia: !reduced,
       fadeAnimation: !reduced, zoomAnimation: !reduced, markerZoomAnimation: !reduced });
@@ -73,9 +80,11 @@
     canvas.addEventListener('keydown', event => { if (event.key === 'Escape') map.closePopup(); });
     reset.addEventListener('click', () => { map.closePopup(); home(); reset.focus({ preventScroll: true }); });
     reset.hidden = false;
+    reset.disabled = false;
     status();
     if ('ResizeObserver' in window) new ResizeObserver(() => { map.invalidateSize({ pan: false }); home(); }).observe(canvas);
     root.dataset.mapReady = 'true';
+    canvas.removeAttribute('aria-busy');
   }
   function start() {
     if (started) return;
@@ -88,7 +97,9 @@
     document.head.append(script);
   }
   function fallback() {
-    canvas.hidden = true; reset.hidden = true;
+    canvas.removeAttribute('aria-busy');
+    canvas.textContent = 'La carte interactive est indisponible. Les trois lieux et leurs liens restent consultables ci-dessous.';
+    reset.disabled = true;
     message.textContent = 'La carte ne peut pas se charger. Consulte les lieux et leurs liens OpenStreetMap ci-dessous.';
   }
   if ('IntersectionObserver' in window) {
