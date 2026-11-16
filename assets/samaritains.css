@@ -1,0 +1,14 @@
+/* Compléments aux cartes, choix et boutons existants de sophistes.css. */
+.samaritains-game progress {
+  display: block;
+  width: 100%;
+  height: 10px;
+  margin: 0 0 24px;
+  accent-color: var(--nuit);
+}
+.samaritains-game .samaritains-score { font-size: 26px; font-weight: 700; }
+.samaritains-recap { padding-inline-start: 24px; }
+.samaritains-recap li { padding: 12px 0; }
+.samaritains-recap li + li { border-top: 1px solid var(--bord); }
+.samaritains-recap p { margin-bottom: 10px; }
+.samaritains-game legend:focus { outline: 3px solid #715026; outline-offset: 4px; }

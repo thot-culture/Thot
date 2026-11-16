@@ -1,0 +1,37 @@
+{
+  "verified": "2026-11-14",
+  "source": "OpenStreetMap API et Nominatim, requêtes ponctuelles de vérification éditoriale ; aucun géocodage à la lecture.",
+  "places": [
+    {
+      "id": "garizim",
+      "name": "Mont Garizim",
+      "lat": 32.2008881,
+      "lon": 35.2730961,
+      "osm": "node/3602728613",
+      "text": "Le mont Garizim constitue le principal lieu sacré du samaritanisme. Un important centre religieux s'y est développé durant l'Antiquité. Les Samaritains continuent aujourd'hui d'y célébrer des cérémonies religieuses."
+    },
+    {
+      "id": "naplouse",
+      "name": "Naplouse",
+      "lat": 32.2205316,
+      "lon": 35.2569374,
+      "osm": "way/265619988",
+      "text": "Ville de Cisjordanie située à proximité du mont Garizim, Naplouse permet de situer géographiquement le principal lieu sacré des Samaritains."
+    },
+    {
+      "id": "kiryat-luza",
+      "name": "Kiryat Luza",
+      "lat": 32.2041266,
+      "lon": 35.2686671,
+      "osm": "node/2317268628",
+      "text": "Kiryat Luza est l'un des principaux lieux de résidence des Samaritains actuels. Une partie de la communauté y vit et y perpétue ses traditions religieuses."
+    }
+  ],
+  "unesco": {
+    "lat": 32.21222222222222,
+    "lon": 35.26888888888889,
+    "scope": "Repère du site proposé, distinct du sommet.",
+    "url": "https://whc.unesco.org/en/tentativelists/5706/"
+  },
+  "sanctuary_marker": false
+}

@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-16",
+  "authorization": "Demande utilisateur : THOT — Corrections finales, validation et fusion de la PR nº 35, étape 1, H01 et H02.",
+  "audited_commit": "139104382f914155fa81aee317fa061b55d2de25",
+  "original_fixture": "docs/samaritains-texte-valide.txt",
+  "original_sha256": "ea8afcf919cf5cf028f05a7e2efae9c1f087a5233678fc094936fb2fa10730b9",
+  "changes": [
+    {
+      "id": "H01",
+      "before": "Dans le contexte de l'époque, les relations entre Judéens et Samaritains sont marquées par des tensions religieuses. En faisant du Samaritain le personnage secourable, la parabole invite à dépasser les préjugés communautaires.",
+      "after": "Dans le contexte de l'époque, les relations entre Judéens et Samaritains mêlent proximité et tensions religieuses. La parabole met en scène un Samaritain secourable. On peut y lire une invitation à dépasser les préjugés communautaires, mais cette interprétation reste discutée : le récit ne précise pas l'appartenance communautaire de l'homme blessé.",
+      "source": "https://ejournals.bc.edu/index.php/scjr/article/download/13987/10613/",
+      "pages": "7–8",
+      "reason": "Distinguer proximité et tensions, lecture discutée et appartenance communautaire non précisée du blessé."
+    },
+    {
+      "id": "H02",
+      "before": "<p>Les fouilles archéologiques ont révélé sur le mont Garizim un important espace sacré, fréquenté durant les périodes perse et hellénistique. <a class=\"source-num\" data-reading-exclude href=\"#ref5\" aria-label=\"Source 5\">[5]</a></p>\n<p>La date exacte de sa fondation fait encore débat entre spécialistes.</p>",
+      "after": "<p>Les fouilles archéologiques ont révélé sur le mont Garizim un important espace sacré, fréquenté durant les périodes perse et hellénistique. <a class=\"source-num\" data-reading-exclude href=\"#ref3\" aria-label=\"Source 3\">[3]</a></p>\n<p>La date exacte de sa fondation fait encore débat entre spécialistes. <a class=\"source-num\" data-reading-exclude href=\"#ref5\" aria-label=\"Source 5\">[5]</a></p>",
+      "sources": [
+        "https://www.mdpi.com/2077-1444/10/12/661",
+        "https://doi.org/10.30965/21967954-bja10079"
+      ],
+      "reason": "Kartveit pour les données de fouille ; Magness pour le débat de fondation, sans changer le texte de ces deux paragraphes."
+    }
+  ]
+}
