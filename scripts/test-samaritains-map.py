@@ -65,8 +65,8 @@ class Gerizim(unittest.TestCase):
         for a in self.doc.select('a'):
             if a.attrs.get('href','').startswith('#'): self.assertIn(a.attrs['href'][1:],ids)
         self.assertIn('"datePublished": "2026-11-12"',HTML)
-        self.assertIn('"dateModified": "2026-11-14"',HTML)
-        self.assertIn('datetime="2026-11-14"',HTML)
+        self.assertIn('"dateModified": "2026-11-16"',HTML)
+        self.assertIn('datetime="2026-11-16"',HTML)
 
 
 if __name__=='__main__':

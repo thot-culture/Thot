@@ -31,6 +31,16 @@ class Samaritains(unittest.TestCase):
         self.assertEqual(hashlib.sha256(source).hexdigest(),
                          'ea8afcf919cf5cf028f05a7e2efae9c1f087a5233678fc094936fb2fa10730b9')
         expected = [p for p in source.decode().strip().split('\n\n') if not p.startswith('[INSÉRER')]
+        amendments = json.loads((ROOT / 'docs/samaritains-amendements-20261116.json').read_text(encoding='utf-8'))
+        self.assertEqual(amendments['original_sha256'], hashlib.sha256(source).hexdigest())
+        self.assertEqual([item['id'] for item in amendments['changes']], ['H01', 'H02'])
+        # Seul ce paragraphe a été explicitement révisé le 16 novembre.
+        # Le témoin original et son empreinte restent inchangés ; tout le reste
+        # du texte est toujours comparé intégralement, ponctuation comprise.
+        revision = amendments['changes'][0]
+        self.assertEqual(expected.count(revision['before']), 1)
+        self.assertNotIn(revision['after'], expected)
+        expected[expected.index(revision['before'])] = revision['after']
         document = Document(HTML)
         actual = [raw(document.select('h1')[0]), raw(document.select('p', **{'class': 'accroche'})[0])]
         sections = [node for node in document.select('section') if 'data-validated-section' in node.attrs]
@@ -71,18 +81,30 @@ class Samaritains(unittest.TestCase):
         self.assertEqual([link.attrs['href'] for p in deepening for link in p.descendants('a')],
                          [expected_urls[i-1] for i in [9, 3, 5, 4, 10, 6]])
 
+    def test_authorized_archaeological_references(self):
+        amendments = json.loads((ROOT / 'docs/samaritains-amendements-20261116.json').read_text(encoding='utf-8'))
+        revision = amendments['changes'][1]
+        self.assertIn(revision['after'], HTML)
+        self.assertNotIn(revision['before'], HTML)
+        document = Document(HTML)
+        for opening, reference in [('Les fouilles archéologiques ont révélé', '#ref3'),
+                                   ('La date exacte de sa fondation', '#ref5')]:
+            paragraphs = [p for p in document.select('p') if raw(p).startswith(opening)]
+            self.assertEqual(len(paragraphs), 1)
+            self.assertEqual([a.attrs['href'] for a in paragraphs[0].descendants('a')], [reference])
+
     def test_reading_time_excludes_both_games_and_bibliography(self):
         parser = Reading()
         parser.feed(HTML)
-        self.assertEqual(len(parser.words), 1267)
+        self.assertEqual(len(parser.words), 1285)
         records = json.loads((ROOT / 'assets/reading-times.json').read_text(encoding='utf-8'))['articles']
-        self.assertEqual(records[SLUG], {'words': 1267, 'minutes': 7})
+        self.assertEqual(records[SLUG], {'words': 1285, 'minutes': 7})
         extra = ' MOTJEU' * 1000
         altered = HTML.replace('<div data-samaritains-stage hidden>', '<div data-samaritains-stage hidden>'+extra)
         altered = altered.replace('<li id="ref1">', '<li id="ref1">'+extra)
         parser = Reading()
         parser.feed(altered)
-        self.assertEqual(len(parser.words), 1267)
+        self.assertEqual(len(parser.words), 1285)
 
     def test_navigation_metadata_media_and_no_collection(self):
         document = Document(HTML)
