@@ -49,13 +49,14 @@ def render(data):
     documents = data.get('documents', [])
     first = documents[0] if documents else {}
     hero, alt = _media(first)
-    # object-fit: cover recadre dès 300 px de haut sur mobile et 480 px sur tablette.
+    # Le cadrage mobile de 300 px de haut utilise au moins 450 px de l’image.
+    # Garder l’original au-delà de 480 px évite d’exposer plus souvent le décalage
+    # de l’écran d’ouverture pendant l’initialisation du dossier sur ordinateur.
     hero_responsive = ''
     if hero == '/Thot/assets/explorer-v2/media/moynaq-original.jpg':
         hero_responsive = (
             f' srcset="/Thot/assets/explorer-v2/media/moynaq-960.jpg 960w, {e(hero)} 1901w"'
-            ' sizes="(max-width: 700px) max(450px, calc(100vw - 32px)), '
-            '(max-width: 1100px) 720px, 825px"'
+            ' sizes="(max-width: 480px) 450px, 1901px"'
         )
     hypotheses = data.get('hypotheses') or [
         {'id': 'irrigation', 'title': 'Les prélèvements pour l’irrigation jouent un rôle majeur.'},
