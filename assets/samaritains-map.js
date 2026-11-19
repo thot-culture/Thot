@@ -7,7 +7,8 @@
   const message = root.querySelector('[data-map-status]');
   const reset = root.querySelector('[data-map-reset]');
   const places = [...root.querySelectorAll('[data-place]')];
-  const scriptURL = new URL('vendor/leaflet/leaflet.js', document.currentScript.src);
+  const controller = document.currentScript;
+  const leafletURL = new URL('vendor/leaflet/', controller.src);
   // Réserver la hauteur avant l'arrivée de Leaflet, y compris sur réseau lent.
   // Sans JavaScript, le canevas reste masqué et la liste HTML reste disponible.
   canvas.hidden = false;
@@ -86,14 +87,30 @@
     root.dataset.mapReady = 'true';
     canvas.removeAttribute('aria-busy');
   }
+  function loaded(resource) {
+    return new Promise((resolve, reject) => {
+      resource.addEventListener('load', resolve, { once: true });
+      resource.addEventListener('error', reject, { once: true });
+    });
+  }
   function start() {
     if (started) return;
     started = true;
     message.textContent = 'Chargement de la carte… Les descriptions restent disponibles ci-dessous.';
     const script = document.createElement('script');
-    script.src = scriptURL.href;
-    script.onload = () => { try { initialize(); } catch { fallback(); } };
-    script.onerror = fallback;
+    script.src = new URL('leaflet.js', leafletURL).href;
+    const resources = [loaded(script)];
+    const stylesheetURL = new URL('leaflet.css', leafletURL).href;
+    // Une ancienne page encore en cache peut avoir chargé la feuille dans son en-tête.
+    if (![...document.styleSheets].some(sheet => sheet.href === stylesheetURL)) {
+      const stylesheet = document.createElement('link');
+      stylesheet.rel = 'stylesheet';
+      stylesheet.href = stylesheetURL;
+      resources.push(loaded(stylesheet));
+      // Garder les styles Leaflet avant les surcharges de la carte THOT.
+      controller.before(stylesheet);
+    }
+    Promise.all(resources).then(initialize).catch(fallback);
     document.head.append(script);
   }
   function fallback() {
