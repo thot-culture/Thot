@@ -14,7 +14,8 @@ let audits = 0;
 const tile = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+/l9sAAAAASUVORK5CYII=', 'base64');
 
 async function fixture(browser, options={}) {
-  const {blocked=false, brokenLibrary=false, delayedLibrary=false, ...contextOptions}=options;
+  const {blocked=false, brokenLibrary=false, brokenStyles=false, delayedLibrary=false,
+    delayedStyles=false, preloadedStyles=false, ...contextOptions}=options;
   const context=await browser.newContext({viewport:{width:1440,height:1000},serviceWorkers:'block',...contextOptions});
   const requests=[];
   let releaseLibrary;
@@ -24,13 +25,21 @@ async function fixture(browser, options={}) {
     if(u.hostname==='tile.openstreetmap.org') return blocked ? route.abort() : route.fulfill({contentType:'image/png',body:tile});
     if(u.hostname!=='thot.local') return route.abort();
     if(brokenLibrary && u.pathname.endsWith('/leaflet.js')) return route.abort();
+    if(brokenStyles && u.pathname.endsWith('/leaflet.css')) return route.abort();
     if(delayedLibrary && u.pathname.endsWith('/leaflet.js')) await libraryGate;
+    if(delayedStyles && u.pathname.endsWith('/leaflet.css')) await libraryGate;
     const file=path.resolve(root,decodeURIComponent(u.pathname).replace(/^\/Thot\//,''));
     if(!file.startsWith(root+path.sep)||!fs.existsSync(file)||!fs.statSync(file).isFile()){
       missing.push(u.pathname); return route.fulfill({status:404,body:'Absent'});
     }
     const types={'.html':'text/html; charset=utf-8','.js':'application/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.png':'image/png','.svg':'image/svg+xml'};
-    return route.fulfill({contentType:types[path.extname(file)]||'application/octet-stream',body:fs.readFileSync(file)});
+    const contentType=types[path.extname(file)]||'application/octet-stream';
+    let body=fs.readFileSync(file);
+    if(preloadedStyles && u.pathname.endsWith('/bon-samaritain.html')){
+      body=body.toString('utf8').replace('<link rel="stylesheet" href="../assets/samaritains-map.css">',
+        '<link rel="stylesheet" href="../assets/vendor/leaflet/leaflet.css"><link rel="stylesheet" href="../assets/samaritains-map.css">');
+    }
+    return route.fulfill({contentType,body});
   });
   const page=await context.newPage(); page.on('pageerror',e=>errors.push(e.message));
   await page.goto(url);
@@ -57,8 +66,9 @@ async function positions(markers){
   try{
     // Le lecteur peut déjà lire les lieux pendant une arrivée lente de Leaflet.
     // Leurs positions dans le document doivent rester stables à son arrivée.
-    for(const width of [390,1440]){
-      const f=await fixture(browser,{delayedLibrary:true,reducedMotion:'reduce',viewport:{width,height:900}});
+    const slowLoads=[{width:390,delayedLibrary:true},{width:1440,delayedLibrary:true},{width:1440,delayedStyles:true}];
+    for(const {width,...delay} of slowLoads){
+      const f=await fixture(browser,{...delay,reducedMotion:'reduce',viewport:{width,height:900}});
       await f.page.locator('#carte-garizim').scrollIntoViewIfNeeded();
       await f.page.waitForFunction(()=>document.querySelector('[data-map-status]').textContent.startsWith('Chargement de la carte'));
       const details=f.page.locator('[data-place]').first();
@@ -66,15 +76,29 @@ async function positions(markers){
       const before=await top();
       assert(await f.page.locator('[data-map-canvas]').isVisible());
       assert(await f.page.getByRole('button',{name:'Recentrer la carte'}).isDisabled());
+      if(delay.delayedStyles){
+        await f.page.waitForFunction(()=>Boolean(window.L));
+        assert.equal(await f.page.locator('.leaflet-marker-icon').count(),0,'La carte doit attendre les styles');
+      }
       f.releaseLibrary();
       await f.page.waitForSelector('[data-map-ready="true"]');
       assert(Math.abs(await top()-before)<=1,`Saut de la liste après Leaflet à ${width} px : ${await top()-before} px`);
       assert(await f.page.getByRole('button',{name:'Recentrer la carte'}).isEnabled());
       await f.context.close();
     }
-    checks.push('Chargement lent de Leaflet : liste des lieux stable à 390 et 1440 px, recentrage désactivé avant disponibilité.');
+    checks.push('Chargement lent du script ou des styles Leaflet : liste stable à 390 et 1440 px et recentrage désactivé avant disponibilité.');
+
+    const cached=await fixture(browser,{preloadedStyles:true});
+    assert.equal(await cached.page.locator('link[href$="/leaflet.css"]').count(),1);
+    await cached.page.locator('#carte-garizim').scrollIntoViewIfNeeded();
+    await cached.page.waitForSelector('[data-map-ready="true"]');
+    assert.equal(await cached.page.locator('link[href$="/leaflet.css"]').count(),1);
+    await cached.context.close();
+    checks.push('Ancien HTML en cache : réutilisation de la feuille Leaflet déjà chargée.');
+
     const {context,page,requests}=await fixture(browser);
     assert(!requests.some(r=>r.includes('/leaflet.js')),'Leaflet différé hors écran');
+    assert(!requests.some(r=>r.includes('/leaflet.css')),'Styles Leaflet différés hors écran');
     const map=page.locator('[data-map-canvas]');
     await page.locator('#carte-garizim').scrollIntoViewIfNeeded();
     await page.waitForSelector('[data-map-ready="true"]');
@@ -127,13 +151,13 @@ async function positions(markers){
     }
     await audit(page);
     checks.push('Responsive : 320, 390, 768, 1024 et 1440 px, sans défilement horizontal.');
-    for(const options of [{blocked:true},{brokenLibrary:true},{javaScriptEnabled:false},{reducedMotion:'reduce',isMobile:true,hasTouch:true,viewport:{width:390,height:844}}]){
+    for(const options of [{blocked:true},{brokenLibrary:true},{brokenStyles:true},{javaScriptEnabled:false},{reducedMotion:'reduce',isMobile:true,hasTouch:true,viewport:{width:390,height:844}}]){
       const f=await fixture(browser,options);
       await f.page.locator('#carte-garizim').scrollIntoViewIfNeeded();
       assert.equal(await f.page.locator('[data-place]').count(),3);
       if(options.blocked) await f.page.waitForFunction(()=>document.querySelector('[data-map-status]').textContent.includes('fond de carte est indisponible'));
-      if(options.brokenLibrary) await f.page.waitForFunction(()=>document.querySelector('[data-map-status]').textContent.includes('ne peut pas se charger'));
-      if(options.brokenLibrary){
+      if(options.brokenLibrary||options.brokenStyles){
+        await f.page.waitForFunction(()=>document.querySelector('[data-map-status]').textContent.includes('ne peut pas se charger'));
         assert(await f.page.locator('[data-map-canvas]').isVisible());
         assert((await f.page.locator('[data-map-canvas]').innerText()).includes('indisponible'));
         assert(await f.page.getByRole('button',{name:'Recentrer la carte'}).isDisabled());
@@ -141,6 +165,7 @@ async function positions(markers){
       if(options.javaScriptEnabled===false){
         assert(await f.page.locator('#sources').isVisible());
         assert(await f.page.locator('[data-map-canvas]').isHidden());
+        assert(!f.requests.some(r=>/\/leaflet\.(css|js)$/.test(r)),'Aucune ressource Leaflet sans JavaScript');
       }
       if(options.hasTouch){
         await f.page.waitForSelector('[data-map-ready="true"]');
@@ -157,7 +182,7 @@ async function positions(markers){
       }
       await f.context.close();
     }
-    checks.push('Replis : toutes les tuiles bloquées, bibliothèque absente, JavaScript désactivé ; tactile et réduction des animations.');
+    checks.push('Replis : tuiles bloquées, script ou styles Leaflet absents, JavaScript désactivé ; tactile et réduction des animations.');
     assert.deepEqual(errors,[]); assert.deepEqual(missing,[]);
     assert.deepEqual(await page.evaluate(()=>({local:localStorage.length,session:sessionStorage.length})),{local:0,session:0});
     assert(!requests.some(r=>!r.startsWith('https://thot.local/')&&!r.startsWith('https://tile.openstreetmap.org/')));
