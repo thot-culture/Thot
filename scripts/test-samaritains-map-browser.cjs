@@ -66,8 +66,9 @@ async function positions(markers){
   try{
     // Le lecteur peut déjà lire les lieux pendant une arrivée lente de Leaflet.
     // Leurs positions dans le document doivent rester stables à son arrivée.
-    for(const width of [390,1440]){
-      const f=await fixture(browser,{delayedLibrary:width===390,delayedStyles:width===1440,reducedMotion:'reduce',viewport:{width,height:900}});
+    const slowLoads=[{width:390,delayedLibrary:true},{width:1440,delayedLibrary:true},{width:1440,delayedStyles:true}];
+    for(const {width,...delay} of slowLoads){
+      const f=await fixture(browser,{...delay,reducedMotion:'reduce',viewport:{width,height:900}});
       await f.page.locator('#carte-garizim').scrollIntoViewIfNeeded();
       await f.page.waitForFunction(()=>document.querySelector('[data-map-status]').textContent.startsWith('Chargement de la carte'));
       const details=f.page.locator('[data-place]').first();
@@ -75,7 +76,7 @@ async function positions(markers){
       const before=await top();
       assert(await f.page.locator('[data-map-canvas]').isVisible());
       assert(await f.page.getByRole('button',{name:'Recentrer la carte'}).isDisabled());
-      if(width===1440){
+      if(delay.delayedStyles){
         await f.page.waitForFunction(()=>Boolean(window.L));
         assert.equal(await f.page.locator('.leaflet-marker-icon').count(),0,'La carte doit attendre les styles');
       }
