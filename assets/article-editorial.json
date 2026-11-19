@@ -117,7 +117,19 @@
           "alt": "Illustration de trois situations : discussion familiale, manifestation et échange au lycée.",
           "width": 1200,
           "height": 800,
-          "position": "50% 45%"
+          "position": "50% 45%",
+          "variants": [
+            {
+              "src": "assets/images/autorite-triptyque-640.webp",
+              "width": 640,
+              "height": 427
+            },
+            {
+              "src": "assets/images/autorite-triptyque-800.webp",
+              "width": 800,
+              "height": 533
+            }
+          ]
         },
         "credit": "Illustration originale THOT, générée avec OpenAI ImageGen · 23 octobre 2026"
       }
@@ -587,7 +599,19 @@
           "src": "assets/images/roubaix-gambetta-carte.webp",
           "alt": "Carte postale du boulevard Gambetta à Roubaix, avec tramway et passants, avant 1919.",
           "width": 1040,
-          "height": 650
+          "height": 650,
+          "variants": [
+            {
+              "src": "assets/images/roubaix-gambetta-carte-640.webp",
+              "width": 640,
+              "height": 400
+            },
+            {
+              "src": "assets/images/roubaix-gambetta-carte-800.webp",
+              "width": 800,
+              "height": 500
+            }
+          ]
         },
         "credit": "ELD, avant 1919 · Wikimedia Commons · Domaine public"
       }
@@ -819,7 +843,19 @@
           "src": "assets/images/sophistes-debat.webp",
           "alt": "Scène imaginée d’un débat entre orateurs dans une cité grecque antique.",
           "width": 1120,
-          "height": 700
+          "height": 700,
+          "variants": [
+            {
+              "src": "assets/images/sophistes-debat-640.webp",
+              "width": 640,
+              "height": 400
+            },
+            {
+              "src": "assets/images/sophistes-debat-800.webp",
+              "width": 800,
+              "height": 500
+            }
+          ]
         }
       }
     },
@@ -903,7 +939,19 @@
           "src": "assets/images/plantes-douleur.webp",
           "alt": "Illustration botanique d’une plante verte, avec une petite entaille et des nervures légèrement lumineuses sur une feuille.",
           "width": 1280,
-          "height": 800
+          "height": 800,
+          "variants": [
+            {
+              "src": "assets/images/plantes-douleur-640.webp",
+              "width": 640,
+              "height": 400
+            },
+            {
+              "src": "assets/images/plantes-douleur-800.webp",
+              "width": 800,
+              "height": 500
+            }
+          ]
         }
       }
     },
@@ -978,7 +1026,19 @@
           "src": "assets/images/samaritains-garizim.webp",
           "alt": "Bâtiments et cour d’un site samaritain sur le mont Garizim, photographiés en 2007.",
           "width": 1280,
-          "height": 960
+          "height": 960,
+          "variants": [
+            {
+              "src": "assets/images/samaritains-garizim-640.webp",
+              "width": 640,
+              "height": 480
+            },
+            {
+              "src": "assets/images/samaritains-garizim-800.webp",
+              "width": 800,
+              "height": 600
+            }
+          ]
         },
         "credit": "Mont Garizim, 29 octobre 2007 · Daniel (dani36v), CC BY 2.0. Image redimensionnée et recadrée à l’affichage.",
         "credit_url": "https://commons.wikimedia.org/wiki/File:Mount_Gerizim_the_site_of_the_Samarities_(14719209955).jpg",

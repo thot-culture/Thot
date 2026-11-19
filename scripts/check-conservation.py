@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """Comparer les contenus principaux protégés à une révision Git explicite.
-Les interfaces communes restent hors du main. Durées, unique lien réparé et
-six niveaux H4→H3 documentés sont normalisés ; le texte intégral reste comparé.
+Les interfaces communes restent hors du main. Les durées, variantes d’image,
+lien réparé et six niveaux H4→H3 documentés sont normalisés.
 """
 import portable_io
 import argparse
@@ -28,6 +28,9 @@ def protected(html, path=None):
     if not main:
         raise ValueError("Contenu principal absent")
     content = re.sub(r"\d+ min de lecture", "DUREE min de lecture", main[0])
+    # L’image de référence, ses dimensions, son alternative et la légende restent comparées.
+    content = re.sub(r'<img\b[^>]*>',
+                     lambda m: re.sub(r'\s+(?:srcset|sizes)="[^"]*"', '', m[0]), content)
     structured = [json.loads(m) for m in re.findall(
         r'<script\b[^>]*type="application/ld\+json"[^>]*>([\s\S]*?)</script>', html)]
     return content, structured

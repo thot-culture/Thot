@@ -74,6 +74,10 @@ def normalize(page, html):
             alt = social_alts.get(image[1].removeprefix(BASE))
             if alt:
                 html = html.replace('</head>', '<meta property="og:image:alt" content="'+escape(alt, quote=True)+'"></head>', 1)
+    if page in {'index.html', 'quiz.html'}:
+        # Une même URL permet de réutiliser la feuille lors du passage de l’accueil au quiz.
+        html = re.sub(r'(<link rel="stylesheet" href=")(?:/Thot/)?assets/site\.css[^\"]*(">)',
+                      lambda m: m[1]+version('site.css')+m[2], html)
     html = re.sub(r'<link rel="stylesheet" href="/Thot/assets/navigation\.css[^\"]*">', '', html)
     html = html.replace('</head>', '<link rel="stylesheet" href="'+version('navigation.css')+'"></head>')
     html = re.sub(r'<link rel="stylesheet" href="/Thot/assets/visual-system\.css[^\"]*">', '', html)
