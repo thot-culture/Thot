@@ -69,6 +69,10 @@ jobs:
           NODE_PATH: ${{ runner.temp }}/thot-audit/node_modules
           THOT_OUTPUT_DIR: ${{ runner.temp }}/evidence/after
         run: node scripts/audit-final-browser.cjs
+      - name: Bibliothèque, stabilité et replis de la recherche
+        env:
+          NODE_PATH: ${{ runner.temp }}/thot-audit/node_modules
+        run: node scripts/test-bibliotheque-browser.cjs
       - name: Navigation Atlas, onze pièces Aral et stockage persistant
         env:
           NODE_PATH: ${{ runner.temp }}/thot-audit/node_modules
