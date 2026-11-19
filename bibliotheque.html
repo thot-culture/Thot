@@ -28,7 +28,7 @@
   <meta name="twitter:description" content="Des articles documentés en histoire, littérature et géopolitique pour découvrir, comprendre et approfondir.">
   <meta name="twitter:image" content="https://thot-culture.github.io/Thot/assets/og-thot.png">
   <meta name="twitter:image:alt" content="THOT, le magazine des esprits curieux : histoire, géographie et sciences humaines.">
-  <link rel="stylesheet" href="assets/bibliotheque.css?v=b75152222b18">
+  <link rel="stylesheet" href="assets/bibliotheque.css?v=3ae1549eeaf5">
   <link rel="stylesheet" href="assets/decouverte.css?v=3944429fe3e1">
   <link rel="stylesheet" href="assets/experience.css?v=1">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Bibliothèque — Tous les articles | THOT", "url": "https://thot-culture.github.io/Thot/bibliotheque.html", "inLanguage": "fr"}</script><link rel="stylesheet" href="/Thot/assets/navigation.css?v=f223850ad41a"><link rel="stylesheet" href="/Thot/assets/visual-system.css?v=764ddbb7f568"></head>
@@ -88,21 +88,23 @@
     </div></section>
     <section class="wrap catalogue" aria-labelledby="catalogue-title">
       <div class="intro"><div><p class="eyebrow dark">EXPLORER</p><h2 id="catalogue-title">Tous les articles</h2></div><p>Un catalogue appelé à grandir, sans sacrifier la rigueur éditoriale.</p></div>
-      <div class="search-zone" id="library-search" hidden>
-        <label for="article-search">Rechercher un sujet, un lieu ou un mot-clé</label>
-        <div class="search-input"><span aria-hidden="true">⌕</span><input id="article-search" type="search" autocomplete="off" placeholder="Ex. Brontë, Roubaix, puissance…" aria-controls="article-results" aria-describedby="search-help"><button id="clear-search" type="button" class="clear-search" hidden>Effacer</button></div>
-        <p class="search-help" id="search-help">Vous pouvez combiner plusieurs mots. Les accents, les tirets et l’ordre des mots ne changent pas la recherche. Pour partager une recherche, copiez l’adresse de cette page.</p>
-        <div class="filters" role="group" aria-label="Filtrer les articles par discipline">
-          <button type="button" data-filter="tous" aria-pressed="true">Tous les sujets</button>
-          <button type="button" data-filter="histoire" aria-pressed="false">Histoire</button>
-          <button type="button" data-filter="geographie" aria-pressed="false">Géographie et géopolitique</button>
-          <button type="button" data-filter="sciences" aria-pressed="false">Sciences</button>
-          <button type="button" data-filter="arts" aria-pressed="false">Littérature et arts</button>
-          <button type="button" data-filter="insolite" aria-pressed="false" hidden disabled>Insolite</button>
-          <button type="button" data-filter="sciences-humaines" aria-pressed="false">Psychologie et société</button>
+      <div class="search-slot">
+        <div class="search-zone" id="library-search" hidden>
+          <label for="article-search">Rechercher un sujet, un lieu ou un mot-clé</label>
+          <div class="search-input"><span aria-hidden="true">⌕</span><input id="article-search" type="search" autocomplete="off" placeholder="Ex. Brontë, Roubaix, puissance…" aria-controls="article-results" aria-describedby="search-help"><button id="clear-search" type="button" class="clear-search" hidden>Effacer</button></div>
+          <p class="search-help" id="search-help">Vous pouvez combiner plusieurs mots. Les accents, les tirets et l’ordre des mots ne changent pas la recherche. Pour partager une recherche, copiez l’adresse de cette page.</p>
+          <div class="filters" role="group" aria-label="Filtrer les articles par discipline">
+            <button type="button" data-filter="tous" aria-pressed="true">Tous les sujets</button>
+            <button type="button" data-filter="histoire" aria-pressed="false">Histoire</button>
+            <button type="button" data-filter="geographie" aria-pressed="false">Géographie et géopolitique</button>
+            <button type="button" data-filter="sciences" aria-pressed="false">Sciences</button>
+            <button type="button" data-filter="arts" aria-pressed="false">Littérature et arts</button>
+            <button type="button" data-filter="insolite" aria-pressed="false" hidden disabled>Insolite</button>
+            <button type="button" data-filter="sciences-humaines" aria-pressed="false">Psychologie et société</button>
+          </div>
         </div>
+        <div class="search-zone search-fallback"><p class="search-help"><noscript>La recherche et les filtres nécessitent JavaScript. </noscript>Tous les articles restent accessibles ci-dessous.</p></div>
       </div>
-      <noscript><p class="search-help">La recherche et les filtres nécessitent JavaScript. Tous les articles restent accessibles ci-dessous.</p></noscript>
       <div class="library-discovery"><p>Une envie de découverte, sans idée précise ?</p><a class="discovery-primary" href="articles/autrices-pseudonymes.html" data-surprise aria-label="Surprends-moi : ouvrir un article au hasard parmi toute la bibliothèque"><span aria-hidden="true">✦</span> Surprends-moi</a></div>
       <p class="results-status" id="results-status" role="status" aria-live="polite" aria-atomic="true">9 articles disponibles</p>
       <div id="article-results" class="article-grid">
