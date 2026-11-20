@@ -20,6 +20,10 @@ config = json.loads((ROOT / 'assets/article-editorial.json').read_text(encoding=
 records = {a['slug']: a for a in config['articles']}
 home_slugs = config['home_articles'][1:]
 expected_slugs = {'accueil': home_slugs, 'bibliotheque': list(records)}
+expected_images = {
+    'index.html': [records[slug]['catalogue']['image'] for slug in config['home_articles']],
+    'bibliotheque.html': [record['catalogue']['image'] for record in records.values()],
+}
 reading = json.loads((ROOT/'assets/reading-times.json').read_text(encoding='utf-8'))['articles']
 report = {'base': args.base, 'before': args.before, 'pages': [], 'interactions': []}
 
@@ -138,16 +142,23 @@ with sync_playwright() as p:
         context.close()
     report['interactions'].append({'article_links':len(records),'without_javascript':'5 largeurs × 2 pages','hover_focus':'10 pages'})
     if not args.before:
-        for width in (390,1440):
-            context=browser.new_context(device_scale_factor=2,viewport={'width':width,'height':900})
+        for width, dpr in ((390, 1), (390, 2), (1440, 2)):
+            context=browser.new_context(device_scale_factor=dpr,viewport={'width':width,'height':900})
             dense=context.new_page()
-            for filename in ('index.html','bibliotheque.html'):
+            for filename, images in expected_images.items():
                 dense.goto(args.base+filename)
                 dense.locator('img[srcset]').evaluate_all('imgs=>Promise.all(imgs.map(i=>{i.loading="eager";return i.decode()}))')
-                chosen=dense.locator('img[srcset]').evaluate_all('imgs=>imgs.map(i=>i.currentSrc)')
-                assert len(chosen)==4 and all('-640.webp' not in src for src in chosen)
+                chosen=dense.locator('img[srcset]').evaluate_all('imgs=>Object.fromEntries(imgs.map(i=>[i.getAttribute("src"),new URL(i.currentSrc).pathname]))')
+                responsive={image['src']: image for image in images if image.get('variants')}
+                assert chosen.keys() == responsive.keys(), (filename, width, dpr, chosen)
+                for src, image in responsive.items():
+                    if dpr == 1:
+                        candidates = image['variants']
+                    else:
+                        candidates = [entry for entry in [*image['variants'], image] if entry['width'] > 640]
+                    assert chosen[src] in {f'/Thot/{entry["src"]}' for entry in candidates}, (filename, width, dpr, src, chosen[src])
             context.close()
-        report['interactions'].append({'high_density':'DPR 2, 390 et 1440 px, 4 couvertures × 2 pages'})
+        report['interactions'].append({'responsive_candidates': '390 px à DPR 1 et 2, 1440 px à DPR 2, variantes du registre'})
     browser.close()
 (out/'mesures.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(f'PASS : 10 rendus, {len(records)} liens, filtres, recherche, survol/focus, 10 rendus sans JS ; {out}')

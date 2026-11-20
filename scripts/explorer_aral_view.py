@@ -49,6 +49,15 @@ def render(data):
     documents = data.get('documents', [])
     first = documents[0] if documents else {}
     hero, alt = _media(first)
+    # Le cadrage mobile de 300 px de haut utilise au moins 450 px de l’image.
+    # Garder l’original au-delà de 480 px évite d’exposer plus souvent le décalage
+    # de l’écran d’ouverture pendant l’initialisation du dossier sur ordinateur.
+    hero_responsive = ''
+    if hero == '/Thot/assets/explorer-v2/media/moynaq-original.jpg':
+        hero_responsive = (
+            f' srcset="/Thot/assets/explorer-v2/media/moynaq-960.jpg 960w, {e(hero)} 1901w"'
+            ' sizes="(max-width: 480px) 450px, 1901px"'
+        )
     hypotheses = data.get('hypotheses') or [
         {'id': 'irrigation', 'title': 'Les prélèvements pour l’irrigation jouent un rôle majeur.'},
         {'id': 'climate', 'title': 'Les variations climatiques suffisent à expliquer l’ensemble du recul.'},
@@ -59,7 +68,7 @@ def render(data):
     encoded = json.dumps(data, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
     return f'''<div class="aral-experience" data-aral>
       <section class="aral-opening" aria-labelledby="aral-title">
-        <div class="aral-opening-image"><img src="{e(hero)}" alt="{e(alt)}" width="1901" height="1268" fetchpriority="high"><p class="aral-opening-credit">{e(first.get('credit', ''))} · {e(first.get('date', ''))} </p></div>
+        <div class="aral-opening-image"><img src="{e(hero)}"{hero_responsive} alt="{e(alt)}" width="1901" height="1268" fetchpriority="high"><p class="aral-opening-credit">{e(first.get('credit', ''))} · {e(first.get('date', ''))} </p></div>
         <div class="aral-opening-copy"><p class="aral-kicker">THOT Explorer / Enquêter</p><p class="aral-chapter-label">Le mystère de la mer d’Aral</p><h1 id="aral-title">Pourquoi ces bateaux sont-ils au milieu du désert&nbsp;?</h1><p>Enquête sur la disparition d’une grande partie de la mer d’Aral. Examine les documents, relie les indices et construis ton explication.</p><p class="aral-time">Onze pièces documentées · Exploration libre · Sans score</p><button type="button" id="aral-start" hidden>Entrer dans le dossier <span aria-hidden="true">→</span></button><noscript><a class="aral-link-button" href="#aral-documents">Lire le dossier documentaire</a></noscript><p class="aral-resume" id="aral-resume" hidden></p></div>
       </section>
       <section class="aral-workspace" id="aral-dossier" data-aral-workspace aria-labelledby="aral-desk-title">

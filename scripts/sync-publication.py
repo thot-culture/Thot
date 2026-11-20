@@ -18,6 +18,8 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 CATEGORIES = {"histoire", "geographie", "sciences", "arts", "sciences-humaines"}
 MONTHS = ("janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc.")
+CARD_SIZES = "(max-width: 760px) calc(100vw - 42px), (max-width: 1152px) calc((100vw - 63px) / 2), 555px"
+FEATURED_SIZES = "(max-width: 850px) calc(100vw - 42px), 610px"
 
 
 def e(value):
@@ -72,16 +74,18 @@ def story_fields(record, root, reading_times):
     catalogue = catalogue_for(record, root)
     slug = record["slug"]
     image = catalogue["image"]
-    responsive = ''
-    if image.get('variants'):
-        sources = [*image['variants'], image]
-        srcset = ', '.join(f'{variant["src"]} {variant["width"]}w' for variant in sources)
-        responsive = f' srcset="{e(srcset)}" sizes="(max-width: 760px) calc(100vw - 42px), (max-width: 1152px) calc((100vw - 63px) / 2), 555px"'
-    position = f' style="--cover-position:{e(image["position"])}"' if image.get('position') else ''
-    photo = (f'<img src="{e(image["src"])}"{responsive}{position} alt="{e(image["alt"])}" width="{image["width"]}" '
-             f'height="{image["height"]}" loading="lazy" decoding="async">')
+    def photo(sizes):
+        responsive = ''
+        if image.get('variants'):
+            sources = [*image['variants'], image]
+            srcset = ', '.join(f'{variant["src"]} {variant["width"]}w' for variant in sources)
+            responsive = f' srcset="{e(srcset)}" sizes="{sizes}"'
+        position = f' style="--cover-position:{e(image["position"])}"' if image.get('position') else ''
+        return (f'<img src="{e(image["src"])}"{responsive}{position} alt="{e(image["alt"])}" width="{image["width"]}" '
+                f'height="{image["height"]}" loading="lazy" decoding="async">')
+    stamp = ''
     if catalogue.get("stamp"):
-        photo += f'\n          <span class="discovery-stamp" aria-hidden="true">{e(catalogue["stamp"])}</span>'
+        stamp = f'\n          <span class="discovery-stamp" aria-hidden="true">{e(catalogue["stamp"])}</span>'
     credit = e(catalogue["credit"])
     if url := catalogue.get("credit_url"):
         if label := catalogue.get("credit_link_label"):
@@ -98,7 +102,8 @@ def story_fields(record, root, reading_times):
         "title": e(re.sub(r" (?=[?!:])", "\u00a0", title)),
         "description": e(catalogue.get("description") or record["social"]["description"]),
         "invitation": e(catalogue.get("invitation", "")),
-        "photo": photo,
+        "photo": photo(CARD_SIZES) + stamp,
+        "featured_photo": photo(FEATURED_SIZES) + stamp,
         "credit": f'<p class="discovery-credit">{credit}</p>',
         "meta": (f'<div class="discovery-meta"><span>{e(catalogue["label"])}</span>'
                  f'<span class="reading-pill">{minutes} min de lecture</span></div>'),
@@ -136,7 +141,7 @@ def featured_card(story):
                   if story["invitation"] else "")
     return f'''      <article class="latest-story" aria-labelledby="latest-title">
       <div class="latest-story__visual"><a href="{story['href']}" data-discovery-path aria-label="Lire l’article à la une : {story['title']}"><div class="discovery-photo discovery-photo--latest">
-          {story['photo']}
+          {story['featured_photo']}
       </div></a>{story['credit']}</div>
       <div class="latest-story__copy">
         <p class="latest-story__label"><span aria-hidden="true">✦</span> À la une</p>

@@ -54,7 +54,7 @@ def run(args):
             page.locator('#aral-hint').click();page.locator('[data-aral-view=argument]').click()
             for id in ('d04','d06'):page.locator('[data-proof-role='+id+']').select_option('support')
             page.locator('[name=aral-hypothesis][value=custom]').check();page.locator('#aral-custom-hypothesis').fill('Mon hypothèse personnelle est conservée.');page.locator('#aral-conclusion').fill('Mon texte original ne doit pas être réécrit par la nouvelle version.');page.locator('#aral-submit').click()
-            page.wait_for_function('JSON.parse(localStorage.getItem(THOT_ARAL.storageKey)).lastFeedback')
+            page.wait_for_function('JSON.parse(localStorage.getItem(THOT_ARAL.storageKey))?.lastFeedback')
             saved=normalized(page.evaluate('THOT_ARAL.getState()'));assert saved['cards']['d04']['y']==1064
             context.close();context=None;server.terminate();server.wait(timeout=5);server=None
             server=start(ROOT);context=engine.launch_persistent_context(str(profile),headless=True,viewport={'width':390,'height':900});page=context.pages[0]
