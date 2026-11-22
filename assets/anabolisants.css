@@ -12,6 +12,10 @@
 .article-muscle #texte-article > section + section { margin-top: 3rem; }
 .article-muscle .notices { list-style: none; padding: 0; }
 .article-muscle .notices li { margin-block: 1rem; font-size: 1rem; }
+@media (min-width: 851px) {
+  .article-muscle .mise-en-page > article { grid-area: 1 / 1; }
+  .article-muscle .sommaire { grid-area: 1 / 2; }
+}
 .lecture-jeu {
   margin: 2.5rem 0;
   padding: clamp(1.15rem, 3vw, 2.25rem);
