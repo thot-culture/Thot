@@ -92,6 +92,17 @@ class PublicationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             sync.outputs(self.root)
 
+    def test_review_has_no_publication_date(self):
+        self.record.update(in_review=True, published=None, editorial_updated=None)
+        self.save()
+        planned = sync.outputs(self.root)
+        self.assertIn('En relecture', planned[self.root / 'bibliotheque.html'])
+        self.assertNotIn('<lastmod>', planned[self.root / 'sitemap.xml'])
+        self.record['published'] = '2026-11-03'
+        self.save()
+        with self.assertRaises(ValueError):
+            sync.outputs(self.root)
+
     def test_duplicate_record_is_rejected(self):
         self.config["articles"].append(self.record)
         self.save()

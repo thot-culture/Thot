@@ -1044,6 +1044,85 @@
         "credit_url": "https://commons.wikimedia.org/wiki/File:Mount_Gerizim_the_site_of_the_Samarities_(14719209955).jpg",
         "credit_link_label": "Notice et licence"
       }
+    },
+    {
+      "slug": "le-corps-ideal-anabolisants",
+      "layout": "authored",
+      "in_review": true,
+      "published": null,
+      "editorial_updated": null,
+      "headline": "Le corps idéal a-t-il un prix ? Les anabolisants et notre obsession du muscle",
+      "author": {
+        "@type": "Organization",
+        "name": "La rédaction THOT"
+      },
+      "seo": {
+        "title": "Anabolisants et idéal musculaire : quel prix pour le corps ? | THOT",
+        "description": "Du moulage d’Eugen Sandow aux réseaux sociaux, comment les idéaux musculaires se construisent-ils et quels risques accompagnent les usages non médicaux des anabolisants ?"
+      },
+      "social": {
+        "title": "Le corps idéal a-t-il un prix ? Les anabolisants et notre obsession du muscle",
+        "description": "Du moulage d’Eugen Sandow aux réseaux sociaux, comment les idéaux musculaires se construisent-ils et quels risques accompagnent les usages non médicaux des anabolisants ?",
+        "image": "assets/social-cards/le-corps-ideal-anabolisants.jpg",
+        "alt": "Eugen Sandow vu de dos, les bras fléchis. Détail du portrait réalisé par Napoleon Sarony en 1893."
+      },
+      "sources": {
+        "ref1": {
+          "kind": "secondary",
+          "label": "Notice du musée"
+        },
+        "ref2": {
+          "kind": "secondary",
+          "label": "Synthèse historique"
+        },
+        "ref3": {
+          "kind": "secondary",
+          "label": "Notice de catalogue"
+        },
+        "ref4": {
+          "kind": "secondary",
+          "label": "Synthèse historique"
+        },
+        "ref5": {
+          "kind": "secondary",
+          "label": "Revue systématique"
+        },
+        "ref6": {
+          "kind": "primary",
+          "label": "Étude originale"
+        },
+        "ref7": {
+          "kind": "secondary",
+          "label": "Expertise collective"
+        },
+        "ref8": {
+          "kind": "secondary",
+          "label": "Prise de position scientifique"
+        },
+        "ref9": {
+          "kind": "secondary",
+          "label": "Synthèse clinique"
+        },
+        "ref10": {
+          "kind": "secondary",
+          "label": "Étude historique et sociologique"
+        }
+      },
+      "catalogue": {
+        "category": "sciences",
+        "label": "Histoire, Société, Sciences et Santé",
+        "keywords": "stéroïdes anabolisants testostérone muscle musculature santé histoire société culturisme fitness dopage dysmorphie Eugen Sandow réseaux sociaux",
+        "image": {
+          "src": "assets/images/sandow-1893.webp",
+          "alt": "Eugen Sandow, de dos sur une estrade, fléchit les deux bras devant un fond sombre.",
+          "width": 628,
+          "height": 1006,
+          "position": "50% 3%"
+        },
+        "credit": "Eugen Sandow, 1893. Photographie de Napoleon Sarony, domaine public.",
+        "credit_url": "https://commons.wikimedia.org/wiki/File:Sarony,_Napoleon_-_Eugene_Sandow_-_1893.jpg",
+        "credit_link_label": "Notice de la photographie"
+      }
     }
   ],
   "home_articles": [
