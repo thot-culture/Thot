@@ -1064,7 +1064,7 @@
         "title": "Le corps idéal a-t-il un prix ? Les anabolisants et notre obsession du muscle",
         "description": "Du moulage d’Eugen Sandow aux réseaux sociaux, comment les idéaux musculaires se construisent-ils et quels risques accompagnent les usages non médicaux des anabolisants ?",
         "image": "assets/social-cards/le-corps-ideal-anabolisants.jpg",
-        "alt": "Eugen Sandow vu de dos, les bras fléchis. Détail du portrait réalisé par Napoleon Sarony en 1893."
+        "alt": "Détail du portrait de 1893 par Napoleon Sarony. Eugen Sandow tourne la tête, les bras croisés sur la poitrine."
       },
       "sources": {
         "ref1": {
@@ -1114,13 +1114,13 @@
         "keywords": "stéroïdes anabolisants testostérone muscle musculature santé histoire société culturisme fitness dopage dysmorphie Eugen Sandow réseaux sociaux",
         "image": {
           "src": "assets/images/sandow-1893.webp",
-          "alt": "Eugen Sandow, de dos sur une estrade, fléchit les deux bras devant un fond sombre.",
+          "alt": "Eugen Sandow en tenue de scène, les bras croisés, la tête tournée sur le côté.",
           "width": 628,
-          "height": 1006,
-          "position": "50% 3%"
+          "height": 785,
+          "position": "50% 15%"
         },
-        "credit": "Eugen Sandow, 1893. Photographie de Napoleon Sarony, domaine public.",
-        "credit_url": "https://commons.wikimedia.org/wiki/File:Sarony,_Napoleon_-_Eugene_Sandow_-_1893.jpg",
+        "credit": "Eugen Sandow assis, les bras croisés, 1893. Photographie de Napoleon Sarony. Library of Congress, domaine public.",
+        "credit_url": "https://commons.wikimedia.org/wiki/File:Sandow_-_Sarony._LCCN91796077.jpg",
         "credit_link_label": "Notice de la photographie"
       }
     }
