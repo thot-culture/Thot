@@ -37,7 +37,7 @@ MEASURE = """cards => cards.map(c => {
  image:{src:image.getAttribute('src'),currentSrc:image.currentSrc,natural:[image.naturalWidth,image.naturalHeight],declared:[+image.getAttribute('width'),+image.getAttribute('height')],alt:image.alt,loaded:image.complete&&image.naturalWidth>0,fit:getComputedStyle(image).objectFit,position:getComputedStyle(image).objectPosition},
  styles:{card:style(c),copy:style(c.querySelector('.discovery-card__copy')),title:style(title),meta:style(c.querySelector('.discovery-meta')),bottom:style(c.querySelector('.discovery-card__bottom')),credit:style(credit)},
  creditText:credit.textContent.trim(),clamped:getComputedStyle(title).webkitLineClamp,
- date:c.querySelector('time').dateTime,reading:c.querySelector('.reading-pill').textContent};
+ date:c.querySelector('time')?.dateTime ?? null,reading:c.querySelector('.reading-pill').textContent};
 })"""
 
 with sync_playwright() as p:
