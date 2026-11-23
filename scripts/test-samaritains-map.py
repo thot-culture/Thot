@@ -54,7 +54,8 @@ class Gerizim(unittest.TestCase):
         self.assertFalse((ROOT/'articles/le-bon-samaritain.html').exists())
         records=json.loads((ROOT/'assets/article-editorial.json').read_text(encoding='utf-8'))['articles']
         self.assertEqual(sum('Samaritain' in r.get('headline','') for r in records),1)
-        self.assertEqual(len(records),9)
+        self.assertCountEqual([row['slug'] for row in records],
+                              [page.stem for page in (ROOT/'articles').glob('*.html')])
         code=(ROOT/'assets/samaritains-map.js').read_text(encoding='utf-8')
         self.assertNotRegex(code,r'localStorage|sessionStorage|indexedDB|sendBeacon|document\.cookie')
         self.assertNotIn('nominatim',code)

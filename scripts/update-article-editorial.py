@@ -72,6 +72,14 @@ def update_seo(html, record, config):
     pattern = r'<link\b[^>]*rel="canonical"[^>]*>'
     html = re.sub(pattern, lambda _: tag, html) if re.search(pattern, html) else html.replace('</head>', tag + '\n</head>', 1)
     pattern = r'(<script\b[^>]*type="application/ld\+json"[^>]*>)([\s\S]*?)(</script>)'
+    def set_dates(data):
+        if record.get("in_review") is True:
+            data.pop("datePublished", None)
+            data.pop("dateModified", None)
+        else:
+            data["datePublished"] = record["published"]
+            data["dateModified"] = record.get("editorial_updated", config["editorial_updated"])
+
     found = []
     def structured(match):
         data = json.loads(match[2])
@@ -79,9 +87,8 @@ def update_seo(html, record, config):
             return match[0]
         found.append(True)
         before = dict(data)
-        data.update(headline=record["headline"], author=record["author"],
-                    datePublished=record["published"],
-                    dateModified=record.get("editorial_updated", config["editorial_updated"]))
+        data.update(headline=record["headline"], author=record["author"])
+        set_dates(data)
         image = config["base_url"] + record["social"]["image"]
         data["image"] = [image] if isinstance(data.get("image"), list) else image
         page = data.get("mainEntityOfPage")
@@ -102,9 +109,8 @@ def update_seo(html, record, config):
                 "headline": record["headline"], "description": record["social"]["description"],
                 "author": record["author"], "publisher": {"@type": "Organization", "name": "THOT"},
                 "mainEntityOfPage": canonical, "inLanguage": "fr-FR",
-                "image": config["base_url"] + record["social"]["image"],
-                "datePublished": record["published"],
-                "dateModified": record.get("editorial_updated", config["editorial_updated"])}
+                "image": config["base_url"] + record["social"]["image"]}
+        set_dates(data)
         block = '<script type="application/ld+json">\n' + json.dumps(data, ensure_ascii=False, indent=2).replace('<', '\\u003c') + '\n</script>'
         html = html.replace('</head>', block + '\n</head>', 1)
     return prefix + html + suffix

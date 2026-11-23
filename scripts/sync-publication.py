@@ -93,8 +93,10 @@ def story_fields(record, root, reading_times):
         else:
             credit = (f'<a href="{e(url)}" target="_blank" rel="noopener noreferrer">{credit}'
                       '<span class="discovery-sr-only"> — consulter la notice de l’image (nouvel onglet)</span></a>')
-    day = date.fromisoformat(record["published"])
-    published = f'<time datetime="{day}">{day.day} {MONTHS[day.month - 1]} {day.year}</time>'
+    published = "En relecture"
+    if record["published"] is not None:
+        day = date.fromisoformat(record["published"])
+        published = f'<time datetime="{day}">{day.day} {MONTHS[day.month - 1]} {day.year}</time>'
     minutes = reading_times.get(slug, {}).get("minutes", 1)
     title = catalogue.get("title") or record.get("headline") or record["social"]["title"]
     return {
@@ -187,6 +189,10 @@ def outputs(root=ROOT):
     if articles != set(slugs):
         raise ValueError("Articles et registre différents : " + str(articles ^ set(slugs)))
     for record in records:
+        if record.get("in_review") is True:
+            if record["published"] is not None or record["editorial_updated"] is not None:
+                raise ValueError("Dates de publication inattendues en relecture : " + record["slug"])
+            continue
         published = date.fromisoformat(record["published"])
         modified = date.fromisoformat(record.get("editorial_updated", config["editorial_updated"]))
         if modified < published:
@@ -206,7 +212,7 @@ def outputs(root=ROOT):
 
     library_path = root / "bibliotheque.html"
     library = library_path.read_text(encoding="utf-8")
-    order = sorted(records, key=lambda row: (row["published"], row["slug"]), reverse=True)
+    order = sorted(records, key=lambda row: (row["published"] or "", row["slug"]), reverse=True)
     library = render_region(library, "bibliotheque", "\n\n".join(
         standard_card(record, stories[record["slug"]], library=True) for record in order))
     library = re.sub(r'(<strong id="article-total">)\d+', lambda m: m[1] + str(len(articles)), library)
@@ -241,6 +247,8 @@ def outputs(root=ROOT):
         if location not in article_dates:
             return match[0]
         body = re.sub(r'<lastmod>[^<]*</lastmod>', '', match[0])
+        if article_dates[location] is None:
+            return body
         return body.replace('</url>', '<lastmod>' + article_dates[location] + '</lastmod></url>')
     sitemap = re.sub(r'<url>[\s\S]*?</url>', dated, sitemap)
     return {home_path: home, library_path: library, sitemap_path: sitemap}

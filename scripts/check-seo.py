@@ -157,9 +157,13 @@ def audit(root=ROOT):
                     (data.get('dateModified'), record.get('editorial_updated', config['editorial_updated']), 'dateModified')):
                 if actual != expected:
                     fail(name, field + ' différent de la notice')
-            published = date.fromisoformat(data['datePublished'])
-            if date.fromisoformat(data['dateModified']) < published:
-                fail(name, 'modification antérieure à la publication')
+            if record.get('in_review') is True:
+                if 'datePublished' in data or 'dateModified' in data:
+                    fail(name, 'date de publication annoncée en relecture')
+            else:
+                published = date.fromisoformat(data['datePublished'])
+                if date.fromisoformat(data['dateModified']) < published:
+                    fail(name, 'modification antérieure à la publication')
             entity = data.get('mainEntityOfPage')
             if (entity.get('@id') if isinstance(entity, dict) else entity) != canonical:
                 fail(name, 'mainEntityOfPage incorrect')
@@ -183,7 +187,7 @@ def audit(root=ROOT):
                 fail(name, 'auteur non affiché dans le corps')
             visible_dates = re.findall(r'<time\b[^>]*datetime="([^"]+)"', text.split('</head>', 1)[-1])
             for value in (record['published'], record.get('editorial_updated', config['editorial_updated'])):
-                if value not in visible_dates:
+                if value is not None and value not in visible_dates:
                     fail(name, 'date éditoriale absente des éléments time du corps : ' + value)
             refs = {identifier for identifier in page.ids if re.fullmatch(r'ref\d+', identifier)}
             if refs != set(record['sources']):

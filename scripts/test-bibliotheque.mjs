@@ -137,7 +137,8 @@ for (const [query, expected] of [
   ['réquisition Roubaix', ['histoire']],
   ['arts', ['arts']],
   ['Nadar', ['arts']],
-  ['2026', catalogueCategories],
+  ['2026', baseline ? catalogueCategories : [...html.matchAll(/<article\b[^>]*data-category="([^"]+)"[^>]*>([\s\S]*?)<\/article>/g)]
+    .filter(match => /<time datetime="2026-/.test(match[2])).map(match => match[1])],
   ['   ', catalogueCategories],
   ['zzzintrouvable', []]
 ]) {
